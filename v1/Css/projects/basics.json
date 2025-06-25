@@ -1,0 +1,112 @@
+[
+  {
+    "title": "CSS Selectors",
+    "ques": "What is the difference between class and ID selectors in CSS? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html>\n<head>\n    <style>\n        .class-selector {\n            color: blue;\n        }\n        #id-selector {\n            color: red;\n        }\n    </style>\n</head>\n<body>\n    <p class=\"class-selector\">This is a class selector example.</p>\n    <p id=\"id-selector\">This is an ID selector example.</p>\n</body>\n</html>"
+    },
+    "explanation": "***Class Selector*** is used to style multiple elements, while ***ID Selector*** is used to style a single unique element.\n\n- The ***```.class-selector```*** applies styles to all elements with that class.\n- The ***```#id-selector```*** applies styles to a specific element with that ID.\n- ***Class selectors*** are defined using ```.``` (dot) before the class name.\n- ***ID selectors*** are defined using ```#``` (hash) before the ID name.\n\nIn the given code:\n- The paragraph with ```class=\"class-selector\"``` turns ***blue***.\n- The paragraph with ```id=\"id-selector\"``` turns ***red***."
+  },
+  {
+    "title": "CSS Properties",
+    "ques": "What are CSS properties, and how are they used? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html>\n<head>\n    <style>\n        p {\n            color: green;\n            font-size: 20px;\n        }\n    </style>\n</head>\n<body>\n    <p>This paragraph has CSS properties applied.</p>\n</body>\n</html>"
+    },
+    "explanation": "***CSS properties*** define how elements should appear on a webpage.\n\n- ***```color```***: Sets the text color.\n- ***```font-size```***: Sets the font size.\n\nIn the given example:\n- The paragraph text color is set to ***green*** using ```color: green;```.\n- The font size is set to ***20px*** using ```font-size: 20px;```."
+  },
+  {
+    "title": "CSS Values",
+    "ques": "What are CSS values, and how do they work with properties? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "h1 {\n    color: red; /* 'red' is a value */\n    font-size: 24px; /* '24px' is a value */\n    text-align: center; /* 'center' is a value */\n}"
+    },
+    "explanation": "***CSS values*** define how properties behave.\n\n- Properties take values to apply styles.\n- Different properties accept different types of values.\n\nIn the given example:\n- ```color: red;``` applies a ***red*** color to the ```h1```.\n- ```font-size: 24px;``` sets the font size to ***24 pixels***.\n- ```text-align: center;``` centers the heading text."
+  },
+  {
+    "title": "CSS Syntax",
+    "ques": "What is the syntax of a CSS rule? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "selector {\n    property: value;\n}"
+    },
+    "explanation": "***CSS syntax*** consists of three parts:\n\n1. ***Selector***: Specifies the HTML element to style.\n2. ***Property***: Defines the aspect to modify (e.g., color, font-size).\n3. ***Value***: Specifies the setting for the property.\n\nExample:\n- ```h1 { color: blue; }```\n- Here, ***```h1```*** is the ***selector***.\n- ***```color```*** is the ***property***.\n- ***```blue```*** is the ***value*** applied."
+  },
+  {
+    "title": "Universal and Group Selectors",
+    "ques": "How do universal and group selectors work in CSS? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* Universal selector applies styles to all elements */\n* {\n    margin: 0;\n    padding: 0;\n}\n\n/* Group selector applies styles to multiple elements */\nh1, h2, p {\n    font-family: Arial, sans-serif;\n}"
+    },
+    "explanation": "***Universal Selector (```*```)*** applies styles to all elements in the document.\n- In ```* { margin: 0; padding: 0; }```, it removes default margin and padding from all elements.\n\n***Group Selector (```,```)*** allows applying styles to multiple elements at once.\n- ```h1, h2, p { font-family: Arial, sans-serif; }``` sets the font for ```h1```, ```h2```, and ```p``` together."
+  },
+  {
+    "title": "Attribute Selectors",
+    "ques": "What is an attribute selector in CSS? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html>\n<head>\n    <style>\n        input[type=\"text\"] {\n            border: 2px solid blue;\n        }\n    </style>\n</head>\n<body>\n    <input type=\"text\" placeholder=\"Text input\">\n    <input type=\"password\" placeholder=\"Password input\">\n</body>\n</html>"
+    },
+    "explanation": "***Attribute Selectors*** target elements based on attributes.\n- ```input[type=\"text\"]``` selects only ```<input>``` elements where ```type``` is ***\"text\"***.\n- This applies a ***blue border*** to text inputs but not to password inputs."
+  },
+  {
+    "title": "Pseudo-classes",
+    "ques": "What are pseudo-classes in CSS? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "a:hover {\n    color: red;\n}\ninput:focus {\n    background-color: yellow;\n}"
+    },
+    "explanation": "***Pseudo-classes*** define a special state of an element.\n\n- ```a:hover { color: red; }``` changes a link's color to ***red*** when hovered.\n- ```input:focus { background-color: yellow; }``` highlights an input field ***yellow*** when focused."
+  },
+  {
+    "title": "Pseudo-elements",
+    "ques": "What are pseudo-elements in CSS? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p::first-letter {\n    font-size: 24px;\n    color: red;\n}\np::before {\n    content: '👉 ';\n}"
+    },
+    "explanation": "***Pseudo-elements*** style specific parts of elements.\n\n- ```p::first-letter``` styles the ***first letter*** of a paragraph.\n- ```p::before``` adds content ***before*** each paragraph."
+  },
+  {
+    "title": "CSS Box Model",
+    "ques": "What is the CSS Box Model? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n    width: 200px;\n    padding: 20px;\n    border: 5px solid black;\n    margin: 10px;\n}"
+    },
+    "explanation": "***Box Model*** consists of ***width, padding, border, and margin***.\n\n- ```width: 200px;``` sets the content width.\n- ```padding: 20px;``` adds space inside the border.\n- ```border: 5px solid black;``` adds a ***black border***.\n- ```margin: 10px;``` adds space outside the element."
+  },
+  {
+    "title": "CSS Units",
+    "ques": "What are different CSS units? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "h1 {\n    font-size: 2em;\n}\np {\n    width: 50%;\n}"
+    },
+    "explanation": "***CSS Units*** define measurements.\n\n- ```em```: Relative to the parent font size (```2em``` means ***twice the parent size***).\n- ```%```: Relative to the parent element's size (```width: 50%``` makes the paragraph half the parent's width)."
+  },
+  {
+    "title": "CSS Inheritance",
+    "ques": "How does inheritance work in CSS? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "body {\n    color: blue;\n}\np {\n    font-size: 16px;\n}"
+    },
+    "explanation": "***Inheritance*** allows child elements to inherit properties from their parent.\n\n- ```color: blue;``` in ```body``` applies ***blue*** text to all elements inside.\n- ```font-size: 16px;``` in ```p``` sets ***paragraphs*** to 16px but does not affect other elements."
+  }
+]

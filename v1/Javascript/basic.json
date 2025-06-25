@@ -1,0 +1,7397 @@
+[
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "let x = 5;\nlet y = '5';\nconsole.log(x == y);",
+      "o": [
+        "true",
+        "false",
+        "undefined",
+        "NaN"
+      ]
+    },
+    {
+      "q": "Which of the following is a valid way to declare a variable in JavaScript?",
+      "o": [
+        "let myVar = 10;",
+        "variable myVar = 10;",
+        "v myVar = 10;",
+        "def myVar = 10;"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(typeof 42);",
+      "o": [
+        "number",
+        "string",
+        "integer",
+        "float"
+      ]
+    },
+    {
+      "q": "Which of the following is NOT a JavaScript data type?",
+      "o": [
+        "character",
+        "string",
+        "boolean",
+        "object"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "let a = 10;\nlet b = 2;\nconsole.log(a ** b);",
+      "o": [
+        "100",
+        "20",
+        "12",
+        "102"
+      ]
+    },
+    {
+      "q": "Which operator is used for strict equality comparison in JavaScript?",
+      "o": [
+        "===",
+        "==",
+        "=",
+        "!=="
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "let x = '10' + 5;\nconsole.log(x);",
+      "o": [
+        "105",
+        "15",
+        "10 + 5",
+        "NaN"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct syntax for a JavaScript comment?",
+      "o": [
+        "// This is a comment",
+        "<!-- This is a comment -->",
+        "/* This is a comment",
+        "# This is a comment"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "let arr = [1, 2, 3];\nconsole.log(arr.length);",
+      "o": [
+        "3",
+        "2",
+        "0",
+        "undefined"
+      ]
+    },
+    {
+      "q": "Which of the following is a valid JavaScript variable name?",
+      "o": [
+        "_myVariable",
+        "123variable",
+        "my-variable",
+        "let"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(2 + '2' - 1);",
+      "o": [
+        "21",
+        "3",
+        "23",
+        "NaN"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct way to write an if statement in JavaScript?",
+      "o": [
+        "if (x === y) {}",
+        "if x == y {}",
+        "if [x === y] {}",
+        "if x equals y {}"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "let num = '10';\nconsole.log(++num);",
+      "o": [
+        "11",
+        "10",
+        "NaN",
+        "'101'"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct way to declare a constant in JavaScript?",
+      "o": [
+        "const PI = 3.14;",
+        "let const PI = 3.14;",
+        "constant PI = 3.14;",
+        "var PI = const 3.14;"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(Boolean('false'));",
+      "o": [
+        "true",
+        "false",
+        "undefined",
+        "NaN"
+      ]
+    },
+    {
+      "q": "Which of the following is NOT a valid arithmetic operator in JavaScript?",
+      "o": [
+        "**=",
+        "+=",
+        "*=",
+        "/="
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "let x = null;\nconsole.log(typeof x);",
+      "o": [
+        "object",
+        "null",
+        "undefined",
+        "NaN"
+      ]
+    },
+    {
+      "q": "Which of the following correctly checks if a variable is NOT equal to 5?",
+      "o": [
+        "if (x !== 5) {}",
+        "if (x != 5) {}",
+        "if (x <> 5) {}",
+        "if (x is not 5) {}"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "let a = 5;\nlet b = '5';\nconsole.log(a !== b);",
+      "o": [
+        "true",
+        "false",
+        "undefined",
+        "NaN"
+      ]
+    },
+    {
+      "q": "Which of the following is a valid way to write a multi-line comment in JavaScript?",
+      "o": [
+        "/* This is a \nmulti-line comment */",
+        "// This is a \n// multi-line comment",
+        "<!-- This is a \nmulti-line comment -->",
+        "''' This is a \nmulti-line comment '''"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "let arr = [];\nconsole.log(arr == false);",
+      "o": [
+        "true",
+        "false",
+        "undefined",
+        "TypeError"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct way to write a template literal in JavaScript?",
+      "o": [
+        "`Hello, ${name}!`",
+        "'Hello, ${name}!'",
+        "\"Hello, ${name}!\"",
+        "'Hello, ' + name + '!'"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(0 == '');",
+      "o": [
+        "true",
+        "false",
+        "undefined",
+        "TypeError"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct syntax for an arrow function?",
+      "o": [
+        "const sum = (a, b) => a + b;",
+        "const sum = function(a, b) => a + b;",
+        "const sum = (a, b) -> a + b;",
+        "const sum = (a, b) { return a + b; }"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(3 + 4 * 2);",
+      "o": [
+        "11",
+        "14",
+        "10",
+        "9"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct way to declare a variable that cannot be reassigned?",
+      "o": [
+        "const x = 5;",
+        "let x = 5;",
+        "var x = 5;",
+        "fixed x = 5;"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log('5' - 2);",
+      "o": [
+        "3",
+        "52",
+        "NaN",
+        "Error"
+      ]
+    },
+    {
+      "q": "Which of the following is NOT a valid JavaScript data type?",
+      "o": [
+        "double",
+        "bigint",
+        "symbol",
+        "undefined"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "let x = 8;\nconsole.log(x += 2);",
+      "o": [
+        "10",
+        "8",
+        "82",
+        "NaN"
+      ]
+    },
+    {
+      "q": "Which operator has the highest precedence in JavaScript?",
+      "o": [
+        "()",
+        "++",
+        "*",
+        "=="
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(typeof []);",
+      "o": [
+        "object",
+        "array",
+        "list",
+        "undefined"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct syntax for an immediately invoked function expression (IIFE)?",
+      "o": [
+        "(function() {})();",
+        "function() {}();",
+        "[function() {}]();",
+        "{function() {}}();"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(0 || 'Hello');",
+      "o": [
+        "Hello",
+        "0",
+        "true",
+        "false"
+      ]
+    },
+    {
+      "q": "Which of the following is NOT a valid way to write the number 1 million in JavaScript?",
+      "o": [
+        "1,000,000",
+        "1e6",
+        "1000000",
+        "1_000_000"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(!!'');",
+      "o": [
+        "false",
+        "true",
+        "undefined",
+        "NaN"
+      ]
+    },
+    {
+      "q": "Which of the following statements about 'let' and 'var' is correct?",
+      "o": [
+        "let has block scope, var has function scope",
+        "var has block scope, let has function scope",
+        "both have global scope",
+        "both have block scope"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(2 ** 3 ** 2);",
+      "o": [
+        "512",
+        "64",
+        "12",
+        "Error"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct way to check if a variable is an array?",
+      "o": [
+        "Array.isArray(myVar)",
+        "myVar.isArray()",
+        "typeof myVar === 'array'",
+        "myVar instanceof []"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(1 < 2 < 3);",
+      "o": [
+        "true",
+        "false",
+        "Error",
+        "undefined"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(1 + + '1');",
+      "o": [
+        "2",
+        "11",
+        "NaN",
+        "Error"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct way to declare multiple variables in one statement?",
+      "o": [
+        "let a = 1, b = 2, c = 3;",
+        "let a = 1; let b = 2; let c = 3;",
+        "let a, b, c = 1, 2, 3;",
+        "let (a = 1, b = 2, c = 3);"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(typeof typeof 42);",
+      "o": [
+        "string",
+        "number",
+        "object",
+        "function"
+      ]
+    },
+    {
+      "q": "Which of the following is NOT a valid way to create a number in JavaScript?",
+      "o": [
+        "let x = new Number('five');",
+        "let x = 5;",
+        "let x = 0x5;",
+        "let x = 5.0;"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "let x = 5;\nconsole.log(x++ + ++x);",
+      "o": [
+        "12",
+        "11",
+        "10",
+        "13"
+      ]
+    },
+    {
+      "q": "Which operator is used for nullish coalescing in JavaScript?",
+      "o": [
+        "??",
+        "||",
+        "&&",
+        "?:"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log([] + []);",
+      "o": [
+        "\"\"",
+        "[]",
+        "[object Object]",
+        "0"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct syntax for an optional chaining operator?",
+      "o": [
+        "user?.address",
+        "user?address",
+        "user..address",
+        "user::address"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(!!0 && !!'');",
+      "o": [
+        "false",
+        "true",
+        "0",
+        "\"\""
+      ]
+    },
+    {
+      "q": "Which of the following is a valid BigInt literal in JavaScript?",
+      "o": [
+        "9007199254740991n",
+        "9007199254740991N",
+        "BigInt(9007199254740991)",
+        "9007199254740991L"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(2 in [1, 2, 3]);",
+      "o": [
+        "true",
+        "false",
+        "undefined",
+        "Error"
+      ]
+    },
+    {
+      "q": "Which of the following statements about 'undefined' and 'null' is correct?",
+      "o": [
+        "undefined == null is true but undefined === null is false",
+        "Both represent exactly the same value",
+        "null is a number while undefined is a string",
+        "They are both objects"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(+'Hello');",
+      "o": [
+        "NaN",
+        "0",
+        "Error",
+        "\"Hello\""
+      ]
+    },
+    {
+      "q": "Which of the following is the correct way to write a do-while loop in JavaScript?",
+      "o": [
+        "do { } while (condition);",
+        "do while (condition) { }",
+        "while (condition) do { }",
+        "do { } until (condition);"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(0.1 + 0.2 === 0.3);",
+      "o": [
+        "false",
+        "true",
+        "NaN",
+        "Error"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(1 + '2' - '1');",
+      "o": [
+        "11",
+        "2",
+        "NaN",
+        "Error"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct way to declare a variable with block scope?",
+      "o": [
+        "let x = 10;",
+        "var x = 10;",
+        "const x = 10; if (true) { let x = 20; }",
+        "x = 10;"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(!!'false' == !!'true');",
+      "o": [
+        "true",
+        "false",
+        "undefined",
+        "NaN"
+      ]
+    },
+    {
+      "q": "Which of the following is NOT a valid way to create an object in JavaScript?",
+      "o": [
+        "let obj = new Object(); obj.key = 'value';",
+        "let obj = { key: 'value' };",
+        "let obj = Object.create(null);",
+        "let obj = new Object('key', 'value');"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "let x = 5;\nconsole.log(x += x -= x *= x);",
+      "o": [
+        "-15",
+        "5",
+        "0",
+        "25"
+      ]
+    },
+    {
+      "q": "Which operator is used for the optional chaining of properties?",
+      "o": [
+        "?.",
+        "??",
+        "?:",
+        "&&"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log([] == ![]);",
+      "o": [
+        "true",
+        "false",
+        "undefined",
+        "Error"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct syntax for a default parameter in a function?",
+      "o": [
+        "function greet(name = 'Guest') {}",
+        "function greet(name: 'Guest') {}",
+        "function greet(name || 'Guest') {}",
+        "function greet(name ?= 'Guest') {}"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(3 > 2 > 1);",
+      "o": [
+        "false",
+        "true",
+        "undefined",
+        "Error"
+      ]
+    },
+    {
+      "q": "Which of the following is a valid Symbol in JavaScript?",
+      "o": [
+        "const sym = Symbol('description');",
+        "const sym = new Symbol('description');",
+        "const sym = Symbol['description'];",
+        "const sym = Symbol(); sym = 'description';"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(typeof (() => {}));",
+      "o": [
+        "function",
+        "object",
+        "arrow",
+        "undefined"
+      ]
+    },
+    {
+      "q": "Which of the following statements about 'const' is correct?",
+      "o": [
+        "A const variable cannot be reassigned, but its properties can be modified if it's an object",
+        "A const variable cannot be changed in any way after declaration",
+        "const works exactly like let but is shorter to type",
+        "const variables are hoisted to the top of their scope"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(+true, +false);",
+      "o": [
+        "1 0",
+        "true false",
+        "NaN NaN",
+        "Error"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct way to write a ternary operator?",
+      "o": [
+        "let result = condition ? value1 : value2;",
+        "let result = condition : value1 ? value2;",
+        "let result = condition ?? value1 : value2;",
+        "let result = condition ? value1 : value2 : value3;"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log('b' + 'a' + + 'a' + 'a');",
+      "o": [
+        "baNaNa",
+        "baaa",
+        "baNaN",
+        "Error"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(Number('0xFF'));",
+      "o": [
+        "255",
+        "0xFF",
+        "NaN",
+        "Error"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct way to check if a variable is NaN?",
+      "o": [
+        "Number.isNaN(myVar)",
+        "myVar === NaN",
+        "isNaN.myVar",
+        "myVar == NaN"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(1..toString());",
+      "o": [
+        "\"1\"",
+        "1",
+        "Error",
+        "undefined"
+      ]
+    },
+    {
+      "q": "Which of the following is NOT a valid method to convert a string to a number?",
+      "o": [
+        "String.toNumber('123')",
+        "Number('123')",
+        "parseInt('123')",
+        "+'123'"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(Math.max() > Math.min());",
+      "o": [
+        "false",
+        "true",
+        "undefined",
+        "NaN"
+      ]
+    },
+    {
+      "q": "Which operator has the lowest precedence in JavaScript?",
+      "o": [
+        ",",
+        "=",
+        "||",
+        "&&"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log([,].length);",
+      "o": [
+        "1",
+        "0",
+        "undefined",
+        "Error"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct way to create a private variable in JavaScript?",
+      "o": [
+        "Using closures",
+        "Using the private keyword",
+        "Prefixing with underscore",
+        "Using # notation (ES2022)"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log('' == '0');",
+      "o": [
+        "false",
+        "true",
+        "undefined",
+        "Error"
+      ]
+    },
+    {
+      "q": "Which of the following is a valid way to create a multiline string in JavaScript?",
+      "o": [
+        "`Line 1\nLine 2`",
+        "'Line 1\nLine 2'",
+        "\"Line 1\\nLine 2\"",
+        "All of the above"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(0.1.toFixed(20));",
+      "o": [
+        "\"0.10000000000000000555\"",
+        "\"0.10000000000000000000\"",
+        "0.1",
+        "Error"
+      ]
+    },
+    {
+      "q": "Which of the following is NOT a falsy value in JavaScript?",
+      "o": [
+        "\"false\"",
+        "0",
+        "null",
+        "undefined"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(new Array(3).toString());",
+      "o": [
+        "\",,\"",
+        "\"[object Object]\"",
+        "\"3\"",
+        "Error"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct way to clone an object shallowly?",
+      "o": [
+        "Object.assign({}, original)",
+        "original.clone()",
+        "JSON.clone(original)",
+        "{...original.clone}"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(Number.EPSILON);",
+      "o": [
+        "2.220446049250313e-16",
+        "0.0001",
+        "1",
+        "undefined"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(1_000_000 === 1000000);",
+      "o": [
+        "true",
+        "false",
+        "SyntaxError",
+        "ReferenceError"
+      ]
+    },
+    {
+      "q": "Which of the following is a valid use of the void operator?",
+      "o": [
+        "<a href=\"javascript:void(0)\">Click</a>",
+        "void = 0;",
+        "function void() {}",
+        "let x = void;"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log([...[]['']]);",
+      "o": [
+        "[]",
+        "undefined",
+        "['']",
+        "TypeError"
+      ]
+    },
+    {
+      "q": "Which of the following is NOT a valid way to create a Date object?",
+      "o": [
+        "new Date('2023-13-01')",
+        "new Date(2023, 0, 1)",
+        "new Date('January 1, 2023')",
+        "new Date()"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(String.raw`Hello\\nWorld`);",
+      "o": [
+        "Hello\\nWorld",
+        "Hello\nWorld",
+        "HelloWorld",
+        "String.raw is not a function"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct way to use a labeled statement?",
+      "o": [
+        "outer: for(let i=0; i<3; i++) { break outer; }",
+        "label: { let x = 5; }",
+        "#label: console.log('test');",
+        "@label function test() {}"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(new Array(3).map(() => 1));",
+      "o": [
+        "[empty × 3]",
+        "[1, 1, 1]",
+        "[undefined, undefined, undefined]",
+        "TypeError"
+      ]
+    },
+    {
+      "q": "Which of the following is a valid use of the with statement?",
+      "o": [
+        "with(Math) { console.log(PI); }",
+        "with = 5;",
+        "function with() {}",
+        "let x = with;"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(parseInt('08'));",
+      "o": [
+        "8",
+        "0",
+        "NaN",
+        "SyntaxError"
+      ]
+    },
+    {
+      "q": "Which of the following is NOT a valid property descriptor attribute?",
+      "o": [
+        "static",
+        "configurable",
+        "enumerable",
+        "writable"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(Reflect.has({}, 'toString'));",
+      "o": [
+        "true",
+        "false",
+        "undefined",
+        "TypeError"
+      ]
+    },
+    {
+      "q": "Which of the following is the correct way to create a frozen object?",
+      "o": [
+        "Object.freeze({})",
+        "Object.lock({})",
+        "Object.immutable({})",
+        "Object.seal({})"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(Array.from({length: 3}, (_,i) => i));",
+      "o": [
+        "[0, 1, 2]",
+        "[undefined, undefined, undefined]",
+        "[null, null, null]",
+        "{length: 3}"
+      ]
+    },
+    {
+      "q": "Which of the following is NOT a valid use of the in operator?",
+      "o": [
+        "5 in 5",
+        "'length' in []",
+        "'toString' in {}",
+        "'PI' in Math"
+      ]
+    },
+    {
+      "q": "What is the output of the following code snippet?",
+      "l": "javascript",
+      "c": "console.log(new.target);",
+      "o": [
+        "undefined (in global scope)",
+        "null",
+        "ReferenceError",
+        "window"
+      ]
+    },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([...'👋'].length);",
+    "o": [
+      "2",
+      "1",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `at()` method for arrays?",
+    "l": "javascript",
+      "o": [
+      "['a','b','c'].at(-1) // returns 'c'",
+      "['a','b','c'].at(3) // returns 'a'",
+      "['a','b','c'].at('1') // throws Error",
+      "['a','b','c'].at() // returns all elements"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const obj = { a:1 };\nconsole.log(Object.hasOwn(obj, 'toString'));",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of private class fields?",
+    "l": "javascript",
+      "o": [
+      "class X { #private = 1; get #value() { return this.#private } }",
+      "class X { #private = 1; static #secret = 2 }",
+      "class X { #private = 1; accessor #value = 2 }",
+      "class X { #private = 1; async #method() {} }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const map = new Map([['a',1],['b',2]]);\nconsole.log([...map][1]);",
+    "o": [
+      "['b', 2]",
+      "{'b': 2}",
+      "2",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to use top-level await?",
+    "l": "javascript",
+      "o": [
+      "// In ES modules\nconst data = await fetch(url);",
+      "// In CommonJS\nawait require('module');",
+      "// Any script tag\nawait Promise.resolve();",
+      "// In Node REPL\nawait 42;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(Array.prototype[0] = 1, [][0]);",
+    "o": [
+      "undefined",
+      "1",
+      "null",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `cause` property in Error objects?",
+    "l": "javascript",
+      "o": [
+      "throw new Error('Failed', { cause: originalError });",
+      "throw new Error('Failed').cause(originalError);",
+      "throw new Error('Failed', originalError);",
+      "throw new Error('Failed').withCause(originalError);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const weak = new WeakMap();\nweak.set({}, 1);\nconsole.log(weak.size);",
+    "o": [
+      "undefined",
+      "1",
+      "0",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the Temporal API?",
+    "l": "javascript",
+      "o": [
+      "Temporal.now.date()",
+      "Temporal.PlainDate.from('2023-01-01')",
+      "Temporal.Instant.compare(inst1, inst2)",
+      "Temporal.Duration.from({ hours: 2 })"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(Array.from({ length: 3 }, (_,i) => i*2));",
+    "o": [
+      "[0, 2, 4]",
+      "[undefined, undefined, undefined]",
+      "[null, null, null]",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to use import attributes?",
+    "l": "javascript",
+      "o": [
+      "import json from './data.json' assert { type: 'json' };",
+      "import json from './data.json' with { type: 'json' };",
+      "import json from './data.json' using 'json';",
+      "import json from './data.json' as json;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const arr = [1,2];\narr.length = 5;\nconsole.log(arr.length, arr[4]);",
+    "o": [
+      "5 undefined",
+      "5 null",
+      "2 undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the Object.groupBy method?",
+    "l": "javascript",
+      "o": [
+      "Object.groupBy([1,2,3], x => x > 1 ? 'big' : 'small')",
+      "Object.groupBy({a:1,b:2}, ([k,v]) => v > 1 ? 'big' : 'small')",
+      "Object.groupBy(new Set([1,2,3]), x => x % 2 === 0 ? 'even' : 'odd')",
+      "Object.groupBy('hello', c => c === 'l' ? 'ls' : 'other')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const sym = Symbol('test');\nconst obj = { [sym]: 1 };\nconsole.log(Object.keys(obj).length);",
+    "o": [
+      "0",
+      "1",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const obj = { a: 1 };\nObject.preventExtensions(obj);\nobj.b = 2;\nconsole.log(obj.b);",
+    "o": [
+      "undefined",
+      "2",
+      "Error",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `toSpliced()` array method?",
+    "l": "javascript",
+      "o": [
+      "const newArr = [1,2,3].toSpliced(1, 1, 99); // [1,99,3]",
+      "const newArr = [1,2,3].toSpliced(1, 1); // mutates original",
+      "const newArr = [1,2,3].toSpliced(-1); // throws Error",
+      "const newArr = [1,2,3].toSpliced(); // returns same array"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const set = new Set([NaN, NaN]);\nconsole.log(set.size);",
+    "o": [
+      "1",
+      "2",
+      "0",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `findLast()` array method?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].findLast(() => true); // returns 3",
+      "[1,2,3].findLast(x => x > 1); // returns 3",
+      "[1,2,3].findLast(x => x > 3); // returns undefined",
+      "[1,2,3].findLast(1); // throws Error"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const weakRef = new WeakRef({ data: 42 });\nconsole.log(weakRef.deref()?.data);",
+    "o": [
+      "42",
+      "undefined",
+      "null",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to use the `Array.prototype.with()` method?",
+    "l": "javascript",
+      "o": [
+      "const newArr = [1,2,3].with(1, 99); // [1,99,3]",
+      "const newArr = [1,2,3].with(1); // removes index 1",
+      "const newArr = [1,2,3].with(-1, 99); // throws Error",
+      "const newArr = [1,2,3].with(); // returns same array"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const regExp = /\\p{Emoji}/v;\nconsole.log(regExp.test('👍'));",
+    "o": [
+      "true",
+      "false",
+      "SyntaxError",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.NumberFormat` API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.NumberFormat('en').formatToParts(1000.5)[0].value",
+      "new Intl.NumberFormat('en', { style: 'currency' }).format(1000)",
+      "new Intl.NumberFormat('en', { notation: 'compact' }).format(1000)",
+      "new Intl.NumberFormat('en').format(new Date())"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const arr = [1,2,3];\narr.length = 0;\nconsole.log(arr[0]);",
+    "o": [
+      "undefined",
+      "1",
+      "null",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Object.hasOwn()` method?",
+    "l": "javascript",
+      "o": [
+      "Object.hasOwn({ a: 1 }, 'a') // true",
+      "Object.hasOwn({ a: 1 }, 'toString') // true",
+      "Object.hasOwn({}, 1) // true",
+      "Object.hasOwn(null, 'prop') // false"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(Array.fromAsync((async function*(){ yield 1; yield 2; })()));",
+    "o": [
+      "Promise<[1, 2]>",
+      "[1, 2]",
+      "Promise<[]>",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.Segmenter` API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.Segmenter('en').segment('hello')[0]",
+      "Array.from(new Intl.Segmenter('en').segment('hello'))",
+      "const segments = new Intl.Segmenter('en').segment('hello');\nsegments.containing(2)",
+      "const segments = new Intl.Segmenter('en', {granularity: 'word'}).segment('hello world')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const arr = [1,2,3];\nconsole.log(arr.toReversed() === arr);",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `at()` method for strings?",
+    "l": "javascript",
+      "o": [
+      "'abc'.at(-1) // 'c'",
+      "'abc'.at(3) // 'a'",
+      "'abc'.at('1') // throws Error",
+      "'abc'.at() // returns full string"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const map = new Map([['a',1]]);\nmap.set('a', 2);\nconsole.log(map.get('a'));",
+    "o": [
+      "2",
+      "1",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const arr = [1, 2, 3];\nconsole.log(arr.with(1, 4) === arr);",
+    "o": [
+      "false",
+      "true",
+      "TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the new `Array.prototype.groupBy` method?",
+    "l": "javascript",
+      "o": [
+      "const groups = [1, 2, 3].groupBy(x => x % 2 === 0 ? 'even' : 'odd');",
+      "const groups = [1, 2, 3].groupBy(x => { even: x % 2 === 0 });",
+      "const groups = [1, 2, 3].groupBy('even');",
+      "const groups = [1, 2, 3].groupBy(async x => x % 2);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const obj = { a: 1 };\nconsole.log(Object.isExtensible(obj) === Object.isSealed(obj));",
+    "o": [
+      "false",
+      "true",
+      "TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.DurationFormat` API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.DurationFormat('en').format({ days: 1, hours: 12 });",
+      "new Intl.DurationFormat('en', { style: 'long' }).format({ hours: 2 });",
+      "new Intl.DurationFormat('en').format(Promise.resolve({ minutes: 30 }));",
+      "new Intl.DurationFormat('en').formatToParts({ seconds: 45 });"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const set = new Set([1, 2, 3]);\nconsole.log(set.toSorted((a, b) => b - a));",
+    "o": [
+      "[3, 2, 1]",
+      "Set {3, 2, 1}",
+      "TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.findLastIndex` method?",
+    "l": "javascript",
+      "o": [
+      "[1, 2, 3, 2].findLastIndex(x => x === 2); // returns 3",
+      "[1, 2, 3].findLastIndex(2); // returns 1",
+      "[1, 2, 3].findLastIndex(); // returns -1",
+      "[1, 2, 3].findLastIndex(x => x > 3); // returns undefined"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const arr = [1, , 3];\nconsole.log(arr.toSpliced(1, 1, 2).length);",
+    "o": [
+      "3",
+      "2",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Object.groupBy` method?",
+    "l": "javascript",
+      "o": [
+      "Object.groupBy([1, 2, 3], x => x % 2);",
+      "Object.groupBy('hello', c => c === 'l' ? 'l' : 'other');",
+      "Object.groupBy(new Set([1, 2, 3]), x => x > 1);",
+      "Object.groupBy({a: 1, b: 2}, ([k, v]) => v > 1);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const map = new Map([['a', 1]]);\nconsole.log(map.toJSON());",
+    "o": [
+      "TypeError",
+      "[['a', 1]]",
+      "Map { 'a' => 1 }",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.toSorted` method?",
+    "l": "javascript",
+      "o": [
+      "[3, 1, 2].toSorted((a, b) => a - b); // [1, 2, 3]",
+      "[3, 1, 2].toSorted(); // mutates original array",
+      "[3, 1, 2].toSorted('asc'); // throws Error",
+      "[3, 1, 2].toSorted(null); // returns same array"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const arr = [1, 2, 3];\nconsole.log(arr.toReversed() === arr.toReversed());",
+    "o": [
+      "false",
+      "true",
+      "TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.NumberFormat` v3 API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.NumberFormat('en', { roundingMode: 'halfEven' }).format(1.5);",
+      "new Intl.NumberFormat('en', { roundingPriority: 'auto' }).format(1.234);",
+      "new Intl.NumberFormat('en', { trailingZeroDisplay: 'stripIfInteger' }).format(1.0);",
+      "new Intl.NumberFormat('en', { useGrouping: 'always' }).format(1000.5);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const weakSet = new WeakSet();\nweakSet.add({});\nconsole.log(weakSet.toJSON());",
+    "o": [
+      "TypeError",
+      "[]",
+      "WeakSet { {} }",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.toSpliced` method?",
+    "l": "javascript",
+      "o": [
+      "[1, 2, 3].toSpliced(1, 1, 4, 5); // [1, 4, 5, 3]",
+      "[1, 2, 3].toSpliced(1); // removes all elements after index 1",
+      "[1, 2, 3].toSpliced(-1); // throws RangeError",
+      "[1, 2, 3].toSpliced(); // mutates original array"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const arr = [1, 2, 3];\nconsole.log(arr.with(1, 4).with(2, 5));",
+    "o": [
+      "[1, 4, 5]",
+      "[1, 4, 3]",
+      "TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const blob = new Blob(['<html>...</html>'], {type: 'text/html'});\nconsole.log(blob.size);",
+    "o": [
+      "15",
+      "0",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.toSorted` method with a sparse array?",
+    "l": "javascript",
+      "o": [
+      "[1,,3].toSorted() // [1, 3, undefined]",
+      "[1,,3].toSorted() // [1, 3, empty]",
+      "[1,,3].toSorted() // throws Error",
+      "[1,,3].toSorted() // [undefined, 1, 3]"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const signal = new AbortSignal();\nconsole.log(signal.aborted);",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.DisplayNames` API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.DisplayNames('en', {type: 'emoji'}).of('👍')",
+      "new Intl.DisplayNames('en', {type: 'language'}).of('en-US')",
+      "new Intl.DisplayNames('en', {type: 'region'}).of('US')",
+      "new Intl.DisplayNames('en', {type: 'currency'}).of('USD')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const transferable = new ArrayBuffer(8);\nconsole.log(transferable instanceof Transferable);",
+    "o": [
+      "TypeError",
+      "true",
+      "false",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.findLast` method with objects?",
+    "l": "javascript",
+      "o": [
+      "[{id:1}, {id:2}].findLast(obj => obj.id > 1) // {id:2}",
+      "[{id:1}, {id:2}].findLast('id') // undefined",
+      "[{id:1}, {id:2}].findLast() // throws Error",
+      "[{id:1}, {id:2}].findLast({id:1}) // true"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const ws = new WeakSet();\nws.add(Symbol('key'));\nconsole.log(ws.has(Symbol('key')));",
+    "o": [
+      "false",
+      "true",
+      "TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.Locale` API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.Locale('en-US').getCalendars()",
+      "new Intl.Locale('en-US').hourCycle",
+      "new Intl.Locale('en-US').maximize()",
+      "new Intl.Locale('en-US').toString()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const { pending, data } = Promise.withResolvers();\nconsole.log(pending);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.toSpliced` method with negative indices?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].toSpliced(-2, 1) // [1,3]",
+      "[1,2,3].toSpliced(-1) // throws Error",
+      "[1,2,3].toSpliced(-4) // returns empty array",
+      "[1,2,3].toSpliced(-1, 0, 4) // [1,2,4,3]"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const decoder = new TextDecoderStream();\nconsole.log(decoder.readable);",
+    "o": [
+      "ReadableStream object",
+      "undefined",
+      "TypeError",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.supportedValuesOf` function?",
+    "l": "javascript",
+      "o": [
+      "Intl.supportedValuesOf('locale')",
+      "Intl.supportedValuesOf('currency')",
+      "Intl.supportedValuesOf('timeZone')",
+      "Intl.supportedValuesOf('unit')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const { signal } = new AbortController();\nconsole.log(signal.reason === undefined);",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.groupByToMap` method?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].groupByToMap(x => x % 2 === 0 ? 'even' : 'odd')",
+      "[1,2,3].groupByToMap('even')",
+      "[1,2,3].groupByToMap()",
+      "[1,2,3].groupByToMap({key: 'value'})"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const { writable, readable } = new TransformStream();\nconsole.log(writable.locked);",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const fn = (a, b, ...{length}) => length;\nconsole.log(fn(1, 2, 3, 4));",
+    "o": [
+      "2",
+      "4",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the new `Array.prototype.toSorted` method with a custom compare function?",
+    "l": "javascript",
+      "o": [
+      "[3,1,2].toSorted((a,b) => a - b) // [1,2,3]",
+      "[3,1,2].toSorted('asc') // throws Error",
+      "[3,1,2].toSorted(null) // returns same array",
+      "[3,1,2].toSorted() // mutates original array"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const m = new Map([['a',1]]);\nconst wm = new WeakMap([[m,2]]);\nconsole.log(wm.get(m));",
+    "o": [
+      "2",
+      "undefined",
+      "TypeError",
+      "WeakMap {[[Entries]]: [['a',1] => 2]}"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.Segmenter` API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.Segmenter('en').segment(12345)",
+      "new Intl.Segmenter('en', {granularity:'word'}).segment('Hello world')",
+      "Array.from(new Intl.Segmenter('en').segment('hello'))",
+      "const segments = new Intl.Segmenter('en').segment('hello');\nsegments.containing(2)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const r = /\\p{Emoji_Keycap_Sequence}/v;\nconsole.log(r.test('1️⃣'));",
+    "o": [
+      "true",
+      "false",
+      "SyntaxError",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.toSpliced` method with negative indices?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].toSpliced(-2,1,4) // [1,4,3]",
+      "[1,2,3].toSpliced(-1) // throws Error",
+      "[1,2,3].toSpliced(-4) // returns empty array",
+      "[1,2,3].toSpliced(-1,0,4) // mutates original array"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const u = new URL('https://例.com/测试');\nconsole.log(u.hostname);",
+    "o": [
+      "xn--fsq.com",
+      "例.com",
+      "undefined",
+      "URIError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.NumberFormat` v3 API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.NumberFormat('en', {roundingIncrement: 3}).format(10)",
+      "new Intl.NumberFormat('en', {trailingZeroDisplay:'auto'}).format(1.0)",
+      "new Intl.NumberFormat('en', {roundingMode:'expand'}).format(1.5)",
+      "new Intl.NumberFormat('en', {notation:'scientific'}).format(1000)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const {signal} = new AbortController();\nsignal.addEventListener('abort', () => console.log(signal.reason));\nsignal.abort('reason');",
+    "o": [
+      "reason",
+      "undefined",
+      "AbortSignal {}",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.groupByToMap` method?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].groupByToMap(x => x % 2 ? 'odd':'even')",
+      "[1,2,3].groupByToMap('odd')",
+      "[1,2,3].groupByToMap()",
+      "[1,2,3].groupByToMap({key:'value'})"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const tf = new Temporal.Duration(1,2,3,4,5,6,7);\nconsole.log(tf.round('day').days);",
+    "o": [
+      "4",
+      "3",
+      "0",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.DurationFormat` API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.DurationFormat('en').format(Promise.resolve({hours:2}))",
+      "new Intl.DurationFormat('en').format({hours:2,minutes:30})",
+      "new Intl.DurationFormat('en',{style:'long'}).format({seconds:45})",
+      "new Intl.DurationFormat('en').formatToParts({days:1})"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const rtf = new Intl.RelativeTimeFormat('en', {numeric: 'auto'});\nconsole.log(rtf.format(1, 'day'));",
+    "o": [
+      "tomorrow",
+      "in 1 day",
+      "1 day later",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.with` method?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].with(1,4) // [1,4,3]",
+      "[1,2,3].with(-1,4) // throws Error",
+      "[1,2,3].with(3,4) // [1,2,3,4]",
+      "[1,2,3].with() // mutates original array"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const sp = new SharedArrayBuffer(8);\nconsole.log(sp.growable);",
+    "o": [
+      "undefined",
+      "false",
+      "true",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const registry = new FinalizationRegistry(held => console.log(held));\nregistry.register({}, 'target cleaned up');\nconsole.log('start');",
+    "o": [
+      "start",
+      "target cleaned up\nstart",
+      "start\ntarget cleaned up",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the Import Attributes proposal?",
+    "l": "javascript",
+      "o": [
+      "import json from './data.json' with { type: 'json' };",
+      "import json from './data.json' using 'json';",
+      "import json from './data.json' assert { type: 'json' };",
+      "import json from './data.json' via 'json';"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const source = new Observable(subscriber => {\n  subscriber.next(1);\n  setTimeout(() => subscriber.next(2), 100);\n});\nsource.subscribe(console.log);",
+    "o": [
+      "1\n2 (after 100ms)",
+      "1",
+      "2",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the CSSOM View API?",
+    "l": "javascript",
+      "o": [
+      "window.scrollTo({ top: 0, behavior: 'instant' });",
+      "element.scrollIntoView({ block: 'nearest' });",
+      "window.matchMedia('(prefers-color-scheme: dark)').matches;",
+      "document.scrollingElement.scrollTop = 100;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const policy = new TrustedTypes.createPolicy('my-policy', {\n  createHTML: input => input.replace(/</g, '&lt;')\n});\nconsole.log(policy.createHTML('<script>'));",
+    "o": [
+      "&lt;script&gt;",
+      "<script>",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the Web Locks API?",
+    "l": "javascript",
+      "o": [
+      "navigator.locks.request('resource', async lock => {});",
+      "window.requestLock('resource', () => {});",
+      "document.lock('resource', { mode: 'exclusive' });",
+      "new WebLock('resource').acquire();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const decoder = new TextDecoderStream();\nnew Response(new Blob(['abc'])).body\n  .pipeThrough(decoder)\n  .pipeTo(new WritableStream({\n    write(chunk) { console.log(chunk); }\n  }));",
+    "o": [
+      "abc",
+      "Blob { size: 3, type: '' }",
+      "Uint8Array(3) [97, 98, 99]",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the Web Animations API?",
+    "l": "javascript",
+      "o": [
+      "element.animate({ opacity: [0, 1] }, 1000).reverse();",
+      "document.timeline.getAnimations();",
+      "new Animation(new KeyframeEffect(element, { opacity: [0, 1] }));",
+      "element.getAnimations()[0].playbackRate = 2;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const cookieStore = new CookieStore();\ncookieStore.set('test', 'value');\nconsole.log(cookieStore.getAll());",
+    "o": [
+      "Promise<[CookieListItem]>",
+      "[{ name: 'test', value: 'value' }]",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the EyeDropper API?",
+    "l": "javascript",
+      "o": [
+      "new EyeDropper().open().then(result => console.log(result.sRGBHex));",
+      "navigator.eyeDropper.pickColor().then(console.log);",
+      "window.selectColor().then(hexValue => {});",
+      "new ColorPicker().dropper();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const preload = document.createElement('link');\npreload.rel = 'modulepreload';\npreload.href = 'module.js';\ndocument.head.append(preload);\nconsole.log(preload.relList.contains('modulepreload'));",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the WebCodecs API?",
+    "l": "javascript",
+      "o": [
+      "new VideoEncoder({ output: frame => {} });",
+      "new AudioDecoder({ output: sample => {} });",
+      "new ImageDecoder({ type: 'image/png' });",
+      "new MediaStreamEncoder({ format: 'mp4' });"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const watcher = new PressureObserver(update => {\n  console.log(update[0].state);\n}, { threshold: 0.5 });\nwatcher.observe('cpu');",
+    "o": [
+      "Either 'nominal' or 'fair' or 'serious' or 'critical'",
+      "0.5",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the File System Access API?",
+    "l": "javascript",
+      "o": [
+      "window.showSaveFilePicker().then(handle => {});",
+      "navigator.filesystem.save(new Blob());",
+      "document.saveToDisk('file.txt', 'content');",
+      "new FileSystem().writeFile('test.txt');"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const cred = new PasswordCredential({\n  id: 'user',\n  password: 'pass',\n  name: 'User'\n});\nconsole.log(cred.type);",
+    "o": [
+      "password",
+      "PasswordCredential",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const res = await new RegExp('/^\\d+$/').exec('123');\nconsole.log(res?.[0]);",
+    "o": [
+      "123",
+      "null",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the new `Array.prototype.groupByToMap` method?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].groupByToMap(x => x % 2 ? 'odd' : 'even')",
+      "[1,2,3].groupByToMap('odd')",
+      "[1,2,3].groupByToMap()",
+      "[1,2,3].groupByToMap({key: 'value'})"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const source = new EventSource('/sse');\nsource.onmessage = e => console.log(e.lastEventId);\nsource.close();",
+    "o": [
+      "undefined",
+      "null",
+      "'' (empty string)",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.DurationFormat` API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.DurationFormat('en').format(Promise.resolve({hours: 2}))",
+      "new Intl.DurationFormat('en').format({hours: 2, minutes: 30})",
+      "new Intl.DurationFormat('en', {style: 'long'}).format({seconds: 45})",
+      "new Intl.DurationFormat('en').formatToParts({days: 1})"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const {signal} = new AbortController();\nsignal.throwIfAborted();\nconsole.log('continued');",
+    "o": [
+      "continued",
+      "AbortError",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.toSpliced` method with negative indices?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].toSpliced(-2, 1, 4) // [1,4,3]",
+      "[1,2,3].toSpliced(-1) // throws Error",
+      "[1,2,3].toSpliced(-4) // returns empty array",
+      "[1,2,3].toSpliced(-1, 0, 4) // mutates original array"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const tf = new Temporal.Duration(1,2,3,4,5,6,7);\nconsole.log(tf.round('day').days);",
+    "o": [
+      "4",
+      "3",
+      "0",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.NumberFormat` v3 API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.NumberFormat('en', {roundingIncrement: 3}).format(10)",
+      "new Intl.NumberFormat('en', {trailingZeroDisplay: 'auto'}).format(1.0)",
+      "new Intl.NumberFormat('en', {roundingMode: 'expand'}).format(1.5)",
+      "new Intl.NumberFormat('en', {notation: 'scientific'}).format(1000)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const rtf = new Intl.RelativeTimeFormat('en', {numeric: 'auto'});\nconsole.log(rtf.format(1, 'day'));",
+    "o": [
+      "tomorrow",
+      "in 1 day",
+      "1 day later",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.with` method?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].with(1, 4) // [1,4,3]",
+      "[1,2,3].with(-1, 4) // throws Error",
+      "[1,2,3].with(3, 4) // [1,2,3,4]",
+      "[1,2,3].with() // mutates original array"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const sp = new SharedArrayBuffer(8);\nconsole.log(sp.growable);",
+    "o": [
+      "undefined",
+      "false",
+      "true",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.supportedValuesOf` function?",
+    "l": "javascript",
+      "o": [
+      "Intl.supportedValuesOf('locale')",
+      "Intl.supportedValuesOf('currency')",
+      "Intl.supportedValuesOf('timeZone')",
+      "Intl.supportedValuesOf('unit')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const { signal } = new AbortController();\nconsole.log(signal.reason === undefined);",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.toReversed` method?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].toReversed() // [3,2,1]",
+      "[1,2,3].toReversed('desc') // throws Error",
+      "[1,2,3].toReversed(null) // returns same array",
+      "[1,2,3].toReversed() // mutates original array"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const decoder = new TextDecoderStream();\nconsole.log(decoder.readable);",
+    "o": [
+      "ReadableStream object",
+      "undefined",
+      "TypeError",
+      "null"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const list = new Intl.ListFormat('en', {type: 'disjunction'});\nconsole.log(list.format(['HTML', 'CSS', 'JS']));",
+    "o": [
+      "\"HTML, CSS, or JS\"",
+      "\"HTML or CSS or JS\"",
+      "\"HTML, CSS and JS\"",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the new `Array.prototype.findLastIndex` method?",
+    "l": "javascript",
+      "o": [
+      "[1, 2, 3, 2].findLastIndex(x => x === 2) // returns 3",
+      "[1, 2, 3].findLastIndex(2) // returns 1",
+      "[1, 2, 3].findLastIndex() // returns -1",
+      "[1, 2, 3].findLastIndex(x => x > 3) // returns undefined"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const df = new Intl.DateTimeFormat('en', {dateStyle: 'full', timeStyle: 'long'});\nconsole.log(df.resolvedOptions().hourCycle);",
+    "o": [
+      "\"h12\" or \"h23\"",
+      "undefined",
+      "null",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.NumberFormat` v3 API's new rounding options?",
+    "l": "javascript",
+      "o": [
+      "new Intl.NumberFormat('en', {roundingPriority: 'morePrecision'})",
+      "new Intl.NumberFormat('en', {roundingIncrement: 5})",
+      "new Intl.NumberFormat('en', {roundingMode: 'halfExpand'})",
+      "new Intl.NumberFormat('en', {rounding: 'ceil'})"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const collator = new Intl.Collator('en', {numeric: true});\nconsole.log(collator.compare('item2', 'item10'));",
+    "o": [
+      "-1",
+      "1",
+      "0",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Intl.Segmenter` API to count graphemes?",
+    "l": "javascript",
+      "o": [
+      "const segmenter = new Intl.Segmenter('en', {granularity: 'grapheme'});\n[...segmenter.segment('👨‍👩‍👧‍👦')].length",
+      "new Intl.Segmenter('en').countGraphemes('text')",
+      "Intl.segment('en', 'text', {unit: 'grapheme'})",
+      "new Intl.GraphemeSegmenter('en').segment('text')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const nf = new Intl.NumberFormat('en', {\n  style: 'unit',\n  unit: 'bit',\n  unitDisplay: 'narrow'\n});\nconsole.log(nf.format(1000));",
+    "o": [
+      "\"1,000b\"",
+      "\"1,000 bits\"",
+      "\"1kb\"",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.Locale` API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.Locale('en-US').getCalendars()",
+      "new Intl.Locale('en-US').hourCycle",
+      "new Intl.Locale('en-US').maximize()",
+      "new Intl.Locale('en-US').toString()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const pluralRules = new Intl.PluralRules('en', {type: 'ordinal'});\nconsole.log(pluralRules.select(42));",
+    "o": [
+      "\"few\"",
+      "\"many\"",
+      "\"42\"",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Intl.DisplayNames` API for region names?",
+    "l": "javascript",
+      "o": [
+      "new Intl.DisplayNames('en', {type: 'region'}).of('US')",
+      "new Intl.DisplayNames('en').getRegionName('US')",
+      "Intl.getRegionDisplayName('en', 'US')",
+      "new Intl.RegionDisplay('en').of('US')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const dtf = new Intl.DateTimeFormat('en', {\n  dayPeriod: 'long',\n  hour: 'numeric'\n});\nconsole.log(dtf.formatToParts(new Date(2023,0,1,3))[1].value);",
+    "o": [
+      "\"at night\"",
+      "\"3\"",
+      "\"AM\"",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.supportedValuesOf` function?",
+    "l": "javascript",
+      "o": [
+      "Intl.supportedValuesOf('locale')",
+      "Intl.supportedValuesOf('calendar')",
+      "Intl.supportedValuesOf('numberingSystem')",
+      "Intl.supportedValuesOf('language')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const nf = new Intl.NumberFormat('en', {\n  notation: 'compact',\n  compactDisplay: 'long'\n});\nconsole.log(nf.format(1000000));",
+    "o": [
+      "\"1 million\"",
+      "\"1M\"",
+      "\"1,000,000\"",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Intl.RelativeTimeFormat` API with numeric: 'auto'?",
+    "l": "javascript",
+      "o": [
+      "new Intl.RelativeTimeFormat('en', {numeric: 'auto'}).format(1, 'day')",
+      "new Intl.RelativeTimeFormat('en').formatAuto(1, 'day')",
+      "Intl.formatRelativeTime('en', 1, 'day', {numeric: 'auto'})",
+      "new Intl.RelativeTime('en').autoFormat(1, 'day')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const segments = new Intl.Segmenter('en').segment('hello');\nconsole.log(segments.containing(2).segment);",
+    "o": [
+      "\"l\"",
+      "\"e\"",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const weakMap = new WeakMap();\nconst key = function() {};\nweakMap.set(key, 42);\nkey = null;\nconsole.log(weakMap.get(key));",
+    "o": [
+      "undefined",
+      "42",
+      "null",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the new `Array.prototype.toSorted` method with a sparse array?",
+    "l": "javascript",
+      "o": [
+      "[1,,3].toSorted() // [1, 3, undefined]",
+      "[1,,3].toSorted() // [1, 3, empty]",
+      "[1,,3].toSorted() // throws Error",
+      "[1,,3].toSorted() // [undefined, 1, 3]"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const source = new Observable(subscriber => {\n  subscriber.next(1);\n  subscriber.complete();\n  subscriber.next(2);\n});\nsource.subscribe({\n  next: console.log,\n  complete: () => console.log('done')\n});",
+    "o": [
+      "1\ndone",
+      "1\n2\ndone",
+      "done",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.NumberFormat` v3 API's new rounding options?",
+    "l": "javascript",
+      "o": [
+      "new Intl.NumberFormat('en', {roundingPriority: 'morePrecision'})",
+      "new Intl.NumberFormat('en', {roundingIncrement: 5})",
+      "new Intl.NumberFormat('en', {roundingMode: 'halfExpand'})",
+      "new Intl.NumberFormat('en', {rounding: 'ceil'})"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const {signal} = new AbortController();\nsignal.addEventListener('abort', () => console.log(signal.reason));\nsignal.abort('reason');",
+    "o": [
+      "reason",
+      "undefined",
+      "AbortSignal {}",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.groupByToMap` method?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].groupByToMap(x => x % 2 ? 'odd':'even')",
+      "[1,2,3].groupByToMap('odd')",
+      "[1,2,3].groupByToMap()",
+      "[1,2,3].groupByToMap({key:'value'})"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const tf = new Temporal.Duration(1,2,3,4,5,6,7);\nconsole.log(tf.round('day').days);",
+    "o": [
+      "4",
+      "3",
+      "0",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.DurationFormat` API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.DurationFormat('en').format(Promise.resolve({hours:2}))",
+      "new Intl.DurationFormat('en').format({hours:2,minutes:30})",
+      "new Intl.DurationFormat('en',{style:'long'}).format({seconds:45})",
+      "new Intl.DurationFormat('en').formatToParts({days:1})"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const rtf = new Intl.RelativeTimeFormat('en', {numeric: 'auto'});\nconsole.log(rtf.format(1, 'day'));",
+    "o": [
+      "tomorrow",
+      "in 1 day",
+      "1 day later",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.with` method?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].with(1,4) // [1,4,3]",
+      "[1,2,3].with(-1,4) // throws Error",
+      "[1,2,3].with(3,4) // [1,2,3,4]",
+      "[1,2,3].with() // mutates original array"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const sp = new SharedArrayBuffer(8);\nconsole.log(sp.growable);",
+    "o": [
+      "undefined",
+      "false",
+      "true",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.supportedValuesOf` function?",
+    "l": "javascript",
+      "o": [
+      "Intl.supportedValuesOf('locale')",
+      "Intl.supportedValuesOf('currency')",
+      "Intl.supportedValuesOf('timeZone')",
+      "Intl.supportedValuesOf('unit')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const { signal } = new AbortController();\nconsole.log(signal.reason === undefined);",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.toReversed` method?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].toReversed() // [3,2,1]",
+      "[1,2,3].toReversed('desc') // throws Error",
+      "[1,2,3].toReversed(null) // returns same array",
+      "[1,2,3].toReversed() // mutates original array"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const decoder = new TextDecoderStream();\nconsole.log(decoder.readable);",
+    "o": [
+      "ReadableStream object",
+      "undefined",
+      "TypeError",
+      "null"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const registry = new FinalizationRegistry(held => console.log(held));\nregistry.register({}, 'target cleaned up');\nconsole.log('start');",
+    "o": [
+      "start",
+      "target cleaned up\nstart",
+      "start\ntarget cleaned up",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the Import Attributes proposal?",
+    "l": "javascript",
+      "o": [
+      "import json from './data.json' with { type: 'json' };",
+      "import json from './data.json' using 'json';",
+      "import json from './data.json' assert { type: 'json' };",
+      "import json from './data.json' via 'json';"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const source = new Observable(subscriber => {\n  subscriber.next(1);\n  setTimeout(() => subscriber.next(2), 100);\n});\nsource.subscribe(console.log);",
+    "o": [
+      "1\n2 (after 100ms)",
+      "1",
+      "2",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the CSSOM View API?",
+    "l": "javascript",
+      "o": [
+      "window.scrollTo({ top: 0, behavior: 'instant' });",
+      "element.scrollIntoView({ block: 'nearest' });",
+      "window.matchMedia('(prefers-color-scheme: dark)').matches;",
+      "document.scrollingElement.scrollTop = 100;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const policy = new TrustedTypes.createPolicy('my-policy', {\n  createHTML: input => input.replace(/</g, '&lt;')\n});\nconsole.log(policy.createHTML('<script>'));",
+    "o": [
+      "&lt;script&gt;",
+      "<script>",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the Web Locks API?",
+    "l": "javascript",
+      "o": [
+      "navigator.locks.request('resource', async lock => {});",
+      "window.requestLock('resource', () => {});",
+      "document.lock('resource', { mode: 'exclusive' });",
+      "new WebLock('resource').acquire();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const decoder = new TextDecoderStream();\nnew Response(new Blob(['abc'])).body\n  .pipeThrough(decoder)\n  .pipeTo(new WritableStream({\n    write(chunk) { console.log(chunk); }\n  }));",
+    "o": [
+      "abc",
+      "Blob { size: 3, type: '' }",
+      "Uint8Array(3) [97, 98, 99]",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the Web Animations API?",
+    "l": "javascript",
+      "o": [
+      "element.animate({ opacity: [0, 1] }, 1000).reverse();",
+      "document.timeline.getAnimations();",
+      "new Animation(new KeyframeEffect(element, { opacity: [0, 1] }));",
+      "element.getAnimations()[0].playbackRate = 2;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const cookieStore = new CookieStore();\ncookieStore.set('test', 'value');\nconsole.log(cookieStore.getAll());",
+    "o": [
+      "Promise<[CookieListItem]>",
+      "[{ name: 'test', value: 'value' }]",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the EyeDropper API?",
+    "l": "javascript",
+      "o": [
+      "new EyeDropper().open().then(result => console.log(result.sRGBHex));",
+      "navigator.eyeDropper.pickColor().then(console.log);",
+      "window.selectColor().then(hexValue => {});",
+      "new ColorPicker().dropper();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const preload = document.createElement('link');\npreload.rel = 'modulepreload';\npreload.href = 'module.js';\ndocument.head.append(preload);\nconsole.log(preload.relList.contains('modulepreload'));",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the WebCodecs API?",
+    "l": "javascript",
+      "o": [
+      "new VideoEncoder({ output: frame => {} });",
+      "new AudioDecoder({ output: sample => {} });",
+      "new ImageDecoder({ type: 'image/png' });",
+      "new MediaStreamEncoder({ format: 'mp4' });"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const watcher = new PressureObserver(update => {\n  console.log(update[0].state);\n}, { threshold: 0.5 });\nwatcher.observe('cpu');",
+    "o": [
+      "Either 'nominal' or 'fair' or 'serious' or 'critical'",
+      "0.5",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the File System Access API?",
+    "l": "javascript",
+      "o": [
+      "window.showSaveFilePicker().then(handle => {});",
+      "navigator.filesystem.save(new Blob());",
+      "document.saveToDisk('file.txt', 'content');",
+      "new FileSystem().writeFile('test.txt');"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const cred = new PasswordCredential({\n  id: 'user',\n  password: 'pass',\n  name: 'User'\n});\nconsole.log(cred.type);",
+    "o": [
+      "password",
+      "PasswordCredential",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const decoder = new CompressionStream('gzip');\nconst compressed = new Response('Hello').body.pipeThrough(decoder);\nconsole.log(compressed instanceof ReadableStream);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the new `Intl.DurationFormat` API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.DurationFormat('en').format({hours: 2, minutes: 30})",
+      "new Intl.DurationFormat('en').format(9000)",
+      "Intl.formatDuration('en', {seconds: 45})",
+      "new Duration('2:30').format()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const handle = scheduler.postTask(() => 'Done', {priority: 'background'});\nconsole.log(handle instanceof TaskController);",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Array.prototype.with` method?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].with(1.5, 4)",
+      "[1,2,3].with(1, 4)",
+      "[1,2,3].with(-1, 4)",
+      "[1,2,3].with(3, 4)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const store = new EventCounts();\nstore.add('click');\nstore.add('click');\nconsole.log(store.get('click'));",
+    "o": [
+      "2",
+      "1",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `AudioWorklet` API?",
+    "l": "javascript",
+      "o": [
+      "audioContext.audioWorklet.addModule('processor.js')",
+      "new AudioWorklet('processor.js')",
+      "navigator.audioWorklet.registerProcessor()",
+      "AudioWorkletNode.load('processor.js')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const csp = new ContentSecurityPolicy({\n  directives: { 'script-src': ['self'] }\n});\nconsole.log(csp.allows('https://example.com/script.js'));",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Permissions` API?",
+    "l": "javascript",
+      "o": [
+      "navigator.permissions.set('camera', 'granted')",
+      "navigator.permissions.query({name: 'geolocation'})",
+      "navigator.permissions.request('notifications')",
+      "navigator.permissions.revoke('microphone')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const store = new StorageBucketManager();\nconst bucket = store.open('temp');\nconsole.log(bucket instanceof StorageBucket);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Sanitizer` API?",
+    "l": "javascript",
+      "o": [
+      "new Sanitizer().sanitizeFor('div', '<script>alert()</script>')",
+      "document.sanitizeHTML('<b>safe</b>')",
+      "HTMLSanitizer.clean('<i>text</i>')",
+      "navigator.sanitizer.sanitize('<u>content</u>')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const watcher = new IdleDetector();\nwatcher.addEventListener('change', () => console.log(watcher.userState));\nwatcher.start();",
+    "o": [
+      "Either 'active' or 'idle'",
+      "undefined",
+      "true or false",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `WebTransport` API?",
+    "l": "javascript",
+      "o": [
+      "new WebTransport('https://example.com').send(data)",
+      "new WebTransport('https://example.com').createBidirectionalStream()",
+      "new WebTransport('https://example.com').ready",
+      "new WebTransport('https://example.com').close()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const sync = new PeriodicSyncManager();\nsync.register('update', {minInterval: 86400});\nconsole.log(sync.getTags());",
+    "o": [
+      "Promise<['update']>",
+      "['update']",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `WebAssembly.Global` API?",
+    "l": "javascript",
+      "o": [
+      "new WebAssembly.Global({value: 'i32', mutable: true}, 0)",
+      "WebAssembly.createGlobal('i32', 42)",
+      "new WasmGlobal('i32', false, 100)",
+      "WebAssembly.global({type: 'f64'}, 3.14)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const cred = new FederatedCredential({\n  provider: 'https://auth.example.com',\n  id: 'user123'\n});\nconsole.log(cred.type);",
+    "o": [
+      "federated",
+      "FederatedCredential",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the new `Array.prototype.groupByToMap` method?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].groupByToMap(x => x % 2 ? 'odd' : 'even')",
+      "[1,2,3].groupByToMap('odd')",
+      "[1,2,3].groupByToMap()",
+      "[1,2,3].groupByToMap({key: 'value'})"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const {signal} = new AbortController();\nsignal.addEventListener('abort', () => console.log(signal.reason), {once: true});\nsignal.abort('Manual cancel');",
+    "o": [
+      "Manual cancel",
+      "undefined",
+      "AbortSignal {}",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.NumberFormat` v3 API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.NumberFormat('en', {roundingIncrement: 7})",
+      "new Intl.NumberFormat('en', {trailingZeroDisplay: 'stripIfInteger'})",
+      "new Intl.NumberFormat('en', {roundingMode: 'halfExpand'})",
+      "new Intl.NumberFormat('en', {notation: 'scientific'})"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const tf = new Temporal.Duration(0,0,0,1,25);\nconsole.log(tf.round({smallestUnit: 'days'}));",
+    "o": [
+      "P2D",
+      "P1D",
+      "PT25H",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.toSpliced` method?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].toSpliced(1,1,4) // [1,4,3]",
+      "[1,2,3].toSpliced(1) // throws Error",
+      "[1,2,3].toSpliced(-1) // returns empty array",
+      "[1,2,3].toSpliced(1,0,4) // mutates original array"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const rtf = new Intl.RelativeTimeFormat('en', {numeric: 'auto'});\nconsole.log(rtf.format(-1, 'day'));",
+    "o": [
+      "yesterday",
+      "1 day ago",
+      "-1 day",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.supportedValuesOf` function?",
+    "l": "javascript",
+      "o": [
+      "Intl.supportedValuesOf('locale')",
+      "Intl.supportedValuesOf('calendar')",
+      "Intl.supportedValuesOf('numberingSystem')",
+      "Intl.supportedValuesOf('language')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const segments = new Intl.Segmenter('en').segment('hello');\nconsole.log(segments.containing(2).segment);",
+    "o": [
+      "l",
+      "e",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Array.prototype.with` method?",
+    "l": "javascript",
+      "o": [
+      "[1,2,3].with(1,4) // [1,4,3]",
+      "[1,2,3].with(-1,4) // throws Error",
+      "[1,2,3].with(3,4) // [1,2,3,4]",
+      "[1,2,3].with() // mutates original array"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const sp = new SharedArrayBuffer(8);\nconsole.log(sp.growable);",
+    "o": [
+      "undefined",
+      "false",
+      "true",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid use of the `Intl.DisplayNames` API for region names?",
+    "l": "javascript",
+      "o": [
+      "new Intl.DisplayNames('en', {type: 'region'}).of('US')",
+      "new Intl.DisplayNames('en').getRegionName('US')",
+      "Intl.getRegionDisplayName('en', 'US')",
+      "new Intl.RegionDisplay('en').of('US')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const nf = new Intl.NumberFormat('en', {\n  notation: 'compact',\n  compactDisplay: 'long'\n});\nconsole.log(nf.format(1000000));",
+    "o": [
+      "1 million",
+      "1M",
+      "1,000,000",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid use of the `Intl.Locale` API?",
+    "l": "javascript",
+      "o": [
+      "new Intl.Locale('en-US').getCalendars()",
+      "new Intl.Locale('en-US').hourCycle",
+      "new Intl.Locale('en-US').maximize()",
+      "new Intl.Locale('en-US').toString()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+      "c": "const df = new Intl.DateTimeFormat('en', {\n  dayPeriod: 'long',\n  hour: 'numeric'\n});\nconsole.log(df.formatToParts(new Date(2023,0,1,3))[1].value);",
+    "o": [
+      "at night",
+      "3",
+      "AM",
+      "undefined"
+    ]
+  },
+  {
+    "q": "What is the correct way to declare a variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "let x = 10;",
+      "variable x = 10;",
+      "x := 10;",
+      "int x = 10;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = 5;\nlet b = '5';\nconsole.log(a == b);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which data type in JavaScript is used to store a collection of key-value pairs?",
+    "l": "javascript",
+      "o": [
+      "Object",
+      "Array",
+      "String",
+      "Set"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof 42);\nconsole.log(typeof 'Hello');",
+    "o": [
+      "\"number\" and \"string\"",
+      "\"int\" and \"string\"",
+      "\"number\" and \"char\"",
+      "\"int\" and \"char\""
+    ]
+  },
+  {
+    "q": "Which operator is used for strict equality comparison in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "=",
+      "!=="
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = 10;\nx += 5;\nconsole.log(x);",
+    "o": [
+      "15",
+      "10",
+      "5",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid JavaScript data type?",
+    "l": "javascript",
+      "o": [
+      "Character",
+      "Boolean",
+      "Symbol",
+      "Object"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = true;\nlet b = false;\nconsole.log(a && b);",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which keyword is used to declare a constant variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const",
+      "let",
+      "var",
+      "final"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(2 + '2');",
+    "o": [
+      "\"22\"",
+      "4",
+      "2",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which keyword is used to define a function in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "function",
+      "def",
+      "fn",
+      "define"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = '10';\nlet y = 5;\nconsole.log(x - y);",
+    "o": [
+      "5",
+      "'105'",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid way to declare a variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const myVar;",
+      "let myVar = 5;",
+      "var myVar = 'Hello';",
+      "const myVar = 10;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof null);",
+    "o": [
+      "\"object\"",
+      "\"null\"",
+      "\"undefined\"",
+      "\"string\""
+    ]
+  },
+  {
+    "q": "Which of the following symbols is used for single-line comments in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "//",
+      "#",
+      "/* */",
+      "--"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(Boolean(0));",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a falsy value in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "0",
+      "1",
+      "'false'",
+      "[]"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(3 + 4 + '5');",
+    "o": [
+      "\"75\"",
+      "\"12\"",
+      "\"345\"",
+      "12"
+    ]
+  },
+  {
+    "q": "Which operator is used to check both value and type in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "!=",
+      "=>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a;\nconsole.log(a);",
+    "o": [
+      "undefined",
+      "null",
+      "0",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which statement is used to exit a loop in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "break",
+      "exit",
+      "stop",
+      "return"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN);",
+    "o": [
+      "\"number\"",
+      "\"NaN\"",
+      "\"undefined\"",
+      "\"null\""
+    ]
+  },
+  {
+    "q": "Which operator is used to assign a value to a variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "=",
+      "==",
+      ":=",
+      "=>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] == false);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which JavaScript method can be used to convert a string into an integer?",
+    "l": "javascript",
+      "o": [
+      "parseInt()",
+      "toInteger()",
+      "int()",
+      "Number.parse()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('5' + 3 - 1);",
+    "o": [
+      "52",
+      "53",
+      "4",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following values is considered truthy in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "'false'",
+      "0",
+      "null",
+      "NaN"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(!!'');",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid JavaScript variable name?",
+    "l": "javascript",
+      "o": [
+      "2value",
+      "_value",
+      "$value",
+      "value2"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = 0;\nconsole.log(a++);",
+    "o": [
+      "0",
+      "1",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which keyword is used to declare a block-scoped variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "let",
+      "var",
+      "const",
+      "define"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = 3;\nconsole.log(x ** 3);",
+    "o": [
+      "27",
+      "9",
+      "6",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which function is used to print something in the console in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "console.log()",
+      "print()",
+      "log()",
+      "echo()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof []);",
+    "o": [
+      "\"object\"",
+      "\"array\"",
+      "\"list\"",
+      "\"undefined\""
+    ]
+  },
+  {
+    "q": "Which symbol is used to represent the ternary operator in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "?:",
+      "??",
+      "=>",
+      "@@"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('10' * 2);",
+    "o": [
+      "20",
+      "'102'",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which built-in function is used to convert a number to a string in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "toString()",
+      "String()",
+      "convertToString()",
+      "toStr()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(Boolean('false'));",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which statement is used to handle exceptions in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "try...catch",
+      "catch...try",
+      "error...catch",
+      "exception"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x;\nconsole.log(x ?? 'default');",
+    "o": [
+      "\"default\"",
+      "undefined",
+      "null",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which data type is NOT primitive in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "Object",
+      "Number",
+      "Boolean",
+      "String"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(2 == '2');",
+    "o": [
+      "true",
+      "false",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid way to define a function in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "function myFunc() {}",
+      "const myFunc = function() {};",
+      "let myFunc = () => {};",
+      "def myFunc() {}"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = 5;\na += '5';\nconsole.log(a);",
+    "o": [
+      "\"55\"",
+      "10",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about JavaScript?",
+    "l": "javascript",
+      "o": [
+      "JavaScript is a loosely typed language.",
+      "JavaScript requires variable types to be declared explicitly.",
+      "JavaScript does not support asynchronous programming.",
+      "JavaScript is a compiled language."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] + []);",
+    "o": [
+      "\"\"",
+      "[]",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid JavaScript operator?",
+    "l": "javascript",
+      "o": [
+      "%%",
+      "===",
+      "!==",
+      "&&"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof function(){});",
+    "o": [
+      "\"function\"",
+      "\"object\"",
+      "\"undefined\"",
+      "\"method\""
+    ]
+  },
+  {
+    "q": "Which method is used to remove the last element from an array in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "pop()",
+      "shift()",
+      "remove()",
+      "splice()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('3' - -'3');",
+    "o": [
+      "6",
+      "0",
+      "33",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which keyword is used to declare a constant variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const",
+      "let",
+      "var",
+      "final"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(null == undefined);",
+    "o": [
+      "true",
+      "false",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which built-in method is used to round a number to the nearest integer in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "Math.round()",
+      "Math.floor()",
+      "Math.ceil()",
+      "round()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = '10';\nconsole.log(+x);",
+    "o": [
+      "10",
+      "'10'",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a falsy value in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "'false'",
+      "0",
+      "null",
+      "NaN"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN);",
+    "o": [
+      "\"number\"",
+      "\"NaN\"",
+      "\"undefined\"",
+      "\"null\""
+    ]
+  },
+  {
+    "q": "Which of the following symbols is used to define a template literal in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "``",
+      "''",
+      "\"\"",
+      "##"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = (2, 3, 4);\nconsole.log(a);",
+    "o": [
+      "4",
+      "2",
+      "[2, 3, 4]",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following methods is used to check if an array contains a specific value in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "includes()",
+      "contains()",
+      "has()",
+      "exists()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = !!'';\nconsole.log(x);",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which statement is true about 'var', 'let', and 'const' in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "'var' is function-scoped, while 'let' and 'const' are block-scoped.",
+      "'var' and 'let' are block-scoped, while 'const' is function-scoped.",
+      "All three are function-scoped.",
+      "'const' can be reassigned after declaration."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(0.1 + 0.2 === 0.3);",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid JavaScript data type?",
+    "l": "javascript",
+      "o": [
+      "character",
+      "number",
+      "boolean",
+      "symbol"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof Infinity);",
+    "o": [
+      "\"number\"",
+      "\"infinity\"",
+      "\"undefined\"",
+      "\"bigint\""
+    ]
+  },
+  {
+    "q": "Which operator is used for optional chaining in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "?.",
+      "??",
+      "||",
+      "&&"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('5' - 3);",
+    "o": [
+      "2",
+      "'53'",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following array methods is used to remove the first element of an array?",
+    "l": "javascript",
+      "o": [
+      "shift()",
+      "pop()",
+      "splice()",
+      "slice()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([1, 2] + [3, 4]);",
+    "o": [
+      "\"1,23,4\"",
+      "[1, 2, 3, 4]",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which statement correctly describes '===' in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "It checks both value and type equality.",
+      "It only checks value equality.",
+      "It performs type conversion before comparing.",
+      "It is the same as '=='."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let obj = { a: 1, b: 2 };\nconsole.log(Object.keys(obj).length);",
+    "o": [
+      "2",
+      "1",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following correctly declares a variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "let x = 10;",
+      "variable x = 10;",
+      "const x;",
+      "int x = 10;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof []);",
+    "o": [
+      "\"object\"",
+      "\"array\"",
+      "\"undefined\"",
+      "\"list\""
+    ]
+  },
+  {
+    "q": "Which of the following symbols is used to perform the exponentiation operation in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "**",
+      "^",
+      "^^",
+      "//"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(true + true);",
+    "o": [
+      "2",
+      "\"truetrue\"",
+      "true",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following JavaScript values is considered falsy?",
+    "l": "javascript",
+      "o": [
+      "0",
+      "[]",
+      "{}",
+      "\"false\""
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = '5';\nlet y = 2;\nconsole.log(x * y);",
+    "o": [
+      "10",
+      "\"52\"",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which method is used to convert a string into an integer in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "parseInt()",
+      "toInteger()",
+      "int()",
+      "convertInt()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = [1, 2, 3];\nconsole.log(x.length);",
+    "o": [
+      "3",
+      "2",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following JavaScript operators is used for nullish coalescing?",
+    "l": "javascript",
+      "o": [
+      "??",
+      "||",
+      "&&",
+      "??="
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof function(){});",
+    "o": [
+      "\"function\"",
+      "\"object\"",
+      "\"undefined\"",
+      "\"method\""
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(3 + '3' - 1);",
+    "o": [
+      "32",
+      "331",
+      "5",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid way to declare a function in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "def myFunction() {}",
+      "function myFunction() {}",
+      "const myFunction = function() {};",
+      "const myFunction = () => {};"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x;\nconsole.log(x ?? 'default');",
+    "o": [
+      "\"default\"",
+      "undefined",
+      "null",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which statement about JavaScript objects is true?",
+    "l": "javascript",
+      "o": [
+      "Objects store key-value pairs.",
+      "Objects can only store numbers and strings.",
+      "Objects must be created using the 'new' keyword.",
+      "Objects cannot contain functions as values."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] == false);",
+    "o": [
+      "true",
+      "false",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid primitive data type in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "array",
+      "boolean",
+      "string",
+      "bigint"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN);",
+    "o": [
+      "\"number\"",
+      "\"NaN\"",
+      "\"undefined\"",
+      "\"null\""
+    ]
+  },
+  {
+    "q": "Which JavaScript operator is used to check both value and type equality?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "=",
+      "!=="
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(1 + '1' + 1);",
+    "o": [
+      "\"111\"",
+      "3",
+      "12",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which method is used to convert a JavaScript object into a JSON string?",
+    "l": "javascript",
+      "o": [
+      "JSON.stringify()",
+      "JSON.parse()",
+      "toJSON()",
+      "stringifyJSON()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(0.1 + 0.2 === 0.3);",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which keyword is used to define a constant variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const",
+      "var",
+      "let",
+      "static"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof null);",
+    "o": [
+      "\"object\"",
+      "\"null\"",
+      "\"undefined\"",
+      "\"number\""
+    ]
+  },
+  {
+    "q": "Which of the following correctly represents the logical AND operator in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "&&",
+      "&",
+      "AND",
+      "&&="
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let arr = [1, 2, 3];\nconsole.log(arr instanceof Array);",
+    "o": [
+      "true",
+      "false",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following values is considered truthy in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "\"0\"",
+      "0",
+      "null",
+      "NaN"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(Boolean('false'));",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which function is used to execute a piece of code after a specified delay in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "setTimeout()",
+      "setInterval()",
+      "delay()",
+      "executeAfter()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] + []);",
+    "o": [
+      "\"\"",
+      "\"[]\"",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following statements about JavaScript arrays is true?",
+    "l": "javascript",
+      "o": [
+      "Arrays can hold mixed data types.",
+      "Arrays have a fixed size in JavaScript.",
+      "Arrays must contain only numbers.",
+      "Arrays cannot be nested inside other arrays."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = '5';\nlet y = +x;\nconsole.log(typeof y);",
+    "o": [
+      "\"number\"",
+      "\"string\"",
+      "\"undefined\"",
+      "\"object\""
+    ]
+  },
+  {
+    "q": "Which JavaScript operator is used to check if a value is NOT equal to another value, considering type?",
+    "l": "javascript",
+      "o": [
+      "!==",
+      "!=",
+      "==",
+      "="
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(5 && 0);",
+    "o": [
+      "0",
+      "5",
+      "true",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid JavaScript variable name?",
+    "l": "javascript",
+      "o": [
+      "2variable",
+      "_variable",
+      "$variable",
+      "variableName"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN === 'number');",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following methods removes the last element from an array and returns it?",
+    "l": "javascript",
+      "o": [
+      "pop()",
+      "shift()",
+      "slice()",
+      "splice()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] == ![]);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which method is used to convert a string into an integer in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "parseInt()",
+      "Number()",
+      "toFixed()",
+      "toString()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = '10';\nlet b = 10;\nconsole.log(a == b, a === b);",
+    "o": [
+      "true false",
+      "false true",
+      "true true",
+      "false false"
+    ]
+  },
+  {
+    "q": "Which of the following statements about JavaScript functions is true?",
+    "l": "javascript",
+      "o": [
+      "A function can return another function.",
+      "Functions must always have parameters.",
+      "Functions cannot be assigned to variables.",
+      "Functions cannot be used before declaration."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(3 + '3' - 1);",
+    "o": [
+      "32",
+      "33",
+      "5",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a primitive data type in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "Object",
+      "String",
+      "Boolean",
+      "Number"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] == 0);",
+    "o": [
+      "true",
+      "false",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which method is used to merge two or more arrays in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "concat()",
+      "push()",
+      "merge()",
+      "splice()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = (2, 3, 4);\nconsole.log(a);",
+    "o": [
+      "4",
+      "[2, 3, 4]",
+      "2",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which operator in JavaScript is used to check both value and type equality?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "=",
+      "!="
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof([] + {}));",
+    "o": [
+      "\"[object Object]\"",
+      "\"string\"",
+      "\"undefined\"",
+      "\"object\""
+    ]
+  },
+  {
+    "q": "Which function can be used to execute a function repeatedly at a fixed time interval?",
+    "l": "javascript",
+      "o": [
+      "setInterval()",
+      "setTimeout()",
+      "clearInterval()",
+      "loop()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let obj = { a: 1, b: 2 };\ndelete obj.a;\nconsole.log(obj);",
+    "o": [
+      "{ b: 2 }",
+      "{ a: undefined, b: 2 }",
+      "{ a: null, b: 2 }",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which statement about JavaScript 'let' and 'var' is true?",
+    "l": "javascript",
+      "o": [
+      "'let' has block scope while 'var' has function scope.",
+      "'let' and 'var' have the same scope.",
+      "'var' is block-scoped while 'let' is function-scoped.",
+      "'var' cannot be reassigned while 'let' can."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = '10' - 2;\nconsole.log(a);",
+    "o": [
+      "8",
+      "'102'",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which keyword is used to declare a constant variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const",
+      "let",
+      "var",
+      "final"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(0.1 + 0.2 === 0.3);",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which method is used to remove the first element from an array in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "shift()",
+      "pop()",
+      "slice()",
+      "splice()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = '5' + 3;\nconsole.log(typeof x);",
+    "o": [
+      "\"string\"",
+      "\"number\"",
+      "\"undefined\"",
+      "\"boolean\""
+    ]
+  },
+  {
+    "q": "Which of the following values is considered falsy in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "0",
+      "1",
+      "'false'",
+      "'true'"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(true + true);",
+    "o": [
+      "2",
+      "true",
+      "false",
+      "1"
+    ]
+  },
+  {
+    "q": "Which function is used to execute a function once after a specified delay?",
+    "l": "javascript",
+      "o": [
+      "setTimeout()",
+      "setInterval()",
+      "clearTimeout()",
+      "requestAnimationFrame()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof null);",
+    "o": [
+      "\"object\"",
+      "\"null\"",
+      "\"undefined\"",
+      "\"NaN\""
+    ]
+  },
+  {
+    "q": "Which symbol is used to define an arrow function in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "=>",
+      "->",
+      ":>",
+      "<-"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] + []);",
+    "o": [
+      "\"\"",
+      "[]",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which operator is used to check if a property exists in an object?",
+    "l": "javascript",
+      "o": [
+      "in",
+      "exists",
+      "has",
+      "contains"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN);",
+    "o": [
+      "\"number\"",
+      "\"NaN\"",
+      "\"undefined\"",
+      "\"object\""
+    ]
+  },
+  {
+    "q": "Which function is used to convert a string to an integer in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "parseInt()",
+      "toInteger()",
+      "convertToInt()",
+      "Number.parse()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(1 == '1');",
+    "o": [
+      "true",
+      "false",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to declare a variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "let x = 10;",
+      "variable x = 10;",
+      "var x : 10;",
+      "constant x = 10;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let obj = { a: 1, b: 2 };\nconsole.log('a' in obj);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which method is used to convert an array into a string in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "join()",
+      "concat()",
+      "split()",
+      "toText()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] == false);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which statement about JavaScript closures is true?",
+    "l": "javascript",
+      "o": [
+      "A closure allows a function to remember variables from its outer scope even after the function has finished executing.",
+      "Closures are only used in asynchronous JavaScript.",
+      "A closure is another name for a callback function.",
+      "Closures are only available in ES6 and later."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = 5;\nx = x++;\nconsole.log(x);",
+    "o": [
+      "5",
+      "6",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a JavaScript data type?",
+    "l": "javascript",
+      "o": [
+      "Character",
+      "Number",
+      "Boolean",
+      "Object"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(3 + true);",
+    "o": [
+      "4",
+      "3",
+      "true3",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which keyword is used to define a block scope variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "let",
+      "var",
+      "const",
+      "block"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = '5';\nlet b = 2;\nconsole.log(a * b);",
+    "o": [
+      "10",
+      "'52'",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to check if a variable is an array?",
+    "l": "javascript",
+      "o": [
+      "Array.isArray(varName)",
+      "typeof varName === 'array'",
+      "varName instanceof array",
+      "isArray(varName)"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof function(){});",
+    "o": [
+      "\"function\"",
+      "\"object\"",
+      "\"undefined\"",
+      "\"method\""
+    ]
+  },
+  {
+    "q": "Which method is used to add an element to the end of an array?",
+    "l": "javascript",
+      "o": [
+      "push()",
+      "unshift()",
+      "append()",
+      "add()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(!!'false');",
+    "o": [
+      "true",
+      "false",
+      "NaN",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which symbol is used to perform strict equality comparison in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "=>",
+      "=!"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = '10' - 5;\nconsole.log(x);",
+    "o": [
+      "5",
+      "'105'",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a falsy value in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "0",
+      "[]",
+      "'false'",
+      "{}"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(null == undefined);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which operator can be used to merge two objects in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "Object.assign()",
+      "merge()",
+      "concat()",
+      "spread()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] == ![]);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which method is used to remove the last element from an array?",
+    "l": "javascript",
+      "o": [
+      "pop()",
+      "shift()",
+      "splice()",
+      "remove()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(1 + '1' - 1);",
+    "o": [
+      "10",
+      "11",
+      "'110'",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which built-in object is used to work with dates and times in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "Date",
+      "Time",
+      "Clock",
+      "Calendar"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN === 'number');",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which loop is best suited for iterating over object properties?",
+    "l": "javascript",
+      "o": [
+      "for...in",
+      "for...of",
+      "while",
+      "do...while"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('5' + 3 - 1);",
+    "o": [
+      "52",
+      "531",
+      "7",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which keyword is used to declare a constant variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const",
+      "let",
+      "var",
+      "static"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x;\nconsole.log(x ?? 'Default');",
+    "o": [
+      "Default",
+      "undefined",
+      "null",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which method converts a JSON string into a JavaScript object?",
+    "l": "javascript",
+      "o": [
+      "JSON.parse()",
+      "JSON.stringify()",
+      "JSON.toObject()",
+      "JSON.convert()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(!!null);",
+    "o": [
+      "false",
+      "true",
+      "null",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid JavaScript variable name?",
+    "l": "javascript",
+      "o": [
+      "2name",
+      "_name",
+      "$value",
+      "camelCase"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN);",
+    "o": [
+      "\"number\"",
+      "\"NaN\"",
+      "\"undefined\"",
+      "\"null\""
+    ]
+  },
+  {
+    "q": "Which symbol is used for the ternary operator in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "? :",
+      "??",
+      "->",
+      "<=>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(Boolean([]));",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following values is considered 'truthy' in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "'0'",
+      "0",
+      "null",
+      "undefined"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(3 + true);",
+    "o": [
+      "4",
+      "3",
+      "true3",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which statement is used to exit a loop in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "break",
+      "exit",
+      "return",
+      "stop"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof []);",
+    "o": [
+      "\"object\"",
+      "\"array\"",
+      "\"list\"",
+      "\"undefined\""
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to declare an arrow function?",
+    "l": "javascript",
+      "o": [
+      "const add = (a, b) => a + b;",
+      "const add => (a, b) { return a + b; }",
+      "const add = (a, b) : a + b;",
+      "function: add(a, b) => a + b;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = 5;\nlet b = '5';\nconsole.log(a === b);",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which method is used to add a new element to the beginning of an array?",
+    "l": "javascript",
+      "o": [
+      "unshift()",
+      "push()",
+      "append()",
+      "shift()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] + []);",
+    "o": [
+      "\"\"",
+      "\"[]\"",
+      "[]",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which keyword is used to define a block of code that handles exceptions?",
+    "l": "javascript",
+      "o": [
+      "try",
+      "catch",
+      "finally",
+      "throw"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof null);",
+    "o": [
+      "\"object\"",
+      "\"null\"",
+      "\"undefined\"",
+      "\"NaN\""
+    ]
+  },
+  {
+    "q": "Which operator is used to check if a property exists in an object?",
+    "l": "javascript",
+      "o": [
+      "\"in\"",
+      "\"has\"",
+      "\"exists\"",
+      "\"contains\""
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(1 + '1' - 1);",
+    "o": [
+      "10",
+      "11",
+      "'11'",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a JavaScript primitive data type?",
+    "l": "javascript",
+      "o": [
+      "Object",
+      "String",
+      "Boolean",
+      "Number"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = 0;\nconsole.log(x++);\nconsole.log(x);",
+    "o": [
+      "0, 1",
+      "1, 1",
+      "1, 2",
+      "0, 0"
+    ]
+  },
+  {
+    "q": "Which method is used to remove the last element from an array?",
+    "l": "javascript",
+      "o": [
+      "pop()",
+      "shift()",
+      "splice()",
+      "removeLast()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(0.1 + 0.2 === 0.3);",
+    "o": [
+      "false",
+      "true",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which operator is used to perform exponentiation in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "**",
+      "^",
+      "exp()",
+      "^^"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = 'Hello';\nlet b = a;\nb = 'World';\nconsole.log(a);",
+    "o": [
+      "'Hello'",
+      "'World'",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which function is used to convert a string into an integer in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "parseInt()",
+      "parseFloat()",
+      "Number()",
+      "toInteger()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] == false);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to declare a block-scoped variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "let x = 5;",
+      "var x = 5;",
+      "const x;",
+      "define x = 5;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN);",
+    "o": [
+      "\"number\"",
+      "\"NaN\"",
+      "\"undefined\"",
+      "\"null\""
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to declare a constant in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const PI = 3.14;",
+      "let PI = 3.14;",
+      "var PI = 3.14;",
+      "PI = 3.14;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] + {});",
+    "o": [
+      "\"[object Object]\"",
+      "[]",
+      "{}",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which method can be used to convert a JSON string into a JavaScript object?",
+    "l": "javascript",
+      "o": [
+      "JSON.parse()",
+      "JSON.stringify()",
+      "parseJSON()",
+      "toObject()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = 5;\nlet b = a;\nb++;\nconsole.log(a, b);",
+    "o": [
+      "5, 6",
+      "6, 6",
+      "5, 5",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following values is considered a falsy value in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "0",
+      "\"0\"",
+      "\"false\"",
+      "[]"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(true + true + true);",
+    "o": [
+      "3",
+      "true",
+      "Error",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which method is used to check if a string contains a certain substring?",
+    "l": "javascript",
+      "o": [
+      "includes()",
+      "contains()",
+      "has()",
+      "indexOf()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(Boolean('false'));",
+    "o": [
+      "true",
+      "false",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid JavaScript variable name?",
+    "l": "javascript",
+      "o": [
+      "2value",
+      "_value",
+      "$value",
+      "value2"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof null);",
+    "o": [
+      "\"object\"",
+      "\"null\"",
+      "\"undefined\"",
+      "\"NaN\""
+    ]
+  },
+  {
+    "q": "Which keyword is used to define a function in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "function",
+      "def",
+      "func",
+      "define"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(2 == '2');",
+    "o": [
+      "true",
+      "false",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to declare an arrow function?",
+    "l": "javascript",
+      "o": [
+      "const add = (a, b) => a + b;",
+      "const add = function(a, b) => a + b;",
+      "const add = (a, b) { return a + b; };",
+      "const add => (a, b) return a + b;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('5' - 3);",
+    "o": [
+      "2",
+      "\"53\"",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which built-in object allows you to work with dates and times in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "Date",
+      "Time",
+      "Clock",
+      "Datetime"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof []);",
+    "o": [
+      "\"object\"",
+      "\"array\"",
+      "\"list\"",
+      "\"undefined\""
+    ]
+  },
+  {
+    "q": "Which operator is used to check both value and type equality in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "=",
+      "!=="
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(Boolean(0));",
+    "o": [
+      "false",
+      "true",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which method is used to remove whitespace from both sides of a string?",
+    "l": "javascript",
+      "o": [
+      "trim()",
+      "strip()",
+      "clean()",
+      "removeWhitespace()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(0.1 + 0.2 === 0.3);",
+    "o": [
+      "false",
+      "true",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which statement is used to stop the execution of a loop in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "break",
+      "continue",
+      "exit",
+      "stop"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('10' - - '5');",
+    "o": [
+      "15",
+      "\"105\"",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a primitive data type in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "Array",
+      "String",
+      "Boolean",
+      "Number"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a;\nconsole.log(a);",
+    "o": [
+      "undefined",
+      "null",
+      "0",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following statements correctly declares an object in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const obj = { name: 'Alice', age: 25 };",
+      "const obj = [ name: 'Alice', age: 25 ];",
+      "const obj = ( name: 'Alice', age: 25 );",
+      "const obj = 'name: Alice, age: 25';"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(!!'false');",
+    "o": [
+      "true",
+      "false",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is used to merge two arrays in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "concat()",
+      "merge()",
+      "combine()",
+      "append()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof function(){});",
+    "o": [
+      "\"function\"",
+      "\"object\"",
+      "\"undefined\"",
+      "\"null\""
+    ]
+  },
+  {
+    "q": "Which method is used to remove the last element from an array in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "pop()",
+      "shift()",
+      "slice()",
+      "splice()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] + []);",
+    "o": [
+      "\"\"",
+      "[]",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which keyword is used to declare a block-scoped variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "let",
+      "var",
+      "const",
+      "scope"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(3 ** 2);",
+    "o": [
+      "9",
+      "6",
+      "Error",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which operator is used to determine whether a value exists in an array?",
+    "l": "javascript",
+      "o": [
+      "includes()",
+      "contains()",
+      "has()",
+      "exists()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(!!0);",
+    "o": [
+      "false",
+      "true",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid way to declare a variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const x = 10;",
+      "let x = 10;",
+      "var x = 10;",
+      "variable x = 10;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN);",
+    "o": [
+      "\"number\"",
+      "\"NaN\"",
+      "\"undefined\"",
+      "\"object\""
+    ]
+  },
+  {
+    "q": "Which of the following methods is used to convert a string into an integer?",
+    "l": "javascript",
+      "o": [
+      "parseInt()",
+      "Number()",
+      "toFixed()",
+      "stringToInt()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] == false);",
+    "o": [
+      "true",
+      "false",
+      "Error",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which JavaScript method is used to iterate over an array?",
+    "l": "javascript",
+      "o": [
+      "forEach()",
+      "map()",
+      "loop()",
+      "iterate()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof null);",
+    "o": [
+      "\"object\"",
+      "\"null\"",
+      "\"undefined\"",
+      "\"string\""
+    ]
+  },
+  {
+    "q": "Which of the following is used to check if a variable is an array in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "Array.isArray()",
+      "typeof",
+      "instanceof",
+      "isArray()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = '5';\nlet b = 5;\nconsole.log(a == b);",
+    "o": [
+      "true",
+      "false",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which JavaScript operator returns the remainder of a division?",
+    "l": "javascript",
+      "o": [
+      "%",
+      "/",
+      "//",
+      "remainder()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(2 + '2' - 1);",
+    "o": [
+      "21",
+      "3",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is a falsy value in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "0",
+      "1",
+      "{}",
+      "[]"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('5' * 2);",
+    "o": [
+      "10",
+      "\"52\"",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which method is used to remove the first element from an array?",
+    "l": "javascript",
+      "o": [
+      "shift()",
+      "pop()",
+      "splice()",
+      "slice()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = 10;\nconsole.log(delete x);",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which symbol is used for the strict equality operator in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "!==",
+      "="
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof []);",
+    "o": [
+      "\"object\"",
+      "\"array\"",
+      "\"undefined\"",
+      "\"function\""
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid JavaScript data type?",
+    "l": "javascript",
+      "o": [
+      "character",
+      "number",
+      "boolean",
+      "object"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(!!'false');",
+    "o": [
+      "true",
+      "false",
+      "NaN",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is used to convert a value to a string in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "toString()",
+      "String()",
+      "convertToString()",
+      "parseString()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(3 + 2 + '7');",
+    "o": [
+      "\"57\"",
+      "12",
+      "\"12\"",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following correctly declares a constant variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const x = 10;",
+      "let x = 10;",
+      "var x = 10;",
+      "constant x = 10;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('10' - '2');",
+    "o": [
+      "8",
+      "\"102\"",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which function is used to execute a piece of code after a specified delay?",
+    "l": "javascript",
+      "o": [
+      "setTimeout()",
+      "setInterval()",
+      "delay()",
+      "wait()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof function(){});",
+    "o": [
+      "\"function\"",
+      "\"object\"",
+      "\"undefined\"",
+      "\"null\""
+    ]
+  },
+  {
+    "q": "Which of the following loops is NOT available in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "repeat-until",
+      "for",
+      "while",
+      "do-while"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN);",
+    "o": [
+      "\"number\"",
+      "\"NaN\"",
+      "\"undefined\"",
+      "\"null\""
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to declare a block-scoped variable?",
+    "l": "javascript",
+      "o": [
+      "let x = 5;",
+      "var x = 5;",
+      "block x = 5;",
+      "scoped x = 5;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('3' * '3');",
+    "o": [
+      "9",
+      "\"33\"",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which method is used to convert a JSON string into a JavaScript object?",
+    "l": "javascript",
+      "o": [
+      "JSON.parse()",
+      "JSON.stringify()",
+      "parseJSON()",
+      "toObject()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(5 === '5');",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which operator is used to check both value and type equality?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "=",
+      "!=="
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(Boolean([]));",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which method is used to join all elements of an array into a single string?",
+    "l": "javascript",
+      "o": [
+      "join()",
+      "concat()",
+      "merge()",
+      "combine()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let arr = [1, 2, 3];\nconsole.log(arr.length = 5);",
+    "o": [
+      "5",
+      "3",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which keyword is used to declare a variable that cannot be reassigned?",
+    "l": "javascript",
+      "o": [
+      "const",
+      "let",
+      "var",
+      "final"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof null);",
+    "o": [
+      "\"object\"",
+      "\"null\"",
+      "\"undefined\"",
+      "\"string\""
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a primitive data type in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "Object",
+      "String",
+      "Number",
+      "Boolean"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] + []);",
+    "o": [
+      "\"\"",
+      "[]",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following correctly declares an arrow function?",
+    "l": "javascript",
+      "o": [
+      "const add = (a, b) => a + b;",
+      "const add = => (a, b) { return a + b; }",
+      "const add = (a, b) => { return a + b }",
+      "const add(a, b) => a + b;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(0 == false);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following methods removes the last element from an array and returns it?",
+    "l": "javascript",
+      "o": [
+      "pop()",
+      "shift()",
+      "splice()",
+      "slice()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(2 + '2' - 1);",
+    "o": [
+      "21",
+      "3",
+      "\"22\"",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which JavaScript operator is used to determine the data type of a variable?",
+    "l": "javascript",
+      "o": [
+      "typeof",
+      "instanceof",
+      "isType()",
+      "getType()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] == false);",
+    "o": [
+      "true",
+      "false",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which method is used to add one or more elements to the beginning of an array?",
+    "l": "javascript",
+      "o": [
+      "unshift()",
+      "push()",
+      "shift()",
+      "concat()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof function(){});",
+    "o": [
+      "\"function\"",
+      "\"object\"",
+      "\"undefined\"",
+      "\"string\""
+    ]
+  },
+  {
+    "q": "Which of the following is a falsy value in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "0",
+      "1",
+      "{}",
+      "\"false\""
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('5' - 3);",
+    "o": [
+      "2",
+      "\"53\"",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which keyword is used to define a constant variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const",
+      "let",
+      "var",
+      "static"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x;\nconsole.log(x ?? 'default');",
+    "o": [
+      "\"default\"",
+      "undefined",
+      "null",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which method is used to find the index of an element in an array?",
+    "l": "javascript",
+      "o": [
+      "indexOf()",
+      "find()",
+      "search()",
+      "position()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(3 ** 2);",
+    "o": [
+      "9",
+      "6",
+      "Error",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid JavaScript variable name?",
+    "l": "javascript",
+      "o": [
+      "2variable",
+      "_variable",
+      "$variable",
+      "variableName"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = '10';\nlet b = +a;\nconsole.log(typeof b);",
+    "o": [
+      "\"number\"",
+      "\"string\"",
+      "\"NaN\"",
+      "\"undefined\""
+    ]
+  },
+  {
+    "q": "Which method is used to convert a number to a string?",
+    "l": "javascript",
+      "o": [
+      "toString()",
+      "parseInt()",
+      "stringify()",
+      "convert()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(Boolean('false'));",
+    "o": [
+      "true",
+      "false",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which operator is used for strict equality comparison in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "=",
+      "!=="
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(5 && 0);",
+    "o": [
+      "0",
+      "5",
+      "true",
+      "false"
+    ]
+  },
+  {
+    "q": "Which method is used to remove the first element from an array and return it?",
+    "l": "javascript",
+      "o": [
+      "shift()",
+      "pop()",
+      "splice()",
+      "slice()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN);",
+    "o": [
+      "\"number\"",
+      "\"NaN\"",
+      "\"undefined\"",
+      "\"object\""
+    ]
+  },
+  {
+    "q": "Which statement is used to exit a loop in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "break",
+      "exit",
+      "stop",
+      "return"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(2 || 3);",
+    "o": [
+      "2",
+      "3",
+      "true",
+      "false"
+    ]
+  },
+  {
+    "q": "Which of the following is used to define a block scope variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "let",
+      "var",
+      "static",
+      "global"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('Hello'.charAt(1));",
+    "o": [
+      "\"e\"",
+      "\"H\"",
+      "\"l\"",
+      "\"o\""
+    ]
+  },
+  {
+    "q": "Which function is used to parse a string into an integer in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "parseInt()",
+      "toInteger()",
+      "Number()",
+      "parseFloat()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(!!'0');",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which data type in JavaScript represents an absence of an object value?",
+    "l": "javascript",
+      "o": [
+      "null",
+      "undefined",
+      "NaN",
+      "false"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof([]));",
+    "o": [
+      "\"object\"",
+      "\"array\"",
+      "\"list\"",
+      "\"undefined\""
+    ]
+  },
+  {
+    "q": "Which operator is used to check if two values are NOT equal in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "!=",
+      "==",
+      "=",
+      "==!"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] == false);",
+    "o": [
+      "true",
+      "false",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which method is used to merge two or more arrays in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "concat()",
+      "merge()",
+      "combine()",
+      "append()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('10' * 2);",
+    "o": [
+      "20",
+      "\"102\"",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which built-in function is used to convert a JSON string into a JavaScript object?",
+    "l": "javascript",
+      "o": [
+      "JSON.parse()",
+      "JSON.stringify()",
+      "JSON.toObject()",
+      "JSON.convert()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = 5;\nx += '5';\nconsole.log(typeof x);",
+    "o": [
+      "\"string\"",
+      "\"number\"",
+      "\"NaN\"",
+      "\"undefined\""
+    ]
+  },
+  {
+    "q": "Which keyword is used to define a function in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "function",
+      "def",
+      "func",
+      "lambda"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof null);",
+    "o": [
+      "\"object\"",
+      "\"null\"",
+      "\"undefined\"",
+      "\"boolean\""
+    ]
+  },
+  {
+    "q": "Which of the following correctly declares a constant variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const PI = 3.14;",
+      "let PI = 3.14;",
+      "var PI = 3.14;",
+      "constant PI = 3.14;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(3 + '3');",
+    "o": [
+      "\"33\"",
+      "6",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which symbol is used for single-line comments in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "//",
+      "/* */",
+      "#",
+      "--"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(0 == '');",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for an arrow function in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "() => {}",
+      "=> () {}",
+      "function => ()",
+      "() => []"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] + {});",
+    "o": [
+      "\"[object Object]\"",
+      "[]",
+      "{}",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following correctly checks if a variable is an array in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "Array.isArray(value)",
+      "value instanceof array",
+      "typeof value === \"array\"",
+      "isArray(value)"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(5 ** 2);",
+    "o": [
+      "25",
+      "10",
+      "Error",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which function is used to execute a function after a specified delay in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "setTimeout()",
+      "setInterval()",
+      "delay()",
+      "wait()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN);",
+    "o": [
+      "\"number\"",
+      "\"NaN\"",
+      "\"undefined\"",
+      "\"string\""
+    ]
+  },
+  {
+    "q": "Which of the following keywords is used to define a block-scoped variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "let",
+      "var",
+      "const",
+      "define"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(!!undefined);",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which operator is used to check both value and type equality in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "=",
+      "!=="
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(5 + true);",
+    "o": [
+      "6",
+      "5",
+      "true5",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about JavaScript variables?",
+    "l": "javascript",
+      "o": [
+      "Variables declared with let are block-scoped.",
+      "Variables declared with var are block-scoped.",
+      "Variables declared with const can be reassigned.",
+      "JavaScript has only one type of variable declaration."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(parseInt('10px'));",
+    "o": [
+      "10",
+      "NaN",
+      "\"10px\"",
+      "0"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to declare a function in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "function myFunction() {}",
+      "def myFunction() {}",
+      "func myFunction() {}",
+      "myFunction = function {}"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('5' - 3);",
+    "o": [
+      "2",
+      "\"53\"",
+      "NaN",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which JavaScript function is used to execute a function repeatedly after a fixed time interval?",
+    "l": "javascript",
+      "o": [
+      "setInterval()",
+      "setTimeout()",
+      "repeat()",
+      "loop()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] == false);",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following correctly declares an object in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "let obj = { name: 'John', age: 25 };",
+      "let obj = ( name: 'John', age: 25 );",
+      "let obj = [ name: 'John', age: 25 ];",
+      "let obj = 'name: John, age: 25';"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof function(){});",
+    "o": [
+      "\"function\"",
+      "\"object\"",
+      "\"undefined\"",
+      "\"string\""
+    ]
+  },
+  {
+    "q": "Which JavaScript keyword is used to create a variable that cannot be reassigned?",
+    "l": "javascript",
+      "o": [
+      "const",
+      "let",
+      "var",
+      "final"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(!!'false');",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax to check if a variable is `null` in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "if (variable === null)",
+      "if (typeof variable === 'null')",
+      "if (variable == undefined)",
+      "if (variable is null)"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof([]));",
+    "o": [
+      "\"object\"",
+      "\"array\"",
+      "\"list\"",
+      "\"undefined\""
+    ]
+  },
+  {
+    "q": "Which of the following statements about JavaScript objects is true?",
+    "l": "javascript",
+      "o": [
+      "Objects in JavaScript are key-value pairs.",
+      "Objects in JavaScript are a type of array.",
+      "Objects in JavaScript can only store primitive values.",
+      "Objects in JavaScript do not support methods."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof(NaN));",
+    "o": [
+      "\"number\"",
+      "\"NaN\"",
+      "\"undefined\"",
+      "\"null\""
+    ]
+  },
+  {
+    "q": "Which JavaScript method is used to remove the last element from an array?",
+    "l": "javascript",
+      "o": [
+      "array.pop()",
+      "array.shift()",
+      "array.splice()",
+      "array.removeLast()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(0 == '');",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which statement correctly declares a variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "let x = 10;",
+      "variable x = 10;",
+      "x : 10;",
+      "declare x = 10;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof null);",
+    "o": [
+      "\"object\"",
+      "\"null\"",
+      "\"undefined\"",
+      "\"NaN\""
+    ]
+  },
+  {
+    "q": "Which of the following statements about JavaScript arrays is correct?",
+    "l": "javascript",
+      "o": [
+      "Arrays in JavaScript can contain multiple data types.",
+      "Arrays in JavaScript must contain only numbers.",
+      "JavaScript arrays have a fixed length.",
+      "JavaScript arrays cannot contain objects."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('5' * 2);",
+    "o": [
+      "10",
+      "\"52\"",
+      "NaN",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is used to define a constant variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const",
+      "var",
+      "let",
+      "constant"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(true + true);",
+    "o": [
+      "2",
+      "true",
+      "\"truetrue\"",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which method is used to convert a string to an integer in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "parseInt()",
+      "parseFloat()",
+      "Number()",
+      "toInt()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] + []);",
+    "o": [
+      "\"\"",
+      "[]",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to define an arrow function in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const add = (a, b) => a + b;",
+      "function => add(a, b) { return a + b; }",
+      "const add(a, b) -> { return a + b; }",
+      "let add = function => (a, b) { return a + b; }"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN);",
+    "o": [
+      "\"number\"",
+      "\"NaN\"",
+      "\"undefined\"",
+      "\"object\""
+    ]
+  },
+  {
+    "q": "Which of the following is a falsy value in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "0",
+      "\"false\"",
+      "{}",
+      "[]"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = 10;\nx += \"5\";\nconsole.log(x);",
+    "o": [
+      "\"105\"",
+      "15",
+      "TypeError",
+      "\"10 + 5\""
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid JavaScript data type?",
+    "l": "javascript",
+      "o": [
+      "character",
+      "number",
+      "boolean",
+      "undefined"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log([] == false);",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which keyword is used to declare a block-scoped variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "let",
+      "var",
+      "define",
+      "scope"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(Boolean(\"false\"));",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which operator is used to check both value and type equality in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "=",
+      "!=="
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(2 + '2' - 1);",
+    "o": [
+      "21",
+      "3",
+      "NaN",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about JavaScript objects?",
+    "l": "javascript",
+      "o": [
+      "Objects are collections of key-value pairs.",
+      "Objects must have numeric keys.",
+      "Objects cannot store functions.",
+      "Objects are the same as arrays."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(1 + true);",
+    "o": [
+      "2",
+      "1true",
+      "NaN",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to declare a constant variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const PI = 3.14;",
+      "let PI = 3.14;",
+      "var PI = 3.14;",
+      "constant PI = 3.14;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('10' - '5');",
+    "o": [
+      "5",
+      "'105'",
+      "NaN",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about JavaScript variables?",
+    "l": "javascript",
+      "o": [
+      "Variables declared with 'var' are function-scoped.",
+      "Variables declared with 'let' are hoisted and initialized to undefined.",
+      "Variables declared with 'const' can be reassigned.",
+      "JavaScript does not support variable hoisting."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a;\nconsole.log(a);",
+    "o": [
+      "undefined",
+      "null",
+      "0",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which operator is used to perform exponentiation in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "**",
+      "^",
+      "exp()",
+      "//"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('5' + 2 * 2);",
+    "o": [
+      "'54'",
+      "'522'",
+      "9",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following correctly declares a JavaScript function?",
+    "l": "javascript",
+      "o": [
+      "function greet() { console.log('Hello!'); }",
+      "def greet() { console.log('Hello!'); }",
+      "function = greet() { console.log('Hello!'); }",
+      "greet() => { console.log('Hello!'); }"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof []);",
+    "o": [
+      "'object'",
+      "'array'",
+      "'list'",
+      "'undefined'"
+    ]
+  },
+  {
+    "q": "Which of the following values evaluates to false in a Boolean context?",
+    "l": "javascript",
+      "o": [
+      "'' (empty string)",
+      "'false' (string)",
+      "'0' (string)",
+      "{} (empty object)"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = 3;\nlet y = '3';\nconsole.log(x == y);",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following correctly initializes a variable with a value of `null`?",
+    "l": "javascript",
+      "o": [
+      "let x = null;",
+      "let x = NULL;",
+      "let x = 'null';",
+      "let x;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(0 || 'Hello');",
+    "o": [
+      "'Hello'",
+      "0",
+      "undefined",
+      "null"
+    ]
+  },
+  {
+    "q": "Which JavaScript operator returns the remainder of a division operation?",
+    "l": "javascript",
+      "o": [
+      "%",
+      "/",
+      "//",
+      "**"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = 5;\na++;\nconsole.log(a);",
+    "o": [
+      "6",
+      "5",
+      "NaN",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following statements about `var`, `let`, and `const` is true?",
+    "l": "javascript",
+      "o": [
+      "'let' allows reassignment, while 'const' does not.",
+      "'var' is block-scoped.",
+      "'const' variables can be declared without initialization.",
+      "'let' variables are function-scoped."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(typeof null);",
+    "o": [
+      "'object'",
+      "'null'",
+      "'undefined'",
+      "'number'"
+    ]
+  },
+  {
+    "q": "Which JavaScript method converts a string to an integer?",
+    "l": "javascript",
+      "o": [
+      "parseInt()",
+      "toInteger()",
+      "Number.parse()",
+      "stringToInt()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(3 + '2' - 1);",
+    "o": [
+      "31",
+      "32",
+      "4",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a primitive data type in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "Object",
+      "String",
+      "Number",
+      "Boolean"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let a = '5';\nlet b = 2;\nconsole.log(a * b);",
+    "o": [
+      "10",
+      "'52'",
+      "NaN",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following correctly declares a constant in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const PI = 3.14;",
+      "let PI = 3.14;",
+      "var PI = 3.14;",
+      "PI = 3.14;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x;\nconsole.log(x);",
+    "o": [
+      "undefined",
+      "null",
+      "0",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which operator is used to check both value and type equality in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "=",
+      "!=="
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = 7;\nlet y = '7';\nconsole.log(x + y);",
+    "o": [
+      "'77'",
+      "14",
+      "NaN",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to declare a JavaScript function?",
+    "l": "javascript",
+      "o": [
+      "function myFunction() {}",
+      "def myFunction() {}",
+      "func myFunction() {}",
+      "let myFunction = function;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(Boolean('false'));",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which JavaScript keyword is used to define a block of code that can be executed later when called?",
+    "l": "javascript",
+      "o": [
+      "function",
+      "execute",
+      "method",
+      "define"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let result = '10' - 5;\nconsole.log(result);",
+    "o": [
+      "5",
+      "'105'",
+      "NaN",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which statement is true about JavaScript?",
+    "l": "javascript",
+      "o": [
+      "JavaScript is a loosely typed language.",
+      "JavaScript is only used for back-end development.",
+      "JavaScript does not support object-oriented programming.",
+      "JavaScript cannot manipulate HTML elements."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "let x = 0;\nconsole.log(Boolean(x));",
+    "o": [
+      "false",
+      "true",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid JavaScript variable name?",
+    "l": "javascript",
+      "o": [
+      "2value",
+      "_value",
+      "$value",
+      "value2"
+    ]
+  },
+  {
+    "q": "What is the result of the following JavaScript expression?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN);",
+    "o": [
+      "'number'",
+      "'NaN'",
+      "'undefined'",
+      "'object'"
+    ]
+  },
+  {
+    "q": "Which of the following correctly declares a block-scoped variable?",
+    "l": "javascript",
+      "o": [
+      "let myVar = 10;",
+      "var myVar = 10;",
+      "const myVar;",
+      "myVar = 10;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log('5' - 2);",
+    "o": [
+      "3",
+      "'52'",
+      "NaN",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following values is considered falsy in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "'' (empty string)",
+      "'false' (string with value 'false')",
+      "{} (empty object)",
+      "[] (empty array)"
+    ]
+  },
+  {
+    "q": "What will be logged to the console?",
+    "l": "javascript",
+      "c": "let a = '10';\nlet b = 20;\nconsole.log(a + b);",
+    "o": [
+      "'1020'",
+      "30",
+      "NaN",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid way to declare a function in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "function = myFunction() {}",
+      "function myFunction() {}",
+      "let myFunction = function() {}",
+      "const myFunction = () => {}"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+      "c": "console.log(2 == '2');",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about JavaScript?",
+    "l": "javascript",
+      "o": [
+      "JavaScript is a dynamically typed language.",
+      "JavaScript requires explicit type declaration for variables.",
+      "JavaScript does not support asynchronous operations.",
+      "JavaScript cannot modify the DOM."
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+      "c": "let x;\nconsole.log(x ?? 'default');",
+    "o": [
+      "'default'",
+      "undefined",
+      "null",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a primitive data type in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "Object",
+      "String",
+      "Number",
+      "Boolean"
+    ]
+  },
+  {
+    "q": "What is the result of the following JavaScript expression?",
+    "l": "javascript",
+      "c": "console.log([] == false);",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following correctly checks if a variable is an array?",
+    "l": "javascript",
+      "o": [
+      "Array.isArray(variable)",
+      "typeof variable === 'array'",
+      "variable instanceof Object",
+      "variable.type === 'array'"
+    ]
+  },
+  {
+    "q": "What is the output of the following JavaScript snippet?",
+    "l": "javascript",
+      "c": "console.log(3 ** 2);",
+    "o": [
+      "9",
+      "6",
+      "NaN",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which operator is used for strict equality comparison in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "=",
+      "!=="
+    ]
+  },
+  {
+    "q": "What will be logged to the console?",
+    "l": "javascript",
+      "c": "console.log(typeof null);",
+    "o": [
+      "'object'",
+      "'null'",
+      "'undefined'",
+      "'NaN'"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to declare a constant variable?",
+    "l": "javascript",
+      "o": [
+      "const myVar = 10;",
+      "var myVar = 10;",
+      "let const myVar = 10;",
+      "const myVar;"
+    ]
+  },
+  {
+    "q": "What will be the output of this JavaScript snippet?",
+    "l": "javascript",
+      "c": "console.log(10 / '5');",
+    "o": [
+      "2",
+      "'105'",
+      "NaN",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following best describes JavaScript?",
+    "l": "javascript",
+      "o": [
+      "A lightweight, interpreted programming language.",
+      "A strongly typed programming language.",
+      "A language that only runs on servers.",
+      "A compiled, low-level language."
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+      "c": "let a = 5;\nlet b = '5';\nconsole.log(a == b);",
+    "o": [
+      "true",
+      "false",
+      "NaN",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to declare a block-scoped variable?",
+    "l": "javascript",
+      "o": [
+      "let x = 10;",
+      "var x = 10;",
+      "block x = 10;",
+      "scope x = 10;"
+    ]
+  },
+  {
+    "q": "What will be logged to the console?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN);",
+    "o": [
+      "'number'",
+      "'NaN'",
+      "'undefined'",
+      "'object'"
+    ]
+  },
+  {
+    "q": "Which statement about 'const' in JavaScript is true?",
+    "l": "javascript",
+      "o": [
+      "A 'const' variable cannot be reassigned after declaration.",
+      "'const' variables are block-scoped but can be updated.",
+      "'const' variables are function-scoped.",
+      "'const' can only be used for numbers."
+    ]
+  },
+  {
+    "q": "What will be the result of this JavaScript expression?",
+    "l": "javascript",
+      "c": "console.log(true + true);",
+    "o": [
+      "2",
+      "true",
+      "'truetrue'",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid way to declare a function?",
+    "l": "javascript",
+      "o": [
+      "function myFunction() {}",
+      "let myFunction = function() {};",
+      "const myFunction = () => {};",
+      "const myFunction: () => {};"
+    ]
+  },
+  {
+    "q": "What will be the output of this code?",
+    "l": "javascript",
+      "c": "console.log('10' - 5);",
+    "o": [
+      "5",
+      "'105'",
+      "NaN",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which JavaScript operator is used to check both value and type?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "!=",
+      "=>"
+    ]
+  },
+  {
+    "q": "What is the output of this JavaScript snippet?",
+    "l": "javascript",
+      "c": "let x;\nconsole.log(x + 2);",
+    "o": [
+      "NaN",
+      "2",
+      "undefined2",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a falsy value in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "0",
+      "'false'",
+      "[]",
+      "{}"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+      "c": "console.log(typeof null);",
+    "o": [
+      "'object'",
+      "'null'",
+      "'undefined'",
+      "'boolean'"
+    ]
+  },
+  {
+    "q": "Which keyword is used to define a constant variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "const",
+      "var",
+      "let",
+      "define"
+    ]
+  },
+  {
+    "q": "What will the following JavaScript snippet output?",
+    "l": "javascript",
+      "c": "console.log([] == false);",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which statement is true about the 'let' keyword?",
+    "l": "javascript",
+      "o": [
+      "'let' allows reassignment but is block-scoped.",
+      "'let' creates a global variable.",
+      "'let' variables cannot be reassigned after initialization.",
+      "'let' is function-scoped like 'var'."
+    ]
+  },
+  {
+    "q": "What will be logged to the console?",
+    "l": "javascript",
+      "c": "console.log(3 + '3' - 1);",
+    "o": [
+      "32",
+      "'33'",
+      "NaN",
+      "5"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid JavaScript data type?",
+    "l": "javascript",
+      "o": [
+      "character",
+      "boolean",
+      "symbol",
+      "undefined"
+    ]
+  },
+  {
+    "q": "What will be the output of this JavaScript code?",
+    "l": "javascript",
+      "c": "let x = 5;\nx += '5';\nconsole.log(x);",
+    "o": [
+      "'55'",
+      "10",
+      "NaN",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which operator is used for exponentiation in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "**",
+      "^",
+      "exp()",
+      "//"
+    ]
+  },
+  {
+    "q": "What is the value of 'typeof undefined' in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "'undefined'",
+      "'null'",
+      "'object'",
+      "'string'"
+    ]
+  },
+  {
+    "q": "What is the output of this JavaScript snippet?",
+    "l": "javascript",
+      "c": "console.log(Boolean('false'));",
+    "o": [
+      "true",
+      "false",
+      "null",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+      "c": "console.log(0.1 + 0.2 === 0.3);",
+    "o": [
+      "false",
+      "true",
+      "NaN",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following correctly declares a variable in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "let x = 10;",
+      "variable x = 10;",
+      "const x;",
+      "x := 10;"
+    ]
+  },
+  {
+    "q": "What will the following JavaScript snippet output?",
+    "l": "javascript",
+      "c": "console.log('5' - 2);",
+    "o": [
+      "3",
+      "'52'",
+      "NaN",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which statement is true about the 'const' keyword?",
+    "l": "javascript",
+      "o": [
+      "'const' variables must be assigned a value when declared.",
+      "'const' variables can be reassigned later.",
+      "'const' is function-scoped like 'var'.",
+      "'const' variables can be declared without initialization."
+    ]
+  },
+  {
+    "q": "What will be logged to the console?",
+    "l": "javascript",
+      "c": "console.log([] + []);",
+    "o": [
+      "'' (empty string)",
+      "'[]'",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid JavaScript loop?",
+    "l": "javascript",
+      "o": [
+      "repeat",
+      "for",
+      "while",
+      "do...while"
+    ]
+  },
+  {
+    "q": "What will be the output of this JavaScript code?",
+    "l": "javascript",
+      "c": "console.log(typeof NaN);",
+    "o": [
+      "'number'",
+      "'NaN'",
+      "'undefined'",
+      "'null'"
+    ]
+  },
+  {
+    "q": "Which operator is used for strict equality in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "===",
+      "==",
+      "=",
+      "!=="
+    ]
+  },
+  {
+    "q": "What is the value of 'typeof function(){}' in JavaScript?",
+    "l": "javascript",
+      "o": [
+      "'function'",
+      "'object'",
+      "'undefined'",
+      "'string'"
+    ]
+  },
+  {
+    "q": "What is the output of this JavaScript snippet?",
+    "l": "javascript",
+      "c": "console.log(Boolean(0));",
+    "o": [
+      "false",
+      "true",
+      "null",
+      "SyntaxError"
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Semantic Tags in HTML5",
+    "ques": "What are semantic tags in HTML5? Write an example using ```header```, ```nav```, and ```article```.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Semantic Tags Example</title>\n</head>\n<body>\n    <header>\n        <h1>Welcome to My Website</h1>\n    </header>\n    <nav>\n        <ul>\n            <li><a href=\"#\">Home</a></li>\n            <li><a href=\"#\">About</a></li>\n            <li><a href=\"#\">Contact</a></li>\n        </ul>\n    </nav>\n    <article>\n        <h2>Article Title</h2>\n        <p>This is a sample article demonstrating semantic tags.</p>\n    </article>\n</body>\n</html>"
+    },
+    "explanation": "Semantic tags in HTML5 provide meaning to the structure of a webpage. They help improve **SEO** and **accessibility**.\n\n- The ```<header>``` tag represents the top section of a webpage, typically containing headings or branding.\n- The ```<nav>``` tag is used for navigation menus.\n- The ```<article>``` tag is used for self-contained content, such as blog posts or news articles.\n- Inside ```<article>```, we have an ```<h2>``` for the title and a ```<p>``` for the content."
+  },
+  {
+    "title": "HTML5 Multimedia - Audio",
+    "ques": "How can you embed an audio file in HTML5? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Audio Example</title>\n</head>\n<body>\n    <h2>Listen to this audio:</h2>\n    <audio controls>\n        <source src=\"audio-file.mp3\" type=\"audio/mpeg\">\n        <source src=\"audio-file.ogg\" type=\"audio/ogg\">\n        Your browser does not support the audio tag.\n    </audio>\n</body>\n</html>"
+    },
+    "explanation": "The ```<audio>``` tag is used to embed audio files in HTML5.\n\n- The ```controls``` attribute adds play, pause, and volume buttons.\n- The ```<source>``` elements provide multiple formats to ensure compatibility with different browsers.\n- If the browser does not support the ```<audio>``` element, it will display the fallback message: ```Your browser does not support the audio tag.```"
+  },
+  {
+    "title": "HTML5 Multimedia - Video",
+    "ques": "How can you embed a video in HTML5? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Video Example</title>\n</head>\n<body>\n    <h2>Watch this video:</h2>\n    <video width=\"640\" height=\"360\" controls>\n        <source src=\"video-file.mp4\" type=\"video/mp4\">\n        <source src=\"video-file.ogg\" type=\"video/ogg\">\n        Your browser does not support the video tag.\n    </video>\n</body>\n</html>"
+    },
+    "explanation": "The ```<video>``` tag is used to embed videos in HTML5.\n\n- The ```controls``` attribute adds play, pause, and volume options.\n- The ```width``` and ```height``` attributes set the video dimensions.\n- The ```<source>``` elements provide different formats for compatibility.\n- If the browser does not support the ```<video>``` element, it displays a fallback message."
+  },
+  {
+    "title": "HTML5 Canvas - Drawing a Rectangle",
+    "ques": "How can you draw a rectangle using the HTML5 Canvas API? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Canvas Rectangle</title>\n</head>\n<body>\n    <h2>Canvas Example</h2>\n    <canvas id=\"myCanvas\" width=\"400\" height=\"200\" style=\"border:1px solid black;\"></canvas>\n    <script>\n        var canvas = document.getElementById(\"myCanvas\");\n        var ctx = canvas.getContext(\"2d\");\n        ctx.fillStyle = \"blue\";\n        ctx.fillRect(50, 50, 200, 100);\n    </script>\n</body>\n</html>"
+    },
+    "explanation": "The ```<canvas>``` element in HTML5 allows drawing graphics using JavaScript.\n\n- The ```id=\"myCanvas\"``` identifies the canvas.\n- The ```width``` and ```height``` set the canvas size.\n- The ```border:1px solid black;``` gives a visible border.\n- In JavaScript:\n  - ```getContext(\"2d\")``` gets the 2D drawing context.\n  - ```fillStyle = \"blue\"``` sets the fill color.\n  - ```fillRect(50, 50, 200, 100)``` draws a blue rectangle at (50,50) with width 200 and height 100."
+  }
+]

@@ -1,0 +1,5459 @@
+[
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Custom error');\n} catch (e) {\n  console.log(e.message);\n}",
+    "o": [
+      "Custom error",
+      "Error",
+      "undefined",
+      "No output"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for a try-catch block in JavaScript?",
+    "o": [
+      "try {} catch (error) {}",
+      "try {} catch error {}",
+      "try {} catch () {}",
+      "try {} catch {}"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class CustomError extends Error {}\n\ntry {\n  throw new CustomError('Test');\n} catch (e) {\n  console.log(e instanceof CustomError);\n}",
+    "o": [
+      "true",
+      "false",
+      "CustomError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which method is commonly used for debugging JavaScript errors?",
+    "o": [
+      "console.log()",
+      "document.write()",
+      "alert()",
+      "print()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  nonExistentFunction();\n} catch (e) {\n  console.log(e.name);\n}",
+    "o": [
+      "ReferenceError",
+      "TypeError",
+      "Error",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to create a custom error in JavaScript?",
+    "o": [
+      "class CustomError extends Error {}",
+      "function CustomError() {}",
+      "const CustomError = new Error()",
+      "var CustomError = Error()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  JSON.parse('invalid json');\n} catch (e) {\n  console.log(e.name);\n}",
+    "o": [
+      "SyntaxError",
+      "JSONError",
+      "ParseError",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of these is NOT a standard JavaScript error type?",
+    "o": [
+      "FileNotFoundError",
+      "SyntaxError",
+      "TypeError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'finally' block in error handling?",
+    "o": [
+      "Code that runs regardless of whether an error occurred",
+      "Code that runs only when no errors occur",
+      "Code that handles specific error types",
+      "Code that prevents errors from occurring"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function test() {\n  try {\n    return 1;\n  } catch {\n    return 2;\n  } finally {\n    return 3;\n  }\n}\n\nconsole.log(test());",
+    "o": [
+      "3",
+      "1",
+      "2",
+      "undefined"
+    ]
+  },
+  {
+    "q": "What does the 'finally' block do in a try-catch statement?",
+    "o": [
+      "Executes code regardless of whether an error occurred",
+      "Only runs if an error is caught",
+      "Prevents errors from being thrown",
+      "Replaces the catch block"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let x = y + 1; // y is not defined\n} catch (e) {\n  console.log(e.name);\n}",
+    "o": [
+      "ReferenceError",
+      "TypeError",
+      "SyntaxError",
+      "UndefinedError"
+    ]
+  },
+  {
+    "q": "Which keyword is used to manually throw an error in JavaScript?",
+    "o": [
+      "throw",
+      "catch",
+      "error",
+      "raise"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw 'MyError';\n} catch (e) {\n  console.log(typeof e);\n}",
+    "o": [
+      "string",
+      "object",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to debug JavaScript errors in a browser?",
+    "o": [
+      "Using the browser's Developer Tools (F12)",
+      "Using Python's debugger",
+      "Writing errors to a text file",
+      "Using Java stack traces"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function divide(a, b) {\n  if (b === 0) throw new Error('Division by zero');\n  return a / b;\n}\n\ntry {\n  divide(10, 0);\n} catch (e) {\n  console.log(e.message);\n}",
+    "o": [
+      "Division by zero",
+      "Infinity",
+      "TypeError",
+      "No output"
+    ]
+  },
+  {
+    "q": "Which of these is NOT a standard property of the Error object in JavaScript?",
+    "o": [
+      "error.stackTrace",
+      "error.name",
+      "error.message",
+      "error.stack"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  setTimeout(() => {\n    throw new Error('Async error');\n  }, 1000);\n} catch (e) {\n  console.log('Caught:', e.message);\n}",
+    "o": [
+      "The error is NOT caught (crashes the script)",
+      "Caught: Async error",
+      "undefined",
+      "No output"
+    ]
+  },
+  {
+    "q": "How can you create a custom error with additional properties?",
+    "o": [
+      "Extend the Error class and add properties in the constructor",
+      "Use Object.create(Error)",
+      "Modify Error.prototype directly",
+      "Use a try-catch block to add properties"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  JSON.parse('{invalid json}');\n} catch (e) {\n  console.log(e instanceof SyntaxError);\n}",
+    "o": [
+      "true",
+      "false",
+      "SyntaxError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which method is used to log detailed error stack traces in JavaScript?",
+    "o": [
+      "console.error()",
+      "console.log()",
+      "console.warn()",
+      "console.info()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class NetworkError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'NetworkError';\n  }\n}\n\ntry {\n  throw new NetworkError('Connection failed');\n} catch (e) {\n  console.log(e.name);\n}",
+    "o": [
+      "NetworkError",
+      "Error",
+      "ConnectionError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What happens if an error is thrown inside a catch block?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('First error');\n} catch (e) {\n  throw new Error('Second error');\n}",
+    "o": [
+      "The error propagates to the outer scope or crashes the script",
+      "The second error replaces the first one",
+      "Both errors are caught and logged",
+      "The script continues execution silently"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function test() {\n  try {\n    return 'try';\n  } finally {\n    return 'finally';\n  }\n}\nconsole.log(test());",
+    "o": [
+      "finally",
+      "try",
+      "undefined",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which statement about Error.stack is correct?",
+    "o": [
+      "It provides the stack trace of where the error occurred",
+      "It's an array of error messages",
+      "It only works in Node.js, not browsers",
+      "It's the same as Error.message"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  Promise.reject(new Error('Async error'));\n} catch (e) {\n  console.log('Caught:', e.message);\n}",
+    "o": [
+      "The error is NOT caught (UnhandledPromiseRejectionWarning)",
+      "Caught: Async error",
+      "undefined",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "How can you catch unhandled promise rejections in Node.js?",
+    "o": [
+      "process.on('unhandledRejection', callback)",
+      "window.addEventListener('unhandledrejection', callback)",
+      "try-catch around every promise",
+      "Using Promise.catchAll()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class DatabaseError extends Error {\n  constructor(message, code) {\n    super(message);\n    this.code = code;\n  }\n}\n\ntry {\n  throw new DatabaseError('Connection failed', 503);\n} catch (e) {\n  console.log(`${e.name}: ${e.code}`);\n}",
+    "o": [
+      "DatabaseError: 503",
+      "Error: 503",
+      "503: Connection failed",
+      "undefined: undefined"
+    ]
+  },
+  {
+    "q": "Which of these is a valid way to re-throw an error while preserving the stack trace?",
+    "o": [
+      "throw err;",
+      "throw new Error(err.message);",
+      "throw err.message;",
+      "throw String(err);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  decodeURIComponent('%');\n} catch (e) {\n  console.log(e.name);\n}",
+    "o": [
+      "URIError",
+      "SyntaxError",
+      "TypeError",
+      "DecodeError"
+    ]
+  },
+  {
+    "q": "Which method is NOT part of JavaScript's error handling mechanism?",
+    "o": [
+      "Error.toJSON()",
+      "Error.stack",
+      "Error.message",
+      "Error.name"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const err = new Error('Test');\nconsole.log(err instanceof Error);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of these errors would NOT be caught by a try-catch block?",
+    "o": [
+      "setTimeout(() => { throw new Error('Async') }, 0)",
+      "JSON.parse('invalid')",
+      "undefinedVariable",
+      "throw new Error('Sync')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw { message: 'Custom', name: 'MyError' };\n} catch (e) {\n  console.log(e instanceof Error);\n}",
+    "o": [
+      "false",
+      "true",
+      "MyError",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "How can you add custom properties to built-in Error types?",
+    "o": [
+      "Extend the Error class and add them in constructor",
+      "Modify Error.prototype directly",
+      "Use Object.assign(Error, customProps)",
+      "JavaScript doesn't allow this"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw null;\n} catch (e) {\n  console.log(e === null);\n}",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which global object in browsers contains information about uncaught errors?",
+    "o": [
+      "window.onerror",
+      "window.errors",
+      "document.errorLog",
+      "navigator.catchErrors"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Boom!');\n} catch (error) {\n  console.log(error.name, error.message);\n} finally {\n  console.log('Cleanup');\n}",
+    "o": [
+      "Error Boom! Cleanup",
+      "Boom! Cleanup",
+      "Error Cleanup",
+      "Uncaught Error: Boom!"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a standard JavaScript error type?",
+    "o": [
+      "ValidationError",
+      "TypeError",
+      "RangeError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  JSON.parse('{ \"name\": \"Alice\"');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "JSONError",
+      "ParseError",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "How can you ensure a function always runs, even if an error occurs?",
+    "o": [
+      "Use a `finally` block",
+      "Use a `then` block",
+      "Use `Promise.resolve()`",
+      "Use `setTimeout`"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class NotFoundError extends Error {}\n\ntry {\n  throw new NotFoundError('404');\n} catch (error) {\n  console.log(error instanceof Error);\n}",
+    "o": [
+      "true",
+      "false",
+      "NotFoundError",
+      "404"
+    ]
+  },
+  {
+    "q": "Which method is used to log an error stack trace in JavaScript?",
+    "o": [
+      "console.error(error)",
+      "console.log(error.stack)",
+      "error.printStackTrace()",
+      "console.trace(error)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  setTimeout(() => {\n    throw new Error('Async Error');\n  }, 0);\n} catch (error) {\n  console.log('Caught:', error.message);\n}",
+    "o": [
+      "The error is NOT caught (Uncaught Error: Async Error)",
+      "Caught: Async Error",
+      "undefined",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which property contains the line number where an error occurred?",
+    "o": [
+      "error.stack",
+      "error.line",
+      "error.lineNumber",
+      "error.source"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw 'Simple string error';\n} catch (error) {\n  console.log(typeof error);\n}",
+    "o": [
+      "string",
+      "object",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "How can you catch unhandled promise rejections in browsers?",
+    "o": [
+      "window.addEventListener('unhandledrejection', callback)",
+      "window.on('unhandledRejection', callback)",
+      "Promise.catchAll(callback)",
+      "process.on('unhandledRejection', callback)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw { message: 'Custom', code: 500 };\n} catch (error) {\n  console.log(error.code);\n}",
+    "o": [
+      "500",
+      "undefined",
+      "Custom",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which statement about `Error.captureStackTrace` (Node.js) is true?",
+    "o": [
+      "It customizes the stack trace of an error",
+      "It prevents errors from being thrown",
+      "It works only in browsers",
+      "It removes stack traces from errors"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function test() {\n  try {\n    throw new Error('Oops!');\n  } finally {\n    return 'No error';\n  }\n}\nconsole.log(test());",
+    "o": [
+      "No error",
+      "Oops!",
+      "Uncaught Error: Oops!",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of these is a valid way to create a custom error with additional metadata?",
+    "o": [
+      "class CustomError extends Error { constructor(message, meta) { super(message); this.meta = meta; } }",
+      "Error.custom = function(message, meta) { return { message, meta }; }",
+      "function CustomError(message, meta) { return new Error(message, meta); }",
+      "const CustomError = (message, meta) => ({ ...Error(message), meta });"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  nonExistentFunction();\n} catch (error) {\n  console.log(error.name === 'ReferenceError');\n}",
+    "o": [
+      "true",
+      "false",
+      "ReferenceError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = 10 / 0;\n  if (!isFinite(result)) throw new Error('Division error');\n} catch (e) {\n  console.log(e.message);\n} finally {\n  console.log('Done');\n}",
+    "o": [
+      "Division error Done",
+      "Infinity Done",
+      "Done",
+      "No output"
+    ]
+  },
+  {
+    "q": "Which of these is the correct way to create a custom error class in JavaScript?",
+    "o": [
+      "class CustomError extends Error {}",
+      "function CustomError() { return new Error(); }",
+      "const CustomError = Error.bind(null);",
+      "var CustomError = Object.create(Error);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function test() {\n  try {\n    return 'try';\n  } catch {\n    return 'catch';\n  } finally {\n    return 'finally';\n  }\n}\nconsole.log(test());",
+    "o": [
+      "finally",
+      "try",
+      "catch",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which method is used to get the full stack trace of an error in Node.js?",
+    "o": [
+      "console.error(error.stack)",
+      "error.getStackTrace()",
+      "Error.trace(error)",
+      "console.trace(error)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  JSON.parse('{\"name\": \"Alice\"');\n} catch (e) {\n  console.log(e.name);\n} finally {\n  console.log('Complete');\n}",
+    "o": [
+      "SyntaxError Complete",
+      "JSONError Complete",
+      "Complete",
+      "No output"
+    ]
+  },
+  {
+    "q": "Which of these errors would NOT be caught by a try-catch block?",
+    "o": [
+      "setTimeout(() => { throw new Error('Async') }, 0)",
+      "undefinedVariable",
+      "throw new Error('Sync')",
+      "JSON.parse('invalid')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class DatabaseError extends Error {\n  constructor(message, code) {\n    super(message);\n    this.code = code;\n  }\n}\n\ntry {\n  throw new DatabaseError('Connection failed', 500);\n} catch (e) {\n  console.log(e.code);\n}",
+    "o": [
+      "500",
+      "Connection failed",
+      "undefined",
+      "DatabaseError"
+    ]
+  },
+  {
+    "q": "Which property contains the line number where an error occurred?",
+    "o": [
+      "error.stack",
+      "error.line",
+      "error.lineNumber",
+      "error.source"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw { message: 'Custom', name: 'MyError' };\n} catch (e) {\n  console.log(e instanceof Error);\n}",
+    "o": [
+      "false",
+      "true",
+      "MyError",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "How can you catch unhandled promise rejections in Node.js?",
+    "o": [
+      "process.on('unhandledRejection', callback)",
+      "window.addEventListener('unhandledrejection', callback)",
+      "Promise.catchAll(callback)",
+      "Error.catchRejections(callback)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  decodeURIComponent('%');\n} catch (e) {\n  console.log(e.name);\n}",
+    "o": [
+      "URIError",
+      "SyntaxError",
+      "TypeError",
+      "DecodeError"
+    ]
+  },
+  {
+    "q": "Which of these is NOT a standard property of the Error object?",
+    "o": [
+      "error.fileName",
+      "error.message",
+      "error.name",
+      "error.stack"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const err = new Error('Test');\nconsole.log(err instanceof Error);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "How can you add custom properties to a built-in Error type?",
+    "o": [
+      "Extend the Error class and add them in constructor",
+      "Modify Error.prototype directly",
+      "Use Object.assign(Error, customProps)",
+      "JavaScript doesn't allow this"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw null;\n} catch (e) {\n  console.log(e === null);\n}",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  try {\n    throw new Error('Inner');\n  } catch (e) {\n    console.log(e.message);\n    throw new Error('Outer');\n  }\n} catch (e) {\n  console.log(e.message);\n}",
+    "o": [
+      "Inner Outer",
+      "Inner",
+      "Outer",
+      "Error: Inner Error: Outer"
+    ]
+  },
+  {
+    "q": "Which statement about Error.captureStackTrace() in Node.js is correct?",
+    "o": [
+      "It allows customizing the stack trace of an Error object",
+      "It prevents an error from being thrown",
+      "It's used to silence error output",
+      "It converts errors to strings"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "async function test() {\n  try {\n    await Promise.reject(new Error('Async Error'));\n  } catch (e) {\n    console.log(e.message);\n  }\n}\ntest();",
+    "o": [
+      "Async Error",
+      "UnhandledPromiseRejectionWarning",
+      "No output",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of these is the correct way to add a custom property to an Error?",
+    "o": [
+      "class CustomError extends Error { constructor(message) { super(message); this.code = 400; } }",
+      "Error.prototype.code = 400",
+      "const err = new Error(); err.code = 400",
+      "All of the above"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function throwError() {\n  try {\n    throw new Error('Test');\n  } finally {\n    return 'Caught';\n  }\n}\nconsole.log(throwError());",
+    "o": [
+      "Caught",
+      "Error: Test",
+      "undefined",
+      "Uncaught Error: Test"
+    ]
+  },
+  {
+    "q": "Which method is used to get the call stack at any point in execution?",
+    "o": [
+      "console.trace()",
+      "Error.getStack()",
+      "new Error().stack",
+      "debugger.stack"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw { toString: () => 'Custom' };\n} catch (e) {\n  console.log(e);\n}",
+    "o": [
+      "{ toString: [Function: toString] }",
+      "Custom",
+      "[object Object]",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which global event handler catches uncaught exceptions in browsers?",
+    "o": [
+      "window.onerror",
+      "window.unhandledexception",
+      "document.error",
+      "global.error"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class ValidationError extends Error {}\n\ntry {\n  throw new ValidationError('Invalid input');\n} catch (e) {\n  console.log(e instanceof ValidationError, e instanceof Error);\n}",
+    "o": [
+      "true true",
+      "true false",
+      "false true",
+      "false false"
+    ]
+  },
+  {
+    "q": "Which of these will NOT be caught by a try-catch block?",
+    "o": [
+      "process.nextTick(() => { throw new Error() })",
+      "throw 'string error'",
+      "JSON.parse('invalid')",
+      "undefinedFunction()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const err = new Error();\nerr.name = 'CustomError';\nconsole.log(err.toString());",
+    "o": [
+      "CustomError",
+      "Error",
+      "[object Object]",
+      "undefined"
+    ]
+  },
+  {
+    "q": "How can you access the line number where an error occurred?",
+    "o": [
+      "From the stack trace string",
+      "error.lineNumber property",
+      "error.getLineNumber()",
+      "Error.lineNumber"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new TypeError('Type error');\n} catch (e) {\n  if (e instanceof Error) {\n    console.log('Base error');\n  }\n  if (e instanceof TypeError) {\n    console.log('Type error');\n  }\n}",
+    "o": [
+      "Base error Type error",
+      "Base error",
+      "Type error",
+      "No output"
+    ]
+  },
+  {
+    "q": "Which of these is a valid way to re-throw an error while preserving the stack?",
+    "o": [
+      "throw err;",
+      "throw new Error(err.message);",
+      "throw err.message;",
+      "throw Error(err);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  Promise.reject(new Error('Rejected'));\n} catch (e) {\n  console.log('Caught');\n}",
+    "o": [
+      "UnhandledPromiseRejectionWarning",
+      "Caught",
+      "Rejected",
+      "No output"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function throwError() {\n  const err = new Error('Original');\n  try {\n    throw err;\n  } catch (e) {\n    e.message = 'Modified';\n    throw e;\n  }\n}\n\ntry {\n  throwError();\n} catch (e) {\n  console.log(e.message);\n}",
+    "o": [
+      "Modified",
+      "Original",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which Node.js method allows marking a function as deprecated with a custom warning?",
+    "o": [
+      "util.deprecate()",
+      "process.emitWarning()",
+      "console.deprecate()",
+      "Error.markDeprecated()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  Promise.reject(new Error('Async Error'));\n} catch (e) {\n  console.log('Caught');\n}\n\nprocess.on('unhandledRejection', () => console.log('Handler'));",
+    "o": [
+      "Handler",
+      "Caught",
+      "Async Error",
+      "No output"
+    ]
+  },
+  {
+    "q": "Which property would you check to determine if an error came from a try-catch block?",
+    "o": [
+      "There's no specific property for this",
+      "error.isCaught",
+      "error.fromTryCatch",
+      "error.source"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class NetworkError extends Error {\n  constructor(message) {\n    super(`NET_${message}`);\n  }\n}\n\ntry {\n  throw new NetworkError('FAIL');\n} catch (e) {\n  console.log(e.message);\n}",
+    "o": [
+      "NET_FAIL",
+      "FAIL",
+      "NetworkError: FAIL",
+      "undefined"
+    ]
+  },
+  {
+    "q": "How can you create an error with a customized stack trace in Node.js?",
+    "o": [
+      "Error.captureStackTrace(obj, constructorOpt)",
+      "new Error().customizeStackTrace()",
+      "Error.stackTraceLimit = Infinity",
+      "console.trace('Custom')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw { name: 'AuthError', message: 'Unauthorized' };\n} catch (e) {\n  console.log(e instanceof Error);\n}",
+    "o": [
+      "false",
+      "true",
+      "AuthError",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which method is used to emit custom warning messages in Node.js?",
+    "o": [
+      "process.emitWarning()",
+      "console.warn()",
+      "Error.emit()",
+      "process.showWarning()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const err = new Error();\nError.captureStackTrace(err);\nconsole.log(typeof err.stack);",
+    "o": [
+      "string",
+      "object",
+      "undefined",
+      "function"
+    ]
+  },
+  {
+    "q": "Which of these will properly catch a synchronous error in an async function?",
+    "o": [
+      "try { await asyncFn(); } catch (e) {}",
+      "asyncFn().catch(e => {})",
+      "Both A and B",
+      "Neither A nor B"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function test() {\n  try {\n    throw new Error();\n  } catch {\n    return 'Caught';\n  } finally {\n    return 'Finally';\n  }\n}\nconsole.log(test());",
+    "o": [
+      "Finally",
+      "Caught",
+      "undefined",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which Node.js flag enables experimental enhanced stack traces?",
+    "o": [
+      "--enable-source-maps",
+      "--trace-warnings",
+      "--debug-stack",
+      "--full-trace"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw Object.create(Error.prototype);\n} catch (e) {\n  console.log(e instanceof Error);\n}",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "How can you access the v8 stack trace API directly in Node.js?",
+    "o": [
+      "const { stackTraceLimit } = require('v8');",
+      "import { StackTrace } from 'v8'",
+      "process.v8.stackTrace()",
+      "Error.getV8StackTrace()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Primary');\n} catch (e) {\n  const err = new Error('Secondary');\n  err.cause = e;\n  throw err;\n}",
+    "o": [
+      "Uncaught Error: Secondary",
+      "Error: Primary",
+      "Error: Primary Error: Secondary",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = 10 / 0;\n  console.log(result);\n} catch (error) {\n  console.log('Error:', error);\n}",
+    "o": [
+      "Error: Infinity",
+      "Error: NaN",
+      "Error: Division by zero",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to throw a custom error in JavaScript?",
+    "o": [
+      "throw new Error('Custom error message');",
+      "throw Error('Custom error message');",
+      "throw 'Custom error message';",
+      "new Error('Custom error message');"
+    ]
+  },
+  {
+    "q": "What is the correct syntax for a try-catch block in JavaScript?",
+    "o": [
+      "try { // code } catch (error) { // handle error }",
+      "try (error) { // code } catch { // handle error }",
+      "try { // code } catch: error { // handle error }",
+      "try { // code } finally { // code }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let x = undefinedVariable;\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "ReferenceError",
+      "TypeError",
+      "SyntaxError",
+      "Error"
+    ]
+  },
+  {
+    "q": "What does the 'finally' block do in a try-catch statement?",
+    "o": [
+      "The 'finally' block runs after the try-catch regardless of whether an error occurred.",
+      "The 'finally' block only runs if an error occurs.",
+      "The 'finally' block only runs if there is no error.",
+      "The 'finally' block can be skipped."
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid JavaScript custom error class?",
+    "o": [
+      "class CustomError extends Error {}",
+      "class CustomError extends Exception {}",
+      "class CustomError extends SyntaxError {}",
+      "class CustomError extends TypeError {}"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new TypeError('This is a type error');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "This is a type error",
+      "TypeError: This is a type error",
+      "This is an error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following methods is used to inspect the stack trace of an error in JavaScript?",
+    "o": [
+      "error.stack",
+      "error.trace",
+      "error.details",
+      "error.info"
+    ]
+  },
+  {
+    "q": "What happens if an error is not caught in a try-catch block?",
+    "o": [
+      "The error will propagate up the call stack.",
+      "The error will be ignored and execution will continue.",
+      "The program will terminate immediately.",
+      "The error will be logged to the console automatically."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = 'Hello'.toUpperCase();\n} catch (error) {\n  console.log(error);\n}",
+    "o": [
+      "undefined",
+      "Error: Cannot read property 'toUpperCase' of undefined",
+      "Error: Hello is not a function",
+      "None"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let a = '5';\n  let b = 2;\n  console.log(a + b);\n} catch (error) {\n  console.log(error);\n}",
+    "o": [
+      "52",
+      "Error: NaN",
+      "Error: TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to handle an error in JavaScript?",
+    "o": [
+      "try { // code } catch (error) { console.log(error); }",
+      "try { // code } except (error) { console.log(error); }",
+      "try { // code } catch error { console.log(error); }",
+      "try { // code } error { console.log(error); }"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'throw' statement in JavaScript?",
+    "o": [
+      "The 'throw' statement is used to create a custom error.",
+      "The 'throw' statement is used to stop the execution of the code.",
+      "The 'throw' statement is used to return a value from a function.",
+      "The 'throw' statement is used to handle asynchronous operations."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = 10 / 'a';\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "NaN",
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct syntax to create a custom error class in JavaScript?",
+    "o": [
+      "class MyError extends Error { constructor(message) { super(message); this.name = 'MyError'; } }",
+      "class MyError extends Exception { constructor(message) { super(message); this.name = 'MyError'; } }",
+      "class MyError extends TypeError { constructor(message) { super(message); this.name = 'MyError'; } }",
+      "class MyError { constructor(message) { this.message = message; this.name = 'MyError'; } }"
+    ]
+  },
+  {
+    "q": "What is the correct way to log a custom error message in JavaScript?",
+    "o": [
+      "console.log(new Error('Custom error message'));",
+      "console.log(Error('Custom error message'));",
+      "console.log('Custom error message');",
+      "console.log(new CustomError('Custom error message'));"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = JSON.parse('{ key: value }');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Unexpected token k in JSON at position 2",
+      "SyntaxError: Unexpected token",
+      "TypeError: Invalid JSON format",
+      "Error: Failed to parse JSON"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid method to log the error stack trace in JavaScript?",
+    "o": [
+      "console.error(error.stack);",
+      "console.stack(error);",
+      "console.trace(error);",
+      "console.log(error.trace);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = undefinedVariable;\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "undefinedVariable is not defined",
+      "ReferenceError: undefinedVariable is not defined",
+      "Error: undefinedVariable",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about the 'finally' block in JavaScript?",
+    "o": [
+      "The 'finally' block always executes, regardless of whether an error occurred or not.",
+      "The 'finally' block only executes if an error occurred.",
+      "The 'finally' block is executed before the catch block.",
+      "The 'finally' block only executes if there is no error."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = 10 / 'b';\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "result is not a number",
+      "NaN",
+      "TypeError: Cannot convert string to number",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following statements correctly creates a custom error message in JavaScript?",
+    "o": [
+      "throw new Error('Custom error occurred');",
+      "throw 'Custom error occurred';",
+      "throw CustomError('Custom error occurred');",
+      "new Error('Custom error occurred');"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'catch' block in a try-catch statement?",
+    "o": [
+      "To handle errors that occur in the try block",
+      "To throw a new error",
+      "To check if an error occurred",
+      "To prevent errors from being thrown"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = 'Hello'.split(3);\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "split is not a function",
+      "Cannot read property 'split' of undefined",
+      "Error: Invalid argument",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is true about the 'try' block in JavaScript?",
+    "o": [
+      "The 'try' block is used to wrap the code that may throw an error.",
+      "The 'try' block executes only if there is an error.",
+      "The 'try' block runs only when an error is caught.",
+      "The 'try' block automatically handles all errors."
+    ]
+  },
+  {
+    "q": "What is the correct syntax to throw a custom error in JavaScript?",
+    "o": [
+      "throw new Error('Custom error');",
+      "throw 'Custom error';",
+      "throw CustomError('Custom error');",
+      "throw Error('Custom error');"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let x = null;\n  console.log(x.toString());\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "NullError"
+    ]
+  },
+  {
+    "q": "Which of the following methods is used to inspect the properties of an error object in JavaScript?",
+    "o": [
+      "console.log(error.name, error.message, error.stack);",
+      "console.log(error.toString());",
+      "console.trace(error);",
+      "console.error(error.details);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let data = JSON.parse('{ name: John }');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Unexpected token n in JSON at position 2",
+      "SyntaxError: Unexpected token n",
+      "Error: Failed to parse JSON",
+      "TypeError: Invalid JSON format"
+    ]
+  },
+  {
+    "q": "Which of the following will prevent a catch block from being executed?",
+    "o": [
+      "If the try block does not throw any error",
+      "If the catch block contains a syntax error",
+      "If the finally block is executed before the catch block",
+      "If the error is thrown outside the try-catch block"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let arr = [1, 2, 3];\n  console.log(arr[5]);\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Cannot read property '5' of undefined",
+      "Index out of bounds",
+      "undefined",
+      "Error: Array index out of range"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for a try-catch-finally block in JavaScript?",
+    "o": [
+      "try { // code } catch (error) { // handle error } finally { // clean up code }",
+      "try { // code } finally { // clean up code } catch (error) { // handle error }",
+      "try { // code } catch (error) finally { // clean up code }",
+      "try (error) { // code } finally { // clean up code }"
+    ]
+  },
+  {
+    "q": "What happens if an error is thrown after the 'catch' block in a try-catch-finally structure?",
+    "o": [
+      "The error will be propagated to the calling code.",
+      "The error will be ignored.",
+      "The error will be logged to the console automatically.",
+      "The program will terminate immediately."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let x = 5;\n  throw x;\n} catch (error) {\n  console.log(error);\n}",
+    "o": [
+      "5",
+      "undefined",
+      "Error: 5",
+      "TypeError: 5"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to create a custom error class in JavaScript?",
+    "o": [
+      "class CustomError extends Error { constructor(message) { super(message); this.name = 'CustomError'; } }",
+      "class CustomError extends Exception { constructor(message) { super(message); this.name = 'CustomError'; } }",
+      "class CustomError { constructor(message) { this.message = message; this.name = 'CustomError'; } }",
+      "class CustomError extends TypeError { constructor(message) { super(message); this.name = 'CustomError'; } }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = JSON.parse('{\"key\": \"value\"}');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Unexpected token in JSON at position 1",
+      "SyntaxError: Unexpected token in JSON at position 1",
+      "Error: Invalid JSON format",
+      "TypeError: Cannot parse JSON"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about the 'finally' block in JavaScript?",
+    "o": [
+      "The 'finally' block will always run regardless of whether an error occurs or not.",
+      "The 'finally' block will only run if no error occurs.",
+      "The 'finally' block is optional and can be omitted.",
+      "The 'finally' block will run only if an error occurs."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = 'Hello'.charAt(10);\n} catch (error) {\n  console.log(error);\n}",
+    "o": [
+      "undefined",
+      "Error: Invalid character index",
+      "Cannot read property 'charAt' of undefined",
+      "Error: Invalid string index"
+    ]
+  },
+  {
+    "q": "Which of the following methods is used to handle asynchronous errors in JavaScript?",
+    "o": [
+      "Using try-catch within an async function",
+      "Using callback functions to handle errors",
+      "Using promises with .catch() method",
+      "Using alert() method to show error messages"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Something went wrong');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "Error",
+      "CustomError",
+      "TypeError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let num = 10;\n  let result = num / 0;\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Infinity",
+      "Cannot divide by zero",
+      "Error: Division by zero",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following statements correctly creates a custom error with a specific message in JavaScript?",
+    "o": [
+      "throw new Error('Specific error message');",
+      "throw Error('Specific error message');",
+      "throw 'Specific error message';",
+      "throw new CustomError('Specific error message');"
+    ]
+  },
+  {
+    "q": "What happens when an error is thrown in the 'finally' block of a try-catch-finally statement?",
+    "o": [
+      "The error will be propagated to the outer try-catch block.",
+      "The error will be caught by the nearest catch block.",
+      "The program will terminate immediately.",
+      "The error will be ignored."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = JSON.parse('{ \"name\": \"John\" }');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Unexpected token in JSON at position 1",
+      "SyntaxError: Unexpected token in JSON at position 1",
+      "Error: Invalid JSON format",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is true about the catch block in JavaScript error handling?",
+    "o": [
+      "The catch block handles the error thrown by the try block.",
+      "The catch block is optional and can be omitted.",
+      "The catch block only runs if the error is of a specific type.",
+      "The catch block cannot access the error object."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = 'text'.toUpperCase();\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "TEXT",
+      "undefined",
+      "Error: Cannot read property 'toUpperCase' of undefined",
+      "TypeError: Cannot call method 'toUpperCase' on undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for creating an asynchronous function with error handling?",
+    "o": [
+      "async function fetchData() { try { await fetch(); } catch (error) { console.log(error); } }",
+      "async function fetchData() { fetch(); try { } catch (error) { console.log(error); } }",
+      "function async fetchData() { try { fetch(); } catch (error) { console.log(error); } }",
+      "function fetchData() async { try { fetch(); } catch (error) { console.log(error); } }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let arr = [1, 2, 3];\n  console.log(arr[10]);\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "undefined",
+      "Index out of range",
+      "Error: Array index out of range",
+      "Cannot read property '10' of undefined"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'throw' statement in JavaScript error handling?",
+    "o": [
+      "To throw an error manually in the code.",
+      "To create a custom error type.",
+      "To display an error message to the user.",
+      "To log the error to the console."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = 'Hello'.charAt(5);\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "'' (empty string)",
+      "undefined",
+      "Error: Invalid character index",
+      "NaN"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = undefinedVariable;\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "undefinedVariable is not defined",
+      "ReferenceError: undefinedVariable is not defined",
+      "TypeError: Cannot read property 'undefinedVariable' of undefined",
+      "Error: Variable not found"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to throw a custom error in JavaScript?",
+    "o": [
+      "throw new CustomError('Something went wrong');",
+      "throw CustomError('Something went wrong');",
+      "throw 'CustomError: Something went wrong';",
+      "throw CustomError('Something went wrong')"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Custom error');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "Error",
+      "CustomError",
+      "TypeError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following best describes the purpose of the 'catch' block in JavaScript error handling?",
+    "o": [
+      "To handle errors thrown in the 'try' block.",
+      "To prevent errors from being thrown in the 'try' block.",
+      "To ensure the code in the 'finally' block executes.",
+      "To log the error details without handling them."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let arr = [1, 2, 3];\n  arr.forEach((item, index) => {\n    if (index === 2) throw new Error('End of array reached');\n  });\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "End of array reached",
+      "Array iteration stopped",
+      "Error: End of array reached",
+      "Index out of bounds"
+    ]
+  },
+  {
+    "q": "Which of the following is true about the 'finally' block in JavaScript error handling?",
+    "o": [
+      "It will always run, regardless of whether an error was thrown or not.",
+      "It only runs when an error is thrown in the 'try' block.",
+      "It prevents the code from entering the 'catch' block.",
+      "It is used to log errors before the program stops."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let x = 10 / 'string';\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "NaN",
+      "Error: Cannot divide by string",
+      "TypeError: Cannot divide 10 by string",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to handle errors asynchronously in JavaScript?",
+    "o": [
+      "Using .catch() method with Promises.",
+      "Using try-catch inside an async function.",
+      "Using a callback function with error handling.",
+      "All of the above."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = undefinedFunction();\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "ReferenceError",
+      "TypeError",
+      "Error",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which of the following is correct regarding JavaScript error objects?",
+    "o": [
+      "Error objects have properties like name, message, and stack.",
+      "Error objects are only created in the catch block.",
+      "Error objects do not have a message property.",
+      "Error objects are only used for syntax errors."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let data = JSON.parse('{\"name\": \"John\"}');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Unexpected token in JSON at position 1",
+      "SyntaxError: Unexpected token in JSON at position 1",
+      "Error: Invalid JSON format",
+      "Invalid JSON"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to create a custom error type in JavaScript?",
+    "o": [
+      "class CustomError extends Error { constructor(message) { super(message); this.name = 'CustomError'; } }",
+      "function CustomError(message) { this.name = 'CustomError'; this.message = message; }",
+      "CustomError: function() { return new Error('CustomError'); }",
+      "class CustomError { constructor(message) { this.message = message; this.name = 'CustomError'; } }"
+    ]
+  },
+  {
+    "q": "What happens when you use a return statement in a catch block?",
+    "o": [
+      "The return statement will exit the catch block and return the value.",
+      "The return statement will cause the error to be caught by another catch block.",
+      "The return statement will cause the program to stop executing further.",
+      "The return statement will throw an error."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = 10 / 0;\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Infinity",
+      "Error: Division by zero",
+      "TypeError: Cannot divide by zero",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following statements is correct regarding the use of multiple catch blocks in JavaScript?",
+    "o": [
+      "JavaScript only supports one catch block per try statement.",
+      "Multiple catch blocks can be used to handle different types of errors.",
+      "Multiple catch blocks are used in older versions of JavaScript but not in ES6 and beyond.",
+      "Catch blocks must always follow a finally block."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let number = 1;\n  number = number + undefinedVariable;\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "undefinedVariable is not defined",
+      "ReferenceError: undefinedVariable is not defined",
+      "TypeError: Cannot read property 'undefinedVariable' of undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for catching specific errors in JavaScript?",
+    "o": [
+      "catch (error) { if (error instanceof TypeError) { console.log(error.message); } }",
+      "catch (TypeError error) { console.log(error.message); }",
+      "catch { console.log(error.message); }",
+      "catch (error) { if (error === TypeError) { console.log(error.message); } }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = new Error('Custom error message');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "Error",
+      "TypeError",
+      "CustomError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is true about using 'finally' in error handling in JavaScript?",
+    "o": [
+      "The 'finally' block always runs regardless of whether an error was thrown or not.",
+      "The 'finally' block will not run if an error is thrown inside the 'catch' block.",
+      "The 'finally' block only runs if an error occurs.",
+      "The 'finally' block is used to catch errors thrown in the 'try' block."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let obj = { name: 'Alice' };\n  console.log(obj.age);\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Cannot read property 'age' of undefined",
+      "TypeError: Cannot read property 'age' of undefined",
+      "undefined",
+      "ReferenceError: obj is not defined"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = 'hello'.toUpperCase();\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "HELLO",
+      "hello",
+      "TypeError: Cannot read property 'toUpperCase' of undefined",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about the 'throw' keyword in JavaScript?",
+    "o": [
+      "The 'throw' keyword is used to manually throw an error.",
+      "The 'throw' keyword is used to handle errors.",
+      "The 'throw' keyword cannot be used with custom error objects.",
+      "The 'throw' keyword automatically stops the program."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let number = 5;\n  if (number > 3) throw new Error('Number is too high');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Number is too high",
+      "Error: Number is too high",
+      "TypeError: Invalid number",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following best describes the behavior of a try-catch-finally block?",
+    "o": [
+      "The 'finally' block always runs after the 'try' and 'catch' blocks, regardless of whether an error occurred.",
+      "The 'catch' block only runs if an error is thrown in the 'finally' block.",
+      "The 'catch' block is optional and does not affect error handling.",
+      "The 'finally' block runs only if the 'catch' block catches an error."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = '5' / 0;\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Infinity",
+      "Error: Division by zero",
+      "TypeError: Cannot divide by zero",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to create a custom error class in JavaScript?",
+    "o": [
+      "class CustomError extends Error { constructor(message) { super(message); this.name = 'CustomError'; } }",
+      "function CustomError(message) { this.name = 'CustomError'; this.message = message; }",
+      "class CustomError { constructor(message) { this.message = message; this.name = 'CustomError'; } }",
+      "CustomError() { this.name = 'CustomError'; this.message = 'Custom Error'; }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let num = 'abc' / 5;\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "NaN",
+      "Error: Invalid arithmetic operation",
+      "TypeError: Cannot divide 'abc' by a number",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is true about using 'finally' in a try-catch-finally block?",
+    "o": [
+      "The 'finally' block executes after the try-catch, regardless of whether an error was thrown.",
+      "The 'finally' block only runs if an error is thrown in the 'try' block.",
+      "The 'finally' block is used to throw errors.",
+      "The 'finally' block will not execute if the catch block catches an error."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let x = 10 / 2;\n  console.log(x);\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "5",
+      "Error: Division by zero",
+      "undefined",
+      "TypeError: Cannot divide by zero"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to handle multiple errors in JavaScript?",
+    "o": [
+      "Using multiple 'catch' blocks to handle different types of errors.",
+      "Using 'if' conditions inside the 'catch' block to check for error types.",
+      "Using a 'catch' block with a 'finally' block for every error.",
+      "Errors can only be handled in one 'catch' block."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = 'hello'.charAt(10);\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Index out of bounds",
+      "Error: Index out of bounds",
+      "undefined",
+      "TypeError: Cannot read property 'charAt' of undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is correct about custom errors in JavaScript?",
+    "o": [
+      "Custom errors can be created by extending the built-in Error class.",
+      "Custom errors must always contain a stack trace.",
+      "Custom errors can only be thrown inside a try block.",
+      "Custom errors are used to log information, not throw exceptions."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let user = { name: 'John' };\n  console.log(user.age);\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Cannot read property 'age' of undefined",
+      "TypeError: Cannot read property 'age' of undefined",
+      "undefined",
+      "ReferenceError: user is not defined"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to catch a specific type of error in JavaScript?",
+    "o": [
+      "catch (error) { if (error instanceof TypeError) { console.log(error.message); } }",
+      "catch (TypeError) { console.log(error.message); }",
+      "catch (error) { error instanceof TypeError ? console.log(error.message) : null; }",
+      "catch (TypeError) { console.log('TypeError caught!'); }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = 'abc' - 2;\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "NaN",
+      "Error: Invalid subtraction operation",
+      "TypeError: Cannot subtract a string from a number",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is correct about debugging in JavaScript?",
+    "o": [
+      "The 'debugger' statement is used to pause the execution and inspect the values in the developer tools.",
+      "The 'debugger' statement is used to log error messages to the console.",
+      "The 'debugger' statement automatically fixes errors in the code.",
+      "The 'debugger' statement stops the browser from executing any code."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let obj = null;\n  console.log(obj.toString());\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Cannot read property 'toString' of null",
+      "TypeError: Cannot read property 'toString' of null",
+      "undefined",
+      "ReferenceError: obj is not defined"
+    ]
+  },
+  {
+    "q": "Which of the following will be caught by a try-catch block in JavaScript?",
+    "o": [
+      "Any synchronous error that occurs during the execution of the try block.",
+      "Errors thrown from asynchronous functions.",
+      "Only errors of type SyntaxError.",
+      "Only errors with custom messages."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = [1, 2, 3].map((x) => x * 2);\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "[2, 4, 6]",
+      "Error: Array mapping failed",
+      "undefined",
+      "TypeError: Cannot map the array"
+    ]
+  },
+  {
+    "q": "Which of the following is correct about handling both synchronous and asynchronous errors in JavaScript?",
+    "o": [
+      "Synchronous errors can be handled using try-catch, while asynchronous errors need a .catch() or async/await with try-catch.",
+      "Both synchronous and asynchronous errors are handled in the same way with try-catch.",
+      "Only synchronous errors can be caught with try-catch, while asynchronous errors must be handled separately.",
+      "Asynchronous errors are handled by using the 'debugger' statement."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = JSON.parse('{ name: }');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Unexpected token",
+      "SyntaxError: Unexpected token",
+      "undefined",
+      "Error: Invalid JSON"
+    ]
+  },
+  {
+    "q": "Which of the following is true about the 'try-catch' block in JavaScript?",
+    "o": [
+      "'try' block contains code that might throw an error, and 'catch' block handles that error.",
+      "'catch' block is always required in a try-catch-finally statement.",
+      "'finally' block is optional and executes only if an error occurs.",
+      "'try' block cannot contain asynchronous code."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Custom error');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Custom error",
+      "Error: Custom error",
+      "undefined",
+      "TypeError: Custom error"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about custom error classes in JavaScript?",
+    "o": [
+      "Custom error classes can be created by extending the built-in Error class.",
+      "Custom error classes are always created using a constructor function.",
+      "Custom error classes must have a 'message' property, but not 'stack'.",
+      "Custom error classes automatically log error messages to the console."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = Math.sqrt(-1);\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "NaN",
+      "Error: Invalid operation",
+      "TypeError: Cannot compute the square root of negative number",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following best describes how to throw a custom error in JavaScript?",
+    "o": [
+      "You can throw a custom error by using 'throw new Error('message')'.",
+      "You can throw a custom error by using 'throw message'.",
+      "You can throw a custom error by using 'throw Error()'.",
+      "You can throw a custom error by using 'throw new CustomError()'."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let x = 5;\n  if (x > 10) throw 'Number is too large';\n} catch (error) {\n  console.log(error);\n}",
+    "o": [
+      "Number is too large",
+      "Error: Number is too large",
+      "undefined",
+      "TypeError: Invalid number"
+    ]
+  },
+  {
+    "q": "Which of the following is true about debugging in JavaScript?",
+    "o": [
+      "'debugger' is a statement used to stop the execution of the code and inspect the variables.",
+      "'debugger' is used to catch errors and throw custom error messages.",
+      "'debugger' is used to handle asynchronous code.",
+      "'debugger' is a method that logs error messages to the console."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let obj = { name: 'John' };\n  obj.age;\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Cannot read property 'age' of undefined",
+      "Error: Cannot read property 'age' of undefined",
+      "undefined",
+      "ReferenceError: obj is not defined"
+    ]
+  },
+  {
+    "q": "Which of the following statements about 'finally' block is true in JavaScript?",
+    "o": [
+      "The 'finally' block always runs regardless of whether an error occurred in the try block.",
+      "The 'finally' block runs only if no error occurs in the try block.",
+      "The 'finally' block runs only if an error is caught by the catch block.",
+      "The 'finally' block can throw errors that will be handled by the catch block."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let x = y + 10;\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "ReferenceError",
+      "TypeError",
+      "SyntaxError",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following is true about JavaScript's error handling mechanism?",
+    "o": [
+      "The 'catch' block can access the error object which contains information about the error.",
+      "JavaScript automatically stops execution when an error occurs, even if a 'try-catch' block is used.",
+      "Errors cannot be thrown manually using 'throw'.",
+      "All JavaScript errors are SyntaxErrors."
+    ]
+  },
+  {
+    "q": "What will be logged to the console when the following code runs?",
+    "l": "javascript",
+    "c": "try {\n  throw new TypeError('Invalid type');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "Invalid type",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following statements about the 'try...catch' statement is correct?",
+    "o": [
+      "'catch' is executed only if an error occurs in the 'try' block.",
+      "'finally' is executed only if an error occurs in the 'try' block.",
+      "The 'try' block is optional.",
+      "The 'catch' block is always executed, even if no error occurs."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = JSON.parse('{\"name\": \"John\"}');\n  console.log(result.name);\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "John",
+      "SyntaxError: Unexpected token",
+      "undefined",
+      "Error: Invalid JSON"
+    ]
+  },
+  {
+    "q": "How do you create a custom error class in JavaScript?",
+    "o": [
+      "By extending the built-in Error class.",
+      "By creating a new function that returns an error message.",
+      "By using 'throw new CustomError'.",
+      "By modifying the built-in Error class directly."
+    ]
+  },
+  {
+    "q": "What will happen when the following code is executed?",
+    "l": "javascript",
+    "c": "try {\n  console.log('Start');\n  throw new Error('Something went wrong');\n  console.log('End');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Start\nSomething went wrong",
+      "Start\nEnd",
+      "Something went wrong",
+      "Start\nEnd\nSomething went wrong"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about debugging JavaScript?",
+    "o": [
+      "Using 'debugger' in JavaScript pauses execution at that line, allowing inspection.",
+      "Console logs are the only way to debug JavaScript code.",
+      "'debugger' is a function that needs to be called explicitly.",
+      "Errors thrown in a 'try' block are ignored by debugging tools."
+    ]
+  },
+  {
+    "q": "What will be logged to the console when this code runs?",
+    "l": "javascript",
+    "c": "try {\n  let num = 10;\n  if (num > 5) {\n    throw new RangeError('Number too high');\n  }\n} catch (error) {\n  console.log(error.constructor.name);\n}",
+    "o": [
+      "RangeError",
+      "Error",
+      "TypeError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which of the following best describes the purpose of the 'finally' block in error handling?",
+    "o": [
+      "It runs code that should execute regardless of whether an error occurs or not.",
+      "It catches errors that are not handled by the 'catch' block.",
+      "It prevents the execution of the 'catch' block.",
+      "It is required when using 'try...catch'."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  console.log(variable);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "ReferenceError",
+      "TypeError",
+      "SyntaxError",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following best describes a 'SyntaxError' in JavaScript?",
+    "o": [
+      "An error that occurs when the JavaScript engine encounters invalid syntax.",
+      "An error that occurs when a variable is not defined.",
+      "An error that occurs when an operation is performed on a value of the wrong type.",
+      "An error that occurs when an array index is out of bounds."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('An error occurred');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "An error occurred",
+      "Error: An error occurred",
+      "undefined",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following statements about the 'catch' block in JavaScript is true?",
+    "o": [
+      "The 'catch' block is executed only if an error occurs in the 'try' block.",
+      "The 'catch' block is always executed, regardless of whether an error occurs.",
+      "The 'catch' block can only handle syntax errors.",
+      "The 'catch' block must always return a value."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let obj = null;\n  console.log(obj.name);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "How can you throw a custom error in JavaScript?",
+    "o": [
+      "By using 'throw new Error(\"message\")'.",
+      "By calling 'error.throw(\"message\")'.",
+      "By using 'catch new Error(\"message\")'.",
+      "By writing 'raise Error(\"message\")'."
+    ]
+  },
+  {
+    "q": "What will be logged when this code runs?",
+    "l": "javascript",
+    "c": "try {\n  let x = 5;\n  if (x < 10) {\n    throw 'Value is too small';\n  }\n} catch (error) {\n  console.log(error);\n}",
+    "o": [
+      "Value is too small",
+      "Error: Value is too small",
+      "undefined",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following is the best debugging practice in JavaScript?",
+    "o": [
+      "Using 'console.log()' and the browser's developer tools.",
+      "Guessing what went wrong without checking the code.",
+      "Removing all error handling to see raw errors.",
+      "Running JavaScript code without testing it."
+    ]
+  },
+  {
+    "q": "What is the output of this code snippet?",
+    "l": "javascript",
+    "c": "try {\n  JSON.parse('invalid json');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "TypeError",
+      "ReferenceError",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which statement is true about the 'finally' block?",
+    "o": [
+      "The 'finally' block executes whether or not an error occurs.",
+      "The 'finally' block only executes if an error occurs.",
+      "The 'finally' block must contain error handling code.",
+      "The 'finally' block is optional and runs only if explicitly called."
+    ]
+  },
+  {
+    "q": "What will be logged to the console when the following code is executed?",
+    "l": "javascript",
+    "c": "try {\n  console.log(a);\n} catch (error) {\n  console.log(error.constructor.name);\n}",
+    "o": [
+      "ReferenceError",
+      "TypeError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which statement correctly describes 'try...catch' in JavaScript?",
+    "o": [
+      "It allows handling runtime errors without stopping script execution.",
+      "It is used only for syntax errors.",
+      "It only works in asynchronous code.",
+      "It stops execution of the program when an error is caught."
+    ]
+  },
+  {
+    "q": "What will happen when the following code runs?",
+    "l": "javascript",
+    "c": "try {\n  let num = 10;\n  if (num > 5) {\n    throw new Error('Number is too large');\n  }\n} catch (error) {\n  console.log(error.message);\n} finally {\n  console.log('Execution completed');\n}",
+    "o": [
+      "Number is too large\nExecution completed",
+      "Execution completed",
+      "Number is too large",
+      "Nothing will be logged"
+    ]
+  },
+  {
+    "q": "Which of the following errors can be caught using 'try...catch' in JavaScript?",
+    "o": [
+      "Runtime errors like TypeError and ReferenceError.",
+      "Syntax errors.",
+      "All errors, including compilation errors.",
+      "Errors from external APIs."
+    ]
+  },
+  {
+    "q": "What will the following code output?",
+    "l": "javascript",
+    "c": "try {\n  throw new SyntaxError('Invalid syntax');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "Invalid syntax",
+      "Error",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "How do you create a custom error type in JavaScript?",
+    "o": [
+      "By extending the built-in Error class.",
+      "By using 'throw new CustomError()' without defining a class.",
+      "By overriding the built-in Error class.",
+      "By using 'new ErrorType()'."
+    ]
+  },
+  {
+    "q": "What will be the output of this code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let obj = {};\n  console.log(obj.property.length);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following is true about debugging JavaScript?",
+    "o": [
+      "Using 'debugger' in the code allows stepping through execution in developer tools.",
+      "Console.log is the only way to debug JavaScript.",
+      "Errors cannot be caught in asynchronous functions.",
+      "JavaScript does not support debugging tools."
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'finally' block in error handling?",
+    "o": [
+      "It ensures code execution regardless of an error occurring.",
+      "It catches errors that are not handled by 'catch'.",
+      "It prevents the execution of the 'catch' block.",
+      "It stops execution if an error occurs."
+    ]
+  },
+  {
+    "q": "What will happen when the following code is executed?",
+    "l": "javascript",
+    "c": "try {\n  console.log('Start');\n  throw new Error('An error occurred');\n  console.log('End');\n} catch (error) {\n  console.log('Caught:', error.message);\n} finally {\n  console.log('Finally block executed');\n}",
+    "o": [
+      "Start\nCaught: An error occurred\nFinally block executed",
+      "Start\nEnd\nCaught: An error occurred\nFinally block executed",
+      "Caught: An error occurred\nFinally block executed",
+      "Start\nEnd\nFinally block executed"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let arr = new Array(1000000000000);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "RangeError",
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which statement about custom errors in JavaScript is correct?",
+    "o": [
+      "Custom errors can be created by extending the built-in 'Error' class.",
+      "Custom errors must be defined using a 'new CustomError()' syntax only.",
+      "JavaScript does not support custom errors.",
+      "A custom error must be named 'CustomError'."
+    ]
+  },
+  {
+    "q": "What will be logged when the following code executes?",
+    "l": "javascript",
+    "c": "try {\n  let obj;\n  console.log(obj.name);\n} catch (error) {\n  console.log(error.constructor.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following best describes the 'try...catch' mechanism in JavaScript?",
+    "o": [
+      "It is used to handle runtime errors without stopping execution.",
+      "It is required in all JavaScript functions.",
+      "It only works with synchronous code.",
+      "It stops execution when an error is caught."
+    ]
+  },
+  {
+    "q": "What happens when an error occurs inside a 'catch' block?",
+    "o": [
+      "The error is not handled, and the program may crash unless another 'try...catch' exists.",
+      "The original 'try' block runs again.",
+      "The error is ignored, and execution continues normally.",
+      "The 'finally' block is skipped."
+    ]
+  },
+  {
+    "q": "What is the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  JSON.parse('{ invalid json }');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "ReferenceError",
+      "TypeError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following correctly throws a custom error in JavaScript?",
+    "o": [
+      "throw new Error('Custom error message');",
+      "raise new Error('Custom error message');",
+      "throw Error.create('Custom error message');",
+      "error.throw('Custom error message');"
+    ]
+  },
+  {
+    "q": "What will be logged when the following code runs?",
+    "l": "javascript",
+    "c": "try {\n  throw 'An error occurred';\n} catch (error) {\n  console.log(error);\n}",
+    "o": [
+      "An error occurred",
+      "Error: An error occurred",
+      "undefined",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following correctly describes a 'ReferenceError'?",
+    "o": [
+      "It occurs when accessing a variable that has not been declared.",
+      "It happens when an operation is performed on a null object.",
+      "It is thrown when an infinite loop is detected.",
+      "It is triggered when parsing JSON fails."
+    ]
+  },
+  {
+    "q": "What will be the output of this code?",
+    "l": "javascript",
+    "c": "try {\n  let num = 5;\n  if (num < 10) {\n    throw new Error('Number too small');\n  }\n} catch (error) {\n  console.log(error.message);\n} finally {\n  console.log('Done');\n}",
+    "o": [
+      "Number too small\nDone",
+      "Done",
+      "Number too small",
+      "Nothing is logged"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code runs?",
+    "l": "javascript",
+    "c": "try {\n  let result = 10 / 0;\n  console.log(result);\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Infinity",
+      "Division by zero error",
+      "TypeError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following statements about the 'finally' block is correct?",
+    "o": [
+      "The 'finally' block executes regardless of whether an error occurs or not.",
+      "The 'finally' block only executes if an error is caught.",
+      "If an error occurs, the 'finally' block is skipped.",
+      "The 'finally' block must contain an error handler."
+    ]
+  },
+  {
+    "q": "What will be logged when the following code runs?",
+    "l": "javascript",
+    "c": "try {\n  throw new TypeError('Invalid type');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "Error",
+      "Invalid type",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a built-in JavaScript error type?",
+    "o": [
+      "LogicError",
+      "SyntaxError",
+      "ReferenceError",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "What will happen when the following code runs?",
+    "l": "javascript",
+    "c": "try {\n  let x = y;\n} catch (error) {\n  console.log('Caught:', error.message);\n}",
+    "o": [
+      "Caught: y is not defined",
+      "SyntaxError: Unexpected identifier",
+      "ReferenceError: Cannot assign to undefined variable",
+      "No output, the error is ignored"
+    ]
+  },
+  {
+    "q": "Which of the following best describes a 'SyntaxError' in JavaScript?",
+    "o": [
+      "An error that occurs when JavaScript code is not written correctly.",
+      "An error that happens when accessing an undefined variable.",
+      "An error related to incorrect function calls.",
+      "An error that occurs when an object method is called incorrectly."
+    ]
+  },
+  {
+    "q": "What will be logged when this code executes?",
+    "l": "javascript",
+    "c": "try {\n  let user = null;\n  console.log(user.name);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following best describes 'throw' in JavaScript?",
+    "o": [
+      "It is used to manually generate an error.",
+      "It automatically catches errors.",
+      "It prevents the execution of the next line of code.",
+      "It is only used for built-in errors."
+    ]
+  },
+  {
+    "q": "What will happen when the following code runs?",
+    "l": "javascript",
+    "c": "try {\n  let num = 5;\n  if (num > 3) {\n    throw 'Number is too high';\n  }\n} catch (error) {\n  console.log(error);\n}",
+    "o": [
+      "Number is too high",
+      "Error: Number is too high",
+      "TypeError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which of the following will correctly catch all JavaScript errors?",
+    "o": [
+      "window.onerror = function(message, source, lineno, colno, error) { console.log(error); };",
+      "console.error('Error caught!');",
+      "try { handleErrors(); } finally { console.log('Done'); }",
+      "throw new Error('Unhandled exception');"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let x = 10;\n  throw new Error('Something went wrong');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Something went wrong",
+      "Error",
+      "undefined",
+      "Nothing is logged"
+    ]
+  },
+  {
+    "q": "Which of the following statements about the 'catch' block is correct?",
+    "o": [
+      "The 'catch' block executes when an error occurs inside the 'try' block.",
+      "The 'catch' block executes regardless of whether an error occurs.",
+      "A 'catch' block is mandatory after every 'try' block.",
+      "A 'catch' block can only handle built-in JavaScript errors."
+    ]
+  },
+  {
+    "q": "What will be the output of this code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let result = JSON.parse('{\"name\": \"John\"}');\n  console.log(result.name);\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "John",
+      "SyntaxError",
+      "undefined",
+      "null"
+    ]
+  },
+  {
+    "q": "What type of error occurs when calling an undefined function in JavaScript?",
+    "o": [
+      "ReferenceError",
+      "SyntaxError",
+      "TypeError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "What will be the output of this JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let arr = [];\n  console.log(arr[5].name);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which statement about JavaScript error handling is correct?",
+    "o": [
+      "Errors can be thrown using the 'throw' statement.",
+      "Errors are always fatal and stop execution immediately.",
+      "Only built-in errors can be caught using 'try...catch'.",
+      "The 'finally' block only runs when an error occurs."
+    ]
+  },
+  {
+    "q": "What happens when an error occurs inside a 'finally' block?",
+    "o": [
+      "The error is not caught by the associated 'catch' block.",
+      "The error is handled by the 'catch' block above it.",
+      "The program stops executing immediately.",
+      "The 'finally' block does not allow errors to occur."
+    ]
+  },
+  {
+    "q": "What will be logged when the following code executes?",
+    "l": "javascript",
+    "c": "try {\n  throw new SyntaxError('Invalid syntax');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "Error",
+      "Invalid syntax",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is true about 'try...catch' in JavaScript?",
+    "o": [
+      "'try...catch' only works with synchronous code unless using 'async/await'.",
+      "'try...catch' automatically handles all runtime errors in JavaScript.",
+      "Errors inside 'try' blocks are always ignored.",
+      "A 'catch' block can only contain console.log statements."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code runs?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Unexpected issue');\n} catch (error) {\n  console.log(error.toString());\n}",
+    "o": [
+      "Error: Unexpected issue",
+      "Unexpected issue",
+      "[object Object]",
+      "undefined"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  console.log(hello);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "ReferenceError",
+      "TypeError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which statement about JavaScript's 'try...catch' mechanism is correct?",
+    "o": [
+      "Only runtime errors can be caught using 'try...catch'.",
+      "Syntax errors are caught by 'try...catch'.",
+      "'try...catch' does not work for asynchronous code.",
+      "An error in a 'catch' block is ignored."
+    ]
+  },
+  {
+    "q": "What will be the output of this code snippet?",
+    "l": "javascript",
+    "c": "try {\n  let obj = {};\n  console.log(obj.property.toUpperCase());\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to throw a custom error in JavaScript?",
+    "o": [
+      "throw new Error('This is a custom error');",
+      "throw Error['This is a custom error'];",
+      "throw('This is a custom error');",
+      "throw.error('This is a custom error');"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  JSON.parse('{invalid json}');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "TypeError",
+      "ReferenceError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following best describes a 'RangeError' in JavaScript?",
+    "o": [
+      "An error that occurs when a number is outside the allowable range.",
+      "An error that occurs when an undefined variable is accessed.",
+      "An error that occurs when a function receives too many arguments.",
+      "An error related to object property access."
+    ]
+  },
+  {
+    "q": "What will be logged when this code executes?",
+    "l": "javascript",
+    "c": "try {\n  setTimeout(() => {\n    throw new Error('Timeout error');\n  }, 1000);\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "No output, as the error is not caught.",
+      "Timeout error",
+      "Error: Timeout error",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following best describes the 'finally' block in JavaScript?",
+    "o": [
+      "It executes regardless of whether an error occurs.",
+      "It only runs if an error occurs.",
+      "It must always contain a return statement.",
+      "It prevents errors from being thrown."
+    ]
+  },
+  {
+    "q": "What will be the output of this JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let x = 10;\n  throw 'An error occurred';\n} catch (error) {\n  console.log(typeof error);\n}",
+    "o": [
+      "string",
+      "object",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following errors cannot be caught using 'try...catch'?",
+    "o": [
+      "SyntaxError",
+      "ReferenceError",
+      "TypeError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let num = 5;\n  if (num > 0) {\n    throw new Error('Positive number error');\n  }\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Positive number error",
+      "Error",
+      "undefined",
+      "Nothing is logged"
+    ]
+  },
+  {
+    "q": "Which of the following is true about custom errors in JavaScript?",
+    "o": [
+      "Custom errors can be created by extending the built-in Error class.",
+      "Only built-in errors can be thrown in JavaScript.",
+      "Custom errors must always be caught using 'try...catch'.",
+      "JavaScript does not support custom error types."
+    ]
+  },
+  {
+    "q": "What will be the output of this JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let arr = [1, 2, 3];\n  console.log(arr[5].toString());\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following correctly defines a custom error class in JavaScript?",
+    "o": [
+      "class CustomError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'CustomError';\n  }\n}",
+      "class CustomError(Error) {\n  constructor(message) {\n    super.message = message;\n  }\n}",
+      "class CustomError {\n  constructor(message) {\n    this.message = message;\n  }\n}",
+      "function CustomError(message) {\n  this.message = message;\n  this.name = 'CustomError';\n}"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  throw new RangeError('Out of range');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "RangeError",
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which statement about 'finally' in JavaScript error handling is correct?",
+    "o": [
+      "The 'finally' block always executes, regardless of whether an error occurs.",
+      "The 'finally' block only runs if no error occurs.",
+      "The 'finally' block stops execution if an error occurs.",
+      "The 'finally' block must contain a 'return' statement."
+    ]
+  },
+  {
+    "q": "What will be logged when this JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  console.log('Before error');\n  throw new Error('An error occurred');\n  console.log('After error');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Before error\nAn error occurred",
+      "Before error\nAfter error",
+      "An error occurred",
+      "Nothing is logged"
+    ]
+  },
+  {
+    "q": "Which of the following errors is thrown when attempting to call a non-function value?",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "What happens if a 'throw' statement is used outside of a 'try' block?",
+    "o": [
+      "The script stops execution with an uncaught error.",
+      "The error is automatically caught by JavaScript.",
+      "The error is ignored.",
+      "The error is logged to the console and execution continues."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let obj = null;\n  console.log(obj.value);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let num = 10;\n  throw new Error('Something went wrong');\n} catch (error) {\n  console.log(error.name + ': ' + error.message);\n}",
+    "o": [
+      "Error: Something went wrong",
+      "Something went wrong",
+      "TypeError: Something went wrong",
+      "ReferenceError: Something went wrong"
+    ]
+  },
+  {
+    "q": "Which of the following statements about JavaScript error handling is correct?",
+    "o": [
+      "'try...catch' can only catch errors that occur inside the 'try' block.",
+      "'try...catch' can catch all JavaScript errors, including syntax errors.",
+      "Errors inside asynchronous functions are automatically caught by 'try...catch'.",
+      "'catch' blocks are optional when using 'try...catch'."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  console.log('Start');\n  throw new Error('Oops!');\n} catch (error) {\n  console.log('Caught:', error.message);\n} finally {\n  console.log('Finally block executed');\n}",
+    "o": [
+      "Start\nCaught: Oops!\nFinally block executed",
+      "Start\nCaught: Oops!",
+      "Caught: Oops!\nFinally block executed",
+      "Start\nFinally block executed"
+    ]
+  },
+  {
+    "q": "Which of the following errors occurs when accessing an undefined variable?",
+    "o": [
+      "ReferenceError",
+      "TypeError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  JSON.parse('{\"name\": \"John\", age: 30}');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "ReferenceError",
+      "TypeError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid way to handle JavaScript errors?",
+    "o": [
+      "Ignoring the error completely",
+      "Using 'try...catch'",
+      "Throwing a custom error with 'throw'",
+      "Using the 'finally' block to clean up resources"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "class MyError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'MyError';\n  }\n}\ntry {\n  throw new MyError('Custom error occurred');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "MyError",
+      "Error",
+      "TypeError",
+      "CustomError"
+    ]
+  },
+  {
+    "q": "Which statement about the 'finally' block is true?",
+    "o": [
+      "The 'finally' block executes regardless of whether an error occurs.",
+      "The 'finally' block executes only if no error occurs.",
+      "The 'finally' block prevents the 'catch' block from executing.",
+      "The 'finally' block is mandatory in a 'try...catch' statement."
+    ]
+  },
+  {
+    "q": "What will be the output of this JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  throw 'Custom error';\n} catch (error) {\n  console.log(typeof error);\n}",
+    "o": [
+      "string",
+      "object",
+      "Error",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which error type occurs when calling a function on a non-function object?",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let result = 10 / 0;\n  console.log(result);\n} catch (error) {\n  console.log('Error caught:', error.message);\n}",
+    "o": [
+      "Infinity",
+      "Error caught: Division by zero",
+      "NaN",
+      "Undefined"
+    ]
+  },
+  {
+    "q": "Which of the following correctly throws a custom error in JavaScript?",
+    "o": [
+      "throw new Error('Custom error message');",
+      "throw Error('Custom error message');",
+      "throw 'Custom error message';",
+      "All of the above"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let obj = null;\n  console.log(obj.property);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which error type occurs when trying to execute a piece of code with incorrect syntax?",
+    "o": [
+      "SyntaxError",
+      "ReferenceError",
+      "TypeError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  setTimeout(() => {\n    throw new Error('Delayed error');\n  }, 1000);\n} catch (error) {\n  console.log('Caught:', error.message);\n}",
+    "o": [
+      "Uncaught Error: Delayed error",
+      "Caught: Delayed error",
+      "Error: Delayed error",
+      "Caught: undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to handle errors in asynchronous JavaScript?",
+    "o": [
+      "Using a try-catch block inside an async function",
+      "Using try-catch outside an async function",
+      "Wrapping async code in setTimeout",
+      "Errors in async functions cannot be handled"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "async function fetchData() {\n  try {\n    throw new Error('Async error');\n  } catch (error) {\n    console.log('Caught:', error.message);\n  }\n}\nfetchData();",
+    "o": [
+      "Caught: Async error",
+      "Uncaught Error: Async error",
+      "Error: Async error",
+      "Nothing"
+    ]
+  },
+  {
+    "q": "Which of the following methods is used to create a custom error in JavaScript?",
+    "o": [
+      "Extending the Error class",
+      "Using console.error()",
+      "Using try-catch",
+      "Using throw without an error object"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "function riskyOperation() {\n  try {\n    throw new Error('Oops!');\n  } finally {\n    console.log('Cleanup code executed');\n  }\n}\n\nriskyOperation();",
+    "o": [
+      "Cleanup code executed\nError: Oops!",
+      "Error: Oops!\nCleanup code executed",
+      "Cleanup code executed",
+      "Error: Oops!"
+    ]
+  },
+  {
+    "q": "Which statement is correct about JavaScript error handling?",
+    "o": [
+      "Errors thrown inside a Promise must be handled with .catch()",
+      "All JavaScript errors can be caught using a single try-catch block",
+      "Syntax errors can be caught using try-catch",
+      "The finally block only executes if an error occurs"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let num = 5;\n  num.toUpperCase();\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following statements about the try-catch block in JavaScript is true?",
+    "o": [
+      "The catch block only executes if an error occurs in the try block.",
+      "The catch block always executes, regardless of whether an error occurs.",
+      "The try block must always be followed by a catch block.",
+      "You can use multiple catch blocks in a single try statement."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Something went wrong');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Something went wrong",
+      "Error: Something went wrong",
+      "Undefined",
+      "Caught an error"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a built-in JavaScript error type?",
+    "o": [
+      "MemoryError",
+      "ReferenceError",
+      "SyntaxError",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let obj = {};\n  console.log(obj.property.value);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following correctly defines a custom error class in JavaScript?",
+    "o": [
+      "class CustomError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'CustomError';\n  }\n}",
+      "class CustomError() {\n  constructor(message) {\n    this.message = message;\n    this.name = 'CustomError';\n  }\n}",
+      "class CustomError extends Error {\n  function(message) {\n    super(message);\n    this.name = 'CustomError';\n  }\n}",
+      "function CustomError(message) {\n  this.message = message;\n  this.name = 'CustomError';\n}"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let arr = new Array(999999999999);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "RangeError",
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which statement about the finally block is correct?",
+    "o": [
+      "The finally block executes regardless of whether an error occurs.",
+      "The finally block executes only if an error occurs.",
+      "The finally block is required in a try-catch statement.",
+      "The finally block prevents errors from propagating."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  JSON.parse('{invalidJson}');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "ReferenceError",
+      "TypeError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "How can you handle errors in an asynchronous function?",
+    "o": [
+      "Use a try-catch block inside the async function",
+      "Use a try-catch block outside the async function",
+      "Errors in async functions cannot be handled",
+      "Using only console.log statements"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let x = y + 1;\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "ReferenceError",
+      "TypeError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to throw a custom error in JavaScript?",
+    "o": [
+      "throw new Error('Custom error message');",
+      "raise new Error('Custom error message');",
+      "throw Error.new('Custom error message');",
+      "error.throw('Custom error message');"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let num = 10;\n  if (num > 5) {\n    throw new Error('Number is too large');\n  }\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Number is too large",
+      "Error: Number is too large",
+      "Undefined",
+      "Nothing is logged"
+    ]
+  },
+  {
+    "q": "Which JavaScript error occurs when an object is accessed before it is defined?",
+    "o": [
+      "ReferenceError",
+      "SyntaxError",
+      "TypeError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  decodeURIComponent('%');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "URIError",
+      "SyntaxError",
+      "TypeError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following statements about JavaScript's finally block is true?",
+    "o": [
+      "The finally block always executes, regardless of whether an error occurs.",
+      "The finally block only executes if an error occurs.",
+      "The finally block prevents errors from being thrown.",
+      "The finally block executes before the catch block."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  throw new TypeError('Invalid type');\n} catch (error) {\n  console.log(error instanceof TypeError);\n}",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "Invalid type"
+    ]
+  },
+  {
+    "q": "Which JavaScript method can be used to log detailed debugging information?",
+    "o": [
+      "console.debug()",
+      "console.error()",
+      "console.warn()",
+      "console.alert()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let obj = null;\n  obj.method();\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following best describes a custom error in JavaScript?",
+    "o": [
+      "An error created by extending the built-in Error class.",
+      "An error automatically generated by JavaScript.",
+      "An error that only occurs in async functions.",
+      "A syntax error caused by missing semicolons."
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  JSON.parse(undefined);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "ReferenceError",
+      "TypeError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following is true about JavaScript's try-catch statement?",
+    "o": [
+      "The catch block must have a parameter to receive the error object.",
+      "The try block must be followed by both catch and finally blocks.",
+      "The catch block will execute even if there is no error.",
+      "The try block can be used without a catch or finally block."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let arr = [];\n  arr.length = -1;\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "RangeError",
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which JavaScript error type is thrown when a variable is used before it is declared?",
+    "o": [
+      "ReferenceError",
+      "SyntaxError",
+      "TypeError",
+      "URIError"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let obj = {name: 'Alice'};\n  console.log(obj.age.toString());\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following correctly handles errors in an async function?",
+    "o": [
+      "async function fetchData() {\n  try {\n    let response = await fetch('invalid-url');\n  } catch (error) {\n    console.log(error.message);\n  }\n}",
+      "async function fetchData() {\n  let response = fetch('invalid-url').catch(error => console.log(error));\n}",
+      "async function fetchData() {\n  let response = fetch('invalid-url');\n  console.log(response.message);\n}",
+      "function fetchData() {\n  try {\n    let response = await fetch('invalid-url');\n  } catch (error) {\n    console.log(error.message);\n  }\n}"
+    ]
+  },
+  {
+    "q": "Which of the following statements about debugging in JavaScript is true?",
+    "o": [
+      "The debugger statement pauses execution when developer tools are open.",
+      "console.log() is the only way to debug JavaScript code.",
+      "JavaScript does not support step-by-step debugging.",
+      "Errors in JavaScript cannot be viewed in browser developer tools."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  eval('let x =;');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "ReferenceError",
+      "TypeError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which method is commonly used to handle rejected promises in JavaScript?",
+    "o": [
+      ".catch()",
+      ".reject()",
+      ".then()",
+      ".finally()"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let obj = {};\n  console.log(obj.nonExistentMethod());\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let x = 10;\n  throw new Error('Something went wrong');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Something went wrong",
+      "Error: Something went wrong",
+      "undefined",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following errors occurs when an operation is performed on a value that is not of the expected type?",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let num = 1;\n  num.toPrecision(500);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "RangeError",
+      "TypeError",
+      "SyntaxError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which JavaScript statement is used to define a custom error class?",
+    "o": [
+      "class CustomError extends Error {}",
+      "function CustomError() { this.message = 'error'; }",
+      "let CustomError = new Error();",
+      "Error.prototype.CustomError = function() {};"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  throw new URIError('Invalid URL format');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "URIError",
+      "TypeError",
+      "SyntaxError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following statements about the finally block in JavaScript is correct?",
+    "o": [
+      "It executes regardless of whether an error occurs or not.",
+      "It executes only if an error occurs.",
+      "It prevents the catch block from running.",
+      "It must contain a return statement."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let obj = null;\n  obj.method();\n} catch (error) {\n  console.log(error instanceof TypeError);\n}",
+    "o": [
+      "true",
+      "false",
+      "TypeError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which JavaScript debugging method halts execution when the developer tools are open?",
+    "o": [
+      "debugger",
+      "console.debug()",
+      "console.stop()",
+      "breakpoint()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  throw new SyntaxError('Unexpected token');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "TypeError",
+      "ReferenceError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following statements about promise rejection handling is correct?",
+    "o": [
+      "A rejected promise can be caught using .catch()",
+      "A rejected promise is ignored if .then() is used",
+      "A rejected promise must be resolved before execution continues",
+      "Rejection handling is not possible in JavaScript"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let result = x + 10;\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "ReferenceError",
+      "TypeError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following is true about the JavaScript try-catch mechanism?",
+    "o": [
+      "The catch block executes only when an error occurs inside the try block.",
+      "The try block always executes after the catch block.",
+      "JavaScript requires an explicit error type in the catch block.",
+      "The catch block can be used without a try block."
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  decodeURIComponent('%');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "URIError",
+      "SyntaxError",
+      "TypeError",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which error type occurs when calling a function that is not defined?",
+    "o": [
+      "ReferenceError",
+      "SyntaxError",
+      "TypeError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let arr = new Array(1e10);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "RangeError",
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which of the following correctly defines a custom error in JavaScript?",
+    "o": [
+      "class CustomError extends Error { constructor(message) { super(message); this.name = 'CustomError'; } }",
+      "function CustomError(message) { this.message = message; this.name = 'CustomError'; }",
+      "let CustomError = new Error('CustomError');",
+      "Error.CustomError = function(message) { this.message = message; };"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  null.toString();\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which JavaScript method is used to handle errors in an asynchronous function?",
+    "o": [
+      ".catch()",
+      ".error()",
+      ".throw()",
+      ".try()"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  eval('var x = ');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "TypeError",
+      "ReferenceError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which statement about debugging in JavaScript is correct?",
+    "o": [
+      "The debugger statement pauses execution when developer tools are open.",
+      "console.error() is the best way to halt JavaScript execution.",
+      "JavaScript does not support breakpoints in debugging.",
+      "Errors in JavaScript cannot be tracked using developer tools."
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  JSON.parse('{name: \"John\"}');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "TypeError",
+      "ReferenceError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following correctly describes how JavaScript handles errors?",
+    "o": [
+      "JavaScript allows errors to be caught using try-catch blocks.",
+      "JavaScript stops execution completely when an error occurs.",
+      "JavaScript does not support error handling.",
+      "Errors in JavaScript cannot be recovered from."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let num = 100;\n  if (num > 50) throw new Error('Number too large');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Number too large",
+      "undefined",
+      "Error: Number too large",
+      "null"
+    ]
+  },
+  {
+    "q": "Which error occurs when accessing an object property that does not exist?",
+    "o": [
+      "It does not throw an error, but returns undefined.",
+      "ReferenceError",
+      "TypeError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let x = 10;\n  console.log(x.toUpperCase());\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following statements about the finally block is true?",
+    "o": [
+      "The finally block executes whether an error occurs or not.",
+      "The finally block executes only if no error occurs.",
+      "The finally block executes only if an error occurs.",
+      "The finally block prevents the catch block from running."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let obj = {};\n  console.log(obj.property.method());\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which JavaScript method is commonly used to debug and log errors?",
+    "o": [
+      "console.error()",
+      "console.warn()",
+      "console.trace()",
+      "console.debug()"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let arr = new Array(-1);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "RangeError",
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which statement about handling rejected promises is correct?",
+    "o": [
+      "A rejected promise can be handled using .catch()",
+      "A rejected promise is ignored unless explicitly thrown",
+      "A rejected promise cannot be recovered from",
+      "JavaScript does not support handling rejected promises"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let result = 10 / 0;\n  console.log(result);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "Infinity",
+      "TypeError",
+      "ReferenceError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which statement is true about JavaScript’s try-catch mechanism?",
+    "o": [
+      "The catch block only runs if an error occurs in the try block.",
+      "The try block will execute even if an error occurs in the catch block.",
+      "The catch block must always specify an error type.",
+      "The finally block executes only if an error is thrown."
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Something went wrong');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Something went wrong",
+      "undefined",
+      "Error: Something went wrong",
+      "null"
+    ]
+  },
+  {
+    "q": "Which error type is thrown when a function is called with an invalid argument?",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let str = \"hello\";\n  console.log(str[10].toUpperCase());\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which statement about JavaScript's finally block is correct?",
+    "o": [
+      "The finally block always executes, regardless of errors.",
+      "The finally block only executes when no error occurs.",
+      "The finally block prevents the catch block from executing.",
+      "JavaScript does not support the finally block."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let obj = null;\n  console.log(obj.method());\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which JavaScript function is commonly used to debug errors?",
+    "o": [
+      "console.log()",
+      "debugger()",
+      "alert()",
+      "throw()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let num = -1;\n  if (num < 0) throw new RangeError('Negative number not allowed');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "RangeError",
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which method is used to handle errors in JavaScript promises?",
+    "o": [
+      ".catch()",
+      ".reject()",
+      ".error()",
+      ".fail()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let obj = { name: 'Alice' };\n  console.log(obj.age.toString());\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which statement about throwing errors in JavaScript is correct?",
+    "o": [
+      "The throw statement allows you to create custom error messages.",
+      "The throw statement can only throw built-in JavaScript errors.",
+      "The throw statement stops execution but does not allow error handling.",
+      "JavaScript does not support manually throwing errors."
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  throw new SyntaxError('Invalid syntax');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "TypeError",
+      "ReferenceError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which error type occurs when calling an undefined function?",
+    "o": [
+      "ReferenceError",
+      "TypeError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let num = 'abc' / 2;\n  console.log(num);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "NaN",
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which statement about JavaScript’s catch block is true?",
+    "o": [
+      "The catch block can access the error object.",
+      "The catch block must always include a finally block.",
+      "The catch block executes only when no error occurs.",
+      "JavaScript does not allow catching errors."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let arr = new Array(10000000000000);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "RangeError",
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which of the following statements about debugging JavaScript errors is correct?",
+    "o": [
+      "Using the debugger statement pauses execution for inspection.",
+      "JavaScript does not support debugging errors.",
+      "Syntax errors can be handled using try-catch blocks.",
+      "Logging errors in JavaScript is only possible using alert()."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let obj = {};\n  console.log(obj.nonExistentProperty.method());\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which method should be used to handle rejected promises?",
+    "o": [
+      ".catch()",
+      ".resolve()",
+      ".handle()",
+      ".reject()"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  JSON.parse('{\"name\": \"Alice\"');\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "SyntaxError",
+      "TypeError",
+      "ReferenceError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which statement about error handling in JavaScript is correct?",
+    "o": [
+      "The try block is used to test a block of code for errors.",
+      "The catch block always executes, even if no error occurs.",
+      "The finally block executes only when an error is thrown.",
+      "JavaScript does not support error handling."
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  let x = y + 1;\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "ReferenceError",
+      "TypeError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which error type occurs when accessing an undeclared variable?",
+    "o": [
+      "ReferenceError",
+      "TypeError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let arr = new Array(-5);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "RangeError",
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which statement about JavaScript’s try-catch-finally mechanism is true?",
+    "o": [
+      "The finally block always executes, regardless of an error.",
+      "The catch block must be followed by a finally block.",
+      "Only one catch block can be used in a script.",
+      "JavaScript does not support the finally block."
+    ]
+  },
+  {
+    "q": "What will be logged when the following JavaScript code executes?",
+    "l": "javascript",
+    "c": "try {\n  let str = null;\n  console.log(str.length);\n} catch (error) {\n  console.log(error.name);\n}",
+    "o": [
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError",
+      "RangeError"
+    ]
+  },
+  {
+    "q": "Which of the following methods is used to create custom errors in JavaScript?",
+    "o": [
+      "throw new Error('Custom error message')",
+      "raise Error('Custom error message')",
+      "trigger Error('Custom error message')",
+      "new Exception('Custom error message')"
+    ]
+  },
+  {
+    "q": "What will be the output of the following JavaScript code?",
+    "l": "javascript",
+    "c": "try {\n  throw new TypeError('Invalid type');\n} catch (error) {\n  console.log(error.message);\n}",
+    "o": [
+      "Invalid type",
+      "TypeError",
+      "ReferenceError",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which method is used to debug JavaScript errors?",
+    "o": [
+      "console.error()",
+      "debug.log()",
+      "print.error()",
+      "log.debug()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  JSON.parse('<invalid json>');\n} catch (e) {\n  console.log(e.name, e.message.includes('JSON'));\n}",
+    "o": [
+      "SyntaxError true",
+      "JSONError true",
+      "SyntaxError false",
+      "TypeError true"
+    ]
+  },
+  {
+    "q": "Which method allows attaching a cause to an Error in modern JavaScript?",
+    "o": [
+      "new Error('message', { cause: error })",
+      "error.attachCause()",
+      "Error.withCause()",
+      "Error.cause(error)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function* generator() {\n  try {\n    yield 1;\n    throw new Error('Gen error');\n  } catch (e) {\n    yield e.message;\n  }\n}\n\nconst gen = generator();\nconsole.log(gen.next().value);\nconsole.log(gen.next().value);",
+    "o": [
+      "1 Gen error",
+      "1 Error: Gen error",
+      "undefined Gen error",
+      "1 undefined"
+    ]
+  },
+  {
+    "q": "Which Node.js module provides utilities for working with errors?",
+    "o": [
+      "util",
+      "errors",
+      "error-handler",
+      "debug"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class CustomError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = this.constructor.name;\n  }\n}\n\ntry {\n  throw new CustomError('Test');\n} catch (e) {\n  console.log(e.name, e instanceof CustomError);\n}",
+    "o": [
+      "CustomError true",
+      "Error true",
+      "CustomError false",
+      "Error false"
+    ]
+  },
+  {
+    "q": "How can you ensure a finally block doesn't override a return value?",
+    "o": [
+      "Avoid return statements in finally",
+      "Use process.exit() in finally",
+      "Wrap finally in try-catch",
+      "It's impossible to prevent"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw { name: 'APIError', toString: () => 'API Failed' };\n} catch (e) {\n  console.log(String(e));\n}",
+    "o": [
+      "API Failed",
+      "[object Object]",
+      "APIError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which technique helps identify uncaught promise rejections during testing?",
+    "o": [
+      "process.on('unhandledRejection', callback)",
+      "jest.mock('unhandled-rejections')",
+      "Promise.monitorRejections()",
+      "global.catchUnhandled()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const err = new Error();\nerr.code = 'ERR_INVALID_URL';\nconsole.log(err.code in Error);",
+    "o": [
+      "false",
+      "true",
+      "ERR_INVALID_URL",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which Error property shows the line number in Chrome DevTools?",
+    "o": [
+      "stack",
+      "lineNumber",
+      "sourceLine",
+      "position"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  module.require('nonexistent');\n} catch (e) {\n  console.log(e.code === 'MODULE_NOT_FOUND');\n}",
+    "o": [
+      "true",
+      "false",
+      "MODULE_NOT_FOUND",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "How can you create an error that skips stack trace collection?",
+    "o": [
+      "Error.stackTraceLimit = 0 before throwing",
+      "new Error('', { stackTrace: false })",
+      "Error.suppressStackTrace()",
+      "It's not possible"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new TypeError('Invalid type');\n} catch (e) {\n  if (e.name === 'TypeError') {\n    console.log(e.message);\n    throw e;\n  }\n}",
+    "o": [
+      "Invalid type (then uncaught TypeError)",
+      "Invalid type",
+      "TypeError: Invalid type",
+      "No output"
+    ]
+  },
+  {
+    "q": "Which console method shows error stack traces in color?",
+    "o": [
+      "console.error()",
+      "console.debug()",
+      "console.warn()",
+      "console.trace()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const { message } = new Error('Test');\nconsole.log(message === 'Test');",
+    "o": [
+      "true",
+      "false",
+      "ReferenceError",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  try {\n    throw new Error('Inner');\n  } finally {\n    throw new Error('Finally');\n  }\n} catch (e) {\n  console.log(e.message);\n}",
+    "o": [
+      "Finally",
+      "Inner",
+      "Inner Finally",
+      "No output - crashes"
+    ]
+  },
+  {
+    "q": "Which Node.js method allows converting callback-style errors to promise rejections?",
+    "o": [
+      "util.promisify()",
+      "Promise.fromCallback()",
+      "Error.toPromise()",
+      "asyncify()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "async function test() {\n  try {\n    await Promise.reject({ message: 'Custom', toString: () => 'Stringified' });\n  } catch (e) {\n    console.log(String(e));\n  }\n}\ntest();",
+    "o": [
+      "Stringified",
+      "Custom",
+      "[object Object]",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which property would you use to check if an error has a cause chain?",
+    "o": [
+      "error.cause",
+      "error.chain",
+      "error.previous",
+      "error.source"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class TimeoutError extends Error {\n  constructor() {\n    super('Timeout');\n    this.name = 'TimeoutError';\n    this.expired = true;\n  }\n}\n\ntry {\n  throw new TimeoutError();\n} catch (e) {\n  console.log(e.expired);\n}",
+    "o": [
+      "true",
+      "false",
+      "TimeoutError",
+      "undefined"
+    ]
+  },
+  {
+    "q": "How can you create an error that skips the current function in stack traces?",
+    "o": [
+      "Error.captureStackTrace(err, currentFunc)",
+      "Error.skipFrame()",
+      "delete err.stack",
+      "new Error('', { skipFrame: true })"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw { \n    name: 'ValidationError', \n    errors: ['Missing field'],\n    toString: () => 'Validation failed'\n  };\n} catch (e) {\n  console.log(e.name, e.errors[0]);\n}",
+    "o": [
+      "ValidationError Missing field",
+      "Validation failed Missing field",
+      "undefined undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which console method provides interactive stack traces in Chrome DevTools?",
+    "o": [
+      "console.trace()",
+      "console.debug()",
+      "console.error()",
+      "console.stack()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const err = new Error();\nError.captureStackTrace(err);\nconsole.log(err.stack.split('\\n').length > 1);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which of these will properly handle errors in a promise chain?",
+    "o": [
+      ".catch(err => console.error(err))",
+      ".then(null, err => console.error(err))",
+      "Both A and B",
+      "Neither A nor B"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function test() {\n  try {\n    throw new Error();\n  } catch {\n    return 'Caught';\n  } finally {\n    try {\n      throw 'Finally';\n    } catch {\n      return 'Nested';\n    }\n  }\n}\nconsole.log(test());",
+    "o": [
+      "Nested",
+      "Caught",
+      "Finally",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which Node.js flag shows full error stack traces including async operations?",
+    "o": [
+      "--async-stack-traces",
+      "--trace-warnings",
+      "--full-error",
+      "--debug-async"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw Object.assign(new Error(), { code: 404 });\n} catch (e) {\n  console.log(e.code, e instanceof Error);\n}",
+    "o": [
+      "404 true",
+      "404 false",
+      "undefined true",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "How can you access the original error from an AggregateError?",
+    "o": [
+      "error.errors",
+      "error.causes",
+      "error.sources",
+      "error.origin"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Primary');\n} catch (e) {\n  const err = new Error('Secondary', { cause: e });\n  throw err;\n}",
+    "o": [
+      "Uncaught Error: Secondary",
+      "Error: Primary",
+      "Error: Primary Error: Secondary",
+      "AggregateError"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('First');\n} catch (e) {\n  try {\n    throw new Error('Second');\n  } catch (e) {\n    console.log(e.message);\n  }\n  console.log(e.message);\n}",
+    "o": [
+      "Second First",
+      "First Second",
+      "Second",
+      "First"
+    ]
+  },
+  {
+    "q": "Which Node.js method allows creating multiple aggregated errors?",
+    "o": [
+      "new AggregateError(errors, message)",
+      "Error.combine(errors)",
+      "util.aggregateErrors(errors)",
+      "Error.merge(errors)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "async function fetchData() {\n  try {\n    await Promise.reject(new Error('Network'));\n  } catch (e) {\n    throw new Error('API Error', { cause: e });\n  }\n}\n\nfetchData().catch(e => console.log(e.message, e.cause.message));",
+    "o": [
+      "API Error Network",
+      "Network API Error",
+      "API Error",
+      "Network"
+    ]
+  },
+  {
+    "q": "Which property shows the column number of an error in modern browsers?",
+    "o": [
+      "error.stack",
+      "error.columnNumber",
+      "error.location",
+      "error.pos"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class DatabaseError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'DatabaseError';\n    this.timestamp = Date.now();\n  }\n}\n\ntry {\n  throw new DatabaseError('Connection failed');\n} catch (e) {\n  console.log(e.name, e.timestamp > 0);\n}",
+    "o": [
+      "DatabaseError true",
+      "DatabaseError false",
+      "Error true",
+      "Error false"
+    ]
+  },
+  {
+    "q": "How can you limit the stack trace depth in Node.js?",
+    "o": [
+      "Error.stackTraceLimit = number",
+      "Error.setStackDepth(number)",
+      "process.setStackTraceDepth(number)",
+      "stackTrace.limit(number)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw { \n    name: 'PaymentError', \n    details: { code: 402 },\n    toString() { return `${this.name}: ${this.details.code}`; }\n  };\n} catch (e) {\n  console.log(e.details.code, String(e));\n}",
+    "o": [
+      "402 PaymentError: 402",
+      "402 [object Object]",
+      "402 undefined",
+      "PaymentError 402"
+    ]
+  },
+  {
+    "q": "Which console method provides clickable source links in error stacks?",
+    "o": [
+      "console.error()",
+      "console.trace()",
+      "console.debug()",
+      "console.log()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const err = new Error();\nError.captureStackTrace(err, () => {});\nconsole.log(err.stack.includes('at '));",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which technique helps handle errors in async iterators?",
+    "o": [
+      "try-catch around yield statements",
+      "iterator.throw() method",
+      "Both A and B",
+      "Neither A nor B"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function test() {\n  try {\n    throw new Error('First');\n  } catch (e) {\n    try {\n      throw new Error('Second');\n    } finally {\n      return 'Finally';\n    }\n  }\n}\nconsole.log(test());",
+    "o": [
+      "Finally",
+      "First",
+      "Second",
+      "Error: Second"
+    ]
+  },
+  {
+    "q": "Which Node.js flag preserves async stack traces across await boundaries?",
+    "o": [
+      "--async-stack-traces",
+      "--trace-async",
+      "--full-stack",
+      "--keep-stacks"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw Object.setPrototypeOf({ message: 'Custom' }, Error.prototype);\n} catch (e) {\n  console.log(e instanceof Error, e.message);\n}",
+    "o": [
+      "true Custom",
+      "false Custom",
+      "true undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "How can you access the V8 formatted stack trace in Node.js?",
+    "o": [
+      "require('v8').getStackTrace(err)",
+      "Error.getV8StackTrace()",
+      "process.v8Stack(err)",
+      "err.v8Stack"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Primary');\n} catch (e) {\n  const err = new AggregateError([e], 'Multiple');\n  throw err;\n}",
+    "o": [
+      "Uncaught AggregateError: Multiple",
+      "Uncaught Error: Primary",
+      "Multiple Primary",
+      "AggregateError: Primary"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Main');\n} catch (e) {\n  const wrapped = new Error('Wrapper');\n  wrapped.cause = e;\n  throw wrapped;\n}",
+    "o": [
+      "Uncaught Error: Wrapper",
+      "Error: Main",
+      "Error: Main Error: Wrapper",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which method allows converting synchronous errors to rejected promises?",
+    "o": [
+      "Promise.reject(new Error())",
+      "Promise.throw()",
+      "Error.toPromise()",
+      "new Promise(() => { throw error })"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "async function test() {\n  try {\n    await Promise.reject({ \n      toString: () => 'STRING', \n      message: 'MESSAGE' \n    });\n  } catch (e) {\n    console.log(e.message || String(e));\n  }\n}\ntest();",
+    "o": [
+      "STRING",
+      "MESSAGE",
+      "undefined",
+      "[object Object]"
+    ]
+  },
+  {
+    "q": "Which Node.js module provides utilities for working with error stacks?",
+    "o": [
+      "util",
+      "stack-utils",
+      "trace",
+      "errors"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class CustomError extends Error {\n  constructor(msg) {\n    super(msg);\n    this.statusCode = 400;\n  }\n}\n\ntry {\n  throw new CustomError('Bad');\n} catch (e) {\n  console.log(e.statusCode, e instanceof Error);\n}",
+    "o": [
+      "400 true",
+      "Bad true",
+      "400 false",
+      "undefined true"
+    ]
+  },
+  {
+    "q": "How can you suppress Node.js deprecation warnings for specific code?",
+    "o": [
+      "process.noDeprecation = true",
+      "Error.silenceDeprecations()",
+      "util.suppressWarnings()",
+      "process.hideWarnings()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw { \n    name: 'AppError', \n    errors: [1, 2],\n    toString: () => 'APP'\n  };\n} catch (e) {\n  console.log(e.name, e.errors.length);\n}",
+    "o": [
+      "AppError 2",
+      "APP 2",
+      "AppError undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which console method shows error stacks with source map support?",
+    "o": [
+      "console.error()",
+      "console.trace()",
+      "console.warn()",
+      "console.debug()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const err = new Error();\nError.captureStackTrace(err);\nconsole.log(typeof err.stack === 'string');",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which technique handles errors in async generators?",
+    "o": [
+      "try-catch around yield expressions",
+      "generator.throw()",
+      "Both A and B",
+      "Neither A nor B"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function test() {\n  try {\n    throw new Error('First');\n  } catch {\n    try {\n      throw new Error('Second');\n    } finally {\n      return 'Finally';\n    }\n  }\n}\nconsole.log(test());",
+    "o": [
+      "Finally",
+      "First",
+      "Second",
+      "Error: Second"
+    ]
+  },
+  {
+    "q": "Which Node.js flag enables detailed async stack traces?",
+    "o": [
+      "--async-stack-traces",
+      "--trace-async",
+      "--full-stack",
+      "--debug-async"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw Object.create(Error.prototype, {\n    message: { value: 'Custom' }\n  });\n} catch (e) {\n  console.log(e instanceof Error, e.message);\n}",
+    "o": [
+      "true Custom",
+      "false Custom",
+      "true undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "How can you access the original stack trace in V8?",
+    "o": [
+      "Error.captureStackTrace()",
+      "new Error().stack",
+      "v8.getStackTrace()",
+      "process.trace()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Primary');\n} catch (e) {\n  const err = new AggregateError([e], 'Multiple');\n  throw err;\n}",
+    "o": [
+      "Uncaught AggregateError: Multiple",
+      "Uncaught Error: Primary",
+      "Multiple Primary",
+      "AggregateError: Primary"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Primary');\n} catch (e) {\n  const err = new Error('Secondary', { cause: e });\n  console.log(err.cause.message);\n  throw err;\n}",
+    "o": [
+      "Primary then Uncaught Error: Secondary",
+      "Secondary then Uncaught Error: Primary",
+      "Primary Secondary",
+      "Uncaught AggregateError"
+    ]
+  },
+  {
+    "q": "Which method allows converting a synchronous function to return promises with proper error handling?",
+    "o": [
+      "util.promisify()",
+      "Promise.wrap()",
+      "asyncify()",
+      "Error.toPromise()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "async function* generator() {\n  try {\n    yield await Promise.reject(new Error('Async Error'));\n  } catch (e) {\n    yield `Caught: ${e.message}`;\n  }\n}\n\n(async () => {\n  const gen = generator();\n  console.log((await gen.next()).value);\n  console.log((await gen.next()).value);\n})();",
+    "o": [
+      "undefined Caught: Async Error",
+      "Async Error Caught: Async Error",
+      "Error: Async Error Caught: Async Error",
+      "UnhandledPromiseRejectionWarning"
+    ]
+  },
+  {
+    "q": "Which Node.js module provides utilities for formatting error stacks?",
+    "o": [
+      "util",
+      "errors",
+      "stack-utils",
+      "trace"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class TimeoutError extends Error {\n  constructor() {\n    super('Timeout');\n    this.name = 'TimeoutError';\n    this.code = 'ETIMEDOUT';\n  }\n}\n\ntry {\n  throw new TimeoutError();\n} catch (e) {\n  console.log(e.code, e instanceof TimeoutError, e instanceof Error);\n}",
+    "o": [
+      "ETIMEDOUT true true",
+      "Timeout true true",
+      "ETIMEDOUT false true",
+      "Timeout false false"
+    ]
+  },
+  {
+    "q": "How can you limit the stack trace depth to 10 frames in Node.js?",
+    "o": [
+      "Error.stackTraceLimit = 10",
+      "Error.setStackDepth(10)",
+      "process.setStackTraceDepth(10)",
+      "stackTrace.limit(10)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw { \n    name: 'ValidationError', \n    details: { field: 'email' },\n    toString() { return `${this.name}: ${this.details.field}`; }\n  };\n} catch (e) {\n  console.log(e.details.field, e instanceof Error, String(e));\n}",
+    "o": [
+      "email false ValidationError: email",
+      "email true ValidationError: email",
+      "email false [object Object]",
+      "email true [object Object]"
+    ]
+  },
+  {
+    "q": "Which console method provides clickable source links in browser DevTools?",
+    "o": [
+      "console.error()",
+      "console.trace()",
+      "console.debug()",
+      "console.log()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const err = new Error('Test');\nError.captureStackTrace(err, () => {});\nconsole.log(err.stack.includes('Test'));",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which technique helps handle errors in async iterators?",
+    "o": [
+      "try-catch around yield expressions",
+      "iterator.throw() method",
+      "Both A and B",
+      "Neither A nor B"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function test() {\n  try {\n    throw new Error('First');\n  } catch {\n    try {\n      throw new Error('Second');\n    } finally {\n      return 'Finally';\n    }\n  }\n}\nconsole.log(test());",
+    "o": [
+      "Finally",
+      "First",
+      "Second",
+      "Error: Second"
+    ]
+  },
+  {
+    "q": "Which Node.js flag preserves async stack traces across await boundaries?",
+    "o": [
+      "--async-stack-traces",
+      "--trace-async",
+      "--full-stack",
+      "--keep-stacks"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw Object.setPrototypeOf({ message: 'Custom' }, Error.prototype);\n} catch (e) {\n  console.log(e instanceof Error, e.stack === undefined);\n}",
+    "o": [
+      "true true",
+      "true false",
+      "false true",
+      "false false"
+    ]
+  },
+  {
+    "q": "How can you access the V8 stack trace API in Node.js?",
+    "o": [
+      "require('v8').getStackTrace()",
+      "Error.getV8StackTrace()",
+      "process.v8Stack()",
+      "new Error().v8Stack"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Primary');\n} catch (e) {\n  const err = new AggregateError([e], 'Multiple');\n  console.log(err.errors[0].message);\n  throw err;\n}",
+    "o": [
+      "Primary then Uncaught AggregateError: Multiple",
+      "Multiple then Uncaught Error: Primary",
+      "Primary Multiple",
+      "AggregateError: Primary"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Primary');\n} catch (e) {\n  const err = new Error('Secondary', { cause: e });\n  console.log(err.cause.message);\n  throw err;\n}",
+    "o": [
+      "Primary then Uncaught Error: Secondary",
+      "Secondary then Uncaught Error: Primary",
+      "Primary Secondary",
+      "Uncaught AggregateError"
+    ]
+  },
+  {
+    "q": "Which method allows converting a callback-based function to return a promise with proper error handling?",
+    "o": [
+      "util.promisify()",
+      "Promise.fromCallback()",
+      "asyncify()",
+      "Error.toPromise()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "async function* generator() {\n  try {\n    yield await Promise.reject(new Error('Async Error'));\n  } catch (e) {\n    yield `Caught: ${e.message}`;\n  }\n}\n\n(async () => {\n  const gen = generator();\n  console.log((await gen.next()).value);\n  console.log((await gen.next()).value);\n})();",
+    "o": [
+      "undefined Caught: Async Error",
+      "Async Error Caught: Async Error",
+      "Error: Async Error Caught: Async Error",
+      "UnhandledPromiseRejectionWarning"
+    ]
+  },
+  {
+    "q": "Which Node.js module provides utilities for working with error stacks?",
+    "o": [
+      "util",
+      "errors",
+      "stack-utils",
+      "trace"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class TimeoutError extends Error {\n  constructor() {\n    super('Timeout');\n    this.name = 'TimeoutError';\n    this.code = 'ETIMEDOUT';\n  }\n}\n\ntry {\n  throw new TimeoutError();\n} catch (e) {\n  console.log(e.code, e instanceof TimeoutError, e instanceof Error);\n}",
+    "o": [
+      "ETIMEDOUT true true",
+      "Timeout true true",
+      "ETIMEDOUT false true",
+      "Timeout false false"
+    ]
+  },
+  {
+    "q": "How can you limit the stack trace depth in Node.js?",
+    "o": [
+      "Error.stackTraceLimit = number",
+      "Error.setStackDepth(number)",
+      "process.setStackTraceDepth(number)",
+      "stackTrace.limit(number)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw { \n    name: 'ValidationError', \n    details: { field: 'email' },\n    toString() { return `${this.name}: ${this.details.field}`; }\n  };\n} catch (e) {\n  console.log(e.details.field, e instanceof Error, String(e));\n}",
+    "o": [
+      "email false ValidationError: email",
+      "email true ValidationError: email",
+      "email false [object Object]",
+      "email true [object Object]"
+    ]
+  },
+  {
+    "q": "Which console method provides clickable source links in browser DevTools?",
+    "o": [
+      "console.error()",
+      "console.trace()",
+      "console.debug()",
+      "console.log()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const err = new Error('Test');\nError.captureStackTrace(err, () => {});\nconsole.log(err.stack.includes('Test'));",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which technique helps handle errors in async iterators?",
+    "o": [
+      "try-catch around yield expressions",
+      "iterator.throw() method",
+      "Both A and B",
+      "Neither A nor B"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function test() {\n  try {\n    throw new Error('First');\n  } catch {\n    try {\n      throw new Error('Second');\n    } finally {\n      return 'Finally';\n    }\n  }\n}\nconsole.log(test());",
+    "o": [
+      "Finally",
+      "First",
+      "Second",
+      "Error: Second"
+    ]
+  },
+  {
+    "q": "Which Node.js flag preserves async stack traces across await boundaries?",
+    "o": [
+      "--async-stack-traces",
+      "--trace-async",
+      "--full-stack",
+      "--keep-stacks"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw Object.setPrototypeOf({ message: 'Custom' }, Error.prototype);\n} catch (e) {\n  console.log(e instanceof Error, e.stack === undefined);\n}",
+    "o": [
+      "true true",
+      "true false",
+      "false true",
+      "false false"
+    ]
+  },
+  {
+    "q": "How can you access the V8 stack trace API in Node.js?",
+    "o": [
+      "require('v8').getStackTrace()",
+      "Error.getV8StackTrace()",
+      "process.v8Stack()",
+      "new Error().v8Stack"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Primary');\n} catch (e) {\n  const err = new AggregateError([e], 'Multiple');\n  console.log(err.errors[0].message);\n  throw err;\n}",
+    "o": [
+      "Primary then Uncaught AggregateError: Multiple",
+      "Multiple then Uncaught Error: Primary",
+      "Primary Multiple",
+      "AggregateError: Primary"
+    ]
+  },
+  {
+    "q": "Which of these will properly handle errors in a promise chain?",
+    "o": [
+      ".catch(err => console.error(err))",
+      ".then(null, err => console.error(err))",
+      "Both A and B",
+      "Neither A nor B"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Main');\n} catch (e) {\n  const wrapped = new Error('Wrapper');\n  wrapped.cause = e;\n  throw wrapped;\n}",
+    "o": [
+      "Uncaught Error: Wrapper",
+      "Error: Main",
+      "Error: Main Error: Wrapper",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which method allows converting synchronous errors to rejected promises?",
+    "o": [
+      "Promise.reject(new Error())",
+      "Promise.throw()",
+      "Error.toPromise()",
+      "new Promise(() => { throw error })"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "async function test() {\n  try {\n    await Promise.reject({ \n      toString: () => 'STRING', \n      message: 'MESSAGE' \n    });\n  } catch (e) {\n    console.log(e.message || String(e));\n  }\n}\ntest();",
+    "o": [
+      "STRING",
+      "MESSAGE",
+      "undefined",
+      "[object Object]"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('First');\n} catch (e) {\n  try {\n    throw new Error('Second', { cause: e });\n  } catch (e) {\n    console.log(e.message, e.cause.message);\n  }\n}",
+    "o": [
+      "Second First",
+      "First Second",
+      "Second",
+      "First"
+    ]
+  },
+  {
+    "q": "Which method allows converting multiple parallel operations' errors into a single AggregateError?",
+    "o": [
+      "Promise.any() with catch handler",
+      "Promise.allSettled() then filter rejected",
+      "Promise.all() with try-catch",
+      "Error.aggregate()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "async function* errorGenerator() {\n  try {\n    yield await Promise.reject(new Error('Failed'));\n  } catch (e) {\n    yield* [e.message, 'Recovered'];\n  }\n}\n\n(async () => {\n  const gen = errorGenerator();\n  console.log(await gen.next());\n  console.log(await gen.next());\n  console.log(await gen.next());\n})();",
+    "o": [
+      "{value: undefined, done: false} {value: 'Failed', done: false} {value: 'Recovered', done: false}",
+      "{value: 'Failed', done: false} {value: 'Recovered', done: false} {value: undefined, done: true}",
+      "Uncaught Error: Failed",
+      "{value: Error: Failed, done: false} {value: 'Recovered', done: false}"
+    ]
+  },
+  {
+    "q": "Which Node.js utility helps inspect full error chains including causes?",
+    "o": [
+      "util.inspect() with showHidden",
+      "error.stack",
+      "console.trace()",
+      "Error.prettyPrint()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class RetryableError extends Error {\n  constructor(message, maxRetries) {\n    super(message);\n    this.maxRetries = maxRetries;\n    this.retries = 0;\n  }\n}\n\ntry {\n  throw new RetryableError('Temporary', 3);\n} catch (e) {\n  console.log(e.message, e.retries < e.maxRetries);\n}",
+    "o": [
+      "Temporary true",
+      "Temporary false",
+      "RetryableError: Temporary true",
+      "undefined true"
+    ]
+  },
+  {
+    "q": "How can you create an error that omits the constructor from its stack trace?",
+    "o": [
+      "Error.captureStackTrace(err, constructorToHide)",
+      "Error.cleanStack(err)",
+      "delete err.stack",
+      "err.hideConstructor = true"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw {\n    name: 'CustomError',\n    details: { code: 429 },\n    toString() { return `${this.name} ${this.details.code}`; },\n    [Symbol.toStringTag]: 'Error'\n  };\n} catch (e) {\n  console.log(Object.prototype.toString.call(e), e.details.code);\n}",
+    "o": [
+      "[object Error] 429",
+      "[object CustomError] 429",
+      "[object Object] 429",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which console method shows the most detailed error information in browsers?",
+    "o": [
+      "console.error()",
+      "console.debug()",
+      "console.table()",
+      "console.dir()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const err = new Error('Test');\nError.captureStackTrace(err, Error);\nconsole.log(err.stack.split('\\n').length === 1);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which technique helps handle errors in async generators while preserving stack traces?",
+    "o": [
+      "Wrap yields in try-catch and rethrow with cause",
+      "Use generator.return() on errors",
+      "Convert to async/await first",
+      "Disable stack trace limits"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function test() {\n  try {\n    throw new Error('First');\n  } catch {\n    try {\n      throw new Error('Second');\n    } finally {\n      try {\n        throw new Error('Third');\n      } catch {\n        return 'Caught';\n      }\n    }\n  }\n}\nconsole.log(test());",
+    "o": [
+      "Caught",
+      "First",
+      "Third",
+      "Error: Third"
+    ]
+  },
+  {
+    "q": "Which Node.js flag shows full error stacks including async operations?",
+    "o": [
+      "--trace-warnings",
+      "--full-stack",
+      "--verbose-errors",
+      "--show-async-stack"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw Object.assign(new Error('Original'), {\n    code: 'ECUSTOM',\n    [Symbol.toStringTag]: 'CustomError'\n  });\n} catch (e) {\n  console.log(e[Symbol.toStringTag], e.code, e instanceof Error);\n}",
+    "o": [
+      "CustomError ECUSTOM true",
+      "undefined ECUSTOM true",
+      "Error ECUSTOM false",
+      "CustomError undefined true"
+    ]
+  },
+  {
+    "q": "How can you access the V8 stack trace limit in Node.js?",
+    "o": [
+      "require('v8').getHeapStatistics().stack_trace_limit",
+      "Error.stackTraceLimit",
+      "process.getStackTraceLimit()",
+      "v8.stackTraceLimit"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new AggregateError([\n    new Error('First'),\n    new Error('Second')\n  ], 'Multiple');\n} catch (e) {\n  console.log(e.errors.length, e.message);\n}",
+    "o": [
+      "2 Multiple",
+      "2 First",
+      "1 Multiple",
+      "2 Second"
+    ]
+  },
+  {
+    "q": "Which of these patterns helps maintain async context in error stacks?",
+    "o": [
+      "AsyncLocalStorage with error handling",
+      "Zone.js error zones",
+      "Both A and B",
+      "Neither A nor B"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Main');\n} catch (e) {\n  const err = new Error('Wrapper');\n  err.cause = e;\n  Error.captureStackTrace(err);\n  console.log(err.stack.includes('Main'));\n  throw err;\n}",
+    "o": [
+      "false then Uncaught Error: Wrapper",
+      "true then Uncaught Error: Wrapper",
+      "false",
+      "Error: Main"
+    ]
+  },
+  {
+    "q": "Which method allows proper error handling in Promise.allSettled()?",
+    "o": [
+      "Filter results where status === 'rejected'",
+      "Use .catch() after .allSettled()",
+      "Wrap in try-catch",
+      "All of the above"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "async function test() {\n  try {\n    await Promise.reject({ \n      name: 'Custom',\n      message: 'Failed',\n      toString() { return this.name; }\n    });\n  } catch (e) {\n    console.log(String(e), e.message);\n  }\n}\ntest();",
+    "o": [
+      "Custom Failed",
+      "Failed Failed",
+      "[object Object] Failed",
+      "undefined Failed"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Primary');\n} catch (e) {\n  const err = new Error('Secondary', { cause: e });\n  console.log(err.cause.message);\n  throw err;\n}",
+    "o": [
+      "Primary then Uncaught Error: Secondary",
+      "Secondary then Uncaught Error: Primary",
+      "Primary Secondary",
+      "Uncaught AggregateError"
+    ]
+  },
+  {
+    "q": "Which method allows converting a callback-based function to return a promise with proper error handling?",
+    "o": [
+      "util.promisify()",
+      "Promise.fromCallback()",
+      "asyncify()",
+      "Error.toPromise()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "async function* generator() {\n  try {\n    yield await Promise.reject(new Error('Async Error'));\n  } catch (e) {\n    yield `Caught: ${e.message}`;\n  }\n}\n\n(async () => {\n  const gen = generator();\n  console.log((await gen.next()).value);\n  console.log((await gen.next()).value);\n})();",
+    "o": [
+      "undefined Caught: Async Error",
+      "Async Error Caught: Async Error",
+      "Error: Async Error Caught: Async Error",
+      "UnhandledPromiseRejectionWarning"
+    ]
+  },
+  {
+    "q": "Which Node.js module provides utilities for working with error stacks?",
+    "o": [
+      "util",
+      "errors",
+      "stack-utils",
+      "trace"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class TimeoutError extends Error {\n  constructor() {\n    super('Timeout');\n    this.name = 'TimeoutError';\n    this.code = 'ETIMEDOUT';\n  }\n}\n\ntry {\n  throw new TimeoutError();\n} catch (e) {\n  console.log(e.code, e instanceof TimeoutError, e instanceof Error);\n}",
+    "o": [
+      "ETIMEDOUT true true",
+      "Timeout true true",
+      "ETIMEDOUT false true",
+      "Timeout false false"
+    ]
+  },
+  {
+    "q": "How can you limit the stack trace depth in Node.js?",
+    "o": [
+      "Error.stackTraceLimit = number",
+      "Error.setStackDepth(number)",
+      "process.setStackTraceDepth(number)",
+      "stackTrace.limit(number)"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw { \n    name: 'ValidationError', \n    details: { field: 'email' },\n    toString() { return `${this.name}: ${this.details.field}`; }\n  };\n} catch (e) {\n  console.log(e.details.field, e instanceof Error, String(e));\n}",
+    "o": [
+      "email false ValidationError: email",
+      "email true ValidationError: email",
+      "email false [object Object]",
+      "email true [object Object]"
+    ]
+  },
+  {
+    "q": "Which console method provides clickable source links in browser DevTools?",
+    "o": [
+      "console.error()",
+      "console.trace()",
+      "console.debug()",
+      "console.log()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const err = new Error('Test');\nError.captureStackTrace(err, () => {});\nconsole.log(err.stack.includes('Test'));",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which technique helps handle errors in async iterators?",
+    "o": [
+      "try-catch around yield expressions",
+      "iterator.throw() method",
+      "Both A and B",
+      "Neither A nor B"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function test() {\n  try {\n    throw new Error('First');\n  } catch {\n    try {\n      throw new Error('Second');\n    } finally {\n      return 'Finally';\n    }\n  }\n}\nconsole.log(test());",
+    "o": [
+      "Finally",
+      "First",
+      "Second",
+      "Error: Second"
+    ]
+  },
+  {
+    "q": "Which Node.js flag preserves async stack traces across await boundaries?",
+    "o": [
+      "--async-stack-traces",
+      "--trace-async",
+      "--full-stack",
+      "--keep-stacks"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw Object.setPrototypeOf({ message: 'Custom' }, Error.prototype);\n} catch (e) {\n  console.log(e instanceof Error, e.stack === undefined);\n}",
+    "o": [
+      "true true",
+      "true false",
+      "false true",
+      "false false"
+    ]
+  },
+  {
+    "q": "How can you access the V8 stack trace API in Node.js?",
+    "o": [
+      "require('v8').getStackTrace()",
+      "Error.getV8StackTrace()",
+      "process.v8Stack()",
+      "new Error().v8Stack"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Primary');\n} catch (e) {\n  const err = new AggregateError([e], 'Multiple');\n  console.log(err.errors[0].message);\n  throw err;\n}",
+    "o": [
+      "Primary then Uncaught AggregateError: Multiple",
+      "Multiple then Uncaught Error: Primary",
+      "Primary Multiple",
+      "AggregateError: Primary"
+    ]
+  },
+  {
+    "q": "Which of these will properly handle errors in a promise chain?",
+    "o": [
+      ".catch(err => console.error(err))",
+      ".then(null, err => console.error(err))",
+      "Both A and B",
+      "Neither A nor B"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Main');\n} catch (e) {\n  const wrapped = new Error('Wrapper');\n  wrapped.cause = e;\n  throw wrapped;\n}",
+    "o": [
+      "Uncaught Error: Wrapper",
+      "Error: Main",
+      "Error: Main Error: Wrapper",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which method allows converting synchronous errors to rejected promises?",
+    "o": [
+      "Promise.reject(new Error())",
+      "Promise.throw()",
+      "Error.toPromise()",
+      "new Promise(() => { throw error })"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "async function test() {\n  try {\n    await Promise.reject({ \n      toString: () => 'STRING', \n      message: 'MESSAGE' \n    });\n  } catch (e) {\n    console.log(e.message || String(e));\n  }\n}\ntest();",
+    "o": [
+      "STRING",
+      "MESSAGE",
+      "undefined",
+      "[object Object]"
+    ]
+  },
+  {
+    "q": "Which pattern helps maintain context across async error boundaries?",
+    "o": [
+      "AsyncLocalStorage",
+      "Error boundary components",
+      "Zone.js",
+      "All of the above"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new AggregateError([\n    new Error('E1'),\n    new Error('E2')\n  ], 'Root');\n} catch (e) {\n  console.log(e.message, e.errors.length);\n}",
+    "o": [
+      "Root 2",
+      "E1 2",
+      "Root 1",
+      "E2 2"
+    ]
+  },
+  {
+    "q": "How can you create an error that skips the current function in stack traces?",
+    "o": [
+      "Error.captureStackTrace(err, currentFunc)",
+      "Error.skipFrame()",
+      "delete err.stack",
+      "new Error('', { skipFrame: true })"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Main');\n} catch (e) {\n  const err = new Error('Wrapper', { cause: e });\n  console.log(err.cause.message);\n  throw err;\n}",
+    "o": [
+      "Main then Uncaught Error: Wrapper",
+      "Wrapper then Uncaught Error: Main",
+      "Main Wrapper",
+      "Uncaught AggregateError"
+    ]
+  },
+  {
+    "q": "Which method properly handles multiple parallel promise rejections?",
+    "o": [
+      "Promise.allSettled() then filter rejected promises",
+      "Promise.any() with catch handler",
+      "Promise.all() with try-catch",
+      "Error.aggregate()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "async function* errorGenerator() {\n  try {\n    yield await Promise.reject(new Error('Failed'));\n  } catch (e) {\n    yield* [e.message, 'Recovered'];\n  }\n}\n\n(async () => {\n  const gen = errorGenerator();\n  console.log(await gen.next());\n  console.log(await gen.next());\n  console.log(await gen.next());\n})();",
+    "o": [
+      "{value: undefined, done: false} {value: 'Failed', done: false} {value: 'Recovered', done: false}",
+      "{value: 'Failed', done: false} {value: 'Recovered', done: false} {value: undefined, done: true}",
+      "Uncaught Error: Failed",
+      "{value: Error: Failed, done: false} {value: 'Recovered', done: false}"
+    ]
+  },
+  {
+    "q": "Which Node.js utility helps inspect full error chains including causes?",
+    "o": [
+      "util.inspect() with showHidden option",
+      "error.stack.toString()",
+      "console.trace()",
+      "Error.prettyPrint()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class RateLimitError extends Error {\n  constructor(message, retryAfter) {\n    super(message);\n    this.name = 'RateLimitError';\n    this.retryAfter = retryAfter;\n  }\n}\n\ntry {\n  throw new RateLimitError('Too many requests', 60);\n} catch (e) {\n  console.log(`${e.name}: ${e.retryAfter}s`);\n}",
+    "o": [
+      "RateLimitError: 60s",
+      "Error: 60s",
+      "RateLimitError: Too many requests",
+      "undefined"
+    ]
+  },
+  {
+    "q": "How can you create an error that omits the constructor from its stack trace?",
+    "o": [
+      "Error.captureStackTrace(err, constructorToHide)",
+      "Error.cleanStack(err)",
+      "delete err.stack",
+      "err.hideConstructor = true"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw {\n    name: 'APIError',\n    status: 429,\n    toString() { return `${this.name}: ${this.status}`; },\n    [Symbol.toStringTag]: 'Error'\n  };\n} catch (e) {\n  console.log(Object.prototype.toString.call(e), e.status);\n}",
+    "o": [
+      "[object Error] 429",
+      "[object APIError] 429",
+      "[object Object] 429",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which console method shows the most detailed error information in browsers?",
+    "o": [
+      "console.error()",
+      "console.debug()",
+      "console.table()",
+      "console.dir()"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const err = new Error('Test');\nError.captureStackTrace(err, Error);\nconsole.log(err.stack.split('\\n').length === 1);",
+    "o": [
+      "true",
+      "false",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which technique helps handle errors in async generators while preserving stack traces?",
+    "o": [
+      "Wrap yields in try-catch and rethrow with cause",
+      "Use generator.return() on errors",
+      "Convert to async/await first",
+      "Disable stack trace limits"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function test() {\n  try {\n    throw new Error('First');\n  } catch {\n    try {\n      throw new Error('Second');\n    } finally {\n      try {\n        throw new Error('Third');\n      } catch {\n        return 'Caught';\n      }\n    }\n  }\n}\nconsole.log(test());",
+    "o": [
+      "Caught",
+      "First",
+      "Third",
+      "Error: Third"
+    ]
+  },
+  {
+    "q": "Which Node.js flag shows full error stacks including async operations?",
+    "o": [
+      "--trace-warnings",
+      "--full-stack",
+      "--verbose-errors",
+      "--show-async-stack"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw Object.assign(new Error('Original'), {\n    code: 'ECUSTOM',\n    [Symbol.toStringTag]: 'CustomError'\n  });\n} catch (e) {\n  console.log(e[Symbol.toStringTag], e.code, e instanceof Error);\n}",
+    "o": [
+      "CustomError ECUSTOM true",
+      "undefined ECUSTOM true",
+      "Error ECUSTOM false",
+      "CustomError undefined true"
+    ]
+  },
+  {
+    "q": "How can you access the V8 stack trace limit in Node.js?",
+    "o": [
+      "Error.stackTraceLimit",
+      "require('v8').getHeapStatistics().stack_trace_limit",
+      "process.getStackTraceLimit()",
+      "v8.stackTraceLimit"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new AggregateError([\n    new Error('First'),\n    new Error('Second')\n  ], 'Multiple');\n} catch (e) {\n  console.log(e.errors.length, e.message);\n}",
+    "o": [
+      "2 Multiple",
+      "2 First",
+      "1 Multiple",
+      "2 Second"
+    ]
+  },
+  {
+    "q": "Which of these patterns helps maintain async context in error stacks?",
+    "o": [
+      "AsyncLocalStorage with error handling",
+      "Zone.js error zones",
+      "Both A and B",
+      "Neither A nor B"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new Error('Main');\n} catch (e) {\n  const err = new Error('Wrapper');\n  err.cause = e;\n  Error.captureStackTrace(err);\n  console.log(err.stack.includes('Main'));\n  throw err;\n}",
+    "o": [
+      "false then Uncaught Error: Wrapper",
+      "true then Uncaught Error: Wrapper",
+      "false",
+      "Error: Main"
+    ]
+  },
+  {
+    "q": "Which method allows proper error handling in Promise.allSettled()?",
+    "o": [
+      "Filter results where status === 'rejected'",
+      "Use .catch() after .allSettled()",
+      "Wrap in try-catch",
+      "All of the above"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "async function test() {\n  try {\n    await Promise.reject({ \n      name: 'Custom',\n      message: 'Failed',\n      toString() { return this.name; }\n    });\n  } catch (e) {\n    console.log(String(e), e.message);\n  }\n}\ntest();",
+    "o": [
+      "Custom Failed",
+      "Failed Failed",
+      "[object Object] Failed",
+      "undefined Failed"
+    ]
+  },
+  {
+    "q": "Which pattern helps preserve context across async/await boundaries?",
+    "o": [
+      "AsyncLocalStorage",
+      "Error boundary components",
+      "Zone.js",
+      "All of the above"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "try {\n  throw new AggregateError([\n    new Error('E1'),\n    new Error('E2')\n  ], 'Root');\n} catch (e) {\n  console.log(e.message, e.errors[1].message);\n}",
+    "o": [
+      "Root E2",
+      "E1 E2",
+      "Root E1",
+      "E2 Root"
+    ]
+  },
+  {
+    "q": "How can you create an error that excludes the current function from its stack trace?",
+    "o": [
+      "Error.captureStackTrace(err, currentFunc)",
+      "Error.skipFrame()",
+      "delete err.stack",
+      "new Error('', { skipFrame: true })"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "class DatabaseError extends Error {\n  constructor(message, query) {\n    super(message);\n    this.query = query;\n    this.timestamp = new Date();\n  }\n}\n\ntry {\n  throw new DatabaseError('Connection failed', 'SELECT * FROM users');\n} catch (e) {\n  console.log(e.query, e.timestamp instanceof Date);\n}",
+    "o": [
+      "SELECT * FROM users true",
+      "Connection failed true",
+      "SELECT * FROM users false",
+      "undefined true"
+    ]
+  }
+]

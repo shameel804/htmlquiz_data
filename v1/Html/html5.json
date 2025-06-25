@@ -1,0 +1,3879 @@
+[
+  {
+    "q": "Which of the following is a semantic HTML5 tag?",
+    "o": [
+      "<article>",
+      "<div>",
+      "<span>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "What will be displayed on the webpage when the following code is executed?",
+    "c": "<video width='320' height='240' controls>\n  <source src='video.mp4' type='video/mp4'>\n  Your browser does not support the video tag.\n</video>",
+    "o": [
+      "A video player with controls",
+      "Only the text 'Your browser does not support the video tag.'",
+      "A broken media element",
+      "Nothing will be displayed"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid HTML5 semantic tag?",
+    "o": [
+      "<bold>",
+      "<nav>",
+      "<section>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What does the following HTML5 code snippet do?",
+    "c": "<canvas id='myCanvas' width='200' height='100'></canvas>\n<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'red';\n  ctx.fillRect(10, 10, 150, 80);\n</script>",
+    "o": [
+      "Draws a red rectangle on a canvas",
+      "Displays a plain white box",
+      "Shows an error due to missing attributes",
+      "Displays a black rectangle"
+    ]
+  },
+  {
+    "q": "Which attribute is required in the <audio> tag for user playback controls?",
+    "o": [
+      "controls",
+      "autoplay",
+      "loop",
+      "muted"
+    ]
+  },
+  {
+    "q": "What is the purpose of the <section> tag in HTML5?",
+    "o": [
+      "To define a thematic grouping of content",
+      "To create a navigational menu",
+      "To define a footer for a webpage",
+      "To style an element using CSS"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 code is executed?",
+    "c": "<audio controls>\n  <source src='sound.mp3' type='audio/mpeg'>\n  Your browser does not support the audio element.\n</audio>",
+    "o": [
+      "An audio player with controls is displayed",
+      "Only the text 'Your browser does not support the audio element.' is displayed",
+      "A broken media element appears",
+      "Nothing will be displayed"
+    ]
+  },
+  {
+    "q": "Which of the following statements about the <canvas> element is true?",
+    "o": [
+      "It provides a way to draw graphics using JavaScript",
+      "It is used to create responsive layouts",
+      "It automatically adjusts to different screen sizes",
+      "It replaces the <img> tag"
+    ]
+  },
+  {
+    "q": "What does the following code do?",
+    "c": "<canvas id='canvas' width='200' height='100'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.arc(100, 50, 40, 0, 2 * Math.PI);\n  ctx.stroke();\n</script>",
+    "o": [
+      "Draws a circle outline on the canvas",
+      "Draws a filled circle",
+      "Displays a plain canvas without graphics",
+      "Throws an error"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define navigation links?",
+    "o": [
+      "<nav>",
+      "<footer>",
+      "<header>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define self-contained content, such as a blog post or news article?",
+    "o": [
+      "<article>",
+      "<div>",
+      "<span>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 code is executed?",
+    "c": "<video width='400' height='300' autoplay muted>\n  <source src='sample.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "The video will play automatically without sound",
+      "The video will play with sound",
+      "The video will not load",
+      "An error will be shown because autoplay is not supported"
+    ]
+  },
+  {
+    "q": "Which semantic HTML5 tag is used to define introductory content or navigation links?",
+    "o": [
+      "<header>",
+      "<section>",
+      "<footer>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "What does the following HTML5 code do?",
+    "c": "<canvas id='myCanvas' width='300' height='150'></canvas>\n<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.moveTo(0, 0);\n  ctx.lineTo(300, 150);\n  ctx.stroke();\n</script>",
+    "o": [
+      "Draws a diagonal line on the canvas",
+      "Draws a rectangle",
+      "Fills the canvas with a color",
+      "Throws an error due to incorrect syntax"
+    ]
+  },
+  {
+    "q": "Which attribute is required in the <video> tag to display playback controls?",
+    "o": [
+      "controls",
+      "autoplay",
+      "loop",
+      "poster"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a footer for a document or section?",
+    "o": [
+      "<footer>",
+      "<section>",
+      "<aside>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What happens when the following code is executed in an HTML5 page?",
+    "c": "<audio autoplay>\n  <source src='sound.mp3' type='audio/mpeg'>\n</audio>",
+    "o": [
+      "The audio plays automatically when the page loads",
+      "An error is displayed due to missing 'controls' attribute",
+      "The audio does not play until the user interacts",
+      "The browser crashes"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to group related elements in a document, such as a chapter or a section of a webpage?",
+    "o": [
+      "<section>",
+      "<article>",
+      "<aside>",
+      "<footer>"
+    ]
+  },
+  {
+    "q": "What does the following HTML5 canvas code do?",
+    "c": "<canvas id='canvas' width='250' height='150'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'blue';\n  ctx.fillRect(50, 50, 100, 50);\n</script>",
+    "o": [
+      "Draws a blue rectangle on the canvas",
+      "Draws a red rectangle on the canvas",
+      "Draws an empty rectangle outline",
+      "Displays a plain white canvas"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a sidebar or additional content that is indirectly related to the main content?",
+    "o": [
+      "<aside>",
+      "<section>",
+      "<footer>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will happen when the following code is executed?",
+    "c": "<video width='500' height='300' poster='thumbnail.jpg' controls>\n  <source src='movie.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "A video player with a thumbnail image is displayed before playback",
+      "The video starts playing automatically",
+      "An error occurs due to the poster attribute",
+      "No video is displayed"
+    ]
+  },
+  {
+    "q": "Which of the following best describes the <nav> tag in HTML5?",
+    "o": [
+      "Defines a section for navigation links",
+      "Creates a navigation menu with automatic styling",
+      "Is used to add JavaScript navigation functions",
+      "Defines a footer section for a webpage"
+    ]
+  },
+  {
+    "q": "What will be the output of the following canvas drawing code?",
+    "c": "<canvas id='canvas' width='400' height='200'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.beginPath();\n  ctx.arc(200, 100, 50, 0, Math.PI * 2);\n  ctx.fillStyle = 'green';\n  ctx.fill();\n</script>",
+    "o": [
+      "A green filled circle appears on the canvas",
+      "A red filled circle appears on the canvas",
+      "A green outlined circle appears on the canvas",
+      "Nothing is displayed"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to embed an MP4 video in HTML5?",
+    "o": [
+      "<video controls>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+      "<video>\n  <src='video.mp4' type='video/mp4'>\n</video>",
+      "<mp4 controls>\n  <source src='video.mp4'>\n</mp4>",
+      "<media>\n  <source src='video.mp4' type='video/mp4'>\n</media>"
+    ]
+  },
+  {
+    "q": "Which of the following statements about the <canvas> element is true?",
+    "o": [
+      "It requires JavaScript to draw graphics",
+      "It automatically creates a chart based on data",
+      "It can only display images, not custom shapes",
+      "It is used for embedding external media files"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define an independent section of content, such as a blog post?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<aside>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will be displayed when the following code runs in a modern browser?",
+    "c": "<video width='320' height='240' controls>\n  <source src='sample.mp4' type='video/mp4'>\n  Your browser does not support the video tag.\n</video>",
+    "o": [
+      "A video player with controls",
+      "An error message",
+      "A blank space",
+      "Only the text 'Your browser does not support the video tag.'"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to contain navigation links?",
+    "o": [
+      "<nav>",
+      "<section>",
+      "<footer>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 canvas code is executed?",
+    "c": "<canvas id='canvas' width='300' height='150'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'yellow';\n  ctx.fillRect(50, 50, 200, 100);\n</script>",
+    "o": [
+      "A yellow rectangle is drawn on the canvas",
+      "A blue rectangle is drawn",
+      "An empty canvas is displayed",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which attribute in the <audio> tag ensures the sound plays automatically?",
+    "o": [
+      "autoplay",
+      "controls",
+      "loop",
+      "muted"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid HTML5 semantic tag?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<bold>",
+      "<style>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to group related heading content and subheadings?",
+    "o": [
+      "<header>",
+      "<article>",
+      "<footer>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 code do?",
+    "c": "<canvas id='canvas' width='250' height='150'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.beginPath();\n  ctx.moveTo(10, 10);\n  ctx.lineTo(200, 100);\n  ctx.stroke();\n</script>",
+    "o": [
+      "Draws a straight line on the canvas",
+      "Draws a rectangle",
+      "Displays an empty canvas",
+      "Throws an error"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag represents additional information that is indirectly related to the main content?",
+    "o": [
+      "<aside>",
+      "<main>",
+      "<footer>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to embed an MP3 file with playback controls?",
+    "o": [
+      "<audio controls>\n  <source src='song.mp3' type='audio/mpeg'>\n</audio>",
+      "<audio>\n  <mp3 src='song.mp3'>\n</audio>",
+      "<sound controls>\n  <source src='song.mp3'>\n</sound>",
+      "<music>\n  <source src='song.mp3'>\n</music>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML5 canvas drawing code?",
+    "c": "<canvas id='canvas' width='400' height='200'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.arc(200, 100, 50, 0, Math.PI * 2);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A circle outline is drawn on the canvas",
+      "A filled circle is drawn",
+      "A square is drawn",
+      "An empty canvas is displayed"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define the main content of a webpage?",
+    "o": [
+      "<main>",
+      "<section>",
+      "<aside>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What does the 'poster' attribute in the <video> tag do?",
+    "o": [
+      "Specifies an image to be shown before the video starts",
+      "Enables subtitles for the video",
+      "Loops the video",
+      "Mutes the video by default"
+    ]
+  },
+  {
+    "q": "Which of the following statements about the <canvas> element is true?",
+    "o": [
+      "It provides a way to draw graphics using JavaScript",
+      "It replaces the <img> tag for displaying images",
+      "It automatically adjusts to different screen sizes",
+      "It is used for embedding external media files"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 video code is executed?",
+    "c": "<video width='500' height='300' controls loop>\n  <source src='movie.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "The video will play in a loop",
+      "The video will only play once",
+      "The video will not load",
+      "An error will occur"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to define a <video> element in HTML5?",
+    "o": [
+      "<video controls>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+      "<video>\n  <mp4 src='video.mp4'>\n</video>",
+      "<media controls>\n  <source src='video.mp4'>\n</media>",
+      "<vid>\n  <source src='video.mp4'>\n</vid>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define navigation links?",
+    "o": [
+      "<nav>",
+      "<header>",
+      "<section>",
+      "<footer>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag ensures the video starts playing automatically?",
+    "o": [
+      "autoplay",
+      "controls",
+      "poster",
+      "loop"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define self-contained content like a blog post or news article?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<header>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML5 canvas code?",
+    "c": "<canvas id='myCanvas' width='300' height='200'></canvas>\n<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'blue';\n  ctx.fillRect(20, 20, 100, 50);\n</script>",
+    "o": [
+      "A blue rectangle is drawn on the canvas",
+      "A red rectangle is drawn",
+      "An empty canvas is displayed",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used for embedding a video file?",
+    "o": [
+      "<video>",
+      "<media>",
+      "<embed>",
+      "<object>"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a container for graphics drawn using JavaScript?",
+    "o": [
+      "<canvas>",
+      "<svg>",
+      "<graphic>",
+      "<draw>"
+    ]
+  },
+  {
+    "q": "What will be displayed when this HTML5 audio code is executed?",
+    "c": "<audio controls>\n  <source src='sound.mp3' type='audio/mpeg'>\n  Your browser does not support the audio element.\n</audio>",
+    "o": [
+      "An audio player with playback controls",
+      "An error message",
+      "A blank space",
+      "Only the text 'Your browser does not support the audio element.'"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define navigation links on a webpage?",
+    "o": [
+      "<nav>",
+      "<header>",
+      "<section>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What will be drawn on the canvas when this code is executed?",
+    "c": "<canvas id='myCanvas' width='400' height='200'></canvas>\n<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.beginPath();\n  ctx.arc(100, 75, 50, 0, Math.PI * 2);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A circular outline is drawn",
+      "A filled circle is drawn",
+      "A square is drawn",
+      "An empty canvas is displayed"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to group introductory content and navigational links?",
+    "o": [
+      "<header>",
+      "<footer>",
+      "<section>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag makes the video start playing automatically?",
+    "o": [
+      "autoplay",
+      "controls",
+      "loop",
+      "muted"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define supplementary content that is indirectly related to the main content?",
+    "o": [
+      "<aside>",
+      "<section>",
+      "<footer>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 canvas code is executed?",
+    "c": "<canvas id='canvas' width='300' height='150'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'red';\n  ctx.fillRect(50, 50, 150, 75);\n</script>",
+    "o": [
+      "A red rectangle is drawn on the canvas",
+      "A blue rectangle is drawn",
+      "An empty canvas is displayed",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define the main content of a document?",
+    "o": [
+      "<main>",
+      "<section>",
+      "<div>",
+      "<article>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'poster' attribute in the <video> tag?",
+    "o": [
+      "Specifies an image to be shown before the video starts",
+      "Enables subtitles for the video",
+      "Loops the video",
+      "Mutes the video by default"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a section of a webpage that contains self-contained content, such as a news article?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<header>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 video code is executed?",
+    "c": "<video width='500' height='300' controls loop>\n  <source src='movie.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "The video will play in a loop",
+      "The video will only play once",
+      "The video will not load",
+      "An error will occur"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define navigation links?",
+    "o": [
+      "<nav>",
+      "<header>",
+      "<section>",
+      "<footer>"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid HTML5 semantic element?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<bold>",
+      "<font>"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 canvas code is executed?",
+    "c": "<canvas id='canvas' width='250' height='150'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.beginPath();\n  ctx.moveTo(10, 10);\n  ctx.lineTo(200, 100);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A straight line is drawn on the canvas",
+      "A rectangle is drawn",
+      "A circle is drawn",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to define a <video> element in HTML5?",
+    "o": [
+      "<video controls>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+      "<video>\n  <mp4 src='video.mp4'>\n</video>",
+      "<media controls>\n  <source src='video.mp4'>\n</media>",
+      "<vid>\n  <source src='video.mp4'>\n</vid>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to group related heading content and subheadings?",
+    "o": [
+      "<header>",
+      "<article>",
+      "<footer>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a footer for a document or a section?",
+    "o": [
+      "<footer>",
+      "<section>",
+      "<header>",
+      "<article>"
+    ]
+  },
+  {
+    "q": "What will be the output when this HTML5 canvas code runs?",
+    "c": "<canvas id='canvas' width='300' height='150'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'green';\n  ctx.fillRect(30, 30, 120, 60);\n</script>",
+    "o": [
+      "A green rectangle is drawn on the canvas",
+      "A blue rectangle is drawn",
+      "An empty canvas is displayed",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which attribute in the <audio> tag allows the audio to be played again automatically once it ends?",
+    "o": [
+      "loop",
+      "autoplay",
+      "controls",
+      "muted"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to display video content?",
+    "o": [
+      "<video>",
+      "<media>",
+      "<object>",
+      "<embed>"
+    ]
+  },
+  {
+    "q": "What will happen when this HTML5 video tag is executed?",
+    "c": "<video controls muted>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "The video will play with no sound unless manually unmuted",
+      "The video will not load",
+      "An error will occur",
+      "The video will start playing automatically"
+    ]
+  },
+  {
+    "q": "Which of the following is a new HTML5 semantic tag?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<span>",
+      "<blink>"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define an independent, self-contained piece of content?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<aside>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag ensures that the video starts playing automatically?",
+    "o": [
+      "autoplay",
+      "controls",
+      "loop",
+      "poster"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 tags is used for embedding an audio file?",
+    "o": [
+      "<audio>",
+      "<sound>",
+      "<media>",
+      "<mp3>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 canvas code executes?",
+    "c": "<canvas id='canvas' width='400' height='200'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'purple';\n  ctx.beginPath();\n  ctx.arc(100, 100, 50, 0, Math.PI * 2);\n  ctx.fill();\n</script>",
+    "o": [
+      "A filled purple circle is drawn",
+      "An empty circle is drawn",
+      "A square is drawn",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which semantic HTML5 element represents a self-contained piece of content such as a comment, forum post, or news article?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<header>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What will happen when this HTML5 audio code runs?",
+    "c": "<audio controls autoplay>\n  <source src='audio.mp3' type='audio/mpeg'>\n</audio>",
+    "o": [
+      "The audio starts playing automatically with controls visible",
+      "The audio only plays when the user presses play",
+      "The audio does not load",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to group multiple headings together?",
+    "o": [
+      "<header>",
+      "<section>",
+      "<article>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 tags is used to define a part of a document that contains related content but is separate from the main content?",
+    "o": [
+      "<aside>",
+      "<section>",
+      "<article>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 video tag is executed?",
+    "c": "<video controls>\n  <source src='movie.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "A video player with controls appears",
+      "The video plays automatically",
+      "The video will not load",
+      "An error will occur"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a semantic HTML5 element?",
+    "o": [
+      "<div>",
+      "<article>",
+      "<section>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What happens when this HTML5 canvas code is executed?",
+    "c": "<canvas id='canvas' width='400' height='200'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'yellow';\n  ctx.fillRect(50, 50, 150, 75);\n</script>",
+    "o": [
+      "A yellow rectangle is drawn on the canvas",
+      "A red rectangle is drawn",
+      "An empty canvas is displayed",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define content that is tangentially related to the main content?",
+    "o": [
+      "<aside>",
+      "<footer>",
+      "<header>",
+      "<article>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag allows the video to be muted by default?",
+    "o": [
+      "muted",
+      "autoplay",
+      "loop",
+      "poster"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a graphical area that can be drawn on using JavaScript?",
+    "o": [
+      "<canvas>",
+      "<svg>",
+      "<draw>",
+      "<graphic>"
+    ]
+  },
+  {
+    "q": "Which HTML5 semantic tag represents a section of navigation links?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<aside>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 canvas code do?",
+    "c": "<canvas id='canvas' width='300' height='150'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.beginPath();\n  ctx.moveTo(50, 50);\n  ctx.lineTo(200, 50);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A straight horizontal line is drawn",
+      "A filled rectangle is drawn",
+      "A circle is drawn",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to mark up a specific time in a document?",
+    "o": [
+      "<time>",
+      "<date>",
+      "<moment>",
+      "<datetime>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <audio> tag adds playback controls?",
+    "o": [
+      "controls",
+      "autoplay",
+      "loop",
+      "muted"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid HTML5 semantic tag?",
+    "o": [
+      "<bold>",
+      "<section>",
+      "<figure>",
+      "<summary>"
+    ]
+  },
+  {
+    "q": "What happens when this HTML5 video tag is executed?",
+    "c": "<video controls poster='thumbnail.jpg'>\n  <source src='movie.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "A video player appears with a poster image as a thumbnail",
+      "The video starts playing automatically",
+      "An error occurs",
+      "The video does not load"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a group of related options in a form?",
+    "o": [
+      "<fieldset>",
+      "<legend>",
+      "<section>",
+      "<article>"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 canvas code do?",
+    "c": "<canvas id='canvas' width='400' height='200'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.beginPath();\n  ctx.arc(150, 100, 75, 0, Math.PI);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A semi-circle (half-circle) is drawn",
+      "A full circle is drawn",
+      "A square is drawn",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a caption for a <figure> element?",
+    "o": [
+      "<figcaption>",
+      "<legend>",
+      "<caption>",
+      "<summary>"
+    ]
+  },
+  {
+    "q": "Which of the following statements about the <canvas> element is true?",
+    "o": [
+      "It requires JavaScript to draw graphics",
+      "It automatically renders graphics when added to a page",
+      "It can only display images, not animations",
+      "It is used for embedding videos"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 audio code runs?",
+    "c": "<audio controls loop>\n  <source src='music.mp3' type='audio/mpeg'>\n</audio>",
+    "o": [
+      "The audio will continuously repeat after finishing",
+      "The audio will only play once",
+      "The audio will not load",
+      "An error will occur"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define self-contained content, such as an image with a caption?",
+    "o": [
+      "<figure>",
+      "<section>",
+      "<aside>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 canvas code do?",
+    "c": "<canvas id='canvas' width='300' height='150'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.font = '20px Arial';\n  ctx.fillText('Hello, Canvas!', 50, 75);\n</script>",
+    "o": [
+      "The text 'Hello, Canvas!' is displayed on the canvas",
+      "An image is drawn",
+      "A rectangle is drawn",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which attribute of the <video> tag specifies an image to be shown before the video starts playing?",
+    "o": [
+      "poster",
+      "thumbnail",
+      "preview",
+      "cover"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 tags is used to provide additional details that users can show or hide?",
+    "o": [
+      "<details>",
+      "<summary>",
+      "<aside>",
+      "<figure>"
+    ]
+  },
+  {
+    "q": "Which method is used to draw a rectangle on an HTML5 canvas?",
+    "o": [
+      "fillRect()",
+      "drawRect()",
+      "createRectangle()",
+      "makeRect()"
+    ]
+  },
+  {
+    "q": "Which HTML5 element provides a way to summarize the contents of the <details> tag?",
+    "o": [
+      "<summary>",
+      "<legend>",
+      "<caption>",
+      "<figcaption>"
+    ]
+  },
+  {
+    "q": "Which event can be used to detect when an HTML5 video has finished playing?",
+    "o": [
+      "ended",
+      "pause",
+      "play",
+      "stop"
+    ]
+  },
+  {
+    "q": "Which HTML5 semantic element is used to group together multiple articles?",
+    "o": [
+      "<section>",
+      "<nav>",
+      "<aside>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 video code runs?",
+    "c": "<video controls>\n  <source src='clip.mp4' type='video/mp4'>\n  <source src='clip.ogg' type='video/ogg'>\n</video>",
+    "o": [
+      "The browser plays the first compatible video format",
+      "Both video sources play simultaneously",
+      "The video will not load",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which HTML5 semantic tag is used to represent an independent piece of content?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<div>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 canvas code do?",
+    "c": "<canvas id='canvas' width='300' height='150'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'blue';\n  ctx.fillRect(50, 50, 100, 100);\n</script>",
+    "o": [
+      "A blue square is drawn",
+      "A red square is drawn",
+      "A circle is drawn",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a caption for a table?",
+    "o": [
+      "<caption>",
+      "<figcaption>",
+      "<legend>",
+      "<summary>"
+    ]
+  },
+  {
+    "q": "Which HTML5 attribute is used to specify multiple sources for a video?",
+    "o": [
+      "<source>",
+      "<track>",
+      "<media>",
+      "<srcset>"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 canvas code output?",
+    "c": "<canvas id='canvas' width='400' height='200'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.beginPath();\n  ctx.arc(100, 100, 50, 0, 2 * Math.PI);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A full circle is drawn",
+      "A straight line is drawn",
+      "A rectangle is drawn",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a self-contained sidebar?",
+    "o": [
+      "<aside>",
+      "<section>",
+      "<nav>",
+      "<summary>"
+    ]
+  },
+  {
+    "q": "Which property in the <video> tag is used to enable automatic playback?",
+    "o": [
+      "autoplay",
+      "loop",
+      "controls",
+      "muted"
+    ]
+  },
+  {
+    "q": "What does the following HTML5 code do?",
+    "c": "<audio controls>\n  <source src='sound.mp3' type='audio/mpeg'>\n</audio>",
+    "o": [
+      "Displays an audio player with controls",
+      "Plays the audio automatically",
+      "Throws an error",
+      "No audio is played"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag represents the footer of a document or section?",
+    "o": [
+      "<footer>",
+      "<bottom>",
+      "<end>",
+      "<summary>"
+    ]
+  },
+  {
+    "q": "What will happen when this HTML5 video tag is used?",
+    "c": "<video controls width='400' height='300'>\n  <source src='video.mp4' type='video/mp4'>\n  <source src='video.ogg' type='video/ogg'>\n  <track src='subtitles.vtt' kind='subtitles' srclang='en' label='English'>\n</video>",
+    "o": [
+      "The video will play with English subtitles if supported",
+      "Both video sources will play at the same time",
+      "An error will occur",
+      "The video will not load"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a visible heading inside a <details> element?",
+    "o": [
+      "<summary>",
+      "<legend>",
+      "<caption>",
+      "<figcaption>"
+    ]
+  },
+  {
+    "q": "Which HTML5 method is used to add text to a canvas?",
+    "o": [
+      "fillText()",
+      "drawText()",
+      "textRender()",
+      "writeText()"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to define navigation links?",
+    "o": [
+      "<nav>",
+      "<aside>",
+      "<section>",
+      "<footer>"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 canvas code do?",
+    "c": "<canvas id='canvas' width='400' height='200'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'red';\n  ctx.fillRect(20, 20, 50, 50);\n</script>",
+    "o": [
+      "A red square is drawn",
+      "A blue square is drawn",
+      "A circle is drawn",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to embed an external webpage inside a document?",
+    "o": [
+      "<iframe>",
+      "<embed>",
+      "<object>",
+      "<include>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <audio> and <video> elements is used to mute the media by default?",
+    "o": [
+      "muted",
+      "silence",
+      "volume='0'",
+      "disableSound"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 video code runs?",
+    "c": "<video controls autoplay loop>\n  <source src='clip.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "The video will play automatically and repeat indefinitely",
+      "The video will play once",
+      "The video will not play",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid HTML5 semantic tag?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<bold>",
+      "<underline>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define an area in a document that is thematically separate from the rest of the content?",
+    "o": [
+      "<section>",
+      "<article>",
+      "<aside>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 canvas code do?",
+    "c": "<canvas id='canvas' width='300' height='150'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.strokeStyle = 'green';\n  ctx.strokeRect(50, 50, 100, 100);\n</script>",
+    "o": [
+      "A green outlined square is drawn",
+      "A filled green square is drawn",
+      "A red outlined square is drawn",
+      "An error occurs"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a self-contained piece of content, such as a blog post or news article?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<aside>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 audio code do?",
+    "c": "<audio controls>\n  <source src='sound.mp3' type='audio/mpeg'>\n  <source src='sound.ogg' type='audio/ogg'>\n</audio>",
+    "o": [
+      "Displays an audio player with controls",
+      "Plays the audio automatically",
+      "Throws an error",
+      "Audio will not load"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define an independent piece of content, such as a sidebar or callout box?",
+    "o": [
+      "<aside>",
+      "<article>",
+      "<section>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "What does the following HTML5 canvas code do?",
+    "c": "<canvas id='myCanvas' width='200' height='100'></canvas>\n<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.beginPath();\n  ctx.arc(100, 50, 40, 0, 2 * Math.PI);\n  ctx.stroke();\n</script>",
+    "o": [
+      "Draws a circle",
+      "Draws a rectangle",
+      "Shows an error",
+      "Clears the canvas"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define navigation links?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<section>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to group headings and navigation elements at the top of a webpage?",
+    "o": [
+      "<header>",
+      "<head>",
+      "<nav>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "What does the 'controls' attribute do in an HTML5 <video> element?",
+    "o": [
+      "Displays play, pause, and volume controls",
+      "Plays the video in fullscreen mode",
+      "Loops the video",
+      "Mutes the video by default"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define the footer of a document or section?",
+    "o": [
+      "<footer>",
+      "<bottom>",
+      "<section>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to structure the main content of a webpage?",
+    "o": [
+      "<main>",
+      "<body>",
+      "<section>",
+      "<div>"
+    ]
+  },
+  {
+    "q": "What does the following HTML5 canvas code do?",
+    "c": "<canvas id='myCanvas' width='400' height='200'></canvas>\n<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'blue';\n  ctx.fillRect(20, 20, 100, 50);\n</script>",
+    "o": [
+      "Draws a blue rectangle",
+      "Draws a red rectangle",
+      "Throws an error",
+      "Fills the entire canvas with blue"
+    ]
+  },
+  {
+    "q": "Which HTML5 element provides a fallback option if the browser does not support a specific multimedia format?",
+    "o": [
+      "<source>",
+      "<media>",
+      "<alt>",
+      "<track>"
+    ]
+  },
+  {
+    "q": "Which attribute in the HTML5 <video> element ensures that the video starts playing automatically?",
+    "o": [
+      "autoplay",
+      "play",
+      "start",
+      "autostart"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to provide captions for a <video> element?",
+    "o": [
+      "<track>",
+      "<subtitle>",
+      "<caption>",
+      "<legend>"
+    ]
+  },
+  {
+    "q": "What happens when this HTML5 audio code runs?",
+    "c": "<audio controls autoplay>\n  <source src='music.mp3' type='audio/mpeg'>\n</audio>",
+    "o": [
+      "The audio starts playing automatically with controls",
+      "The audio plays only when clicked",
+      "An error occurs",
+      "The audio does not load"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define an area on a webpage where JavaScript can dynamically draw graphics?",
+    "o": [
+      "<canvas>",
+      "<svg>",
+      "<graphics>",
+      "<paint>"
+    ]
+  },
+  {
+    "q": "Which method is used to draw a rectangle in an HTML5 canvas?",
+    "o": [
+      "fillRect()",
+      "drawRect()",
+      "rectDraw()",
+      "drawRectangle()"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 canvas code display?",
+    "c": "<canvas id='canvas' width='200' height='100'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.font = '20px Arial';\n  ctx.fillText('Hello, HTML5!', 50, 50);\n</script>",
+    "o": [
+      "Displays 'Hello, HTML5!' on the canvas",
+      "Draws a rectangle",
+      "Shows an error",
+      "Clears the canvas"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a scalable vector graphic?",
+    "o": [
+      "<svg>",
+      "<canvas>",
+      "<vector>",
+      "<graphic>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define alternative sources for different screen sizes in images?",
+    "o": [
+      "<picture>",
+      "<source>",
+      "<imgset>",
+      "<responsive>"
+    ]
+  },
+  {
+    "q": "What does the 'loop' attribute do in an HTML5 video element?",
+    "o": [
+      "Repeats the video indefinitely",
+      "Plays the video once",
+      "Mutes the video",
+      "Speeds up the video"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a section of a webpage that is related to the main content but can stand alone?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<article>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What is the correct way to include multiple audio formats for cross-browser compatibility?",
+    "c": "<audio controls>\n  <source src='sound.mp3' type='audio/mpeg'>\n  <source src='sound.ogg' type='audio/ogg'>\n</audio>",
+    "o": [
+      "Using multiple <source> elements",
+      "Using a single <audio> tag with one source",
+      "Using a <media> tag",
+      "Specifying different audio sources in the 'src' attribute"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a container for graphics drawn with JavaScript?",
+    "o": [
+      "<canvas>",
+      "<svg>",
+      "<graphics>",
+      "<vector>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML5 canvas code?",
+    "c": "<canvas id='canvas' width='300' height='150'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'green';\n  ctx.fillRect(10, 10, 100, 50);\n</script>",
+    "o": [
+      "A green rectangle",
+      "A red rectangle",
+      "A blue rectangle",
+      "An empty canvas"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to specify multiple alternative image sources for different screen sizes?",
+    "o": [
+      "<picture>",
+      "<img>",
+      "<source>",
+      "<responsive>"
+    ]
+  },
+  {
+    "q": "Which HTML5 attribute ensures that a video starts playing only when the user clicks play?",
+    "o": [
+      "controls",
+      "autoplay",
+      "loop",
+      "muted"
+    ]
+  },
+  {
+    "q": "What does the 'getContext' method do in an HTML5 canvas?",
+    "o": [
+      "Returns a drawing context",
+      "Creates a new canvas",
+      "Draws an image",
+      "Changes the canvas size"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define important content that can be reused across multiple pages?",
+    "o": [
+      "<header>",
+      "<footer>",
+      "<section>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to embed a video in HTML5?",
+    "o": [
+      "<video src='video.mp4' controls></video>",
+      "<video controls='video.mp4'></video>",
+      "<media src='video.mp4'></media>",
+      "<embed type='video/mp4' src='video.mp4'></embed>"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 canvas script display?",
+    "c": "<canvas id='myCanvas' width='400' height='200'></canvas>\n<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.moveTo(0,0);\n  ctx.lineTo(200,100);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A diagonal line",
+      "A rectangle",
+      "A circle",
+      "An empty canvas"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a group of navigation links?",
+    "o": [
+      "<nav>",
+      "<aside>",
+      "<menu>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What does the 'muted' attribute do in an HTML5 video element?",
+    "o": [
+      "Starts the video with no sound",
+      "Prevents autoplay",
+      "Disables the video",
+      "Loops the video"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define self-contained content such as blog posts or news articles?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<aside>",
+      "<div>"
+    ]
+  },
+  {
+    "q": "Which method is used to clear a canvas in HTML5?",
+    "o": [
+      "clearRect()",
+      "eraseCanvas()",
+      "removeCanvas()",
+      "resetCanvas()"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a video player?",
+    "o": [
+      "<video>",
+      "<media>",
+      "<movie>",
+      "<clip>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 code is executed?",
+    "c": "<video controls loop>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "The video will loop continuously",
+      "The video will play only once",
+      "The video will not play",
+      "An error will be thrown"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to draw graphics using JavaScript?",
+    "o": [
+      "<canvas>",
+      "<svg>",
+      "<graphics>",
+      "<bitmap>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to specify subtitles for a video?",
+    "o": [
+      "<track>",
+      "<caption>",
+      "<subtitle>",
+      "<script>"
+    ]
+  },
+  {
+    "q": "What is the correct way to draw text on an HTML5 canvas?",
+    "c": "<canvas id='canvas'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.font = '30px Arial';\n  ctx.fillText('Hello World', 50, 50);\n</script>",
+    "o": [
+      "Displays 'Hello World' on the canvas",
+      "Draws a rectangle",
+      "Throws an error",
+      "Does nothing"
+    ]
+  },
+  {
+    "q": "Which of the following is a benefit of using semantic HTML5 elements?",
+    "o": [
+      "Improves accessibility and SEO",
+      "Increases page load time",
+      "Makes HTML less readable",
+      "Reduces CSS support"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is best suited for displaying an embedded media player?",
+    "o": [
+      "<video>",
+      "<media>",
+      "<movie>",
+      "<embed>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the <aside> tag in HTML5?",
+    "o": [
+      "Defines content related to the main content",
+      "Defines the main navigation",
+      "Defines the footer of a page",
+      "Defines an article title"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to add a fallback message for browsers that do not support the <canvas> element?",
+    "c": "<canvas id='myCanvas'>\n  Your browser does not support the canvas element.\n</canvas>",
+    "o": [
+      "Place a message inside the <canvas> tags",
+      "Use a JavaScript alert",
+      "Add an <alt> attribute to the <canvas> tag",
+      "Use a CSS property to display a message"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used for embedding scalable vector graphics?",
+    "o": [
+      "<svg>",
+      "<canvas>",
+      "<vector>",
+      "<graphic>"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 code do?",
+    "c": "<audio controls>\n  <source src='sound.mp3' type='audio/mpeg'>\n  <source src='sound.ogg' type='audio/ogg'>\n</audio>",
+    "o": [
+      "Plays an audio file with fallback options",
+      "Plays only the MP3 file",
+      "Requires JavaScript to work",
+      "Does not work without a plugin"
+    ]
+  },
+  {
+    "q": "Which of the following properties is used to set the color of a shape drawn on a canvas?",
+    "o": [
+      "fillStyle",
+      "strokeText",
+      "drawColor",
+      "setColor"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag allows the video to start playing automatically?",
+    "o": [
+      "autoplay",
+      "play",
+      "controls",
+      "start"
+    ]
+  },
+  {
+    "q": "What is the correct way to draw a circle on an HTML5 canvas?",
+    "c": "<canvas id='myCanvas'></canvas>\n<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.beginPath();\n  ctx.arc(100, 100, 50, 0, 2 * Math.PI);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A circle with radius 50",
+      "A rectangle",
+      "A straight line",
+      "An empty canvas"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to mark up a footer for a document or section?",
+    "o": [
+      "<footer>",
+      "<bottom>",
+      "<end>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to preload a video?",
+    "o": [
+      "Use the 'preload' attribute in the <video> tag",
+      "Use JavaScript to load the video",
+      "Use an <img> tag as a placeholder",
+      "Set autoplay to 'true'"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to mark up a piece of self-contained content?",
+    "o": [
+      "<article>",
+      "<aside>",
+      "<section>",
+      "<div>"
+    ]
+  },
+  {
+    "q": "What will the following code output?",
+    "c": "<canvas id='canvas'></canvas>\n<script>\n  var canvas = document.getElementById('canvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'blue';\n  ctx.fillRect(50, 50, 150, 100);\n</script>",
+    "o": [
+      "A blue rectangle",
+      "A red rectangle",
+      "A green circle",
+      "A blank canvas"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 attributes ensures a video file is played in a continuous loop?",
+    "o": [
+      "loop",
+      "repeat",
+      "cycle",
+      "autoplay"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used for defining navigation links?",
+    "o": [
+      "<nav>",
+      "<header>",
+      "<aside>",
+      "<menu>"
+    ]
+  },
+  {
+    "q": "Which JavaScript method is used to draw a rectangle on an HTML5 canvas?",
+    "o": [
+      "fillRect()",
+      "drawRect()",
+      "rectDraw()",
+      "createRect()"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a caption for an image, figure, or diagram?",
+    "o": [
+      "<figcaption>",
+      "<caption>",
+      "<desc>",
+      "<legend>"
+    ]
+  },
+  {
+    "q": "What is the correct way to mute an HTML5 video by default?",
+    "o": [
+      "Use the 'muted' attribute",
+      "Set the volume to 0 using JavaScript",
+      "Use the 'silent' attribute",
+      "Hide the audio controls"
+    ]
+  },
+  {
+    "q": "Which method is used to clear an entire HTML5 canvas?",
+    "o": [
+      "clearRect(0, 0, canvas.width, canvas.height)",
+      "canvas.clear()",
+      "resetCanvas()",
+      "eraseCanvas()"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a new semantic element introduced in HTML5?",
+    "o": [
+      "<div>",
+      "<article>",
+      "<section>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What does the <section> tag represent in HTML5?",
+    "o": [
+      "A thematic grouping of content",
+      "A footer section of a page",
+      "A sidebar for related content",
+      "An inline text element"
+    ]
+  },
+  {
+    "q": "What is the correct way to specify a fallback message for browsers that do not support the <video> element?",
+    "c": "<video controls>\n  <source src='video.mp4' type='video/mp4'>\n  Your browser does not support the video tag.\n</video>",
+    "o": [
+      "Place a message inside the <video> tags",
+      "Use JavaScript to display an alert",
+      "Use a separate <fallback> tag",
+      "Set a 'fallback' attribute in the <video> tag"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used for embedding an audio file?",
+    "o": [
+      "<audio>",
+      "<sound>",
+      "<mp3>",
+      "<media>"
+    ]
+  },
+  {
+    "q": "Which HTML5 attribute specifies multiple sources for a <video> element?",
+    "o": [
+      "<source>",
+      "<src>",
+      "<track>",
+      "<media>"
+    ]
+  },
+  {
+    "q": "Which JavaScript method is used to draw a straight line on an HTML5 canvas?",
+    "c": "<canvas id='myCanvas'></canvas>\n<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.beginPath();\n  ctx.moveTo(50, 50);\n  ctx.lineTo(150, 100);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A straight line",
+      "A rectangle",
+      "A circle",
+      "A blank canvas"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to define a self-contained piece of content?",
+    "o": [
+      "<article>",
+      "<aside>",
+      "<footer>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element provides text tracks for video subtitles or captions?",
+    "o": [
+      "<track>",
+      "<caption>",
+      "<subtitles>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "Which attribute of the <canvas> element defines its width?",
+    "o": [
+      "width",
+      "size",
+      "canvas-width",
+      "dimension"
+    ]
+  },
+  {
+    "q": "What will the following JavaScript code do?",
+    "c": "<canvas id='myCanvas'></canvas>\n<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'red';\n  ctx.fillRect(20, 20, 100, 50);\n</script>",
+    "o": [
+      "Draws a red rectangle",
+      "Draws a blue rectangle",
+      "Draws a green circle",
+      "Displays an error"
+    ]
+  },
+  {
+    "q": "Which HTML5 attribute allows an audio file to play without user interaction?",
+    "o": [
+      "autoplay",
+      "loop",
+      "muted",
+      "controls"
+    ]
+  },
+  {
+    "q": "What is the correct way to make a video element responsive?",
+    "c": "<style>\n  video {\n    width: 100%;\n    height: auto;\n  }\n</style>\n<video controls>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "Using CSS to set width: 100%",
+      "Using the 'responsive' attribute",
+      "Setting 'autofit' in the <video> tag",
+      "Embedding the video in an iframe"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a figure with a caption?",
+    "o": [
+      "<figure>",
+      "<figcaption>",
+      "<picture>",
+      "<legend>"
+    ]
+  },
+  {
+    "q": "What will the following JavaScript code do?",
+    "c": "<canvas id='myCanvas'></canvas>\n<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.fillStyle = 'blue';\n  ctx.arc(75, 75, 50, 0, 2 * Math.PI);\n  ctx.fill();\n</script>",
+    "o": [
+      "Draws a solid blue circle",
+      "Draws a rectangle",
+      "Draws a line",
+      "Displays a blank canvas"
+    ]
+  },
+  {
+    "q": "Which HTML5 attribute makes an audio or video element start over when finished?",
+    "o": [
+      "loop",
+      "autoplay",
+      "restart",
+      "replay"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used for defining a container for an external application or interactive content?",
+    "o": [
+      "<embed>",
+      "<iframe>",
+      "<object>",
+      "<container>"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 tags is used for defining the main content of a page?",
+    "o": [
+      "<main>",
+      "<body>",
+      "<div>",
+      "<content>"
+    ]
+  },
+  {
+    "q": "Which property in the HTML5 <video> element allows the user to control playback?",
+    "o": [
+      "controls",
+      "playback",
+      "start",
+      "pause"
+    ]
+  },
+  {
+    "q": "Which JavaScript method is used to write text on an HTML5 canvas?",
+    "o": [
+      "fillText()",
+      "writeText()",
+      "drawText()",
+      "setText()"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to group navigation links?",
+    "o": [
+      "<nav>",
+      "<header>",
+      "<aside>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the <aside> element in HTML5?",
+    "o": [
+      "It represents content that is tangentially related to the main content",
+      "It defines a section within an article",
+      "It is used for grouping navigation links",
+      "It creates a new article within a webpage"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to add a video with multiple formats for better browser support?",
+    "c": "<video controls>\n  <source src='video.mp4' type='video/mp4'>\n  <source src='video.webm' type='video/webm'>\n  Your browser does not support the video tag.\n</video>",
+    "o": [
+      "Using multiple <source> elements inside the <video> tag",
+      "Using multiple <video> tags for different formats",
+      "Embedding a Flash video player",
+      "Using JavaScript to detect supported formats"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to provide a caption for a <figure> element?",
+    "o": [
+      "<figcaption>",
+      "<caption>",
+      "<label>",
+      "<summary>"
+    ]
+  },
+  {
+    "q": "Which JavaScript method is used to clear the entire HTML5 canvas?",
+    "c": "<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.clearRect(0, 0, canvas.width, canvas.height);\n</script>",
+    "o": [
+      "clearRect()",
+      "eraseCanvas()",
+      "resetCanvas()",
+      "deleteCanvas()"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a caption for a table?",
+    "o": [
+      "<caption>",
+      "<figcaption>",
+      "<legend>",
+      "<title>"
+    ]
+  },
+  {
+    "q": "What does the following HTML5 code do?",
+    "c": "<canvas id='myCanvas'></canvas>\n<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.font = '20px Arial';\n  ctx.fillText('Hello, Canvas!', 50, 50);\n</script>",
+    "o": [
+      "Displays 'Hello, Canvas!' as text on the canvas",
+      "Creates a blank canvas",
+      "Draws a rectangle",
+      "Throws an error"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to mark up user-input fields?",
+    "o": [
+      "<input>",
+      "<form>",
+      "<field>",
+      "<select>"
+    ]
+  },
+  {
+    "q": "Which attribute of the <audio> element ensures the audio plays in a loop?",
+    "o": [
+      "loop",
+      "autoplay",
+      "repeat",
+      "play"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements defines self-contained, reusable content?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<div>",
+      "<main>"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 canvas code do?",
+    "c": "<canvas id='myCanvas'></canvas>\n<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.strokeStyle = 'green';\n  ctx.lineWidth = 5;\n  ctx.strokeRect(20, 20, 150, 100);\n</script>",
+    "o": [
+      "Draws a green outlined rectangle",
+      "Fills a green rectangle",
+      "Draws a solid circle",
+      "Clears the canvas"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid value for the 'preload' attribute of the <audio> element?",
+    "o": [
+      "autoplay",
+      "metadata",
+      "none",
+      "auto"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to provide fallback content for browsers that do not support scripts?",
+    "o": [
+      "<noscript>",
+      "<fallback>",
+      "<alt>",
+      "<error>"
+    ]
+  },
+  {
+    "q": "Which JavaScript method is used to detect if the browser supports the <canvas> element?",
+    "o": [
+      "document.createElement('canvas').getContext",
+      "document.hasElement('canvas')",
+      "window.supportsCanvas()",
+      "navigator.hasCanvasSupport()"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define important introductory content?",
+    "o": [
+      "<header>",
+      "<intro>",
+      "<main>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which of the following attributes is used to mute an HTML5 video by default?",
+    "o": [
+      "muted",
+      "silence",
+      "disable-audio",
+      "quiet"
+    ]
+  },
+  {
+    "q": "What will the following JavaScript code do?",
+    "c": "<canvas id='myCanvas'></canvas>\n<script>\n  var canvas = document.getElementById('myCanvas');\n  var ctx = canvas.getContext('2d');\n  ctx.beginPath();\n  ctx.arc(100, 100, 40, 0, Math.PI * 2);\n  ctx.fillStyle = 'red';\n  ctx.fill();\n</script>",
+    "o": [
+      "Draws a solid red circle",
+      "Draws a red rectangle",
+      "Clears the canvas",
+      "Throws an error"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define metadata for a document?",
+    "o": [
+      "<meta>",
+      "<head>",
+      "<data>",
+      "<info>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to specify alternative media resources for the <picture> element?",
+    "o": [
+      "<source>",
+      "<alt>",
+      "<fallback>",
+      "<media>"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify that an <audio> file should start playing as soon as it is loaded?",
+    "o": [
+      "autoplay",
+      "loop",
+      "start",
+      "play"
+    ]
+  },
+  {
+    "q": "Which of the following is a new semantic tag introduced in HTML5?",
+    "o": [
+      "<article>",
+      "<div>",
+      "<span>",
+      "<font>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML5 code snippet?",
+    "c": "<video width=\"320\" height=\"240\" controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>",
+    "o": [
+      "A video player appears with play, pause, and volume controls.",
+      "An error message is displayed because <video> is not supported.",
+      "Only the text 'Your browser does not support the video tag.' is displayed.",
+      "The browser crashes."
+    ]
+  },
+  {
+    "q": "Which of the following elements is used for drawing graphics in HTML5?",
+    "o": [
+      "<canvas>",
+      "<graphic>",
+      "<draw>",
+      "<paint>"
+    ]
+  },
+  {
+    "q": "What will be the result of the following HTML5 <canvas> code?",
+    "c": "<canvas id=\"myCanvas\" width=\"200\" height=\"100\"></canvas>\n<script>\n  var canvas = document.getElementById(\"myCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.fillStyle = \"red\";\n  ctx.fillRect(20, 20, 100, 50);\n</script>",
+    "o": [
+      "A red rectangle is drawn on the canvas.",
+      "A blue rectangle is drawn on the canvas.",
+      "Nothing appears on the canvas.",
+      "An error occurs due to missing <canvas> element."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to embed audio content?",
+    "o": [
+      "<audio>",
+      "<sound>",
+      "<music>",
+      "<media>"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 audio code runs?",
+    "c": "<audio controls>\n  <source src=\"audio.mp3\" type=\"audio/mpeg\">\n  Your browser does not support the audio tag.\n</audio>",
+    "o": [
+      "An audio player appears with play, pause, and volume controls.",
+      "An error occurs because <audio> is not supported in HTML5.",
+      "No sound plays, but the text message is displayed.",
+      "The browser crashes."
+    ]
+  },
+  {
+    "q": "Which of the following is a semantic tag introduced in HTML5?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<frame>",
+      "<blink>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the <figure> element in HTML5?",
+    "o": [
+      "It is used to group media content like images, diagrams, or illustrations.",
+      "It is used to create a caption for a paragraph.",
+      "It is used to format text in a bold style.",
+      "It is used to define a video player."
+    ]
+  },
+  {
+    "q": "Which of the following is a valid HTML5 video tag usage?",
+    "c": "<video width=\"400\" controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>",
+    "o": [
+      "A video player with play, pause, and volume controls appears.",
+      "An error occurs because <video> is not a valid HTML5 tag.",
+      "Only the text 'Your browser does not support the video tag.' is displayed.",
+      "The browser crashes."
+    ]
+  },
+  {
+    "q": "Which of the following is true about the <canvas> element in HTML5?",
+    "o": [
+      "It allows dynamic drawing of graphics via JavaScript.",
+      "It replaces the <svg> element in HTML5.",
+      "It is used for embedding videos.",
+      "It is a new table element."
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML5 <canvas> code?",
+    "c": "<canvas id=\"myCanvas\" width=\"150\" height=\"150\"></canvas>\n<script>\n  var canvas = document.getElementById(\"myCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.beginPath();\n  ctx.arc(75, 75, 50, 0, 2 * Math.PI);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A circle is drawn on the canvas.",
+      "A red rectangle is drawn on the canvas.",
+      "Nothing appears because <canvas> does not support drawing.",
+      "An error occurs due to missing stroke() method."
+    ]
+  },
+  {
+    "q": "Which attribute in the <audio> tag ensures the audio starts playing automatically?",
+    "o": [
+      "autoplay",
+      "controls",
+      "loop",
+      "muted"
+    ]
+  },
+  {
+    "q": "What will be displayed when the following HTML5 audio code runs?",
+    "c": "<audio controls>\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n  Your browser does not support the audio tag.\n</audio>",
+    "o": [
+      "An audio player appears with play, pause, and volume controls.",
+      "The browser displays an error message.",
+      "No sound plays, and nothing is displayed.",
+      "The page crashes due to an invalid <audio> tag."
+    ]
+  },
+  {
+    "q": "Which of the following semantic elements is used to represent a self-contained section in a document?",
+    "o": [
+      "<article>",
+      "<div>",
+      "<aside>",
+      "<span>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 code runs?",
+    "c": "<section>\n  <article>\n    <h2>Latest News</h2>\n    <p>HTML5 introduces many new features.</p>\n  </article>\n</section>",
+    "o": [
+      "A section containing an article with a heading and paragraph is displayed.",
+      "An error occurs because <section> cannot contain <article>.",
+      "The text is hidden due to an invalid structure.",
+      "The browser does not render anything."
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag ensures that the video file repeats indefinitely?",
+    "o": [
+      "loop",
+      "autoplay",
+      "controls",
+      "muted"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to define navigation links?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<aside>",
+      "<footer>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 video tag is used?",
+    "c": "<video width=\"300\" height=\"200\" controls autoplay muted>\n  <source src=\"sample.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "The video will play automatically without sound.",
+      "The video will play automatically with sound.",
+      "An error occurs because 'muted' and 'autoplay' cannot be used together.",
+      "The video does not load."
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to display self-contained content, such as images with captions?",
+    "o": [
+      "<figure>",
+      "<caption>",
+      "<div>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "Which of the following statements about the <canvas> element is true?",
+    "o": [
+      "It provides a way to draw graphics using JavaScript.",
+      "It can be used without JavaScript for displaying images.",
+      "It replaces the <img> tag in HTML5.",
+      "It is used to create a video player."
+    ]
+  },
+  {
+    "q": "What does the following <canvas> code do?",
+    "c": "<canvas id=\"drawCanvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"drawCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.fillStyle = \"blue\";\n  ctx.fillRect(50, 50, 100, 100);\n</script>",
+    "o": [
+      "A blue square is drawn on the canvas.",
+      "A red square is drawn on the canvas.",
+      "An error occurs due to missing <canvas> element.",
+      "Nothing is displayed because JavaScript is not required for <canvas>."
+    ]
+  },
+  {
+    "q": "Which attribute is used in the <audio> tag to enable looping playback?",
+    "o": [
+      "loop",
+      "autoplay",
+      "controls",
+      "repeat"
+    ]
+  },
+  {
+    "q": "What is the primary purpose of the <aside> element in HTML5?",
+    "o": [
+      "It represents content that is tangentially related to the main content.",
+      "It is used to define the main section of a webpage.",
+      "It is a replacement for the <div> tag.",
+      "It is used to create a navigation menu."
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to define an HTML5 audio element?",
+    "c": "<audio controls>\n  <source src=\"music.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "A playable audio file with controls appears.",
+      "An error occurs due to incorrect syntax.",
+      "The browser ignores the <audio> element.",
+      "The file plays automatically without controls."
+    ]
+  },
+  {
+    "q": "What will be displayed when the following HTML5 structure is rendered?",
+    "c": "<header>\n  <h1>Welcome to My Website</h1>\n</header>\n<main>\n  <article>\n    <p>This is an article about HTML5.</p>\n  </article>\n</main>",
+    "o": [
+      "A header with a title and an article with a paragraph.",
+      "An error occurs because <main> cannot contain <article>.",
+      "The text is hidden due to an invalid structure.",
+      "The browser does not render anything."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to group related content together?",
+    "o": [
+      "<section>",
+      "<group>",
+      "<content>",
+      "<wrapper>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 video tag is used?",
+    "c": "<video width=\"400\" height=\"300\" controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <source src=\"video.ogg\" type=\"video/ogg\">\n</video>",
+    "o": [
+      "The browser plays the first supported video format.",
+      "Both videos play at the same time.",
+      "An error occurs due to multiple <source> elements.",
+      "No video is played."
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to define the footer of a document or section?",
+    "o": [
+      "<footer>",
+      "<bottom>",
+      "<end>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a semantic HTML5 element?",
+    "o": [
+      "<div>",
+      "<article>",
+      "<section>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to add a description or caption to a <figure> element?",
+    "o": [
+      "<figcaption>",
+      "<caption>",
+      "<description>",
+      "<details>"
+    ]
+  },
+  {
+    "q": "What will be displayed when the following HTML5 <canvas> code is executed?",
+    "c": "<canvas id=\"myCanvas\" width=\"150\" height=\"150\"></canvas>\n<script>\n  var canvas = document.getElementById(\"myCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.font = \"20px Arial\";\n  ctx.fillText(\"Hello Canvas\", 30, 75);\n</script>",
+    "o": [
+      "The text 'Hello Canvas' appears on the canvas.",
+      "A rectangle appears on the canvas.",
+      "An error occurs due to incorrect syntax.",
+      "Nothing appears because <canvas> does not support text."
+    ]
+  },
+  {
+    "q": "Which semantic HTML5 element is used to define a self-contained piece of content that can be independently distributed?",
+    "o": [
+      "<article>",
+      "<div>",
+      "<span>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "Which attribute of the <video> tag specifies multiple text tracks, such as subtitles or captions?",
+    "o": [
+      "<track>",
+      "<caption>",
+      "<subtitles>",
+      "<description>"
+    ]
+  },
+  {
+    "q": "What will be the result of the following HTML5 video code?",
+    "c": "<video controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n  <source src=\"movie.ogg\" type=\"video/ogg\">\n  <track src=\"subtitles.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\">\n</video>",
+    "o": [
+      "A video player with optional English subtitles appears.",
+      "An error occurs because <track> is not supported.",
+      "The video plays, but subtitles do not appear.",
+      "The browser crashes."
+    ]
+  },
+  {
+    "q": "Which of the following statements about the <audio> tag in HTML5 is true?",
+    "o": [
+      "It allows embedding audio content with optional controls.",
+      "It is used to create hyperlinks for audio files.",
+      "It is a replacement for the <sound> tag.",
+      "It only supports MP3 files."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a footer for a document or section?",
+    "o": [
+      "<footer>",
+      "<bottom>",
+      "<section>",
+      "<end>"
+    ]
+  },
+  {
+    "q": "What will be drawn on the canvas when the following code is executed?",
+    "c": "<canvas id=\"myCanvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"myCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.beginPath();\n  ctx.moveTo(50, 50);\n  ctx.lineTo(150, 50);\n  ctx.lineTo(100, 150);\n  ctx.closePath();\n  ctx.stroke();\n</script>",
+    "o": [
+      "A triangle is drawn on the canvas.",
+      "A rectangle is drawn on the canvas.",
+      "A circle is drawn on the canvas.",
+      "Nothing appears."
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid HTML5 semantic element?",
+    "o": [
+      "<format>",
+      "<article>",
+      "<aside>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "Which of the following attributes ensures an audio file plays automatically when the page loads?",
+    "o": [
+      "autoplay",
+      "loop",
+      "controls",
+      "muted"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 audio code is executed?",
+    "c": "<audio controls loop>\n  <source src=\"audio.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "The audio plays repeatedly in a loop.",
+      "The audio plays only once and stops.",
+      "An error occurs due to an invalid loop attribute.",
+      "The browser crashes."
+    ]
+  },
+  {
+    "q": "Which of the following statements about the <canvas> element is true?",
+    "o": [
+      "It is used for drawing graphics using JavaScript.",
+      "It automatically displays images without JavaScript.",
+      "It replaces the <img> tag.",
+      "It is used for embedding videos."
+    ]
+  },
+  {
+    "q": "What does the following HTML5 <canvas> code do?",
+    "c": "<canvas id=\"drawCanvas\" width=\"300\" height=\"300\"></canvas>\n<script>\n  var canvas = document.getElementById(\"drawCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.fillStyle = \"green\";\n  ctx.fillRect(75, 75, 150, 150);\n</script>",
+    "o": [
+      "A green square is drawn on the canvas.",
+      "A red square is drawn on the canvas.",
+      "An error occurs due to an invalid <canvas> tag.",
+      "Nothing appears on the canvas."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to group navigation links?",
+    "o": [
+      "<nav>",
+      "<aside>",
+      "<menu>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What does the following HTML5 structure do?",
+    "c": "<section>\n  <article>\n    <h2>My Blog Post</h2>\n    <p>This is the content of the article.</p>\n  </article>\n</section>",
+    "o": [
+      "Displays a section containing an article with a heading and paragraph.",
+      "Throws an error because <article> cannot be inside <section>.",
+      "Hides the text due to an invalid structure.",
+      "Displays only the text without formatting."
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to define an HTML5 video element?",
+    "c": "<video controls>\n  <source src=\"clip.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "A playable video file with controls appears.",
+      "An error occurs due to incorrect syntax.",
+      "The browser ignores the <video> element.",
+      "The file plays automatically without controls."
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to define supplementary content that is related to the main content?",
+    "o": [
+      "<aside>",
+      "<footer>",
+      "<nav>",
+      "<main>"
+    ]
+  },
+  {
+    "q": "Which of the following statements about HTML5 semantic elements is true?",
+    "o": [
+      "They help define the meaning of content in a document.",
+      "They are used only for styling purposes.",
+      "They replace all <div> elements in HTML.",
+      "They are not supported in modern browsers."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define the primary content of a document?",
+    "o": [
+      "<main>",
+      "<section>",
+      "<header>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 video tag is used?",
+    "c": "<video width=\"400\" height=\"300\" controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n  <source src=\"movie.ogg\" type=\"video/ogg\">\n</video>",
+    "o": [
+      "The browser plays the first supported video format.",
+      "Both videos play at the same time.",
+      "An error occurs due to multiple <source> elements.",
+      "No video is played."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a heading section of a webpage?",
+    "o": [
+      "<header>",
+      "<title>",
+      "<hgroup>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "Which of the following elements is NOT considered a semantic element in HTML5?",
+    "o": [
+      "<span>",
+      "<article>",
+      "<header>",
+      "<footer>"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a caption for a <figure> element?",
+    "o": [
+      "<figcaption>",
+      "<caption>",
+      "<description>",
+      "<details>"
+    ]
+  },
+  {
+    "q": "Which of the following is true about the <section> element in HTML5?",
+    "o": [
+      "It is used to group related content within a document.",
+      "It replaces the <div> tag in HTML5.",
+      "It is used only for navigation links.",
+      "It can only contain <article> elements."
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML5 <canvas> code?",
+    "c": "<canvas id=\"canvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.fillStyle = \"red\";\n  ctx.fillRect(50, 50, 100, 100);\n</script>",
+    "o": [
+      "A red square appears on the canvas.",
+      "A blue square appears on the canvas.",
+      "An error occurs due to missing attributes.",
+      "Nothing appears because JavaScript is not required."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a container for multiple images and their captions?",
+    "o": [
+      "<figure>",
+      "<img>",
+      "<gallery>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "Which attribute is used in the <video> tag to display built-in controls for play, pause, and volume?",
+    "o": [
+      "controls",
+      "autoplay",
+      "muted",
+      "loop"
+    ]
+  },
+  {
+    "q": "Which of the following statements about the <audio> element is correct?",
+    "o": [
+      "It allows embedding of audio files in a webpage.",
+      "It only supports MP3 files.",
+      "It must always have a <track> element.",
+      "It replaces the <sound> tag."
+    ]
+  },
+  {
+    "q": "What will be displayed when the following HTML5 code is executed?",
+    "c": "<header>\n  <h1>Website Title</h1>\n</header>\n<main>\n  <section>\n    <h2>Introduction</h2>\n    <p>Welcome to HTML5.</p>\n  </section>\n</main>",
+    "o": [
+      "A webpage with a title, heading, and paragraph.",
+      "An error due to incorrect <main> usage.",
+      "Only the heading is displayed.",
+      "No content is displayed."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define navigation links?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<aside>",
+      "<footer>"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define video subtitles or captions?",
+    "o": [
+      "<track>",
+      "<caption>",
+      "<subtitle>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "What does the following HTML5 <canvas> code do?",
+    "c": "<canvas id=\"myCanvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"myCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.beginPath();\n  ctx.arc(100, 100, 50, 0, Math.PI * 2);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A circle is drawn on the canvas.",
+      "A rectangle is drawn on the canvas.",
+      "An error occurs due to missing attributes.",
+      "No shape appears."
+    ]
+  },
+  {
+    "q": "Which attribute in the <audio> tag prevents sound from playing initially?",
+    "o": [
+      "muted",
+      "autoplay",
+      "controls",
+      "loop"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define an area in a webpage that is separate from the main content?",
+    "o": [
+      "<aside>",
+      "<article>",
+      "<section>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 code runs?",
+    "c": "<article>\n  <h2>HTML5 Features</h2>\n  <p>HTML5 introduces many new elements.</p>\n</article>",
+    "o": [
+      "An article with a heading and paragraph is displayed.",
+      "An error occurs because <article> cannot contain a heading.",
+      "Only the heading is displayed.",
+      "The browser does not render anything."
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to define the main content of a document?",
+    "o": [
+      "<main>",
+      "<section>",
+      "<article>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 attributes ensures a video loops indefinitely?",
+    "o": [
+      "loop",
+      "autoplay",
+      "muted",
+      "controls"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 video code runs?",
+    "c": "<video width=\"400\" controls autoplay muted>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "The video plays automatically without sound.",
+      "The video plays automatically with sound.",
+      "An error occurs due to incorrect syntax.",
+      "No video appears."
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to define a heading section of a webpage?",
+    "o": [
+      "<header>",
+      "<title>",
+      "<hgroup>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to display dynamic, scriptable graphics?",
+    "o": [
+      "<canvas>",
+      "<svg>",
+      "<graphics>",
+      "<paint>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 <canvas> code runs?",
+    "c": "<canvas id=\"canvas\" width=\"150\" height=\"150\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.font = \"20px Arial\";\n  ctx.fillText(\"Hello!\", 40, 75);\n</script>",
+    "o": [
+      "The text 'Hello!' appears on the canvas.",
+      "A rectangle is drawn on the canvas.",
+      "An error occurs due to incorrect font syntax.",
+      "Nothing appears."
+    ]
+  },
+  {
+    "q": "Which semantic HTML5 element represents a self-contained unit of content that can be independently distributed?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<div>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag specifies that the video should start over again when it is finished?",
+    "o": [
+      "loop",
+      "autoplay",
+      "controls",
+      "muted"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 <canvas> code do?",
+    "c": "<canvas id=\"canvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.fillStyle = \"blue\";\n  ctx.fillRect(20, 20, 100, 100);\n</script>",
+    "o": [
+      "A blue square is drawn on the canvas.",
+      "A red square is drawn on the canvas.",
+      "An error occurs because <canvas> is not supported.",
+      "Nothing appears on the canvas."
+    ]
+  },
+  {
+    "q": "Which semantic element should be used to group together a related set of navigation links?",
+    "o": [
+      "<nav>",
+      "<aside>",
+      "<menu>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element represents supplementary content that is tangentially related to the main content?",
+    "o": [
+      "<aside>",
+      "<footer>",
+      "<article>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will be displayed when the following HTML5 video code is executed?",
+    "c": "<video controls>\n  <source src=\"sample.mp4\" type=\"video/mp4\">\n  <source src=\"sample.ogg\" type=\"video/ogg\">\n</video>",
+    "o": [
+      "A video player with play/pause controls appears.",
+      "An error occurs due to multiple <source> elements.",
+      "Only the first source format is loaded, and others are ignored.",
+      "No video is played."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a header section of a webpage?",
+    "o": [
+      "<header>",
+      "<hgroup>",
+      "<title>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used for rendering graphics dynamically using JavaScript?",
+    "o": [
+      "<canvas>",
+      "<svg>",
+      "<paint>",
+      "<graphics>"
+    ]
+  },
+  {
+    "q": "What will be the result of the following <canvas> drawing operation?",
+    "c": "<canvas id=\"myCanvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"myCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.beginPath();\n  ctx.moveTo(50, 50);\n  ctx.lineTo(150, 50);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A horizontal line is drawn.",
+      "A vertical line is drawn.",
+      "A rectangle is drawn.",
+      "No line is drawn."
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about the <track> element in HTML5?",
+    "o": [
+      "It provides subtitles and captions for videos.",
+      "It is required for all <audio> elements.",
+      "It replaces the <source> tag.",
+      "It only works with MP4 files."
+    ]
+  },
+  {
+    "q": "Which attribute of the <audio> tag specifies that playback should start as soon as the media file is ready?",
+    "o": [
+      "autoplay",
+      "loop",
+      "muted",
+      "preload"
+    ]
+  },
+  {
+    "q": "Which semantic HTML5 tag is used to define the main navigation of a webpage?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<aside>",
+      "<footer>"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to define an HTML5 video element with autoplay and muted properties?",
+    "c": "<video autoplay muted>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "The video plays automatically without sound.",
+      "The video does not play automatically.",
+      "An error occurs because autoplay and muted cannot be used together.",
+      "The video plays automatically with sound."
+    ]
+  },
+  {
+    "q": "Which HTML5 element represents a section of a document that contains interactive controls?",
+    "o": [
+      "<form>",
+      "<button>",
+      "<fieldset>",
+      "<input>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element defines the primary content of a webpage?",
+    "o": [
+      "<main>",
+      "<section>",
+      "<article>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 <canvas> code output?",
+    "c": "<canvas id=\"myCanvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"myCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.fillStyle = \"red\";\n  ctx.arc(100, 100, 50, 0, Math.PI * 2);\n  ctx.fill();\n</script>",
+    "o": [
+      "A filled red circle appears.",
+      "A red square appears.",
+      "Nothing appears on the canvas.",
+      "An error occurs because arc() is not valid."
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to define a block of quoted content?",
+    "o": [
+      "<blockquote>",
+      "<q>",
+      "<cite>",
+      "<quote>"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 <audio> code is executed?",
+    "c": "<audio controls>\n  <source src=\"audio.mp3\" type=\"audio/mpeg\">\n  <source src=\"audio.ogg\" type=\"audio/ogg\">\n</audio>",
+    "o": [
+      "The browser plays the first supported audio format.",
+      "An error occurs because <source> cannot be used multiple times.",
+      "The browser plays all sources simultaneously.",
+      "No audio is played."
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to group related content together?",
+    "o": [
+      "<section>",
+      "<article>",
+      "<aside>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to display text in a fixed-width font for computer code?",
+    "o": [
+      "<code>",
+      "<pre>",
+      "<kbd>",
+      "<tt>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a footer for a document or section?",
+    "o": [
+      "<footer>",
+      "<bottom>",
+      "<section>",
+      "<div>"
+    ]
+  },
+  {
+    "q": "Which attribute of the <video> tag prevents the audio from playing initially?",
+    "o": [
+      "muted",
+      "autoplay",
+      "loop",
+      "preload"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 <canvas> code do?",
+    "c": "<canvas id=\"myCanvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"myCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.fillStyle = \"green\";\n  ctx.fillRect(30, 30, 120, 120);\n</script>",
+    "o": [
+      "A green square appears on the canvas.",
+      "A red square appears on the canvas.",
+      "An error occurs because <canvas> is not supported.",
+      "Nothing appears on the canvas."
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define an independent, self-contained piece of content?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<aside>",
+      "<div>"
+    ]
+  },
+  {
+    "q": "Which semantic HTML5 element is typically used to define introductory content in a section or page?",
+    "o": [
+      "<header>",
+      "<nav>",
+      "<section>",
+      "<main>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 video code runs?",
+    "c": "<video width=\"300\" controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n  <source src=\"movie.ogg\" type=\"video/ogg\">\n</video>",
+    "o": [
+      "A video player appears with play/pause controls.",
+      "An error occurs due to multiple <source> elements.",
+      "Only the first source format is loaded, others are ignored.",
+      "No video is played."
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to draw graphics using JavaScript?",
+    "o": [
+      "<canvas>",
+      "<svg>",
+      "<graphics>",
+      "<paint>"
+    ]
+  },
+  {
+    "q": "What will be the result of the following HTML5 <canvas> drawing?",
+    "c": "<canvas id=\"drawCanvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"drawCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.beginPath();\n  ctx.moveTo(50, 50);\n  ctx.lineTo(150, 50);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A horizontal line appears.",
+      "A vertical line appears.",
+      "A filled rectangle appears.",
+      "No shape appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to provide a heading for a figure element?",
+    "o": [
+      "<figcaption>",
+      "<caption>",
+      "<legend>",
+      "<summary>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element should be used to define important text that should be emphasized?",
+    "o": [
+      "<strong>",
+      "<em>",
+      "<b>",
+      "<i>"
+    ]
+  },
+  {
+    "q": "Which HTML5 attribute in the <video> tag allows a video to play automatically without requiring user input?",
+    "o": [
+      "autoplay",
+      "loop",
+      "muted",
+      "preload"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a group of related options in a form?",
+    "o": [
+      "<fieldset>",
+      "<select>",
+      "<group>",
+      "<legend>"
+    ]
+  },
+  {
+    "q": "What will the following HTML5 <canvas> code output?",
+    "c": "<canvas id=\"drawCanvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"drawCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.fillStyle = \"blue\";\n  ctx.arc(100, 100, 40, 0, Math.PI * 2);\n  ctx.fill();\n</script>",
+    "o": [
+      "A filled blue circle appears.",
+      "A filled red circle appears.",
+      "A filled blue square appears.",
+      "Nothing appears."
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 tags is used to specify video subtitles and captions?",
+    "o": [
+      "<track>",
+      "<caption>",
+      "<subtitle>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to represent a piece of content that is tangentially related to the main content?",
+    "o": [
+      "<aside>",
+      "<article>",
+      "<footer>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 <audio> code is executed?",
+    "c": "<audio controls>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n  <source src=\"sound.ogg\" type=\"audio/ogg\">\n</audio>",
+    "o": [
+      "The browser plays the first supported audio format.",
+      "An error occurs due to multiple <source> elements.",
+      "The browser plays all sources at once.",
+      "No audio is played."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a section with interactive user controls?",
+    "o": [
+      "<form>",
+      "<fieldset>",
+      "<button>",
+      "<input>"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to define a clickable button?",
+    "o": [
+      "<button>",
+      "<input>",
+      "<clickable>",
+      "<label>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define an interactive graphical chart?",
+    "o": [
+      "<canvas>",
+      "<chart>",
+      "<figure>",
+      "<svg>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define the main navigation of a webpage?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<aside>",
+      "<footer>"
+    ]
+  },
+  {
+    "q": "Which attribute of the <video> element specifies an image to be displayed before the video starts?",
+    "o": [
+      "poster",
+      "preload",
+      "muted",
+      "autoplay"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 <canvas> code runs?",
+    "c": "<canvas id=\"drawCanvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"drawCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.font = \"20px Arial\";\n  ctx.fillText(\"Canvas Text\", 50, 100);\n</script>",
+    "o": [
+      "The text 'Canvas Text' appears on the canvas.",
+      "A rectangle appears on the canvas.",
+      "An error occurs due to incorrect font usage.",
+      "Nothing appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to group a set of navigation links?",
+    "o": [
+      "<nav>",
+      "<aside>",
+      "<menu>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to embed an audio file?",
+    "o": [
+      "<audio>",
+      "<sound>",
+      "<media>",
+      "<mp3>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 video code executes?",
+    "c": "<video controls>\n  <source src=\"clip.mp4\" type=\"video/mp4\">\n  <source src=\"clip.webm\" type=\"video/webm\">\n</video>",
+    "o": [
+      "A video player appears with play/pause controls.",
+      "Only the MP4 video is played.",
+      "An error occurs due to multiple <source> tags.",
+      "No video is displayed."
+    ]
+  },
+  {
+    "q": "Which attribute is used in the <video> tag to specify an image to be shown before the video starts?",
+    "o": [
+      "poster",
+      "preload",
+      "autoplay",
+      "thumbnail"
+    ]
+  },
+  {
+    "q": "Which HTML5 element represents the main content of the document?",
+    "o": [
+      "<main>",
+      "<section>",
+      "<article>",
+      "<body>"
+    ]
+  },
+  {
+    "q": "Which of the following is true about the HTML5 <canvas> element?",
+    "o": [
+      "It allows for dynamic, scriptable rendering of 2D shapes and images.",
+      "It automatically scales images to fit the canvas size.",
+      "It does not require JavaScript for rendering.",
+      "It is used for embedding videos."
+    ]
+  },
+  {
+    "q": "What will the following HTML5 <canvas> code do?",
+    "c": "<canvas id=\"myCanvas\" width=\"300\" height=\"300\"></canvas>\n<script>\n  var canvas = document.getElementById(\"myCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.fillStyle = \"red\";\n  ctx.fillRect(50, 50, 100, 100);\n</script>",
+    "o": [
+      "A red square appears on the canvas.",
+      "A blue square appears on the canvas.",
+      "An error occurs because <canvas> is not supported.",
+      "Nothing appears on the canvas."
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define self-contained content, such as a blog post?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<div>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which attribute of the <audio> element ensures that the audio starts playing automatically?",
+    "o": [
+      "autoplay",
+      "loop",
+      "muted",
+      "preload"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML5 <canvas> drawing code?",
+    "c": "<canvas id=\"canvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.beginPath();\n  ctx.arc(100, 100, 50, 0, Math.PI * 2);\n  ctx.fillStyle = \"blue\";\n  ctx.fill();\n</script>",
+    "o": [
+      "A blue circle appears on the canvas.",
+      "A blue square appears on the canvas.",
+      "An error occurs because arc() is invalid.",
+      "No shape appears."
+    ]
+  },
+  {
+    "q": "Which of the following elements should be used for embedding a video?",
+    "o": [
+      "<video>",
+      "<media>",
+      "<mp4>",
+      "<embed>"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to specify additional information related to the main content?",
+    "o": [
+      "<aside>",
+      "<article>",
+      "<summary>",
+      "<footer>"
+    ]
+  },
+  {
+    "q": "What does the <track> element do in the <video> tag?",
+    "o": [
+      "It provides subtitles and captions.",
+      "It replaces the <source> tag.",
+      "It is required for all <video> elements.",
+      "It only works with MP4 files."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to structure content into logical sections?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<aside>",
+      "<main>"
+    ]
+  },
+  {
+    "q": "Which attribute of the <audio> tag tells the browser to load the audio when the page loads?",
+    "o": [
+      "preload",
+      "autoplay",
+      "loop",
+      "buffer"
+    ]
+  },
+  {
+    "q": "Which semantic HTML5 element is best suited for the main heading and introductory text of a webpage?",
+    "o": [
+      "<header>",
+      "<nav>",
+      "<section>",
+      "<article>"
+    ]
+  },
+  {
+    "q": "What will be displayed when the following HTML5 <canvas> script is run?",
+    "c": "<canvas id=\"canvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.moveTo(20, 20);\n  ctx.lineTo(180, 20);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A horizontal line appears on the canvas.",
+      "A vertical line appears on the canvas.",
+      "A rectangle appears on the canvas.",
+      "No line appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to display vector graphics?",
+    "o": [
+      "<svg>",
+      "<canvas>",
+      "<graphic>",
+      "<vector>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag ensures the video starts over again after finishing?",
+    "o": [
+      "loop",
+      "autoplay",
+      "muted",
+      "preload"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to define a caption for a <figure> element?",
+    "o": [
+      "<figcaption>",
+      "<caption>",
+      "<legend>",
+      "<description>"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 <audio> code executes?",
+    "c": "<audio controls>\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n  <source src=\"song.ogg\" type=\"audio/ogg\">\n</audio>",
+    "o": [
+      "The first supported audio format is played.",
+      "The browser plays all sources simultaneously.",
+      "An error occurs due to multiple <source> elements.",
+      "No audio is played."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define content that is tangentially related to the main content?",
+    "o": [
+      "<aside>",
+      "<section>",
+      "<footer>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to group headings and related content together?",
+    "o": [
+      "<header>",
+      "<nav>",
+      "<section>",
+      "<article>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 <canvas> code runs?",
+    "c": "<canvas id=\"canvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.beginPath();\n  ctx.arc(100, 100, 50, 0, Math.PI);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A semi-circle appears.",
+      "A full circle appears.",
+      "A square appears.",
+      "Nothing appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a section of a document that includes navigation links?",
+    "o": [
+      "<nav>",
+      "<header>",
+      "<section>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which attribute of the <video> element ensures that the video starts playing as soon as it loads?",
+    "o": [
+      "autoplay",
+      "loop",
+      "controls",
+      "poster"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 <canvas> drawing code is executed?",
+    "c": "<canvas id=\"myCanvas\" width=\"300\" height=\"300\"></canvas>\n<script>\n  var canvas = document.getElementById(\"myCanvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.fillStyle = \"yellow\";\n  ctx.fillRect(50, 50, 150, 150);\n</script>",
+    "o": [
+      "A yellow square appears.",
+      "A red square appears.",
+      "A yellow circle appears.",
+      "No shape appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a self-contained piece of content such as a blog post?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<div>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a container for multiple images with optional captions?",
+    "o": [
+      "<figure>",
+      "<img>",
+      "<gallery>",
+      "<figcaption>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the <track> element inside the <video> tag?",
+    "o": [
+      "To provide captions or subtitles.",
+      "To define alternative video sources.",
+      "To preload the video file.",
+      "To control video playback speed."
+    ]
+  },
+  {
+    "q": "Which attribute in the <audio> tag specifies whether the audio should restart automatically after finishing?",
+    "o": [
+      "loop",
+      "autoplay",
+      "controls",
+      "preload"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to display graphics using JavaScript?",
+    "o": [
+      "<canvas>",
+      "<svg>",
+      "<graphic>",
+      "<paint>"
+    ]
+  },
+  {
+    "q": "What does the following HTML5 <canvas> script draw?",
+    "c": "<canvas id=\"canvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.fillStyle = \"purple\";\n  ctx.fillRect(20, 20, 100, 50);\n</script>",
+    "o": [
+      "A purple rectangle appears.",
+      "A purple square appears.",
+      "A purple circle appears.",
+      "Nothing appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define subtitles for a video?",
+    "o": [
+      "<track>",
+      "<subtitle>",
+      "<caption>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a container for a section of content?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<span>",
+      "<article>"
+    ]
+  },
+  {
+    "q": "Which attribute of the <video> tag provides an image to display before the video starts?",
+    "o": [
+      "poster",
+      "preload",
+      "autoplay",
+      "muted"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 <canvas> script executes?",
+    "c": "<canvas id=\"canvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.font = \"20px Arial\";\n  ctx.fillText(\"Hello Canvas\", 50, 100);\n</script>",
+    "o": [
+      "The text 'Hello Canvas' appears on the canvas.",
+      "A rectangle appears.",
+      "An error occurs due to incorrect font usage.",
+      "No text appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a block of related navigation links?",
+    "o": [
+      "<nav>",
+      "<header>",
+      "<section>",
+      "<article>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to provide a description for an image or figure?",
+    "o": [
+      "<figcaption>",
+      "<caption>",
+      "<legend>",
+      "<description>"
+    ]
+  },
+  {
+    "q": "What will be displayed when the following HTML5 <canvas> script is executed?",
+    "c": "<canvas id=\"canvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.beginPath();\n  ctx.moveTo(50, 50);\n  ctx.lineTo(150, 50);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A horizontal line appears.",
+      "A vertical line appears.",
+      "A filled rectangle appears.",
+      "No shape appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to represent the main content of the document?",
+    "o": [
+      "<main>",
+      "<section>",
+      "<article>",
+      "<body>"
+    ]
+  },
+  {
+    "q": "Which attribute of the <video> element specifies an alternative video format?",
+    "o": [
+      "source",
+      "format",
+      "type",
+      "alt"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 <audio> code executes?",
+    "c": "<audio controls>\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n  <source src=\"song.ogg\" type=\"audio/ogg\">\n</audio>",
+    "o": [
+      "The first supported audio format is played.",
+      "The browser plays all sources at once.",
+      "An error occurs due to multiple <source> elements.",
+      "No audio is played."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a section of the document that contains introductory content?",
+    "o": [
+      "<header>",
+      "<section>",
+      "<aside>",
+      "<footer>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is best for wrapping a group of navigation links?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<div>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 <canvas> code is executed?",
+    "c": "<canvas id=\"canvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.strokeStyle = \"green\";\n  ctx.lineWidth = 5;\n  ctx.strokeRect(50, 50, 100, 100);\n</script>",
+    "o": [
+      "A green outlined square appears.",
+      "A green filled square appears.",
+      "An error occurs.",
+      "No shape appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 attribute is used in the <audio> element to mute the audio by default?",
+    "o": [
+      "muted",
+      "autoplay",
+      "controls",
+      "loop"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 <canvas> script is run?",
+    "c": "<canvas id=\"canvas\" width=\"300\" height=\"150\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.beginPath();\n  ctx.arc(75, 75, 50, 0, Math.PI * 2);\n  ctx.fillStyle = \"orange\";\n  ctx.fill();\n</script>",
+    "o": [
+      "An orange circle appears.",
+      "A red circle appears.",
+      "An error occurs due to arc() function.",
+      "Nothing appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to provide structured metadata about a webpage?",
+    "o": [
+      "<meta>",
+      "<head>",
+      "<data>",
+      "<info>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 <video> tag is used?",
+    "c": "<video width=\"320\" height=\"240\" controls autoplay>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <source src=\"video.ogg\" type=\"video/ogg\">\n</video>",
+    "o": [
+      "The video plays automatically if autoplay is supported.",
+      "The user must click play to start the video.",
+      "The video will not play due to multiple <source> tags.",
+      "The video loops infinitely."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a footer for a section or document?",
+    "o": [
+      "<footer>",
+      "<bottom>",
+      "<section>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used for embedding a YouTube video?",
+    "o": [
+      "<iframe>",
+      "<video>",
+      "<embed>",
+      "<media>"
+    ]
+  },
+  {
+    "q": "Which of the following is true about the <canvas> element in HTML5?",
+    "o": [
+      "It requires JavaScript to draw graphics.",
+      "It automatically scales graphics.",
+      "It is used to display static images.",
+      "It does not support animations."
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 <canvas> script executes?",
+    "c": "<canvas id=\"canvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.fillStyle = \"blue\";\n  ctx.fillRect(30, 30, 80, 40);\n</script>",
+    "o": [
+      "A blue rectangle appears.",
+      "A blue square appears.",
+      "An error occurs due to incorrect syntax.",
+      "Nothing appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a caption for a table?",
+    "o": [
+      "<caption>",
+      "<summary>",
+      "<thead>",
+      "<legend>"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to display inline audio controls?",
+    "o": [
+      "<audio>",
+      "<sound>",
+      "<media>",
+      "<mp3>"
+    ]
+  },
+  {
+    "q": "Which attribute of the <video> element ensures the video plays in a continuous loop?",
+    "o": [
+      "loop",
+      "autoplay",
+      "muted",
+      "preload"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to create interactive web graphics?",
+    "o": [
+      "<canvas>",
+      "<svg>",
+      "<img>",
+      "<graphics>"
+    ]
+  },
+  {
+    "q": "What does the following HTML5 <canvas> script do?",
+    "c": "<canvas id=\"canvas\" width=\"300\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.fillStyle = \"red\";\n  ctx.fillRect(100, 50, 50, 50);\n</script>",
+    "o": [
+      "A red square appears.",
+      "A blue rectangle appears.",
+      "An error occurs due to incorrect syntax.",
+      "Nothing appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a self-contained piece of content?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<div>",
+      "<span>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 <canvas> script runs?",
+    "c": "<canvas id=\"canvas\" width=\"400\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.font = \"30px Arial\";\n  ctx.fillText(\"HTML5 Canvas\", 50, 100);\n</script>",
+    "o": [
+      "The text 'HTML5 Canvas' appears on the canvas.",
+      "An error occurs because text cannot be drawn on <canvas>.",
+      "Nothing appears on the canvas.",
+      "A rectangle appears instead of text."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a graphical representation of data?",
+    "o": [
+      "<canvas>",
+      "<svg>",
+      "<img>",
+      "<graph>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element provides a user-friendly way to embed a video?",
+    "o": [
+      "<video>",
+      "<embed>",
+      "<iframe>",
+      "<object>"
+    ]
+  },
+  {
+    "q": "What does the <source> element do inside a <video> tag?",
+    "o": [
+      "Specifies alternative video formats.",
+      "Adds captions to a video.",
+      "Controls video playback.",
+      "Adds a poster image."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a section of content that is independent and self-contained?",
+    "o": [
+      "<article>",
+      "<section>",
+      "<div>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which of the following is a new semantic tag introduced in HTML5?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<span>",
+      "<bold>"
+    ]
+  },
+  {
+    "q": "Which attribute of the <video> element prevents the audio from playing?",
+    "o": [
+      "muted",
+      "autoplay",
+      "loop",
+      "poster"
+    ]
+  },
+  {
+    "q": "What will be displayed when the following HTML5 <canvas> script is executed?",
+    "c": "<canvas id=\"canvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.moveTo(50, 50);\n  ctx.lineTo(150, 150);\n  ctx.stroke();\n</script>",
+    "o": [
+      "A diagonal line appears.",
+      "A horizontal line appears.",
+      "A vertical line appears.",
+      "No shape appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to group related form elements together?",
+    "o": [
+      "<fieldset>",
+      "<form>",
+      "<section>",
+      "<div>"
+    ]
+  },
+  {
+    "q": "Which HTML5 attribute specifies an image to be displayed while a video is loading?",
+    "o": [
+      "poster",
+      "preload",
+      "autoplay",
+      "muted"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to contain graphics drawn via JavaScript?",
+    "o": [
+      "<canvas>",
+      "<svg>",
+      "<graphics>",
+      "<img>"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 <canvas> script executes?",
+    "c": "<canvas id=\"canvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.beginPath();\n  ctx.arc(100, 100, 40, 0, Math.PI * 2);\n  ctx.fillStyle = \"green\";\n  ctx.fill();\n</script>",
+    "o": [
+      "A green circle appears.",
+      "A red circle appears.",
+      "A filled rectangle appears.",
+      "Nothing appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to provide a caption for a figure?",
+    "o": [
+      "<figcaption>",
+      "<caption>",
+      "<legend>",
+      "<description>"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to embed an audio file?",
+    "o": [
+      "<audio>",
+      "<sound>",
+      "<media>",
+      "<mp3>"
+    ]
+  },
+  {
+    "q": "What does the 'controls' attribute do in the <video> element?",
+    "o": [
+      "Displays built-in video controls.",
+      "Starts video playback automatically.",
+      "Hides the video from users.",
+      "Loops the video indefinitely."
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define navigation links?",
+    "o": [
+      "<nav>",
+      "<header>",
+      "<footer>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 <canvas> script runs?",
+    "c": "<canvas id=\"canvas\" width=\"300\" height=\"150\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.fillStyle = \"blue\";\n  ctx.fillRect(40, 20, 100, 50);\n</script>",
+    "o": [
+      "A blue rectangle appears.",
+      "A green rectangle appears.",
+      "A blue circle appears.",
+      "No shape appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define the main content of a webpage?",
+    "o": [
+      "<main>",
+      "<section>",
+      "<article>",
+      "<body>"
+    ]
+  },
+  {
+    "q": "Which HTML5 tag is used to define a container for a captioned image?",
+    "o": [
+      "<figure>",
+      "<img>",
+      "<gallery>",
+      "<figcaption>"
+    ]
+  },
+  {
+    "q": "What happens when the following HTML5 <canvas> script executes?",
+    "c": "<canvas id=\"canvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.font = \"24px Arial\";\n  ctx.fillText(\"Canvas Text\", 50, 100);\n</script>",
+    "o": [
+      "The text 'Canvas Text' appears on the canvas.",
+      "A rectangle appears instead of text.",
+      "An error occurs due to missing font settings.",
+      "No text appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to define a section of the document intended to be a sidebar?",
+    "o": [
+      "<aside>",
+      "<section>",
+      "<article>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "Which attribute of the <audio> element starts playback automatically?",
+    "o": [
+      "autoplay",
+      "loop",
+      "controls",
+      "muted"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML5 <canvas> script is executed?",
+    "c": "<canvas id=\"canvas\" width=\"200\" height=\"200\"></canvas>\n<script>\n  var canvas = document.getElementById(\"canvas\");\n  var ctx = canvas.getContext(\"2d\");\n  ctx.strokeStyle = \"black\";\n  ctx.lineWidth = 4;\n  ctx.strokeRect(60, 60, 80, 80);\n</script>",
+    "o": [
+      "A black outlined square appears.",
+      "A black filled square appears.",
+      "A black circle appears.",
+      "No shape appears."
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to represent a group of related options in a form?",
+    "o": [
+      "<optgroup>",
+      "<select>",
+      "<fieldset>",
+      "<option>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the <track> element in the <video> tag?",
+    "o": [
+      "To provide captions or subtitles.",
+      "To preload the video file.",
+      "To specify alternative video sources.",
+      "To define looping behavior."
+    ]
+  }
+]

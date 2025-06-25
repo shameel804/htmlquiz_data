@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Hover Effects",
+    "ques": "How can you change the background color of a button when the user hovers over it?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "button:hover {\n  background-color: blue;\n  color: white;\n}"
+    },
+    "explanation": "The ```:hover``` pseudo-class is used to apply styles when the user hovers over an element.\n\n- ```button:hover``` → Targets the ```<button>``` element when hovered.\n- ```background-color: blue;``` → Changes the background color to blue.\n- ```color: white;``` → Changes the text color to white."
+  },
+  {
+    "title": "First Child Selector",
+    "ques": "How can you style only the first paragraph inside a div?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div p:first-child {\n  font-weight: bold;\n  color: red;\n}"
+    },
+    "explanation": "The ```:first-child``` pseudo-class selects the first child of its parent.\n\n- ```div p:first-child``` → Selects the first ```<p>``` inside a ```<div>```.\n- ```font-weight: bold;``` → Makes the text bold.\n- ```color: red;``` → Changes the text color to red."
+  },
+  {
+    "title": "::before Pseudo-element",
+    "ques": "How can you add content before a heading using CSS?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "h1::before {\n  content: '★ ';\n  color: gold;\n}"
+    },
+    "explanation": "The ```::before``` pseudo-element is used to insert content before an element.\n\n- ```h1::before``` → Targets all ```<h1>``` elements.\n- ```content: '★ ';``` → Inserts a star symbol before the text.\n- ```color: gold;``` → Colors the star gold."
+  },
+  {
+    "title": "::after Pseudo-element",
+    "ques": "How can you add a decorative line after a heading using CSS?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "h1::after {\n  content: '';\n  display: block;\n  width: 100%;\n  height: 3px;\n  background-color: black;\n}"
+    },
+    "explanation": "The ```::after``` pseudo-element is used to insert content after an element.\n\n- ```h1::after``` → Targets all ```<h1>``` elements.\n- ```content: '';``` → Ensures an empty content box is created.\n- ```display: block;``` → Makes it behave like a block element.\n- ```width: 100%;``` → Makes it span the full width of the heading.\n- ```height: 3px;``` → Sets the height of the line.\n- ```background-color: black;``` → Colors the line black."
+  },
+  {
+    "title": "nth-child Selector",
+    "ques": "How can you style every even row of a table?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "tr:nth-child(even) {\n  background-color: lightgray;\n}"
+    },
+    "explanation": "The ```:nth-child(n)``` pseudo-class selects elements based on their order.\n\n- ```tr:nth-child(even)``` → Selects all even rows in a ```<table>```.\n- ```background-color: lightgray;``` → Sets the background color to light gray."
+  },
+  {
+    "title": "Hover Image Opacity",
+    "ques": "How can you reduce the opacity of an image when the user hovers over it?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "img:hover {\n  opacity: 0.5;\n  transition: opacity 0.3s ease;\n}"
+    },
+    "explanation": "The ```:hover``` pseudo-class applies styles when an element is hovered over.\n\n- ```img:hover``` → Targets all ```<img>``` elements when hovered.\n- ```opacity: 0.5;``` → Reduces the image's opacity to 50%.\n- ```transition: opacity 0.3s ease;``` → Smoothly transitions the opacity change over 0.3 seconds."
+  },
+  {
+    "title": "Highlight the First Letter",
+    "ques": "How can you make the first letter of a paragraph larger and a different color?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p::first-letter {\n  font-size: 2em;\n  color: blue;\n  font-weight: bold;\n}"
+    },
+    "explanation": "The ```::first-letter``` pseudo-element targets the first letter of an element.\n\n- ```p::first-letter``` → Selects the first letter of all ```<p>``` elements.\n- ```font-size: 2em;``` → Makes the letter twice the normal font size.\n- ```color: blue;``` → Changes the letter color to blue.\n- ```font-weight: bold;``` → Makes the letter bold."
+  },
+  {
+    "title": "Styling Links Based on Visit",
+    "ques": "How can you style a link differently if it has been visited before?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "a:visited {\n  color: purple;\n}"
+    },
+    "explanation": "The ```:visited``` pseudo-class applies styles to links that have been visited.\n\n- ```a:visited``` → Targets all ```<a>``` elements that have been clicked before.\n- ```color: purple;``` → Changes the color of visited links to purple."
+  },
+  {
+    "title": "Style Only the Last Child",
+    "ques": "How can you apply a different background color only to the last item in a list?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "li:last-child {\n  background-color: yellow;\n}"
+    },
+    "explanation": "The ```:last-child``` pseudo-class selects the last child of a parent element.\n\n- ```li:last-child``` → Targets only the last ```<li>``` inside a ```<ul>``` or ```<ol>```.\n- ```background-color: yellow;``` → Changes the last list item’s background color to yellow."
+  },
+  {
+    "title": "Adding a Decorative Border Before a Heading",
+    "ques": "How can you add a vertical border before an ```<h2>``` heading?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "h2::before {\n  content: '';\n  display: inline-block;\n  width: 5px;\n  height: 100%;\n  background-color: red;\n  margin-right: 10px;\n}"
+    },
+    "explanation": "The ```::before``` pseudo-element is used to insert content before an element.\n\n- ```h2::before``` → Targets all ```<h2>``` elements.\n- ```content: '';``` → Creates an empty content box.\n- ```display: inline-block;``` → Ensures it behaves like an inline element.\n- ```width: 5px; height: 100%;``` → Creates a thin vertical border.\n- ```background-color: red;``` → Sets the color of the border.\n- ```margin-right: 10px;``` → Adds spacing between the border and text."
+  },
+  {
+    "title": "Create a Tooltip with ::after",
+    "ques": "How can you show a tooltip when a user hovers over a button using ```::after```?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "button:hover::after {\n  content: 'Click me!';\n  display: block;\n  background: black;\n  color: white;\n  padding: 5px;\n  position: absolute;\n  top: -30px;\n  left: 50%;\n  transform: translateX(-50%);\n  border-radius: 5px;\n}"
+    },
+    "explanation": "The ```::after``` pseudo-element is used to insert content after an element.\n\n- ```button:hover::after``` → Adds content only when the button is hovered.\n- ```content: 'Click me!';``` → Displays the tooltip text.\n- ```display: block;``` → Ensures the tooltip appears as a block element.\n- ```background: black; color: white;``` → Styles the tooltip for readability.\n- ```padding: 5px;``` → Adds space inside the tooltip.\n- ```position: absolute;``` → Positions the tooltip relative to the button.\n- ```top: -30px; left: 50%; transform: translateX(-50%);``` → Centers the tooltip above the button.\n- ```border-radius: 5px;``` → Rounds the corners of the tooltip."
+  },
+  {
+    "title": "Targeting Even and Odd Rows in a Table",
+    "ques": "How can you apply different background colors to even and odd rows of a table?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "tr:nth-child(even) {\n  background-color: #f2f2f2;\n}\ntr:nth-child(odd) {\n  background-color: white;\n}"
+    },
+    "explanation": "The ```:nth-child()``` pseudo-class selects elements based on their order.\n\n- ```tr:nth-child(even)``` → Selects even-numbered ```<tr>``` elements.\n- ```background-color: #f2f2f2;``` → Sets a light gray background for even rows.\n- ```tr:nth-child(odd)``` → Selects odd-numbered ```<tr>``` elements.\n- ```background-color: white;``` → Ensures odd rows have a white background."
+  },
+  {
+    "title": "Underline Only on Hover",
+    "ques": "How can you make a link appear without an underline but show an underline when hovered?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "a {\n  text-decoration: none;\n}\na:hover {\n  text-decoration: underline;\n}"
+    },
+    "explanation": "The ```:hover``` pseudo-class changes styles when the user hovers over an element.\n\n- ```a { text-decoration: none; }``` → Removes the underline from all links.\n- ```a:hover { text-decoration: underline; }``` → Restores the underline when hovered."
+  },
+  {
+    "title": "Style First List Item",
+    "ques": "How can you make only the first list item bold and blue?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "li:first-child {\n  font-weight: bold;\n  color: blue;\n}"
+    },
+    "explanation": "The ```:first-child``` pseudo-class selects the first child of a parent element.\n\n- ```li:first-child``` → Targets the first ```<li>``` inside a ```<ul>``` or ```<ol>```.\n- ```font-weight: bold;``` → Makes the text bold.\n- ```color: blue;``` → Changes the text color to blue."
+  },
+  {
+    "title": "Add Icon Before Paragraph",
+    "ques": "How can you add an emoji (📌) before each paragraph?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p::before {\n  content: '📌';\n  margin-right: 5px;\n}"
+    },
+    "explanation": "The ```::before``` pseudo-element adds content before an element.\n\n- ```p::before``` → Adds content before every ```<p>```.\n- ```content: '📌';``` → Inserts a pin emoji before the paragraph.\n- ```margin-right: 5px;``` → Adds space between the emoji and text."
+  },
+  {
+    "title": "Custom Checkbox Styling",
+    "ques": "How can you style checkboxes using the ```:checked``` pseudo-class?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "input[type='checkbox']:checked + label {\n  color: green;\n  font-weight: bold;\n}"
+    },
+    "explanation": "The ```:checked``` pseudo-class applies styles to checked checkboxes.\n\n- ```input[type='checkbox']:checked``` → Targets checked checkboxes.\n- ```+ label``` → Styles the label next to the checked checkbox.\n- ```color: green;``` → Changes the label text color to green.\n- ```font-weight: bold;``` → Makes the label text bold."
+  },
+  {
+    "title": "Custom Placeholder Text Color",
+    "ques": "How can you change the color of placeholder text inside an input field?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "input::placeholder {\n  color: gray;\n  font-style: italic;\n}"
+    },
+    "explanation": "The ```::placeholder``` pseudo-element styles placeholder text inside input fields.\n\n- ```input::placeholder``` → Selects placeholder text inside ```<input>```.\n- ```color: gray;``` → Changes placeholder text color to gray.\n- ```font-style: italic;``` → Makes placeholder text italic."
+  },
+  {
+    "title": "Change Button Color on Focus",
+    "ques": "How can you change a button’s background color when it is focused?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "button:focus {\n  background-color: orange;\n  outline: none;\n}"
+    },
+    "explanation": "The ```:focus``` pseudo-class applies styles when an element is focused.\n\n- ```button:focus``` → Targets buttons when clicked or tabbed to.\n- ```background-color: orange;``` → Changes the background color to orange.\n- ```outline: none;``` → Removes the default focus outline."
+  },
+  {
+    "title": "Style Input When Empty",
+    "ques": "How can you style an input field only when it's empty?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "input:empty {\n  border: 2px dashed red;\n}"
+    },
+    "explanation": "The ```:empty``` pseudo-class selects elements that contain no children.\n\n- ```input:empty``` → Targets empty input fields.\n- ```border: 2px dashed red;``` → Adds a red dashed border to highlight the empty field."
+  },
+  {
+    "title": "Make Even List Items Italic",
+    "ques": "How can you make only even list items italic?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "li:nth-child(even) {\n  font-style: italic;\n}"
+    },
+    "explanation": "The ```:nth-child(even)``` pseudo-class selects even-numbered elements.\n\n- ```li:nth-child(even)``` → Targets every second list item.\n- ```font-style: italic;``` → Makes the text italic."
+  },
+  {
+    "title": "Custom Cursor on Hover",
+    "ques": "How can you change the cursor to a pointer when hovering over a div?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div:hover {\n  cursor: pointer;\n}"
+    },
+    "explanation": "The ```:hover``` pseudo-class applies styles when an element is hovered over.\n\n- ```div:hover``` → Targets ```<div>``` elements when hovered.\n- ```cursor: pointer;``` → Changes the cursor to a hand icon."
+  },
+  {
+    "title": "Add a Decorative Line After a Heading",
+    "ques": "How can you add a horizontal line after an ```<h1>``` heading?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "h1::after {\n  content: '';\n  display: block;\n  width: 100%;\n  height: 2px;\n  background-color: black;\n  margin-top: 10px;\n}"
+    },
+    "explanation": "The ```::after``` pseudo-element adds content after an element.\n\n- ```h1::after``` → Targets ```<h1>``` elements.\n- ```content: '';``` → Creates an empty content block.\n- ```display: block;``` → Ensures it takes up space below the heading.\n- ```width: 100%; height: 2px;``` → Creates a horizontal line.\n- ```background-color: black;``` → Colors the line black.\n- ```margin-top: 10px;``` → Adds space between the heading and line."
+  }
+]

@@ -1,0 +1,343 @@
+[
+  {
+    "q": "What does this code do?",
+    "l": "css",
+    "c": "@media (max-width: 600px) {\n    body {\n        background-color: lightblue;\n    }\n}",
+    "o": [
+      "Changes bg on small screens",
+      "No effect",
+      "Styles all screens",
+      "Last screen"
+    ]
+  },
+  {
+    "q": "What does this property do?",
+    "l": "css",
+    "c": "grid-template-columns: repeat(3, 1fr);",
+    "o": [
+      "Creates 3 equal columns",
+      "No effect",
+      "Creates 1 column",
+      "Creates 2 columns"
+    ]
+  },
+  {
+    "q": "What does this code achieve?",
+    "l": "css",
+    "c": "transition: all 0.3s ease;",
+    "o": [
+      "Smooth transitions for all",
+      "No effect",
+      "Transitions only colors",
+      "Transitions only widths"
+    ]
+  },
+  {
+    "q": "What does this style do?",
+    "l": "css",
+    "c": "flex-direction: column-reverse;",
+    "o": [
+      "Reverses column order",
+      "No effect",
+      "Reverses row order",
+      "Aligns items center"
+    ]
+  },
+  {
+    "q": "What does this code apply to?",
+    "l": "css",
+    "c": "position: sticky;\n    top: 0;",
+    "o": [
+      "Sticky positioning at top",
+      "No effect",
+      "Absolute positioning",
+      "Fixed positioning"
+    ]
+  },
+  {
+    "q": "What does this code do?",
+    "l": "css",
+    "c": "animation: fade 2s infinite;",
+    "o": [
+      "Fades element infinitely",
+      "No effect",
+      "Animates width",
+      "Hides element"
+    ]
+  },
+  {
+    "q": "What does this style achieve?",
+    "l": "css",
+    "c": "clip-path: circle(50%);",
+    "o": [
+      "Creates a circular mask",
+      "No effect",
+      "Rectangular mask",
+      "Elliptical mask"
+    ]
+  },
+  {
+    "q": "What does this property do?",
+    "l": "css",
+    "c": "display: grid;",
+    "o": [
+      "Enables grid layout",
+      "No effect",
+      "Flex layout",
+      "Block layout"
+    ]
+  },
+  {
+    "q": "What does this code achieve?",
+    "l": "css",
+    "c": "overflow: hidden;",
+    "o": [
+      "Hides overflow content",
+      "No effect",
+      "Displays overflow",
+      "Scrolls overflow"
+    ]
+  },
+  {
+    "q": "What does this style apply to?",
+    "l": "css",
+    "c": "filter: blur(5px);",
+    "o": [
+      "Blurs the element",
+      "No effect",
+      "Sharpens the element",
+      "Fades the element"
+    ]
+  },
+  {
+    "q": "What does this code do?",
+    "l": "css",
+    "c": "text-shadow: 2px 2px 5px black;",
+    "o": [
+      "Adds shadow to text",
+      "No effect",
+      "Hides text",
+      "Increases text size"
+    ]
+  },
+  {
+    "q": "What does this style achieve?",
+    "l": "css",
+    "c": "justify-content: space-between;",
+    "o": [
+      "Spaces items evenly",
+      "No effect",
+      "Aligns items to center",
+      "Floats items left"
+    ]
+  },
+  {
+    "q": "What does this code do?",
+    "l": "css",
+    "c": "background: linear-gradient(to right, red, blue);",
+    "o": [
+      "Creates a gradient bg",
+      "No effect",
+      "Solid color bg",
+      "Repeating bg"
+    ]
+  },
+  {
+    "q": "What does this style apply to?",
+    "l": "css",
+    "c": "list-style-type: none;",
+    "o": [
+      "Removes list bullets",
+      "No effect",
+      "Adds bullets",
+      "Hides list"
+    ]
+  },
+  {
+    "q": "What does this code do?",
+    "l": "css",
+    "c": "z-index: 10;",
+    "o": [
+      "Sets stacking order",
+      "No effect",
+      "Hides element",
+      "Moves element"
+    ]
+  },
+  {
+    "q": "What does this style achieve?",
+    "l": "css",
+    "c": "opacity: 0.5;",
+    "o": [
+      "Makes element semi-transparent",
+      "No effect",
+      "Fades element completely",
+      "Hides element"
+    ]
+  },
+  {
+    "q": "What does this code do?",
+    "l": "css",
+    "c": "grid-gap: 10px;",
+    "o": [
+      "Sets gap between grid items",
+      "No effect",
+      "Margin for grid",
+      "Padding for grid"
+    ]
+  },
+  {
+    "q": "What does this property do?",
+    "l": "css",
+    "c": "max-width: 100%;",
+    "o": [
+      "Limits element width",
+      "No effect",
+      "Sets height",
+      "Resizes element"
+    ]
+  },
+  {
+    "q": "What does this code achieve?",
+    "l": "css",
+    "c": "border-radius: 50%;",
+    "o": [
+      "Creates circular shape",
+      "No effect",
+      "Sharp corners",
+      "Rectangular shape"
+    ]
+  },
+  {
+    "q": "What does this style apply to?",
+    "l": "css",
+    "c": "white-space: nowrap;",
+    "o": [
+      "Prevents line breaks",
+      "No effect",
+      "Allows wrapping",
+      "Increases spacing"
+    ]
+  },
+  {
+    "q": "What does this code do?",
+    "l": "css",
+    "c": "align-items: center;",
+    "o": [
+      "Centers items in flex container",
+      "No effect",
+      "Floats items",
+      "Spaces items evenly"
+    ]
+  },
+  {
+    "q": "What does this style achieve?",
+    "l": "css",
+    "c": "background-color: rgba(255, 0, 0, 0.5);",
+    "o": [
+      "Red with transparency",
+      "Solid red",
+      "No effect",
+      "Hides background"
+    ]
+  },
+  {
+    "q": "What does this code apply to?",
+    "l": "css",
+    "c": "transition: transform 0.2s;",
+    "o": [
+      "Smooth transform transitions",
+      "No effect",
+      "Instant transform",
+      "All properties"
+    ]
+  },
+  {
+    "q": "What does this property do?",
+    "l": "css",
+    "c": "flex-wrap: wrap;",
+    "o": [
+      "Wraps flex items",
+      "No effect",
+      "Floats items",
+      "Aligns items"
+    ]
+  },
+  {
+    "q": "What does this code do?",
+    "l": "css",
+    "c": "border: 1px solid black;",
+    "o": [
+      "Adds black border",
+      "No effect",
+      "Removes border",
+      "Styles background"
+    ]
+  },
+  {
+    "q": "What does this style achieve?",
+    "l": "css",
+    "c": "grid-template-rows: auto 1fr auto;",
+    "o": [
+      "Creates 3 rows layout",
+      "No effect",
+      "Creates single row",
+      "Equal rows layout"
+    ]
+  },
+  {
+    "q": "What does this code do?",
+    "l": "css",
+    "c": "text-align: justify;",
+    "o": [
+      "Justifies text",
+      "No effect",
+      "Aligns left",
+      "Aligns right"
+    ]
+  },
+  {
+    "q": "What does this style apply to?",
+    "l": "css",
+    "c": "cursor: pointer;",
+    "o": [
+      "Shows hand cursor",
+      "No effect",
+      "Hides cursor",
+      "Changes color"
+    ]
+  },
+  {
+    "q": "What does this code achieve?",
+    "l": "css",
+    "c": "background-size: cover;",
+    "o": [
+      "Covers background area",
+      "No effect",
+      "Tiles background",
+      "Resizes image"
+    ]
+  },
+  {
+    "q": "What does this property do?",
+    "l": "css",
+    "c": "font-size: 2rem;",
+    "o": [
+      "Sets font size relative",
+      "No effect",
+      "Sets line height",
+      "Styles font"
+    ]
+  },
+  {
+    "q": "What does this style do?",
+    "l": "css",
+    "c": "position: absolute;\n    top: 0;\n    left: 0;",
+    "o": [
+      "Positions element at top-left",
+      "No effect",
+      "Fixes element",
+      "Floats element"
+    ]
+  }
+]

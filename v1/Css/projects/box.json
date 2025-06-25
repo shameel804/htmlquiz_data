@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Understanding Margin",
+    "ques": "How can you add a 20px margin around a div element in CSS?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  margin: 20px;\n}"
+    },
+    "explanation": "***Margin*** is the space outside the border of an element.\n\nThe given CSS rule:\n\n- The ```margin``` property is set to ```20px```, which applies a ***20-pixel space*** around all four sides of the ```div``` element.\n- This ensures that the element is not touching its adjacent elements but instead has a gap of ***20px***."
+  },
+  {
+    "title": "Using Border in Box Model",
+    "ques": "How can you create a red border of 5px thickness around a div?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  border: 5px solid red;\n}"
+    },
+    "explanation": "***Border*** is the line that surrounds the padding and content of an element.\n\nThe CSS rule explained:\n\n- ```border: 5px solid red;``` applies a ***5-pixel-wide***, ***solid*** red border around the ```div```.\n- The border width is ***5px***.\n- The border style is ***solid*** (a continuous line).\n- The border color is ***red***."
+  },
+  {
+    "title": "Adding Padding Inside an Element",
+    "ques": "How can you add 10px padding inside a paragraph element?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p {\n  padding: 10px;\n}"
+    },
+    "explanation": "***Padding*** is the space between the content of an element and its border.\n\nThe CSS rule:\n\n- ```padding: 10px;``` adds ***10 pixels*** of space ***inside*** the ```p``` element, between the text content and its border.\n- Unlike ***margin***, which affects the spacing outside an element, ***padding*** only increases the inner spacing."
+  },
+  {
+    "title": "Setting Content Width and Height",
+    "ques": "How can you set a div to have a width of 200px and a height of 100px?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  width: 200px;\n  height: 100px;\n}"
+    },
+    "explanation": "***Content*** is the actual area where the text, images, or other elements are placed.\n\nThe CSS rule:\n\n- ```width: 200px;``` sets the content width of the ```div``` to ***200 pixels***.\n- ```height: 100px;``` sets the content height of the ```div``` to ***100 pixels***.\n- This does ***not*** include padding, border, or margin—only the space allocated for the content inside the element."
+  },
+  {
+    "title": "Applying Different Margins",
+    "ques": "How can you set a div with different margins: 10px top, 20px right, 30px bottom, and 40px left?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  margin: 10px 20px 30px 40px;\n}"
+    },
+    "explanation": "***Margin*** defines the outer spacing of an element. The four values represent:\n\n- ```10px``` (top margin)\n- ```20px``` (right margin)\n- ```30px``` (bottom margin)\n- ```40px``` (left margin)\n\nThe values are specified in ***clockwise order***: ***top → right → bottom → left***."
+  },
+  {
+    "title": "Centering a Div Using Margin",
+    "ques": "How can you horizontally center a div using margin?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  width: 50%;\n  margin: 0 auto;\n}"
+    },
+    "explanation": "To center a block element ***horizontally***, use:\n\n- ```width: 50%;``` to set the element's width to ***half of the parent container***.\n- ```margin: 0 auto;``` sets ***0px margin on top and bottom***, while ```auto``` distributes the left and right margin ***equally***, centering the element."
+  },
+  {
+    "title": "Using Shorthand Border Property",
+    "ques": "How can you apply a border with different styles to a div (top: solid, right: dashed, bottom: dotted, left: double)?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  border-top: 2px solid black;\n  border-right: 2px dashed red;\n  border-bottom: 2px dotted blue;\n  border-left: 2px double green;\n}"
+    },
+    "explanation": "***Borders*** can have different styles for each side:\n\n- ```border-top: 2px solid black;``` → ***Solid*** black top border.\n- ```border-right: 2px dashed red;``` → ***Dashed*** red right border.\n- ```border-bottom: 2px dotted blue;``` → ***Dotted*** blue bottom border.\n- ```border-left: 2px double green;``` → ***Double*** green left border."
+  },
+  {
+    "title": "Adding Rounded Borders",
+    "ques": "How can you create a div with rounded corners of 10px?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  border: 2px solid black;\n  border-radius: 10px;\n}"
+    },
+    "explanation": "***Border-radius*** is used to create rounded corners.\n\n- ```border: 2px solid black;``` adds a ***2-pixel solid black border*** around the ```div```.\n- ```border-radius: 10px;``` rounds the corners by ***10 pixels***, making the edges smooth."
+  },
+  {
+    "title": "Using Padding for Button Spacing",
+    "ques": "How can you create a button with 15px padding inside it?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "button {\n  padding: 15px;\n}"
+    },
+    "explanation": "***Padding*** controls the space between the content and the border of an element.\n\n- ```padding: 15px;``` applies ***15 pixels of space inside the button***, making it look bigger.\n- This ensures that the text inside the button does ***not touch the edges***."
+  },
+  {
+    "title": "Padding with Different Values",
+    "ques": "How can you apply padding with different values: 5px top, 10px right, 15px bottom, 20px left?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  padding: 5px 10px 15px 20px;\n}"
+    },
+    "explanation": "***Padding*** follows the same ***clockwise*** order as margin:\n\n- ```5px``` (top padding)\n- ```10px``` (right padding)\n- ```15px``` (bottom padding)\n- ```20px``` (left padding)\n\nThis means the spacing inside the element ***varies for each side***."
+  },
+  {
+    "title": "Expanding Content with Box-Sizing",
+    "ques": "How can you make sure the padding and border are included in the total width of a div?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  width: 200px;\n  padding: 20px;\n  border: 5px solid black;\n  box-sizing: border-box;\n}"
+    },
+    "explanation": "By default, ```width``` only includes ***content***, not padding and border.\n\n- ```box-sizing: border-box;``` ensures the ***200px width includes padding and border***.\n- Without this, the total width would be ***200px (content) + 20px (left padding) + 20px (right padding) + 5px (left border) + 5px (right border) = 250px.***\n- With ```border-box```, the ***total width remains 200px***."
+  },
+  {
+    "title": "Making a Div Fill the Entire Page",
+    "ques": "How can you create a full-page div that stretches across the entire viewport?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  width: 100vw;\n  height: 100vh;\n}"
+    },
+    "explanation": "***vw (viewport width)*** and ***vh (viewport height)*** are used for full-page layouts.\n\n- ```width: 100vw;``` sets the element's width to ***100% of the viewport width***.\n- ```height: 100vh;``` sets the element's height to ***100% of the viewport height***.\n- This makes the div cover the ***entire browser window***."
+  },
+  {
+    "title": "Applying Negative Margin",
+    "ques": "How can you move a div 10px upward using a negative margin?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  margin-top: -10px;\n}"
+    },
+    "explanation": "***Negative margin*** allows elements to overlap by reducing space.\n\n- ```margin-top: -10px;``` moves the ```div``` ***10 pixels upward***.\n- This is useful when fine-tuning layouts by adjusting spacing between elements."
+  },
+  {
+    "title": "Border with Different Widths",
+    "ques": "How can you set different border widths for each side of a div?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  border-width: 5px 10px 15px 20px;\n  border-style: solid;\n  border-color: black;\n}"
+    },
+    "explanation": "***Border-width*** can have four different values (clockwise order):\n\n- ```5px``` (top border width)\n- ```10px``` (right border width)\n- ```15px``` (bottom border width)\n- ```20px``` (left border width)\n\n```border-style: solid;``` ensures the borders are visible."
+  },
+  {
+    "title": "Creating a Circle with Border and Padding",
+    "ques": "How can you create a perfect circle using only border and padding?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  width: 100px;\n  height: 100px;\n  border-radius: 50%;\n  border: 5px solid black;\n  padding: 10px;\n}"
+    },
+    "explanation": "***Border-radius*** of ```50%``` creates a circle.\n\n- ```width: 100px; height: 100px;``` makes the ```div``` a square.\n- ```border-radius: 50%;``` turns the square into a ***perfect circle***.\n- ```border: 5px solid black;``` adds a ***5px border*** around it.\n- ```padding: 10px;``` increases the space inside the circle."
+  },
+  {
+    "title": "Adding an Outline Without Affecting Layout",
+    "ques": "How can you add a 3px blue outline around a div without affecting its size?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  outline: 3px solid blue;\n}"
+    },
+    "explanation": "***Outline*** is similar to a border but does not affect the element’s dimensions.\n\n- ```outline: 3px solid blue;``` adds a ***3px solid blue line outside the element***.\n- Unlike ```border```, it ***does not push other elements*** or increase the element’s size."
+  },
+  {
+    "title": "Transparent Border Effect",
+    "ques": "How can you create a div with a transparent border that still takes up space?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  border: 5px solid transparent;\n}"
+    },
+    "explanation": "A ***transparent border*** occupies space without being visible.\n\n- ```border: 5px solid transparent;``` keeps a ***5px-wide*** border, but it is ***invisible***.\n- Useful for aligning elements while maintaining spacing."
+  },
+  {
+    "title": "Padding with Percentage Values",
+    "ques": "How can you set a div’s padding to be 5% of its parent’s width?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  padding: 5%;\n}"
+    },
+    "explanation": "***Percentage padding*** is based on the ***parent’s width***.\n\n- ```padding: 5%;``` means the padding is ***5% of the parent’s width***.\n- If the parent is ```500px``` wide, the padding will be ```25px``` on all sides."
+  },
+  {
+    "title": "Content Overflow and Scrollbars",
+    "ques": "How can you make a div show a scrollbar when content overflows?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  width: 200px;\n  height: 100px;\n  overflow: auto;\n}"
+    },
+    "explanation": "***Overflow*** defines how content behaves when it exceeds the container size.\n\n- ```overflow: auto;``` adds a ***scrollbar*** only if the content is too large.\n- ```width: 200px; height: 100px;``` limits the content area."
+  },
+  {
+    "title": "Fixed Width but Flexible Padding",
+    "ques": "How can you set a div to have a fixed width but make its padding responsive?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  width: 300px;\n  padding: 2vw;\n}"
+    },
+    "explanation": "***Viewport width units (vw)*** make padding responsive while keeping width fixed.\n\n- ```width: 300px;``` keeps the element ***fixed at 300px***.\n- ```padding: 2vw;``` sets padding based on ***2% of the viewport width***."
+  },
+  {
+    "title": "Border with Gradient Effect",
+    "ques": "How can you create a div with a gradient border?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  border: 5px solid transparent;\n  border-image: linear-gradient(to right, red, blue) 1;\n}"
+    },
+    "explanation": "***Border-image*** allows applying a ***gradient*** as a border.\n\n- ```border: 5px solid transparent;``` makes space for the gradient border.\n- ```border-image: linear-gradient(to right, red, blue) 1;``` applies a ***red-to-blue gradient***."
+  },
+  {
+    "title": "Padding with a Background Color",
+    "ques": "How can you make padding have a different background color than the content?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class='box'>\n  <div class='content'>Hello World</div>\n</div>\n\n<style>\n.box {\n  background-color: lightgray;\n  padding: 20px;\n}\n.content {\n  background-color: white;\n  padding: 10px;\n}\n</style>"
+    },
+    "explanation": "Padding usually shares the ***same background color*** as the element, but you can create a different color effect by wrapping content inside another element.\n\n- ```.box``` has ```background-color: lightgray;``` and ```padding: 20px;```, forming an outer padding area.\n- ```.content``` has ```background-color: white;``` to separate the content visually."
+  }
+]

@@ -1,0 +1,116 @@
+[
+    {
+        "q": "What will be the output of this JavaScript code?",
+        "l": "javascript",
+        "c": "console.log(0.1 + 0.2 === 0.3);",
+        "o": ["false", "true", "undefined", "TypeError"]
+    },
+    {
+        "q": "What does this JavaScript code accomplish?",
+        "l": "javascript",
+        "c": "const fn = (a) => (b) => a + b;\nconsole.log(fn(5)(3));",
+        "o": ["Implements currying", "Creates a closure", "Throws an error", "Uses recursion"]
+    },
+    {
+        "q": "What will be the result of executing this JavaScript code?",
+        "l": "javascript",
+        "c": "console.log(typeof NaN);",
+        "o": ["'number'", "'NaN'", "'undefined'", "'object'"]
+    },
+    {
+        "q": "What does the following JavaScript snippet do?",
+        "l": "javascript",
+        "c": "setTimeout(() => console.log('A'), 0);\nPromise.resolve().then(() => console.log('B'));\nconsole.log('C');",
+        "o": ["C B A", "B C A", "A B C", "C A B"]
+    },
+    {
+        "q": "What is the output of the following JavaScript code?",
+        "l": "javascript",
+        "c": "console.log([] + []);\nconsole.log([] + {});\nconsole.log({} + []);",
+        "o": ["'' '[object Object]' '[object Object]'", "[] '[object Object]' '[object Object]'", "0 NaN NaN", "undefined null null"]
+    },
+    {
+        "q": "What will be the value of 'x' after execution?",
+        "l": "javascript",
+        "c": "let x = 10;\n(x => { x = 20; })(x);\nconsole.log(x);",
+        "o": ["10", "20", "undefined", "ReferenceError"]
+    },
+    {
+        "q": "What will be the result of the following JavaScript code?",
+        "l": "javascript",
+        "c": "let obj = { a: 1 };\nObject.freeze(obj);\nobj.a = 2;\nconsole.log(obj.a);",
+        "o": ["1", "2", "undefined", "Error"]
+    },
+    {
+        "q": "What is the purpose of the 'bind' method in this JavaScript snippet?",
+        "l": "javascript",
+        "c": "const obj = { x: 10, getX: function() { return this.x; } };\nconst boundFn = obj.getX.bind({ x: 20 });\nconsole.log(boundFn());",
+        "o": ["Changes 'this' context", "Creates a closure", "Calls the function immediately", "Throws an error"]
+    },
+    {
+        "q": "What does this JavaScript code return?",
+        "l": "javascript",
+        "c": "console.log(!!'false' == !!'true');",
+        "o": ["true", "false", "undefined", "Error"]
+    },
+    {
+        "q": "What will be the output of this code?",
+        "l": "javascript",
+        "c": "let a = [1, 2, 3];\nlet b = a;\nb.push(4);\nconsole.log(a);",
+        "o": ["[1, 2, 3, 4]", "[1, 2, 3]", "undefined", "Error"]
+    },
+    {
+        "q": "What does this JavaScript code accomplish?",
+        "l": "javascript",
+        "c": "function* generator() {\n  yield 1;\n  yield 2;\n  yield 3;\n}\nconst gen = generator();\nconsole.log(gen.next().value);",
+        "o": ["Implements a generator function", "Uses recursion", "Throws an error", "Creates a closure"]
+    },
+    {
+        "q": "What will be logged to the console?",
+        "l": "javascript",
+        "c": "let obj = { a: 1, b: 2 };\nconsole.log(Object.keys(obj).length);",
+        "o": ["2", "1", "0", "undefined"]
+    },
+    {
+        "q": "What will be the output of this JavaScript code?",
+        "l": "javascript",
+        "c": "let x = (function() {\n  let count = 0;\n  return function() { return count += 1; };\n})();\nconsole.log(x());\nconsole.log(x());",
+        "o": ["1 2", "2 2", "undefined undefined", "Error"]
+    },
+    {
+        "q": "What is the value of 'result' after execution?",
+        "l": "javascript",
+        "c": "let result = (function(x, y) { return x * y; })(3, 4);",
+        "o": ["12", "7", "undefined", "Error"]
+    },
+    {
+        "q": "What will be the output of this code?",
+        "l": "javascript",
+        "c": "console.log(typeof null);",
+        "o": ["'object'", "'null'", "'undefined'", "'Error'"]
+    },
+    {
+        "q": "What does this JavaScript function demonstrate?",
+        "l": "javascript",
+        "c": "function factorial(n) {\n  return n <= 1 ? 1 : n * factorial(n - 1);\n}\nconsole.log(factorial(5));",
+        "o": ["Recursion", "Closure", "Callback", "Hoisting"]
+    },
+    {
+        "q": "What will be the output of this JavaScript code?",
+        "l": "javascript",
+        "c": "let a = { b: 1 };\nlet c = Object.assign({}, a);\nc.b = 2;\nconsole.log(a.b);",
+        "o": ["1", "2", "undefined", "Error"]
+    },
+    {
+        "q": "What does this JavaScript code return?",
+        "l": "javascript",
+        "c": "console.log(0 == '0');",
+        "o": ["true", "false", "undefined", "Error"]
+    },
+    {
+        "q": "What is the purpose of the 'call' method in this JavaScript code?",
+        "l": "javascript",
+        "c": "function greet() {\n  return `Hello, ${this.name}`;\n}\nconst user = { name: 'Alice' };\nconsole.log(greet.call(user));",
+        "o": ["Sets 'this' context", "Creates a new object", "Returns undefined", "Throws an error"]
+    }
+]

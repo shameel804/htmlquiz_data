@@ -1,0 +1,132 @@
+[
+  {
+    "title": "Create an Ordered List",
+    "ques": "How do you create an ordered list in HTML?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<ol>\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ol>"
+    },
+    "explanation": "An ***ordered list*** in HTML is created using the ```<ol>``` tag.\n\n- The ```<li>``` tag is used to define each ***list item***.\n- By default, ordered lists are displayed with ***numbers (1, 2, 3, ...)***.\n- The ***closing tag*** ```</ol>``` marks the end of the list."
+  },
+  {
+    "title": "Create an Unordered List",
+    "ques": "How do you create an unordered list in HTML?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n  <li>Cherry</li>\n</ul>"
+    },
+    "explanation": "An ***unordered list*** in HTML is created using the ```<ul>``` tag.\n\n- The ```<li>``` tag is used to define ***list items***.\n- The default marker for unordered lists is a ***bullet point (•)***.\n- The list is enclosed within the ```<ul>``` and ```</ul>``` tags."
+  },
+  {
+    "title": "Create a Description List",
+    "ques": "How do you create a description list in HTML?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<dl>\n  <dt>HTML</dt>\n  <dd>HyperText Markup Language</dd>\n  <dt>CSS</dt>\n  <dd>Cascading Style Sheets</dd>\n</dl>"
+    },
+    "explanation": "A ***description list*** is created using the ```<dl>``` tag.\n\n- The ***term*** is wrapped in ```<dt>``` (Definition Term).\n- The ***description*** of the term is wrapped in ```<dd>``` (Definition Description).\n- Each term-description pair is part of the ***description list***, enclosed within ```<dl>``` and ```</dl>```."
+  },
+  {
+    "title": "Ordered List with Different Types",
+    "ques": "How do you change the numbering style of an ordered list in HTML?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<ol type=\"A\">\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ol>"
+    },
+    "explanation": "The ```type``` attribute of ***ordered lists*** can be used to change the numbering style.\n\n- ```<ol type=\"A\">``` creates a list with ***uppercase letters (A, B, C, ...)***.\n- Other possible values include:\n  - ```1``` (default) for ***numbers***.\n  - ```a``` for ***lowercase letters (a, b, c, ...)***.\n  - ```I``` for ***uppercase Roman numerals (I, II, III, ...)***.\n  - ```i``` for ***lowercase Roman numerals (i, ii, iii, ...)***."
+  },
+  {
+    "title": "Nested Lists",
+    "ques": "How do you create a nested list inside an ordered list?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<ol>\n  <li>Fruits\n    <ul>\n      <li>Apple</li>\n      <li>Banana</li>\n    </ul>\n  </li>\n  <li>Vegetables\n    <ul>\n      <li>Carrot</li>\n      <li>Broccoli</li>\n    </ul>\n  </li>\n</ol>"
+    },
+    "explanation": "A ***nested list*** is created by placing an unordered list ```<ul>``` inside an ordered list ```<ol>```.\n\n- Each ***main list item*** (```<li>```) can contain a ***sub-list***.\n- The unordered list (```<ul>```) is nested inside an ordered list (```<ol>```), allowing for ***hierarchical structuring*** of content."
+  },
+  {
+    "title": "Ordered List with Start Attribute",
+    "ques": "How do you start an ordered list from a specific number instead of 1?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<ol start=\"5\">\n  <li>Item 5</li>\n  <li>Item 6</li>\n  <li>Item 7</li>\n</ol>"
+    },
+    "explanation": "The ***start*** attribute is used in ```<ol>``` to specify the ***starting number*** for the list.\n\n- ```start=\"5\"``` makes the first item numbered ***5*** instead of the default ***1***.\n- The numbering continues sequentially (**5, 6, 7, ...**)."
+  },
+  {
+    "title": "Reversed Ordered List",
+    "ques": "How do you display an ordered list in reverse order?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<ol reversed>\n  <li>Item 3</li>\n  <li>Item 2</li>\n  <li>Item 1</li>\n</ol>"
+    },
+    "explanation": "The ***reversed*** attribute in ```<ol>``` displays the list in ***descending order***.\n\n- Adding ```reversed``` reverses the numbering.\n- The first item in the list gets the highest number (**3, 2, 1** in this example)."
+  },
+  {
+    "title": "Custom Bullet Points in Unordered List",
+    "ques": "How can you use CSS to change the bullet style of an unordered list?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<ul style=\"list-style-type: square;\">\n  <li>Item A</li>\n  <li>Item B</li>\n  <li>Item C</li>\n</ul>"
+    },
+    "explanation": "The ***list-style-type*** property in CSS allows customizing the bullet points.\n\n- ```list-style-type: square;``` changes the default **disc (•)** to ***square (■)***.\n- Other possible values include:\n  - ```disc``` (default round bullet)\n  - ```circle``` (hollow circle bullet)\n  - ```none``` (removes bullets completely)."
+  },
+  {
+    "title": "Inline List Display",
+    "ques": "How can you display a list horizontally instead of vertically?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<ul style=\"list-style-type: none; display: flex; gap: 10px;\">\n  <li>Home</li>\n  <li>About</li>\n  <li>Contact</li>\n</ul>"
+    },
+    "explanation": "By using ***CSS Flexbox***, we can display a list ***horizontally*** instead of vertically.\n\n- ```list-style-type: none;``` removes the bullet points.\n- ```display: flex;``` makes the list items appear ***inline***.\n- ```gap: 10px;``` adds spacing between list items."
+  },
+  {
+    "title": "Nested Description List",
+    "ques": "How do you create a nested description list in HTML?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<dl>\n  <dt>Frontend</dt>\n  <dd>\n    <dl>\n      <dt>HTML</dt>\n      <dd>Structure of web pages</dd>\n      <dt>CSS</dt>\n      <dd>Styling web pages</dd>\n    </dl>\n  </dd>\n</dl>"
+    },
+    "explanation": "A ***nested description list*** is created by placing another ```<dl>``` inside a ```<dd>```.\n\n- The ***main term*** (e.g., ***Frontend***) is wrapped in ```<dt>```.\n- The ***sub-list*** (HTML & CSS) is wrapped in another ```<dl>``` inside the ***description*** ```<dd>```.\n- This structure is useful for ***grouping related terms*** within a ***hierarchical description list***."
+  },
+  {
+    "title": "Using Images as List Markers",
+    "ques": "How can you replace bullet points in an unordered list with images?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<ul style=\"list-style: none;\">\n  <li style=\"background: url('icon.png') no-repeat left center; padding-left: 20px;\">Item 1</li>\n  <li style=\"background: url('icon.png') no-repeat left center; padding-left: 20px;\">Item 2</li>\n  <li style=\"background: url('icon.png') no-repeat left center; padding-left: 20px;\">Item 3</li>\n</ul>"
+    },
+    "explanation": "Instead of default bullets, we can use ***custom images*** as list markers with CSS.\n\n- ```list-style: none;``` removes the default bullet points.\n- ```background: url('icon.png') no-repeat left center;``` sets an ***image as a custom bullet***.\n- ```padding-left: 20px;``` ensures text is properly aligned next to the image."
+  },
+  {
+    "title": "Accessibility with ARIA Attributes in Lists",
+    "ques": "How do you improve accessibility for a list using ARIA attributes?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<ul role=\"list\">\n  <li role=\"listitem\">Step 1: Open the file</li>\n  <li role=\"listitem\">Step 2: Edit the text</li>\n  <li role=\"listitem\">Step 3: Save the file</li>\n</ul>"
+    },
+    "explanation": "ARIA attributes help improve ***accessibility*** for screen readers and assistive technologies.\n\n- ```role=\"list\"``` explicitly defines the ***list*** role for better recognition by screen readers.\n- ```role=\"listitem\"``` ensures each ***list item*** is correctly interpreted."
+  },
+  {
+    "title": "Multicolumn List Using CSS",
+    "ques": "How do you display an HTML list in multiple columns?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<ul style=\"column-count: 2;\">\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n  <li>Item 4</li>\n</ul>"
+    },
+    "explanation": "The ***column-count*** property in CSS allows splitting a list into ***multiple columns***.\n\n- ```column-count: 2;``` arranges list items into ***two equal columns***.\n- This is useful for ***long lists*** to improve readability and layout."
+  }
+]

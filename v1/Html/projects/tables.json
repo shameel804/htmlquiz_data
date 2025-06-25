@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Table Structure",
+    "ques": "Create a basic HTML table with three rows and three columns.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<table>\n  <tr>\n    <td>Row 1, Col 1</td>\n    <td>Row 1, Col 2</td>\n    <td>Row 1, Col 3</td>\n  </tr>\n  <tr>\n    <td>Row 2, Col 1</td>\n    <td>Row 2, Col 2</td>\n    <td>Row 2, Col 3</td>\n  </tr>\n  <tr>\n    <td>Row 3, Col 1</td>\n    <td>Row 3, Col 2</td>\n    <td>Row 3, Col 3</td>\n  </tr>\n</table>"
+    },
+    "explanation": "The ```<table>``` element defines the table.\nEach row is created using ```<tr>``` (Table Row) elements.\nEach cell is created using ```<td>``` (Table Data) elements.\nThis table has ***3 rows*** and ***3 columns***, making a 3x3 table."
+  },
+  {
+    "title": "Table Headers",
+    "ques": "Modify the table to include headers for each column.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<table>\n  <tr>\n    <th>Header 1</th>\n    <th>Header 2</th>\n    <th>Header 3</th>\n  </tr>\n  <tr>\n    <td>Row 1, Col 1</td>\n    <td>Row 1, Col 2</td>\n    <td>Row 1, Col 3</td>\n  </tr>\n  <tr>\n    <td>Row 2, Col 1</td>\n    <td>Row 2, Col 2</td>\n    <td>Row 2, Col 3</td>\n  </tr>\n</table>"
+    },
+    "explanation": "The ```<th>``` (Table Header) element is used to create column headers.\nHeaders ***replace*** the first row's ```<td>``` with ```<th>```.\nThis makes the headers bold and center-aligned by default in most browsers."
+  },
+  {
+    "title": "Table Caption",
+    "ques": "Add a caption to describe the table content.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<table>\n  <caption>Student Grades</caption>\n  <tr>\n    <th>Name</th>\n    <th>Subject</th>\n    <th>Grade</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>Math</td>\n    <td>A</td>\n  </tr>\n  <tr>\n    <td>Bob</td>\n    <td>Science</td>\n    <td>B</td>\n  </tr>\n</table>"
+    },
+    "explanation": "The ```<caption>``` element is used to ***describe*** the table.\nIt must be placed ***immediately inside the ```<table>``` tag.\nIn this example, the caption ***'Student Grades'*** describes the table."
+  },
+  {
+    "title": "Colspan Attribute",
+    "ques": "Merge two columns in the first row using ```colspan```.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<table>\n  <tr>\n    <th colspan=\"2\">Merged Header</th>\n    <th>Subject</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>Math</td>\n    <td>A</td>\n  </tr>\n  <tr>\n    <td>Bob</td>\n    <td>Science</td>\n    <td>B</td>\n  </tr>\n</table>"
+    },
+    "explanation": "The ```colspan``` attribute merges ***two or more columns*** into one.\n```colspan=\"2\"``` makes the header ***'Merged Header'*** span two columns.\nOther cells remain unaffected."
+  },
+  {
+    "title": "Rowspan Attribute",
+    "ques": "Merge two rows in the first column using ```rowspan```.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<table>\n  <tr>\n    <th rowspan=\"2\">Student</th>\n    <th>Subject</th>\n    <th>Grade</th>\n  </tr>\n  <tr>\n    <td>Math</td>\n    <td>A</td>\n  </tr>\n  <tr>\n    <td>Bob</td>\n    <td>Science</td>\n    <td>B</td>\n  </tr>\n</table>"
+    },
+    "explanation": "The ```rowspan``` attribute merges ***two or more rows*** into one.\n```rowspan=\"2\"``` makes the first column's 'Student' cell span ***two rows***.\nThe second row's first column is now omitted as it's merged with the first row."
+  },
+  {
+    "title": "Table Borders",
+    "ques": "Create a table with visible borders around all cells.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<table border=\"1\">\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n    <th>City</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>25</td>\n    <td>New York</td>\n  </tr>\n  <tr>\n    <td>Bob</td>\n    <td>30</td>\n    <td>Los Angeles</td>\n  </tr>\n</table>"
+    },
+    "explanation": "The ```border=\"1\"``` attribute is used to add a border around table cells.\nThis makes the table more visually structured.\nEach cell in the table will now have a visible ***border***."
+  },
+  {
+    "title": "Table Styling with CSS",
+    "ques": "Apply CSS to make the table look better with spacing and background colors.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<style>\n  table {\n    width: 100%;\n    border-collapse: collapse;\n  }\n  th, td {\n    border: 1px solid black;\n    padding: 8px;\n    text-align: center;\n  }\n  th {\n    background-color: lightgray;\n  }\n</style>\n<table>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n    <th>City</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>25</td>\n    <td>New York</td>\n  </tr>\n  <tr>\n    <td>Bob</td>\n    <td>30</td>\n    <td>Los Angeles</td>\n  </tr>\n</table>"
+    },
+    "explanation": "The ```border-collapse: collapse;``` property removes space between borders.\nThe ```padding``` property increases space inside cells for better readability.\nThe ```background-color``` property adds a light gray shade to headers."
+  },
+  {
+    "title": "Striped Table Rows",
+    "ques": "Use CSS to create alternating row colors for better readability.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<style>\n  table {\n    width: 100%;\n    border-collapse: collapse;\n  }\n  th, td {\n    border: 1px solid black;\n    padding: 8px;\n    text-align: left;\n  }\n  tr:nth-child(even) {\n    background-color: #f2f2f2;\n  }\n</style>\n<table>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n    <th>City</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>25</td>\n    <td>New York</td>\n  </tr>\n  <tr>\n    <td>Bob</td>\n    <td>30</td>\n    <td>Los Angeles</td>\n  </tr>\n</table>"
+    },
+    "explanation": "The ```tr:nth-child(even)``` selector applies a background color to even-numbered rows.\nThis creates a ***striped effect*** to improve readability.\nThe ```background-color: #f2f2f2;``` makes every second row light gray."
+  },
+  {
+    "title": "Nested Table",
+    "ques": "Create a table inside another table.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<table border=\"1\">\n  <tr>\n    <th>Name</th>\n    <th>Details</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>\n      <table border=\"1\">\n        <tr>\n          <th>Age</th>\n          <th>City</th>\n        </tr>\n        <tr>\n          <td>25</td>\n          <td>New York</td>\n        </tr>\n      </table>\n    </td>\n  </tr>\n</table>"
+    },
+    "explanation": "A ***nested table*** is a table inside a ```<td>``` cell of another table.\nHere, the ***inner table*** displays additional details about 'Alice'.\nThe ***outer table*** organizes the data in a structured way."
+  },
+  {
+    "title": "Table Accessibility with ARIA",
+    "ques": "Improve table accessibility using ARIA attributes.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<table aria-label=\"Student Grades\" border=\"1\">\n  <tr>\n    <th scope=\"col\">Name</th>\n    <th scope=\"col\">Subject</th>\n    <th scope=\"col\">Grade</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>Math</td>\n    <td>A</td>\n  </tr>\n  <tr>\n    <td>Bob</td>\n    <td>Science</td>\n    <td>B</td>\n  </tr>\n</table>"
+    },
+    "explanation": "The ```aria-label``` attribute improves accessibility for screen readers.\nThe ```scope=\"col\"``` ensures headers are correctly identified for columns.\nThis helps visually impaired users understand the table structure."
+  }
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "q": "What is the purpose of the 'doctype' declaration in this code?",
+        "c": "<!DOCTYPE html>\n<html>\n<head>\n<title>Sample Page</title>\n</head>\n<body>\n</body>\n</html>",
+        "o": ["Defines the document type", "Links CSS", "Embeds a video", "Sets character encoding"]
+    },
+    {
+        "q": "What does this code create?",
+        "c": "<form action='/submit' method='post'>\n<input type='text' name='username'>\n<input type='submit' value='Submit'>\n</form>",
+        "o": ["A submission form", "An image gallery", "A video player", "An audio track"]
+    },
+    {
+        "q": "What does the 'alt' attribute do in this code?",
+        "c": "<img src='image.png' alt='Description of image'>",
+        "o": ["Provides a text alternative", "Sets the image size", "Links to a video", "Defines image format"]
+    },
+    {
+        "q": "What is the result of this code?",
+        "c": "<a href='https://example.com' target='_blank'>Visit Example</a>",
+        "o": ["Opens link in a new tab", "Redirects in the same tab", "Embeds a video", "Displays an image"]
+    },
+    {
+        "q": "What does this code define?",
+        "c": "<table>\n<tr>\n<th>Name</th>\n<th>Age</th>\n</tr>\n<tr>\n<td>Alice</td>\n<td>30</td>\n</tr>\n</table>",
+        "o": ["A data table", "An image gallery", "An audio playlist", "A video player"]
+    },
+    {
+        "q": "What does the 'meta' tag do in this code?",
+        "c": "<meta charset='UTF-8'>\n<meta name='viewport' content='width=device-width, initial-scale=1.0'>",
+        "o": ["Defines character encoding and viewport", "Links a stylesheet", "Embeds a video", "Sets document title"]
+    },
+    {
+        "q": "What does this code represent?",
+        "c": "<nav>\n<ul>\n<li><a href='#home'>Home</a></li>\n<li><a href='#about'>About</a></li>\n</ul>\n</nav>",
+        "o": ["A navigation menu", "A video player", "An image gallery", "A form"]
+    },
+    {
+        "q": "What is specified by this code?",
+        "c": "<div class='container'>\n<h1>Welcome</h1>\n<p>This is a sample page.</p>\n</div>",
+        "o": ["A container with content", "A video player", "An audio track", "An image gallery"]
+    },
+    {
+        "q": "What does this code do?",
+        "c": "<link rel='stylesheet' href='styles.css'>",
+        "o": ["Links a CSS stylesheet", "Embeds an image", "Defines a JavaScript file", "Sets character encoding"]
+    },
+    {
+        "q": "What does this code produce?",
+        "c": "<script src='script.js'></script>",
+        "o": ["Links a JavaScript file", "Defines a video source", "Embeds an audio track", "Sets an image source"]
+    },
+    {
+        "q": "What does this code create?",
+        "c": "<header>\n<h1>Site Title</h1>\n<nav>\n<ul>\n<li><a href='#'>Home</a></li>\n</ul>\n</nav>\n</header>",
+        "o": ["A header with navigation", "An audio track", "A video player", "An image gallery"]
+    },
+    {
+        "q": "What does this code specify?",
+        "c": "<iframe src='https://www.example.com' width='600' height='400'></iframe>",
+        "o": ["An embedded webpage", "An image", "A video file", "An audio file"]
+    },
+    {
+        "q": "What is the function of 'data-*' attributes in this code?",
+        "c": "<div data-role='page'>\n<h1>Page Title</h1>\n</div>",
+        "o": ["Store custom data", "Define styles", "Link scripts", "Specify dimensions"]
+    },
+    {
+        "q": "What does this code accomplish?",
+        "c": "<blockquote cite='https://source.com'>\n<p>This is a quote.</p>\n</blockquote>",
+        "o": ["Displays a quoted text", "Links a video", "Shows an image", "Defines a form"]
+    },
+    {
+        "q": "What does this code create?",
+        "c": "<footer>\n<p>&copy; 2024 Company Name</p>\n</footer>",
+        "o": ["A footer section", "An audio player", "An image gallery", "A video player"]
+    },
+    {
+        "q": "What is the role of 'aria-label' in this code?",
+        "c": "<button aria-label='Close'>X</button>",
+        "o": ["Improves accessibility", "Links to a video", "Defines image size", "Sets button style"]
+    },
+    {
+        "q": "What does this code do?",
+        "c": "<canvas id='myCanvas'></canvas>",
+        "o": ["Defines a drawing area", "Embeds a video", "Displays an image", "Links an audio track"]
+    },
+    {
+        "q": "What does this code demonstrate?",
+        "c": "<style>\nbody { font-family: Arial; }\n</style>",
+        "o": ["Defines CSS styles", "Links a script", "Embeds a video", "Sets character encoding"]
+    },
+    {
+        "q": "What does this code produce?",
+        "c": "<source src='audio.mp3' type='audio/mpeg'>",
+        "o": ["Defines audio source", "Embeds an image", "Sets video source", "Links a stylesheet"]
+    },
+    {
+        "q": "What is the purpose of the 'placeholder' attribute in this code?",
+        "c": "<input type='text' placeholder='Enter your name'>",
+        "o": ["Shows a hint in the input", "Defines input type", "Links to a video", "Sets maximum length"]
+    }
+]

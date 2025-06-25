@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Understanding Callbacks",
+    "ques": "What is a callback function in JavaScript, and how can you use it to execute code after an operation completes?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function fetchData(callback) {\n    setTimeout(() => {\n        console.log(\"Data fetched successfully!\");\n        callback();\n    }, 2000);\n}\n\nfunction processData() {\n    console.log(\"Processing fetched data...\");\n}\n\nfetchData(processData);"
+    },
+    "explanation": "***fetchData*** is a function that simulates data fetching using ```setTimeout```.\n\nInside ```fetchData```, a delay of 2 seconds (```2000ms```) is introduced before logging ***\"Data fetched successfully!\"***.\n\nThe ***callback*** function is executed after the data fetch is completed. Here, ```processData``` is passed as a callback.\n\nWhen ```fetchData(processData)``` is called, after 2 seconds, ***\"Data fetched successfully!\"*** is printed, and then ```processData()``` executes, logging ***\"Processing fetched data...\"***."
+  },
+  {
+    "title": "Using Promises",
+    "ques": "How can you handle asynchronous operations using JavaScript Promises?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function fetchData() {\n    return new Promise((resolve, reject) => {\n        setTimeout(() => {\n            let success = true;\n            if (success) {\n                resolve(\"Data fetched successfully!\");\n            } else {\n                reject(\"Error fetching data\");\n            }\n        }, 2000);\n    });\n}\n\nfetchData()\n    .then(response => console.log(response))\n    .catch(error => console.log(error));"
+    },
+    "explanation": "***fetchData*** returns a ```Promise``` that takes ```resolve``` and ```reject``` as parameters.\n\nInside the ```Promise```, ```setTimeout``` simulates an asynchronous operation.\n\nIf ***success*** is ```true```, the ```resolve``` function is called with the message ***\"Data fetched successfully!\"***; otherwise, ```reject``` is called with ***\"Error fetching data\"***.\n\nThe ```.then()``` method handles the resolved promise, logging the response message.\n\nThe ```.catch()``` method captures errors and logs them if the promise is rejected."
+  },
+  {
+    "title": "Async/Await Syntax",
+    "ques": "How do you use async/await to write asynchronous JavaScript code more cleanly?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "async function fetchData() {\n    return new Promise((resolve) => {\n        setTimeout(() => resolve(\"Data fetched successfully!\"), 2000);\n    });\n}\n\nasync function process() {\n    console.log(\"Fetching data...\");\n    let result = await fetchData();\n    console.log(result);\n    console.log(\"Data processing complete.\");\n}\n\nprocess();"
+    },
+    "explanation": "The ***fetchData*** function returns a ```Promise``` that resolves after 2 seconds with the message ***\"Data fetched successfully!\"***.\n\nThe ***process*** function is marked as ```async```, allowing the use of ```await``` inside it.\n\nCalling ```fetchData()``` inside ```process()``` with ```await``` pauses execution until the ```Promise``` resolves.\n\nFirst, ***\"Fetching data...\"*** is logged.\n\nAfter 2 seconds, the resolved value ***\"Data fetched successfully!\"*** is assigned to ***result*** and logged.\n\nFinally, ***\"Data processing complete.\"*** is printed."
+  },
+  {
+    "title": "Callback Execution Order",
+    "ques": "How can you ensure that a function executes only after another function has completed using callbacks?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function firstTask(callback) {\n    setTimeout(() => {\n        console.log(\"First task completed.\");\n        callback();\n    }, 1000);\n}\n\nfunction secondTask() {\n    console.log(\"Second task started after first task.\");\n}\n\nfirstTask(secondTask);"
+    },
+    "explanation": "The ***firstTask*** function takes a callback as a parameter and simulates an asynchronous operation using ```setTimeout```.\n\nAfter ***1 second***, ***\"First task completed.\"*** is logged, and then the callback function is executed.\n\nHere, ```secondTask``` is passed as the callback, which logs ***\"Second task started after first task.\"***.\n\nUsing callbacks ensures that ```secondTask``` executes only after ```firstTask``` finishes."
+  },
+  {
+    "title": "Chaining Multiple Promises",
+    "ques": "How can you use promise chaining to execute multiple asynchronous operations in sequence?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function stepOne() {\n    return new Promise(resolve => {\n        setTimeout(() => resolve(\"Step One Complete\"), 1000);\n    });\n}\n\nfunction stepTwo() {\n    return new Promise(resolve => {\n        setTimeout(() => resolve(\"Step Two Complete\"), 1000);\n    });\n}\n\nstepOne()\n    .then(response => {\n        console.log(response);\n        return stepTwo();\n    })\n    .then(response => console.log(response));"
+    },
+    "explanation": "***stepOne*** and ***stepTwo*** return ```Promise``` objects that resolve after ***1 second*** each.\n\nCalling ```stepOne()``` starts the first operation.\n\nIn the ```.then()``` callback, the response ***\"Step One Complete\"*** is logged, and ```stepTwo()``` is returned.\n\nThe second ```.then()``` waits for ```stepTwo()``` to resolve and then logs ***\"Step Two Complete\"***.\n\nThis demonstrates promise chaining to execute asynchronous tasks in sequence."
+  },
+  {
+    "title": "Handling Errors in Promises",
+    "ques": "How can you properly handle errors in Promises using .catch()?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function riskyOperation() {\n    return new Promise((resolve, reject) => {\n        setTimeout(() => {\n            let success = Math.random() > 0.5;\n            if (success) {\n                resolve(\"Operation succeeded!\");\n            } else {\n                reject(\"Operation failed!\");\n            }\n        }, 1000);\n    });\n}\n\nriskyOperation()\n    .then(response => console.log(response))\n    .catch(error => console.log(\"Error:\", error));"
+    },
+    "explanation": "***riskyOperation*** simulates an asynchronous operation that succeeds or fails randomly (50% chance each).\n\nIf successful, the ```Promise``` resolves with ***\"Operation succeeded!\"***; otherwise, it rejects with ***\"Operation failed!\"***.\n\nCalling ```riskyOperation()``` triggers the operation.\n\nIf it resolves, the ```.then()``` block logs the success message.\n\nIf it rejects, the ```.catch()``` block logs the error message with ***\"Error:\"***."
+  },
+  {
+    "title": "Using Async/Await with Try-Catch",
+    "ques": "How can you use async/await with try-catch to handle errors gracefully?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "async function fetchData() {\n    return new Promise((resolve, reject) => {\n        setTimeout(() => {\n            let success = Math.random() > 0.5;\n            success ? resolve(\"Data loaded successfully!\") : reject(\"Failed to load data\");\n        }, 1500);\n    });\n}\n\nasync function loadData() {\n    try {\n        console.log(\"Fetching data...\");\n        let result = await fetchData();\n        console.log(result);\n    } catch (error) {\n        console.log(\"Error:\", error);\n    }\n}\n\nloadData();"
+    },
+    "explanation": "***fetchData*** returns a ```Promise``` that resolves or rejects randomly after ***1.5 seconds***.\n\nThe ***loadData*** function is marked ```async``` so that it can use ```await``` inside.\n\nA ```try``` block is used to handle errors gracefully:\n- It logs ***\"Fetching data...\"*** before calling ```fetchData()```.\n- If ```fetchData()``` resolves, its result is logged.\n- If it rejects, the ```catch``` block logs the error message prefixed with ***\"Error:\"***."
+  },
+  {
+    "title": "Executing Multiple Promises in Parallel",
+    "ques": "How can you execute multiple promises in parallel using Promise.all()?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function taskOne() {\n    return new Promise(resolve => setTimeout(() => resolve(\"Task One Done\"), 1000));\n}\n\nfunction taskTwo() {\n    return new Promise(resolve => setTimeout(() => resolve(\"Task Two Done\"), 1500));\n}\n\nfunction taskThree() {\n    return new Promise(resolve => setTimeout(() => resolve(\"Task Three Done\"), 2000));\n}\n\nPromise.all([taskOne(), taskTwo(), taskThree()])\n    .then(results => console.log(\"Results:\", results))\n    .catch(error => console.log(\"Error:\", error));"
+    },
+    "explanation": "***taskOne***, ***taskTwo***, and ***taskThree*** are functions that return promises resolving after ***1, 1.5, and 2 seconds***, respectively.\n\n```Promise.all([taskOne(), taskTwo(), taskThree()])``` executes all three promises **in parallel**.\n\nThe ```.then()``` block executes once **all** promises resolve, logging the results as an array.\n\nIf any promise rejects, the ```.catch()``` block logs the error message."
+  }
+]

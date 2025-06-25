@@ -1,0 +1,252 @@
+[
+  {
+    "title": "Changing Font Family",
+    "ques": "How can you change the font of a paragraph to Arial and use a fallback font in case Arial is not available?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p {\n  font-family: Arial, Helvetica, sans-serif;\n}"
+    },
+    "explanation": "The ***font-family*** property specifies the typeface to be used.\n- The value ***Arial*** is the primary font.\n- The ***Helvetica*** font is a backup in case Arial is not available.\n- The ***sans-serif*** is a generic fallback ensuring readability."
+  },
+  {
+    "title": "Text Alignment",
+    "ques": "How do you center-align all paragraphs inside a div?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  text-align: center;\n}"
+    },
+    "explanation": "The ***text-align*** property controls horizontal alignment of text.\n- The ***center*** value makes all text inside the ***div*** align to the center."
+  },
+  {
+    "title": "Adjusting Line Height",
+    "ques": "How can you increase the space between lines in a paragraph?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p {\n  line-height: 1.8;\n}"
+    },
+    "explanation": "The ***line-height*** property defines the space between lines of text.\n- A value of ***1.8*** means the line height is ***1.8 times*** the font size, improving readability."
+  },
+  {
+    "title": "Letter Spacing",
+    "ques": "How can you increase the space between letters of a heading?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "h1 {\n  letter-spacing: 2px;\n}"
+    },
+    "explanation": "The ***letter-spacing*** property controls the space between characters.\n- A value of ***2px*** increases spacing, making the text more readable or stylish."
+  },
+  {
+    "title": "Using Google Fonts",
+    "ques": "How can you use the 'Roboto' font from Google Fonts in a webpage?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\">\n  <style>\n    body {\n      font-family: 'Roboto', sans-serif;\n    }\n  </style>\n</head>\n<body>\n  <p>This is a paragraph with the Roboto font.</p>\n</body>\n</html>"
+    },
+    "explanation": "1. We include the Google Fonts link inside the ***<head>*** section using the ***<link>*** tag.\n2. The ***font-family*** property in ***CSS*** applies the 'Roboto' font to the ***body***.\n3. If 'Roboto' is not available, the ***sans-serif*** fallback will be used."
+  },
+  {
+    "title": "Justifying Text",
+    "ques": "How can you justify the text inside a paragraph?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p {\n  text-align: justify;\n}"
+    },
+    "explanation": "The ***text-align*** property controls the horizontal alignment of text.\n- The ***justify*** value ensures that the text stretches evenly across the width, aligning both the left and right edges."
+  },
+  {
+    "title": "Double Line Height",
+    "ques": "How can you set the line height of a paragraph to be double its font size?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p {\n  line-height: 2;\n}"
+    },
+    "explanation": "The ***line-height*** property adjusts the spacing between lines of text.\n- A value of ***2*** means the spacing is ***twice the font size***, improving readability."
+  },
+  {
+    "title": "Adding Space Between Letters",
+    "ques": "How can you add more space between letters in a paragraph?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p {\n  letter-spacing: 3px;\n}"
+    },
+    "explanation": "The ***letter-spacing*** property increases or decreases the space between characters.\n- A value of ***3px*** adds 3 pixels of space between each letter, making the text more spaced out."
+  },
+  {
+    "title": "Using Multiple Fonts",
+    "ques": "How can you apply different fonts to headings and paragraphs?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "h1 {\n  font-family: 'Georgia', serif;\n}\np {\n  font-family: 'Arial', sans-serif;\n}"
+    },
+    "explanation": "The ***font-family*** property allows specifying different fonts for different elements.\n- ***h1*** uses ***Georgia, serif*** for a classic style.\n- ***p*** uses ***Arial, sans-serif*** for a modern and readable look."
+  },
+  {
+    "title": "Centering Text with Flexbox",
+    "ques": "How can you center text both horizontally and vertically inside a div using Flexbox?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 200px;\n}"
+    },
+    "explanation": "Flexbox provides a simple way to center content.\n- ***display: flex;*** enables flexbox.\n- ***justify-content: center;*** centers the text horizontally.\n- ***align-items: center;*** centers the text vertically."
+  },
+  {
+    "title": "Using em for Line Height",
+    "ques": "How can you set the line height of a paragraph relative to its font size?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p {\n  line-height: 1.5em;\n}"
+    },
+    "explanation": "The ***em*** unit makes the ***line-height*** relative to the font size.\n- A value of ***1.5em*** means the spacing is ***1.5 times*** the font size.\n- This approach keeps text proportional across different font sizes."
+  },
+  {
+    "title": "Kerning with Letter Spacing",
+    "ques": "How can you reduce the space between letters for a more compact look?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "h2 {\n  letter-spacing: -1px;\n}"
+    },
+    "explanation": "The ***letter-spacing*** property can also reduce space between letters.\n- A value of ***-1px*** brings characters closer together.\n- This is useful for compact headings or custom typography styles."
+  },
+  {
+    "title": "Using System Fonts",
+    "ques": "How can you apply the system default font to a paragraph?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p {\n  font-family: system-ui, sans-serif;\n}"
+    },
+    "explanation": "The ***system-ui*** font ensures that the paragraph text matches the default operating system font.\n- ***system-ui*** uses the system's default UI font (e.g., Segoe UI on Windows, San Francisco on macOS).\n- The ***sans-serif*** fallback ensures compatibility."
+  },
+  {
+    "title": "Right Align Text",
+    "ques": "How do you align all text to the right inside a div?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  text-align: right;\n}"
+    },
+    "explanation": "The ***text-align*** property is used for horizontal alignment.\n- The ***right*** value shifts all text inside the ***div*** to the right."
+  },
+  {
+    "title": "Setting Line Height in Pixels",
+    "ques": "How can you set the line height of a paragraph to exactly 24px?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p {\n  line-height: 24px;\n}"
+    },
+    "explanation": "The ***line-height*** property can take absolute values.\n- A value of ***24px*** ensures a fixed line spacing, regardless of font size."
+  },
+  {
+    "title": "Adding Extra Large Letter Spacing",
+    "ques": "How can you make text in an h1 have extremely wide spacing between letters?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "h1 {\n  letter-spacing: 10px;\n}"
+    },
+    "explanation": "The ***letter-spacing*** property controls space between characters.\n- A value of ***10px*** creates a dramatic spacing effect."
+  },
+  {
+    "title": "Combining Multiple Fonts",
+    "ques": "How can you set a paragraph to use 'Times New Roman' but fall back to 'Georgia' or 'serif' if unavailable?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p {\n  font-family: 'Times New Roman', Georgia, serif;\n}"
+    },
+    "explanation": "The ***font-family*** property allows specifying multiple fonts.\n- The ***Times New Roman*** font is used first.\n- If unavailable, the ***Georgia*** font is tried.\n- The ***serif*** fallback ensures a similar look."
+  },
+  {
+    "title": "Text Alignment in a Table",
+    "ques": "How can you center-align text inside all table cells?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "td {\n  text-align: center;\n}"
+    },
+    "explanation": "The ***text-align*** property aligns text within elements.\n- Applying ***center*** to ***td*** elements makes all table cell text center-aligned."
+  },
+  {
+    "title": "Using Percentage for Line Height",
+    "ques": "How can you set the line height of a paragraph to 150% of the font size?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p {\n  line-height: 150%;\n}"
+    },
+    "explanation": "The ***line-height*** property can be set as a percentage.\n- A value of ***150%*** means the line spacing is ***1.5 times*** the font size."
+  },
+  {
+    "title": "Negative Letter Spacing",
+    "ques": "How can you reduce the letter spacing of an h2 heading for a tighter look?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "h2 {\n  letter-spacing: -2px;\n}"
+    },
+    "explanation": "The ***letter-spacing*** property accepts negative values.\n- A value of ***-2px*** makes letters appear closer together."
+  },
+  {
+    "title": "Applying Italic Font Style",
+    "ques": "How can you make all text inside a div italic?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  font-style: italic;\n}"
+    },
+    "explanation": "The ***font-style*** property changes text appearance.\n- ***italic*** makes the text slanted for emphasis."
+  },
+  {
+    "title": "Text Alignment with Justify and Indent",
+    "ques": "How can you justify a paragraph and also add an indentation to the first line?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p {\n  text-align: justify;\n  text-indent: 20px;\n}"
+    },
+    "explanation": "The ***text-align*** property ensures even spacing across the width.\n- ***justify*** makes text spread out evenly.\n- ***text-indent: 20px;*** indents the first line for better readability."
+  },
+  {
+    "title": "Using a Web Safe Font Stack",
+    "ques": "How can you set a web-safe font stack for better compatibility?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "body {\n  font-family: 'Arial', 'Verdana', 'Helvetica', sans-serif;\n}"
+    },
+    "explanation": "The ***font-family*** property allows specifying multiple fallback fonts.\n- ***Arial*** is the preferred font.\n- ***Verdana*** and ***Helvetica*** act as backups.\n- ***sans-serif*** ensures a readable default if all others fail."
+  },
+  {
+    "title": "Using rem for Line Height",
+    "ques": "How can you set the line height of a paragraph to 2 times the root font size?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "p {\n  line-height: 2rem;\n}"
+    },
+    "explanation": "The ***rem*** unit makes ***line-height*** relative to the root font size.\n- ***2rem*** means the spacing is ***twice the root font size***."
+  },
+  {
+    "title": "Text Shadow for Styling",
+    "ques": "How can you apply a subtle text shadow to headings?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "h1 {\n  text-shadow: 2px 2px 5px gray;\n}"
+    },
+    "explanation": "The ***text-shadow*** property adds a shadow effect to text.\n- ***2px 2px 5px gray*** means:\n  - ***2px*** horizontal offset.\n  - ***2px*** vertical offset.\n  - ***5px*** blur radius.\n  - ***gray*** shadow color."
+  }
+]

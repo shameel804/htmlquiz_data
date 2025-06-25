@@ -1,0 +1,2016 @@
+[
+    {
+        "q": "What is the effect of this CSS on the text?",
+        "l": "css",
+        "c": "p {\n  font-weight: bold;\n}",
+        "o": [
+            "Bold text",
+            "Italic text",
+            "Normal text",
+            "Underlined text"
+        ]
+    },
+    {
+        "q": "What property is used to change the font size in CSS?",
+        "o": [
+            "font-size",
+            "font-weight",
+            "font-family",
+            "text-align"
+        ]
+    },
+    {
+        "q": "What does the following code do?",
+        "l": "css",
+        "c": "h1 {\n  text-align: center;\n}",
+        "o": [
+            "Centers text",
+            "Aligns text left",
+            "Aligns text right",
+            "Justifies text"
+        ]
+    },
+    {
+        "q": "Which property is used to align text in CSS?",
+        "o": [
+            "text-align",
+            "font-align",
+            "align-items",
+            "text-position"
+        ]
+    },
+    {
+        "q": "What will be the font size of the text?",
+        "l": "css",
+        "c": "p {\n  font-size: 20px;\n}",
+        "o": [
+            "20px",
+            "16px",
+            "12px",
+            "24px"
+        ]
+    },
+    {
+        "q": "How do you increase the space between lines of text?",
+        "o": [
+            "line-height",
+            "letter-spacing",
+            "word-spacing",
+            "font-size"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "h2 {\n  letter-spacing: 2px;\n}",
+        "o": [
+            "Adds 2px space between letters",
+            "Increases word spacing",
+            "Decreases letter spacing",
+            "Changes line height"
+        ]
+    },
+    {
+        "q": "Which property changes the font style to italic?",
+        "o": [
+            "font-style",
+            "font-variant",
+            "font-weight",
+            "font-size"
+        ]
+    },
+    {
+        "q": "What effect does this CSS have?",
+        "l": "css",
+        "c": "h3 {\n  text-transform: uppercase;\n}",
+        "o": [
+            "Uppercase text",
+            "Lowercase text",
+            "Capitalize text",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What value is used to apply bold text in CSS?",
+        "o": [
+            "font-weight: bold",
+            "font-style: bold",
+            "font-family: bold",
+            "text-weight: bold"
+        ]
+    },
+    {
+        "q": "What does the following code do?",
+        "l": "css",
+        "c": "p {\n  font-style: italic;\n}",
+        "o": [
+            "Italic text",
+            "Bold text",
+            "Underlined text",
+            "Uppercase text"
+        ]
+    },
+    {
+        "q": "Which property adjusts space between characters?",
+        "o": [
+            "letter-spacing",
+            "word-spacing",
+            "text-indent",
+            "line-height"
+        ]
+    },
+    {
+        "q": "What is the line height of this text?",
+        "l": "css",
+        "c": "p {\n  line-height: 1.5;\n}",
+        "o": [
+            "1.5 times the font size",
+            "1 time the font size",
+            "2 times the font size",
+            "No change"
+        ]
+    },
+    {
+        "q": "What is the default value for text alignment?",
+        "o": [
+            "left",
+            "center",
+            "right",
+            "justify"
+        ]
+    },
+    {
+        "q": "What will the text color be?",
+        "l": "css",
+        "c": "h1 {\n  color: red;\n}",
+        "o": [
+            "Red",
+            "Black",
+            "Blue",
+            "Green"
+        ]
+    },
+    {
+        "q": "Which property changes the font family?",
+        "o": [
+            "font-family",
+            "font-style",
+            "font-variant",
+            "font-weight"
+        ]
+    },
+    {
+        "q": "What will be the text alignment?",
+        "l": "css",
+        "c": "p {\n  text-align: justify;\n}",
+        "o": [
+            "Justified",
+            "Left-aligned",
+            "Right-aligned",
+            "Centered"
+        ]
+    },
+    {
+        "q": "What value makes text fully justified?",
+        "o": [
+            "justify",
+            "center",
+            "left",
+            "right"
+        ]
+    },
+    {
+        "q": "What does this CSS do?",
+        "l": "css",
+        "c": "p {\n  font-family: 'Arial', sans-serif;\n}",
+        "o": [
+            "Sets font to Arial",
+            "Sets font to Times",
+            "Sets font to Georgia",
+            "No change"
+        ]
+    },
+    {
+        "q": "Which unit is typically used for font size?",
+        "o": [
+            "px",
+            "kg",
+            "cm",
+            "mb"
+        ]
+    },
+    {
+        "q": "What happens to the text in this CSS?",
+        "l": "css",
+        "c": "p {\n  text-decoration: underline;\n}",
+        "o": [
+            "Underlined text",
+            "Bold text",
+            "Italic text",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which CSS property is used to change the color of the text?",
+        "o": [
+            "color",
+            "text-color",
+            "font-color",
+            "background-color"
+        ]
+    },
+    {
+        "q": "What will be the font size?",
+        "l": "css",
+        "c": "h2 {\n  font-size: 2em;\n}",
+        "o": [
+            "2 times the parent font size",
+            "2px",
+            "16px",
+            "1.5 times the font size"
+        ]
+    },
+    {
+        "q": "How do you underline text in CSS?",
+        "o": [
+            "text-decoration: underline",
+            "text-align: underline",
+            "font-style: underline",
+            "font-weight: underline"
+        ]
+    },
+    {
+        "q": "What does this code do to the text?",
+        "l": "css",
+        "c": "h1 {\n  text-transform: lowercase;\n}",
+        "o": [
+            "Lowercase text",
+            "Uppercase text",
+            "Capitalizes text",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property sets the space between words?",
+        "o": [
+            "word-spacing",
+            "letter-spacing",
+            "line-height",
+            "font-size"
+        ]
+    },
+    {
+        "q": "What effect does this CSS have?",
+        "l": "css",
+        "c": "p {\n  font-weight: 700;\n}",
+        "o": [
+            "Bold text",
+            "Light text",
+            "Normal text",
+            "Italic text"
+        ]
+    },
+    {
+        "q": "How do you set all text to uppercase in CSS?",
+        "o": [
+            "text-transform: uppercase",
+            "text-align: uppercase",
+            "font-variant: uppercase",
+            "letter-spacing: uppercase"
+        ]
+    },
+    {
+        "q": "What happens to text spacing here?",
+        "l": "css",
+        "c": "p {\n  word-spacing: 10px;\n}",
+        "o": [
+            "Adds 10px space between words",
+            "Adds 10px space between letters",
+            "Increases line height",
+            "Adds 20px space between words"
+        ]
+    },
+    {
+        "q": "Which property controls the text indentation?",
+        "o": [
+            "text-indent",
+            "text-align",
+            "line-height",
+            "letter-spacing"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "p {\n  letter-spacing: -1px;\n}",
+        "o": [
+            "Decreases letter spacing",
+            "Increases letter spacing",
+            "No change",
+            "Removes spaces"
+        ]
+    },
+    {
+        "q": "How do you bold text using CSS?",
+        "o": [
+            "font-weight: bold",
+            "font-style: bold",
+            "text-align: bold",
+            "text-style: bold"
+        ]
+    },
+    {
+        "q": "What will be the text alignment?",
+        "l": "css",
+        "c": "h1 {\n  text-align: left;\n}",
+        "o": [
+            "Left-aligned",
+            "Centered",
+            "Right-aligned",
+            "Justified"
+        ]
+    },
+    {
+        "q": "Which of the following is a valid font-size value?",
+        "o": [
+            "12px",
+            "bold",
+            "italic",
+            "underline"
+        ]
+    },
+    {
+        "q": "What will be the line height?",
+        "l": "css",
+        "c": "p {\n  line-height: 2;\n}",
+        "o": [
+            "2 times the font size",
+            "1.5 times the font size",
+            "1 time the font size",
+            "No change"
+        ]
+    },
+    {
+        "q": "Which property changes the horizontal alignment of text?",
+        "o": [
+            "text-align",
+            "line-height",
+            "letter-spacing",
+            "font-style"
+        ]
+    },
+    {
+        "q": "What will this code do to the text?",
+        "l": "css",
+        "c": "h2 {\n  font-style: normal;\n}",
+        "o": [
+            "Normal text",
+            "Bold text",
+            "Italic text",
+            "Underlined text"
+        ]
+    },
+    {
+        "q": "What does 'em' unit in font-size represent?",
+        "o": [
+            "Relative to parent element",
+            "Fixed size",
+            "Relative to screen",
+            "Relative to viewport"
+        ]
+    },
+    {
+        "q": "What font will be applied to the text?",
+        "l": "css",
+        "c": "p {\n  font-family: 'Courier New', monospace;\n}",
+        "o": [
+            "Courier New",
+            "Arial",
+            "Times",
+            "Georgia"
+        ]
+    },
+    {
+        "q": "Which property specifies the height of a line of text?",
+        "o": [
+            "line-height",
+            "height",
+            "letter-spacing",
+            "font-size"
+        ]
+    },
+    {
+        "q": "What does this code do to the font size?",
+        "l": "css",
+        "c": "h1 {\n  font-size: 150%;\n}",
+        "o": [
+            "Increases size to 150%",
+            "Sets size to 100%",
+            "Decreases size to 75%",
+            "No change"
+        ]
+    },
+    {
+        "q": "What does 'rem' unit stand for?",
+        "o": [
+            "Root element's font size",
+            "Relative to parent",
+            "Relative to screen width",
+            "Relative to viewport"
+        ]
+    },
+    {
+        "q": "What will be the font style?",
+        "l": "css",
+        "c": "p {\n  font-style: oblique;\n}",
+        "o": [
+            "Oblique text",
+            "Bold text",
+            "Normal text",
+            "Italic text"
+        ]
+    },
+    {
+        "q": "How do you add a shadow to text?",
+        "o": [
+            "text-shadow",
+            "font-shadow",
+            "text-decoration",
+            "font-style"
+        ]
+    },
+    {
+        "q": "What effect does this code have?",
+        "l": "css",
+        "c": "h2 {\n  text-transform: capitalize;\n}",
+        "o": [
+            "Capitalizes each word",
+            "Converts text to uppercase",
+            "Converts text to lowercase",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property sets the space between characters?",
+        "o": [
+            "letter-spacing",
+            "word-spacing",
+            "line-height",
+            "font-size"
+        ]
+    },
+    {
+        "q": "What does this CSS do to the text?",
+        "l": "css",
+        "c": "p {\n  font-weight: lighter;\n}",
+        "o": [
+            "Lighter text",
+            "Bolder text",
+            "Normal text",
+            "Italic text"
+        ]
+    },
+    {
+        "q": "What is the default value of 'line-height'?",
+        "o": [
+            "normal",
+            "1.5",
+            "auto",
+            "inherit"
+        ]
+    },
+    {
+        "q": "What will be the letter spacing?",
+        "l": "css",
+        "c": "h3 {\n  letter-spacing: 0.5em;\n}",
+        "o": [
+            "0.5em",
+            "1em",
+            "0.1em",
+            "2em"
+        ]
+    },
+    {
+        "q": "How do you make text italic in CSS?",
+        "o": [
+            "font-style: italic",
+            "text-decoration: italic",
+            "font-weight: italic",
+            "text-align: italic"
+        ]
+    },
+    {
+        "q": "What happens to the text alignment?",
+        "l": "css",
+        "c": "h1 {\n  text-align: right;\n}",
+        "o": [
+            "Right-aligned",
+            "Left-aligned",
+            "Centered",
+            "Justified"
+        ]
+    },
+    {
+        "q": "Which property changes the thickness of the text?",
+        "o": [
+            "font-weight",
+            "font-size",
+            "font-family",
+            "text-align"
+        ]
+    },
+    {
+        "q": "What will be the font size?",
+        "l": "css",
+        "c": "p {\n  font-size: 1.2rem;\n}",
+        "o": [
+            "1.2 times the root element's size",
+            "1.2px",
+            "2em",
+            "16px"
+        ]
+    },
+    {
+        "q": "Which value of 'text-align' aligns text to the right?",
+        "o": [
+            "right",
+            "left",
+            "center",
+            "justify"
+        ]
+    },
+    {
+        "q": "What is the effect of this CSS?",
+        "l": "css",
+        "c": "p {\n  font-variant: small-caps;\n}",
+        "o": [
+            "Small-caps text",
+            "Uppercase text",
+            "Lowercase text",
+            "Normal text"
+        ]
+    },
+    {
+        "q": "How do you change the font in CSS?",
+        "o": [
+            "font-family",
+            "font-size",
+            "font-weight",
+            "font-style"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "h2 {\n  color: blue;\n}",
+        "o": [
+            "Blue text",
+            "Red text",
+            "Green text",
+            "Black text"
+        ]
+    },
+    {
+        "q": "What value makes text fully capitalized?",
+        "o": [
+            "text-transform: uppercase",
+            "font-variant: small-caps",
+            "font-style: capitalize",
+            "font-weight: bold"
+        ]
+    },
+    {
+        "q": "What is the default font size for this code?",
+        "l": "css",
+        "c": "body {\n  font-size: 100%;\n}",
+        "o": [
+            "16px",
+            "12px",
+            "14px",
+            "20px"
+        ]
+    },
+    {
+        "q": "Which property changes the vertical space between lines?",
+        "o": [
+            "line-height",
+            "letter-spacing",
+            "text-align",
+            "font-size"
+        ]
+    },
+    {
+        "q": "What does this CSS rule do?",
+        "l": "css",
+        "c": "p {\n  font-family: 'Times New Roman', serif;\n}",
+        "o": [
+            "Applies Times New Roman",
+            "Applies Arial",
+            "Applies Courier New",
+            "Applies Georgia"
+        ]
+    },
+    {
+        "q": "Which property is used to capitalize the first letter of each word?",
+        "o": [
+            "text-transform: capitalize",
+            "text-align: capitalize",
+            "font-style: capitalize",
+            "font-variant: capitalize"
+        ]
+    },
+    {
+        "q": "What will happen to the font size of all h1 tags?",
+        "l": "css",
+        "c": "h1 {\n  font-size: calc(10px + 2vw);\n}",
+        "o": [
+            "Font size increases with viewport width",
+            "Font size is fixed at 10px",
+            "Font size is 2vw",
+            "Font size decreases with viewport width"
+        ]
+    },
+    {
+        "q": "How do you make text appear bold without using 'bold'?",
+        "o": [
+            "font-weight: 700",
+            "font-size: large",
+            "font-style: italic",
+            "letter-spacing: 2px"
+        ]
+    },
+    {
+        "q": "Which of the following best describes the output of the code?",
+        "l": "css",
+        "c": "p {\n  text-align: right;\n  font-weight: bold;\n}",
+        "o": [
+            "Bold, right-aligned text",
+            "Italic, left-aligned text",
+            "Normal, centered text",
+            "Bold, justified text"
+        ]
+    },
+    {
+        "q": "Which CSS property defines the type of font?",
+        "o": [
+            "font-family",
+            "font-style",
+            "font-size",
+            "font-weight"
+        ]
+    },
+    {
+        "q": "What happens to the font size of the paragraph?",
+        "l": "css",
+        "c": "p {\n  font-size: 1.5rem;\n  line-height: 2;\n}",
+        "o": [
+            "Font size is 1.5 times the root element",
+            "Font size is 2rem",
+            "Font size is fixed",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What property sets the space between text and its decoration?",
+        "o": [
+            "text-decoration-skip",
+            "text-align",
+            "letter-spacing",
+            "line-height"
+        ]
+    },
+    {
+        "q": "Which font will apply first?",
+        "l": "css",
+        "c": "body {\n  font-family: 'Verdana', 'Arial', sans-serif;\n}",
+        "o": [
+            "Verdana",
+            "Arial",
+            "sans-serif",
+            "Times New Roman"
+        ]
+    },
+    {
+        "q": "Which value removes the underline from links?",
+        "o": [
+            "text-decoration: none",
+            "text-transform: none",
+            "font-style: none",
+            "font-weight: none"
+        ]
+    },
+    {
+        "q": "What happens to the letter spacing in this paragraph?",
+        "l": "css",
+        "c": "p {\n  letter-spacing: 0.1em;\n}",
+        "o": [
+            "Adds 0.1em space between letters",
+            "Adds 1px space between letters",
+            "Removes letter spacing",
+            "Increases word spacing"
+        ]
+    },
+    {
+        "q": "How do you change text alignment to center?",
+        "o": [
+            "text-align: center",
+            "align-items: center",
+            "vertical-align: middle",
+            "font-align: center"
+        ]
+    },
+    {
+        "q": "Which CSS property controls the space between text lines?",
+        "l": "css",
+        "c": "p {\n  line-height: 1.8;\n}",
+        "o": [
+            "line-height",
+            "letter-spacing",
+            "word-spacing",
+            "font-size"
+        ]
+    },
+    {
+        "q": "Which unit is relative to the viewport width?",
+        "o": [
+            "vw",
+            "em",
+            "px",
+            "pt"
+        ]
+    },
+    {
+        "q": "What is the effect of the following CSS code on text?",
+        "l": "css",
+        "c": "p {\n  font-variant: small-caps;\n}",
+        "o": [
+            "Displays text in small caps",
+            "Displays text in lowercase",
+            "Displays text in italic",
+            "Displays text in bold"
+        ]
+    },
+    {
+        "q": "Which value of 'font-weight' makes text appear normal?",
+        "o": [
+            "400",
+            "700",
+            "200",
+            "900"
+        ]
+    },
+    {
+        "q": "What happens when 'inherit' is used for font size?",
+        "l": "css",
+        "c": "p {\n  font-size: inherit;\n}",
+        "o": [
+            "Inherits the parent's font size",
+            "Sets the font size to 16px",
+            "Sets font size to the default",
+            "No change in font size"
+        ]
+    },
+    {
+        "q": "How do you specify small-caps font?",
+        "o": [
+            "font-variant: small-caps",
+            "text-transform: uppercase",
+            "font-style: small",
+            "font-weight: light"
+        ]
+    },
+    {
+        "q": "Which value will result in bold text?",
+        "l": "css",
+        "c": "p {\n  font-weight: 600;\n}",
+        "o": [
+            "Bold text",
+            "Normal text",
+            "Lighter text",
+            "Italic text"
+        ]
+    },
+    {
+        "q": "Which property is used to change the text color of an element?",
+        "o": [
+            "color",
+            "text-color",
+            "font-color",
+            "background-color"
+        ]
+    },
+    {
+        "q": "Which value makes the text italic?",
+        "l": "css",
+        "c": "p {\n  font-style: italic;\n}",
+        "o": [
+            "Italic",
+            "Bold",
+            "Normal",
+            "Underline"
+        ]
+    },
+    {
+        "q": "What is the CSS syntax for setting a font size of 16 pixels?",
+        "o": [
+            "font-size: 16px",
+            "size: 16px",
+            "font: 16px",
+            "text-size: 16px"
+        ]
+    },
+    {
+        "q": "What does this CSS code do to text alignment?",
+        "l": "css",
+        "c": "p {\n  text-align: justify;\n}",
+        "o": [
+            "Justifies text",
+            "Aligns text to the left",
+            "Centers text",
+            "Aligns text to the right"
+        ]
+    },
+    {
+        "q": "Which property affects the spacing between words?",
+        "o": [
+            "word-spacing",
+            "letter-spacing",
+            "line-height",
+            "text-indent"
+        ]
+    },
+    {
+        "q": "What does this code do to letter spacing?",
+        "l": "css",
+        "c": "p {\n  letter-spacing: normal;\n}",
+        "o": [
+            "Resets letter spacing to normal",
+            "Increases letter spacing",
+            "Decreases letter spacing",
+            "Adds word spacing"
+        ]
+    },
+    {
+        "q": "Which property controls the height of an element\u00e2\u20ac\u2122s font?",
+        "o": [
+            "font-size",
+            "line-height",
+            "height",
+            "font-weight"
+        ]
+    },
+    {
+        "q": "What is the output of the following CSS?",
+        "l": "css",
+        "c": "h1 {\n  font-variant: normal;\n}",
+        "o": [
+            "Normal text",
+            "Small caps",
+            "Bold text",
+            "Uppercase text"
+        ]
+    },
+    {
+        "q": "Which property changes the case of text in CSS?",
+        "o": [
+            "text-transform",
+            "text-align",
+            "font-variant",
+            "font-style"
+        ]
+    },
+    {
+        "q": "What effect does the 'text-transform: capitalize' have on the text?",
+        "l": "css",
+        "c": "p {\n  text-transform: capitalize;\n}",
+        "o": [
+            "Capitalizes first letter of each word",
+            "Converts text to lowercase",
+            "Converts text to uppercase",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you apply italic styling to text?",
+        "o": [
+            "font-style: italic",
+            "text-decoration: italic",
+            "font-weight: italic",
+            "text-align: italic"
+        ]
+    },
+    {
+        "q": "Which CSS value increases the spacing between words?",
+        "l": "css",
+        "c": "p {\n  word-spacing: 5px;\n}",
+        "o": [
+            "Adds 5px space between words",
+            "Adds 5px space between letters",
+            "Removes word spacing",
+            "No change in word spacing"
+        ]
+    },
+    {
+        "q": "What is the default value for 'font-weight'?",
+        "o": [
+            "normal",
+            "bold",
+            "light",
+            "inherit"
+        ]
+    },
+    {
+        "q": "What happens to text with 'text-align: center'?",
+        "l": "css",
+        "c": "p {\n  text-align: center;\n}",
+        "o": [
+            "Centers the text",
+            "Left-aligns the text",
+            "Right-aligns the text",
+            "Justifies the text"
+        ]
+    },
+    {
+        "q": "Which unit is used to set font size relative to the parent element?",
+        "o": [
+            "em",
+            "px",
+            "pt",
+            "vh"
+        ]
+    },
+    {
+        "q": "What will be the output if 'font-size: 2em' is applied?",
+        "l": "css",
+        "c": "p {\n  font-size: 2em;\n}",
+        "o": [
+            "Twice the parent font size",
+            "Fixed at 2px",
+            "16px",
+            "Same size as the root element"
+        ]
+    },
+    {
+        "q": "Which property changes the horizontal alignment of inline content?",
+        "o": [
+            "text-align",
+            "vertical-align",
+            "font-size",
+            "line-height"
+        ]
+    },
+    {
+        "q": "What happens when the following CSS is applied?",
+        "l": "css",
+        "c": "p {\n  line-height: 3;\n}",
+        "o": [
+            "Line height is 3 times the font size",
+            "Line height is fixed",
+            "No change",
+            "Text becomes bold"
+        ]
+    },
+    {
+        "q": "What property adjusts the space between text characters?",
+        "o": [
+            "letter-spacing",
+            "text-align",
+            "word-spacing",
+            "line-height"
+        ]
+    },
+    {
+        "q": "What will the text look like with the following CSS?",
+        "l": "css",
+        "c": "h2 {\n  font-weight: bolder;\n}",
+        "o": [
+            "Bolder text",
+            "Lighter text",
+            "Normal text",
+            "Italic text"
+        ]
+    },
+    {
+        "q": "Which CSS property changes text to lowercase?",
+        "o": [
+            "text-transform: lowercase",
+            "font-variant: small-caps",
+            "text-decoration: lowercase",
+            "text-align: lowercase"
+        ]
+    },
+    {
+        "q": "What does this code do to the text's font family?",
+        "l": "css",
+        "c": "p {\n  font-family: 'Times New Roman', serif;\n}",
+        "o": [
+            "Applies Times New Roman",
+            "Applies Arial",
+            "Applies Courier",
+            "Applies Helvetica"
+        ]
+    },
+    {
+        "q": "How do you apply bold styling using a number value?",
+        "o": [
+            "font-weight: 700",
+            "font-size: 14px",
+            "letter-spacing: 5px",
+            "text-align: right"
+        ]
+    },
+    {
+        "q": "What is the default font style for this element?",
+        "l": "css",
+        "c": "h1 {\n  font-style: normal;\n}",
+        "o": [
+            "Normal",
+            "Italic",
+            "Bold",
+            "Underline"
+        ]
+    },
+    {
+        "q": "Which value of 'text-align' justifies text evenly?",
+        "o": [
+            "justify",
+            "center",
+            "left",
+            "right"
+        ]
+    },
+    {
+        "q": "What happens to the text alignment?",
+        "l": "css",
+        "c": "h2 {\n  text-align: left;\n}",
+        "o": [
+            "Aligns text to the left",
+            "Centers text",
+            "Right-aligns text",
+            "Justifies text"
+        ]
+    },
+    {
+        "q": "Which property adjusts the text's shadow effect?",
+        "o": [
+            "text-shadow",
+            "font-style",
+            "font-weight",
+            "letter-spacing"
+        ]
+    },
+    {
+        "q": "Which font will be applied here?",
+        "l": "css",
+        "c": "p {\n  font-family: 'Georgia', serif;\n}",
+        "o": [
+            "Georgia",
+            "Arial",
+            "Courier New",
+            "Times New Roman"
+        ]
+    },
+    {
+        "q": "Which property increases space between words?",
+        "o": [
+            "word-spacing",
+            "letter-spacing",
+            "line-height",
+            "font-size"
+        ]
+    },
+    {
+        "q": "What does the 'line-height' property affect?",
+        "l": "css",
+        "c": "p {\n  line-height: 1.6;\n}",
+        "o": [
+            "Vertical spacing between lines",
+            "Font size",
+            "Text alignment",
+            "Letter spacing"
+        ]
+    },
+    {
+        "q": "How do you define a monospace font in CSS?",
+        "o": [
+            "font-family: monospace",
+            "font-style: monospace",
+            "font-variant: monospace",
+            "text-align: monospace"
+        ]
+    },
+    {
+        "q": "Which text transformation is applied?",
+        "l": "css",
+        "c": "h1 {\n  text-transform: lowercase;\n}",
+        "o": [
+            "Converts text to lowercase",
+            "Capitalizes each word",
+            "Uppercase text",
+            "Normal text"
+        ]
+    },
+    {
+        "q": "How can you set the default font size of the entire document?",
+        "o": [
+            "html { font-size: ... }",
+            "body { font-size: ... }",
+            "p { font-size: ... }",
+            "div { font-size: ... }"
+        ]
+    },
+    {
+        "q": "What does this CSS rule do?",
+        "l": "css",
+        "c": "p {\n  font-family: 'Helvetica', sans-serif;\n}",
+        "o": [
+            "Applies Helvetica",
+            "Applies Arial",
+            "Applies Times",
+            "Applies Courier New"
+        ]
+    },
+    {
+        "q": "Which property controls the space above and below lines of text?",
+        "o": [
+            "line-height",
+            "text-align",
+            "letter-spacing",
+            "font-size"
+        ]
+    },
+    {
+        "q": "What will be the effect of this CSS?",
+        "l": "css",
+        "c": "h2 {\n  font-variant: small-caps;\n}",
+        "o": [
+            "Displays small-caps",
+            "Displays italic",
+            "Displays bold",
+            "Displays normal text"
+        ]
+    },
+    {
+        "q": "What CSS value for 'text-transform' converts all text to uppercase?",
+        "o": [
+            "uppercase",
+            "capitalize",
+            "lowercase",
+            "none"
+        ]
+    },
+    {
+        "q": "Which of the following properties sets the text color?",
+        "l": "css",
+        "c": "p {\n  color: #333;\n}",
+        "o": [
+            "Sets text color to #333",
+            "Sets background color",
+            "Sets border color",
+            "No change in text color"
+        ]
+    },
+    {
+        "q": "What is the value for normal font style in CSS?",
+        "o": [
+            "font-style: normal",
+            "font-weight: 400",
+            "font-style: italic",
+            "font-variant: normal"
+        ]
+    },
+    {
+        "q": "What does the 'letter-spacing' property affect?",
+        "l": "css",
+        "c": "p {\n  letter-spacing: 1px;\n}",
+        "o": [
+            "Spacing between letters",
+            "Line height",
+            "Word spacing",
+            "Text alignment"
+        ]
+    },
+    {
+        "q": "Which property adjusts the vertical alignment of text?",
+        "o": [
+            "vertical-align",
+            "text-align",
+            "line-height",
+            "font-size"
+        ]
+    },
+    {
+        "q": "What does 'font-style: oblique' do?",
+        "l": "css",
+        "c": "p {\n  font-style: oblique;\n}",
+        "o": [
+            "Makes text oblique",
+            "Makes text bold",
+            "Makes text italic",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you remove text decoration such as underline?",
+        "o": [
+            "text-decoration: none",
+            "font-style: normal",
+            "font-weight: light",
+            "letter-spacing: normal"
+        ]
+    },
+    {
+        "q": "What happens when this CSS is applied?",
+        "l": "css",
+        "c": "h1 {\n  font-size: 4vw;\n}",
+        "o": [
+            "Font size is 4% of viewport width",
+            "Font size is 4em",
+            "Font size is 4px",
+            "No change in font size"
+        ]
+    },
+    {
+        "q": "Which CSS property can make the first letter of each word uppercase?",
+        "o": [
+            "text-transform: capitalize",
+            "text-align: capitalize",
+            "font-weight: capitalize",
+            "letter-spacing: capitalize"
+        ]
+    },
+    {
+        "q": "What is the default unit for 'font-size' in CSS?",
+        "o": [
+            "px",
+            "em",
+            "rem",
+            "pt"
+        ]
+    },
+    {
+        "q": "Which value is the default for 'font-variant' in CSS?",
+        "o": [
+            "normal",
+            "small-caps",
+            "uppercase",
+            "bold"
+        ]
+    },
+    {
+        "q": "Which value of 'font-style' applies italic text?",
+        "o": [
+            "italic",
+            "bold",
+            "underline",
+            "normal"
+        ]
+    },
+    {
+        "q": "What value of 'font-weight' defines a regular font style?",
+        "o": [
+            "normal",
+            "bold",
+            "lighter",
+            "bolder"
+        ]
+    },
+    {
+        "q": "Which value for 'text-align' aligns text to the left?",
+        "o": [
+            "left",
+            "center",
+            "right",
+            "justify"
+        ]
+    },
+    {
+        "q": "Which CSS property specifies a shadow for text?",
+        "o": [
+            "text-shadow",
+            "font-shadow",
+            "box-shadow",
+            "word-shadow"
+        ]
+    },
+    {
+        "q": "Which value of 'text-align' aligns text to both the left and right?",
+        "o": [
+            "justify",
+            "center",
+            "left",
+            "right"
+        ]
+    },
+    {
+        "q": "What CSS property is used to increase space between lines of text?",
+        "o": [
+            "line-height",
+            "letter-spacing",
+            "word-spacing",
+            "font-size"
+        ]
+    },
+    {
+        "q": "Which unit is commonly used for responsive font sizes?",
+        "o": [
+            "em",
+            "px",
+            "pt",
+            "cm"
+        ]
+    },
+    {
+        "q": "What value of 'font-variant' makes text appear in small-caps?",
+        "o": [
+            "small-caps",
+            "normal",
+            "uppercase",
+            "bold"
+        ]
+    },
+    {
+        "q": "What CSS property is used to define text shadows?",
+        "o": [
+            "text-shadow",
+            "font-shadow",
+            "box-shadow",
+            "letter-shadow"
+        ]
+    },
+    {
+        "q": "Which property is used to change the font weight to light?",
+        "o": [
+            "font-weight: 300",
+            "font-style: light",
+            "text-align: light",
+            "letter-spacing: light"
+        ]
+    },
+    {
+        "q": "Which unit is used to define font sizes relative to the root element?",
+        "o": [
+            "rem",
+            "em",
+            "px",
+            "vw"
+        ]
+    },
+    {
+        "q": "What value of 'text-decoration' adds a line through the text?",
+        "o": [
+            "line-through",
+            "underline",
+            "overline",
+            "none"
+        ]
+    },
+    {
+        "q": "Which property is used to define the font color?",
+        "o": [
+            "color",
+            "font-color",
+            "text-color",
+            "font-style"
+        ]
+    },
+    {
+        "q": "How do you set the font size to 100% of the parent element?",
+        "o": [
+            "font-size: 100%",
+            "font-size: inherit",
+            "font-size: em",
+            "font-size: rem"
+        ]
+    },
+    {
+        "q": "What is the default text color in CSS?",
+        "o": [
+            "black",
+            "white",
+            "gray",
+            "blue"
+        ]
+    },
+    {
+        "q": "Which CSS property changes the space between words?",
+        "o": [
+            "word-spacing",
+            "letter-spacing",
+            "line-height",
+            "font-weight"
+        ]
+    },
+    {
+        "q": "Which property controls the alignment of text vertically?",
+        "o": [
+            "vertical-align",
+            "text-align",
+            "line-height",
+            "font-size"
+        ]
+    },
+    {
+        "q": "How do you make text appear bold?",
+        "o": [
+            "font-weight: bold",
+            "font-size: large",
+            "text-align: bold",
+            "letter-spacing: wide"
+        ]
+    },
+    {
+        "q": "Which unit in CSS is relative to the width of the viewport?",
+        "o": [
+            "vw",
+            "vh",
+            "em",
+            "rem"
+        ]
+    },
+    {
+        "q": "What value of 'font-weight' sets the lightest text?",
+        "o": [
+            "100",
+            "400",
+            "700",
+            "900"
+        ]
+    },
+    {
+        "q": "Which property is used to set the spacing between letters?",
+        "o": [
+            "letter-spacing",
+            "word-spacing",
+            "line-height",
+            "font-size"
+        ]
+    },
+    {
+        "q": "What does 'font-variant' control in CSS?",
+        "o": [
+            "small-caps",
+            "font-size",
+            "text-align",
+            "font-weight"
+        ]
+    },
+    {
+        "q": "Which property is used to italicize text?",
+        "o": [
+            "font-style: italic",
+            "text-align: italic",
+            "font-weight: bold",
+            "letter-spacing: italic"
+        ]
+    },
+    {
+        "q": "How do you add a line above the text using CSS?",
+        "o": [
+            "text-decoration: overline",
+            "text-decoration: underline",
+            "line-height: overline",
+            "letter-spacing: overline"
+        ]
+    },
+    {
+        "q": "What property defines the height of a line box?",
+        "o": [
+            "line-height",
+            "height",
+            "letter-spacing",
+            "font-size"
+        ]
+    },
+    {
+        "q": "Which property sets the color of a text shadow?",
+        "o": [
+            "text-shadow",
+            "font-shadow",
+            "box-shadow",
+            "word-spacing"
+        ]
+    },
+    {
+        "q": "Which value for 'text-transform' changes text to lowercase?",
+        "o": [
+            "lowercase",
+            "capitalize",
+            "uppercase",
+            "none"
+        ]
+    },
+    {
+        "q": "Which CSS property makes text appear in a small-caps font?",
+        "o": [
+            "font-variant: small-caps",
+            "text-transform: uppercase",
+            "letter-spacing: small",
+            "font-style: bold"
+        ]
+    },
+    {
+        "q": "Which property controls the vertical position of an element's text?",
+        "o": [
+            "vertical-align",
+            "text-align",
+            "line-height",
+            "letter-spacing"
+        ]
+    },
+    {
+        "q": "Which property specifies the distance between the baseline of adjacent lines?",
+        "o": [
+            "line-height",
+            "font-size",
+            "letter-spacing",
+            "word-spacing"
+        ]
+    },
+    {
+        "q": "Which property sets the font color of an element?",
+        "o": [
+            "color",
+            "font-color",
+            "text-color",
+            "background-color"
+        ]
+    },
+    {
+        "q": "What value of 'font-weight' makes text bold?",
+        "o": [
+            "700",
+            "300",
+            "normal",
+            "200"
+        ]
+    },
+    {
+        "q": "Which property is used to change the font of text?",
+        "o": [
+            "font-family",
+            "font-weight",
+            "font-style",
+            "text-transform"
+        ]
+    },
+    {
+        "q": "Which value of 'text-align' aligns text to the center?",
+        "o": [
+            "center",
+            "left",
+            "right",
+            "justify"
+        ]
+    },
+    {
+        "q": "Which property is used to change the thickness of text?",
+        "o": [
+            "font-weight",
+            "font-size",
+            "font-family",
+            "text-align"
+        ]
+    },
+    {
+        "q": "What property is used to control the case of text?",
+        "o": [
+            "text-transform",
+            "text-align",
+            "font-weight",
+            "font-size"
+        ]
+    },
+    {
+        "q": "Which property changes text to italic?",
+        "o": [
+            "font-style: italic",
+            "text-align: italic",
+            "font-weight: bold",
+            "letter-spacing: italic"
+        ]
+    },
+    {
+        "q": "Which property is used to add a shadow to text?",
+        "o": [
+            "text-shadow",
+            "box-shadow",
+            "font-shadow",
+            "letter-spacing"
+        ]
+    },
+    {
+        "q": "Which value of 'font-weight' makes text appear thinner?",
+        "o": [
+            "lighter",
+            "normal",
+            "bold",
+            "bolder"
+        ]
+    },
+    {
+        "q": "Which CSS property changes the font size of text?",
+        "o": [
+            "font-size",
+            "text-align",
+            "font-weight",
+            "line-height"
+        ]
+    },
+    {
+        "q": "Which value of 'text-decoration' adds a line below the text?",
+        "o": [
+            "underline",
+            "line-through",
+            "overline",
+            "none"
+        ]
+    },
+    {
+        "q": "Which property controls the size of text in CSS?",
+        "o": [
+            "font-size",
+            "font-weight",
+            "font-family",
+            "text-align"
+        ]
+    },
+    {
+        "q": "What value of 'font-style' is used for normal text?",
+        "o": [
+            "normal",
+            "italic",
+            "bold",
+            "light"
+        ]
+    },
+    {
+        "q": "Which property is used to make text bold in CSS?",
+        "o": [
+            "font-weight",
+            "font-size",
+            "font-style",
+            "text-transform"
+        ]
+    },
+    {
+        "q": "What is the default value of 'text-align'?",
+        "o": [
+            "left",
+            "center",
+            "right",
+            "justify"
+        ]
+    },
+    {
+        "q": "Which value of 'letter-spacing' increases the space between characters?",
+        "o": [
+            "positive value",
+            "negative value",
+            "zero",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the unit 'px' used for in typography?",
+        "o": [
+            "pixels",
+            "points",
+            "percentage",
+            "em"
+        ]
+    },
+    {
+        "q": "Which property is used to transform text to uppercase?",
+        "o": [
+            "text-transform",
+            "text-align",
+            "font-weight",
+            "font-style"
+        ]
+    },
+    {
+        "q": "How do you remove an underline from text in CSS?",
+        "o": [
+            "text-decoration: none",
+            "font-style: normal",
+            "text-transform: none",
+            "font-weight: normal"
+        ]
+    },
+    {
+        "q": "Which CSS property changes the height of a line of text?",
+        "o": [
+            "line-height",
+            "font-size",
+            "letter-spacing",
+            "text-align"
+        ]
+    },
+    {
+        "q": "What value of 'font-style' makes text italic?",
+        "o": [
+            "italic",
+            "normal",
+            "bold",
+            "underline"
+        ]
+    },
+    {
+        "q": "Which property specifies the distance between words in text?",
+        "o": [
+            "word-spacing",
+            "letter-spacing",
+            "line-height",
+            "font-weight"
+        ]
+    },
+    {
+        "q": "What value of 'text-align' aligns text to the right?",
+        "o": [
+            "right",
+            "left",
+            "center",
+            "justify"
+        ]
+    },
+    {
+        "q": "What property is used to change the font of text?",
+        "o": [
+            "font-family",
+            "font-size",
+            "font-style",
+            "font-weight"
+        ]
+    },
+    {
+        "q": "Which property makes text appear in small uppercase letters?",
+        "o": [
+            "font-variant",
+            "text-transform",
+            "font-size",
+            "font-weight"
+        ]
+    },
+    {
+        "q": "How do you define multiple font families in CSS?",
+        "o": [
+            "comma-separated",
+            "space-separated",
+            "semicolon-separated",
+            "colon-separated"
+        ]
+    },
+    {
+        "q": "Which property is used to make text thicker or thinner?",
+        "o": [
+            "font-weight",
+            "font-size",
+            "text-transform",
+            "line-height"
+        ]
+    },
+    {
+        "q": "Which CSS unit is relative to the parent element's font size?",
+        "o": [
+            "em",
+            "rem",
+            "px",
+            "vh"
+        ]
+    },
+    {
+        "q": "Which value of 'line-height' will create double spacing?",
+        "o": [
+            "2",
+            "1.5",
+            "1",
+            "0.5"
+        ]
+    },
+    {
+        "q": "Which value of 'text-transform' capitalizes the first letter of each word?",
+        "o": [
+            "capitalize",
+            "uppercase",
+            "lowercase",
+            "none"
+        ]
+    },
+    {
+        "q": "What property defines the color of text?",
+        "o": [
+            "color",
+            "font-color",
+            "background-color",
+            "text-color"
+        ]
+    },
+    {
+        "q": "Which value of 'font-weight' makes text appear normal?",
+        "o": [
+            "normal",
+            "bold",
+            "lighter",
+            "bolder"
+        ]
+    },
+    {
+        "q": "What is the default value of 'font-size' in most browsers?",
+        "o": [
+            "16px",
+            "12px",
+            "14px",
+            "18px"
+        ]
+    },
+    {
+        "q": "Which property is used to create text shadows?",
+        "o": [
+            "text-shadow",
+            "box-shadow",
+            "font-shadow",
+            "letter-spacing"
+        ]
+    },
+    {
+        "q": "What value of 'font-style' is used for italic text?",
+        "o": [
+            "italic",
+            "normal",
+            "bold",
+            "light"
+        ]
+    },
+    {
+        "q": "How do you increase the spacing between letters in CSS?",
+        "o": [
+            "letter-spacing",
+            "word-spacing",
+            "line-height",
+            "font-size"
+        ]
+    },
+    {
+        "q": "Which property controls the vertical spacing between lines of text?",
+        "o": [
+            "line-height",
+            "font-size",
+            "letter-spacing",
+            "text-align"
+        ]
+    },
+    {
+        "q": "Which property changes the style of a font?",
+        "o": [
+            "font-style",
+            "font-family",
+            "font-weight",
+            "font-size"
+        ]
+    },
+    {
+        "q": "What value of 'text-transform' changes text to uppercase?",
+        "o": [
+            "uppercase",
+            "capitalize",
+            "lowercase",
+            "none"
+        ]
+    },
+    {
+        "q": "How do you make text italic in CSS?",
+        "o": [
+            "font-style: italic",
+            "text-transform: italic",
+            "font-weight: bold",
+            "letter-spacing: italic"
+        ]
+    },
+    {
+        "q": "Which CSS property makes text underlined?",
+        "o": [
+            "text-decoration: underline",
+            "text-transform: underline",
+            "font-style: underline",
+            "font-weight: underline"
+        ]
+    },
+    {
+        "q": "Which value of 'font-weight' is the boldest?",
+        "o": [
+            "900",
+            "100",
+            "400",
+            "700"
+        ]
+    },
+    {
+        "q": "Which CSS unit is based on the size of the root element?",
+        "o": [
+            "rem",
+            "em",
+            "px",
+            "vw"
+        ]
+    },
+    {
+        "q": "Which value of 'text-align' centers text?",
+        "o": [
+            "center",
+            "left",
+            "right",
+            "justify"
+        ]
+    },
+    {
+        "q": "What value of 'font-variant' changes text to small-caps?",
+        "o": [
+            "small-caps",
+            "normal",
+            "capitalize",
+            "lowercase"
+        ]
+    },
+    {
+        "q": "Which CSS property controls the space between words?",
+        "o": [
+            "word-spacing",
+            "letter-spacing",
+            "line-height",
+            "font-weight"
+        ]
+    },
+    {
+        "q": "How do you set the font size relative to the width of the viewport?",
+        "o": [
+            "vw",
+            "vh",
+            "em",
+            "px"
+        ]
+    },
+    {
+        "q": "Which CSS property is used to underline text?",
+        "o": [
+            "text-decoration",
+            "font-style",
+            "text-align",
+            "font-weight"
+        ]
+    },
+    {
+        "q": "Which property is used to capitalize all text letters?",
+        "o": [
+            "text-transform: uppercase",
+            "font-weight: bold",
+            "text-align: center",
+            "font-style: italic"
+        ]
+    },
+    {
+        "q": "What property controls the horizontal alignment of text?",
+        "o": [
+            "text-align",
+            "line-height",
+            "font-style",
+            "font-size"
+        ]
+    },
+    {
+        "q": "Which property in CSS changes the font size of an element?",
+        "o": [
+            "font-size",
+            "font-family",
+            "font-style",
+            "text-transform"
+        ]
+    },
+    {
+        "q": "What property adjusts the space between characters in a text?",
+        "o": [
+            "letter-spacing",
+            "word-spacing",
+            "line-height",
+            "font-weight"
+        ]
+    },
+    {
+        "q": "Which property changes the font weight in CSS?",
+        "o": [
+            "font-weight",
+            "font-style",
+            "font-size",
+            "line-height"
+        ]
+    },
+    {
+        "q": "Which CSS unit is used for absolute font sizes?",
+        "o": [
+            "px",
+            "em",
+            "rem",
+            "vw"
+        ]
+    }
+]

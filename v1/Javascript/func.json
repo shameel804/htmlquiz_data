@@ -1,0 +1,4522 @@
+[
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function greet() {\n  return 'Hello';\n}\n\nconsole.log(greet());",
+    "o": [
+      "Hello",
+      "undefined",
+      "null",
+      "greet"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration in JavaScript?",
+    "o": [
+      "function myFunction() {}",
+      "myFunction() {}",
+      "def myFunction() {}",
+      "function = myFunction() {}"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const add = (a, b) => a + b;\nconsole.log(add(2, 3));",
+    "o": [
+      "5",
+      "undefined",
+      "null",
+      "add"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid arrow function in JavaScript?",
+    "o": [
+      "const square = x => x * x;",
+      "const square = (x) => {x * x};",
+      "const square = x -> x * x;",
+      "const square = => x * x;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let x = 10;\nfunction test() {\n  let x = 20;\n  console.log(x);\n}\ntest();",
+    "o": [
+      "20",
+      "10",
+      "undefined",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following describes function scope in JavaScript?",
+    "o": [
+      "Variables declared inside a function are not accessible outside it",
+      "Variables declared anywhere are accessible everywhere",
+      "Only arrow functions have scope",
+      "Function scope doesn't exist in JavaScript"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const multiply = function(a, b) {\n  return a * b;\n};\nconsole.log(multiply(4, 5));",
+    "o": [
+      "20",
+      "9",
+      "undefined",
+      "multiply"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function expression in JavaScript?",
+    "o": [
+      "const greet = function() { console.log('Hi'); };",
+      "function greet = () { console.log('Hi'); };",
+      "const greet() = function { console.log('Hi'); };",
+      "const greet => function() { console.log('Hi'); };"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const greet = name => `Hello, ${name}`;\nconsole.log(greet('John'));",
+    "o": [
+      "Hello, John",
+      "Hello, undefined",
+      "Hello, name",
+      "John"
+    ]
+  },
+  {
+    "q": "Which of the following is true about arrow functions?",
+    "o": [
+      "They don't have their own 'this' binding",
+      "They must always have curly braces",
+      "They can't return values implicitly",
+      "They must be named functions"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function outer() {\n  let x = 1;\n  function inner() {\n    console.log(x);\n  }\n  inner();\n}\nouter();",
+    "o": [
+      "1",
+      "undefined",
+      "null",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following correctly demonstrates a function with block scope?",
+    "o": [
+      "if (true) { const x = 5; console.log(x); }",
+      "if (true) { var x = 5; } console.log(x);",
+      "function test() { let x = 5; } console.log(x);",
+      "const x = 5; if (true) { console.log(x); }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function sayHello() {\n  return 'Hello';\n}\nconst result = sayHello;\nconsole.log(result());",
+    "o": [
+      "Hello",
+      "undefined",
+      "sayHello",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct function declaration?",
+    "o": [
+      "function calculateSum(a, b) { return a + b; }",
+      "const calculateSum = function(a, b) { return a + b; }",
+      "calculateSum(a, b) => a + b;",
+      "def calculateSum(a, b) { return a + b; }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const greet = function(name) {\n  return `Hi, ${name}`;\n};\nconsole.log(greet('Anna'));",
+    "o": [
+      "Hi, Anna",
+      "undefined",
+      "ReferenceError",
+      "greet"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid arrow function with implicit return?",
+    "o": [
+      "const double = x => x * 2;",
+      "const double = (x) => { x * 2 };",
+      "const double = x => { return x * 2; };",
+      "const double = (x) => return x * 2;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let count = 0;\nfunction increment() {\n  count++;\n}\nincrement();\nconsole.log(count);",
+    "o": [
+      "1",
+      "0",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which statement about function scope in JavaScript is true?",
+    "o": [
+      "Variables declared with `let` inside a function are block-scoped.",
+      "Variables declared with `var` inside a function are globally scoped.",
+      "Arrow functions do not respect lexical scope.",
+      "Function parameters are accessible outside the function."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const square = (x) => x * x;\nconsole.log(square(4));",
+    "o": [
+      "16",
+      "8",
+      "undefined",
+      "square"
+    ]
+  },
+  {
+    "q": "Which of the following is a function expression assigned to a variable?",
+    "o": [
+      "const logMessage = function(msg) { console.log(msg); };",
+      "function logMessage(msg) { console.log(msg); }",
+      "logMessage(msg) => console.log(msg);",
+      "const logMessage = msg => console.log(msg);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function outer() {\n  const x = 5;\n  function inner() {\n    console.log(x);\n  }\n  inner();\n}\nouter();",
+    "o": [
+      "5",
+      "undefined",
+      "ReferenceError",
+      "inner"
+    ]
+  },
+  {
+    "q": "Which of the following correctly shows a function declaration hoisting?",
+    "o": [
+      "console.log(add(2, 3));\nfunction add(a, b) { return a + b; }",
+      "console.log(add(2, 3));\nconst add = (a, b) => a + b;",
+      "console.log(add(2, 3));\nlet add = function(a, b) { return a + b; };",
+      "console.log(add(2, 3));\nvar add = (a, b) => a + b;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const a = 10;\nfunction test() {\n  const a = 20;\n  return a;\n}\nconsole.log(test());",
+    "o": [
+      "20",
+      "10",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is true about arrow functions and `this`?",
+    "o": [
+      "They inherit `this` from the enclosing lexical scope.",
+      "They have their own `this` binding.",
+      "They cannot access `this` at all.",
+      "They always bind `this` to the global object."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function foo() {\n  function bar() { return 5; }\n  return bar();\n}\nconsole.log(foo());",
+    "o": [
+      "5",
+      "undefined",
+      "bar",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following demonstrates proper function declaration hoisting?",
+    "o": [
+      "console.log(sum(1,2));\nfunction sum(a,b) { return a+b; }",
+      "console.log(sum(1,2));\nconst sum = (a,b) => a+b;",
+      "function sum(a,b); { return a+b; }",
+      "console.log(sum(1,2));\nvar sum = function(a,b) { return a+b; };"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const func = function(n) {\n  if (n <= 1) return 1;\n  return n * func(n - 1);\n};\nconsole.log(func(3));",
+    "o": [
+      "6",
+      "3",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which arrow function correctly handles multiple parameters?",
+    "o": [
+      "const multiply = (a, b) => a * b;",
+      "const multiply = a, b => a * b;",
+      "const multiply => (a, b) { return a * b; };",
+      "const multiply = (a b) => a * b;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let x = 1;\nfunction test() {\n  let x = 2;\n  {\n    let x = 3;\n    console.log(x);\n  }\n}\ntest();",
+    "o": [
+      "3",
+      "2",
+      "1",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which statement about function expressions is true?",
+    "o": [
+      "They must be defined before being called",
+      "They are hoisted like function declarations",
+      "They cannot be assigned to variables",
+      "They always create global scope"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const greet = name => {\n  const message = `Hello ${name}`;\n  return message;\n};\nconsole.log(greet('Sam'));",
+    "o": [
+      "Hello Sam",
+      "undefined",
+      "message",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following shows a correct immediately-invoked function expression (IIFE)?",
+    "o": [
+      "(function() { console.log('IIFE'); })();",
+      "function() { console.log('IIFE'); }();",
+      "(() => { console.log('IIFE'); });",
+      "function => { console.log('IIFE'); }();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const outer = () => {\n  const x = 10;\n  const inner = () => console.log(x);\n  inner();\n};\nouter();",
+    "o": [
+      "10",
+      "undefined",
+      "inner",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following correctly demonstrates block scope with let?",
+    "o": [
+      "{ let y = 5; console.log(y); }",
+      "{ let y = 5; } console.log(y);",
+      "let y = 5; { console.log(y); }",
+      "if (true) let y = 5; console.log(y);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createCounter() {\n  let count = 0;\n  return () => ++count;\n}\nconst counter = createCounter();\nconsole.log(counter(), counter());",
+    "o": [
+      "1 2",
+      "0 1",
+      "undefined undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which statement about arrow functions is correct?",
+    "o": [
+      "They don't have their own arguments object",
+      "They can be used as constructors",
+      "They have their own this binding",
+      "They must always include curly braces"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function outer() {\n  const x = 10;\n  function inner() {\n    return x * 2;\n  }\n  return inner();\n}\nconsole.log(outer());",
+    "o": [
+      "20",
+      "10",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration that hoists correctly?",
+    "o": [
+      "function calculateArea(r) { return Math.PI * r * r; }",
+      "const calculateArea = function(r) { return Math.PI * r * r; }",
+      "let calculateArea = (r) => Math.PI * r * r;",
+      "var calculateArea = r => Math.PI * r * r;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const fn = function(n) {\n  return n > 0 ? n * fn(n - 1) : 1;\n};\nconsole.log(fn(4));",
+    "o": [
+      "24",
+      "4",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which arrow function correctly returns an object literal?",
+    "o": [
+      "const makeObj = (x) => ({ value: x });",
+      "const makeObj = x => { value: x };",
+      "const makeObj = (x) => { value: x };",
+      "const makeObj = x => (value: x);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let a = 1;\nfunction test() {\n  let a = 2;\n  {\n    console.log(a);\n    let a = 3;\n  }\n}\ntest();",
+    "o": [
+      "ReferenceError",
+      "2",
+      "1",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which statement about function expressions vs declarations is true?",
+    "o": [
+      "Function expressions must be defined before calling, declarations don't",
+      "Function expressions hoist the function name, declarations don't",
+      "Function declarations cannot be anonymous",
+      "Function expressions cannot be assigned to variables"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const greet = (name = 'Guest') => `Welcome ${name}`;\nconsole.log(greet());",
+    "o": [
+      "Welcome Guest",
+      "Welcome undefined",
+      "ReferenceError",
+      "Welcome"
+    ]
+  },
+  {
+    "q": "Which of the following creates a private scope using an IIFE?",
+    "o": [
+      "(function() { let privateVar = 'secret'; })();",
+      "function() { var privateVar = 'secret'; }();",
+      "{ let privateVar = 'secret'; }();",
+      "(() => { this.privateVar = 'secret'; })();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createAdder = (x) => (y) => x + y;\nconst add5 = createAdder(5);\nconsole.log(add5(3));",
+    "o": [
+      "8",
+      "53",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following demonstrates proper block scoping with const?",
+    "o": [
+      "{ const temp = 100; console.log(temp); }",
+      "const temp = 100; { console.log(temp); }",
+      "{ const temp = 100; } console.log(temp);",
+      "if (true) const temp = 100; console.log(temp);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function counter() {\n  let count = 0;\n  return {\n    increment: () => ++count,\n    current: () => count\n  };\n}\nconst c = counter();\nc.increment();\nconsole.log(c.current());",
+    "o": [
+      "1",
+      "0",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which statement about arrow functions is correct regarding arguments?",
+    "o": [
+      "They inherit the arguments object from their enclosing scope",
+      "They have their own arguments object like regular functions",
+      "They cannot access any arguments",
+      "They must explicitly declare an arguments parameter"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function makeMultiplier(x) {\n  return function(y) {\n    return x * y;\n  };\n}\nconst double = makeMultiplier(2);\nconsole.log(double(5));",
+    "o": [
+      "10",
+      "7",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct immediately-invoked function expression (IIFE) that creates a private scope?",
+    "o": [
+      "(function() { let secret = 42; })();",
+      "function() { var secret = 42; }();",
+      "[function() { const secret = 42; }]();",
+      "() => { let secret = 42; }();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const outer = (x) => {\n  const inner = (y) => x + y;\n  return inner(3);\n};\nconsole.log(outer(2));",
+    "o": [
+      "5",
+      "6",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which arrow function correctly implements a default parameter?",
+    "o": [
+      "const greet = (name = 'Guest') => `Hello ${name}`;",
+      "const greet = name => 'Guest' => `Hello ${name}`;",
+      "const greet = (name: 'Guest') => `Hello ${name}`;",
+      "const greet = name => `Hello ${name = 'Guest'}`;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let a = 1;\n{\n  let a = 2;\n  function showA() {\n    console.log(a);\n  }\n  showA();\n}",
+    "o": [
+      "2",
+      "1",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which statement about function declarations vs expressions is true regarding hoisting?",
+    "o": [
+      "Function declarations are fully hoisted, expressions are not",
+      "Both are hoisted in exactly the same way",
+      "Only function expressions are hoisted",
+      "Neither gets hoisted in JavaScript"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createCounter = () => {\n  let count = 0;\n  return {\n    increment: () => ++count,\n    get: () => count,\n    reset: () => (count = 0)\n  };\n};\nconst counter = createCounter();\ncounter.increment();\ncounter.increment();\nconsole.log(counter.get());",
+    "o": [
+      "2",
+      "1",
+      "0",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following correctly shows a function expression with a callback?",
+    "o": [
+      "const process = function(data, callback) { callback(data); };",
+      "function process(data, callback) { callback(data); };",
+      "const process = (data) => callback(data);",
+      "process(data, callback) => callback(data);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function outer() {\n  const x = 10;\n  function middle() {\n    const y = 20;\n    function inner() {\n      console.log(x + y);\n    }\n    inner();\n  }\n  middle();\n}\nouter();",
+    "o": [
+      "30",
+      "10",
+      "20",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following demonstrates proper block scoping with let in a loop?",
+    "o": [
+      "for (let i = 0; i < 3; i++) { setTimeout(() => console.log(i)); }",
+      "for (var i = 0; i < 3; i++) { let i = 0; setTimeout(() => console.log(i)); }",
+      "let i; for (i = 0; i < 3; i++) { setTimeout(() => console.log(i)); }",
+      "for (let i = 0; i < 3; i++) { var i = 0; setTimeout(() => console.log(i)); }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const factorial = function(n) {\n  return n <= 1 ? 1 : n * factorial(n - 1);\n};\nconsole.log(factorial(3));",
+    "o": [
+      "6",
+      "3",
+      "undefined",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which statement about arrow functions and the 'this' keyword is correct?",
+    "o": [
+      "Arrow functions inherit 'this' from their enclosing lexical scope",
+      "Arrow functions have their own 'this' binding",
+      "Arrow functions always bind 'this' to the global object",
+      "Arrow functions cannot access 'this' at all"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createGreeter(greeting) {\n  return function(name) {\n    return `${greeting}, ${name}!`;\n  };\n}\nconst sayHello = createGreeter('Hello');\nconsole.log(sayHello('Alice'));",
+    "o": [
+      "Hello, Alice!",
+      "undefined, Alice!",
+      "greeting, Alice!",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct function declaration that uses block scoping?",
+    "o": [
+      "function calculate() { let result = 42; return result; }",
+      "function calculate() { var result = 42; } return result;",
+      "function calculate() { result = 42; return result; }",
+      "function calculate() { const result = 42; } console.log(result);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const operations = {\n  increment: (x) => x + 1,\n  double: (x) => x * 2\n};\nconsole.log(operations.double(operations.increment(3)));",
+    "o": [
+      "8",
+      "7",
+      "6",
+      "9"
+    ]
+  },
+  {
+    "q": "Which arrow function correctly handles rest parameters?",
+    "o": [
+      "const sumAll = (...nums) => nums.reduce((a, b) => a + b, 0);",
+      "const sumAll = nums => nums.reduce((a, b) => a + b, 0);",
+      "const sumAll = (...nums) => { nums.reduce((a, b) => a + b, 0) };",
+      "const sumAll = => (...nums) => nums.reduce((a, b) => a + b, 0);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let x = 10;\nfunction test() {\n  console.log(x);\n  let x = 20;\n}\ntest();",
+    "o": [
+      "ReferenceError",
+      "10",
+      "20",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which statement about function expressions is true regarding name inference?",
+    "o": [
+      "Named function expressions provide better stack traces",
+      "Function expressions cannot have names",
+      "All function expressions automatically get names",
+      "Named function expressions don't work in strict mode"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const makeAdder = (x) => {\n  let sum = x;\n  return (y) => {\n    sum += y;\n    return sum;\n  };\n};\nconst adder = makeAdder(5);\nconsole.log(adder(3), adder(2));",
+    "o": [
+      "8 10",
+      "8 5",
+      "3 2",
+      "5 5"
+    ]
+  },
+  {
+    "q": "Which of the following shows a correct function expression with a name?",
+    "o": [
+      "const factorial = function fact(n) { return n <= 1 ? 1 : n * fact(n-1); };",
+      "const factorial = function(n) fact { return n <= 1 ? 1 : n * fact(n-1); };",
+      "const factorial = fact(n) => { return n <= 1 ? 1 : n * fact(n-1); };",
+      "function factorial = fact(n) { return n <= 1 ? 1 : n * fact(n-1); };"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function outer() {\n  const x = 'outer';\n  function inner() {\n    const x = 'inner';\n    {\n      const x = 'block';\n      console.log(x);\n    }\n  }\n  inner();\n}\nouter();",
+    "o": [
+      "block",
+      "inner",
+      "outer",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following demonstrates proper function hoisting behavior?",
+    "o": [
+      "console.log(foo()); function foo() { return 'bar'; }",
+      "console.log(foo()); const foo = () => 'bar';",
+      "console.log(foo()); var foo = function() { return 'bar'; };",
+      "function foo(); { return 'bar'; } console.log(foo());"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createCounter = (start = 0) => {\n  return {\n    count: start,\n    increment: function() { return ++this.count; },\n    decrement: () => --this.count\n  };\n};\nconst counter = createCounter(5);\nconsole.log(counter.increment(), counter.decrement());",
+    "o": [
+      "6 NaN",
+      "6 5",
+      "6 6",
+      "5 4"
+    ]
+  },
+  {
+    "q": "Which statement about arrow functions and constructors is correct?",
+    "o": [
+      "Arrow functions cannot be used as constructors",
+      "Arrow functions make excellent constructors",
+      "Arrow functions can be constructors only in strict mode",
+      "Arrow functions must be named to be used as constructors"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function outer() {\n  const x = 10;\n  return function inner() {\n    return x * 2;\n  };\n}\nconst fn = outer();\nconsole.log(fn());",
+    "o": [
+      "20",
+      "10",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration that demonstrates hoisting?",
+    "o": [
+      "console.log(square(5));\nfunction square(n) { return n * n; }",
+      "console.log(square(5));\nconst square = n => n * n;",
+      "console.log(square(5));\nlet square = function(n) { return n * n; };",
+      "function square(n); { return n * n; }\nconsole.log(square(5));"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const calculate = (function() {\n  let counter = 0;\n  return function() { return ++counter; };\n})();\nconsole.log(calculate(), calculate());",
+    "o": [
+      "1 2",
+      "0 1",
+      "1 1",
+      "undefined undefined"
+    ]
+  },
+  {
+    "q": "Which arrow function correctly implements a currying pattern?",
+    "o": [
+      "const multiply = a => b => a * b;",
+      "const multiply = (a, b) => a * b;",
+      "const multiply = => a => b => a * b;",
+      "const multiply = (a, b) => { a * b };"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let a = 1;\nfunction test() {\n  console.log(a);\n  {\n    let a = 2;\n    console.log(a);\n  }\n}\ntest();",
+    "o": [
+      "1\n2",
+      "undefined\n2",
+      "1\n1",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which statement about function expressions vs declarations is true regarding their scope?",
+    "o": [
+      "Function declarations are hoisted to the top of their scope",
+      "Function expressions are hoisted to the global scope",
+      "Both have identical hoisting behavior",
+      "Neither is affected by scope rules"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createLogger = (prefix) => {\n  return (message) => console.log(`${prefix}: ${message}`);\n};\nconst logError = createLogger('ERROR');\nlogError('Something went wrong');",
+    "o": [
+      "ERROR: Something went wrong",
+      "undefined: Something went wrong",
+      "prefix: Something went wrong",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following shows a correct immediately-invoked arrow function expression?",
+    "o": [
+      "(() => { console.log('IIFE'); })();",
+      "( => { console.log('IIFE'); })();",
+      "(() => console.log('IIFE'));",
+      "() => { console.log('IIFE'); }();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function factory() {\n  let count = 0;\n  return {\n    create: function() { return ++count; },\n    destroy: () => --count,\n    getCount: () => count\n  };\n}\nconst f = factory();\nf.create();\nf.create();\nf.destroy();\nconsole.log(f.getCount());",
+    "o": [
+      "1",
+      "2",
+      "0",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following demonstrates proper block scoping in a loop with closures?",
+    "o": [
+      "for (let i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 100);\n}",
+      "for (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 100);\n}",
+      "let i; for (i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 100);\n}",
+      "for (const i = 0; i < 3; i++) {\n  setTimeout(() => console.log(i), 100);\n}"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const recursive = function(n) {\n  return n <= 1 ? 1 : n * recursive(n - 1);\n};\nconsole.log(recursive(4));",
+    "o": [
+      "24",
+      "4",
+      "10",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which statement about arrow functions and the 'arguments' object is correct?",
+    "o": [
+      "Arrow functions don't have their own 'arguments' object",
+      "Arrow functions have their own 'arguments' object",
+      "Arrow functions must declare 'arguments' as a parameter",
+      "Arrow functions inherit 'arguments' from the global scope"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createCounter() {\n  let count = 0;\n  return {\n    increment: function() { count++ },\n    log: () => console.log(count)\n  };\n}\nconst counter = createCounter();\ncounter.increment();\ncounter.log();",
+    "o": [
+      "1",
+      "0",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration that correctly uses block scope?",
+    "o": [
+      "function getValue() { let x = 5; return x; }",
+      "function getValue() { x = 5; return x; }",
+      "function getValue() { var x = 5; } return x;",
+      "function getValue() { const x = 5; } console.log(x);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const adder = (x) => {\n  return (y) => x + y;\n};\nconst add5 = adder(5);\nconsole.log(add5(3), adder(2)(4));",
+    "o": [
+      "8 6",
+      "8 2",
+      "53 24",
+      "undefined undefined"
+    ]
+  },
+  {
+    "q": "Which arrow function correctly handles both single and multiple parameters?",
+    "o": [
+      "const operation = (a, b = 1) => a * b;",
+      "const operation = a, b => a * b;",
+      "const operation = (a b) => a * b;",
+      "const operation = => (a, b) => a * b;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let x = 1;\nfunction outer() {\n  let x = 2;\n  function inner() {\n    console.log(x);\n    let x = 3;\n  }\n  inner();\n}\nouter();",
+    "o": [
+      "ReferenceError",
+      "2",
+      "1",
+      "3"
+    ]
+  },
+  {
+    "q": "Which statement about function expressions is true regarding their scope?",
+    "o": [
+      "They must be defined before use in their scope",
+      "They are hoisted to the top of the global scope",
+      "They cannot access variables from their enclosing scope",
+      "They create a new global scope when executed"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createMultiplier = (factor) => {\n  return (num) => num * factor;\n};\nconst double = createMultiplier(2);\nconsole.log(double(5));",
+    "o": [
+      "10",
+      "7",
+      "52",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following shows a correct immediately-invoked function expression that preserves scope?",
+    "o": [
+      "(function() { let private = 42; })();",
+      "function() { var private = 42; }();",
+      "[function() { const private = 42; }]();",
+      "() => { let private = 42; }();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function outer() {\n  const x = 'outer';\n  return {\n    inner1: function() { return x; },\n    inner2: () => {\n      const x = 'inner';\n      return x;\n    }\n  };\n}\nconst obj = outer();\nconsole.log(obj.inner1(), obj.inner2());",
+    "o": [
+      "outer inner",
+      "inner outer",
+      "outer outer",
+      "inner inner"
+    ]
+  },
+  {
+    "q": "Which of the following demonstrates proper block scoping in an if statement?",
+    "o": [
+      "if (true) { let x = 5; console.log(x); }",
+      "if (true) { var x = 5; } console.log(x);",
+      "let x; if (true) { x = 5; } console.log(x);",
+      "if (true) let x = 5; console.log(x);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const factorial = function(n) {\n  return n <= 1 ? 1 : n * factorial(n - 1);\n};\nconsole.log(factorial(4));",
+    "o": [
+      "24",
+      "4",
+      "10",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which statement about arrow functions and constructor functions is correct?",
+    "o": [
+      "Arrow functions cannot be used as constructors",
+      "Arrow functions are ideal for constructor functions",
+      "Arrow functions can be constructors if they have names",
+      "Arrow functions become constructors when using 'new'"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createGreeter(greeting) {\n  return function(name) {\n    return `${greeting}, ${name}!`;\n  };\n}\nconst greetInSpanish = createGreeter('Hola');\nconsole.log(greetInSpanish('Carlos'));",
+    "o": [
+      "Hola, Carlos!",
+      "greeting, Carlos!",
+      "undefined, Carlos!",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration that demonstrates lexical scoping?",
+    "o": [
+      "function outer() { const x = 5; function inner() { return x; } return inner(); }",
+      "function outer() { x = 5; function inner() { return x; } return inner(); }",
+      "function outer() { const x = 5; function inner() { x = 10; return x; } return inner(); }",
+      "function outer() { const x = 5; function inner() { return y; } return inner(); }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createMultiplier = (x) => (y) => x * y;\nconst triple = createMultiplier(3);\nconsole.log(triple(4));",
+    "o": [
+      "12",
+      "7",
+      "34",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which arrow function correctly implements a closure that tracks invocation count?",
+    "o": [
+      "const createCounter = () => { let count = 0; return () => ++count; };",
+      "const createCounter = () => { return () => ++count; }; let count = 0;",
+      "const createCounter = => { let count = 0; return => ++count; };",
+      "const createCounter = () => { let count = 0; return ++count; };"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let a = 1;\nfunction test() {\n  console.log(a);\n  let a = 2;\n  {\n    console.log(a);\n  }\n}\ntest();",
+    "o": [
+      "ReferenceError",
+      "1\n2",
+      "undefined\n2",
+      "1\n1"
+    ]
+  },
+  {
+    "q": "Which statement about function expressions vs declarations is true regarding their availability?",
+    "o": [
+      "Function declarations are available throughout their scope, expressions only after declaration",
+      "Function expressions are available throughout their scope, declarations only after declaration",
+      "Both are available throughout their containing scope",
+      "Neither is available until after their declaration point"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createLogger = (prefix) => (message) => console.log(`[${prefix}] ${message}`);\nconst logWarning = createLogger('WARN');\nlogWarning('Low memory');",
+    "o": [
+      "[WARN] Low memory",
+      "prefix Low memory",
+      "undefined Low memory",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following shows a correct immediately-invoked arrow function that maintains private scope?",
+    "o": [
+      "(() => { const secret = 42; })();",
+      "( => { const secret = 42; })();",
+      "(() => const secret = 42;)();",
+      "(() => { secret = 42; })();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createStack() {\n  const items = [];\n  return {\n    push: (item) => items.push(item),\n    pop: () => items.pop(),\n    size: () => items.length\n  };\n}\nconst stack = createStack();\nstack.push(1);\nstack.push(2);\nconsole.log(stack.size(), stack.pop());",
+    "o": [
+      "2 2",
+      "1 2",
+      "2 1",
+      "undefined undefined"
+    ]
+  },
+  {
+    "q": "Which of the following demonstrates proper block scoping with const in a switch statement?",
+    "o": [
+      "switch (x) { case 1: { const msg = 'one'; console.log(msg); break; } }",
+      "switch (x) { case 1: const msg = 'one'; console.log(msg); break; }",
+      "const msg; switch (x) { case 1: msg = 'one'; console.log(msg); break; }",
+      "switch (x) { const msg; case 1: msg = 'one'; console.log(msg); break; }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const recursiveSum = function(n) {\n  return n <= 1 ? n : n + recursiveSum(n - 1);\n};\nconsole.log(recursiveSum(4));",
+    "o": [
+      "10",
+      "4",
+      "24",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which statement about arrow functions and prototype assignment is correct?",
+    "o": [
+      "Arrow functions cannot be used as constructors and don't have prototypes",
+      "Arrow functions automatically get a prototype property",
+      "Arrow functions inherit prototypes from their lexical scope",
+      "Arrow functions only get prototypes when assigned to variables"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function makeCounter() {\n  let count = 0;\n  return {\n    increment: function() { count++ },\n    get: () => count,\n    reset: function() { count = 0 }\n  };\n}\nconst counter = makeCounter();\ncounter.increment();\ncounter.increment();\nconsole.log(counter.get());",
+    "o": [
+      "2",
+      "1",
+      "0",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration that correctly demonstrates closure?",
+    "o": [
+      "function createAdder(x) { return function(y) { return x + y; }; }",
+      "function createAdder(x) { return y => x + y; }",
+      "function createAdder(x) { return (y) => x + y; }",
+      "All of the above"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createMultiplier = x => y => x * y;\nconst double = createMultiplier(2);\nconst triple = createMultiplier(3);\nconsole.log(double(5), triple(5));",
+    "o": [
+      "10 15",
+      "25 35",
+      "7 8",
+      "undefined undefined"
+    ]
+  },
+  {
+    "q": "Which arrow function correctly implements a memoization pattern?",
+    "o": [
+      "const memoize = fn => { const cache = {}; return arg => cache[arg] || (cache[arg] = fn(arg)); };",
+      "const memoize = fn => { return arg => { cache[arg] || (cache[arg] = fn(arg)); };",
+      "const memoize = => fn => { const cache = {}; return arg => cache[arg] || (cache[arg] = fn(arg)); };",
+      "const memoize = fn => { const cache = {}; return => arg => cache[arg] || (cache[arg] = fn(arg)); };"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let x = 10;\nfunction outer() {\n  let x = 20;\n  function inner() {\n    console.log(x);\n    let x = 30;\n  }\n  inner();\n}\nouter();",
+    "o": [
+      "ReferenceError",
+      "20",
+      "10",
+      "30"
+    ]
+  },
+  {
+    "q": "Which statement about function expressions is true regarding their use in callbacks?",
+    "o": [
+      "They are commonly used as anonymous functions in callbacks",
+      "They cannot be used as callback functions",
+      "They must always be named when used in callbacks",
+      "They are hoisted to the top of the callback scope"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createFormatter = (prefix) => {\n  return (message) => `${prefix}: ${message}`;\n};\nconst formatError = createFormatter('ERROR');\nconsole.log(formatError('File not found'));",
+    "o": [
+      "ERROR: File not found",
+      "prefix: File not found",
+      "undefined: File not found",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following shows a correct immediately-invoked arrow function that maintains state?",
+    "o": [
+      "const counter = (() => { let count = 0; return () => ++count; })();",
+      "const counter = => { let count = 0; return () => ++count; }();",
+      "const counter = (() => { let count = 0; return ++count; })();",
+      "const counter = (() => let count = 0; return () => ++count;)();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createBankAccount() {\n  let balance = 0;\n  return {\n    deposit: amount => { balance += amount },\n    withdraw: amount => { balance -= amount },\n    checkBalance: () => balance\n  };\n}\nconst account = createBankAccount();\naccount.deposit(100);\naccount.withdraw(30);\nconsole.log(account.checkBalance());",
+    "o": [
+      "70",
+      "100",
+      "-30",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following demonstrates proper block scoping with let in a for loop?",
+    "o": [
+      "for (let i = 0; i < 3; i++) { setTimeout(() => console.log(i), 100); }",
+      "for (var i = 0; i < 3; i++) { setTimeout(() => console.log(i), 100); }",
+      "let i; for (i = 0; i < 3; i++) { setTimeout(() => console.log(i), 100); }",
+      "for (let i = 0; i < 3; i++) { var i = 0; setTimeout(() => console.log(i), 100); }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const fibonacci = function(n) {\n  return n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2);\n};\nconsole.log(fibonacci(5));",
+    "o": [
+      "5",
+      "8",
+      "3",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which statement about arrow functions and the 'new.target' property is correct?",
+    "o": [
+      "Arrow functions do not have their own 'new.target' binding",
+      "Arrow functions have their own 'new.target' binding",
+      "Arrow functions inherit 'new.target' from the global scope",
+      "Arrow functions cannot access 'new.target' at all"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createGreeter(greeting) {\n  return function(name) {\n    return `${greeting}, ${name}!`;\n  };\n}\nconst greetInFrench = createGreeter('Bonjour');\nconsole.log(greetInFrench('Pierre'));",
+    "o": [
+      "Bonjour, Pierre!",
+      "greeting, Pierre!",
+      "undefined, Pierre!",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration that demonstrates block scoping?",
+    "o": [
+      "function calculate() { let result = 42; return result; }",
+      "function calculate() { result = 42; return result; }",
+      "function calculate() { var result = 42; } return result;",
+      "function calculate() { const result = 42; } console.log(result);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const power = (base) => (exponent) => Math.pow(base, exponent);\nconst square = power(2);\nconsole.log(square(3));",
+    "o": [
+      "8",
+      "9",
+      "6",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which arrow function correctly implements a closure that remembers previous values?",
+    "o": [
+      "const createAccumulator = () => { let sum = 0; return (n) => sum += n; };",
+      "const createAccumulator = () => { return (n) => sum += n; }; let sum = 0;",
+      "const createAccumulator = => { let sum = 0; return => sum += n; };",
+      "const createAccumulator = () => { let sum = 0; return sum += n; };"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let a = 1;\nfunction test() {\n  console.log(a);\n  let a = 2;\n  {\n    console.log(a);\n  }\n}\ntest();",
+    "o": [
+      "ReferenceError",
+      "1\n2",
+      "undefined\n2",
+      "1\n1"
+    ]
+  },
+  {
+    "q": "Which statement about function expressions is true regarding their hoisting behavior?",
+    "o": [
+      "Only the variable declaration is hoisted, not the function assignment",
+      "The entire function expression is hoisted to the top of the scope",
+      "Function expressions are never hoisted in any way",
+      "Function expressions are hoisted but become undefined"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createPrefixer = (prefix) => (message) => `${prefix.toUpperCase()}: ${message}`;\nconst warn = createPrefixer('warning');\nconsole.log(warn('Low disk space'));",
+    "o": [
+      "WARNING: Low disk space",
+      "prefix: Low disk space",
+      "undefined: Low disk space",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following shows a correct immediately-invoked arrow function that maintains private state?",
+    "o": [
+      "const counter = (() => { let count = 0; return () => ++count; })();",
+      "const counter = => { let count = 0; return () => ++count; }();",
+      "const counter = (() => { let count = 0; return ++count; })();",
+      "const counter = (() => let count = 0; return () => ++count;)();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createStack() {\n  const items = [];\n  return {\n    push: function(item) { items.push(item); },\n    pop: () => items.pop(),\n    size: () => items.length\n  };\n}\nconst stack = createStack();\nstack.push('a');\nstack.push('b');\nconsole.log(stack.size(), stack.pop());",
+    "o": [
+      "2 b",
+      "1 b",
+      "2 a",
+      "undefined undefined"
+    ]
+  },
+  {
+    "q": "Which of the following demonstrates proper block scoping with const in an if statement?",
+    "o": [
+      "if (true) { const x = 5; console.log(x); }",
+      "if (true) { var x = 5; } console.log(x);",
+      "const x; if (true) { x = 5; console.log(x); }",
+      "if (true) const x = 5; console.log(x);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const factorial = function(n) {\n  return n <= 1 ? 1 : n * factorial(n - 1);\n};\nconsole.log(factorial(5));",
+    "o": [
+      "120",
+      "5",
+      "15",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which statement about arrow functions and the 'arguments' object is correct?",
+    "o": [
+      "Arrow functions don't have their own 'arguments' object",
+      "Arrow functions have their own 'arguments' object",
+      "Arrow functions must declare 'arguments' as a parameter",
+      "Arrow functions inherit 'arguments' from the global scope"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createMultiplier(factor) {\n  return function(number) {\n    return number * factor;\n  };\n}\nconst triple = createMultiplier(3);\nconsole.log(triple(4));",
+    "o": [
+      "12",
+      "7",
+      "34",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration that correctly uses block scope with let?",
+    "o": [
+      "function calculate() { let result = 5; return result; }",
+      "function calculate() { result = 5; return result; }",
+      "function calculate() { var result = 5; } return result;",
+      "function calculate() { const result = 5; } console.log(result);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const compose = (f, g) => (x) => f(g(x));\nconst double = x => x * 2;\nconst square = x => x * x;\nconsole.log(compose(double, square)(3));",
+    "o": [
+      "18",
+      "36",
+      "6",
+      "9"
+    ]
+  },
+  {
+    "q": "Which arrow function correctly implements a counter with closure?",
+    "o": [
+      "const createCounter = () => { let count = 0; return () => ++count; };",
+      "const createCounter = () => { return () => ++count; }; let count = 0;",
+      "const createCounter = => { let count = 0; return => ++count; };",
+      "const createCounter = () => { let count = 0; return ++count; };"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let x = 1;\nfunction outer() {\n  console.log(x);\n  let x = 2;\n  {\n    console.log(x);\n  }\n}\nouter();",
+    "o": [
+      "ReferenceError",
+      "1\n2",
+      "undefined\n2",
+      "1\n1"
+    ]
+  },
+  {
+    "q": "Which statement about function expressions is true regarding their use in object methods?",
+    "o": [
+      "They can be used to create methods that maintain their own 'this' binding",
+      "They cannot be used as object methods",
+      "They automatically bind 'this' to the global object",
+      "They must be arrow functions to work as methods"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createFormatter = (prefix) => (message) => `${prefix}: ${message}`;\nconst logError = createFormatter('ERROR');\nconsole.log(logError('File not found'));",
+    "o": [
+      "ERROR: File not found",
+      "prefix: File not found",
+      "undefined: File not found",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following shows a correct immediately-invoked arrow function that maintains private state?",
+    "o": [
+      "const counter = (() => { let count = 0; return () => ++count; })();",
+      "const counter = => { let count = 0; return () => ++count; }();",
+      "const counter = (() => { let count = 0; return ++count; })();",
+      "const counter = (() => let count = 0; return () => ++count;)();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createStack() {\n  const items = [];\n  return {\n    push: (item) => items.push(item),\n    pop: () => items.pop(),\n    size: () => items.length\n  };\n}\nconst stack = createStack();\nstack.push('a');\nstack.push('b');\nconsole.log(stack.size(), stack.pop());",
+    "o": [
+      "2 b",
+      "1 b",
+      "2 a",
+      "undefined undefined"
+    ]
+  },
+  {
+    "q": "Which of the following demonstrates proper block scoping with let in a for loop?",
+    "o": [
+      "for (let i = 0; i < 3; i++) { setTimeout(() => console.log(i), 100); }",
+      "for (var i = 0; i < 3; i++) { setTimeout(() => console.log(i), 100); }",
+      "let i; for (i = 0; i < 3; i++) { setTimeout(() => console.log(i), 100); }",
+      "for (let i = 0; i < 3; i++) { var i = 0; setTimeout(() => console.log(i), 100); }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const fibonacci = function(n) {\n  return n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2);\n};\nconsole.log(fibonacci(6));",
+    "o": [
+      "8",
+      "13",
+      "5",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which statement about arrow functions and prototype chains is correct?",
+    "o": [
+      "Arrow functions don't have a prototype property",
+      "Arrow functions have their own prototype chain",
+      "Arrow functions inherit prototypes from their lexical scope",
+      "Arrow functions automatically get a prototype when assigned to variables"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createCounter() {\n  let count = 0;\n  return {\n    increment: () => ++count,\n    get: function() { return count },\n    reset: () => count = 0\n  };\n}\nconst counter = createCounter();\ncounter.increment();\ncounter.increment();\nconsole.log(counter.get());",
+    "o": [
+      "2",
+      "1",
+      "0",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration that demonstrates closure over parameters?",
+    "o": [
+      "function outer(x) { return function inner(y) { return x + y; }; }",
+      "function outer(x) { return y => x + y; }",
+      "function outer(x) { return (y) => x + y; }",
+      "All of the above"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const compose = (f, g) => (x) => f(g(x));\nconst add1 = x => x + 1;\nconst mult2 = x => x * 2;\nconsole.log(compose(add1, mult2)(3));",
+    "o": [
+      "7",
+      "8",
+      "6",
+      "9"
+    ]
+  },
+  {
+    "q": "Which arrow function correctly implements a memoization cache?",
+    "o": [
+      "const memoize = fn => { const cache = {}; return arg => cache[arg] || (cache[arg] = fn(arg)); };",
+      "const memoize = fn => { return arg => { cache[arg] || (cache[arg] = fn(arg)); };",
+      "const memoize = => fn => { const cache = {}; return arg => cache[arg] || (cache[arg] = fn(arg)); };",
+      "const memoize = fn => { const cache = {}; return => arg => cache[arg] || (cache[arg] = fn(arg)); };"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let x = 1;\nfunction test() {\n  console.log(x);\n  let x = 2;\n  {\n    console.log(x);\n  }\n}\ntest();",
+    "o": [
+      "ReferenceError",
+      "1\n2",
+      "undefined\n2",
+      "1\n1"
+    ]
+  },
+  {
+    "q": "Which statement about function expressions is true regarding their use in asynchronous callbacks?",
+    "o": [
+      "They are commonly used as anonymous functions in setTimeout callbacks",
+      "They cannot be used in asynchronous operations",
+      "They must always be named when used in async callbacks",
+      "They are hoisted to the top of the async function scope"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createLogger = (prefix) => (message) => console.log(`[${prefix}] ${message}`);\nconst logWarning = createLogger('WARN');\nlogWarning('Disk space low');",
+    "o": [
+      "[WARN] Disk space low",
+      "prefix Disk space low",
+      "undefined Disk space low",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following shows a correct immediately-invoked arrow function with private state?",
+    "o": [
+      "const counter = (() => { let count = 0; return () => ++count; })();",
+      "const counter = => { let count = 0; return () => ++count; }();",
+      "const counter = (() => { let count = 0; return ++count; })();",
+      "const counter = (() => let count = 0; return () => ++count;)();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createStack() {\n  const items = [];\n  return {\n    push: item => items.push(item),\n    pop: () => items.pop(),\n    peek: function() { return items[items.length - 1]; }\n  };\n}\nconst stack = createStack();\nstack.push('a');\nstack.push('b');\nconsole.log(stack.peek(), stack.pop());",
+    "o": [
+      "b b",
+      "a b",
+      "b a",
+      "undefined undefined"
+    ]
+  },
+  {
+    "q": "Which of the following demonstrates proper block scoping with const in a try-catch block?",
+    "o": [
+      "try { const x = 5; console.log(x); } catch {}",
+      "try { var x = 5; } catch {} console.log(x);",
+      "const x; try { x = 5; console.log(x); } catch {}",
+      "try const x = 5; catch {} console.log(x);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const factorial = function(n) {\n  return n <= 1 ? 1 : n * factorial(n - 1);\n};\nconsole.log(factorial(4));",
+    "o": [
+      "24",
+      "4",
+      "10",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which statement about arrow functions and the 'new' operator is correct?",
+    "o": [
+      "Arrow functions cannot be used as constructor functions",
+      "Arrow functions can be used with 'new' if they return an object",
+      "Arrow functions automatically work with 'new'",
+      "Arrow functions must be named to be used with 'new'"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createMultiplier(factor) {\n  return function(number) {\n    return number * factor;\n  };\n}\nconst quadruple = createMultiplier(4);\nconsole.log(quadruple(5));",
+    "o": [
+      "20",
+      "9",
+      "45",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration that demonstrates lexical scoping with const?",
+    "o": [
+      "function calculate() { const PI = 3.14; return function(r) { return PI * r * r; }; }",
+      "function calculate() { PI = 3.14; return function(r) { return PI * r * r; }; }",
+      "function calculate() { var PI = 3.14; } return function(r) { return PI * r * r; };",
+      "function calculate() { const PI = 3.14; } console.log(function(r) { return PI * r * r; });"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);\nconst add2 = x => x + 2;\nconst square = x => x * x;\nconsole.log(pipe(add2, square)(3));",
+    "o": [
+      "25",
+      "11",
+      "13",
+      "36"
+    ]
+  },
+  {
+    "q": "Which arrow function correctly implements a private counter with increment and decrement methods?",
+    "o": [
+      "const createCounter = () => { let count = 0; return { inc: () => ++count, dec: () => --count }; };",
+      "const createCounter = () => { return { inc: () => ++count, dec: () => --count }; }; let count = 0;",
+      "const createCounter = => { let count = 0; return { inc: => ++count, dec: => --count }; };",
+      "const createCounter = () => { let count = 0; return { inc: ++count, dec: --count }; };"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let x = 10;\nfunction outer() {\n  console.log(x);\n  let x = 20;\n  {\n    console.log(x);\n  }\n}\nouter();",
+    "o": [
+      "ReferenceError",
+      "10\n20",
+      "undefined\n20",
+      "10\n10"
+    ]
+  },
+  {
+    "q": "Which statement about function expressions is true regarding their use in event handlers?",
+    "o": [
+      "They are commonly used as anonymous functions in event listeners",
+      "They cannot be used as event handlers",
+      "They must always be named when used in events",
+      "They are hoisted to the top of the event handler scope"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createTagger = (tag) => (content) => `<${tag}>${content}</${tag}>`;\nconst bold = createTagger('b');\nconsole.log(bold('Important'));",
+    "o": [
+      "<b>Important</b>",
+      "tag Important",
+      "undefined Important",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following shows a correct immediately-invoked arrow function that maintains a private cache?",
+    "o": [
+      "const getCache = (() => { const cache = {}; return (key) => cache[key]; })();",
+      "const getCache = => { const cache = {}; return (key) => cache[key]; }();",
+      "const getCache = (() => { const cache = {}; return cache[key]; })();",
+      "const getCache = (() => const cache = {}; return (key) => cache[key];)();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createQueue() {\n  const items = [];\n  return {\n    enqueue: (item) => items.push(item),\n    dequeue: () => items.shift(),\n    front: function() { return items[0]; }\n  };\n}\nconst q = createQueue();\nq.enqueue('a');\nq.enqueue('b');\nconsole.log(q.front(), q.dequeue());",
+    "o": [
+      "a a",
+      "b a",
+      "a b",
+      "undefined undefined"
+    ]
+  },
+  {
+    "q": "Which of the following demonstrates proper block scoping with let in a while loop?",
+    "o": [
+      "let i = 0; while (i < 3) { let value = i; setTimeout(() => console.log(value), 100); i++; }",
+      "let i = 0; while (i < 3) { var value = i; setTimeout(() => console.log(value), 100); i++; }",
+      "let i, value; while (i < 3) { value = i; setTimeout(() => console.log(value), 100); i++; }",
+      "let i = 0; while (i < 3) let value = i; setTimeout(() => console.log(value), 100); i++;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const sumRange = function(n) {\n  return n <= 1 ? n : n + sumRange(n - 1);\n};\nconsole.log(sumRange(5));",
+    "o": [
+      "15",
+      "5",
+      "10",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which statement about arrow functions and the 'super' keyword is correct?",
+    "o": [
+      "Arrow functions don't have their own 'super' binding",
+      "Arrow functions have their own 'super' binding",
+      "Arrow functions must declare 'super' as a parameter",
+      "Arrow functions inherit 'super' from the global scope"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createFormatter(prefix) {\n  return function(message) {\n    return `${prefix.toUpperCase()}: ${message}`;\n  };\n}\nconst formatError = createFormatter('error');\nconsole.log(formatError('Invalid input'));",
+    "o": [
+      "ERROR: Invalid input",
+      "error: Invalid input",
+      "prefix: Invalid input",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration that correctly uses block scope with const?",
+    "o": [
+      "function calculate() { const TAX = 0.1; return function(amount) { return amount * TAX; }; }",
+      "function calculate() { TAX = 0.1; return function(amount) { return amount * TAX; }; }",
+      "function calculate() { var TAX = 0.1; } return function(amount) { return amount * TAX; };",
+      "function calculate() { const TAX = 0.1; } console.log(function(amount) { return amount * TAX; });"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const compose = (f, g) => (x) => f(g(x));\nconst double = x => x * 2;\nconst square = x => x * x;\nconsole.log(compose(square, double)(3));",
+    "o": [
+      "36",
+      "18",
+      "9",
+      "6"
+    ]
+  },
+  {
+    "q": "Which arrow function correctly implements a private counter with increment, decrement and value methods?",
+    "o": [
+      "const createCounter = () => { let count = 0; return { inc: () => ++count, dec: () => --count, val: () => count }; };",
+      "const createCounter = () => { return { inc: () => ++count, dec: () => --count, val: () => count }; }; let count = 0;",
+      "const createCounter = => { let count = 0; return { inc: => ++count, dec: => --count, val: => count }; };",
+      "const createCounter = () => { let count = 0; return { inc: ++count, dec: --count, val: count }; };"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let x = 1;\nfunction outer() {\n  console.log(x);\n  let x = 2;\n  {\n    console.log(x);\n  }\n}\nouter();",
+    "o": [
+      "ReferenceError",
+      "1\n2",
+      "undefined\n2",
+      "1\n1"
+    ]
+  },
+  {
+    "q": "Which statement about function expressions is true regarding their use in array methods like map?",
+    "o": [
+      "They are commonly used as anonymous callback functions",
+      "They cannot be used as callback functions",
+      "They must always be named when used in array methods",
+      "They are hoisted to the top of the array method scope"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createTagger = (tag) => (content) => `<${tag}>${content}</${tag}>`;\nconst italic = createTagger('i');\nconsole.log(italic('emphasis'));",
+    "o": [
+      "<i>emphasis</i>",
+      "tag emphasis",
+      "undefined emphasis",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following shows a correct immediately-invoked arrow function that maintains a private registry?",
+    "o": [
+      "const registry = (() => { const data = {}; return { add: (k,v) => data[k]=v, get: k => data[k] }; })();",
+      "const registry = => { const data = {}; return { add: (k,v) => data[k]=v, get: k => data[k] }; }();",
+      "const registry = (() => { const data = {}; return { add: data[k]=v, get: data[k] }; })();",
+      "const registry = (() => const data = {}; return { add: (k,v) => data[k]=v, get: k => data[k] };)();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createStack() {\n  const items = [];\n  return {\n    push: (item) => items.push(item),\n    pop: () => items.pop(),\n    peek: function() { return items[items.length-1]; },\n    size: () => items.length\n  };\n}\nconst stack = createStack();\nstack.push('x');\nstack.push('y');\nconsole.log(stack.peek(), stack.size());",
+    "o": [
+      "y 2",
+      "x 2",
+      "y 1",
+      "undefined undefined"
+    ]
+  },
+  {
+    "q": "Which of the following demonstrates proper block scoping with let in a for-of loop?",
+    "o": [
+      "for (const item of ['a','b']) { let x = item; setTimeout(() => console.log(x), 100); }",
+      "for (const item of ['a','b']) { var x = item; setTimeout(() => console.log(x), 100); }",
+      "let x; for (const item of ['a','b']) { x = item; setTimeout(() => console.log(x), 100); }",
+      "for (const item of ['a','b']) let x = item; setTimeout(() => console.log(x), 100);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const sumDigits = function(n) {\n  return n < 10 ? n : n % 10 + sumDigits(Math.floor(n / 10));\n};\nconsole.log(sumDigits(135));",
+    "o": [
+      "9",
+      "135",
+      "6",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which statement about arrow functions and the 'arguments' object is correct?",
+    "o": [
+      "Arrow functions don't have their own 'arguments' object",
+      "Arrow functions have their own 'arguments' object",
+      "Arrow functions must declare 'arguments' as a parameter",
+      "Arrow functions inherit 'arguments' from the global scope"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createMultiplier(factor) {\n  return {\n    multiply: function(number) { return number * factor; },\n    getFactor: () => factor\n  };\n}\nconst doubler = createMultiplier(2);\nconsole.log(doubler.multiply(5), doubler.getFactor());",
+    "o": [
+      "10 2",
+      "7 2",
+      "10 undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration that correctly uses block scope with let?",
+    "o": [
+      "function process() { let temp = 100; return function(x) { return x + temp; }; }",
+      "function process() { temp = 100; return function(x) { return x + temp; }; }",
+      "function process() { var temp = 100; } return function(x) { return x + temp; };",
+      "function process() { let temp = 100; } console.log(function(x) { return x + temp; });"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const chain = (...fns) => (x) => fns.reduce((acc, fn) => fn(acc), x);\nconst add3 = x => x + 3;\nconst square = x => x * x;\nconsole.log(chain(add3, square, add3)(2));",
+    "o": [
+      "28",
+      "25",
+      "10",
+      "13"
+    ]
+  },
+  {
+    "q": "Which arrow function correctly implements a private timer with start/stop methods?",
+    "o": [
+      "const createTimer = () => { let time = 0; return { start: () => time = Date.now(), stop: () => Date.now() - time }; };",
+      "const createTimer = () => { return { start: () => time = Date.now(), stop: () => Date.now() - time }; }; let time = 0;",
+      "const createTimer = => { let time = 0; return { start: => time = Date.now(), stop: => Date.now() - time }; };",
+      "const createTimer = () => { let time = 0; return { start: time = Date.now(), stop: Date.now() - time }; };"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "let x = 1;\nfunction outer() {\n  console.log(x);\n  let x = 2;\n  {\n    let x = 3;\n    console.log(x);\n  }\n}\nouter();",
+    "o": [
+      "ReferenceError",
+      "1\n3",
+      "undefined\n3",
+      "1\n2"
+    ]
+  },
+  {
+    "q": "Which statement about function expressions is true regarding their use in object property definitions?",
+    "o": [
+      "They can be used to define methods that maintain their own 'this' binding",
+      "They cannot be used as object methods",
+      "They must be arrow functions to work as methods",
+      "They are hoisted to the top of the object scope"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const createWrapper = (tag) => (content) => `<${tag}>${content}</${tag}>`;\nconst divWrap = createWrapper('div');\nconsole.log(divWrap('Hello'));",
+    "o": [
+      "<div>Hello</div>",
+      "tag Hello",
+      "undefined Hello",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following shows a correct immediately-invoked arrow function that maintains private configuration?",
+    "o": [
+      "const config = (() => { const settings = {}; return { set: (k,v) => settings[k]=v, get: k => settings[k] }; })();",
+      "const config = => { const settings = {}; return { set: (k,v) => settings[k]=v, get: k => settings[k] }; }();",
+      "const config = (() => { const settings = {}; return { set: settings[k]=v, get: settings[k] }; })();",
+      "const config = (() => const settings = {}; return { set: (k,v) => settings[k]=v, get: k => settings[k] };)();"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "function createQueue() {\n  const items = [];\n  return {\n    enqueue: (item) => items.push(item),\n    dequeue: () => items.shift(),\n    front: function() { return items[0]; },\n    size: () => items.length\n  };\n}\nconst q = createQueue();\nq.enqueue('first');\nq.enqueue('second');\nconsole.log(q.front(), q.size());",
+    "o": [
+      "first 2",
+      "second 2",
+      "first 1",
+      "undefined undefined"
+    ]
+  },
+  {
+    "q": "Which of the following demonstrates proper block scoping with let in a for-in loop?",
+    "o": [
+      "for (const key in {a:1}) { let val = key; setTimeout(() => console.log(val), 100); }",
+      "for (const key in {a:1}) { var val = key; setTimeout(() => console.log(val), 100); }",
+      "let val; for (const key in {a:1}) { val = key; setTimeout(() => console.log(val), 100); }",
+      "for (const key in {a:1}) let val = key; setTimeout(() => console.log(val), 100);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "l": "javascript",
+    "c": "const reverseString = function(s) {\n  return s.length <= 1 ? s : reverseString(s.slice(1)) + s[0];\n};\nconsole.log(reverseString('hello'));",
+    "o": [
+      "olleh",
+      "hello",
+      "h",
+      "TypeError"
+    ]
+  },
+  {
+    "q": "Which statement about arrow functions and prototype assignment is correct?",
+    "o": [
+      "Arrow functions don't have a prototype property",
+      "Arrow functions automatically get a prototype property",
+      "Arrow functions inherit prototypes from their lexical scope",
+      "Arrow functions must be named to have a prototype"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?\n",
+    "l": "javascript",
+    "c": "function addNumbers(a, b) {\n    return a + b;\n}\n\nconsole.log(addNumbers(5, 10));",
+    "o": [
+      "15",
+      "5",
+      "10",
+      "50"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function expression in JavaScript?",
+    "o": [
+      "const addNumbers = function(a, b) { return a + b; }",
+      "function addNumbers(a, b) { return a + b; }",
+      "const addNumbers(a, b) => { return a + b; }",
+      "addNumbers = (a, b) => { return a + b; }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?\n",
+    "l": "javascript",
+    "c": "const greet = () => {\n    return 'Hello, world!';\n};\n\nconsole.log(greet());",
+    "o": [
+      "Hello, world!",
+      "undefined",
+      "Hello",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid arrow function in JavaScript?",
+    "o": [
+      "const addNumbers = (a, b) => a + b;",
+      "const addNumbers = {a, b} => a + b;",
+      "const addNumbers = function(a, b) { return a + b };",
+      "const addNumbers => a + b;"
+    ]
+  },
+  {
+    "q": "Which statement about function scopes in JavaScript is correct?",
+    "o": [
+      "A function has its own scope, meaning variables declared inside a function are not accessible outside it.",
+      "Variables declared inside a function are accessible globally.",
+      "A function does not have its own scope in JavaScript.",
+      "Function scopes can only be accessed by functions defined within them."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?\n",
+    "l": "javascript",
+    "c": "function outer() {\n    let x = 10;\n    function inner() {\n        console.log(x);\n    }\n    inner();\n}\n\nouter();",
+    "o": [
+      "10",
+      "undefined",
+      "ReferenceError",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about JavaScript function declarations?",
+    "o": [
+      "A function declaration is hoisted to the top of its scope.",
+      "Function declarations must be defined after they are called.",
+      "Function declarations can only be called inside their scope.",
+      "Function declarations can only be called before they are defined."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?\n",
+    "l": "javascript",
+    "c": "const test = function() {\n    return 10;\n};\n\nconsole.log(test());",
+    "o": [
+      "10",
+      "undefined",
+      "NaN",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to define a function that returns the sum of two numbers using an arrow function?",
+    "o": [
+      "const add = (a, b) => a + b;",
+      "const add = (a, b) => { return a + b };",
+      "const add = (a, b) -> a + b;",
+      "const add = function(a, b) { return a + b };"
+    ]
+  },
+  {
+    "q": "In JavaScript, which of the following is an advantage of arrow functions?",
+    "o": [
+      "Arrow functions do not have their own 'this', they inherit it from the parent scope.",
+      "Arrow functions automatically return values.",
+      "Arrow functions are slower than regular functions.",
+      "Arrow functions are not hoisted."
+    ]
+  },
+  {
+    "q": "Which of the following correctly defines a function using a function declaration in JavaScript?",
+    "o": [
+      "function add(a, b) { return a + b; }",
+      "const add(a, b) { return a + b; }",
+      "function add => a + b;",
+      "add = function(a, b) { return a + b; }"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?\n",
+    "l": "javascript",
+    "c": "const myFunc = function(a, b) {\n    return a * b;\n};\n\nconsole.log(myFunc(4, 5));",
+    "o": [
+      "20",
+      "undefined",
+      "NaN",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following is true about arrow functions in JavaScript?",
+    "o": [
+      "Arrow functions cannot be used as methods in an object.",
+      "Arrow functions have their own 'this' context.",
+      "Arrow functions are always anonymous.",
+      "Arrow functions automatically bind 'this'."
+    ]
+  },
+  {
+    "q": "What is the scope of a variable declared inside a function?",
+    "o": [
+      "The variable is local to the function and cannot be accessed outside of it.",
+      "The variable is global and accessible from any part of the program.",
+      "The variable is accessible only within the block where it was declared.",
+      "The variable is accessible from the global scope after the function runs."
+    ]
+  },
+  {
+    "q": "What will the following code snippet log to the console?\n",
+    "l": "javascript",
+    "c": "function outer() {\n    var x = 5;\n    function inner() {\n        console.log(x);\n    }\n    inner();\n}\n\nouter();",
+    "o": [
+      "5",
+      "undefined",
+      "ReferenceError",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid expression-based function in JavaScript?",
+    "o": [
+      "const multiply = function(a, b) { return a * b; };",
+      "function multiply(a, b) { return a * b; }",
+      "multiply = function(a, b) { return a * b; }",
+      "function multiply => a * b;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?\n",
+    "l": "javascript",
+    "c": "const test = () => {\n    return 42;\n};\n\nconsole.log(test());",
+    "o": [
+      "42",
+      "undefined",
+      "NaN",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following statements about function scopes in JavaScript is incorrect?",
+    "o": [
+      "Variables declared inside a function are accessible from outside the function.",
+      "A function's scope is confined to the function itself.",
+      "A variable declared with 'let' or 'const' inside a block is not accessible outside that block.",
+      "Function scopes prevent variables declared inside from conflicting with variables in other scopes."
+    ]
+  },
+  {
+    "q": "What is the correct syntax to declare a function expression in JavaScript?",
+    "o": [
+      "const subtract = function(a, b) { return a - b; };",
+      "function subtract(a, b) { return a - b; }",
+      "const subtract = (a, b) => return a - b;",
+      "subtract = function(a, b) { return a - b; };"
+    ]
+  },
+  {
+    "q": "Which of the following will correctly define an arrow function that adds two numbers in JavaScript?",
+    "o": [
+      "const add = (a, b) => a + b;",
+      "const add = a, b => a + b;",
+      "const add = (a, b) { return a + b; };",
+      "add = a, b => a + b;"
+    ]
+  },
+  {
+    "q": "Which of the following is true about JavaScript function declarations?",
+    "o": [
+      "Function declarations are hoisted to the top of their scope.",
+      "Function declarations must be assigned to a variable.",
+      "Function declarations do not support parameters.",
+      "Function declarations are anonymous."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?\n",
+    "l": "javascript",
+    "c": "const multiply = function(a, b) {\n    return a * b;\n};\n\nconsole.log(multiply(2, 3));",
+    "o": [
+      "6",
+      "undefined",
+      "NaN",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following defines an arrow function that returns the square of a number?",
+    "o": [
+      "const square = num => num * num;",
+      "const square = num -> num * num;",
+      "const square = (num) => { return num * num };",
+      "const square = (num) => num * num;"
+    ]
+  },
+  {
+    "q": "What is the scope of a variable declared using 'let' inside a block of code?",
+    "o": [
+      "The variable is accessible only within that block.",
+      "The variable is accessible globally.",
+      "The variable is accessible in all functions within the block.",
+      "The variable is accessible only in the function where it was declared."
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for defining a function expression in JavaScript?",
+    "o": [
+      "const subtract = function(a, b) { return a - b; };",
+      "function subtract(a, b) { return a - b; }",
+      "const subtract = a, b => a - b;",
+      "subtract = (a, b) => { return a - b; };"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?\n",
+    "l": "javascript",
+    "c": "function outer() {\n    var x = 10;\n    function inner() {\n        console.log(x);\n    }\n    inner();\n}\n\nouter();",
+    "o": [
+      "10",
+      "undefined",
+      "NaN",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration in JavaScript?",
+    "o": [
+      "function sum(a, b) { return a + b; }",
+      "sum = function(a, b) { return a + b; }",
+      "const sum = function(a, b) { return a + b; }",
+      "function sum(a, b) => a + b;"
+    ]
+  },
+  {
+    "q": "What is the scope of a variable declared inside a function in JavaScript?",
+    "o": [
+      "It is local to the function and cannot be accessed outside.",
+      "It is global and can be accessed anywhere in the program.",
+      "It is accessible only within the block where the function was declared.",
+      "It is accessible inside the function and all functions declared after it."
+    ]
+  },
+  {
+    "q": "What will the following code log to the console?\n",
+    "l": "javascript",
+    "c": "const addNumbers = (a, b) => { return a + b; };\nconsole.log(addNumbers(3, 4));",
+    "o": [
+      "7",
+      "undefined",
+      "NaN",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function scopes in JavaScript?",
+    "o": [
+      "Variables declared inside a function cannot be accessed outside that function.",
+      "Variables declared inside a function are global.",
+      "Variables declared inside a function are accessible in other functions within the same scope.",
+      "Variables inside a function can be accessed from any part of the code."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?\n",
+    "l": "javascript",
+    "c": "const divide = function(a, b) {\n    return a / b;\n};\n\nconsole.log(divide(10, 2));",
+    "o": [
+      "5",
+      "undefined",
+      "NaN",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration in JavaScript?",
+    "o": [
+      "function greet(name) { console.log('Hello ' + name); }",
+      "const greet(name) = { console.log('Hello ' + name); }",
+      "greet(name) => { console.log('Hello ' + name); }",
+      "greet = function(name) { console.log('Hello ' + name); }"
+    ]
+  },
+  {
+    "q": "What is the scope of a variable declared with 'const' inside a block?",
+    "o": [
+      "The variable is block-scoped and cannot be accessed outside the block.",
+      "The variable is function-scoped and accessible anywhere inside the function.",
+      "The variable is globally scoped.",
+      "The variable is accessible within the entire program."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?\n",
+    "l": "javascript",
+    "c": "const subtract = (a, b) => a - b;\nconsole.log(subtract(7, 3));",
+    "o": [
+      "4",
+      "undefined",
+      "NaN",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following will correctly define an anonymous function expression in JavaScript?",
+    "o": [
+      "const multiply = function(a, b) { return a * b; };",
+      "const multiply = a, b => a * b;",
+      "function multiply(a, b) { return a * b; }",
+      "const multiply(a, b) { return a * b; }"
+    ]
+  },
+  {
+    "q": "Which of the following statements about JavaScript arrow functions is incorrect?",
+    "o": [
+      "Arrow functions automatically bind the 'this' keyword.",
+      "Arrow functions cannot be used as methods in objects.",
+      "Arrow functions do not have their own 'this' context.",
+      "Arrow functions are always anonymous."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function outer() {\n    var x = 5;\n    function inner() {\n        var x = 10;\n        console.log(x);\n    }\n    inner();\n}\n\nouter();",
+    "o": [
+      "10",
+      "5",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted to the top of their scope and can be called before they are declared.",
+      "Function declarations cannot be called before they are declared.",
+      "Function declarations are only accessible inside the function where they are defined.",
+      "Function declarations must be assigned to a variable."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?\n",
+    "l": "javascript",
+    "c": "const sum = (a, b) => {\n    return a + b;\n};\n\nconsole.log(sum(2, 6));",
+    "o": [
+      "8",
+      "undefined",
+      "NaN",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following defines a function expression in JavaScript?",
+    "o": [
+      "const square = function(x) { return x * x; };",
+      "function square(x) { return x * x; }",
+      "const square = (x) => x * x;",
+      "square = function(x) { return x * x; };"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const multiply = (a, b) => a * b;\nconsole.log(multiply(4, 5));",
+    "o": [
+      "20",
+      "undefined",
+      "NaN",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following statements about JavaScript arrow functions is true?",
+    "o": [
+      "Arrow functions do not have their own 'this' context.",
+      "Arrow functions always have their own 'this' context.",
+      "Arrow functions are not suitable for callbacks.",
+      "Arrow functions cannot be used as anonymous functions."
+    ]
+  },
+  {
+    "q": "What is the scope of a variable declared with 'var' inside a function?",
+    "o": [
+      "The variable is function-scoped.",
+      "The variable is globally scoped.",
+      "The variable is block-scoped.",
+      "The variable is only accessible within the loop where it is defined."
+    ]
+  },
+  {
+    "q": "Which of the following is an example of a valid function expression in JavaScript?",
+    "o": [
+      "const divide = function(a, b) { return a / b; };",
+      "function divide(a, b) { return a / b; }",
+      "const divide = (a, b) => a / b;",
+      "const divide(a, b) = a / b;"
+    ]
+  },
+  {
+    "q": "What is the result of the following code snippet?\n",
+    "l": "javascript",
+    "c": "var a = 1;\nfunction test() {\n    a = 2;\n    console.log(a);\n}\ntest();\nconsole.log(a);",
+    "o": [
+      "2 and 2",
+      "2 and 1",
+      "1 and 1",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What is the difference between function declarations and function expressions in JavaScript?",
+    "o": [
+      "Function declarations are hoisted, while function expressions are not.",
+      "Function declarations and function expressions behave the same way.",
+      "Function declarations require the function to be assigned to a variable.",
+      "Function expressions are only useful inside loops."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 3;\nconst arrowFunction = () => { x = 5; return x; };\nconsole.log(arrowFunction());",
+    "o": [
+      "5",
+      "undefined",
+      "3",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid arrow function that returns the square of a number?",
+    "o": [
+      "const square = num => num * num;",
+      "const square = num => { return num * num; };",
+      "square = num => num * num;",
+      "const square(num) => num * num;"
+    ]
+  },
+  {
+    "q": "Which of the following best describes the scope of a variable declared using 'let' inside a for loop?",
+    "o": [
+      "The variable is block-scoped and only accessible within the loop.",
+      "The variable is function-scoped and accessible anywhere within the function.",
+      "The variable is globally scoped.",
+      "The variable is only accessible outside the loop."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?\n",
+    "l": "javascript",
+    "c": "function outer() {\n    var x = 5;\n    return function inner() {\n        console.log(x);\n    }\n}\nconst innerFunction = outer();\ninnerFunction();",
+    "o": [
+      "5",
+      "undefined",
+      "NaN",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?\n",
+    "l": "javascript",
+    "c": "const add = function(a, b) { return a + b; };\nconsole.log(add(3, 7));",
+    "o": [
+      "10",
+      "undefined",
+      "NaN",
+      "null"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration in JavaScript?",
+    "o": [
+      "function greet() { console.log('Hello, world!'); }",
+      "const greet = function() { console.log('Hello, world!'); };",
+      "let greet = function() { console.log('Hello, world!'); };",
+      "greet() => { console.log('Hello, world!'); }"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 10;\nconst myFunc = () => { let x = 20; console.log(x); };\nmyFunc();",
+    "o": [
+      "20",
+      "10",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What is the scope of a variable declared with 'let' inside a for loop?",
+    "o": [
+      "The variable is block-scoped and only accessible inside the loop.",
+      "The variable is globally scoped.",
+      "The variable is function-scoped.",
+      "The variable is accessible only after the loop."
+    ]
+  },
+  {
+    "q": "Which of the following is a characteristic of arrow functions in JavaScript?",
+    "o": [
+      "Arrow functions do not have their own 'this' context.",
+      "Arrow functions can only be used in expressions.",
+      "Arrow functions must be declared using 'function'.",
+      "Arrow functions automatically bind arguments."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 5;\nconst outerFunc = () => { let x = 10; const innerFunc = () => { console.log(x); }; innerFunc(); };\nouterFunc();",
+    "o": [
+      "10",
+      "5",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What is the correct way to declare a function expression in JavaScript?",
+    "o": [
+      "const sum = function(a, b) { return a + b; };",
+      "function sum(a, b) { return a + b; }",
+      "sum = function(a, b) { return a + b; }",
+      "const sum(a, b) => a + b;"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about function declarations and hoisting in JavaScript?",
+    "o": [
+      "Function declarations are hoisted to the top of their scope, meaning they can be called before they are declared.",
+      "Function declarations are not hoisted and must be declared before they are called.",
+      "Function expressions are hoisted just like function declarations.",
+      "Function declarations cannot be assigned to variables."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?\n",
+    "l": "javascript",
+    "c": "let a = 10;\nconst square = (x) => { let a = 5; return x * x; };\nconsole.log(square(a));",
+    "o": [
+      "100",
+      "50",
+      "25",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is true about arrow functions and 'this' in JavaScript?",
+    "o": [
+      "Arrow functions do not have their own 'this' and inherit 'this' from the surrounding context.",
+      "Arrow functions always have their own 'this' context.",
+      "Arrow functions bind 'this' only when called inside an object.",
+      "Arrow functions cannot access 'this'."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?\n",
+    "l": "javascript",
+    "c": "function sum(a, b) {\n    return a + b;\n}\nconsole.log(sum(5, 10));",
+    "o": [
+      "15",
+      "undefined",
+      "NaN",
+      "5"
+    ]
+  },
+  {
+    "q": "Which of the following statements about function expressions is true?",
+    "o": [
+      "Function expressions are not hoisted and must be assigned before they are called.",
+      "Function expressions are hoisted just like function declarations.",
+      "Function expressions can only be used with arrow functions.",
+      "Function expressions do not require a variable to hold the function."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const multiply = (a, b) => { return a * b; };\nconsole.log(multiply(6, 7));",
+    "o": [
+      "42",
+      "NaN",
+      "undefined",
+      "6"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for a function declaration in JavaScript?",
+    "o": [
+      "function greet() { console.log('Hello, world!'); }",
+      "const greet = function() { console.log('Hello, world!'); };",
+      "let greet() { console.log('Hello, world!'); }",
+      "greet() => { console.log('Hello, world!'); }"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let a = 3;\nconst arrowFunc = () => { let a = 5; return a; };\nconsole.log(a);",
+    "o": [
+      "3",
+      "5",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What is the difference between function declarations and function expressions in terms of hoisting?",
+    "o": [
+      "Function declarations are hoisted, while function expressions are not.",
+      "Both function declarations and function expressions are hoisted in the same way.",
+      "Function expressions are hoisted, but not function declarations.",
+      "Neither function declarations nor function expressions are hoisted."
+    ]
+  },
+  {
+    "q": "What will be the result of the following code snippet?\n",
+    "l": "javascript",
+    "c": "var x = 2;\n(function() { var x = 5; console.log(x); })();\nconsole.log(x);",
+    "o": [
+      "5 and 2",
+      "5 and undefined",
+      "2 and 2",
+      "undefined and undefined"
+    ]
+  },
+  {
+    "q": "Which of the following best describes the scope of a variable declared with 'let' inside a function?",
+    "o": [
+      "The variable is function-scoped.",
+      "The variable is block-scoped and accessible within the function only.",
+      "The variable is globally scoped.",
+      "The variable is accessible only in the first block of the function."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?\n",
+    "l": "javascript",
+    "c": "const foo = () => {\n    let a = 10;\n    return () => a;\n};\nconst bar = foo();\nconsole.log(bar());",
+    "o": [
+      "10",
+      "undefined",
+      "NaN",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following statements about arrow functions is true?",
+    "o": [
+      "Arrow functions do not bind their own 'this'; they inherit 'this' from the enclosing scope.",
+      "Arrow functions bind their own 'this', so they can be used for methods in objects.",
+      "Arrow functions cannot be used inside a function.",
+      "Arrow functions require a return statement to return a value."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function add(x, y) {\n    return x + y;\n}\nconsole.log(add(4, 8));",
+    "o": [
+      "12",
+      "NaN",
+      "undefined",
+      "4"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function expressions in JavaScript?",
+    "o": [
+      "Function expressions must be assigned to variables or constants.",
+      "Function expressions are always hoisted like function declarations.",
+      "Function expressions can only be used as arguments to other functions.",
+      "Function expressions cannot be used with arrow functions."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?\n",
+    "l": "javascript",
+    "c": "const greet = (name) => { console.log('Hello, ' + name); };\ngreet('Alice');",
+    "o": [
+      "Hello, Alice",
+      "undefined",
+      "NaN",
+      "Hello, undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to declare a function expression in JavaScript?",
+    "o": [
+      "const multiply = function(a, b) { return a * b; };",
+      "function multiply(a, b) { return a * b; };",
+      "multiply = function(a, b) { return a * b; };",
+      "const multiply(a, b) => a * b;"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 10;\nconst test = () => { let x = 5; return x; };\nconsole.log(test());",
+    "o": [
+      "5",
+      "10",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following statements about function declarations and hoisting is true?",
+    "o": [
+      "Function declarations are hoisted, which allows them to be called before being defined.",
+      "Function declarations are not hoisted and must be defined before use.",
+      "Function declarations are hoisted, but they cannot be called before definition.",
+      "Function declarations can only be called from within the same block."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 5;\nconst outer = () => { let x = 10; const inner = () => { console.log(x); }; inner(); };\nouter();",
+    "o": [
+      "10",
+      "5",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for an arrow function in JavaScript?",
+    "o": [
+      "const sum = (a, b) => a + b;",
+      "const sum = a, b => a + b;",
+      "function sum(a, b) => a + b;",
+      "const sum = (a, b) => { return a + b; };"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 10;\nconst example = () => { let x = 20; return () => { console.log(x); }; };\nconst func = example();\nfunc();",
+    "o": [
+      "20",
+      "10",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about the scope of variables declared with 'let' and 'var'?",
+    "o": [
+      "'let' is block-scoped, while 'var' is function-scoped.",
+      "'let' is function-scoped, while 'var' is block-scoped.",
+      "'let' and 'var' are both block-scoped.",
+      "'let' and 'var' are both globally scoped."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?\n",
+    "l": "javascript",
+    "c": "function subtract(a, b) {\n    return a - b;\n}\nconsole.log(subtract(15, 5));",
+    "o": [
+      "10",
+      "5",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is a characteristic of function expressions in JavaScript?",
+    "o": [
+      "They are assigned to variables or constants and are not hoisted.",
+      "They can only be defined inside functions.",
+      "They are hoisted and can be called before definition.",
+      "They cannot return values."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const double = (num) => num * 2;\nconsole.log(double(4));",
+    "o": [
+      "8",
+      "4",
+      "NaN",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for a function declaration in JavaScript?",
+    "o": [
+      "function divide(a, b) { return a / b; }",
+      "const divide = function(a, b) { return a / b; };",
+      "let divide = function(a, b) { return a / b; };",
+      "divide = function(a, b) { return a / b; };"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const sum = () => { let a = 10; { let a = 20; console.log(a); } };\nsum();",
+    "o": [
+      "20",
+      "10",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is true about the scope of 'var' and 'let' in JavaScript?",
+    "o": [
+      "'var' is function-scoped, while 'let' is block-scoped.",
+      "'let' is function-scoped, while 'var' is block-scoped.",
+      "'var' and 'let' are both block-scoped.",
+      "'let' and 'var' are both globally scoped."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?\n",
+    "l": "javascript",
+    "c": "let a = 5;\nconst checkScope = () => { let a = 10; return a; };\nconsole.log(a);",
+    "o": [
+      "5",
+      "10",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following will result in an error when using an arrow function in JavaScript?",
+    "o": [
+      "Arrow functions cannot be used as methods in objects.",
+      "Arrow functions do not support the 'arguments' object.",
+      "Arrow functions cannot have a return statement.",
+      "Arrow functions must always return a value."
+    ]
+  },
+  {
+    "q": "What is the difference between function declarations and function expressions?",
+    "o": [
+      "Function declarations are hoisted and can be called before they are defined, while function expressions are not hoisted.",
+      "Function expressions are hoisted and can be called before they are defined, while function declarations are not.",
+      "Function declarations require parentheses, but function expressions do not.",
+      "There is no difference."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let a = 5;\nconst func = function() { let a = 10; return a; };\nconsole.log(func());",
+    "o": [
+      "10",
+      "5",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function greet() {\n    return 'Hello, World!';\n}\nconsole.log(greet());",
+    "o": [
+      "Hello, World!",
+      "undefined",
+      "NaN",
+      "Hello"
+    ]
+  },
+  {
+    "q": "Which of the following is a true statement about arrow functions in JavaScript?",
+    "o": [
+      "Arrow functions do not have their own `this` context.",
+      "Arrow functions always require a return statement.",
+      "Arrow functions cannot be used as methods.",
+      "Arrow functions are hoisted like regular function declarations."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const multiply = (x, y) => x * y;\nconsole.log(multiply(2, 3));",
+    "o": [
+      "6",
+      "5",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to declare a function expression in JavaScript?",
+    "o": [
+      "const subtract = function(a, b) { return a - b; };",
+      "function subtract(a, b) { return a - b; };",
+      "let subtract = function(a, b) { return a - b; };",
+      "subtract = function(a, b) { return a - b; };"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let a = 100;\nconst myFunction = () => { let a = 50; return a; };\nconsole.log(a);",
+    "o": [
+      "100",
+      "50",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is true about variable scoping in JavaScript?",
+    "o": [
+      "Variables declared with 'let' are block-scoped, while variables declared with 'var' are function-scoped.",
+      "Variables declared with 'let' are function-scoped, while variables declared with 'var' are block-scoped.",
+      "Both 'let' and 'var' are block-scoped.",
+      "'let' variables are globally scoped, while 'var' variables are function-scoped."
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?\n",
+    "l": "javascript",
+    "c": "let x = 1;\nfunction outer() {\n    let x = 2;\n    function inner() {\n        console.log(x);\n    }\n    inner();\n}\nouter();",
+    "o": [
+      "2",
+      "1",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following will result in an error when using a function declaration in JavaScript?",
+    "o": [
+      "Function declarations cannot be used inside conditionals.",
+      "Function declarations cannot be named.",
+      "Function declarations cannot be called before they are defined.",
+      "Function declarations are hoisted, so they can be called before their definition."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const outer = () => { const a = 10; return () => { return a; }; };\nconst inner = outer();\nconsole.log(inner());",
+    "o": [
+      "10",
+      "undefined",
+      "NaN",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to declare an arrow function in JavaScript?",
+    "o": [
+      "const divide = (a, b) => a / b;",
+      "const divide = function(a, b) { return a / b; };",
+      "let divide = (a, b) { return a / b; };",
+      "function divide(a, b) => a / b;"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?\n",
+    "l": "javascript",
+    "c": "function add(x, y) {\n    return x + y;\n}\nconsole.log(add(5, 7));",
+    "o": [
+      "12",
+      "NaN",
+      "undefined",
+      "5"
+    ]
+  },
+  {
+    "q": "Which of the following is true about arrow functions in JavaScript?",
+    "o": [
+      "Arrow functions do not have their own `this` context.",
+      "Arrow functions always return a value implicitly.",
+      "Arrow functions cannot be used in objects.",
+      "Arrow functions can only return an object."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const square = (n) => n * n;\nconsole.log(square(4));",
+    "o": [
+      "16",
+      "4",
+      "NaN",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following represents a valid function expression in JavaScript?",
+    "o": [
+      "const multiply = function(a, b) { return a * b; };",
+      "function multiply(a, b) { return a * b; };",
+      "let multiply(a, b) { return a * b; }",
+      "multiply = function(a, b) { return a * b; }"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 10;\nconst demoFunction = () => { let x = 20; return x; };\nconsole.log(x);",
+    "o": [
+      "10",
+      "20",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is true about scoping in JavaScript?",
+    "o": [
+      "'let' and 'const' are block-scoped, while 'var' is function-scoped.",
+      "'let' is function-scoped, while 'const' is block-scoped.",
+      "'var' is block-scoped, while 'let' and 'const' are globally scoped.",
+      "'let' and 'var' are globally scoped, while 'const' is block-scoped."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let a = 5;\nfunction test() {\n    let a = 10;\n    console.log(a);\n}\ntest();",
+    "o": [
+      "10",
+      "5",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "What is the output of the following code?\n",
+    "l": "javascript",
+    "c": "const func = () => { const x = 100; return x; };\nconsole.log(func());",
+    "o": [
+      "100",
+      "undefined",
+      "NaN",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted and can be called before they are defined.",
+      "Function declarations are not hoisted.",
+      "Function declarations can only be used inside loops.",
+      "Function declarations cannot be called within conditionals."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const outer = () => { let a = 10; return () => { return a; }; };\nconst inner = outer();\nconsole.log(inner());",
+    "o": [
+      "10",
+      "undefined",
+      "NaN",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function sum(a, b) {\n    return a + b;\n}\nconsole.log(sum(10, 5));",
+    "o": [
+      "15",
+      "10",
+      "5",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following statements about function expressions is correct?",
+    "o": [
+      "A function expression is assigned to a variable, and the function can only be invoked after it is assigned.",
+      "A function expression can be invoked before it is assigned.",
+      "A function expression behaves exactly the same as a function declaration.",
+      "A function expression does not require parentheses after the function name."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const multiply = (a, b) => a * b;\nconsole.log(multiply(3, 4));",
+    "o": [
+      "12",
+      "7",
+      "3",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following correctly declares a function expression in JavaScript?",
+    "o": [
+      "const divide = function(a, b) { return a / b; };",
+      "function divide(a, b) { return a / b; };",
+      "let divide = function(a, b) { return a / b; };",
+      "divide = function(a, b) { return a / b; }"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const checkScope = () => { let x = 10; return x; };\nconsole.log(x);",
+    "o": [
+      "ReferenceError",
+      "10",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct statement about scoping in JavaScript?",
+    "o": [
+      "'let' and 'const' are block-scoped, while 'var' is function-scoped.",
+      "'let' is block-scoped, while 'var' is globally scoped.",
+      "'var' is block-scoped, while 'let' is function-scoped.",
+      "'const' is function-scoped, while 'let' is globally scoped."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let a = 5;\nfunction outer() {\n    let a = 10;\n    function inner() {\n        console.log(a);\n    }\n    inner();\n}\nouter();",
+    "o": [
+      "10",
+      "5",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following correctly demonstrates the usage of an arrow function?",
+    "o": [
+      "const greet = (name) => `Hello, ${name}`;",
+      "const greet = function(name) { return `Hello, ${name}`; };",
+      "function greet(name) { return `Hello, ${name}`; }",
+      "let greet = (name) => { return `Hello, ${name}`; }"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const outer = () => { let x = 10; const inner = () => { return x; }; return inner(); };\nconsole.log(outer());",
+    "o": [
+      "10",
+      "undefined",
+      "NaN",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What is the difference between a function declaration and a function expression in JavaScript?",
+    "o": [
+      "Function declarations are hoisted, while function expressions are not.",
+      "Function expressions are hoisted, while function declarations are not.",
+      "Both function declarations and expressions are hoisted.",
+      "Function expressions cannot have parameters."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function greeting(name) {\n    return `Hello, ${name}!`;\n}\nconsole.log(greeting('John'));",
+    "o": [
+      "Hello, John!",
+      "undefined",
+      "Hello, undefined!",
+      "John"
+    ]
+  },
+  {
+    "q": "Which of the following is true about arrow functions?",
+    "o": [
+      "Arrow functions do not have their own `this` value and inherit it from the surrounding context.",
+      "Arrow functions cannot be used as methods in objects.",
+      "Arrow functions always require a return statement.",
+      "Arrow functions do not support default parameters."
+    ]
+  },
+  {
+    "q": "What is the output of the following code?\n",
+    "l": "javascript",
+    "c": "const sum = (a, b) => a + b;\nconsole.log(sum(3, 4));",
+    "o": [
+      "7",
+      "34",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for a function expression?",
+    "o": [
+      "const subtract = function(a, b) { return a - b; };",
+      "function subtract(a, b) { return a - b; };",
+      "let subtract = function(a, b) { return a - b; };",
+      "subtract = function(a, b) { return a - b; }"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const testScope = () => {\n    let x = 5;\n    if (true) { let x = 10; }\n    console.log(x);\n};\ntestScope();",
+    "o": [
+      "5",
+      "10",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted and can be called before their declaration.",
+      "Function declarations are not hoisted.",
+      "Function declarations can only be called after they are assigned.",
+      "Function declarations must be assigned to variables."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let a = 10;\nconst outerFunction = () => { let a = 20; return () => { return a; }; };\nconst innerFunction = outerFunction();\nconsole.log(innerFunction());",
+    "o": [
+      "20",
+      "10",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following correctly demonstrates the concept of function scope in JavaScript?",
+    "o": [
+      "let x = 5; function myFunction() { let x = 10; console.log(x); } myFunction();",
+      "function myFunction() { var x = 10; } console.log(x);",
+      "let x = 10; function myFunction() { var x = 5; console.log(x); }",
+      "function myFunction() { var x = 5; } console.log(x);"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const add = (a, b) => { return a + b; };\nconsole.log(add(1, 2));",
+    "o": [
+      "3",
+      "undefined",
+      "NaN",
+      "12"
+    ]
+  },
+  {
+    "q": "What is the difference between function expressions and function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted, while function expressions are not hoisted.",
+      "Function expressions are hoisted, while function declarations are not hoisted.",
+      "Both function declarations and expressions are hoisted.",
+      "Function expressions cannot be invoked."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function myFunction(a, b) {\n    return a * b;\n}\nconsole.log(myFunction(2, 3));",
+    "o": [
+      "6",
+      "23",
+      "5",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a key feature of arrow functions in JavaScript?",
+    "o": [
+      "Arrow functions do not have their own `this` context, and they inherit `this` from their surrounding context.",
+      "Arrow functions can be used as methods of objects.",
+      "Arrow functions always require a function body, even for a single line of code.",
+      "Arrow functions do not support the rest parameter syntax."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const add = (x, y) => { return x + y; };\nconsole.log(add(4, 5));",
+    "o": [
+      "9",
+      "45",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about function expressions?",
+    "o": [
+      "Function expressions are not hoisted, meaning they cannot be called before being defined.",
+      "Function expressions are hoisted just like function declarations.",
+      "Function expressions can only be assigned to variables and not constants.",
+      "Function expressions must always include a return statement."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let a = 1;\nconst myFunction = () => { let a = 2; console.log(a); };\nmyFunction();\nconsole.log(a);",
+    "o": [
+      "2, 1",
+      "1, 2",
+      "undefined, 1",
+      "NaN, NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted, meaning the function can be called before it is defined.",
+      "Function declarations are not hoisted, and must be defined before they can be called.",
+      "Function declarations can only be invoked after a variable is assigned to them.",
+      "Function declarations must include parameters."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 5;\nconst outerFunction = () => { let x = 10; return () => { return x; }; };\nconst innerFunction = outerFunction();\nconsole.log(innerFunction());",
+    "o": [
+      "10",
+      "5",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is correct about the `this` keyword in arrow functions?",
+    "o": [
+      "Arrow functions do not have their own `this` keyword and inherit it from the surrounding context.",
+      "Arrow functions bind `this` to the function itself.",
+      "Arrow functions cannot use `this` in a constructor function.",
+      "Arrow functions always set `this` to the global object."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const sum = function(a, b) {\n    return a + b;\n};\nconsole.log(sum(3, 7));",
+    "o": [
+      "10",
+      "37",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "What happens if a function expression is invoked before it is defined?",
+    "o": [
+      "It will throw an error, because function expressions are not hoisted.",
+      "It will work fine because function expressions are hoisted like function declarations.",
+      "It will not throw an error, but will return `undefined`.",
+      "It will execute with a default return value."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function multiply(a, b) {\n    return a * b;\n}\nconsole.log(multiply(6, 7));",
+    "o": [
+      "42",
+      "67",
+      "13",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is true about arrow functions in JavaScript?",
+    "o": [
+      "Arrow functions do not have their own `arguments` object and inherit it from the surrounding context.",
+      "Arrow functions have their own `arguments` object.",
+      "Arrow functions always require a block body, even for a single expression.",
+      "Arrow functions cannot be used as methods in objects."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const subtract = (x, y) => { return x - y; };\nconsole.log(subtract(10, 4));",
+    "o": [
+      "6",
+      "10",
+      "4",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function expressions in JavaScript?",
+    "o": [
+      "Function expressions can be assigned to variables and called using the variable.",
+      "Function expressions are hoisted just like function declarations.",
+      "Function expressions are always anonymous.",
+      "Function expressions cannot be passed as arguments to other functions."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const testScope = () => {\n    var a = 5;\n    if (true) {\n        var a = 10;\n    }\n    console.log(a);\n};\ntestScope();",
+    "o": [
+      "10",
+      "5",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted, meaning they can be called before their definition.",
+      "Function declarations are not hoisted, and must be defined before calling.",
+      "Function declarations can be assigned to variables.",
+      "Function declarations cannot be used as methods inside objects."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const outer = () => {\n    let a = 5;\n    const inner = () => { return a; };\n    return inner;\n};\nconst closure = outer();\nconsole.log(closure());",
+    "o": [
+      "5",
+      "undefined",
+      "NaN",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What is the output of the following code?\n",
+    "l": "javascript",
+    "c": "let x = 10;\nfunction example() {\n    let x = 20;\n    console.log(x);\n}\nexample();\nconsole.log(x);",
+    "o": [
+      "20, 10",
+      "10, 20",
+      "undefined, 10",
+      "NaN, NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to declare an arrow function in JavaScript?",
+    "o": [
+      "const greet = (name) => `Hello, ${name}!`;",
+      "const greet = => { return 'Hello!'; };",
+      "function greet(name) => { return `Hello, ${name}`; }",
+      "greet = (name) -> { return 'Hello!'; }"
+    ]
+  },
+  {
+    "q": "Which of the following best describes the scope of a variable declared with `let` inside a function?",
+    "o": [
+      "The variable is scoped to the function, meaning it is only accessible within that function.",
+      "The variable is globally scoped and accessible outside the function.",
+      "The variable is hoisted to the top of the script.",
+      "The variable is accessible in all nested functions."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function divide(a, b) {\n    return a / b;\n}\nconsole.log(divide(8, 2));",
+    "o": [
+      "4",
+      "16",
+      "6",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is correct about function expressions in JavaScript?",
+    "o": [
+      "Function expressions are not hoisted, so they must be declared before use.",
+      "Function expressions are hoisted like function declarations.",
+      "Function expressions can only be anonymous.",
+      "Function expressions always require parameters."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const multiply = (a, b) => a * b;\nconsole.log(multiply(3, 4));",
+    "o": [
+      "12",
+      "7",
+      "34",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is true about arrow functions in JavaScript?",
+    "o": [
+      "Arrow functions do not have their own `this`, but inherit `this` from the surrounding context.",
+      "Arrow functions create a new `this` context for each call.",
+      "Arrow functions are always used for callbacks only.",
+      "Arrow functions cannot return a value directly."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 3;\nfunction test() {\n    var x = 5;\n    console.log(x);\n}\ntest();",
+    "o": [
+      "5",
+      "3",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted, allowing them to be called before they are defined in the code.",
+      "Function declarations are not hoisted and must be defined before they can be called.",
+      "Function declarations must be assigned to a variable to work.",
+      "Function declarations cannot include parameters."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const outer = () => {\n    let a = 10;\n    const inner = () => {\n        console.log(a);\n    };\n    return inner;\n};\nconst innerFunction = outer();\ninnerFunction();",
+    "o": [
+      "10",
+      "undefined",
+      "NaN",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const subtract = (a, b) => { return a - b; };\nconst result = subtract(9, 4);\nconsole.log(result);",
+    "o": [
+      "5",
+      "45",
+      "9",
+      "undefined"
+    ]
+  },
+  {
+    "q": "What happens when you try to access a variable declared with `let` outside its block scope?",
+    "o": [
+      "It will throw a `ReferenceError` because the variable is block-scoped.",
+      "It will return `undefined` since the variable is hoisted.",
+      "It will return the global value of the variable.",
+      "It will return `null`."
+    ]
+  },
+  {
+    "q": "Which of the following is a correct example of a function expression?",
+    "o": [
+      "const add = function(a, b) { return a + b; };",
+      "function add(a, b) { return a + b; }",
+      "add = function(a, b) { return a + b; };",
+      "function add(a, b) => return a + b;"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function greet(name) {\n    return 'Hello, ' + name;\n}\nconsole.log(greet('John'));",
+    "o": [
+      "Hello, John",
+      "Hello, name",
+      "John",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following statements about function expressions is true?",
+    "o": [
+      "Function expressions can be assigned to variables and passed as arguments.",
+      "Function expressions are always hoisted to the top of their scope.",
+      "Function expressions cannot be assigned to constants.",
+      "Function expressions must be declared as anonymous functions."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const divide = (a, b) => a / b;\nconsole.log(divide(10, 2));",
+    "o": [
+      "5",
+      "2",
+      "10",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following best describes an arrow function in JavaScript?",
+    "o": [
+      "Arrow functions have no `this` of their own and inherit it from the surrounding context.",
+      "Arrow functions are always anonymous and cannot be named.",
+      "Arrow functions are a shorthand for function declarations.",
+      "Arrow functions always return a value, even when no `return` statement is provided."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function example() {\n    var x = 1;\n    if (true) {\n        var x = 2;\n    }\n    console.log(x);\n}\nexample();",
+    "o": [
+      "2",
+      "1",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted to the top of their scope and can be called before being defined.",
+      "Function declarations must be assigned to a variable.",
+      "Function declarations cannot be defined inside other functions.",
+      "Function declarations do not accept parameters."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const multiply = (a, b) => { return a * b; };\nconst result = multiply(4, 3);\nconsole.log(result);",
+    "o": [
+      "12",
+      "7",
+      "43",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following will cause an error due to scope issues?",
+    "o": [
+      "let a = 10;\nif (true) {\n    let a = 20;\n}\nconsole.log(a);",
+      "var a = 10;\nif (true) {\n    var a = 20;\n}\nconsole.log(a);",
+      "const a = 10;\nif (true) {\n    const a = 20;\n}\nconsole.log(a);",
+      "All of the above will execute without errors."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const outerFunction = () => {\n    let x = 5;\n    const innerFunction = () => { return x; };\n    return innerFunction;\n};\nconst result = outerFunction();\nconsole.log(result());",
+    "o": [
+      "5",
+      "undefined",
+      "NaN",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to declare a function expression in JavaScript?",
+    "o": [
+      "const subtract = function(a, b) { return a - b; };",
+      "function subtract(a, b) { return a - b; };",
+      "const subtract = (a, b) => { return a - b; };",
+      "Both a and c are correct."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function greet() {\n    console.log('Hello, world!');\n}\ngreet();",
+    "o": [
+      "Hello, world!",
+      "undefined",
+      "Hello",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which of the following statements about function expressions is true?",
+    "o": [
+      "Function expressions can be assigned to variables and invoked using the variable name.",
+      "Function expressions are hoisted and can be called before they are defined.",
+      "Function expressions can only be used inside another function.",
+      "Function expressions cannot return values."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const add = (a, b) => {\n    return a + b;\n};\nconsole.log(add(2, 3));",
+    "o": [
+      "5",
+      "23",
+      "6",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following statements about arrow functions is false?",
+    "o": [
+      "Arrow functions do not have their own `this` context, but inherit it from the surrounding context.",
+      "Arrow functions always require parentheses around parameters.",
+      "Arrow functions cannot be used as constructors.",
+      "Arrow functions are always anonymous."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function outerFunction() {\n    var x = 10;\n    function innerFunction() {\n        console.log(x);\n    }\n    innerFunction();\n}\nouterFunction();",
+    "o": [
+      "10",
+      "undefined",
+      "NaN",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following correctly describes function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted to the top of their scope, allowing them to be called before they are defined.",
+      "Function declarations must be assigned to a variable to be used.",
+      "Function declarations cannot take parameters.",
+      "Function declarations are not hoisted."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const greet = () => { return 'Hello, world!'; };\nconsole.log(greet());",
+    "o": [
+      "Hello, world!",
+      "undefined",
+      "Hello",
+      "Error"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function example() {\n    if (true) {\n        var x = 5;\n    }\n    console.log(x);\n}\nexample();",
+    "o": [
+      "5",
+      "undefined",
+      "ReferenceError",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is an example of a function expression in JavaScript?",
+    "o": [
+      "const subtract = function(a, b) { return a - b; };",
+      "function subtract(a, b) { return a - b; }",
+      "subtract = function(a, b) { return a - b; };",
+      "function subtract(a, b) => return a - b;"
+    ]
+  },
+  {
+    "q": "What is the output of the following code?\n",
+    "l": "javascript",
+    "c": "let x = 10;\nfunction example() {\n    let x = 20;\n    console.log(x);\n}\nexample();",
+    "o": [
+      "20",
+      "10",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function test() {\n    var a = 10;\n    if (true) {\n        var a = 20;\n    }\n    console.log(a);\n}\ntest();",
+    "o": [
+      "20",
+      "10",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function expressions in JavaScript?",
+    "o": [
+      "Function expressions are only executed when they are called.",
+      "Function expressions can be defined with the `function` keyword, but must be assigned to a variable.",
+      "Function expressions are hoisted and can be called before their definition.",
+      "Function expressions can only be anonymous."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const multiply = (a, b) => a * b;\nconsole.log(multiply(3, 4));",
+    "o": [
+      "12",
+      "7",
+      "34",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is a feature of arrow functions in JavaScript?",
+    "o": [
+      "Arrow functions inherit the `this` value from their lexical scope.",
+      "Arrow functions automatically bind their own `this` context.",
+      "Arrow functions can only be defined with one parameter.",
+      "Arrow functions must always return a value."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function outer() {\n    let x = 5;\n    function inner() {\n        x = 10;\n    }\n    inner();\n    console.log(x);\n}\nouter();",
+    "o": [
+      "10",
+      "5",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted, meaning they can be called before their definition.",
+      "Function declarations can only be called after they are defined.",
+      "Function declarations must always be assigned to a variable.",
+      "Function declarations are not hoisted."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const greet = name => {\n    return 'Hello, ' + name;\n};\nconsole.log(greet('Alice'));",
+    "o": [
+      "Hello, Alice",
+      "undefined",
+      "Hello",
+      "Alice"
+    ]
+  },
+  {
+    "q": "Which of the following will cause a reference error due to scope?",
+    "o": [
+      "console.log(x); var x = 10;",
+      "console.log(x); let x = 10;",
+      "var x = 10; console.log(x);",
+      "let x = 10; console.log(x);"
+    ]
+  },
+  {
+    "q": "What is the output of the following code?\n",
+    "l": "javascript",
+    "c": "let x = 5;\nfunction test() {\n    console.log(x);\n    var x = 10;\n}\ntest();",
+    "o": [
+      "undefined",
+      "5",
+      "10",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const subtract = (a, b) => {\n    return a - b;\n};\nconsole.log(subtract(10, 5));",
+    "o": [
+      "5",
+      "15",
+      "10",
+      "undefined"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function example() {\n    var y = 20;\n    if (true) {\n        var y = 30;\n    }\n    console.log(y);\n}\nexample();",
+    "o": [
+      "30",
+      "20",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following correctly describes function expressions in JavaScript?",
+    "o": [
+      "Function expressions are not hoisted and can only be called after they are defined.",
+      "Function expressions can be called before they are defined, due to hoisting.",
+      "Function expressions must always be anonymous.",
+      "Function expressions cannot return a value."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const square = (x) => {\n    return x * x;\n};\nconsole.log(square(4));",
+    "o": [
+      "16",
+      "8",
+      "4",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following statements about arrow functions is true?",
+    "o": [
+      "Arrow functions do not bind their own `this` but inherit it from the surrounding scope.",
+      "Arrow functions have their own `this` context.",
+      "Arrow functions cannot have parameters.",
+      "Arrow functions must always be anonymous."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function test() {\n    let a = 10;\n    if (true) {\n        let a = 20;\n    }\n    console.log(a);\n}\ntest();",
+    "o": [
+      "10",
+      "20",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted and can be called before their definition.",
+      "Function declarations are not hoisted.",
+      "Function declarations can only be assigned to a variable.",
+      "Function declarations can never take parameters."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const greet = name => 'Hello, ' + name;\nconsole.log(greet('Bob'));",
+    "o": [
+      "Hello, Bob",
+      "undefined",
+      "Hello",
+      "Bob"
+    ]
+  },
+  {
+    "q": "Which of the following will throw a ReferenceError due to scoping?",
+    "o": [
+      "console.log(x); let x = 5;",
+      "let x = 5; console.log(x);",
+      "var x = 5; console.log(x);",
+      "console.log(x); var x = 5;"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 10;\nfunction test() {\n    console.log(x);\n    x = 20;\n}\ntest();",
+    "o": [
+      "undefined",
+      "10",
+      "20",
+      "NaN"
+    ]
+  },
+  {
+    "q": "What is the output of the following code?\n",
+    "l": "javascript",
+    "c": "const add = (a, b) => a + b;\nconsole.log(add(2, 3));",
+    "o": [
+      "5",
+      "23",
+      "2",
+      "3"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function test() {\n    console.log(a);\n    var a = 5;\n}\ntest();",
+    "o": [
+      "undefined",
+      "5",
+      "ReferenceError",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function expressions in JavaScript?",
+    "o": [
+      "Function expressions are not hoisted and must be defined before they are called.",
+      "Function expressions can be invoked before being defined due to hoisting.",
+      "Function expressions always need to be named.",
+      "Function expressions can only be anonymous."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const add = (x, y) => {\n    return x + y;\n};\nconsole.log(add(2, 3));",
+    "o": [
+      "5",
+      "23",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true regarding arrow functions?",
+    "o": [
+      "Arrow functions do not have their own `this`, they inherit it from the surrounding scope.",
+      "Arrow functions automatically bind `this` to the function context.",
+      "Arrow functions cannot accept parameters.",
+      "Arrow functions are always anonymous."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function outer() {\n    let x = 10;\n    function inner() {\n        let x = 20;\n        console.log(x);\n    }\n    inner();\n}\nouter();",
+    "o": [
+      "20",
+      "10",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is a characteristic of function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted, meaning they can be invoked before their definition.",
+      "Function declarations are not hoisted and must be defined before use.",
+      "Function declarations must always be assigned to a variable.",
+      "Function declarations can only take one parameter."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const greet = name => `Hello, ${name}!`;\nconsole.log(greet('Alice'));",
+    "o": [
+      "Hello, Alice!",
+      "undefined",
+      "Hello",
+      "Alice!"
+    ]
+  },
+  {
+    "q": "Which of the following statements will result in a ReferenceError due to scoping?",
+    "o": [
+      "console.log(a); let a = 5;",
+      "let a = 5; console.log(a);",
+      "var a = 5; console.log(a);",
+      "console.log(a); var a = 5;"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 10;\nfunction test() {\n    console.log(x);\n    var x = 20;\n}\ntest();",
+    "o": [
+      "undefined",
+      "10",
+      "20",
+      "NaN"
+    ]
+  },
+  {
+    "q": "What is the output of the following code?\n",
+    "l": "javascript",
+    "c": "const multiply = (a, b) => a * b;\nconsole.log(multiply(3, 4));",
+    "o": [
+      "12",
+      "34",
+      "7",
+      "3"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function example() {\n    console.log(a);\n    var a = 5;\n}\nexample();",
+    "o": [
+      "undefined",
+      "5",
+      "NaN",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function expressions in JavaScript?",
+    "o": [
+      "Function expressions are not hoisted and must be called after their definition.",
+      "Function expressions are hoisted like function declarations.",
+      "Function expressions cannot have parameters.",
+      "Function expressions are always declared with the 'function' keyword."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const greet = () => {\n    console.log('Hello, World!');\n};\ngreet();",
+    "o": [
+      "Hello, World!",
+      "undefined",
+      "Hello",
+      "World!"
+    ]
+  },
+  {
+    "q": "Which of the following statements about arrow functions is correct?",
+    "o": [
+      "Arrow functions inherit `this` from the surrounding scope.",
+      "Arrow functions have their own `this` context.",
+      "Arrow functions can only return a value.",
+      "Arrow functions do not support default parameters."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function outer() {\n    let x = 10;\n    function inner() {\n        let x = 20;\n        console.log(x);\n    }\n    inner();\n}\nouter();",
+    "o": [
+      "20",
+      "10",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted, meaning they can be called before they are defined.",
+      "Function declarations are not hoisted and must be defined before use.",
+      "Function declarations can only be anonymous.",
+      "Function declarations are always executed immediately."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const square = x => x * x;\nconsole.log(square(4));",
+    "o": [
+      "16",
+      "4",
+      "8",
+      "undefined"
+    ]
+  },
+  {
+    "q": "What is the difference between function declarations and function expressions in JavaScript?",
+    "o": [
+      "Function declarations are hoisted, while function expressions are not.",
+      "Function declarations can be assigned to variables, while function expressions cannot.",
+      "Function declarations can only be anonymous, while function expressions can be named.",
+      "Function declarations are executed immediately, while function expressions are not."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 10;\nfunction test() {\n    console.log(x);\n    let x = 20;\n}\ntest();",
+    "o": [
+      "ReferenceError",
+      "10",
+      "20",
+      "undefined"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const multiply = (a, b) => a * b;\nconsole.log(multiply(3, 5));",
+    "o": [
+      "15",
+      "35",
+      "8",
+      "3"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function example() {\n    console.log(a);\n    var a = 5;\n    console.log(a);\n}\nexample();",
+    "o": [
+      "undefined, 5",
+      "5, 5",
+      "undefined, undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a characteristic of function expressions in JavaScript?",
+    "o": [
+      "Function expressions are not hoisted.",
+      "Function expressions are hoisted like function declarations.",
+      "Function expressions must always have a name.",
+      "Function expressions cannot return values."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const add = (x, y) => {\n    return x + y;\n};\nconsole.log(add(2, 3));",
+    "o": [
+      "5",
+      "23",
+      "2, 3",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is true about arrow functions?",
+    "o": [
+      "Arrow functions do not have their own `this`, they inherit it from the surrounding scope.",
+      "Arrow functions automatically bind `this` to the function.",
+      "Arrow functions cannot accept parameters.",
+      "Arrow functions are not allowed in callbacks."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function outer() {\n    let x = 10;\n    function inner() {\n        x = 20;\n        console.log(x);\n    }\n    inner();\n    console.log(x);\n}\nouter();",
+    "o": [
+      "20, 20",
+      "20, 10",
+      "10, 20",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following statements is correct about function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted and can be called before they are defined.",
+      "Function declarations are not hoisted.",
+      "Function declarations cannot be anonymous.",
+      "Function declarations must be assigned to variables."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const greet = name => `Hello, ${name}!`;\nconsole.log(greet('John'));",
+    "o": [
+      "Hello, John!",
+      "Hello, undefined!",
+      "John",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about JavaScript scopes?",
+    "o": [
+      "Variables declared with `let` and `const` have block scope.",
+      "Variables declared with `var` have block scope.",
+      "Variables declared with `let` have function scope.",
+      "Variables declared with `const` can be reassigned."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "var x = 5;\nfunction test() {\n    var x = 10;\n    console.log(x);\n}\ntest();",
+    "o": [
+      "10",
+      "5",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const multiply = (a, b) => a * b;\nconsole.log(multiply(4, 5));",
+    "o": [
+      "20",
+      "45",
+      "9",
+      "4"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function foo() {\n    return 10;\n}\nconsole.log(foo());",
+    "o": [
+      "10",
+      "undefined",
+      "ReferenceError",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about function expressions in JavaScript?",
+    "o": [
+      "Function expressions can be anonymous and assigned to variables.",
+      "Function expressions are hoisted like function declarations.",
+      "Function expressions must have a return statement.",
+      "Function expressions cannot be assigned to properties."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const subtract = (a, b) => a - b;\nconsole.log(subtract(10, 4));",
+    "o": [
+      "6",
+      "10",
+      "4",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following statements about arrow functions is true?",
+    "o": [
+      "Arrow functions do not have their own `this` keyword, they inherit it from the surrounding scope.",
+      "Arrow functions have their own `this` keyword.",
+      "Arrow functions cannot be used with `new` keyword.",
+      "Arrow functions are always anonymous."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 5;\nfunction test() {\n    var x = 10;\n    console.log(x);\n}\nconsole.log(x);\ntest();",
+    "o": [
+      "5, 10",
+      "10, 10",
+      "5, 5",
+      "10, 5"
+    ]
+  },
+  {
+    "q": "Which of the following is true about JavaScript scopes?",
+    "o": [
+      "Block-level scoping applies to variables declared with `let` and `const`.",
+      "Variables declared with `let` have function scope.",
+      "Variables declared with `var` have block scope.",
+      "Function scope only applies to variables declared with `const`."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "var a = 5;\nfunction outer() {\n    var a = 10;\n    function inner() {\n        var a = 15;\n        console.log(a);\n    }\n    inner();\n    console.log(a);\n}\nouter();",
+    "o": [
+      "15, 10",
+      "15, 15",
+      "10, 10",
+      "undefined, 10"
+    ]
+  },
+  {
+    "q": "Which of the following is true about function declarations in JavaScript?",
+    "o": [
+      "Function declarations are hoisted and can be called before they are defined.",
+      "Function declarations cannot be called before they are defined.",
+      "Function declarations are only hoisted within their block scope.",
+      "Function declarations must always have parameters."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const add = (x, y) => {\n    return x + y;\n};\nconsole.log(add(2, 3));",
+    "o": [
+      "5",
+      "23",
+      "2, 3",
+      "undefined"
+    ]
+  },
+  {
+    "q": "What is the difference between function declarations and function expressions in terms of hoisting?",
+    "o": [
+      "Function declarations are hoisted, while function expressions are not.",
+      "Function expressions are hoisted, while function declarations are not.",
+      "Both function declarations and expressions are hoisted equally.",
+      "Neither function declarations nor expressions are hoisted."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function greet() {\n    return 'Hello, World!';\n}\nconsole.log(greet());",
+    "o": [
+      "'Hello, World!'",
+      "undefined",
+      "'Hello!'",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following correctly defines a function expression in JavaScript?",
+    "o": [
+      "const greet = function() { return 'Hello'; };",
+      "function greet() { return 'Hello'; }",
+      "greet() { return 'Hello'; }",
+      "function greet = { return 'Hello'; }"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const multiply = (a, b) => a * b;\nconsole.log(multiply(4, 5));",
+    "o": [
+      "20",
+      "45",
+      "9",
+      "undefined"
+    ]
+  },
+  {
+    "q": "Which of the following is true about arrow functions?",
+    "o": [
+      "Arrow functions cannot be used as constructors.",
+      "Arrow functions have their own `this` value.",
+      "Arrow functions always require a return statement.",
+      "Arrow functions can be used as methods in objects."
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?\n",
+    "l": "javascript",
+    "c": "var x = 10;\nfunction example() {\n    console.log(x);\n    var x = 20;\n}\nexample();",
+    "o": [
+      "undefined",
+      "10",
+      "20",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "What is the scope of a variable declared with `let` inside a function?",
+    "o": [
+      "Block scope",
+      "Global scope",
+      "Function scope",
+      "Module scope"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function outer() {\n    var x = 5;\n    function inner() {\n        console.log(x);\n    }\n    inner();\n}\nouter();",
+    "o": [
+      "5",
+      "undefined",
+      "ReferenceError",
+      "NaN"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid arrow function syntax?",
+    "o": [
+      "(a, b) => a + b",
+      "a, b => a + b",
+      "function(a, b) => a + b",
+      "function(a, b): a + b"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 5;\nfunction test() {\n    if (true) {\n        let x = 10;\n        console.log(x);\n    }\n    console.log(x);\n}\ntest();",
+    "o": [
+      "10, 5",
+      "10, 10",
+      "5, 5",
+      "undefined, 5"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "function myFunction() {\n    return function() {\n        return 'Hello';\n    };\n}\nconsole.log(myFunction()());",
+    "o": [
+      "'Hello'",
+      "'undefined'",
+      "'Hello World'",
+      "'myFunction'"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?\n",
+    "l": "javascript",
+    "c": "let a = 5;\nfunction test() {\n    a = 10;\n    return a;\n}\nconsole.log(test());",
+    "o": [
+      "10",
+      "5",
+      "undefined",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid function declaration in JavaScript?",
+    "o": [
+      "function sum(a, b) { return a + b; }",
+      "sum(a, b) => a + b;",
+      "let sum = function(a, b) { return a + b; };",
+      "function sum(a, b): a + b;"
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "const double = (num) => num * 2;\nconsole.log(double(3));",
+    "o": [
+      "6",
+      "3",
+      "undefined",
+      "NaN"
+    ]
+  },
+  {
+    "q": "What is the scope of a variable declared with `var` inside a function?",
+    "o": [
+      "Function scope",
+      "Block scope",
+      "Global scope",
+      "Lexical scope"
+    ]
+  },
+  {
+    "q": "Which of the following is true about JavaScript arrow functions?",
+    "o": [
+      "They inherit the `this` value from their surrounding context.",
+      "They have their own `this` value.",
+      "They cannot return objects.",
+      "They always require parentheses around the parameters."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 10;\nfunction example() {\n    x = 20;\n    console.log(x);\n    var x = 30;\n}\nexample();",
+    "o": [
+      "undefined",
+      "20",
+      "30",
+      "ReferenceError"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct example of a function expression in JavaScript?",
+    "o": [
+      "const greet = function() { return 'Hello!'; };",
+      "function greet() { return 'Hello!'; }",
+      "greet() { return 'Hello!'; }",
+      "function greet = { return 'Hello!'; }"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?\n",
+    "l": "javascript",
+    "c": "const greet = (name) => { console.log(`Hello, ${name}!`); };\ngreet('Alice');",
+    "o": [
+      "'Hello, Alice!'",
+      "undefined",
+      "'Hello!'",
+      "SyntaxError"
+    ]
+  },
+  {
+    "q": "Which of the following statements about function scopes in JavaScript is true?",
+    "o": [
+      "Variables declared inside a function are local to that function.",
+      "Variables declared inside a function are globally accessible.",
+      "Variables declared inside a function are available in all other functions.",
+      "Variables declared inside a function are automatically hoisted."
+    ]
+  },
+  {
+    "q": "What will the following code output?\n",
+    "l": "javascript",
+    "c": "let x = 10;\nfunction test() {\n    console.log(x);\n    let x = 20;\n}\ntest();",
+    "o": [
+      "ReferenceError",
+      "10",
+      "20",
+      "undefined"
+    ]
+  }
+]

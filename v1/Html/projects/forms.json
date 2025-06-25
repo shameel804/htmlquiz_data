@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Basic HTML Form",
+    "ques": "How do you create a simple HTML form with input fields for name and email?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<form>\n  <label for=\"name\">Name:</label>\n  <input type=\"text\" id=\"name\" name=\"name\" required>\n  <br>\n  <label for=\"email\">Email:</label>\n  <input type=\"email\" id=\"email\" name=\"email\" required>\n  <br>\n  <input type=\"submit\" value=\"Submit\">\n</form>"
+    },
+    "explanation": "This code creates a simple HTML form:\n\n- The ```<form>``` tag defines the form.\n- The ```<label>``` elements provide text labels for input fields.\n- The ```<input type=\"text\">``` is used for a name field.\n- The ```<input type=\"email\">``` is used for an email field.\n- The ```required``` attribute ensures the fields must be filled before submission.\n- The ```<input type=\"submit\">``` creates a submit button."
+  },
+  {
+    "title": "Form Button Types",
+    "ques": "What are the different button types in an HTML form?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<button type=\"submit\">Submit</button>\n<button type=\"reset\">Reset</button>\n<button type=\"button\" onclick=\"alert('Button Clicked!')\">Click Me</button>"
+    },
+    "explanation": "This code demonstrates different button types:\n\n- ```<button type=\"submit\">``` submits the form data.\n- ```<button type=\"reset\">``` resets all form fields.\n- ```<button type=\"button\">``` is a general button with custom JavaScript functionality (e.g., showing an alert)."
+  },
+  {
+    "title": "Form Validation with Required Field",
+    "ques": "How do you make an input field required in an HTML form?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<form>\n  <label for=\"username\">Username:</label>\n  <input type=\"text\" id=\"username\" name=\"username\" required>\n  <br>\n  <input type=\"submit\" value=\"Submit\">\n</form>"
+    },
+    "explanation": "This form ensures that the username field is required:\n\n- The ```<input type=\"text\">``` field takes user input.\n- The ```required``` attribute forces the user to enter a value before submitting the form.\n- The ```<input type=\"submit\">``` submits the form."
+  },
+  {
+    "title": "Email Input Validation",
+    "ques": "How do you validate an email input field in HTML?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<form>\n  <label for=\"email\">Email:</label>\n  <input type=\"email\" id=\"email\" name=\"email\" required>\n  <br>\n  <input type=\"submit\" value=\"Submit\">\n</form>"
+    },
+    "explanation": "This form ensures proper email validation:\n\n- The ```<input type=\"email\">``` restricts input to valid email formats.\n- The ```required``` attribute ensures the field is not left empty.\n- If the user enters an invalid email format, the browser shows an error message."
+  },
+  {
+    "title": "Password Input with Minimum Length",
+    "ques": "How do you enforce a minimum length for a password input field?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<form>\n  <label for=\"password\">Password:</label>\n  <input type=\"password\" id=\"password\" name=\"password\" minlength=\"6\" required>\n  <br>\n  <input type=\"submit\" value=\"Submit\">\n</form>"
+    },
+    "explanation": "This form enforces a minimum password length:\n\n- The ```<input type=\"password\">``` hides the entered text.\n- The ```minlength=\"6\"``` ensures at least 6 characters are entered.\n- The ```required``` attribute prevents form submission without a password."
+  },
+  {
+    "title": "Number Input with Range",
+    "ques": "How do you restrict a number input field to a specific range?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<form>\n  <label for=\"age\">Age (10-100):</label>\n  <input type=\"number\" id=\"age\" name=\"age\" min=\"10\" max=\"100\" required>\n  <br>\n  <input type=\"submit\" value=\"Submit\">\n</form>"
+    },
+    "explanation": "This form restricts number input within a range:\n\n- The ```<input type=\"number\">``` allows only numeric input.\n- The ```min=\"10\"``` and ```max=\"100\"``` set valid age limits.\n- The ```required``` attribute ensures a value is entered."
+  }
+]

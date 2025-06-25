@@ -1,0 +1,152 @@
+[
+  {
+    "title": "Selecting an element by ID",
+    "ques": "How do you select an HTML element with the ID 'myElement' using JavaScript?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const element = document.getElementById('myElement');\nconsole.log(element);"
+    },
+    "explanation": "***document.getElementById()*** is a built-in JavaScript method used to select an element by its ***ID***.\n\n- ***'myElement'*** is the ***ID*** of the element we want to select.\n- ***document.getElementById('myElement')*** returns a reference to that element.\n- The ***console.log(element)*** statement logs the selected element to the console."
+  },
+  {
+    "title": "Selecting elements by class name",
+    "ques": "How do you select all elements with the class name 'myClass'?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const elements = document.getElementsByClassName('myClass');\nconsole.log(elements);"
+    },
+    "explanation": "***document.getElementsByClassName()*** returns a collection of elements that share the specified class name.\n\n- ***'myClass'*** is the class name of the elements we want to select.\n- The result is an ***HTMLCollection***, which is similar to an array but does not have all array methods.\n- We use ***console.log(elements)*** to print the selected elements."
+  },
+  {
+    "title": "Selecting elements using querySelector",
+    "ques": "How do you select the first ```<p>``` element inside a ```<div>``` with the class 'container'?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const para = document.querySelector('.container p');\nconsole.log(para);"
+    },
+    "explanation": "***document.querySelector()*** selects the first element that matches the given CSS selector.\n\n- ***'.container p'*** is a CSS selector that selects the first ```<p>``` inside an element with class ***'container'***.\n- The ***console.log(para)*** prints the selected paragraph element."
+  },
+  {
+    "title": "Adding a click event listener",
+    "ques": "How do you add a click event listener to a button with the ID 'myButton'?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const button = document.getElementById('myButton');\nbutton.addEventListener('click', function() {\n    alert('Button clicked!');\n});"
+    },
+    "explanation": "***addEventListener()*** is used to attach an event handler to an element.\n\n- ***document.getElementById('myButton')*** selects the button.\n- ***addEventListener('click', function() {...})*** adds a click event that triggers the function.\n- When clicked, an ***alert()*** displays 'Button clicked!'."
+  },
+  {
+    "title": "Changing inner text of an element",
+    "ques": "How do you change the text inside a ```<div>``` with the ID 'content'?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const div = document.getElementById('content');\ndiv.textContent = 'New text content!';"
+    },
+    "explanation": "***textContent*** is a property used to change or get the text inside an element.\n\n- ***document.getElementById('content')*** selects the ```<div>``` with ID ***'content'***.\n- ***div.textContent = 'New text content!'*** updates the text inside the ```<div>```."
+  },
+  {
+    "title": "Modifying CSS styles",
+    "ques": "How do you change the background color of a ```<div>``` with the class 'box'?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const box = document.querySelector('.box');\nbox.style.backgroundColor = 'blue';"
+    },
+    "explanation": "***style.backgroundColor*** is used to change an element's background color.\n\n- ***document.querySelector('.box')*** selects the first element with class ***'box'***.\n- ***box.style.backgroundColor = 'blue'*** changes its background color to ***blue***."
+  },
+  {
+    "title": "Toggling a CSS class",
+    "ques": "How do you toggle a class 'active' on an element with ID 'menu' when a button is clicked?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const menu = document.getElementById('menu');\nconst button = document.getElementById('toggleButton');\n\nbutton.addEventListener('click', function() {\n    menu.classList.toggle('active');\n});"
+    },
+    "explanation": "***classList.toggle()*** adds the class if it's missing or removes it if present.\n\n- ***document.getElementById('menu')*** selects the menu element.\n- ***document.getElementById('toggleButton')*** selects the button.\n- ***addEventListener('click', function() {...})*** listens for clicks.\n- ***menu.classList.toggle('active')*** toggles the ***'active'*** class on the menu."
+  },
+  {
+    "title": "Selecting all list items inside a list",
+    "ques": "How do you select all ```<li>``` elements inside a ```<ul>``` with the class 'items'?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const listItems = document.querySelectorAll('.items li');\nconsole.log(listItems);"
+    },
+    "explanation": "***document.querySelectorAll()*** selects all elements matching a CSS selector and returns a ***NodeList***.\n\n- ***'.items li'*** selects all ```<li>``` elements inside a ```<ul>``` with class ***'items'***.\n- ***querySelectorAll()*** returns a ***NodeList***, which can be looped using ```forEach```.\n- We use ***console.log(listItems)*** to print the selected elements."
+  },
+  {
+    "title": "Selecting the last paragraph inside a div",
+    "ques": "How do you select the last ```<p>``` inside a ```<div>``` with class 'text-container'?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const paragraphs = document.querySelectorAll('.text-container p');\nconst lastParagraph = paragraphs[paragraphs.length - 1];\nconsole.log(lastParagraph);"
+    },
+    "explanation": "***querySelectorAll()*** gets all ```<p>``` elements inside ```.text-container```, and we access the last one using ***array indexing***.\n\n- ***document.querySelectorAll('.text-container p')*** selects all ```<p>``` elements.\n- ***paragraphs[paragraphs.length - 1]*** gets the last ```<p>```.\n- ***console.log(lastParagraph)*** prints the last paragraph."
+  },
+  {
+    "title": "Adding an event listener for double-click",
+    "ques": "How do you change the text of a button when it is double-clicked?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const button = document.getElementById('myButton');\nbutton.addEventListener('dblclick', function() {\n    button.textContent = 'Double-clicked!';\n});"
+    },
+    "explanation": "***dblclick*** event fires when an element is double-clicked.\n\n- ***document.getElementById('myButton')*** selects the button.\n- ***addEventListener('dblclick', function() {...})*** listens for a double-click event.\n- ***button.textContent = 'Double-clicked!'*** changes the button text when double-clicked."
+  },
+  {
+    "title": "Changing an image source dynamically",
+    "ques": "How do you change an image source to 'new-image.jpg' when a button is clicked?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const img = document.getElementById('myImage');\nconst button = document.getElementById('changeImage');\n\nbutton.addEventListener('click', function() {\n    img.src = 'new-image.jpg';\n});"
+    },
+    "explanation": "***img.src*** updates the ```src``` attribute of an image.\n\n- ***document.getElementById('myImage')*** selects the image.\n- ***document.getElementById('changeImage')*** selects the button.\n- ***button.addEventListener('click', function() {...})*** listens for a click event.\n- ***img.src = 'new-image.jpg'*** changes the image when the button is clicked."
+  },
+  {
+    "title": "Creating a new element dynamically",
+    "ques": "How do you add a new ```<li>``` with text 'New Item' to a ```<ul>``` with ID 'myList' when a button is clicked?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const list = document.getElementById('myList');\nconst button = document.getElementById('addItem');\n\nbutton.addEventListener('click', function() {\n    const newItem = document.createElement('li');\n    newItem.textContent = 'New Item';\n    list.appendChild(newItem);\n});"
+    },
+    "explanation": "***document.createElement()*** creates a new element, and ***appendChild()*** adds it to the list.\n\n- ***document.getElementById('myList')*** selects the ```<ul>```.\n- ***document.createElement('li')*** creates a new ```<li>```.\n- ***newItem.textContent = 'New Item'*** sets its text.\n- ***list.appendChild(newItem)*** adds the new ```<li>``` to the list."
+  },
+  {
+    "title": "Toggling visibility of an element",
+    "ques": "How do you hide or show a ```<div>``` with ID 'box' when a button is clicked?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const box = document.getElementById('box');\nconst button = document.getElementById('toggleBox');\n\nbutton.addEventListener('click', function() {\n    if (box.style.display === 'none') {\n        box.style.display = 'block';\n    } else {\n        box.style.display = 'none';\n    }\n});"
+    },
+    "explanation": "***style.display*** controls the visibility of an element.\n\n- ***document.getElementById('box')*** selects the ```<div>```.\n- ***document.getElementById('toggleBox')*** selects the button.\n- ***if (box.style.display === 'none')*** checks if it's hidden.\n- ***box.style.display = 'block'*** shows the box.\n- ***box.style.display = 'none'*** hides the box when clicked again."
+  },
+  {
+    "title": "Changing multiple CSS properties",
+    "ques": "How do you change the background color and text color of a ```<div>``` with ID 'card' when a button is clicked?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const card = document.getElementById('card');\nconst button = document.getElementById('styleButton');\n\nbutton.addEventListener('click', function() {\n    card.style.backgroundColor = 'purple';\n    card.style.color = 'white';\n});"
+    },
+    "explanation": "***style.property*** allows modifying CSS styles dynamically.\n\n- ***document.getElementById('card')*** selects the ```<div>```.\n- ***document.getElementById('styleButton')*** selects the button.\n- ***card.style.backgroundColor = 'purple'*** changes the background color.\n- ***card.style.color = 'white'*** changes the text color when the button is clicked."
+  },
+  {
+    "title": "Removing an element from the DOM",
+    "ques": "How do you remove a ```<p>``` element with ID 'removeMe' when a button is clicked?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const para = document.getElementById('removeMe');\nconst button = document.getElementById('removeButton');\n\nbutton.addEventListener('click', function() {\n    para.remove();\n});"
+    },
+    "explanation": "***remove()*** deletes an element from the DOM.\n\n- ***document.getElementById('removeMe')*** selects the ```<p>```.\n- ***document.getElementById('removeButton')*** selects the button.\n- ***para.remove()*** removes the paragraph when the button is clicked."
+  }
+]

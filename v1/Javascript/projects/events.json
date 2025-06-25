@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Event Listeners",
+    "ques": "How do you add an event listener to a button that logs a message when clicked?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "document.getElementById(\"myButton\").addEventListener(\"click\", function() {\n  console.log(\"Button clicked!\");\n});"
+    },
+    "explanation": "We use the ***addEventListener*** method to attach an event to an element. \n\n1. ***document.getElementById(\"myButton\")*** - Selects the button element by its ID. \n2. ***addEventListener(\"click\", function() {...})*** - Adds a click event listener to the button. \n3. The function inside logs ***\"Button clicked!\"*** to the console whenever the button is clicked."
+  },
+  {
+    "title": "Event Bubbling",
+    "ques": "What is event bubbling, and how can we stop it from propagating?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "document.getElementById(\"child\").addEventListener(\"click\", function(event) {\n  console.log(\"Child clicked\");\n  event.stopPropagation();\n});\n\ndocument.getElementById(\"parent\").addEventListener(\"click\", function() {\n  console.log(\"Parent clicked\");\n});"
+    },
+    "explanation": "Event bubbling means when an event happens on an element, it propagates up to its ancestors.\n\n1. The ***child*** element has a ***click*** event listener that logs ***\"Child clicked\"***.\n2. ***event.stopPropagation()*** - Stops the event from reaching the parent.\n3. If this method is not used, clicking the child would trigger both the ***child*** and ***parent*** event listeners."
+  },
+  {
+    "title": "Event Delegation",
+    "ques": "How do you use event delegation to handle multiple dynamically added elements?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "document.getElementById(\"list\").addEventListener(\"click\", function(event) {\n  if (event.target.tagName === \"LI\") {\n    console.log(\"Item clicked: \" + event.target.textContent);\n  }\n});"
+    },
+    "explanation": "Event delegation is useful when you want to handle events for dynamically added elements.\n\n1. The ***click*** event is added to the ***list*** (parent element), not individual ***li*** elements.\n2. Inside the handler, ***event.target.tagName === \"LI\"*** checks if the clicked element is an ***LI***.\n3. If true, it logs ***\"Item clicked: \"*** followed by the clicked item's text.\n4. This approach allows handling clicks even for ***newly added list items***."
+  },
+  {
+    "title": "Default Actions",
+    "ques": "How do you prevent the default action of a form submission?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "document.getElementById(\"myForm\").addEventListener(\"submit\", function(event) {\n  event.preventDefault();\n  console.log(\"Form submission prevented\");\n});"
+    },
+    "explanation": "By default, submitting a form refreshes the page. We can prevent this behavior.\n\n1. The ***submit*** event is attached to the form.\n2. Inside the event handler, ***event.preventDefault()*** prevents the form from submitting.\n3. A message ***\"Form submission prevented\"*** is logged to confirm prevention."
+  },
+  {
+    "title": "Multiple Event Listeners",
+    "ques": "How do you add multiple event listeners to a button that perform different actions when clicked?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const button = document.getElementById(\"multiActionButton\");\n\nbutton.addEventListener(\"click\", function() {\n  console.log(\"First action: Button clicked!\");\n});\n\nbutton.addEventListener(\"click\", function() {\n  alert(\"Second action: Button clicked!\");\n});"
+    },
+    "explanation": "Multiple event listeners can be added to the same element.\n\n1. ***getElementById(\"multiActionButton\")*** selects the button element.\n2. The first ***click*** event logs ***\"First action: Button clicked!\"*** to the console.\n3. The second ***click*** event displays an alert saying ***\"Second action: Button clicked!\"***.\n4. Both event listeners execute independently when the button is clicked."
+  },
+  {
+    "title": "Stopping Event Bubbling at a Certain Level",
+    "ques": "How do you stop event bubbling when it reaches a specific element?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "document.getElementById(\"innerBox\").addEventListener(\"click\", function(event) {\n  console.log(\"Inner box clicked\");\n  event.stopPropagation();\n});\n\ndocument.getElementById(\"middleBox\").addEventListener(\"click\", function() {\n  console.log(\"Middle box clicked\");\n});\n\ndocument.getElementById(\"outerBox\").addEventListener(\"click\", function() {\n  console.log(\"Outer box clicked\");\n});"
+    },
+    "explanation": "When clicking on an inner element, the event normally propagates to outer elements.\n\n1. ***innerBox*** logs ***\"Inner box clicked\"*** and stops propagation using ***event.stopPropagation()***.\n2. If ***stopPropagation()*** is not used, clicking ***innerBox*** would trigger ***middleBox*** and ***outerBox*** events.\n3. With propagation stopped, clicking ***innerBox*** does not trigger the parent listeners."
+  },
+  {
+    "title": "Event Delegation with Dynamic Elements",
+    "ques": "How do you use event delegation to handle dynamically created elements?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "document.getElementById(\"taskList\").addEventListener(\"click\", function(event) {\n  if (event.target.classList.contains(\"task\")) {\n    console.log(\"Task clicked: \" + event.target.textContent);\n  }\n});\n\nconst newTask = document.createElement(\"li\");\nnewTask.classList.add(\"task\");\nnewTask.textContent = \"New Task\";\ndocument.getElementById(\"taskList\").appendChild(newTask);"
+    },
+    "explanation": "Event delegation allows handling events on dynamically added elements.\n\n1. A ***click*** event is attached to the ***taskList*** parent instead of individual ***li*** items.\n2. Inside the handler, ***event.target.classList.contains(\"task\")*** checks if the clicked element has the class ***task***.\n3. If true, it logs ***\"Task clicked: \" + event.target.textContent***.\n4. A new ***li*** element with class ***task*** is dynamically created and appended to ***taskList***.\n5. The newly added task is automatically handled by the event delegation."
+  },
+  {
+    "title": "Preventing Default Actions in Links",
+    "ques": "How do you prevent a hyperlink from navigating to a new page when clicked?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "document.getElementById(\"myLink\").addEventListener(\"click\", function(event) {\n  event.preventDefault();\n  console.log(\"Link click prevented\");\n});"
+    },
+    "explanation": "By default, clicking a link navigates to its ***href*** target.\n\n1. The ***click*** event is added to the ***myLink*** element.\n2. ***event.preventDefault()*** stops the browser from following the link.\n3. Instead, ***\"Link click prevented\"*** is logged to the console.\n4. This is useful for custom link handling or AJAX-based navigation."
+  }
+]

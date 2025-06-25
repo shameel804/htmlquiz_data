@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Fetching Data using Fetch API",
+    "ques": "How can you fetch data from 'https://jsonplaceholder.typicode.com/posts/1' and log the response to the console?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "fetch('https://jsonplaceholder.typicode.com/posts/1')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error('Error:', error));"
+    },
+    "explanation": "***fetch*** is used to make an HTTP request.\n\n1. ***fetch('https://jsonplaceholder.typicode.com/posts/1')*** - Makes a GET request to fetch data from the API.\n2. ***.then(response => response.json())*** - Converts the response to JSON format.\n3. ***.then(data => console.log(data))*** - Logs the fetched data to the console.\n4. ***.catch(error => console.error('Error:', error))*** - Catches and logs any errors that occur during the request."
+  },
+  {
+    "title": "Storing Data in Local Storage",
+    "ques": "How can you store a user's name in local storage and retrieve it?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// Store data in local storage\nlocalStorage.setItem('username', 'JohnDoe');\n\n// Retrieve data from local storage\nlet user = localStorage.getItem('username');\nconsole.log(user);"
+    },
+    "explanation": "1. ***localStorage.setItem('username', 'JohnDoe')*** - Stores the key-value pair ***('username', 'JohnDoe')*** in local storage.\n2. ***localStorage.getItem('username')*** - Retrieves the value associated with the key ***'username'***.\n3. ***console.log(user)*** - Outputs ***'JohnDoe'*** to the console."
+  },
+  {
+    "title": "Removing Data from Local Storage",
+    "ques": "How can you remove an item from local storage?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// Remove item from local storage\nlocalStorage.removeItem('username');"
+    },
+    "explanation": "1. ***localStorage.removeItem('username')*** - Removes the ***'username'*** key and its associated value from local storage."
+  },
+  {
+    "title": "Getting User's Location",
+    "ques": "How can you get the user's current latitude and longitude using the Geolocation API?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "navigator.geolocation.getCurrentPosition(\n  position => {\n    console.log(`Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`);\n  },\n  error => {\n    console.error('Error getting location:', error);\n  }\n);"
+    },
+    "explanation": "1. ***navigator.geolocation.getCurrentPosition(successCallback, errorCallback)*** - Asks for the user's location.\n2. ***position.coords.latitude*** - Retrieves the latitude of the user's location.\n3. ***position.coords.longitude*** - Retrieves the longitude of the user's location.\n4. ***errorCallback*** - Handles errors if location access is denied."
+  },
+  {
+    "title": "Watching User's Location",
+    "ques": "How can you continuously watch the user's location and update it in real-time?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const watchId = navigator.geolocation.watchPosition(\n  position => {\n    console.log(`Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`);\n  },\n  error => {\n    console.error('Error watching location:', error);\n  }\n);\n\n// To stop watching location\n// navigator.geolocation.clearWatch(watchId);"
+    },
+    "explanation": "1. ***navigator.geolocation.watchPosition(successCallback, errorCallback)*** - Continuously tracks the user's location.\n2. ***console.log(`Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`)*** - Logs updated latitude and longitude.\n3. ***navigator.geolocation.clearWatch(watchId)*** - Stops tracking the location when needed."
+  },
+  {
+    "title": "Fetching Random Dog Images",
+    "ques": "Write a function to fetch a random dog image from 'https://dog.ceo/api/breeds/image/random' and display the image URL in the console.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function getRandomDogImage() {\n  fetch('https://dog.ceo/api/breeds/image/random')\n    .then(response => response.json())\n    .then(data => console.log('Dog Image URL:', data.message))\n    .catch(error => console.error('Error:', error));\n}\n\ngetRandomDogImage();"
+    },
+    "explanation": "1. ***fetch('https://dog.ceo/api/breeds/image/random')*** - Sends a GET request to fetch a random dog image.\n2. ***response.json()*** - Converts the response to JSON format.\n3. ***console.log('Dog Image URL:', data.message)*** - Displays the image URL.\n4. ***catch(error => console.error('Error:', error))*** - Handles errors if the request fails."
+  },
+  {
+    "title": "Saving Theme Preference in Local Storage",
+    "ques": "How can you store a user's theme preference ('dark' or 'light') in local storage and apply it when they revisit the page?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// Save theme preference\nfunction saveTheme(theme) {\n  localStorage.setItem('theme', theme);\n}\n\n// Apply theme on page load\nfunction applyTheme() {\n  let theme = localStorage.getItem('theme') || 'light';\n  document.body.className = theme;\n}\n\n// Example usage\nsaveTheme('dark');\napplyTheme();"
+    },
+    "explanation": "1. ***localStorage.setItem('theme', theme)*** - Stores the selected theme in local storage.\n2. ***localStorage.getItem('theme') || 'light'*** - Retrieves the stored theme or defaults to 'light'.\n3. ***document.body.className = theme*** - Applies the theme to the webpage."
+  },
+  {
+    "title": "Counting Page Visits Using Local Storage",
+    "ques": "How can you count how many times a user has visited a webpage using local storage?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// Get current visit count\nlet visitCount = localStorage.getItem('visits') || 0;\n\n// Increase count by 1\nvisitCount++;\nlocalStorage.setItem('visits', visitCount);\n\nconsole.log(`You have visited this page ${visitCount} times.`);"
+    },
+    "explanation": "1. ***localStorage.getItem('visits') || 0*** - Retrieves the visit count or defaults to 0.\n2. ***visitCount++*** - Increments the visit count.\n3. ***localStorage.setItem('visits', visitCount)*** - Updates the count in local storage.\n4. ***console.log(`You have visited this page ${visitCount} times.`)*** - Displays the visit count."
+  },
+  {
+    "title": "Checking if Geolocation is Supported",
+    "ques": "How can you check if the browser supports the Geolocation API before requesting the user's location?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "if ('geolocation' in navigator) {\n  console.log('Geolocation is supported!');\n} else {\n  console.log('Geolocation is not supported in this browser.');\n}"
+    },
+    "explanation": "1. ***'geolocation' in navigator*** - Checks if the browser supports the Geolocation API.\n2. ***console.log('Geolocation is supported!')*** - Confirms geolocation availability.\n3. ***console.log('Geolocation is not supported in this browser.')*** - Alerts the user if geolocation is unavailable."
+  },
+  {
+    "title": "Storing and Retrieving User Preferences",
+    "ques": "How can you store a user's name and preferred language in local storage and retrieve it when they visit the page?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// Store user preferences\nlocalStorage.setItem('user', JSON.stringify({ name: 'Alice', language: 'English' }));\n\n// Retrieve and parse data\nlet user = JSON.parse(localStorage.getItem('user'));\nconsole.log(`Hello, ${user.name}! Your preferred language is ${user.language}.`);"
+    },
+    "explanation": "1. ***JSON.stringify({ name: 'Alice', language: 'English' })*** - Converts an object into a string before storing it.\n2. ***localStorage.setItem('user', stringifiedObject)*** - Stores the user preference data.\n3. ***JSON.parse(localStorage.getItem('user'))*** - Retrieves and converts the string back into an object.\n4. ***console.log(`Hello, ${user.name}! Your preferred language is ${user.language}.`)*** - Displays the stored user information."
+  },
+  {
+    "title": "Fetching and Displaying Weather Data",
+    "ques": "How can you fetch weather data for London from the OpenWeatherMap API and log the temperature?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const apiKey = 'your_api_key';\nfetch(`https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`)\n  .then(response => response.json())\n  .then(data => console.log(`Temperature in London: ${data.main.temp}°C`))\n  .catch(error => console.error('Error:', error));"
+    },
+    "explanation": "1. ***fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=your_api_key&units=metric')*** - Requests weather data for London.\n2. ***response.json()*** - Converts the response to JSON.\n3. ***data.main.temp*** - Extracts the temperature.\n4. ***console.log(`Temperature in London: ${data.main.temp}°C`)*** - Displays the temperature in Celsius."
+  },
+  {
+    "title": "Displaying User Location on a Map",
+    "ques": "How can you use the Geolocation API to get the user's location and display it on Google Maps?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "navigator.geolocation.getCurrentPosition(position => {\n  let lat = position.coords.latitude;\n  let lon = position.coords.longitude;\n  let mapUrl = `https://www.google.com/maps?q=${lat},${lon}`;\n  console.log(`Your location: ${mapUrl}`);\n}, error => console.error('Error getting location:', error));"
+    },
+    "explanation": "1. ***navigator.geolocation.getCurrentPosition(successCallback, errorCallback)*** - Requests the user's location.\n2. ***position.coords.latitude & position.coords.longitude*** - Retrieves latitude and longitude.\n3. ***let mapUrl = `https://www.google.com/maps?q=${lat},${lon}`*** - Creates a Google Maps URL.\n4. ***console.log(`Your location: ${mapUrl}`)*** - Displays the map link in the console."
+  }
+]

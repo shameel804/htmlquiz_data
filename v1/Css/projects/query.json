@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Basic Media Query",
+    "ques": "How do you use a media query to apply different styles for screens smaller than 600px?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "@media (max-width: 600px) {\n  body {\n    background-color: lightblue;\n  }\n}"
+    },
+    "explanation": "The ***@media*** rule is used to apply styles based on screen width.\n\n- ***@media (max-width: 600px)*** → This means the styles inside will apply only when the screen width is ***600px or less***.\n- Inside the media query, ***body { background-color: lightblue; }*** changes the background color when the condition is met."
+  },
+  {
+    "title": "Using Min-Width for Responsive Design",
+    "ques": "How can you apply styles for screens wider than 768px using media queries?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "@media (min-width: 768px) {\n  body {\n    font-size: 18px;\n  }\n}"
+    },
+    "explanation": "Here, ***min-width: 768px*** ensures that the styles inside apply when the screen is ***768px or wider***.\n\n- The ***body { font-size: 18px; }*** rule increases the font size only when the screen width is ***768px or more***."
+  },
+  {
+    "title": "Multiple Breakpoints",
+    "ques": "How do you apply different font sizes for mobile, tablet, and desktop using media queries?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "body {\n  font-size: 14px;\n}\n\n@media (min-width: 600px) {\n  body {\n    font-size: 16px;\n  }\n}\n\n@media (min-width: 1024px) {\n  body {\n    font-size: 18px;\n  }\n}"
+    },
+    "explanation": "This uses ***multiple breakpoints*** to adjust the font size:\n\n- ***Default:*** ```font-size: 14px;``` applies to all screens by default.\n- ***@media (min-width: 600px)*** → When screen width is ***600px or more***, the font size increases to ***16px***.\n- ***@media (min-width: 1024px)*** → When screen width is ***1024px or more***, the font size increases to ***18px***."
+  },
+  {
+    "title": "Mobile-First Approach",
+    "ques": "What is a mobile-first approach in media queries and how do you implement it?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "body {\n  font-size: 14px;\n}\n\n@media (min-width: 768px) {\n  body {\n    font-size: 16px;\n  }\n}\n\n@media (min-width: 1024px) {\n  body {\n    font-size: 18px;\n  }\n}"
+    },
+    "explanation": "A ***mobile-first approach*** means writing styles for ***small screens first*** and adding media queries for larger screens.\n\n- The ***default*** ```font-size: 14px;``` applies to small screens.\n- ***@media (min-width: 768px)*** → For tablets and larger screens, the font increases to ***16px***.\n- ***@media (min-width: 1024px)*** → For desktops, the font increases to ***18px***.\n\nThis approach improves performance since smaller devices load the basic styles without needing media queries."
+  },
+  {
+    "title": "Using Orientation in Media Queries",
+    "ques": "How can you apply different styles based on screen orientation (portrait or landscape)?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "@media (orientation: portrait) {\n  body {\n    background-color: lightblue;\n  }\n}\n\n@media (orientation: landscape) {\n  body {\n    background-color: lightgreen;\n  }\n}"
+    },
+    "explanation": "The ***orientation*** media feature allows styling based on device rotation:\n\n- ***@media (orientation: portrait)*** → Applies styles when the device is in ***portrait mode*** (taller than wide), setting the background to ***light blue***.\n- ***@media (orientation: landscape)*** → Applies styles when the device is in ***landscape mode*** (wider than tall), setting the background to ***light green***."
+  },
+  {
+    "title": "Combining Multiple Conditions",
+    "ques": "How do you write a media query that applies styles only when the screen width is between 600px and 1024px?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "@media (min-width: 600px) and (max-width: 1024px) {\n  body {\n    background-color: yellow;\n  }\n}"
+    },
+    "explanation": "This media query applies styles ***only for screens between 600px and 1024px***.\n\n- ***@media (min-width: 600px) and (max-width: 1024px)*** → Ensures styles apply ***only within this range***.\n- Inside, ```background-color: yellow;``` sets the background to yellow ***only for tablets***."
+  },
+  {
+    "title": "Hiding Elements on Small Screens",
+    "ques": "How can you hide a sidebar when the screen width is less than 768px?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "@media (max-width: 768px) {\n  .sidebar {\n    display: none;\n  }\n}"
+    },
+    "explanation": "- The ***@media (max-width: 768px)*** ensures that styles apply when the screen width is ***768px or smaller***.\n- Inside, ```.sidebar { display: none; }``` ***hides the sidebar*** on small screens by setting ```display``` to ```none```."
+  },
+  {
+    "title": "Responsive Image Resizing",
+    "ques": "How do you ensure an image resizes properly across different screen sizes?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "img {\n  max-width: 100%;\n  height: auto;\n}"
+    },
+    "explanation": "- ```max-width: 100%;``` ensures that the image ***never exceeds*** the width of its container.\n- ```height: auto;``` maintains the ***aspect ratio*** while resizing the image."
+  },
+  {
+    "title": "Changing Layout for Small Screens",
+    "ques": "How do you convert a horizontal navbar into a vertical one on small screens?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".navbar {\n  display: flex;\n  flex-direction: row;\n}\n\n@media (max-width: 600px) {\n  .navbar {\n    flex-direction: column;\n  }\n}"
+    },
+    "explanation": "- The ```.navbar { display: flex; flex-direction: row; }``` ensures the navigation bar is ***horizontal*** by default.\n- The ***@media (max-width: 600px)*** rule changes ```flex-direction``` to ***column*** when the screen width is ***600px or smaller***, making the navbar ***vertical*** on mobile screens."
+  },
+  {
+    "title": "Different Fonts for Different Screens",
+    "ques": "How do you apply different fonts for mobile and desktop screens?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "body {\n  font-family: Arial, sans-serif;\n}\n\n@media (min-width: 1024px) {\n  body {\n    font-family: 'Times New Roman', serif;\n  }\n}"
+    },
+    "explanation": "- The ```body { font-family: Arial, sans-serif; }``` sets the default ***font for mobile screens***.\n- The ***@media (min-width: 1024px)*** applies a ***different font*** (```Times New Roman, serif```) for ***desktop screens (1024px and larger)***."
+  },
+  {
+    "title": "Making Buttons Larger on Mobile",
+    "ques": "How do you increase button size for touch-friendly interactions on mobile screens?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "button {\n  padding: 8px 16px;\n  font-size: 14px;\n}\n\n@media (max-width: 600px) {\n  button {\n    padding: 12px 24px;\n    font-size: 16px;\n  }\n}"
+    },
+    "explanation": "- The default ```button``` styles use ***padding: 8px 16px*** and ***font-size: 14px***.\n- The ***@media (max-width: 600px)*** increases ```padding``` and ```font-size``` to ***make buttons larger*** on smaller screens for ***better touch accessibility***."
+  },
+  {
+    "title": "Adjusting Card Layout for Small Screens",
+    "ques": "How do you switch a multi-column card layout to a single-column layout on mobile?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".cards {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 20px;\n}\n\n@media (max-width: 768px) {\n  .cards {\n    grid-template-columns: 1fr;\n  }\n}"
+    },
+    "explanation": "- The ```.cards``` container initially has a ***3-column grid layout*** (```grid-template-columns: repeat(3, 1fr);```).\n- The ***@media (max-width: 768px)*** changes the grid to ***a single column*** (```grid-template-columns: 1fr;```) for better readability on small screens."
+  },
+  {
+    "title": "Making a Header Sticky on Large Screens Only",
+    "ques": "How do you make a header sticky only for screens wider than 1024px?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "header {\n  position: static;\n}\n\n@media (min-width: 1024px) {\n  header {\n    position: sticky;\n    top: 0;\n    background-color: white;\n  }\n}"
+    },
+    "explanation": "- The default ```header { position: static; }``` keeps the header in its normal flow.\n- The ***@media (min-width: 1024px)*** makes the header ***sticky*** (```position: sticky; top: 0;```), keeping it ***fixed at the top*** on ***larger screens (1024px and above)***."
+  },
+  {
+    "title": "Dark Mode with Media Queries",
+    "ques": "How do you use a media query to detect dark mode and apply styles accordingly?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "@media (prefers-color-scheme: dark) {\n  body {\n    background-color: black;\n    color: white;\n  }\n}"
+    },
+    "explanation": "- The ***@media (prefers-color-scheme: dark)*** rule detects if the user has enabled ***dark mode***.\n- Inside, ```body { background-color: black; color: white; }``` applies ***dark mode styles*** automatically."
+  },
+  {
+    "title": "Hiding Scrollbars for Large Screens",
+    "ques": "How do you hide scrollbars only on large screens?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "@media (min-width: 1024px) {\n  ::-webkit-scrollbar {\n    display: none;\n  }\n}"
+    },
+    "explanation": "- The ***::-webkit-scrollbar*** pseudo-element is used to style scrollbars.\n- The ***@media (min-width: 1024px)*** hides scrollbars ***only for screens 1024px and wider*** by setting ```display: none;```."
+  },
+  {
+    "title": "Centering Content for Different Screen Sizes",
+    "ques": "How can you center a content block for both mobile and desktop, adjusting its width dynamically?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".container {\n  width: 90%;\n  margin: 0 auto;\n}\n\n@media (min-width: 1024px) {\n  .container {\n    width: 60%;\n  }\n}"
+    },
+    "explanation": "- The ```.container { width: 90%; margin: 0 auto; }``` ensures the content is ***centered and adapts to small screens***.\n- The ***@media (min-width: 1024px)*** reduces ```width``` to ***60%*** for a better layout on ***larger screens***."
+  }
+]
