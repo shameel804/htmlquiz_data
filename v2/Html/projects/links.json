@@ -1,0 +1,152 @@
+[
+  {
+    "title": "Basic Anchor Tag",
+    "ques": "Create an anchor tag that links to 'https://www.example.com' with the text 'Visit Example'.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<a href=\"https://www.example.com\">Visit Example</a>"
+    },
+    "explanation": "The ```<a>``` tag is used to create hyperlinks.\nThe ```href``` attribute specifies the destination URL.\nThe text between the ```<a>``` and ```</a>``` tags ('Visit Example') is the clickable link text."
+  },
+  {
+    "title": "Opening Links in a New Tab",
+    "ques": "Modify the previous anchor tag to open the link in a new tab.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<a href=\"https://www.example.com\" target=\"_blank\">Visit Example</a>"
+    },
+    "explanation": "Adding the ```target=\"_blank\"``` attribute makes the link open in a new tab.\nThe ```href``` attribute still specifies the destination URL.\nThe link text remains between ```<a>``` and ```</a>```."
+  },
+  {
+    "title": "Navigation Menu with Unordered List",
+    "ques": "Create a simple navigation menu with links to Home, About, and Contact using an unordered list.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<ul>\n  <li><a href=\"index.html\">Home</a></li>\n  <li><a href=\"about.html\">About</a></li>\n  <li><a href=\"contact.html\">Contact</a></li>\n</ul>"
+    },
+    "explanation": "The ```<ul>``` tag creates an unordered list.\nEach ```<li>``` element represents a list item.\nEach list item contains an ```<a>``` tag linking to different pages.\nThe ```href``` attribute specifies the path to the respective page."
+  },
+  {
+    "title": "Styled Navigation Menu",
+    "ques": "Style a navigation menu horizontally with CSS.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<style>\n  nav ul {\n    list-style-type: none;\n    padding: 0;\n    margin: 0;\n    display: flex;\n  }\n  nav li {\n    margin-right: 15px;\n  }\n  nav a {\n    text-decoration: none;\n    color: blue;\n    font-weight: bold;\n  }\n</style>\n\n<nav>\n  <ul>\n    <li><a href=\"index.html\">Home</a></li>\n    <li><a href=\"about.html\">About</a></li>\n    <li><a href=\"contact.html\">Contact</a></li>\n  </ul>\n</nav>"
+    },
+    "explanation": "The ```<nav>``` element represents the navigation section.\nThe ```<ul>``` contains list items ```<li>``` with links.\nThe ```display: flex;``` style makes the menu horizontal.\nThe ```list-style-type: none;``` removes bullet points.\nThe ```margin-right: 15px;``` adds spacing between items.\nThe ```text-decoration: none;``` removes underlines from links.\nThe ```color: blue;``` and ```font-weight: bold;``` enhance the appearance."
+  },
+  {
+    "title": "Anchor Link to a Section",
+    "ques": "Create an anchor link that jumps to a section with the id 'about-section'.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<a href=\"#about-section\">Go to About Section</a>\n\n<section id=\"about-section\">\n  <h2>About Us</h2>\n  <p>This is the About section of the page.</p>\n</section>"
+    },
+    "explanation": "The ```href=\"#about-section\"``` makes the link jump to the element with id ```about-section```.\nThe ```<section>``` element with ```id=\"about-section\"``` is the target.\nClicking the link smoothly scrolls to the 'About Us' section."
+  },
+  {
+    "title": "Email Link",
+    "ques": "Create an anchor tag that allows users to send an email to 'support@example.com' when clicked.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<a href=\"mailto:support@example.com\">Email Us</a>"
+    },
+    "explanation": "The ```mailto:``` scheme is used in the ```href``` attribute to open the user's default email client.\nThe ```support@example.com``` is the recipient's email address.\nWhen the link is clicked, an email composition window opens."
+  },
+  {
+    "title": "Phone Call Link",
+    "ques": "Create a link that allows users to call the phone number '+1234567890' when clicked.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<a href=\"tel:+1234567890\">Call Us</a>"
+    },
+    "explanation": "The ```tel:``` scheme is used in the ```href``` attribute to initiate a phone call.\nThe ```+1234567890``` is the phone number.\nClicking the link on a mobile device starts a call to the specified number."
+  },
+  {
+    "title": "Download Link",
+    "ques": "Create a link that allows users to download a file named 'document.pdf'.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<a href=\"document.pdf\" download>Download PDF</a>"
+    },
+    "explanation": "The ```download``` attribute allows the user to download the linked file instead of opening it.\nThe ```href=\"document.pdf\"``` specifies the file path.\nClicking the link prompts the user to save the file."
+  },
+  {
+    "title": "Image as a Link",
+    "ques": "Create an anchor tag that wraps an image and links to 'https://www.example.com'.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<a href=\"https://www.example.com\">\n  <img src=\"logo.png\" alt=\"Example Logo\">\n</a>"
+    },
+    "explanation": "The ```<a>``` tag wraps an ```<img>``` tag, making the image a clickable link.\nThe ```href``` attribute specifies the destination URL.\nThe ```src``` attribute of ```<img>``` defines the image path ('logo.png').\nThe ```alt``` attribute provides alternative text."
+  },
+  {
+    "title": "Back to Top Link",
+    "ques": "Create a 'Back to Top' link that takes the user to the top of the page.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<a href=\"#top\">Back to Top</a>\n\n<h1 id=\"top\">Welcome</h1>\n<p>Scroll down to see the link.</p>"
+    },
+    "explanation": "The ```href=\"#top\"``` makes the link jump to an element with ```id=\"top\"```.\nThe ```<h1 id=\"top\">``` is the target element.\nClicking the link scrolls the page to the top."
+  },
+  {
+    "title": "Breadcrumb Navigation",
+    "ques": "Create a breadcrumb navigation menu showing 'Home > Products > Laptops'.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<nav>\n  <a href=\"index.html\">Home</a> >\n  <a href=\"products.html\">Products</a> >\n  <span>Laptops</span>\n</nav>"
+    },
+    "explanation": "The ```<nav>``` element defines the navigation section.\nEach ```<a>``` tag links to a higher-level page.\nThe 'Laptops' section is inside ```<span>``` because it's the current page and shouldn't be a link."
+  },
+  {
+    "title": "Navigation Menu with Dropdown",
+    "ques": "Create a navigation menu with a dropdown for 'Services' containing 'Web Design' and 'SEO'.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<style>\n  .dropdown { position: relative; display: inline-block; }\n  .dropdown-content { display: none; position: absolute; background: #fff; border: 1px solid #ccc; }\n  .dropdown:hover .dropdown-content { display: block; }\n</style>\n\n<nav>\n  <ul>\n    <li><a href=\"index.html\">Home</a></li>\n    <li class=\"dropdown\">\n      <a href=\"#\">Services</a>\n      <ul class=\"dropdown-content\">\n        <li><a href=\"web-design.html\">Web Design</a></li>\n        <li><a href=\"seo.html\">SEO</a></li>\n      </ul>\n    </li>\n    <li><a href=\"contact.html\">Contact</a></li>\n  </ul>\n</nav>"
+    },
+    "explanation": "The ```<nav>``` contains an unordered list ```<ul>``` for navigation items.\nA ```<li>``` with class ```dropdown``` contains another nested ```<ul>```.\nThe ```display: none;``` hides the dropdown initially.\nUsing ```:hover``` makes the dropdown visible when the user hovers over 'Services'."
+  },
+  {
+    "title": "Relative vs. Absolute Links",
+    "ques": "Demonstrate the difference between an absolute and a relative link.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<p>Absolute Link: <a href=\"https://www.example.com\">Example</a></p>\n<p>Relative Link: <a href=\"about.html\">About Us</a></p>"
+    },
+    "explanation": "An ***absolute link*** includes the full URL (```https://www.example.com```).\nA ***relative link*** points to a file in the same directory (```about.html```).\nAbsolute links navigate to external sites, while relative links navigate within the same website."
+  },
+  {
+    "title": "Button Styled as a Link",
+    "ques": "Create a button that acts as a link to 'https://www.example.com'.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<button onclick=\"location.href='https://www.example.com'\">Go to Example</button>"
+    },
+    "explanation": "The ```<button>``` element is used instead of ```<a>```.\nThe ```onclick``` event handler changes the window location to 'https://www.example.com'.\nClicking the button redirects the user to the given URL."
+  },
+  {
+    "title": "Navigation Menu with Icons",
+    "ques": "Create a navigation menu with icons next to the links using Font Awesome.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<head>\n  <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css\">\n</head>\n<nav>\n  <ul>\n    <li><a href=\"index.html\"><i class=\"fas fa-home\"></i> Home</a></li>\n    <li><a href=\"services.html\"><i class=\"fas fa-cogs\"></i> Services</a></li>\n    <li><a href=\"contact.html\"><i class=\"fas fa-envelope\"></i> Contact</a></li>\n  </ul>\n</nav>"
+    },
+    "explanation": "The ***Font Awesome*** library is linked in the ```<head>``` section.\nEach ```<a>``` tag contains an ```<i>``` tag with a Font Awesome icon class.\nIcons appear before the link text, improving visual appeal."
+  }
+]

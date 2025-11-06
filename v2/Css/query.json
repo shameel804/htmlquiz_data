@@ -1,0 +1,2343 @@
+[
+    {
+        "q": "What does this code target?",
+        "l": "css",
+        "c": "@media (max-width: 600px) {\n    body {\n        background-color: lightblue;\n    }\n}",
+        "o": [
+            "Screens less than 600px",
+            "Screens greater than 600px",
+            "All screens",
+            "Only mobile devices"
+        ]
+    },
+    {
+        "q": "What is the purpose of media queries in CSS?",
+        "o": [
+            "Responsive design",
+            "Fixed layout",
+            "Animation control",
+            "Debugging"
+        ]
+    },
+    {
+        "q": "What is applied when the viewport is at least 600px wide?",
+        "l": "css",
+        "c": "@media (min-width: 600px) {\n    h1 {\n        font-size: 2em;\n    }\n}",
+        "o": [
+            "h1 font size is 2em",
+            "h1 font size is 1em",
+            "h1 is hidden",
+            "h1 color changes"
+        ]
+    },
+    {
+        "q": "Which keyword is used to target devices with a specific width?",
+        "o": [
+            "min-width",
+            "max-width",
+            "width",
+            "height"
+        ]
+    },
+    {
+        "q": "What does this media query check?",
+        "l": "css",
+        "c": "@media (orientation: landscape) {\n    .container {\n        width: 100%;\n    }\n}",
+        "o": [
+            "Screen orientation is landscape",
+            "Screen orientation is portrait",
+            "Device is a tablet",
+            "Screen width is 100%"
+        ]
+    },
+    {
+        "q": "What unit is commonly used in media queries for screen width?",
+        "o": [
+            "px",
+            "rem",
+            "em",
+            "vw"
+        ]
+    },
+    {
+        "q": "What happens at a resolution of 2dppx?",
+        "l": "css",
+        "c": "@media (min-resolution: 2dppx) {\n    img {\n        width: 200px;\n    }\n}",
+        "o": [
+            "Images width is 200px",
+            "Images width is 100px",
+            "Images are hidden",
+            "No effect on images"
+        ]
+    },
+    {
+        "q": "Which keyword is used to apply styles for screen widths smaller than a value?",
+        "o": [
+            "max-width",
+            "min-width",
+            "orientation",
+            "resolution"
+        ]
+    },
+    {
+        "q": "What is the effect of this media query?",
+        "l": "css",
+        "c": "@media (max-height: 500px) {\n    p {\n        font-size: 12px;\n    }\n}",
+        "o": [
+            "p font size becomes 12px",
+            "p font size becomes 16px",
+            "p is hidden",
+            "No change"
+        ]
+    },
+    {
+        "q": "What is the typical breakpoint for large desktop screens?",
+        "o": [
+            "1200px",
+            "768px",
+            "600px",
+            "1920px"
+        ]
+    },
+    {
+        "q": "What does this code modify?",
+        "l": "css",
+        "c": "@media (hover: hover) {\n    a {\n        color: blue;\n    }\n}",
+        "o": [
+            "Links become blue on hover",
+            "Links are hidden",
+            "All links become green",
+            "No effect on links"
+        ]
+    },
+    {
+        "q": "Which media type is used to target screen devices?",
+        "o": [
+            "screen",
+            "print",
+            "speech",
+            "all"
+        ]
+    },
+    {
+        "q": "What does the following media query accomplish?",
+        "l": "css",
+        "c": "@media (prefers-color-scheme: dark) {\n    body {\n        background: black;\n    }\n}",
+        "o": [
+            "Sets background to black in dark mode",
+            "Sets background to white in dark mode",
+            "No effect",
+            "Sets text color"
+        ]
+    },
+    {
+        "q": "How do you combine multiple conditions in a media query?",
+        "o": [
+            "and",
+            "or",
+            "not",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the purpose of this media query?",
+        "l": "css",
+        "c": "@media (min-width: 768px) {\n    nav {\n        display: block;\n    }\n}",
+        "o": [
+            "Shows navigation for screens wider than 768px",
+            "Hides navigation for all screens",
+            "No effect on navigation",
+            "Changes navigation color"
+        ]
+    },
+    {
+        "q": "What is the smallest common breakpoint for mobile devices?",
+        "o": [
+            "320px",
+            "480px",
+            "768px",
+            "1024px"
+        ]
+    },
+    {
+        "q": "What does this code accomplish for small screens?",
+        "l": "css",
+        "c": "@media (max-width: 400px) {\n    img {\n        width: 100%;\n    }\n}",
+        "o": [
+            "Images become full width on small screens",
+            "Images become fixed width",
+            "No change to images",
+            "Images are hidden"
+        ]
+    },
+    {
+        "q": "Which media query targets devices with a minimum screen height?",
+        "o": [
+            "min-height",
+            "max-height",
+            "min-width",
+            "height"
+        ]
+    },
+    {
+        "q": "What is the effect of this media query on text color?",
+        "l": "css",
+        "c": "@media (min-width: 600px) {\n    .text {\n        color: red;\n    }\n}",
+        "o": [
+            "Text color turns red on wider screens",
+            "Text color turns blue",
+            "No effect on text",
+            "Text is hidden"
+        ]
+    },
+    {
+        "q": "What does 'dpi' stand for in media queries?",
+        "o": [
+            "dots per inch",
+            "density per inch",
+            "display per inch",
+            "data per inch"
+        ]
+    },
+    {
+        "q": "What does this code change for portrait mode?",
+        "l": "css",
+        "c": "@media (orientation: portrait) {\n    .sidebar {\n        display: none;\n    }\n}",
+        "o": [
+            "Hides sidebar in portrait mode",
+            "Shows sidebar in portrait mode",
+            "No effect on sidebar",
+            "Changes sidebar color"
+        ]
+    },
+    {
+        "q": "Which operator negates a media query condition?",
+        "o": [
+            "not",
+            "only",
+            "and",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens at a minimum resolution of 150dpi?",
+        "l": "css",
+        "c": "@media (min-resolution: 150dpi) {\n    .background {\n        background: url('bg.jpg');\n    }\n}",
+        "o": [
+            "Background image applies at 150dpi",
+            "Background image is hidden",
+            "No effect on background",
+            "Background color changes"
+        ]
+    },
+    {
+        "q": "What is a breakpoint in responsive design?",
+        "o": [
+            "A screen width where layout changes",
+            "A fixed width",
+            "A device type",
+            "A debug point"
+        ]
+    },
+    {
+        "q": "What does this media query affect?",
+        "l": "css",
+        "c": "@media (max-aspect-ratio: 16/9) {\n    video {\n        width: 100%;\n    }\n}",
+        "o": [
+            "Videos become full width for screens narrower than 16:9",
+            "Videos are hidden",
+            "No effect on videos",
+            "Videos shrink"
+        ]
+    },
+    {
+        "q": "Which media type is used for printed documents?",
+        "o": [
+            "print",
+            "screen",
+            "speech",
+            "all"
+        ]
+    },
+    {
+        "q": "What happens when the viewport is greater than 1200px?",
+        "l": "css",
+        "c": "@media (min-width: 1200px) {\n    .large {\n        display: block;\n    }\n}",
+        "o": [
+            "Element displays as block",
+            "Element is hidden",
+            "No effect",
+            "Element changes color"
+        ]
+    },
+    {
+        "q": "What is the typical breakpoint for tablet devices?",
+        "o": [
+            "768px",
+            "320px",
+            "1024px",
+            "600px"
+        ]
+    },
+    {
+        "q": "What is the effect of this media query on font size?",
+        "l": "css",
+        "c": "@media (min-width: 500px) {\n    h2 {\n        font-size: 24px;\n    }\n}",
+        "o": [
+            "h2 font size is 24px on wider screens",
+            "h2 font size is 18px",
+            "h2 is hidden",
+            "No effect on h2"
+        ]
+    },
+    {
+        "q": "Which property can be changed in different breakpoints?",
+        "o": [
+            "font-size",
+            "z-index",
+            "opacity",
+            "overflow"
+        ]
+    },
+    {
+        "q": "What is the purpose of this media query?",
+        "l": "css",
+        "c": "@media (hover: none) {\n    button {\n        cursor: default;\n    }\n}",
+        "o": [
+            "Changes cursor for non-hover devices",
+            "Hides buttons",
+            "No effect on buttons",
+            "Changes button color"
+        ]
+    },
+    {
+        "q": "What does 'em' represent in CSS media queries?",
+        "o": [
+            "Relative to font-size",
+            "Pixels",
+            "Screen width",
+            "Resolution"
+        ]
+    },
+    {
+        "q": "What happens for screens with a height of 600px or less?",
+        "l": "css",
+        "c": "@media (max-height: 600px) {\n    .footer {\n        font-size: 10px;\n    }\n}",
+        "o": [
+            "Footer font size is 10px",
+            "Footer is hidden",
+            "Footer font size is 14px",
+            "No change to footer"
+        ]
+    },
+    {
+        "q": "How would you apply a media query for a landscape orientation?",
+        "o": [
+            "orientation: landscape",
+            "min-width: landscape",
+            "screen-orientation: landscape",
+            "layout: landscape"
+        ]
+    },
+    {
+        "q": "What is this media query checking?",
+        "l": "css",
+        "c": "@media (min-device-width: 768px) {\n    .container {\n        padding: 20px;\n    }\n}",
+        "o": [
+            "Targets devices wider than 768px",
+            "Targets screens narrower than 768px",
+            "No effect",
+            "Hides container"
+        ]
+    },
+    {
+        "q": "Which unit represents the viewport width?",
+        "o": [
+            "vw",
+            "vh",
+            "em",
+            "rem"
+        ]
+    },
+    {
+        "q": "What does this code change for mobile devices?",
+        "l": "css",
+        "c": "@media (max-width: 480px) {\n    .header {\n        display: none;\n    }\n}",
+        "o": [
+            "Hides header on mobile",
+            "Shows header on mobile",
+            "No effect on header",
+            "Changes header color"
+        ]
+    },
+    {
+        "q": "How do media queries improve user experience?",
+        "o": [
+            "By adjusting layouts",
+            "By adding animations",
+            "By optimizing load times",
+            "By debugging"
+        ]
+    },
+    {
+        "q": "What happens when the viewport is less than 600px?",
+        "l": "css",
+        "c": "@media (max-width: 600px) {\n    nav {\n        font-size: 14px;\n    }\n}",
+        "o": [
+            "Nav font size becomes 14px",
+            "Nav font size becomes 16px",
+            "Nav is hidden",
+            "No change"
+        ]
+    },
+    {
+        "q": "What does 'vh' stand for in media queries?",
+        "o": [
+            "Viewport height",
+            "View height",
+            "Visible height",
+            "Virtual height"
+        ]
+    },
+    {
+        "q": "What is targeted by this media query?",
+        "l": "css",
+        "c": "@media (min-width: 320px) and (max-width: 480px) {\n    .mobile {\n        display: block;\n    }\n}",
+        "o": [
+            "Displays .mobile on small screens",
+            "Hides .mobile on small screens",
+            "No effect",
+            "Changes .mobile color"
+        ]
+    },
+    {
+        "q": "Which unit is relative to the parent font size?",
+        "o": [
+            "em",
+            "px",
+            "vw",
+            "vh"
+        ]
+    },
+    {
+        "q": "What does this media query do?",
+        "l": "css",
+        "c": "@media (prefers-reduced-motion: reduce) {\n    .animation {\n        animation: none;\n    }\n}",
+        "o": [
+            "Disables animations for users who prefer less motion",
+            "Enables animations",
+            "Changes animation speed",
+            "No change"
+        ]
+    },
+    {
+        "q": "What is the keyword for targeting high-resolution screens?",
+        "o": [
+            "min-resolution",
+            "max-resolution",
+            "dpi",
+            "retina"
+        ]
+    },
+    {
+        "q": "What does this media query apply?",
+        "l": "css",
+        "c": "@media (min-resolution: 192dpi) {\n    img {\n        border: 2px solid red;\n    }\n}",
+        "o": [
+            "Adds border to images on high-resolution displays",
+            "Removes border from images",
+            "No effect",
+            "Changes border color"
+        ]
+    },
+    {
+        "q": "Which media type targets all devices?",
+        "o": [
+            "all",
+            "screen",
+            "print",
+            "speech"
+        ]
+    },
+    {
+        "q": "What does this code do for large screens?",
+        "l": "css",
+        "c": "@media (min-width: 1200px) {\n    .banner {\n        height: 300px;\n    }\n}",
+        "o": [
+            "Sets banner height to 300px",
+            "Sets banner height to 150px",
+            "No change",
+            "Hides banner"
+        ]
+    },
+    {
+        "q": "What is a common breakpoint for large screens?",
+        "o": [
+            "1200px",
+            "1024px",
+            "768px",
+            "1920px"
+        ]
+    },
+    {
+        "q": "What happens on devices with a minimum width of 768px?",
+        "l": "css",
+        "c": "@media (min-width: 768px) {\n    .menu {\n        display: flex;\n    }\n}",
+        "o": [
+            "Menu displays as flex",
+            "Menu is hidden",
+            "No change",
+            "Menu becomes block"
+        ]
+    },
+    {
+        "q": "Which media query property checks screen orientation?",
+        "o": [
+            "orientation",
+            "width",
+            "height",
+            "aspect-ratio"
+        ]
+    },
+    {
+        "q": "What does this media query change for low-resolution screens?",
+        "l": "css",
+        "c": "@media (max-resolution: 300dpi) {\n    .image {\n        display: none;\n    }\n}",
+        "o": [
+            "Hides images on low-resolution screens",
+            "Shows images",
+            "No effect",
+            "Changes image size"
+        ]
+    },
+    {
+        "q": "How do you target devices wider than 1024px?",
+        "o": [
+            "min-width: 1024px",
+            "max-width: 1024px",
+            "width: 1024px",
+            "min-height: 1024px"
+        ]
+    },
+    {
+        "q": "What is the outcome of this media query?",
+        "l": "css",
+        "c": "@media (min-width: 1024px) {\n    .grid {\n        grid-template-columns: repeat(3, 1fr);\n    }\n}",
+        "o": [
+            "Creates a 3-column grid",
+            "Creates a 2-column grid",
+            "No effect on grid",
+            "Hides grid"
+        ]
+    },
+    {
+        "q": "What is the maximum width breakpoint for mobile devices?",
+        "o": [
+            "600px",
+            "1024px",
+            "768px",
+            "480px"
+        ]
+    },
+    {
+        "q": "What is the effect of this code on devices in portrait orientation?",
+        "l": "css",
+        "c": "@media (orientation: portrait) {\n    .banner {\n        height: 150px;\n    }\n}",
+        "o": [
+            "Sets banner height to 150px",
+            "Sets banner height to 300px",
+            "No change",
+            "Hides banner"
+        ]
+    },
+    {
+        "q": "What does 'rem' stand for?",
+        "o": [
+            "Root em",
+            "Responsive em",
+            "Real em",
+            "Relative em"
+        ]
+    },
+    {
+        "q": "What does this code do for screens wider than 800px?",
+        "l": "css",
+        "c": "@media (min-width: 800px) {\n    .card {\n        padding: 20px;\n    }\n}",
+        "o": [
+            "Adds padding to .card",
+            "Removes padding from .card",
+            "No effect",
+            "Changes card color"
+        ]
+    },
+    {
+        "q": "Which device type does 'print' media type target?",
+        "o": [
+            "Printed documents",
+            "Digital screens",
+            "Voice assistants",
+            "All devices"
+        ]
+    },
+    {
+        "q": "What effect does this media query have?",
+        "l": "css",
+        "c": "@media (hover: hover) {\n    button {\n        cursor: pointer;\n    }\n}",
+        "o": [
+            "Sets button cursor to pointer if hover is possible",
+            "Hides button",
+            "No change",
+            "Changes button color"
+        ]
+    },
+    {
+        "q": "What is the default behavior of a media query without a media type?",
+        "o": [
+            "All devices",
+            "Screens only",
+            "Print only",
+            "Mobile only"
+        ]
+    },
+    {
+        "q": "What does this code check?",
+        "l": "css",
+        "c": "@media (max-width: 1200px) {\n    .sidebar {\n        display: block;\n    }\n}",
+        "o": [
+            "Displays sidebar on narrower screens",
+            "Hides sidebar",
+            "No effect",
+            "Changes sidebar color"
+        ]
+    },
+    {
+        "q": "Which operator combines multiple conditions in a media query?",
+        "o": [
+            "and",
+            "or",
+            "not",
+            "only"
+        ]
+    },
+    {
+        "q": "What happens for screens with a max height of 500px?",
+        "l": "css",
+        "c": "@media (max-height: 500px) {\n    .header {\n        display: none;\n    }\n}",
+        "o": [
+            "Hides header on small screens",
+            "Shows header",
+            "No effect",
+            "Changes header color"
+        ]
+    },
+    {
+        "q": "How would you target a device with a max-width of 768px?",
+        "o": [
+            "max-width: 768px",
+            "min-width: 768px",
+            "width: 768px",
+            "min-height: 768px"
+        ]
+    },
+    {
+        "q": "What effect does this media query have for large devices?",
+        "l": "css",
+        "c": "@media (min-width: 992px) {\n    .footer {\n        text-align: center;\n    }\n}",
+        "o": [
+            "Centers footer text",
+            "Aligns footer text to left",
+            "No effect",
+            "Hides footer"
+        ]
+    },
+    {
+        "q": "What unit is used to represent screen resolution in media queries?",
+        "o": [
+            "dpi",
+            "px",
+            "rem",
+            "vw"
+        ]
+    },
+    {
+        "q": "What does this code do for small screens?",
+        "l": "css",
+        "c": "@media (max-width: 480px) {\n    .nav {\n        font-size: 12px;\n    }\n}",
+        "o": [
+            "Sets nav font size to 12px",
+            "Sets nav font size to 16px",
+            "No effect",
+            "Hides nav"
+        ]
+    },
+    {
+        "q": "What is a common breakpoint for medium-sized screens?",
+        "o": [
+            "1024px",
+            "600px",
+            "320px",
+            "1920px"
+        ]
+    },
+    {
+        "q": "What happens for devices with a width of 768px or more?",
+        "l": "css",
+        "c": "@media (min-width: 768px) {\n    .card {\n        display: flex;\n    }\n}",
+        "o": [
+            "Cards display as flex",
+            "Cards are hidden",
+            "No effect",
+            "Changes card color"
+        ]
+    },
+    {
+        "q": "Which media type targets devices with voice output?",
+        "o": [
+            "speech",
+            "screen",
+            "print",
+            "all"
+        ]
+    },
+    {
+        "q": "What does this media query check for tablets?",
+        "l": "css",
+        "c": "@media (min-width: 600px) and (max-width: 900px) {\n    .tablet {\n        display: block;\n    }\n}",
+        "o": [
+            "Displays tablet layout",
+            "Hides tablet layout",
+            "No effect",
+            "Changes tablet layout color"
+        ]
+    },
+    {
+        "q": "What does 'dpi' measure in a media query?",
+        "o": [
+            "Screen resolution",
+            "Screen width",
+            "Aspect ratio",
+            "Font size"
+        ]
+    },
+    {
+        "q": "What is the outcome of this media query?",
+        "l": "css",
+        "c": "@media (max-width: 720px) {\n    .text {\n        font-size: 14px;\n    }\n}",
+        "o": [
+            "Text size is 14px on small screens",
+            "Text size is 18px",
+            "No change",
+            "Text is hidden"
+        ]
+    },
+    {
+        "q": "Which breakpoint is commonly used for desktop screens?",
+        "o": [
+            "1024px",
+            "768px",
+            "320px",
+            "1920px"
+        ]
+    },
+    {
+        "q": "What does this media query accomplish for screens above 1024px?",
+        "l": "css",
+        "c": "@media (min-width: 1024px) {\n    .header {\n        display: flex;\n    }\n}",
+        "o": [
+            "Displays header as flex",
+            "Hides header",
+            "No effect",
+            "Changes header color"
+        ]
+    },
+    {
+        "q": "Which logical operator is used to add multiple conditions in a media query?",
+        "o": [
+            "and",
+            "or",
+            "not",
+            "none"
+        ]
+    },
+    {
+        "q": "What is checked by this media query?",
+        "l": "css",
+        "c": "@media (orientation: landscape) {\n    .menu {\n        display: block;\n    }\n}",
+        "o": [
+            "Shows menu in landscape mode",
+            "Hides menu",
+            "No effect",
+            "Changes menu color"
+        ]
+    },
+    {
+        "q": "What is a common breakpoint for large desktop screens?",
+        "o": [
+            "1200px",
+            "768px",
+            "1024px",
+            "1920px"
+        ]
+    },
+    {
+        "q": "What does this media query target?",
+        "l": "css",
+        "c": "@media (max-width: 600px) and (min-width: 480px) {\n    .content {\n        padding: 10px;\n    }\n}",
+        "o": [
+            "Targets specific small screens",
+            "Targets large screens",
+            "No effect",
+            "Hides content"
+        ]
+    },
+    {
+        "q": "Which unit is typically used for width in media queries?",
+        "o": [
+            "px",
+            "rem",
+            "vw",
+            "em"
+        ]
+    },
+    {
+        "q": "What happens at a min-resolution of 1.5dppx?",
+        "l": "css",
+        "c": "@media (min-resolution: 1.5dppx) {\n    img {\n        width: 100%;\n    }\n}",
+        "o": [
+            "Images are full width",
+            "Images are fixed width",
+            "No change",
+            "Hides images"
+        ]
+    },
+    {
+        "q": "How can you target high-resolution devices using media queries?",
+        "o": [
+            "min-resolution",
+            "max-resolution",
+            "dpi",
+            "aspect-ratio"
+        ]
+    },
+    {
+        "q": "What does this media query do?",
+        "l": "css",
+        "c": "@media (max-device-width: 600px) {\n    .mobile {\n        display: block;\n    }\n}",
+        "o": [
+            "Displays mobile layout",
+            "Hides mobile layout",
+            "No effect",
+            "Changes mobile layout color"
+        ]
+    },
+    {
+        "q": "Which unit represents the viewport height?",
+        "o": [
+            "vh",
+            "vw",
+            "em",
+            "px"
+        ]
+    },
+    {
+        "q": "What is targeted by this media query?",
+        "l": "css",
+        "c": "@media (min-width: 768px) {\n    .navbar {\n        background-color: blue;\n    }\n}",
+        "o": [
+            "Sets navbar background to blue",
+            "No change",
+            "Sets navbar background to red",
+            "Hides navbar"
+        ]
+    },
+    {
+        "q": "Which unit in media queries is relative to the root font size?",
+        "o": [
+            "rem",
+            "em",
+            "px",
+            "vw"
+        ]
+    },
+    {
+        "q": "What effect does this media query have for large screens?",
+        "l": "css",
+        "c": "@media (min-width: 1200px) {\n    .footer {\n        display: grid;\n    }\n}",
+        "o": [
+            "Footer displays as grid",
+            "Hides footer",
+            "No effect",
+            "Changes footer color"
+        ]
+    },
+    {
+        "q": "What is the max-width for targeting most mobile devices?",
+        "o": [
+            "600px",
+            "1024px",
+            "1280px",
+            "1920px"
+        ]
+    },
+    {
+        "q": "What does this media query apply?",
+        "l": "css",
+        "c": "@media (min-width: 1024px) {\n    .main {\n        padding: 20px;\n    }\n}",
+        "o": [
+            "Adds padding to main content",
+            "Removes padding",
+            "No effect",
+            "Changes main color"
+        ]
+    },
+    {
+        "q": "What unit is typically used for screen width in media queries?",
+        "o": [
+            "px",
+            "cm",
+            "pt",
+            "vh"
+        ]
+    },
+    {
+        "q": "What does this code modify for narrow screens?",
+        "l": "css",
+        "c": "@media (max-width: 320px) {\n    .text {\n        font-size: 10px;\n    }\n}",
+        "o": [
+            "Sets font size to 10px",
+            "Sets font size to 12px",
+            "No change",
+            "Hides text"
+        ]
+    },
+    {
+        "q": "What is the primary use of media queries?",
+        "o": [
+            "Responsive design",
+            "Animations",
+            "Debugging",
+            "Fixed layout"
+        ]
+    },
+    {
+        "q": "What does this media query do for wider screens?",
+        "l": "css",
+        "c": "@media (min-width: 600px) {\n    .button {\n        padding: 15px;\n    }\n}",
+        "o": [
+            "Sets button padding to 15px",
+            "Removes padding",
+            "No effect",
+            "Changes button color"
+        ]
+    },
+    {
+        "q": "How do you apply styles for devices with a maximum height?",
+        "o": [
+            "max-height",
+            "min-height",
+            "height",
+            "max-width"
+        ]
+    },
+    {
+        "q": "What happens when the device width is less than 480px?",
+        "l": "css",
+        "c": "@media (max-width: 480px) {\n    .sidebar {\n        display: none;\n    }\n}",
+        "o": [
+            "Hides sidebar on small devices",
+            "Shows sidebar",
+            "No effect",
+            "Changes sidebar color"
+        ]
+    },
+    {
+        "q": "What does 'vw' represent in CSS?",
+        "o": [
+            "Viewport width",
+            "View width",
+            "Virtual width",
+            "Visible width"
+        ]
+    },
+    {
+        "q": "What is the result of this media query?",
+        "l": "css",
+        "c": "@media (max-width: 768px) {\n    .header {\n        font-size: 16px;\n    }\n}",
+        "o": [
+            "Header font size is 16px",
+            "Header font size is 20px",
+            "No change",
+            "Hides header"
+        ]
+    },
+    {
+        "q": "How do you combine multiple media conditions?",
+        "o": [
+            "and",
+            "or",
+            "not",
+            "only"
+        ]
+    },
+    {
+        "q": "What does this code achieve for screens wider than 1024px?",
+        "l": "css",
+        "c": "@media (min-width: 1024px) {\n    .nav {\n        display: inline;\n    }\n}",
+        "o": [
+            "Displays nav inline",
+            "Hides nav",
+            "No effect",
+            "Changes nav color"
+        ]
+    },
+    {
+        "q": "What unit is used for specifying resolution in media queries?",
+        "o": [
+            "dpi",
+            "px",
+            "em",
+            "vh"
+        ]
+    },
+    {
+        "q": "What happens when the resolution is at least 2dppx?",
+        "l": "css",
+        "c": "@media (min-resolution: 2dppx) {\n    img {\n        display: block;\n    }\n}",
+        "o": [
+            "Images display as block",
+            "Hides images",
+            "No change",
+            "Images are inline"
+        ]
+    },
+    {
+        "q": "What is a typical breakpoint for a medium screen?",
+        "o": [
+            "1024px",
+            "600px",
+            "320px",
+            "1920px"
+        ]
+    },
+    {
+        "q": "What does this media query do?",
+        "l": "css",
+        "c": "@media (min-width: 768px) {\n    .footer {\n        padding: 30px;\n    }\n}",
+        "o": [
+            "Adds padding to footer",
+            "Removes padding",
+            "No effect",
+            "Changes footer color"
+        ]
+    },
+    {
+        "q": "How do you apply styles to devices with a minimum width?",
+        "o": [
+            "min-width",
+            "max-width",
+            "width",
+            "height"
+        ]
+    },
+    {
+        "q": "What happens on devices with a height greater than 900px?",
+        "l": "css",
+        "c": "@media (min-height: 900px) {\n    .content {\n        display: block;\n    }\n}",
+        "o": [
+            "Displays content block",
+            "Hides content",
+            "No effect",
+            "Changes content color"
+        ]
+    },
+    {
+        "q": "Which unit is commonly used for media query breakpoints?",
+        "o": [
+            "px",
+            "rem",
+            "vw",
+            "vh"
+        ]
+    },
+    {
+        "q": "What is the effect of this code for devices in landscape orientation?",
+        "l": "css",
+        "c": "@media (orientation: landscape) {\n    .banner {\n        height: 400px;\n    }\n}",
+        "o": [
+            "Sets banner height to 400px",
+            "Sets banner height to 300px",
+            "No change",
+            "Hides banner"
+        ]
+    },
+    {
+        "q": "How do you target screens wider than 1280px?",
+        "o": [
+            "min-width: 1280px",
+            "max-width: 1280px",
+            "width: 1280px",
+            "min-height: 1280px"
+        ]
+    },
+    {
+        "q": "What does this media query check for screens with high pixel density?",
+        "l": "css",
+        "c": "@media (min-resolution: 192dpi) {\n    img {\n        height: auto;\n    }\n}",
+        "o": [
+            "Sets image height to auto",
+            "Hides images",
+            "No change",
+            "Sets image height to fixed"
+        ]
+    },
+    {
+        "q": "Which operator is used to apply a media query when a condition is true?",
+        "o": [
+            "only",
+            "not",
+            "and",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the outcome of this media query for max-width of 600px?",
+        "l": "css",
+        "c": "@media (max-width: 600px) {\n    .header {\n        background-color: yellow;\n    }\n}",
+        "o": [
+            "Sets header background to yellow",
+            "No effect",
+            "Sets header background to green",
+            "Hides header"
+        ]
+    },
+    {
+        "q": "What does the 'only' keyword do in a media query?",
+        "o": [
+            "Limits the query to a specific media type",
+            "Excludes certain devices",
+            "Combines conditions",
+            "Negates the query"
+        ]
+    },
+    {
+        "q": "What does this code target?",
+        "l": "css",
+        "c": "@media (min-width: 768px) and (max-width: 1024px) {\n    .nav {\n        display: flex;\n    }\n}",
+        "o": [
+            "Targets medium screens",
+            "Targets large screens",
+            "No change",
+            "Hides nav"
+        ]
+    },
+    {
+        "q": "Which of the following is a valid media query?",
+        "o": [
+            "@media (max-width: 600px)",
+            "@media 600px",
+            "@media width < 600px",
+            "@media max-height"
+        ]
+    },
+    {
+        "q": "What happens when the screen size is less than 320px?",
+        "l": "css",
+        "c": "@media (max-width: 320px) {\n    .content {\n        font-size: 8px;\n    }\n}",
+        "o": [
+            "Sets font size to 8px",
+            "Sets font size to 12px",
+            "No change",
+            "Hides content"
+        ]
+    },
+    {
+        "q": "What is the purpose of 'min-width' in media queries?",
+        "o": [
+            "To target devices wider than a value",
+            "To target devices shorter than a value",
+            "To target specific orientations",
+            "To target higher resolutions"
+        ]
+    },
+    {
+        "q": "What does this media query do for large screens?",
+        "l": "css",
+        "c": "@media (min-width: 1200px) {\n    .sidebar {\n        display: grid;\n    }\n}",
+        "o": [
+            "Displays sidebar as grid",
+            "Hides sidebar",
+            "No effect",
+            "Changes sidebar color"
+        ]
+    },
+    {
+        "q": "Which unit measures resolution in media queries?",
+        "o": [
+            "dpi",
+            "vw",
+            "vh",
+            "rem"
+        ]
+    },
+    {
+        "q": "What does this code change for screens smaller than 600px?",
+        "l": "css",
+        "c": "@media (max-width: 600px) {\n    .text {\n        font-size: 14px;\n    }\n}",
+        "o": [
+            "Sets text size to 14px",
+            "No change",
+            "Sets text size to 16px",
+            "Hides text"
+        ]
+    },
+    {
+        "q": "What keyword is used to target devices in portrait mode?",
+        "o": [
+            "orientation",
+            "min-height",
+            "min-width",
+            "aspect-ratio"
+        ]
+    },
+    {
+        "q": "What happens for screens below 768px?",
+        "l": "css",
+        "c": "@media (max-width: 768px) {\n    .footer {\n        display: block;\n    }\n}",
+        "o": [
+            "Displays footer block",
+            "Hides footer",
+            "No effect",
+            "Changes footer color"
+        ]
+    },
+    {
+        "q": "Which media query keyword is used to apply styles when a device is at least 1200px wide?",
+        "o": [
+            "min-width",
+            "max-width",
+            "width",
+            "resolution"
+        ]
+    },
+    {
+        "q": "What does this media query check?",
+        "l": "css",
+        "c": "@media (min-width: 600px) and (orientation: portrait) {\n    .container {\n        padding: 20px;\n    }\n}",
+        "o": [
+            "Adds padding in portrait mode",
+            "No effect",
+            "Hides container",
+            "Changes container color"
+        ]
+    },
+    {
+        "q": "Which unit represents the relative font size?",
+        "o": [
+            "em",
+            "px",
+            "vw",
+            "vh"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code for screens larger than 900px?",
+        "l": "css",
+        "c": "@media (min-width: 900px) {\n    .nav {\n        font-size: 18px;\n    }\n}",
+        "o": [
+            "Sets nav font size to 18px",
+            "Sets nav font size to 14px",
+            "No change",
+            "Hides nav"
+        ]
+    },
+    {
+        "q": "How would you write a media query for screens narrower than 1024px?",
+        "o": [
+            "@media (max-width: 1024px)",
+            "@media width < 1024px",
+            "@media min-width: 1024px",
+            "@media (screen-width < 1024px)"
+        ]
+    },
+    {
+        "q": "What happens on devices with a height greater than 700px?",
+        "l": "css",
+        "c": "@media (min-height: 700px) {\n    .header {\n        display: flex;\n    }\n}",
+        "o": [
+            "Displays header as flex",
+            "Hides header",
+            "No effect",
+            "Changes header color"
+        ]
+    },
+    {
+        "q": "What does the 'and' keyword do in media queries?",
+        "o": [
+            "Combines multiple conditions",
+            "Excludes certain devices",
+            "Applies styles only to specific media types",
+            "Negates the condition"
+        ]
+    },
+    {
+        "q": "What does this media query check?",
+        "l": "css",
+        "c": "@media (orientation: portrait) and (max-width: 600px) {\n    .content {\n        font-size: 14px;\n    }\n}",
+        "o": [
+            "Sets font size to 14px in portrait",
+            "Sets font size to 18px",
+            "No change",
+            "Hides content"
+        ]
+    },
+    {
+        "q": "What unit is commonly used to set breakpoints for width?",
+        "o": [
+            "px",
+            "em",
+            "vw",
+            "vh"
+        ]
+    },
+    {
+        "q": "What is targeted by this media query?",
+        "l": "css",
+        "c": "@media (max-width: 480px) {\n    .footer {\n        display: none;\n    }\n}",
+        "o": [
+            "Hides footer on small devices",
+            "Shows footer",
+            "No effect",
+            "Changes footer color"
+        ]
+    },
+    {
+        "q": "What is the purpose of a media query?",
+        "o": [
+            "To make layouts responsive",
+            "To fix screen sizes",
+            "To debug issues",
+            "To set animations"
+        ]
+    },
+    {
+        "q": "What does this media query do for landscape orientation?",
+        "l": "css",
+        "c": "@media (orientation: landscape) {\n    .nav {\n        font-size: 16px;\n    }\n}",
+        "o": [
+            "Sets nav font size to 16px",
+            "Sets nav font size to 20px",
+            "No change",
+            "Hides nav"
+        ]
+    },
+    {
+        "q": "Which media type is used to target all devices?",
+        "o": [
+            "all",
+            "screen",
+            "print",
+            "speech"
+        ]
+    },
+    {
+        "q": "What happens for screens larger than 1200px?",
+        "l": "css",
+        "c": "@media (min-width: 1200px) {\n    .banner {\n        display: block;\n    }\n}",
+        "o": [
+            "Displays banner",
+            "Hides banner",
+            "No effect",
+            "Changes banner color"
+        ]
+    },
+    {
+        "q": "Which unit measures the viewport height in CSS?",
+        "o": [
+            "vh",
+            "vw",
+            "rem",
+            "em"
+        ]
+    },
+    {
+        "q": "What effect does this media query have on max-width of 600px?",
+        "l": "css",
+        "c": "@media (max-width: 600px) {\n    .nav {\n        display: flex;\n    }\n}",
+        "o": [
+            "Displays nav as flex",
+            "Hides nav",
+            "No effect",
+            "Changes nav color"
+        ]
+    },
+    {
+        "q": "What keyword would you use to target devices with voice output?",
+        "o": [
+            "speech",
+            "print",
+            "screen",
+            "all"
+        ]
+    },
+    {
+        "q": "What does this media query change for high-resolution screens?",
+        "l": "css",
+        "c": "@media (min-resolution: 192dpi) {\n    img {\n        max-width: 100%;\n    }\n}",
+        "o": [
+            "Sets image max width to 100%",
+            "No change",
+            "Sets image max width to 50%",
+            "Hides images"
+        ]
+    },
+    {
+        "q": "What is a common breakpoint for mobile devices?",
+        "o": [
+            "600px",
+            "1024px",
+            "1920px",
+            "768px"
+        ]
+    },
+    {
+        "q": "What is checked by this media query?",
+        "l": "css",
+        "c": "@media (min-width: 500px) and (max-width: 800px) {\n    .main {\n        padding: 15px;\n    }\n}",
+        "o": [
+            "Targets specific width range",
+            "No effect",
+            "Hides main",
+            "Changes main color"
+        ]
+    },
+    {
+        "q": "What does the 'not' keyword do in a media query?",
+        "o": [
+            "Negates the condition",
+            "Combines conditions",
+            "Applies styles to screens only",
+            "Limits the query to a specific width"
+        ]
+    },
+    {
+        "q": "What happens for screens below 400px?",
+        "l": "css",
+        "c": "@media (max-width: 400px) {\n    .content {\n        display: none;\n    }\n}",
+        "o": [
+            "Hides content on small screens",
+            "Shows content",
+            "No effect",
+            "Changes content color"
+        ]
+    },
+    {
+        "q": "Which media query is used to target mobile devices?",
+        "o": [
+            "max-width: 600px",
+            "min-width: 1200px",
+            "min-height: 1024px",
+            "aspect-ratio: 16/9"
+        ]
+    },
+    {
+        "q": "What does this media query accomplish for devices with a minimum height of 800px?",
+        "l": "css",
+        "c": "@media (min-height: 800px) {\n    .sidebar {\n        display: block;\n    }\n}",
+        "o": [
+            "Displays sidebar",
+            "Hides sidebar",
+            "No effect",
+            "Changes sidebar color"
+        ]
+    },
+    {
+        "q": "What unit is used to represent screen width in media queries?",
+        "o": [
+            "px",
+            "rem",
+            "vh",
+            "em"
+        ]
+    },
+    {
+        "q": "What does this media query do for screens larger than 600px?",
+        "l": "css",
+        "c": "@media (min-width: 600px) {\n    .text {\n        color: blue;\n    }\n}",
+        "o": [
+            "Sets text color to blue",
+            "No change",
+            "Sets text color to red",
+            "Hides text"
+        ]
+    },
+    {
+        "q": "What is the typical breakpoint for large screens?",
+        "o": [
+            "1200px",
+            "768px",
+            "600px",
+            "1024px"
+        ]
+    },
+    {
+        "q": "What happens when the viewport width is 480px?",
+        "l": "css",
+        "c": "@media (max-width: 480px) {\n    .header {\n        display: none;\n    }\n}",
+        "o": [
+            "Hides header",
+            "Shows header",
+            "No effect",
+            "Changes header color"
+        ]
+    },
+    {
+        "q": "How do media queries benefit responsive design?",
+        "o": [
+            "They adjust layouts",
+            "They add animations",
+            "They create fixed widths",
+            "They handle user input"
+        ]
+    },
+    {
+        "q": "What is the effect of this media query for portrait orientation?",
+        "l": "css",
+        "c": "@media (orientation: portrait) {\n    .main {\n        padding: 10px;\n    }\n}",
+        "o": [
+            "Adds padding to main",
+            "Removes padding",
+            "No change",
+            "Hides main"
+        ]
+    },
+    {
+        "q": "What does 'vw' stand for in CSS?",
+        "o": [
+            "Viewport width",
+            "Visible width",
+            "Virtual width",
+            "Visual width"
+        ]
+    },
+    {
+        "q": "What does this code do for devices with a maximum width of 768px?",
+        "l": "css",
+        "c": "@media (max-width: 768px) {\n    .nav {\n        flex-direction: column;\n    }\n}",
+        "o": [
+            "Changes nav direction to column",
+            "No change",
+            "Hides nav",
+            "Sets nav background"
+        ]
+    },
+    {
+        "q": "Which unit is typically used to define breakpoints in media queries?",
+        "o": [
+            "px",
+            "vh",
+            "vw",
+            "em"
+        ]
+    },
+    {
+        "q": "What is targeted by this media query?",
+        "l": "css",
+        "c": "@media (min-width: 768px) and (max-width: 1024px) {\n    .content {\n        font-size: 20px;\n    }\n}",
+        "o": [
+            "Targets medium screens",
+            "Targets large screens",
+            "No change",
+            "Hides content"
+        ]
+    },
+    {
+        "q": "What is the correct media query for screens wider than 600px?",
+        "o": [
+            "min-width: 600px",
+            "max-width: 600px",
+            "min-height: 600px",
+            "width: 600px"
+        ]
+    },
+    {
+        "q": "What happens when the resolution is at least 150dpi?",
+        "l": "css",
+        "c": "@media (min-resolution: 150dpi) {\n    img {\n        width: 100%;\n    }\n}",
+        "o": [
+            "Sets image width to 100%",
+            "No change",
+            "Hides images",
+            "Sets image width to 50%"
+        ]
+    },
+    {
+        "q": "Which operator is used to combine media query conditions?",
+        "o": [
+            "and",
+            "not",
+            "or",
+            "none"
+        ]
+    },
+    {
+        "q": "What does this media query check for a maximum height of 600px?",
+        "l": "css",
+        "c": "@media (max-height: 600px) {\n    .footer {\n        display: none;\n    }\n}",
+        "o": [
+            "Hides footer",
+            "Shows footer",
+            "No effect",
+            "Changes footer color"
+        ]
+    },
+    {
+        "q": "What is the smallest breakpoint for mobile devices?",
+        "o": [
+            "320px",
+            "600px",
+            "1024px",
+            "1280px"
+        ]
+    },
+    {
+        "q": "What effect does this media query have on screens wider than 1200px?",
+        "l": "css",
+        "c": "@media (min-width: 1200px) {\n    .container {\n        margin: auto;\n    }\n}",
+        "o": [
+            "Centers container",
+            "No change",
+            "Adds padding",
+            "Hides container"
+        ]
+    },
+    {
+        "q": "Which media query property checks screen width?",
+        "o": [
+            "min-width",
+            "min-height",
+            "max-height",
+            "resolution"
+        ]
+    },
+    {
+        "q": "What happens for devices with a width less than 360px?",
+        "l": "css",
+        "c": "@media (max-width: 360px) {\n    .button {\n        font-size: 12px;\n    }\n}",
+        "o": [
+            "Sets button font size to 12px",
+            "No change",
+            "Sets button font size to 16px",
+            "Hides button"
+        ]
+    },
+    {
+        "q": "How do you write a media query for high-resolution devices?",
+        "o": [
+            "min-resolution",
+            "max-width",
+            "min-height",
+            "aspect-ratio"
+        ]
+    },
+    {
+        "q": "What does this media query achieve for screens in landscape mode?",
+        "l": "css",
+        "c": "@media (orientation: landscape) {\n    .banner {\n        height: 300px;\n    }\n}",
+        "o": [
+            "Sets banner height to 300px",
+            "No change",
+            "Sets banner height to 400px",
+            "Hides banner"
+        ]
+    },
+    {
+        "q": "Which unit in CSS is relative to the root font size?",
+        "o": [
+            "rem",
+            "px",
+            "vw",
+            "vh"
+        ]
+    },
+    {
+        "q": "What does this media query do for screens between 480px and 768px?",
+        "l": "css",
+        "c": "@media (min-width: 480px) and (max-width: 768px) {\n    .sidebar {\n        display: block;\n    }\n}",
+        "o": [
+            "Displays sidebar",
+            "Hides sidebar",
+            "No effect",
+            "Changes sidebar color"
+        ]
+    },
+    {
+        "q": "What is a common breakpoint for small devices?",
+        "o": [
+            "600px",
+            "1024px",
+            "768px",
+            "1920px"
+        ]
+    },
+    {
+        "q": "What happens for screens below 320px?",
+        "l": "css",
+        "c": "@media (max-width: 320px) {\n    .header {\n        font-size: 10px;\n    }\n}",
+        "o": [
+            "Sets header font size to 10px",
+            "No change",
+            "Sets header font size to 12px",
+            "Hides header"
+        ]
+    },
+    {
+        "q": "How do media queries support accessibility?",
+        "o": [
+            "By adapting layouts for different devices",
+            "By adding ARIA roles",
+            "By defining focus states",
+            "By creating animations"
+        ]
+    },
+    {
+        "q": "What does this media query do for a minimum height of 700px?",
+        "l": "css",
+        "c": "@media (min-height: 700px) {\n    .nav {\n        display: flex;\n    }\n}",
+        "o": [
+            "Displays nav as flex",
+            "Hides nav",
+            "No effect",
+            "Changes nav color"
+        ]
+    },
+    {
+        "q": "What does 'dpi' measure in CSS media queries?",
+        "o": [
+            "Screen resolution",
+            "Font size",
+            "Aspect ratio",
+            "Screen width"
+        ]
+    },
+    {
+        "q": "What is the effect of this media query on a screen wider than 1280px?",
+        "l": "css",
+        "c": "@media (min-width: 1280px) {\n    .footer {\n        font-size: 18px;\n    }\n}",
+        "o": [
+            "Sets footer font size to 18px",
+            "No change",
+            "Sets footer font size to 16px",
+            "Hides footer"
+        ]
+    },
+    {
+        "q": "Which media type is used to target screen devices?",
+        "o": [
+            "screen",
+            "print",
+            "speech",
+            "all"
+        ]
+    },
+    {
+        "q": "What does this code do for high-resolution screens?",
+        "l": "css",
+        "c": "@media (min-resolution: 300dpi) {\n    img {\n        border: 1px solid black;\n    }\n}",
+        "o": [
+            "Adds border to images",
+            "No change",
+            "Hides images",
+            "Sets border to red"
+        ]
+    },
+    {
+        "q": "How do you apply styles for devices narrower than 768px?",
+        "o": [
+            "max-width: 768px",
+            "min-width: 768px",
+            "width: 768px",
+            "min-height: 768px"
+        ]
+    },
+    {
+        "q": "What happens for a maximum height of 500px?",
+        "l": "css",
+        "c": "@media (max-height: 500px) {\n    .content {\n        display: block;\n    }\n}",
+        "o": [
+            "Displays content block",
+            "Hides content",
+            "No effect",
+            "Changes content color"
+        ]
+    },
+    {
+        "q": "What is the purpose of using 'only' in a media query?",
+        "o": [
+            "To limit the query to a specific media type",
+            "To exclude certain devices",
+            "To combine conditions",
+            "To negate the query"
+        ]
+    },
+    {
+        "q": "What does this media query check for maximum width and portrait orientation?",
+        "l": "css",
+        "c": "@media (max-width: 600px) and (orientation: portrait) {\n    .header {\n        padding: 5px;\n    }\n}",
+        "o": [
+            "Adds padding to header",
+            "No change",
+            "Hides header",
+            "Changes header color"
+        ]
+    },
+    {
+        "q": "How do media queries enhance performance?",
+        "o": [
+            "By loading optimized CSS",
+            "By reducing file size",
+            "By adding animations",
+            "By debugging styles"
+        ]
+    },
+    {
+        "q": "What does this code achieve for screens larger than 1024px?",
+        "l": "css",
+        "c": "@media (min-width: 1024px) {\n    .sidebar {\n        display: grid;\n    }\n}",
+        "o": [
+            "Displays sidebar as grid",
+            "Hides sidebar",
+            "No effect",
+            "Changes sidebar color"
+        ]
+    },
+    {
+        "q": "What is the most common breakpoint for mobile devices?",
+        "o": [
+            "600px",
+            "1024px",
+            "768px",
+            "480px"
+        ]
+    },
+    {
+        "q": "What happens when the screen width is 480px?",
+        "l": "css",
+        "c": "@media (max-width: 480px) {\n    .content {\n        font-size: 12px;\n    }\n}",
+        "o": [
+            "Sets content font size to 12px",
+            "Sets font size to 14px",
+            "No change",
+            "Hides content"
+        ]
+    },
+    {
+        "q": "What unit is typically used for specifying resolution in media queries?",
+        "o": [
+            "dpi",
+            "px",
+            "rem",
+            "vw"
+        ]
+    },
+    {
+        "q": "What does this media query do for devices with height over 600px?",
+        "l": "css",
+        "c": "@media (min-height: 600px) {\n    .nav {\n        font-size: 16px;\n    }\n}",
+        "o": [
+            "Sets nav font size to 16px",
+            "No change",
+            "Sets nav font size to 20px",
+            "Hides nav"
+        ]
+    },
+    {
+        "q": "What is the smallest common breakpoint for mobile phones?",
+        "o": [
+            "320px",
+            "480px",
+            "600px",
+            "768px"
+        ]
+    },
+    {
+        "q": "What is targeted by this media query?",
+        "l": "css",
+        "c": "@media (min-width: 700px) and (max-width: 1200px) {\n    .container {\n        width: 80%;\n    }\n}",
+        "o": [
+            "Targets specific width range",
+            "No effect",
+            "Hides container",
+            "Changes container color"
+        ]
+    },
+    {
+        "q": "Which unit represents the viewport height in CSS?",
+        "o": [
+            "vh",
+            "vw",
+            "rem",
+            "em"
+        ]
+    },
+    {
+        "q": "What happens for devices with a width of 320px?",
+        "l": "css",
+        "c": "@media (max-width: 320px) {\n    .footer {\n        font-size: 10px;\n    }\n}",
+        "o": [
+            "Sets footer font size to 10px",
+            "No change",
+            "Sets footer font size to 14px",
+            "Hides footer"
+        ]
+    },
+    {
+        "q": "Which logical operator is used to negate a media query?",
+        "o": [
+            "not",
+            "and",
+            "or",
+            "only"
+        ]
+    },
+    {
+        "q": "What does this code do for screens larger than 900px?",
+        "l": "css",
+        "c": "@media (min-width: 900px) {\n    .header {\n        display: flex;\n    }\n}",
+        "o": [
+            "Displays header as flex",
+            "Hides header",
+            "No effect",
+            "Changes header color"
+        ]
+    },
+    {
+        "q": "Which unit is typically used to set media query breakpoints?",
+        "o": [
+            "px",
+            "rem",
+            "vw",
+            "vh"
+        ]
+    },
+    {
+        "q": "What effect does this media query have on max-width of 600px?",
+        "l": "css",
+        "c": "@media (max-width: 600px) {\n    .nav {\n        display: none;\n    }\n}",
+        "o": [
+            "Hides nav",
+            "Shows nav",
+            "No effect",
+            "Changes nav color"
+        ]
+    },
+    {
+        "q": "How do you target high-resolution screens in CSS?",
+        "o": [
+            "min-resolution",
+            "dpi",
+            "aspect-ratio",
+            "max-width"
+        ]
+    },
+    {
+        "q": "What happens when the viewport height is less than 400px?",
+        "l": "css",
+        "c": "@media (max-height: 400px) {\n    .sidebar {\n        display: block;\n    }\n}",
+        "o": [
+            "Displays sidebar",
+            "Hides sidebar",
+            "No effect",
+            "Changes sidebar color"
+        ]
+    },
+    {
+        "q": "What is the correct way to write a media query for devices with a width between 600px and 1200px?",
+        "o": [
+            "min-width: 600px and max-width: 1200px",
+            "width: 600px to 1200px",
+            "only screen between 600px and 1200px",
+            "screen width > 600px and < 1200px"
+        ]
+    },
+    {
+        "q": "What is the effect of this media query on landscape orientation?",
+        "l": "css",
+        "c": "@media (orientation: landscape) {\n    .banner {\n        height: 250px;\n    }\n}",
+        "o": [
+            "Sets banner height to 250px",
+            "No change",
+            "Sets banner height to 300px",
+            "Hides banner"
+        ]
+    },
+    {
+        "q": "What is the purpose of the 'min-height' property in a media query?",
+        "o": [
+            "To target devices taller than a certain height",
+            "To target devices shorter than a certain height",
+            "To target devices of exact height",
+            "To target all screen sizes"
+        ]
+    },
+    {
+        "q": "What happens for screens with a height greater than 800px?",
+        "l": "css",
+        "c": "@media (min-height: 800px) {\n    .main {\n        display: block;\n    }\n}",
+        "o": [
+            "Displays main",
+            "Hides main",
+            "No effect",
+            "Changes main color"
+        ]
+    },
+    {
+        "q": "How would you target screens with a height of 800px or more?",
+        "o": [
+            "@media (min-height: 800px)",
+            "@media (height >= 800px)",
+            "@media height: 800px",
+            "@media (screen-height >= 800px)"
+        ]
+    },
+    {
+        "q": "What does this media query do for a width less than 480px?",
+        "l": "css",
+        "c": "@media (max-width: 480px) {\n    .footer {\n        padding: 5px;\n    }\n}",
+        "o": [
+            "Adds padding to footer",
+            "No change",
+            "Hides footer",
+            "Changes footer color"
+        ]
+    },
+    {
+        "q": "Which of the following is the correct syntax to write a media query for screens in landscape mode?",
+        "o": [
+            "orientation: landscape",
+            "mode: landscape",
+            "landscape: true",
+            "aspect-ratio: landscape"
+        ]
+    },
+    {
+        "q": "What happens when the screen width is 1024px?",
+        "l": "css",
+        "c": "@media (width: 1024px) {\n    .header {\n        display: flex;\n    }\n}",
+        "o": [
+            "Displays header as flex",
+            "Hides header",
+            "No effect",
+            "Changes header color"
+        ]
+    },
+    {
+        "q": "What is a media feature used to check the color depth of a device?",
+        "o": [
+            "color",
+            "color-depth",
+            "bit-depth",
+            "resolution"
+        ]
+    },
+    {
+        "q": "What is targeted by this media query?",
+        "l": "css",
+        "c": "@media (max-width: 1200px) and (min-height: 600px) {\n    .content {\n        font-size: 14px;\n    }\n}",
+        "o": [
+            "Targets specific dimensions",
+            "No change",
+            "Hides content",
+            "Changes content color"
+        ]
+    },
+    {
+        "q": "What does 'aspect-ratio' media feature represent in a media query?",
+        "o": [
+            "The ratio of width to height of the screen",
+            "The screen's pixel density",
+            "The screen's resolution",
+            "The device's viewport size"
+        ]
+    },
+    {
+        "q": "What does this code achieve for screens smaller than 500px?",
+        "l": "css",
+        "c": "@media (max-width: 500px) {\n    .btn {\n        font-size: 10px;\n    }\n}",
+        "o": [
+            "Sets button font size to 10px",
+            "No change",
+            "Sets button font size to 12px",
+            "Hides button"
+        ]
+    },
+    {
+        "q": "How can you apply styles to devices that support touch?",
+        "o": [
+            "pointer: coarse",
+            "touch: enabled",
+            "input: touch",
+            "touch-enabled: true"
+        ]
+    },
+    {
+        "q": "What happens for screens wider than 1024px?",
+        "l": "css",
+        "c": "@media (min-width: 1024px) {\n    .container {\n        margin: 0;\n    }\n}",
+        "o": [
+            "Removes margin from container",
+            "No change",
+            "Adds padding to container",
+            "Hides container"
+        ]
+    },
+    {
+        "q": "What is the purpose of 'hover' in a media query?",
+        "o": [
+            "To target devices that can detect a hover action",
+            "To target devices with touch screens",
+            "To apply hover states in CSS",
+            "To target devices with mouse inputs"
+        ]
+    },
+    {
+        "q": "What effect does this media query have on minimum height of 500px?",
+        "l": "css",
+        "c": "@media (min-height: 500px) {\n    .header {\n        display: block;\n    }\n}",
+        "o": [
+            "Displays header",
+            "Hides header",
+            "No effect",
+            "Changes header color"
+        ]
+    },
+    {
+        "q": "Which media feature is used to check the number of bits per color component on a device?",
+        "o": [
+            "color-depth",
+            "bit-resolution",
+            "bits-per-pixel",
+            "color-bits"
+        ]
+    },
+    {
+        "q": "What does this media query do for a maximum width of 400px?",
+        "l": "css",
+        "c": "@media (max-width: 400px) {\n    .card {\n        padding: 10px;\n    }\n}",
+        "o": [
+            "Adds padding to card",
+            "No change",
+            "Hides card",
+            "Changes card color"
+        ]
+    },
+    {
+        "q": "How can you write a media query that targets only print media?",
+        "o": [
+            "@media print",
+            "@media (print)",
+            "@media type: print",
+            "@media (only print)"
+        ]
+    },
+    {
+        "q": "What happens for devices with height less than 300px?",
+        "l": "css",
+        "c": "@media (max-height: 300px) {\n    .footer {\n        display: none;\n    }\n}",
+        "o": [
+            "Hides footer",
+            "Shows footer",
+            "No effect",
+            "Changes footer color"
+        ]
+    },
+    {
+        "q": "Which media query property checks the device\u00e2\u20ac\u2122s pixel density?",
+        "o": [
+            "resolution",
+            "dpi",
+            "color-depth",
+            "aspect-ratio"
+        ]
+    },
+    {
+        "q": "What does this media query do for orientation landscape?",
+        "l": "css",
+        "c": "@media (orientation: landscape) {\n    .nav {\n        display: block;\n    }\n}",
+        "o": [
+            "Displays nav",
+            "Hides nav",
+            "No effect",
+            "Changes nav color"
+        ]
+    },
+    {
+        "q": "What is the correct way to write a media query for retina displays?",
+        "o": [
+            "@media (min-resolution: 192dpi)",
+            "@media (resolution >= 2x)",
+            "@media (pixel-ratio: 2)",
+            "@media (dpi >= 192)"
+        ]
+    },
+    {
+        "q": "What happens for screens smaller than 320px?",
+        "l": "css",
+        "c": "@media (max-width: 320px) {\n    .sidebar {\n        display: none;\n    }\n}",
+        "o": [
+            "Hides sidebar",
+            "Shows sidebar",
+            "No effect",
+            "Changes sidebar color"
+        ]
+    },
+    {
+        "q": "What is the use of 'device-width' in a media query?",
+        "o": [
+            "To target devices with a specific width",
+            "To target screens based on window size",
+            "To check the available screen height",
+            "To limit styles to certain browsers"
+        ]
+    },
+    {
+        "q": "What does this media query achieve for max-width of 768px?",
+        "l": "css",
+        "c": "@media (max-width: 768px) {\n    .header {\n        font-size: 14px;\n    }\n}",
+        "o": [
+            "Sets header font size to 14px",
+            "No change",
+            "Sets header font size to 18px",
+            "Hides header"
+        ]
+    },
+    {
+        "q": "How would you apply styles to screens wider than 400px but narrower than 800px?",
+        "o": [
+            "@media (min-width: 400px) and (max-width: 800px)",
+            "@media (width: 400px to 800px)",
+            "@media (screen-width: 400px - 800px)",
+            "@media (size: 400px 800px)"
+        ]
+    },
+    {
+        "q": "What effect does this media query have for devices wider than 1024px?",
+        "l": "css",
+        "c": "@media (min-width: 1024px) {\n    .main {\n        display: flex;\n    }\n}",
+        "o": [
+            "Displays main as flex",
+            "Hides main",
+            "No effect",
+            "Changes main color"
+        ]
+    },
+    {
+        "q": "Which media query property checks whether the device supports hover interactions?",
+        "o": [
+            "hover",
+            "pointer",
+            "interaction",
+            "input-mode"
+        ]
+    },
+    {
+        "q": "What is targeted by this media query?",
+        "l": "css",
+        "c": "@media (min-width: 600px) and (max-height: 800px) {\n    .content {\n        display: grid;\n    }\n}",
+        "o": [
+            "Targets specific dimensions",
+            "No change",
+            "Hides content",
+            "Changes content color"
+        ]
+    },
+    {
+        "q": "What does the 'device-aspect-ratio' media feature represent?",
+        "o": [
+            "The ratio of the device screen width to height",
+            "The size of the device screen",
+            "The screen resolution",
+            "The device color depth"
+        ]
+    },
+    {
+        "q": "How would you target screens with high contrast mode enabled?",
+        "o": [
+            "forced-colors: active",
+            "contrast: high",
+            "color-scheme: dark",
+            "display-mode: contrast"
+        ]
+    },
+    {
+        "q": "What is the correct media query to target devices with a pointer that is fine, like a mouse?",
+        "o": [
+            "@media (pointer: fine)",
+            "@media (fine-pointer)",
+            "@media (device-pointer: fine)",
+            "@media (pointer-type: mouse)"
+        ]
+    },
+    {
+        "q": "Which media query property checks if a screen has more than 2x pixel density?",
+        "o": [
+            "resolution",
+            "device-pixel-ratio",
+            "dpi",
+            "pixel-ratio"
+        ]
+    },
+    {
+        "q": "How do you create a media query for screens with a height less than 600px?",
+        "o": [
+            "@media (max-height: 600px)",
+            "@media (min-height < 600px)",
+            "@media (height < 600px)",
+            "@media (screen-height < 600px)"
+        ]
+    },
+    {
+        "q": "Which CSS property can be used with media queries to ensure a consistent layout across devices with different aspect ratios?",
+        "o": [
+            "aspect-ratio",
+            "flex-direction",
+            "grid-template",
+            "position"
+        ]
+    },
+    {
+        "q": "Which media feature checks the width of the device's screen, excluding any browser interface or operating system features?",
+        "o": [
+            "device-width",
+            "viewport-width",
+            "screen-width",
+            "window-width"
+        ]
+    },
+    {
+        "q": "What does 'max-resolution' in a media query refer to?",
+        "o": [
+            "The maximum screen resolution in dpi",
+            "The maximum device width",
+            "The maximum color depth",
+            "The maximum aspect ratio"
+        ]
+    },
+    {
+        "q": "Which media query would you use to apply styles for devices with a color depth of at least 24 bits?",
+        "o": [
+            "@media (min-color: 24)",
+            "@media (color-depth: 24)",
+            "@media (color >= 24)",
+            "@media (bit-depth: 24)"
+        ]
+    },
+    {
+        "q": "How do you apply styles only to screens with a resolution of 144dpi or higher?",
+        "o": [
+            "@media (min-resolution: 144dpi)",
+            "@media (resolution >= 144dpi)",
+            "@media (dpi >= 144)",
+            "@media (high-resolution: true)"
+        ]
+    }
+]

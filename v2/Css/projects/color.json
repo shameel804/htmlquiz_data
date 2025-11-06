@@ -1,0 +1,222 @@
+[
+  {
+    "title": "Hex and RGB Color Formats",
+    "ques": "How can you set a background color using both Hex and RGB formats?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "body {\n  background-color: #3498db; /* Hex Format */\n  background-color: rgb(52, 152, 219); /* RGB Format */\n}"
+    },
+    "explanation": "***Hex format*** is represented using a hash (#) followed by six characters. \n\n- ```#3498db``` sets a blue background color. \n- The first two characters (34) represent red, the next two (98) represent green, and the last two (db) represent blue.\n\n***RGB format*** uses the function ```rgb(r, g, b)```, where:\n\n- ```rgb(52, 152, 219)``` is equivalent to ```#3498db```.\n- The numbers inside ```rgb()``` represent red, green, and blue values (0-255)."
+  },
+  {
+    "title": "RGBA and Opacity",
+    "ques": "How do you set a semi-transparent background color using RGBA?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  background-color: rgba(255, 0, 0, 0.5); /* Red with 50% opacity */\n}"
+    },
+    "explanation": "The ```rgba()``` function allows setting colors with an ***alpha (opacity)*** value:\n\n- ```rgba(255, 0, 0, 0.5)``` represents red (```255, 0, 0```) with ***50% opacity*** (```0.5```).\n- The fourth parameter in ```rgba()``` ranges from ```0``` (fully transparent) to ```1``` (fully opaque)."
+  },
+  {
+    "title": "Linear Gradient",
+    "ques": "How do you create a background with a linear gradient from blue to green?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "body {\n  background: linear-gradient(to right, blue, green);\n}"
+    },
+    "explanation": "***Linear gradients*** create a smooth transition between colors:\n\n- ```linear-gradient(to right, blue, green);``` transitions from ***blue*** to ***green***.\n- ```to right``` specifies the gradient direction (left to right)."
+  },
+  {
+    "title": "Radial Gradient",
+    "ques": "How can you create a radial gradient with yellow in the center and black on the edges?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  background: radial-gradient(circle, yellow, black);\n}"
+    },
+    "explanation": "***Radial gradients*** radiate outward from a center point:\n\n- ```radial-gradient(circle, yellow, black);``` starts with ***yellow*** in the center and blends into ***black***.\n- The ```circle``` keyword ensures a circular gradient."
+  },
+  {
+    "title": "Using a Background Image",
+    "ques": "How can you set a background image and make sure it covers the entire page?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "body {\n  background-image: url('background.jpg');\n  background-size: cover;\n  background-repeat: no-repeat;\n}"
+    },
+    "explanation": "To set a ***background image*** and ensure it covers the full page:\n\n- ```background-image: url('background.jpg');``` loads the image.\n- ```background-size: cover;``` scales the image to fit the entire screen.\n- ```background-repeat: no-repeat;``` prevents tiling."
+  },
+  {
+    "title": "HSL Color Format",
+    "ques": "How can you set a background color using the HSL format?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "body {\n  background-color: hsl(200, 70%, 50%); /* Blue shade */\n}"
+    },
+    "explanation": "***HSL (Hue, Saturation, Lightness)*** is an alternative way to define colors:\n\n- ```hsl(200, 70%, 50%)``` means:\n  - ***200*** is the hue (color), where 0 = red, 120 = green, and 240 = blue.\n  - ***70%*** is the saturation (color intensity, where 0% is gray, 100% is full color).\n  - ***50%*** is the lightness (0% is black, 100% is white)."
+  },
+  {
+    "title": "HSLA for Transparency",
+    "ques": "How do you create a semi-transparent green background using HSLA?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  background-color: hsla(120, 100%, 50%, 0.5); /* Semi-transparent green */\n}"
+    },
+    "explanation": "***HSLA*** is the HSL format with an ***alpha (transparency)*** value:\n\n- ```hsla(120, 100%, 50%, 0.5);``` means:\n  - ```120``` = ***green*** hue.\n  - ```100%``` = ***full saturation*** (most vivid green).\n  - ```50%``` = ***normal brightness***.\n  - ```0.5``` = ***50% transparency***."
+  },
+  {
+    "title": "Diagonal Linear Gradient",
+    "ques": "How do you create a diagonal gradient from red to blue?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "body {\n  background: linear-gradient(45deg, red, blue);\n}"
+    },
+    "explanation": "A ***linear gradient*** can be set at an angle:\n\n- ```linear-gradient(45deg, red, blue);``` creates a diagonal gradient at ***45 degrees***.\n- The transition smoothly blends from ***red*** to ***blue*** along the diagonal."
+  },
+  {
+    "title": "Repeating Linear Gradient",
+    "ques": "How do you create a repeating striped background effect?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  background: repeating-linear-gradient(90deg, yellow, yellow 10px, black 10px, black 20px);\n}"
+    },
+    "explanation": "A ***repeating linear gradient*** creates a striped effect:\n\n- ```90deg``` sets the stripes to run ***vertically***.\n- The color stops define the stripe pattern:\n  - ```yellow 10px``` means yellow extends for 10px.\n  - ```black 10px, black 20px``` means black starts at 10px and extends to 20px.\n- The pattern ***repeats infinitely***."
+  },
+  {
+    "title": "Using Multiple Background Images",
+    "ques": "How can you set multiple background images on an element?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  background-image: url('pattern.png'), url('background.jpg');\n  background-size: auto, cover;\n  background-repeat: repeat, no-repeat;\n}"
+    },
+    "explanation": "Multiple background images can be layered:\n\n- The ***first*** image (```pattern.png```) is placed above the second (```background.jpg```).\n- ```background-size: auto, cover;``` sets the first image to its ***original size*** and the second to ***cover the entire area***.\n- ```background-repeat: repeat, no-repeat;``` repeats the ***first image*** (pattern) and prevents tiling of the ***second image***."
+  },
+  {
+    "title": "Fixed Background Image",
+    "ques": "How do you make a background image stay fixed while scrolling?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "body {\n  background-image: url('background.jpg');\n  background-attachment: fixed;\n}"
+    },
+    "explanation": "***Fixed backgrounds*** stay in place when scrolling:\n\n- ```background-attachment: fixed;``` ensures the image does ***not move*** with page scroll.\n- This is useful for ***parallax effects*** and keeps the background static."
+  },
+  {
+    "title": "Gradient Over Background Image",
+    "ques": "How do you add a semi-transparent gradient over a background image?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');\n  background-size: cover;\n}"
+    },
+    "explanation": "A ***gradient overlay*** can enhance readability over images:\n\n- The ```linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))``` adds a ***semi-transparent black layer*** over the image.\n- The ***comma*** separates the gradient from the image.\n- ```background-size: cover;``` ensures the image fits the full container."
+  },
+  {
+    "title": "Blurred Background Effect",
+    "ques": "How do you blur a background image while keeping text clear?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".background {\n  background-image: url('background.jpg');\n  filter: blur(5px);\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  z-index: -1;\n}"
+    },
+    "explanation": "Blurring a ***background image*** without affecting text:\n\n- ```filter: blur(5px);``` applies a ***5-pixel blur***.\n- ```position: absolute;``` places the image behind content.\n- ```z-index: -1;``` ensures the background stays ***behind other elements***."
+  },
+  {
+    "title": "RGBA Color Transparency",
+    "ques": "How do you set a background color with 50% transparency using RGBA?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  background-color: rgba(255, 0, 0, 0.5); /* Semi-transparent red */\n}"
+    },
+    "explanation": "***RGBA (Red, Green, Blue, Alpha)*** allows for transparency:\n\n- ```rgba(255, 0, 0, 0.5)``` means:\n  - ***255, 0, 0*** = full red color.\n  - ***0.5*** = 50% transparency (0 = fully transparent, 1 = fully opaque)."
+  },
+  {
+    "title": "Text with Background Gradient",
+    "ques": "How do you apply a gradient background to text?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "h1 {\n  background: linear-gradient(to right, blue, purple);\n  -webkit-background-clip: text;\n  color: transparent;\n}"
+    },
+    "explanation": "To apply a ***gradient*** to text:\n\n- ```linear-gradient(to right, blue, purple);``` creates a gradient from ***blue to purple***.\n- ```-webkit-background-clip: text;``` clips the gradient to ***only affect the text***.\n- ```color: transparent;``` makes the text ***see-through*** so the gradient shows."
+  },
+  {
+    "title": "Radial Gradient",
+    "ques": "How do you create a circular gradient background?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  background: radial-gradient(circle, yellow, orange, red);\n}"
+    },
+    "explanation": "***Radial gradients*** spread outward from a center point:\n\n- ```radial-gradient(circle, yellow, orange, red);``` creates a circular gradient ***starting from yellow at the center and transitioning to red at the edges***."
+  },
+  {
+    "title": "Gradient Border",
+    "ques": "How do you create a border with a gradient effect?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  border: 5px solid;\n  border-image: linear-gradient(to right, blue, purple) 1;\n}"
+    },
+    "explanation": "A ***gradient border*** can be applied using:\n\n- ```border: 5px solid;``` defines a ***solid border***.\n- ```border-image: linear-gradient(to right, blue, purple) 1;``` applies a ***gradient as the border***."
+  },
+  {
+    "title": "Gradient Button Hover Effect",
+    "ques": "How do you create a button that changes gradient color on hover?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "button {\n  background: linear-gradient(to right, blue, green);\n  border: none;\n  padding: 10px 20px;\n  color: white;\n  cursor: pointer;\n}\nbutton:hover {\n  background: linear-gradient(to right, red, yellow);\n}"
+    },
+    "explanation": "A ***hover effect*** can change the button’s gradient:\n\n- Default state: ```linear-gradient(to right, blue, green);```\n- Hover state: ```linear-gradient(to right, red, yellow);``` changes the gradient when hovered."
+  },
+  {
+    "title": "Background Image with Opacity",
+    "ques": "How do you create a background image with an overlay effect?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  position: relative;\n}\ndiv::before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: url('background.jpg');\n  opacity: 0.5;\n  z-index: -1;\n}"
+    },
+    "explanation": "To create a ***background image with opacity*** without affecting text:\n\n- ```div::before``` adds a pseudo-element ***over the background***.\n- ```opacity: 0.5;``` makes the image ***semi-transparent***."
+  },
+  {
+    "title": "Multiple Gradient Layers",
+    "ques": "How do you create a background with multiple overlapping gradients?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  background: radial-gradient(circle, rgba(255, 0, 0, 0.5), transparent),\n              linear-gradient(to right, blue, purple);\n}"
+    },
+    "explanation": "Layering ***multiple gradients*** creates depth:\n\n- ```radial-gradient(circle, rgba(255, 0, 0, 0.5), transparent)``` adds a ***red glow***.\n- ```linear-gradient(to right, blue, purple);``` is the ***main background***."
+  },
+  {
+    "title": "Textured Background with CSS Patterns",
+    "ques": "How do you create a dotted pattern background using only CSS?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "body {\n  background: radial-gradient(circle, black 10%, transparent 10%) 0 0 / 20px 20px;\n}"
+    },
+    "explanation": "A ***dotted pattern*** can be created using gradients:\n\n- ```radial-gradient(circle, black 10%, transparent 10%)``` creates ***small black circles***.\n- ```0 0 / 20px 20px;``` defines the ***spacing between dots***."
+  },
+  {
+    "title": "Parallax Scrolling Effect",
+    "ques": "How do you create a parallax scrolling background?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "body {\n  background: url('background.jpg') fixed;\n  background-size: cover;\n}"
+    },
+    "explanation": "A ***parallax effect*** makes the background stay still while content scrolls:\n\n- ```background: url('background.jpg') fixed;``` ensures the ***background does not move***.\n- ```background-size: cover;``` scales the image to ***fit the screen***."
+  }
+]

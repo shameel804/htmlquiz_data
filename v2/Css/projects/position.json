@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Static Positioning",
+    "ques": "What is the default position of an HTML element, and how does it behave?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  position: static;\n}"
+    },
+    "explanation": "By default, all HTML elements have ***static*** positioning.\n\n- When an element has ```position: static;```, it follows the normal document flow.\n- It does not respond to ```top```, ```right```, ```bottom```, or ```left``` properties.\n- This means that elements appear in the order they are written in the HTML.\n\nExample:\n```html\n<div style=\"position: static;\">This is a static div</div>\n```\nThis div will remain in its normal position."
+  },
+  {
+    "title": "Relative Positioning",
+    "ques": "How does relative positioning affect an element's placement?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  position: relative;\n  top: 20px;\n  left: 10px;\n}"
+    },
+    "explanation": "***Relative positioning*** moves an element relative to its normal position.\n\n- The element still occupies its original space in the document flow.\n- Using ```top: 20px;``` moves the element ***20px downward*** from its normal position.\n- Using ```left: 10px;``` moves the element ***10px to the right***.\n- Other elements are not affected by this movement.\n\nExample:\n```html\n<div style=\"position: relative; top: 20px; left: 10px;\">This is a relative div</div>\n```\nThis div will move but still keep its original space reserved."
+  },
+  {
+    "title": "Absolute Positioning",
+    "ques": "How does absolute positioning affect an element's placement?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  position: absolute;\n  top: 50px;\n  left: 100px;\n}"
+    },
+    "explanation": "***Absolute positioning*** removes an element from the normal document flow.\n\n- The element is positioned ***relative to the nearest positioned ancestor***.\n- If no ancestor has a ```position``` other than ```static```, it is placed relative to the ```<html>``` element.\n- ```top: 50px;``` moves the element ***50px downward*** from the reference point.\n- ```left: 100px;``` moves the element ***100px to the right***.\n\nExample:\n```html\n<div style=\"position: absolute; top: 50px; left: 100px;\">This is an absolute div</div>\n```\nThis div will not reserve space and will be positioned freely."
+  },
+  {
+    "title": "Fixed Positioning",
+    "ques": "How does fixed positioning behave when scrolling the page?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  position: fixed;\n  top: 10px;\n  right: 10px;\n}"
+    },
+    "explanation": "***Fixed positioning*** makes an element stay in place even when scrolling.\n\n- The element is positioned relative to the ***viewport*** (browser window).\n- ```top: 10px;``` keeps the element ***10px from the top of the viewport***.\n- ```right: 10px;``` keeps the element ***10px from the right of the viewport***.\n- The element does not move when scrolling.\n\nExample:\n```html\n<div style=\"position: fixed; top: 10px; right: 10px;\">This is a fixed div</div>\n```\nThis div remains visible at the top-right corner, even when scrolling."
+  },
+  {
+    "title": "Sticky Positioning",
+    "ques": "How does sticky positioning work in a scrolling container?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  position: sticky;\n  top: 0;\n  background-color: yellow;\n}"
+    },
+    "explanation": "***Sticky positioning*** allows an element to act both as ```relative``` and ```fixed```.\n\n- It behaves like ```relative``` ***until*** the user scrolls past a set threshold.\n- Once scrolled past, it becomes ***fixed at that position***.\n- ```top: 0;``` makes the element stick to the ***top of its container*** when scrolling.\n\nExample:\n```html\n<div style=\"position: sticky; top: 0; background-color: yellow;\">This is a sticky div</div>\n```\nThis div will stay at the top when the user scrolls past it."
+  },
+  {
+    "title": "Understanding Static Positioning",
+    "ques": "What happens when an element is set to 'position: static' and margin is applied?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "div {\n  position: static;\n  margin: 20px;\n  padding: 10px;\n  background-color: lightblue;\n}"
+    },
+    "explanation": "***Static positioning*** follows the normal document flow.\n\n- ```margin: 20px;``` adds spacing around the element, pushing other elements away.\n- ```padding: 10px;``` increases internal spacing inside the element.\n- The element does ***not*** respond to ```top```, ```left```, ```right```, or ```bottom``` properties.\n\nExample:\n```html\n<div style=\"position: static; margin: 20px; padding: 10px; background-color: lightblue;\">This is a static div with margin</div>\n```\nThis div will push away neighboring elements while staying in its default place."
+  },
+  {
+    "title": "Relative Positioning with Overlapping Elements",
+    "ques": "How can relative positioning cause elements to overlap?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".box1 {\n  position: relative;\n  top: 30px;\n  left: 20px;\n  background-color: red;\n}\n\n.box2 {\n  position: relative;\n  top: -10px;\n  left: 50px;\n  background-color: blue;\n}"
+    },
+    "explanation": "***Relative positioning*** moves an element without affecting other elements' positions.\n\n- ```.box1``` is moved ***30px down*** and ***20px right*** from its original place.\n- ```.box2``` is moved ***10px up*** (negative top value) and ***50px right***.\n- Since both elements retain their original space, they might overlap.\n\nExample:\n```html\n<div class=\"box1\">Box 1</div>\n<div class=\"box2\">Box 2</div>\n```\nThis setup can cause overlapping if the elements are close."
+  },
+  {
+    "title": "Absolute Positioning inside a Relative Parent",
+    "ques": "How does an absolutely positioned element behave inside a relatively positioned parent?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".container {\n  position: relative;\n  width: 200px;\n  height: 200px;\n  background-color: lightgray;\n}\n\n.child {\n  position: absolute;\n  bottom: 10px;\n  right: 10px;\n  background-color: orange;\n}"
+    },
+    "explanation": "***Absolute positioning*** moves an element relative to its closest positioned ancestor.\n\n- ```.container``` has ```position: relative;```, so ```.child``` will be positioned inside it.\n- ```bottom: 10px;``` places ```.child``` ***10px above the bottom*** of ```.container```.\n- ```right: 10px;``` moves it ***10px from the right***.\n\nExample:\n```html\n<div class=\"container\">\n  <div class=\"child\">I'm absolutely positioned</div>\n</div>\n```\nThe child div will be positioned at the bottom-right of the container."
+  },
+  {
+    "title": "Fixed Positioning for a Navigation Bar",
+    "ques": "How can fixed positioning be used to create a sticky navigation bar?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "nav {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  background-color: black;\n  color: white;\n  padding: 10px;\n}"
+    },
+    "explanation": "***Fixed positioning*** makes an element stay in place even when scrolling.\n\n- ```position: fixed;``` makes the navbar always visible at the ***top of the screen***.\n- ```width: 100%;``` ensures it stretches across the entire width.\n- This is useful for navigation bars to keep them visible at all times.\n\nExample:\n```html\n<nav>Fixed Navbar</nav>\n```\nThe navbar stays fixed at the top of the page while scrolling."
+  },
+  {
+    "title": "Sticky Positioning in a Table Header",
+    "ques": "How can sticky positioning be used to keep a table header visible while scrolling?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "th {\n  position: sticky;\n  top: 0;\n  background-color: gray;\n  color: white;\n}"
+    },
+    "explanation": "***Sticky positioning*** allows elements to remain fixed when scrolling reaches a certain point.\n\n- ```position: sticky;``` keeps the ```<th>``` ***stuck at the top*** when scrolling.\n- ```top: 0;``` ensures it stays at the very top of its container.\n- This is useful for keeping table headers visible while scrolling.\n\nExample:\n```html\n<table>\n  <thead>\n    <tr>\n      <th>Sticky Header</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr><td>Row 1</td></tr>\n    <tr><td>Row 2</td></tr>\n  </tbody>\n</table>\n```\nThe header stays visible as the user scrolls down the table."
+  },
+  {
+    "title": "Z-Index with Absolute Positioning",
+    "ques": "How can z-index be used to control overlapping elements?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".box1 {\n  position: absolute;\n  top: 50px;\n  left: 50px;\n  width: 100px;\n  height: 100px;\n  background-color: red;\n  z-index: 1;\n}\n\n.box2 {\n  position: absolute;\n  top: 70px;\n  left: 70px;\n  width: 100px;\n  height: 100px;\n  background-color: blue;\n  z-index: 2;\n}"
+    },
+    "explanation": "***Z-index*** controls the stack order of overlapping elements.\n\n- ```.box1``` is positioned at ```(50px, 50px)``` and has ```z-index: 1;```.\n- ```.box2``` is positioned at ```(70px, 70px)```, slightly overlapping ```.box1```.\n- ```.box2``` has ```z-index: 2;```, meaning it will appear ***on top of*** ```.box1```.\n\nExample:\n```html\n<div class=\"box1\">Box 1</div>\n<div class=\"box2\">Box 2</div>\n```\nSince ```.box2``` has a higher ```z-index```, it will be placed above ```.box1```."
+  }
+]

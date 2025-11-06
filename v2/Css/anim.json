@@ -1,0 +1,1922 @@
+[
+    {
+        "q": "What effect does this CSS transition create?",
+        "l": "css",
+        "c": "div {\n  transition: width 2s ease-in-out;\n}",
+        "o": [
+            "Smooth start and end, 2s width change",
+            "Instant width change",
+            "Constant speed width change",
+            "Fast start, slow end"
+        ]
+    },
+    {
+        "q": "What property is used for CSS transitions?",
+        "o": [
+            "transition",
+            "animation",
+            "transform",
+            "keyframe"
+        ]
+    },
+    {
+        "q": "What does this animation do?",
+        "l": "css",
+        "c": "@keyframes example {\n  0% {opacity: 0;}\n  100% {opacity: 1;}\n}\ndiv {\n  animation: example 3s linear;\n}",
+        "o": [
+            "Fades in over 3 seconds",
+            "Fades out over 3 seconds",
+            "Constant visibility",
+            "Fades in and out"
+        ]
+    },
+    {
+        "q": "Which function defines the speed curve of a transition?",
+        "o": [
+            "ease",
+            "duration",
+            "delay",
+            "transform"
+        ]
+    },
+    {
+        "q": "What happens when the button is hovered?",
+        "l": "css",
+        "c": "button {\n  transition: background-color 0.5s ease;\n}\nbutton:hover {\n  background-color: blue;\n}",
+        "o": [
+            "Smooth color change to blue",
+            "Instant color change to blue",
+            "No color change",
+            "Color fades in 1 second"
+        ]
+    },
+    {
+        "q": "What does @keyframes define?",
+        "o": [
+            "animation sequence",
+            "transition timing",
+            "element style",
+            "visibility"
+        ]
+    },
+    {
+        "q": "What does the following animation achieve?",
+        "l": "css",
+        "c": "@keyframes move {\n  0% {transform: translateX(0);}\n  100% {transform: translateX(100px);}\n}\ndiv {\n  animation: move 2s ease-out;\n}",
+        "o": [
+            "Moves 100px to the right with a fast start",
+            "Moves 100px to the left",
+            "Moves 50px with a slow end",
+            "Moves instantly"
+        ]
+    },
+    {
+        "q": "What property is required for animations?",
+        "o": [
+            "animation-name",
+            "transition-name",
+            "transform-name",
+            "delay-name"
+        ]
+    },
+    {
+        "q": "What happens to the element with this transition?",
+        "l": "css",
+        "c": "div {\n  transition: opacity 1s ease-in-out;\n}\ndiv:hover {\n  opacity: 0;\n}",
+        "o": [
+            "Fades out slowly when hovered",
+            "Instantly becomes invisible",
+            "Fades out instantly",
+            "Doesn't change opacity"
+        ]
+    },
+    {
+        "q": "Which easing function starts slow and ends fast?",
+        "o": [
+            "ease-in",
+            "ease-out",
+            "linear",
+            "ease-in-out"
+        ]
+    },
+    {
+        "q": "What happens with the background-color change?",
+        "l": "css",
+        "c": "div {\n  background-color: red;\n  transition: background-color 0.5s;\n}\ndiv:hover {\n  background-color: green;\n}",
+        "o": [
+            "Changes to green over 0.5 seconds",
+            "Instantly changes to green",
+            "Changes to blue over 1 second",
+            "Fades out the background color"
+        ]
+    },
+    {
+        "q": "What is the default value of transition-timing-function?",
+        "o": [
+            "ease",
+            "linear",
+            "ease-in",
+            "ease-out"
+        ]
+    },
+    {
+        "q": "What does this keyframe animation do?",
+        "l": "css",
+        "c": "@keyframes pulse {\n  0% {transform: scale(1);}\n  50% {transform: scale(1.2);}\n  100% {transform: scale(1);}\n}\ndiv {\n  animation: pulse 1s infinite;\n}",
+        "o": [
+            "Element expands and contracts repeatedly",
+            "Element stays expanded",
+            "Element stays contracted",
+            "Element moves horizontally"
+        ]
+    },
+    {
+        "q": "What unit can transition duration be set in?",
+        "o": [
+            "seconds",
+            "pixels",
+            "percent",
+            "em"
+        ]
+    },
+    {
+        "q": "What happens to the element's width with this CSS?",
+        "l": "css",
+        "c": "div {\n  transition: width 2s ease-in-out;\n  width: 100px;\n}\ndiv:hover {\n  width: 200px;\n}",
+        "o": [
+            "Width changes smoothly to 200px",
+            "Width changes instantly to 200px",
+            "No change in width",
+            "Width changes after 3 seconds"
+        ]
+    },
+    {
+        "q": "Which property allows for delaying a transition?",
+        "o": [
+            "transition-delay",
+            "animation-delay",
+            "transition-timing",
+            "keyframe-delay"
+        ]
+    },
+    {
+        "q": "What does this CSS animation achieve?",
+        "l": "css",
+        "c": "@keyframes rotate {\n  0% {transform: rotate(0deg);}\n  100% {transform: rotate(360deg);}\n}\ndiv {\n  animation: rotate 4s infinite linear;\n}",
+        "o": [
+            "Rotates continuously at constant speed",
+            "Rotates once then stops",
+            "Rotates and fades",
+            "Moves up and down"
+        ]
+    },
+    {
+        "q": "What is the purpose of transition-duration?",
+        "o": [
+            "specify time",
+            "define easing",
+            "set delay",
+            "initiate animation"
+        ]
+    },
+    {
+        "q": "What happens to the text opacity with this CSS?",
+        "l": "css",
+        "c": "p {\n  transition: opacity 1.5s ease;\n}\np:hover {\n  opacity: 0.5;\n}",
+        "o": [
+            "Text fades to 50% opacity",
+            "Text fades to 100% opacity",
+            "Text becomes invisible",
+            "Text stays fully visible"
+        ]
+    },
+    {
+        "q": "What type of animation loops indefinitely?",
+        "o": [
+            "infinite",
+            "alternate",
+            "normal",
+            "ease"
+        ]
+    },
+    {
+        "q": "What does this CSS snippet do?",
+        "l": "css",
+        "c": "div {\n  transition: all 1s ease;\n}\ndiv:hover {\n  width: 150px;\n  height: 150px;\n  background-color: yellow;\n}",
+        "o": [
+            "Smooth transition of width, height, and color",
+            "Instant transition of width, height, and color",
+            "No change in size or color",
+            "Only background color changes"
+        ]
+    },
+    {
+        "q": "Which CSS property cannot be transitioned?",
+        "o": [
+            "display",
+            "opacity",
+            "color",
+            "background"
+        ]
+    },
+    {
+        "q": "What effect does the delay cause in this animation?",
+        "l": "css",
+        "c": "@keyframes fadeIn {\n  0% {opacity: 0;}\n  100% {opacity: 1;}\n}\ndiv {\n  animation: fadeIn 2s 1s ease;\n}",
+        "o": [
+            "Starts fading in after 1 second",
+            "Instantly fades in",
+            "Fades out after 1 second",
+            "Starts fading after 2 seconds"
+        ]
+    },
+    {
+        "q": "What is the syntax for defining keyframes?",
+        "o": [
+            "@keyframes",
+            "@frames",
+            "@animation",
+            "@transition"
+        ]
+    },
+    {
+        "q": "What does the following CSS create?",
+        "l": "css",
+        "c": "div {\n  transition: transform 0.5s ease-out;\n}\ndiv:hover {\n  transform: scale(1.5);\n}",
+        "o": [
+            "Smoothly scales up when hovered",
+            "Instantly scales up when hovered",
+            "No scaling occurs",
+            "Scales down when hovered"
+        ]
+    },
+    {
+        "q": "What effect does ease-in-out create?",
+        "o": [
+            "slow start and end",
+            "fast start",
+            "fast end",
+            "linear"
+        ]
+    },
+    {
+        "q": "What happens to the element's color with this CSS?",
+        "l": "css",
+        "c": "div {\n  background-color: orange;\n  transition: background-color 1s ease;\n}\ndiv:hover {\n  background-color: purple;\n}",
+        "o": [
+            "Smoothly changes color to purple",
+            "Instantly changes color to purple",
+            "No color change",
+            "Color changes to red"
+        ]
+    },
+    {
+        "q": "Which property applies styles at certain keyframes?",
+        "o": [
+            "animation",
+            "transition",
+            "keyframes",
+            "transform"
+        ]
+    },
+    {
+        "q": "What happens to the element during this animation?",
+        "l": "css",
+        "c": "@keyframes slideIn {\n  from {transform: translateX(-100%);}\n  to {transform: translateX(0);}\n}\ndiv {\n  animation: slideIn 2s ease-in-out;\n}",
+        "o": [
+            "Slides in from the left",
+            "Slides out to the right",
+            "Slides in from the right",
+            "Doesn't move"
+        ]
+    },
+    {
+        "q": "What is the shorthand for transition properties?",
+        "o": [
+            "transition",
+            "anim",
+            "timing",
+            "keyframe"
+        ]
+    },
+    {
+        "q": "What happens to the height of the element?",
+        "l": "css",
+        "c": "div {\n  height: 100px;\n  transition: height 1s ease-in;\n}\ndiv:hover {\n  height: 200px;\n}",
+        "o": [
+            "Height increases gradually",
+            "Height changes instantly",
+            "Height decreases",
+            "No change in height"
+        ]
+    },
+    {
+        "q": "Which easing function creates a constant speed?",
+        "o": [
+            "linear",
+            "ease-in",
+            "ease-out",
+            "ease-in-out"
+        ]
+    },
+    {
+        "q": "What is the outcome of this CSS?",
+        "l": "css",
+        "c": "div {\n  transition: margin-left 1s ease;\n}\ndiv:hover {\n  margin-left: 50px;\n}",
+        "o": [
+            "Moves 50px to the right smoothly",
+            "Moves instantly",
+            "Moves to the left",
+            "No movement"
+        ]
+    },
+    {
+        "q": "What happens if no duration is specified in a transition?",
+        "o": [
+            "no effect",
+            "immediate",
+            "default time",
+            "slower"
+        ]
+    },
+    {
+        "q": "What happens when the element is hovered?",
+        "l": "css",
+        "c": "div {\n  transition: background-color 1s ease-in-out, transform 2s ease;\n}\ndiv:hover {\n  background-color: yellow;\n  transform: rotate(45deg);\n}",
+        "o": [
+            "Color changes and rotates",
+            "Only color changes",
+            "Only rotates",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property defines how many times an animation plays?",
+        "o": [
+            "animation-iteration-count",
+            "animation-play-count",
+            "animation-duration",
+            "transition-count"
+        ]
+    },
+    {
+        "q": "What is the effect of this CSS on the element?",
+        "l": "css",
+        "c": "div {\n  transition: width 2s linear;\n}\ndiv:hover {\n  width: 300px;\n}",
+        "o": [
+            "Width increases at constant speed",
+            "Width increases and decreases",
+            "No change in width",
+            "Width changes with a delay"
+        ]
+    },
+    {
+        "q": "What is the default animation-fill-mode?",
+        "o": [
+            "none",
+            "forwards",
+            "backwards",
+            "both"
+        ]
+    },
+    {
+        "q": "What does this CSS do to the background color?",
+        "l": "css",
+        "c": "@keyframes colorChange {\n  0% {background-color: red;}\n  100% {background-color: blue;}\n}\ndiv {\n  animation: colorChange 3s infinite;\n}",
+        "o": [
+            "Continuously transitions from red to blue",
+            "Stays red",
+            "Changes to green",
+            "No background color change"
+        ]
+    },
+    {
+        "q": "What keyword makes an animation reverse direction?",
+        "o": [
+            "alternate",
+            "reverse",
+            "loop",
+            "backward"
+        ]
+    },
+    {
+        "q": "What happens to the element's border color?",
+        "l": "css",
+        "c": "div {\n  transition: border-color 1s ease;\n  border: 2px solid black;\n}\ndiv:hover {\n  border-color: red;\n}",
+        "o": [
+            "Border color changes to red smoothly",
+            "Border color changes instantly",
+            "No change in border color",
+            "Border color changes to blue"
+        ]
+    },
+    {
+        "q": "How do you apply multiple transitions to a single element?",
+        "o": [
+            "comma-separated",
+            "space-separated",
+            "line-separated",
+            "dash-separated"
+        ]
+    },
+    {
+        "q": "What happens when this animation is applied?",
+        "l": "css",
+        "c": "@keyframes grow {\n  0% {height: 100px;}\n  100% {height: 300px;}\n}\ndiv {\n  animation: grow 4s ease-in-out;\n}",
+        "o": [
+            "Element height grows to 300px",
+            "Element height shrinks to 100px",
+            "Element height stays constant",
+            "Element height increases and then decreases"
+        ]
+    },
+    {
+        "q": "Which property determines the final state of an animation?",
+        "o": [
+            "animation-fill-mode",
+            "transition",
+            "animation-name",
+            "keyframe"
+        ]
+    },
+    {
+        "q": "What does this transition do when the button is clicked?",
+        "l": "css",
+        "c": "button {\n  transition: font-size 0.5s ease-out;\n}\nbutton:active {\n  font-size: 20px;\n}",
+        "o": [
+            "Font size increases smoothly",
+            "Font size increases instantly",
+            "Font size stays the same",
+            "Font size decreases"
+        ]
+    },
+    {
+        "q": "What is the purpose of animation-delay?",
+        "o": [
+            "set wait time",
+            "define duration",
+            "set iteration",
+            "initiate styles"
+        ]
+    },
+    {
+        "q": "What is the result of this animation?",
+        "l": "css",
+        "c": "@keyframes bounce {\n  0% {transform: translateY(0);}\n  50% {transform: translateY(-50px);}\n  100% {transform: translateY(0);}\n}\ndiv {\n  animation: bounce 2s infinite;\n}",
+        "o": [
+            "Element bounces up and down",
+            "Element rotates",
+            "Element moves left to right",
+            "Element fades in and out"
+        ]
+    },
+    {
+        "q": "How can you stop an ongoing animation?",
+        "o": [
+            "animation: none",
+            "stop",
+            "reset",
+            "pause"
+        ]
+    },
+    {
+        "q": "What does this CSS animation achieve?",
+        "l": "css",
+        "c": "@keyframes rotate {\n  0% {transform: rotate(0deg);}\n  100% {transform: rotate(90deg);}\n}\ndiv {\n  animation: rotate 1s ease-in-out;\n}",
+        "o": [
+            "Rotates 90 degrees",
+            "Rotates 180 degrees",
+            "Doesn't rotate",
+            "Rotates 360 degrees"
+        ]
+    },
+    {
+        "q": "What does the \u00e2\u20ac\u02dcforwards\u00e2\u20ac\u2122 value do in animation-fill-mode?",
+        "o": [
+            "maintain end state",
+            "reset to start",
+            "play normal",
+            "alternate direction"
+        ]
+    },
+    {
+        "q": "What happens when the element is hovered?",
+        "l": "css",
+        "c": "div {\n  transition: transform 1s ease;\n}\ndiv:hover {\n  transform: translateX(100px) scale(1.2);\n}",
+        "o": [
+            "Moves 100px right and scales up",
+            "Only moves 100px right",
+            "Scales up only",
+            "No effect on hover"
+        ]
+    },
+    {
+        "q": "What does the \u00e2\u20ac\u02dcbackwards\u00e2\u20ac\u2122 value do in animation-fill-mode?",
+        "o": [
+            "maintain start state",
+            "reset to end",
+            "play normal",
+            "alternate direction"
+        ]
+    },
+    {
+        "q": "What happens to the opacity of the text?",
+        "l": "css",
+        "c": "p {\n  transition: opacity 2s ease-in-out;\n}\np:hover {\n  opacity: 0.2;\n}",
+        "o": [
+            "Text fades to 20% opacity",
+            "Text becomes fully invisible",
+            "Text stays fully visible",
+            "Text fades to 50% opacity"
+        ]
+    },
+    {
+        "q": "Which property is used to set an animation to play once?",
+        "o": [
+            "animation-iteration-count: 1",
+            "animation-iteration: 1",
+            "animation-play-count: 1",
+            "animation-once: true"
+        ]
+    },
+    {
+        "q": "What does this keyframe animation do?",
+        "l": "css",
+        "c": "@keyframes fadeOut {\n  0% {opacity: 1;}\n  100% {opacity: 0;}\n}\ndiv {\n  animation: fadeOut 3s linear;\n}",
+        "o": [
+            "Element fades out over 3 seconds",
+            "Element fades in over 3 seconds",
+            "No change in opacity",
+            "Element becomes fully visible"
+        ]
+    },
+    {
+        "q": "What is the effect of setting a transition to '0s'?",
+        "o": [
+            "no transition",
+            "instant change",
+            "normal transition",
+            "fast transition"
+        ]
+    },
+    {
+        "q": "What happens with this animation on hover?",
+        "l": "css",
+        "c": "div {\n  transition: transform 0.6s;\n}\ndiv:hover {\n  transform: rotate(180deg) scale(1.5);\n}",
+        "o": [
+            "Element rotates and scales up",
+            "Element only rotates",
+            "Element only scales up",
+            "Element doesn't change"
+        ]
+    },
+    {
+        "q": "What does 'ease-in' do?",
+        "o": [
+            "slow start",
+            "fast end",
+            "constant speed",
+            "reverse"
+        ]
+    },
+    {
+        "q": "What does this CSS achieve?",
+        "l": "css",
+        "c": "div {\n  transition: transform 1s ease-in;\n}\ndiv:hover {\n  transform: translateY(-100px);\n}",
+        "o": [
+            "Moves up 100px slowly",
+            "Moves down 100px",
+            "Moves instantly",
+            "Stays in place"
+        ]
+    },
+    {
+        "q": "What is the effect of 'ease-out'?",
+        "o": [
+            "slow end",
+            "fast start",
+            "constant speed",
+            "linear"
+        ]
+    },
+    {
+        "q": "What happens to the element's background color?",
+        "l": "css",
+        "c": "div {\n  background-color: yellow;\n  transition: background-color 2s ease;\n}\ndiv:hover {\n  background-color: red;\n}",
+        "o": [
+            "Changes smoothly to red",
+            "Changes instantly to red",
+            "Changes to blue",
+            "Stays yellow"
+        ]
+    },
+    {
+        "q": "How do you combine multiple animations on one element?",
+        "o": [
+            "comma-separated",
+            "space-separated",
+            "colon-separated",
+            "dash-separated"
+        ]
+    },
+    {
+        "q": "What effect does this CSS animation create?",
+        "l": "css",
+        "c": "@keyframes shake {\n  0% {transform: translateX(0);}\n  50% {transform: translateX(-10px);}\n  100% {transform: translateX(0);}\n}\ndiv {\n  animation: shake 0.5s linear;\n}",
+        "o": [
+            "Element shakes horizontally",
+            "Element shakes vertically",
+            "Element rotates",
+            "Element fades out"
+        ]
+    },
+    {
+        "q": "What is a CSS transition?",
+        "o": [
+            "change over time",
+            "constant change",
+            "immediate change",
+            "delay change"
+        ]
+    },
+    {
+        "q": "What happens when the button is hovered?",
+        "l": "css",
+        "c": "button {\n  transition: background-color 1s linear;\n}\nbutton:hover {\n  background-color: green;\n}",
+        "o": [
+            "Button background changes to green smoothly",
+            "Button background changes instantly to green",
+            "No change to the button",
+            "Button color changes to red"
+        ]
+    },
+    {
+        "q": "What happens if you remove a CSS class during a transition?",
+        "o": [
+            "transition stops",
+            "transition continues",
+            "no effect",
+            "restarts"
+        ]
+    },
+    {
+        "q": "What effect does this transition create on hover?",
+        "l": "css",
+        "c": "div {\n  transition: all 0.3s ease;\n  width: 100px;\n  height: 100px;\n  background-color: blue;\n}\ndiv:hover {\n  width: 150px;\n  height: 150px;\n  background-color: red;\n}",
+        "o": [
+            "Smooth change in size and color",
+            "Instant change in size and color",
+            "Only color changes",
+            "Only size changes"
+        ]
+    },
+    {
+        "q": "What defines the starting state in keyframes?",
+        "o": [
+            "0%",
+            "50%",
+            "100%",
+            "start"
+        ]
+    },
+    {
+        "q": "What happens to the element's scale?",
+        "l": "css",
+        "c": "div {\n  transition: transform 1s ease-out;\n}\ndiv:hover {\n  transform: scale(1.5);\n}",
+        "o": [
+            "Element scales up smoothly",
+            "Element scales down",
+            "No scaling happens",
+            "Element instantly scales up"
+        ]
+    },
+    {
+        "q": "How do you set a CSS animation to alternate direction?",
+        "o": [
+            "animation-direction: alternate",
+            "animation: alternate",
+            "animation: reverse",
+            "animation-loop: alternate"
+        ]
+    },
+    {
+        "q": "What is the effect of this CSS code?",
+        "l": "css",
+        "c": "div {\n  transition: background-color 0.5s ease;\n}\ndiv:hover {\n  background-color: lightblue;\n}",
+        "o": [
+            "Changes background color to lightblue smoothly",
+            "Instantly changes background color",
+            "No change in background color",
+            "Changes background color to darkblue"
+        ]
+    },
+    {
+        "q": "What happens if you set a transition-timing-function to 'ease-in-out'?",
+        "o": [
+            "slow start and end",
+            "fast constant speed",
+            "fast start",
+            "slow constant speed"
+        ]
+    },
+    {
+        "q": "What does this animation do?",
+        "l": "css",
+        "c": "@keyframes zoomIn {\n  0% {transform: scale(1);}\n  100% {transform: scale(2);}\n}\ndiv {\n  animation: zoomIn 2s ease;\n}",
+        "o": [
+            "Element scales up to 2x size",
+            "Element scales down",
+            "Element rotates",
+            "Element moves to the right"
+        ]
+    },
+    {
+        "q": "What is the syntax for a simple transition?",
+        "o": [
+            "transition: property duration",
+            "transition: duration property",
+            "transition: duration",
+            "transition: all"
+        ]
+    },
+    {
+        "q": "What does this CSS transition do to the element?",
+        "l": "css",
+        "c": "div {\n  transition: height 1.5s ease-in-out;\n  height: 100px;\n}\ndiv:hover {\n  height: 200px;\n}",
+        "o": [
+            "Height increases smoothly to 200px",
+            "Height stays the same",
+            "Height decreases",
+            "Height changes instantly"
+        ]
+    },
+    {
+        "q": "What effect does an 'infinite' animation have?",
+        "o": [
+            "repeats forever",
+            "plays once",
+            "plays twice",
+            "stops after a time"
+        ]
+    },
+    {
+        "q": "What happens to the opacity with this CSS?",
+        "l": "css",
+        "c": "div {\n  transition: opacity 2s ease;\n}\ndiv:hover {\n  opacity: 0.5;\n}",
+        "o": [
+            "Fades to 50% opacity smoothly",
+            "Becomes fully invisible",
+            "No change in opacity",
+            "Instant opacity change"
+        ]
+    },
+    {
+        "q": "Which function allows you to control timing of transitions?",
+        "o": [
+            "transition-timing-function",
+            "animation-timing-function",
+            "keyframe-timing-function",
+            "timing-function"
+        ]
+    },
+    {
+        "q": "What happens when the animation runs?",
+        "l": "css",
+        "c": "@keyframes expand {\n  0% {width: 100px;}\n  100% {width: 300px;}\n}\ndiv {\n  animation: expand 4s ease-in;\n}",
+        "o": [
+            "Element width expands to 300px",
+            "Element width shrinks",
+            "Element width stays the same",
+            "Element width changes to 150px"
+        ]
+    },
+    {
+        "q": "How do you pause an animation?",
+        "o": [
+            "animation-play-state: paused",
+            "pause-animation",
+            "stop-animation",
+            "animation: paused"
+        ]
+    },
+    {
+        "q": "What happens to the element's width during the transition?",
+        "l": "css",
+        "c": "div {\n  transition: width 2s ease-in-out;\n  width: 100px;\n}\ndiv:hover {\n  width: 300px;\n}",
+        "o": [
+            "Width expands to 300px smoothly",
+            "Width decreases",
+            "No change in width",
+            "Width expands instantly"
+        ]
+    },
+    {
+        "q": "What is the syntax for defining multiple keyframes?",
+        "o": [
+            "@keyframes name1, name2",
+            "@keyframes name1; @keyframes name2",
+            "@keyframes (name1, name2)",
+            "@keyframes name1 and name2"
+        ]
+    },
+    {
+        "q": "What effect does this keyframe animation create?",
+        "l": "css",
+        "c": "@keyframes slideRight {\n  0% {left: 0;}\n  100% {left: 200px;}\n}\ndiv {\n  position: relative;\n  animation: slideRight 3s ease;\n}",
+        "o": [
+            "Element moves 200px to the right",
+            "Element moves to the left",
+            "Element fades out",
+            "Element rotates"
+        ]
+    },
+    {
+        "q": "How do you change the direction of an animation on hover?",
+        "o": [
+            "animation-direction",
+            "animation-change",
+            "hover-animation",
+            "reverse-animation"
+        ]
+    },
+    {
+        "q": "What will happen to the height of the element when hovered?",
+        "l": "css",
+        "c": "div {\n  transition: height 1s linear;\n  height: 150px;\n}\ndiv:hover {\n  height: 250px;\n}",
+        "o": [
+            "Height increases to 250px smoothly",
+            "Height stays the same",
+            "Height decreases",
+            "Height increases instantly"
+        ]
+    },
+    {
+        "q": "What property sets how quickly the animation occurs?",
+        "o": [
+            "animation-duration",
+            "animation-speed",
+            "animation-time",
+            "animation-rate"
+        ]
+    },
+    {
+        "q": "What does this code cause the element to do?",
+        "l": "css",
+        "c": "@keyframes colorChange {\n  0% {background-color: blue;}\n  100% {background-color: green;}\n}\ndiv {\n  animation: colorChange 2s ease-in-out;\n}",
+        "o": [
+            "Background changes from blue to green",
+            "Background stays blue",
+            "Background changes from green to red",
+            "Background color doesn't change"
+        ]
+    },
+    {
+        "q": "What does the shorthand property 'transition' include?",
+        "o": [
+            "property, duration, timing, delay",
+            "duration, timing",
+            "property, delay",
+            "all properties"
+        ]
+    },
+    {
+        "q": "What effect will this transition have?",
+        "l": "css",
+        "c": "button {\n  transition: all 0.4s ease;\n}\nbutton:hover {\n  background-color: yellow;\n  border-radius: 50%;\n}",
+        "o": [
+            "Button becomes circular and turns yellow",
+            "Button only changes color",
+            "Button only becomes circular",
+            "Button stays unchanged"
+        ]
+    },
+    {
+        "q": "How do you remove transitions from an element?",
+        "o": [
+            "transition: none",
+            "remove-transition",
+            "stop-transition",
+            "transition: 0"
+        ]
+    },
+    {
+        "q": "What will this animation do to the element?",
+        "l": "css",
+        "c": "@keyframes growHeight {\n  0% {height: 50px;}\n  100% {height: 200px;}\n}\ndiv {\n  animation: growHeight 5s ease-in;\n}",
+        "o": [
+            "Height grows to 200px",
+            "Height shrinks",
+            "Height stays the same",
+            "Height grows to 150px"
+        ]
+    },
+    {
+        "q": "Which animation state can be defined in keyframes?",
+        "o": [
+            "from",
+            "to",
+            "100%",
+            "all"
+        ]
+    },
+    {
+        "q": "What happens when the animation is applied?",
+        "l": "css",
+        "c": "@keyframes fadeIn {\n  0% {opacity: 0;}\n  100% {opacity: 1;}\n}\nimg {\n  animation: fadeIn 3s ease-out;\n}",
+        "o": [
+            "Image fades in gradually",
+            "Image fades out",
+            "Image scales up",
+            "Image changes color"
+        ]
+    },
+    {
+        "q": "What happens if you set an invalid value for transition-property?",
+        "o": [
+            "ignored",
+            "error",
+            "default",
+            "no effect"
+        ]
+    },
+    {
+        "q": "What effect does this code produce?",
+        "l": "css",
+        "c": "div {\n  transition: transform 1s ease-in;\n  transform: rotate(0deg);\n}\ndiv:hover {\n  transform: rotate(45deg);\n}",
+        "o": [
+            "Element rotates 45 degrees",
+            "Element rotates 90 degrees",
+            "No rotation",
+            "Element rotates 180 degrees"
+        ]
+    },
+    {
+        "q": "Which property specifies the target element of an animation?",
+        "o": [
+            "animation-name",
+            "transition-name",
+            "target",
+            "element"
+        ]
+    },
+    {
+        "q": "What will the animation do to the text?",
+        "l": "css",
+        "c": "@keyframes textGrow {\n  0% {font-size: 16px;}\n  100% {font-size: 32px;}\n}\np {\n  animation: textGrow 2s linear;\n}",
+        "o": [
+            "Text size increases to 32px",
+            "Text size decreases",
+            "No change in text size",
+            "Text becomes bold"
+        ]
+    },
+    {
+        "q": "How do you specify a delay for transitions?",
+        "o": [
+            "transition-delay",
+            "delay",
+            "transition-timing",
+            "animation-delay"
+        ]
+    },
+    {
+        "q": "What happens to the position of the element during this animation?",
+        "l": "css",
+        "c": "@keyframes moveUp {\n  0% {top: 100px;}\n  100% {top: 0;}\n}\ndiv {\n  position: relative;\n  animation: moveUp 3s ease-in;\n}",
+        "o": [
+            "Element moves upward",
+            "Element moves downward",
+            "Element stays in place",
+            "Element rotates"
+        ]
+    },
+    {
+        "q": "What value resets the animation on completion?",
+        "o": [
+            "none",
+            "reset",
+            "normal",
+            "forwards"
+        ]
+    },
+    {
+        "q": "What is the effect of this CSS animation?",
+        "l": "css",
+        "c": "@keyframes pulse {\n  0% {transform: scale(1);}\n  50% {transform: scale(1.2);}\n  100% {transform: scale(1);}\n}\ndiv {\n  animation: pulse 2s infinite ease-in-out;\n}",
+        "o": [
+            "Element pulses by scaling up and down",
+            "Element moves to the right",
+            "Element becomes transparent",
+            "Element rotates in place"
+        ]
+    },
+    {
+        "q": "Which keyword indicates the final state in keyframes?",
+        "o": [
+            "to",
+            "end",
+            "finish",
+            "100%"
+        ]
+    },
+    {
+        "q": "What effect will this transition have on hover?",
+        "l": "css",
+        "c": "div {\n  transition: background-color 0.3s ease;\n  background-color: blue;\n}\ndiv:hover {\n  background-color: pink;\n}",
+        "o": [
+            "Changes to pink smoothly",
+            "Changes to red instantly",
+            "No change in color",
+            "Changes to yellow"
+        ]
+    },
+    {
+        "q": "What is the primary purpose of transitions?",
+        "o": [
+            "smooth changes",
+            "instant changes",
+            "constant speed",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to the element's scale?",
+        "l": "css",
+        "c": "div {\n  transition: transform 0.8s linear;\n}\ndiv:hover {\n  transform: scale(1.3);\n}",
+        "o": [
+            "Element scales up to 1.3",
+            "Element scales down",
+            "Element rotates",
+            "No change in scale"
+        ]
+    },
+    {
+        "q": "What is the default animation-play-state?",
+        "o": [
+            "running",
+            "paused",
+            "none",
+            "stopped"
+        ]
+    },
+    {
+        "q": "What happens when this animation is applied?",
+        "l": "css",
+        "c": "@keyframes shrink {\n  0% {width: 300px;}\n  100% {width: 100px;}\n}\ndiv {\n  animation: shrink 4s ease;\n}",
+        "o": [
+            "Element width shrinks to 100px",
+            "Element width grows",
+            "Element width stays the same",
+            "Element height shrinks"
+        ]
+    },
+    {
+        "q": "How do you make an animation play backwards?",
+        "o": [
+            "animation-direction: reverse",
+            "animation: backward",
+            "animation: reverse",
+            "play: reverse"
+        ]
+    },
+    {
+        "q": "What happens to the opacity of the element when hovered?",
+        "l": "css",
+        "c": "div {\n  transition: opacity 1.5s ease-out;\n}\ndiv:hover {\n  opacity: 0.7;\n}",
+        "o": [
+            "Element fades to 70% opacity",
+            "Element becomes fully invisible",
+            "Element becomes fully opaque",
+            "No change in opacity"
+        ]
+    },
+    {
+        "q": "What is the main difference between transition and animation?",
+        "o": [
+            "animation is keyframed",
+            "transition is immediate",
+            "animation is constant",
+            "transition is variable"
+        ]
+    },
+    {
+        "q": "What happens when the button is clicked?",
+        "l": "css",
+        "c": "button {\n  transition: all 0.3s ease-in;\n}\nbutton:active {\n  transform: translateY(5px);\n}",
+        "o": [
+            "Button moves down by 5px",
+            "Button changes color",
+            "Button fades out",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property defines how long an animation takes to complete?",
+        "o": [
+            "animation-duration",
+            "animation-time",
+            "animation-delay",
+            "animation-speed"
+        ]
+    },
+    {
+        "q": "What happens to the border-radius when hovered?",
+        "l": "css",
+        "c": "div {\n  transition: border-radius 1s ease;\n  border-radius: 0;\n}\ndiv:hover {\n  border-radius: 50%;\n}",
+        "o": [
+            "Element becomes circular",
+            "Element becomes square",
+            "No change in shape",
+            "Element becomes rectangular"
+        ]
+    },
+    {
+        "q": "What is the default value of animation-direction?",
+        "o": [
+            "normal",
+            "reverse",
+            "alternate",
+            "forwards"
+        ]
+    },
+    {
+        "q": "What will happen to the element's position during this animation?",
+        "l": "css",
+        "c": "@keyframes slideUp {\n  0% {bottom: 0;}\n  100% {bottom: 50px;}\n}\ndiv {\n  position: relative;\n  animation: slideUp 1s ease-in-out;\n}",
+        "o": [
+            "Element slides up 50px",
+            "Element slides down",
+            "Element rotates",
+            "No change in position"
+        ]
+    },
+    {
+        "q": "Which keyframe specifies the end of an animation?",
+        "o": [
+            "to",
+            "from",
+            "start",
+            "end"
+        ]
+    },
+    {
+        "q": "What happens to the background color when hovered?",
+        "l": "css",
+        "c": "div {\n  transition: background-color 0.5s linear;\n  background-color: red;\n}\ndiv:hover {\n  background-color: purple;\n}",
+        "o": [
+            "Background changes to purple",
+            "Background changes to blue",
+            "No change in background",
+            "Background changes to yellow"
+        ]
+    },
+    {
+        "q": "How do you delay an animation?",
+        "o": [
+            "animation-delay",
+            "delay",
+            "transition-delay",
+            "animation-duration"
+        ]
+    },
+    {
+        "q": "What does this CSS code do to the text?",
+        "l": "css",
+        "c": "@keyframes fadeOutText {\n  0% {opacity: 1;}\n  100% {opacity: 0;}\n}\np {\n  animation: fadeOutText 2s linear;\n}",
+        "o": [
+            "Text fades out completely",
+            "Text fades in",
+            "Text stays visible",
+            "Text changes color"
+        ]
+    },
+    {
+        "q": "Which function defines the speed curve of an animation?",
+        "o": [
+            "animation-timing-function",
+            "transition-timing-function",
+            "keyframes-timing-function",
+            "timing-function"
+        ]
+    },
+    {
+        "q": "What is the default value of animation-iteration-count?",
+        "o": [
+            "1",
+            "infinite",
+            "0",
+            "2"
+        ]
+    },
+    {
+        "q": "What happens if you set animation-play-state to 'paused'?",
+        "o": [
+            "animation stops",
+            "animation reverses",
+            "animation loops",
+            "animation speeds up"
+        ]
+    },
+    {
+        "q": "What does 'transition: all 0.5s ease;' mean?",
+        "o": [
+            "all properties change smoothly in 0.5s",
+            "all properties change instantly",
+            "color changes in 0.5s",
+            "background changes in 0.5s"
+        ]
+    },
+    {
+        "q": "How do you create a looping animation?",
+        "o": [
+            "animation-iteration-count: infinite",
+            "animation-loop: true",
+            "animation-repeat: loop",
+            "animation-direction: loop"
+        ]
+    },
+    {
+        "q": "Which animation function causes a fast start and slow end?",
+        "o": [
+            "ease-out",
+            "ease-in",
+            "linear",
+            "ease-in-out"
+        ]
+    },
+    {
+        "q": "What is the purpose of 'animation-fill-mode'?",
+        "o": [
+            "control final state",
+            "set animation speed",
+            "define keyframes",
+            "loop the animation"
+        ]
+    },
+    {
+        "q": "Which CSS property is used to control the visibility of an element?",
+        "o": [
+            "visibility",
+            "display",
+            "opacity",
+            "transform"
+        ]
+    },
+    {
+        "q": "What does 'animation-direction: reverse' do?",
+        "o": [
+            "plays backwards",
+            "plays forwards",
+            "pauses animation",
+            "stops animation"
+        ]
+    },
+    {
+        "q": "Which property is not typically animatable?",
+        "o": [
+            "display",
+            "opacity",
+            "height",
+            "background-color"
+        ]
+    },
+    {
+        "q": "What does 'animation: none;' do?",
+        "o": [
+            "disables the animation",
+            "restarts the animation",
+            "pauses the animation",
+            "reverses the animation"
+        ]
+    },
+    {
+        "q": "How do you make an animation start from the end?",
+        "o": [
+            "animation-direction: reverse",
+            "animation-play-state: reverse",
+            "animation-fill-mode: backwards",
+            "animation-fill-mode: forwards"
+        ]
+    },
+    {
+        "q": "Which value of 'animation-fill-mode' keeps the animation in the final state?",
+        "o": [
+            "forwards",
+            "backwards",
+            "none",
+            "paused"
+        ]
+    },
+    {
+        "q": "What does 'animation: 2s infinite;' mean?",
+        "o": [
+            "the animation repeats forever",
+            "the animation plays once",
+            "the animation pauses after 2s",
+            "the animation stops after 2s"
+        ]
+    },
+    {
+        "q": "Which keyword indicates the starting state in keyframes?",
+        "o": [
+            "from",
+            "start",
+            "begin",
+            "initial"
+        ]
+    },
+    {
+        "q": "How do you control the delay before an animation starts?",
+        "o": [
+            "animation-delay",
+            "animation-duration",
+            "transition-delay",
+            "timing-function"
+        ]
+    },
+    {
+        "q": "Which property can be transitioned?",
+        "o": [
+            "opacity",
+            "display",
+            "z-index",
+            "overflow"
+        ]
+    },
+    {
+        "q": "How do you set the number of times an animation should repeat?",
+        "o": [
+            "animation-iteration-count",
+            "animation-repeat",
+            "animation-count",
+            "animation-loop"
+        ]
+    },
+    {
+        "q": "Which value of 'animation-timing-function' creates a smooth start?",
+        "o": [
+            "ease-in",
+            "ease-out",
+            "linear",
+            "ease-in-out"
+        ]
+    },
+    {
+        "q": "Which property allows for transitioning multiple properties at once?",
+        "o": [
+            "transition",
+            "animation",
+            "transform",
+            "keyframe"
+        ]
+    },
+    {
+        "q": "What is the default value of animation-play-state?",
+        "o": [
+            "running",
+            "paused",
+            "none",
+            "stopped"
+        ]
+    },
+    {
+        "q": "Which keyword is used to define the end state in keyframes?",
+        "o": [
+            "to",
+            "end",
+            "finish",
+            "100%"
+        ]
+    },
+    {
+        "q": "What happens if 'transition-duration' is set to '0s'?",
+        "o": [
+            "no transition effect",
+            "instant transition",
+            "slow transition",
+            "infinite transition"
+        ]
+    },
+    {
+        "q": "What value of 'animation-direction' alternates the direction of the animation?",
+        "o": [
+            "alternate",
+            "reverse",
+            "loop",
+            "backwards"
+        ]
+    },
+    {
+        "q": "How do you reset an animation after it has finished playing?",
+        "o": [
+            "animation-fill-mode: none",
+            "animation-fill-mode: forwards",
+            "animation-delay: reset",
+            "animation-timing: restart"
+        ]
+    },
+    {
+        "q": "How do you create a pause between keyframes?",
+        "o": [
+            "animation-delay",
+            "animation-duration",
+            "transition-delay",
+            "timing-function"
+        ]
+    },
+    {
+        "q": "Which value of 'animation-iteration-count' makes the animation repeat forever?",
+        "o": [
+            "infinite",
+            "1",
+            "2",
+            "loop"
+        ]
+    },
+    {
+        "q": "What does 'animation-duration: 5s;' do?",
+        "o": [
+            "sets the animation to play for 5 seconds",
+            "delays the animation by 5 seconds",
+            "repeats the animation 5 times",
+            "stops the animation after 5 seconds"
+        ]
+    },
+    {
+        "q": "Which property is used to apply transitions on hover?",
+        "o": [
+            "transition",
+            "hover",
+            "animation",
+            "keyframe"
+        ]
+    },
+    {
+        "q": "What does 'transition: opacity 1s ease;' mean?",
+        "o": [
+            "opacity changes smoothly over 1 second",
+            "opacity changes instantly",
+            "opacity does not change",
+            "background changes smoothly"
+        ]
+    },
+    {
+        "q": "How do you create an animation that runs only once?",
+        "o": [
+            "animation-iteration-count: 1",
+            "animation-loop: 1",
+            "animation: once",
+            "animation-direction: normal"
+        ]
+    },
+    {
+        "q": "What is the effect of 'transition-timing-function: linear'?",
+        "o": [
+            "constant speed",
+            "slow start",
+            "slow end",
+            "fast start"
+        ]
+    },
+    {
+        "q": "How do you specify multiple keyframes in an animation?",
+        "o": [
+            "@keyframes",
+            "@multiple",
+            "@frames",
+            "@animation"
+        ]
+    },
+    {
+        "q": "What property controls the speed of the transition?",
+        "o": [
+            "transition-duration",
+            "transition-speed",
+            "transition-delay",
+            "transition-timing-function"
+        ]
+    },
+    {
+        "q": "Which value of 'animation-fill-mode' applies the animation state before it starts?",
+        "o": [
+            "backwards",
+            "forwards",
+            "both",
+            "none"
+        ]
+    },
+    {
+        "q": "How do you combine multiple transitions into one declaration?",
+        "o": [
+            "transition: property duration timing delay",
+            "transition: all timing delay",
+            "transition: duration timing",
+            "transition: all properties"
+        ]
+    },
+    {
+        "q": "Which property defines the starting point of an animation?",
+        "o": [
+            "from",
+            "to",
+            "start",
+            "begin"
+        ]
+    },
+    {
+        "q": "What happens when 'animation-delay' is set to '0s'?",
+        "o": [
+            "animation starts immediately",
+            "animation starts after a delay",
+            "animation is paused",
+            "animation does not start"
+        ]
+    },
+    {
+        "q": "Which property specifies how long a transition effect takes?",
+        "o": [
+            "transition-duration",
+            "transition-time",
+            "animation-duration",
+            "keyframes-duration"
+        ]
+    },
+    {
+        "q": "What value of 'transition-timing-function' creates a slow start and fast end?",
+        "o": [
+            "ease-in",
+            "ease-out",
+            "linear",
+            "ease-in-out"
+        ]
+    },
+    {
+        "q": "How do you pause an animation without resetting it?",
+        "o": [
+            "animation-play-state: paused",
+            "animation-delay: paused",
+            "animation-reset: none",
+            "animation-stop: true"
+        ]
+    },
+    {
+        "q": "Which CSS property is used to specify when the transition starts?",
+        "o": [
+            "transition-delay",
+            "transition-duration",
+            "animation-delay",
+            "animation-timing"
+        ]
+    },
+    {
+        "q": "What is the purpose of 'transition-property'?",
+        "o": [
+            "specify which property to animate",
+            "define the speed of the transition",
+            "control the delay",
+            "set the timing function"
+        ]
+    },
+    {
+        "q": "Which value of 'animation-direction' plays the animation forwards and backwards?",
+        "o": [
+            "alternate",
+            "reverse",
+            "normal",
+            "infinite"
+        ]
+    },
+    {
+        "q": "How do you define multiple keyframes for different percentages of animation?",
+        "o": [
+            "0%, 50%, 100%",
+            "start, middle, end",
+            "from, middle, to",
+            "initial, mid, final"
+        ]
+    },
+    {
+        "q": "What is the default value of 'transition-timing-function'?",
+        "o": [
+            "ease",
+            "linear",
+            "ease-in",
+            "ease-out"
+        ]
+    },
+    {
+        "q": "What does 'transition: height 2s ease;' mean?",
+        "o": [
+            "height changes over 2 seconds",
+            "height changes instantly",
+            "background changes over 2 seconds",
+            "opacity changes over 2 seconds"
+        ]
+    },
+    {
+        "q": "Which property is used to set the speed curve of a transition?",
+        "o": [
+            "transition-timing-function",
+            "animation-timing-function",
+            "transition-duration",
+            "animation-iteration-count"
+        ]
+    },
+    {
+        "q": "How do you make an animation run only once, but keep its final state?",
+        "o": [
+            "animation-fill-mode: forwards",
+            "animation-fill-mode: none",
+            "animation-iteration-count: 1",
+            "animation-direction: reverse"
+        ]
+    },
+    {
+        "q": "Which property can be used to animate text size?",
+        "o": [
+            "font-size",
+            "font-weight",
+            "text-shadow",
+            "line-height"
+        ]
+    },
+    {
+        "q": "Which property defines when the animation starts?",
+        "o": [
+            "animation-delay",
+            "animation-start",
+            "animation-time",
+            "animation-begin"
+        ]
+    },
+    {
+        "q": "What does 'animation-timing-function: ease-in-out;' mean?",
+        "o": [
+            "slow start and end, fast middle",
+            "constant speed",
+            "fast start, slow end",
+            "slow start, fast end"
+        ]
+    },
+    {
+        "q": "How do you ensure an animation reverses after completing?",
+        "o": [
+            "animation-direction: alternate",
+            "animation-iteration-count: 2",
+            "animation-delay: reverse",
+            "animation-timing: reverse"
+        ]
+    },
+    {
+        "q": "Which property defines how an element changes between keyframes?",
+        "o": [
+            "@keyframes",
+            "@transitions",
+            "@transform",
+            "@frames"
+        ]
+    },
+    {
+        "q": "How do you apply an animation to multiple properties at once?",
+        "o": [
+            "animation: all",
+            "transition: all",
+            "keyframes: all",
+            "animation-multi"
+        ]
+    },
+    {
+        "q": "What does 'animation-fill-mode: backwards' do?",
+        "o": [
+            "applies initial keyframe before start",
+            "keeps final keyframe after end",
+            "pauses the animation",
+            "reverses the animation"
+        ]
+    },
+    {
+        "q": "Which timing function creates a constant speed throughout an animation?",
+        "o": [
+            "linear",
+            "ease-in",
+            "ease-out",
+            "ease-in-out"
+        ]
+    },
+    {
+        "q": "How do you control the order in which animations run?",
+        "o": [
+            "animation-delay",
+            "animation-order",
+            "animation-sequence",
+            "animation-chain"
+        ]
+    },
+    {
+        "q": "Which property is used to specify the point where the animation should pause?",
+        "o": [
+            "animation-delay",
+            "animation-hold",
+            "animation-pause",
+            "animation-play-state"
+        ]
+    },
+    {
+        "q": "What is the default value of 'animation-timing-function'?",
+        "o": [
+            "ease",
+            "linear",
+            "ease-in",
+            "ease-out"
+        ]
+    },
+    {
+        "q": "What happens if you set 'transition-property: none'?",
+        "o": [
+            "no transition effect",
+            "all properties will transition",
+            "the transition pauses",
+            "the transition reverses"
+        ]
+    },
+    {
+        "q": "Which property defines the duration of the animation between keyframes?",
+        "o": [
+            "animation-duration",
+            "transition-duration",
+            "animation-time",
+            "animation-delay"
+        ]
+    },
+    {
+        "q": "How do you create an animation that runs infinitely?",
+        "o": [
+            "animation-iteration-count: infinite",
+            "animation-repeat: forever",
+            "animation-loop: infinite",
+            "animation-cycle: forever"
+        ]
+    },
+    {
+        "q": "What does 'transition: transform 1s linear;' mean?",
+        "o": [
+            "smoothly changes transform in 1 second",
+            "instantly changes transform",
+            "transform is paused",
+            "transform takes 0.5 seconds"
+        ]
+    },
+    {
+        "q": "Which property is used to define the visual change in keyframes?",
+        "o": [
+            "transform",
+            "transition",
+            "opacity",
+            "font-size"
+        ]
+    },
+    {
+        "q": "What does 'animation-direction: alternate-reverse;' do?",
+        "o": [
+            "plays forwards then backwards in reverse order",
+            "plays only backwards",
+            "loops forwards",
+            "stops after reversing once"
+        ]
+    },
+    {
+        "q": "Which value of 'animation-iteration-count' makes an animation play three times?",
+        "o": [
+            "3",
+            "infinite",
+            "1",
+            "2"
+        ]
+    },
+    {
+        "q": "What does 'transition: all 0.5s ease-in;' affect?",
+        "o": [
+            "all properties change over 0.5 seconds",
+            "only color changes",
+            "opacity changes instantly",
+            "background changes over 1 second"
+        ]
+    },
+    {
+        "q": "Which value of 'transition-timing-function' creates an instant start?",
+        "o": [
+            "ease-in",
+            "ease-out",
+            "linear",
+            "ease"
+        ]
+    },
+    {
+        "q": "Which CSS property is used to create a smooth transition for a hover effect?",
+        "o": [
+            "transition",
+            "hover-effect",
+            "animation",
+            "keyframes"
+        ]
+    },
+    {
+        "q": "What is the effect of 'animation-play-state: running;'?",
+        "o": [
+            "animation resumes",
+            "animation pauses",
+            "animation stops",
+            "animation reverses"
+        ]
+    },
+    {
+        "q": "Which timing function creates a fast start, then slows down?",
+        "o": [
+            "ease-out",
+            "linear",
+            "ease-in",
+            "ease-in-out"
+        ]
+    },
+    {
+        "q": "What does 'animation-fill-mode: none;' do?",
+        "o": [
+            "does not apply animation before or after",
+            "keeps the animation state",
+            "starts the animation",
+            "pauses the animation"
+        ]
+    },
+    {
+        "q": "How do you specify which CSS properties to transition?",
+        "o": [
+            "transition-property",
+            "transition-time",
+            "animation-property",
+            "animation-delay"
+        ]
+    },
+    {
+        "q": "Which property defines how many times an animation should repeat?",
+        "o": [
+            "animation-iteration-count",
+            "animation-repeat",
+            "animation-loop",
+            "animation-cycle"
+        ]
+    },
+    {
+        "q": "What value of 'animation-iteration-count' makes the animation play once?",
+        "o": [
+            "1",
+            "infinite",
+            "2",
+            "none"
+        ]
+    },
+    {
+        "q": "Which property is used to control when an animation should start?",
+        "o": [
+            "animation-delay",
+            "animation-start",
+            "animation-duration",
+            "animation-time"
+        ]
+    },
+    {
+        "q": "What is the default value of 'transition-delay'?",
+        "o": [
+            "0s",
+            "1s",
+            "0.5s",
+            "infinite"
+        ]
+    },
+    {
+        "q": "What does 'animation-play-state: paused;' do?",
+        "o": [
+            "pauses the animation",
+            "reverses the animation",
+            "stops the animation",
+            "loops the animation"
+        ]
+    },
+    {
+        "q": "How do you specify a transition effect for multiple properties?",
+        "o": [
+            "transition-property: width, height",
+            "transition-all: true",
+            "transition-multiple: true",
+            "transition: all properties"
+        ]
+    },
+    {
+        "q": "Which property is used to reverse an animation's direction?",
+        "o": [
+            "animation-direction: reverse",
+            "animation-play-state: reverse",
+            "animation-loop: backwards",
+            "animation-fill-mode: reverse"
+        ]
+    }
+]

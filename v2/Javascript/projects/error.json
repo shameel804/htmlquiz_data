@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Handling Errors with Try-Catch",
+    "ques": "Write a JavaScript program that takes a number input from the user and divides 100 by that number. If the user enters zero, handle the error using try-catch and display a meaningful message.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function divideNumber(num) {\n  try {\n    if (num === 0) {\n      throw new Error(\"Cannot divide by zero\");\n    }\n    let result = 100 / num;\n    console.log(\"Result:\", result);\n  } catch (error) {\n    console.error(\"Error:\", error.message);\n  }\n}\n\ndivideNumber(0); // Testing with zero\n"
+    },
+    "explanation": "1. ***try*** block attempts to execute the code that might cause an error.\n2. The ***if (num === 0)*** condition checks if the user input is zero.\n3. If true, an ***Error*** object is thrown using ```throw new Error(\"Cannot divide by zero\")```.\n4. The ***catch*** block catches the thrown error and prints its message using ```console.error(\"Error:\", error.message)```.\n5. If the input is valid, the program proceeds to divide 100 by the number and logs the result."
+  },
+  {
+    "title": "Creating Custom Errors",
+    "ques": "Create a custom error class `InvalidAgeError` that extends the built-in Error class. The class should take an age parameter and display an appropriate error message when the age is less than 18.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "class InvalidAgeError extends Error {\n  constructor(age) {\n    super(`Invalid age: ${age}. Age must be 18 or above.`);\n    this.name = \"InvalidAgeError\";\n  }\n}\n\nfunction checkAge(age) {\n  try {\n    if (age < 18) {\n      throw new InvalidAgeError(age);\n    }\n    console.log(\"Access granted.\");\n  } catch (error) {\n    console.error(error.name + \": \" + error.message);\n  }\n}\n\ncheckAge(16); // Testing with an invalid age\n"
+    },
+    "explanation": "1. A custom error class ***InvalidAgeError*** extends the built-in ***Error*** class.\n2. The ***constructor(age)*** initializes the error with a custom message.\n3. The ***super()*** method passes the error message to the ***Error*** class constructor.\n4. The ***checkAge*** function checks if the age is below 18.\n5. If true, it throws an instance of ***InvalidAgeError***.\n6. The ***catch*** block catches the error and prints its name and message."
+  },
+  {
+    "title": "Using Finally with Try-Catch",
+    "ques": "Modify the previous division example to include a `finally` block that prints 'Execution completed' regardless of whether an error occurs.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function divideNumber(num) {\n  try {\n    if (num === 0) {\n      throw new Error(\"Cannot divide by zero\");\n    }\n    let result = 100 / num;\n    console.log(\"Result:\", result);\n  } catch (error) {\n    console.error(\"Error:\", error.message);\n  } finally {\n    console.log(\"Execution completed.\");\n  }\n}\n\ndivideNumber(0);\ndivideNumber(10);\n"
+    },
+    "explanation": "1. The ***try*** block attempts to divide 100 by the user input.\n2. If the input is zero, an ***Error*** is thrown.\n3. The ***catch*** block handles the error and prints the error message.\n4. The ***finally*** block ensures that ***console.log(\"Execution completed.\")*** runs regardless of an error."
+  },
+  {
+    "title": "Debugging with Console Logs",
+    "ques": "A function `calculateArea` takes width and height and returns the area. However, it sometimes returns `NaN`. Debug the function using console logs.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function calculateArea(width, height) {\n  console.log(\"Width:\", width, \"Height:\", height);\n  if (typeof width !== 'number' || typeof height !== 'number') {\n    console.error(\"Invalid input: width and height must be numbers\");\n    return NaN;\n  }\n  let area = width * height;\n  console.log(\"Calculated area:\", area);\n  return area;\n}\n\ncalculateArea(5, \"ten\"); // Testing with invalid input\ncalculateArea(5, 10); // Testing with valid input\n"
+    },
+    "explanation": "1. ***console.log(\"Width:\", width, \"Height:\", height)*** logs the input values.\n2. The ***if*** statement checks if width or height is not a number using ```typeof width !== 'number'```.\n3. If invalid, an error message is logged using ***console.error()***, and the function returns ***NaN***.\n4. The ***console.log(\"Calculated area:\", area)*** logs the calculated area before returning it."
+  },
+  {
+    "title": "Try-Catch with JSON Parsing",
+    "ques": "Write a JavaScript function that tries to parse a JSON string. If the JSON is invalid, catch the error and display an appropriate message.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function parseJSON(jsonString) {\n  try {\n    let data = JSON.parse(jsonString);\n    console.log(\"Parsed Data:\", data);\n  } catch (error) {\n    console.error(\"Invalid JSON format:\", error.message);\n  }\n}\n\nparseJSON('{\"name\": \"Alice\"}'); // Valid JSON\nparseJSON('{name: \"Alice\"}'); // Invalid JSON\n"
+    },
+    "explanation": "1. The function ***parseJSON*** takes a string as input.\n2. ***try*** block attempts to parse the string using ***JSON.parse()***.\n3. If the string is not valid JSON, it throws an error.\n4. The ***catch*** block catches the error and logs ***Invalid JSON format:*** along with the error message.\n5. A correct JSON string is successfully parsed, while an incorrect one triggers the error."
+  },
+  {
+    "title": "Handling Undefined Variables in Try-Catch",
+    "ques": "Write a program that tries to print an undeclared variable inside a try-catch block. Catch the error and print a user-friendly message.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "try {\n  console.log(undeclaredVariable);\n} catch (error) {\n  console.error(\"Oops! A variable is missing:\", error.message);\n}"
+    },
+    "explanation": "1. The ***try*** block contains ***console.log(undeclaredVariable)***, which will cause a ***ReferenceError***.\n2. Since ***undeclaredVariable*** is not defined, an error is thrown.\n3. The ***catch*** block captures the error and prints ***Oops! A variable is missing:*** followed by the error message."
+  },
+  {
+    "title": "Creating a Custom Validation Error",
+    "ques": "Create a function that checks if a user's email contains '@'. If not, throw a custom error named `InvalidEmailError`.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "class InvalidEmailError extends Error {\n  constructor(email) {\n    super(`Invalid email: '${email}'. Please enter a valid email.`);\n    this.name = \"InvalidEmailError\";\n  }\n}\n\nfunction validateEmail(email) {\n  try {\n    if (!email.includes(\"@\")) {\n      throw new InvalidEmailError(email);\n    }\n    console.log(\"Valid email:\", email);\n  } catch (error) {\n    console.error(error.name + \": \" + error.message);\n  }\n}\n\nvalidateEmail(\"testemail.com\"); // Invalid email\nvalidateEmail(\"user@example.com\"); // Valid email\n"
+    },
+    "explanation": "1. A custom error class ***InvalidEmailError*** extends the ***Error*** class.\n2. The ***constructor(email)*** initializes the error with a custom message.\n3. The ***validateEmail()*** function checks if ***email*** contains '@'.\n4. If missing, ***throw new InvalidEmailError(email)*** is triggered.\n5. The ***catch*** block prints the error name and message."
+  },
+  {
+    "title": "Using Finally to Close Resources",
+    "ques": "Simulate opening and closing a file using try-catch-finally, ensuring that the 'file' always closes even if an error occurs.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function simulateFileOperation(fileExists) {\n  try {\n    console.log(\"Opening file...\");\n    if (!fileExists) {\n      throw new Error(\"File not found\");\n    }\n    console.log(\"Reading file content...\");\n  } catch (error) {\n    console.error(\"Error:\", error.message);\n  } finally {\n    console.log(\"Closing file...\");\n  }\n}\n\nsimulateFileOperation(false); // File not found scenario\nsimulateFileOperation(true); // Successful file read\n"
+    },
+    "explanation": "1. The function ***simulateFileOperation()*** mimics file handling.\n2. ***console.log(\"Opening file...\")*** simulates opening a file.\n3. If ***fileExists*** is false, ***throw new Error(\"File not found\")*** is executed.\n4. The ***catch*** block handles the error and prints its message.\n5. The ***finally*** block always runs, ensuring the file is 'closed'."
+  },
+  {
+    "title": "Debugging with Breakpoints",
+    "ques": "Modify the given code to help debug a function using console logs. Find the issue and fix it.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function multiplyNumbers(a, b) {\n  console.log(\"Received a:\", a, \"b:\", b);\n  if (typeof a !== 'number' || typeof b !== 'number') {\n    console.error(\"Error: Both inputs must be numbers\");\n    return;\n  }\n  let result = a * b;\n  console.log(\"Multiplication Result:\", result);\n  return result;\n}\n\nmultiplyNumbers(5, \"ten\"); // Debugging: Wrong input\nmultiplyNumbers(4, 3); // Debugging: Correct input\n"
+    },
+    "explanation": "1. The function ***multiplyNumbers()*** logs the received inputs.\n2. The ***if*** condition checks if ***a*** or ***b*** is not a number.\n3. If invalid, an error message is logged with ***console.error()***.\n4. If valid, multiplication happens, and the result is logged."
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Declaring Variables",
+    "ques": "How do you declare a variable in JavaScript using `let` and `const`? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "let name = \"John\";\nconst age = 25;"
+    },
+    "explanation": "***let*** is used to declare variables that can be reassigned later.\n\n***const*** is used to declare variables that cannot be reassigned.\n\nExample:\n```javascript\nlet name = \"John\"; // Declares a variable that can be changed\nconst age = 25; // Declares a constant variable that cannot be changed\n```"
+  },
+  {
+    "title": "JavaScript Data Types",
+    "ques": "What are the primitive data types in JavaScript? Provide an example of each.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "let str = \"Hello\";\nlet num = 42;\nlet bool = true;\nlet undef;\nlet n = null;\nlet sym = Symbol(\"id\");"
+    },
+    "explanation": "JavaScript has ***6 primitive data types***:\n\n1. ***String*** - Represents textual data. Example:\n```javascript\nlet str = \"Hello\";\n```\n2. ***Number*** - Represents numbers. Example:\n```javascript\nlet num = 42;\n```\n3. ***Boolean*** - Represents `true` or `false`. Example:\n```javascript\nlet bool = true;\n```\n4. ***Undefined*** - A variable that has been declared but not assigned. Example:\n```javascript\nlet undef;\n```\n5. ***Null*** - Represents an intentional absence of value. Example:\n```javascript\nlet n = null;\n```\n6. ***Symbol*** - A unique and immutable primitive value. Example:\n```javascript\nlet sym = Symbol(\"id\");\n```"
+  },
+  {
+    "title": "Operators in JavaScript",
+    "ques": "What are the different types of operators in JavaScript? Provide examples.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// Arithmetic Operators\nlet sum = 5 + 3;\nlet product = 4 * 2;\n\n// Comparison Operators\nlet isEqual = (10 === \"10\");\n\n// Logical Operators\nlet andOp = (true && false);\n\n// Assignment Operator\nlet x = 10;\n\n// Increment Operator\nx++;"
+    },
+    "explanation": "JavaScript has several types of operators:\n\n1. ***Arithmetic Operators*** - Perform basic math operations.\n```javascript\nlet sum = 5 + 3; // Addition\nlet product = 4 * 2; // Multiplication\n```\n2. ***Comparison Operators*** - Compare two values.\n```javascript\nlet isEqual = (10 === \"10\"); // Strict equality (false)\n```\n3. ***Logical Operators*** - Perform logical operations.\n```javascript\nlet andOp = (true && false); // Logical AND (false)\n```\n4. ***Assignment Operator*** - Assign values to variables.\n```javascript\nlet x = 10;\n```\n5. ***Increment Operator*** - Increases value by 1.\n```javascript\nx++; // x becomes 11\n```"
+  },
+  {
+    "title": "JavaScript Syntax",
+    "ques": "What is the correct way to write a function in JavaScript? Provide an example.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function greet(name) {\n  return \"Hello, \" + name + \"!\";\n}"
+    },
+    "explanation": "A function in JavaScript is declared using the ***function*** keyword.\n\nExample:\n```javascript\nfunction greet(name) {\n  return \"Hello, \" + name + \"!\";\n}\n```\n1. ***function greet(name)*** - Declares a function named `greet` with a parameter `name`.\n2. ***return \"Hello, \" + name + \"!\";*** - Returns a greeting message using string concatenation."
+  }
+]

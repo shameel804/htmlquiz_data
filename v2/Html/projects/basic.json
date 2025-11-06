@@ -1,0 +1,42 @@
+[
+  {
+    "title": "HTML Tags",
+    "ques": "What is the purpose of HTML tags, and how do they structure a webpage?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html>\n<head>\n    <title>My First Webpage</title>\n</head>\n<body>\n    <h1>Welcome to My Website</h1>\n    <p>This is a paragraph.</p>\n</body>\n</html>"
+    },
+    "explanation": "***HTML tags*** are used to define elements in a webpage. Each tag has a specific meaning and function.\n\n- The ```<!DOCTYPE html>``` declaration specifies the document type as HTML5.\n- The ```<html>``` tag is the root element of an HTML page.\n- The ```<head>``` tag contains metadata such as the ```<title>``` tag.\n- The `<body>` tag contains visible page content, including:\n  - ```<h1>```: A heading tag for large text.\n  - ```<p>```: A paragraph tag for text content."
+  },
+  {
+    "title": "HTML Elements",
+    "ques": "What is an HTML element, and how is it different from a tag?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<p>This is a complete HTML element.</p>"
+    },
+    "explanation": "An ***HTML element*** consists of an ***opening tag***, content, and a ***closing tag***.\n\nExample:\nhtml\n```<p>This is a complete HTML element.</p>\n```\n\n- ```<p>``` is the ***opening tag***.\n- ```This is a complete HTML element.``` is the ***content***.\n- ```</p>``` is the ***closing tag***.\n\nA ***tag*** alone does not form an element unless it has content and a closing tag."
+  },
+  {
+    "title": "HTML Attributes",
+    "ques": "How do HTML attributes modify the behavior of an element?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<a href='https://www.example.com' target='_blank'>Visit Example</a>"
+    },
+    "explanation": "***HTML attributes*** provide additional information about an element.\n\nExample:\nhtml\n```<a href='https://www.example.com' target='_blank'>Visit Example</a>\n```\n\n- `href='https://www.example.com'` sets the ***hyperlink reference***.\n- ```target='_blank'``` opens the link in a ***new tab***.\n- The anchor ```<a>``` element defines a clickable link."
+  },
+  {
+    "title": "HTML Document Structure",
+    "ques": "What is the basic structure of an HTML document?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset='UTF-8'>\n    <title>Page Title</title>\n</head>\n<body>\n    <h1>Main Heading</h1>\n    <p>Paragraph of text.</p>\n</body>\n</html>"
+    },
+    "explanation": "The basic structure of an ***HTML document*** includes the following sections:\n\n- ```<!DOCTYPE html>```: Declares the document as HTML5.\n- ```<html>```: The root element of the page.\n- ```<head>```:\n  - ```<meta charset='UTF-8'>```: Defines character encoding.\n  - ```<title>```: Sets the title of the webpage.\n- ```<body>```:\n  - ```<h1>```: Represents a main heading.\n  - ```<p>```: Defines a paragraph.\n\nEach section plays a role in rendering the page correctly in a web browser."
+  }
+]

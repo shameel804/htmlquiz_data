@@ -1,0 +1,122 @@
+[
+  {
+    "title": "CSS Keyframes Animation",
+    "ques": "How do you create a CSS animation that makes a box move from left to right and change its background color using keyframes?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Keyframes Animation</title>\n  <style>\n    .box {\n      width: 100px;\n      height: 100px;\n      background-color: red;\n      position: absolute;\n      animation: moveBox 3s linear infinite;\n    }\n\n    @keyframes moveBox {\n      0% {\n        left: 0;\n        background-color: red;\n      }\n      50% {\n        left: 50%;\n        background-color: blue;\n      }\n      100% {\n        left: 100%;\n        background-color: green;\n      }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"box\"></div>\n</body>\n</html>"
+    },
+    "explanation": "***@keyframes*** is used to define an animation sequence.\n\n- The ***0%*** stage defines the initial state of the element with ```left: 0``` and ```background-color: red```.\n- The ***50%*** stage moves the box to ```left: 50%``` and changes the background color to ```blue```.\n- The ***100%*** stage moves it further to ```left: 100%``` with ```background-color: green```.\n- The ***animation*** property in ```.box``` applies the keyframes animation for ***3 seconds***, in a ***linear*** manner, and repeats ***infinitely***."
+  },
+  {
+    "title": "CSS Easing in Animations",
+    "ques": "How do different easing functions affect the speed of an animation in CSS?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Easing Effects</title>\n  <style>\n    .box {\n      width: 100px;\n      height: 100px;\n      background-color: purple;\n      position: absolute;\n      animation: easeEffect 3s ease-in-out infinite;\n    }\n\n    @keyframes easeEffect {\n      from {\n        left: 0;\n      }\n      to {\n        left: 80%;\n      }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"box\"></div>\n</body>\n</html>"
+    },
+    "explanation": "The ***ease-in-out*** easing function slows down at the start and the end while moving faster in the middle.\n\n- The ***@keyframes easeEffect*** moves the box from ```left: 0``` to ```left: 80%```.\n- The ***animation*** property applies it over ***3 seconds***.\n- Different easing functions:\n  - ***ease-in*** → Starts slow, then speeds up.\n  - ***ease-out*** → Starts fast, then slows down.\n  - ***linear*** → Moves at a constant speed.\n  - ***ease-in-out*** → Slows at the start and end, but speeds up in the middle."
+  },
+  {
+    "title": "CSS Animation Delays",
+    "ques": "How do you delay the start of a CSS animation?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Animation Delay</title>\n  <style>\n    .box {\n      width: 100px;\n      height: 100px;\n      background-color: orange;\n      position: absolute;\n      animation: delayedMove 3s linear 2s infinite;\n    }\n\n    @keyframes delayedMove {\n      from {\n        left: 0;\n      }\n      to {\n        left: 80%;\n      }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"box\"></div>\n</body>\n</html>"
+    },
+    "explanation": "***animation-delay*** specifies when an animation should start after being applied.\n\n- The ***2s*** delay means the animation will wait ***2 seconds*** before starting.\n- The animation then moves the box from ```left: 0``` to ```left: 80%``` over ***3 seconds***.\n- The ***linear*** easing ensures a constant speed.\n- The animation repeats ***infinitely*** after each cycle."
+  },
+  {
+    "title": "Multiple Keyframe Animations",
+    "ques": "How do you create a CSS animation that makes a circle change its size and rotate at the same time using keyframes?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Multi Keyframes</title>\n  <style>\n    .circle {\n      width: 100px;\n      height: 100px;\n      background-color: red;\n      border-radius: 50%;\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate(-50%, -50%);\n      animation: grow 4s infinite alternate, rotate 4s linear infinite;\n    }\n\n    @keyframes grow {\n      from {\n        width: 100px;\n        height: 100px;\n      }\n      to {\n        width: 200px;\n        height: 200px;\n      }\n    }\n\n    @keyframes rotate {\n      from {\n        transform: translate(-50%, -50%) rotate(0deg);\n      }\n      to {\n        transform: translate(-50%, -50%) rotate(360deg);\n      }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"circle\"></div>\n</body>\n</html>"
+    },
+    "explanation": "This example combines ***two animations***: size growth and rotation.\n\n- The ***grow*** animation increases the circle’s ***width and height*** from 100px to 200px.\n- The ***rotate*** animation rotates it from ***0 to 360 degrees***.\n- ***infinite alternate*** makes the size grow and shrink continuously.\n- ***linear infinite*** ensures constant rotation."
+  },
+  {
+    "title": "Custom Easing Functions",
+    "ques": "How do you create a bouncing effect using a custom cubic-bezier easing function?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Custom Easing</title>\n  <style>\n    .ball {\n      width: 50px;\n      height: 50px;\n      background-color: blue;\n      border-radius: 50%;\n      position: absolute;\n      top: 0;\n      left: 50%;\n      transform: translateX(-50%);\n      animation: bounce 2s cubic-bezier(0.28, 1.12, 0.32, 1) infinite;\n    }\n\n    @keyframes bounce {\n      0% { top: 0; }\n      50% { top: 200px; }\n      100% { top: 0; }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"ball\"></div>\n</body>\n</html>"
+    },
+    "explanation": "This animation mimics a bouncing ball effect using ***cubic-bezier*** easing.\n\n- The ```@keyframes bounce``` moves the ball from ***top: 0px*** to ***top: 200px*** and back.\n- The ***cubic-bezier(0.28, 1.12, 0.32, 1)*** easing creates a realistic bounce.\n- The ***infinite*** property repeats the animation continuously."
+  },
+  {
+    "title": "Animation Delay with Staggered Effects",
+    "ques": "How do you apply an animation delay to multiple elements so they appear in a sequence?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Staggered Animation</title>\n  <style>\n    .box {\n      width: 50px;\n      height: 50px;\n      background-color: green;\n      margin: 10px;\n      display: inline-block;\n      animation: fadeIn 2s ease-in-out forwards;\n    }\n\n    .box:nth-child(1) { animation-delay: 0s; }\n    .box:nth-child(2) { animation-delay: 0.5s; }\n    .box:nth-child(3) { animation-delay: 1s; }\n    .box:nth-child(4) { animation-delay: 1.5s; }\n\n    @keyframes fadeIn {\n      from { opacity: 0; transform: translateY(20px); }\n      to { opacity: 1; transform: translateY(0); }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"box\"></div>\n  <div class=\"box\"></div>\n  <div class=\"box\"></div>\n  <div class=\"box\"></div>\n</body>\n</html>"
+    },
+    "explanation": "This example staggers animations using ***animation-delay***.\n\n- The ***fadeIn*** animation makes each box appear with a ***smooth fade-in effect***.\n- Each ```.box``` has a different ***animation-delay*** to create a sequential effect.\n- The ***ease-in-out*** easing makes the fade effect smoother."
+  },
+  {
+    "title": "Pausing and Resuming Animations",
+    "ques": "How can you start an animation only when a user hovers over an element?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Hover Animation</title>\n  <style>\n    .box {\n      width: 100px;\n      height: 100px;\n      background-color: purple;\n      position: relative;\n      animation: moveRight 2s linear paused;\n    }\n\n    .box:hover {\n      animation-play-state: running;\n    }\n\n    @keyframes moveRight {\n      from { left: 0; }\n      to { left: 200px; }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"box\"></div>\n</body>\n</html>"
+    },
+    "explanation": "This animation starts only when a user ***hovers*** over the element.\n\n- The ***animation-play-state: paused*** keeps the animation stopped initially.\n- When the user ***hovers***, it sets ***animation-play-state: running***.\n- The animation moves the box from ***left: 0*** to ***left: 200px*** smoothly."
+  },
+  {
+    "title": "Text Typing Animation",
+    "ques": "How do you create a typing effect where text appears letter by letter using keyframes?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Typing Effect</title>\n  <style>\n    .typing {\n      font-size: 24px;\n      font-family: monospace;\n      overflow: hidden;\n      white-space: nowrap;\n      width: 0;\n      border-right: 2px solid black;\n      animation: type 3s steps(20, end) forwards, blink 0.5s step-end infinite alternate;\n    }\n    \n    @keyframes type {\n      from { width: 0; }\n      to { width: 200px; }\n    }\n    \n    @keyframes blink {\n      50% { border-color: transparent; }\n    }\n  </style>\n</head>\n<body>\n  <p class=\"typing\">Hello, CSS Animations!</p>\n</body>\n</html>"
+    },
+    "explanation": "This example creates a ***typing effect*** with a blinking cursor.\n\n- The ***type*** animation increases the width gradually using ***steps(20, end)***.\n- The ***blink*** animation makes the cursor visible and invisible.\n- The ***overflow: hidden*** and ***white-space: nowrap*** ensure smooth animation."
+  },
+  {
+    "title": "Elastic Button Click Effect",
+    "ques": "How do you create a button that shrinks and then expands back when clicked?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Elastic Button</title>\n  <style>\n    .btn {\n      padding: 15px 30px;\n      font-size: 18px;\n      background-color: #ff5733;\n      color: white;\n      border: none;\n      cursor: pointer;\n      transition: transform 0.2s ease-out;\n    }\n\n    .btn:active {\n      animation: elastic 0.3s ease-out;\n    }\n    \n    @keyframes elastic {\n      0% { transform: scale(1); }\n      50% { transform: scale(0.8); }\n      100% { transform: scale(1); }\n    }\n  </style>\n</head>\n<body>\n  <button class=\"btn\">Click Me</button>\n</body>\n</html>"
+    },
+    "explanation": "This animation creates a ***press effect*** when clicking the button.\n\n- The ***elastic*** animation shrinks the button to ***80% size*** and expands back.\n- The ***ease-out*** easing gives a natural feel.\n- The ***transition: transform 0.2s ease-out*** ensures smooth shrinking."
+  },
+  {
+    "title": "Glowing Text Animation",
+    "ques": "How do you create a glowing effect on text using CSS keyframes?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Glowing Text</title>\n  <style>\n    .glow {\n      font-size: 36px;\n      font-weight: bold;\n      color: white;\n      text-align: center;\n      animation: glow 1.5s ease-in-out infinite alternate;\n    }\n\n    @keyframes glow {\n      0% { text-shadow: 0 0 5px #ff5733; }\n      100% { text-shadow: 0 0 20px #ff5733; }\n    }\n  </style>\n</head>\n<body>\n  <p class=\"glow\">Glowing Text</p>\n</body>\n</html>"
+    },
+    "explanation": "This effect makes the text ***glow smoothly*** using ***text-shadow***.\n\n- The ```@keyframes glow``` increases the shadow blur from ***5px to 20px***.\n- The ***infinite alternate*** property makes the glow effect repeat.\n- The ***ease-in-out*** creates a smooth transition."
+  },
+  {
+    "title": "Image Slide-in with Delay",
+    "ques": "How do you make an image slide in from the left after a delay using CSS animations?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Slide-in Image</title>\n  <style>\n    .image {\n      width: 300px;\n      opacity: 0;\n      transform: translateX(-100%);\n      animation: slideIn 2s ease-out 1s forwards;\n    }\n\n    @keyframes slideIn {\n      from {\n        opacity: 0;\n        transform: translateX(-100%);\n      }\n      to {\n        opacity: 1;\n        transform: translateX(0);\n      }\n    }\n  </style>\n</head>\n<body>\n  <img class=\"image\" src=\"https://via.placeholder.com/300\" alt=\"Placeholder\">\n</body>\n</html>"
+    },
+    "explanation": "This animation makes an image ***slide in*** after a ***1-second delay***.\n\n- The ***animation-delay: 1s*** ensures a delay before starting.\n- The ```@keyframes slideIn``` moves the image from ***-100% to 0***.\n- The ***opacity change*** makes the image fade in smoothly."
+  },
+  {
+    "title": "Color Pulse Animation",
+    "ques": "How do you create a pulsating effect where a background color changes smoothly?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Color Pulse</title>\n  <style>\n    .pulse {\n      width: 200px;\n      height: 100px;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      background-color: blue;\n      color: white;\n      font-size: 20px;\n      font-weight: bold;\n      animation: pulse 3s infinite alternate;\n    }\n    \n    @keyframes pulse {\n      0% { background-color: blue; }\n      50% { background-color: purple; }\n      100% { background-color: red; }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"pulse\">Pulsing Box</div>\n</body>\n</html>"
+    },
+    "explanation": "This effect makes the background color ***change smoothly***.\n\n- The ```@keyframes pulse``` transitions from ***blue to purple to red***.\n- The ***infinite alternate*** makes the colors loop continuously.\n- The effect gives a ***soft pulsing animation*** for attention."
+  }
+]

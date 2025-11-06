@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Flexbox Container",
+    "ques": "How do you create a flex container and center its items horizontally?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <style>\n    .container {\n      display: flex;\n      justify-content: center;\n      background-color: lightgray;\n      padding: 20px;\n    }\n    .item {\n      background-color: steelblue;\n      color: white;\n      padding: 10px;\n      margin: 5px;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"container\">\n    <div class=\"item\">Item 1</div>\n    <div class=\"item\">Item 2</div>\n  </div>\n</body>\n</html>"
+    },
+    "explanation": "1. The ```.container``` class is given ```display: flex;```, making it a ***flex container***.\n2. The property ```justify-content: center;``` centers the flex items horizontally inside the container.\n3. Each ```.item``` has a ***background-color***, ***padding***, and ***margin*** for styling.\n4. The output shows two items centered inside a light gray container."
+  },
+  {
+    "title": "Flexbox Alignment",
+    "ques": "How do you align flex items at the bottom of a flex container?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".container {\n  display: flex;\n  align-items: flex-end;\n  height: 200px;\n  border: 2px solid black;\n}\n.item {\n  background-color: orange;\n  padding: 10px;\n  margin: 5px;\n}"
+    },
+    "explanation": "1. The ```.container``` class is given ```display: flex;``` to make it a flex container.\n2. The ```align-items: flex-end;``` property aligns all flex items at the ***bottom*** of the container.\n3. The container has a ***fixed height*** of ```200px``` to see the alignment effect.\n4. Each ```.item``` has a ***background color*** and ***padding*** for better visibility."
+  },
+  {
+    "title": "Grid Container",
+    "ques": "How do you create a 3-column grid layout?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".grid-container {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 10px;\n}\n.grid-item {\n  background-color: lightblue;\n  padding: 20px;\n  text-align: center;\n  border: 1px solid navy;\n}"
+    },
+    "explanation": "1. The ```.grid-container``` class is given ```display: grid;``` to make it a ***grid container***.\n2. The ```grid-template-columns: repeat(3, 1fr);``` creates ***three equal-width columns***.\n3. The ```gap: 10px;``` adds ***spacing*** between grid items.\n4. Each ```.grid-item``` has ***background color, padding, and border*** for styling."
+  },
+  {
+    "title": "Grid Tracks",
+    "ques": "How do you define explicit rows and columns in CSS Grid?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".grid-container {\n  display: grid;\n  grid-template-columns: 100px 200px auto;\n  grid-template-rows: 50px 100px;\n  gap: 5px;\n}"
+    },
+    "explanation": "1. The ```.grid-container``` class is given ```display: grid;``` to activate the grid layout.\n2. The ```grid-template-columns: 100px 200px auto;``` defines ***three columns***:\n   - The first column is ***100px wide***.\n   - The second column is ***200px wide***.\n   - The third column takes up the ***remaining available space***.\n3. The ```grid-template-rows: 50px 100px;``` creates ***two rows***:\n   - The first row is ***50px tall***.\n   - The second row is ***100px tall***.\n4. The ```gap: 5px;``` adds ***spacing*** between grid items."
+  },
+  {
+    "title": "Grid Areas",
+    "ques": "How do you use grid-template-areas for a layout?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".grid-container {\n  display: grid;\n  grid-template-areas: \n    \"header header\"\n    \"sidebar content\";\n  grid-template-columns: 150px auto;\n  grid-template-rows: 50px auto;\n}\n.header {\n  grid-area: header;\n  background-color: lightcoral;\n}\n.sidebar {\n  grid-area: sidebar;\n  background-color: lightgreen;\n}\n.content {\n  grid-area: content;\n  background-color: lightblue;\n}"
+    },
+    "explanation": "1. The ```.grid-container``` uses ```display: grid;``` to enable CSS Grid.\n2. The ```grid-template-areas``` property defines the layout:\n   - The first row has ***two columns*** for ```header```.\n   - The second row has ***two sections***: ```sidebar``` and ```content```.\n3. The ```grid-template-columns: 150px auto;``` means:\n   - The first column is ***150px wide*** (sidebar).\n   - The second column takes ***remaining space*** (content).\n4. The ```grid-template-rows: 50px auto;``` defines row heights:\n   - The first row is ***50px tall*** (header).\n   - The second row fills the remaining space.\n5. Each ```.header```, ```.sidebar```, and ```.content``` has a ***grid-area name*** that matches ```grid-template-areas```."
+  },
+  {
+    "title": "Aligning a Single Flex Item",
+    "ques": "How do you align only one flex item to the top while others are centered?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".container {\n  display: flex;\n  align-items: center;\n  height: 200px;\n  border: 2px solid black;\n}\n.item {\n  background-color: orange;\n  padding: 10px;\n  margin: 5px;\n}\n.item.first {\n  align-self: flex-start;\n}"
+    },
+    "explanation": "1. The ```.container``` has ```display: flex;``` to enable the flex layout.\n2. The ```align-items: center;``` centers all items vertically.\n3. The ```.item.first``` class has ```align-self: flex-start;```, which ***overrides*** the container alignment and moves only this item to the ***top***.\n4. Other items remain centered inside the ```200px``` tall flex container."
+  },
+  {
+    "title": "Flex Order Property",
+    "ques": "How do you rearrange flex items using the 'order' property?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".container {\n  display: flex;\n}\n.item {\n  background-color: steelblue;\n  color: white;\n  padding: 10px;\n  margin: 5px;\n}\n.item:nth-child(2) {\n  order: -1;\n}"
+    },
+    "explanation": "1. The ```.container``` uses ```display: flex;``` to enable flexbox.\n2. By default, flex items appear in ***document order***.\n3. The second item is given ```order: -1;```, which places it ***before*** other items in the layout.\n4. This allows ***rearranging*** elements without changing the HTML structure."
+  },
+  {
+    "title": "Nested Flex Containers",
+    "ques": "How do you create a flex container inside another flex container?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".outer-container {\n  display: flex;\n  justify-content: space-between;\n  padding: 10px;\n}\n.inner-container {\n  display: flex;\n  flex-direction: column;\n}\n.item {\n  background-color: lightblue;\n  padding: 10px;\n  margin: 5px;\n}"
+    },
+    "explanation": "1. The ```.outer-container``` has ```display: flex;``` and ```justify-content: space-between;```, spreading its children across the width.\n2. The ```.inner-container``` also has ```display: flex;```, but with ```flex-direction: column;```, making its items stack ***vertically***.\n3. This is an example of a ***nested flexbox*** layout, where flex items inside another flex container maintain their own flex behavior."
+  },
+  {
+    "title": "Implicit Grid Tracks",
+    "ques": "What happens when grid items exceed defined tracks?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".grid-container {\n  display: grid;\n  grid-template-columns: 100px 100px;\n  gap: 10px;\n}\n.grid-item {\n  background-color: lightcoral;\n  padding: 20px;\n  text-align: center;\n  border: 1px solid black;\n}"
+    },
+    "explanation": "1. The ```.grid-container``` has ```grid-template-columns: 100px 100px;```, meaning it defines ***only two columns***.\n2. If more than two ```.grid-item``` elements exist, they will automatically be placed into ***new implicit rows***.\n3. CSS Grid creates ***extra tracks*** as needed to accommodate excess items.\n4. The layout continues expanding downwards as items overflow beyond the defined grid."
+  },
+  {
+    "title": "Grid Auto-Placement",
+    "ques": "How do grid items get placed automatically?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".grid-container {\n  display: grid;\n  grid-template-columns: repeat(3, 100px);\n  grid-auto-rows: minmax(50px, auto);\n  gap: 10px;\n}\n.grid-item {\n  background-color: lightgreen;\n  padding: 20px;\n  text-align: center;\n}"
+    },
+    "explanation": "1. The ```.grid-container``` has ```grid-template-columns: repeat(3, 100px);```, defining ***three fixed-width columns***.\n2. The property ```grid-auto-rows: minmax(50px, auto);``` automatically adjusts row heights:\n   - Each row is at least ***50px tall*** but expands as needed.\n3. If additional ```.grid-item``` elements exist, they will be ***automatically placed*** into new rows."
+  },
+  {
+    "title": "Grid Item Spanning Multiple Columns",
+    "ques": "How do you make a grid item span multiple columns?",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".grid-container {\n  display: grid;\n  grid-template-columns: repeat(3, 100px);\n  gap: 10px;\n}\n.grid-item.large {\n  grid-column: span 2;\n  background-color: orange;\n  padding: 20px;\n}"
+    },
+    "explanation": "1. The ```.grid-container``` has ```grid-template-columns: repeat(3, 100px);```, creating ***three equal columns***.\n2. The ```.grid-item.large``` class is given ```grid-column: span 2;```, which makes it ***occupy two columns***.\n3. This allows creating ***wider*** grid items while maintaining other items in their respective places."
+  }
+]

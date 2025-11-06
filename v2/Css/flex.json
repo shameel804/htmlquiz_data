@@ -1,0 +1,4834 @@
+[
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: flex;\nflex-direction: column;",
+        "o": [
+            "Column layout",
+            "Row layout",
+            "Grid layout",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "What is a flex container?",
+        "o": [
+            "Element with display: flex",
+            "Element with display: grid",
+            "Element with display: block",
+            "Element with display: inline"
+        ]
+    },
+    {
+        "q": "What does this code align items?",
+        "l": "css",
+        "c": "align-items: center;\njustify-content: space-between;",
+        "o": [
+            "Center vertically",
+            "Center horizontally",
+            "Align at edges",
+            "Stack vertically"
+        ]
+    },
+    {
+        "q": "Which property aligns flex items?",
+        "o": [
+            "align-items",
+            "justify-content",
+            "flex-direction",
+            "flex-wrap"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "grid-template-columns: 100px 1fr;\ngrid-template-rows: auto;",
+        "o": [
+            "Two columns",
+            "Two rows",
+            "One column",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "What is the default flex direction?",
+        "o": [
+            "row",
+            "column",
+            "row-reverse",
+            "column-reverse"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: grid;\ngrid-template-areas: 'header header'\n'side main';",
+        "o": [
+            "Header and side",
+            "Three columns",
+            "One row",
+            "Two rows"
+        ]
+    },
+    {
+        "q": "What does justify-content do?",
+        "o": [
+            "Aligns items along the main axis",
+            "Aligns items along the cross axis",
+            "Wraps items",
+            "Sets the flex direction"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-wrap: wrap;",
+        "o": [
+            "Items wrap",
+            "Items stack",
+            "Items align",
+            "Items shrink"
+        ]
+    },
+    {
+        "q": "How do you create a grid container?",
+        "o": [
+            "display: grid",
+            "display: flex",
+            "display: inline-block",
+            "display: block"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "justify-content: flex-end;",
+        "o": [
+            "Align items to the right",
+            "Center items",
+            "Align items to the left",
+            "Stack items"
+        ]
+    },
+    {
+        "q": "What is a grid item?",
+        "o": [
+            "Child of a grid container",
+            "Child of a flex container",
+            "Any HTML element",
+            "A div only"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "grid-template-columns: repeat(3, 1fr);",
+        "o": [
+            "Three equal columns",
+            "One column",
+            "Three fixed columns",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "Which property defines the grid template?",
+        "o": [
+            "grid-template-rows",
+            "grid-template-columns",
+            "grid-template-areas",
+            "All of the above"
+        ]
+    },
+    {
+        "q": "What does this code center items?",
+        "l": "css",
+        "c": "align-items: center;\njustify-content: center;",
+        "o": [
+            "Center both ways",
+            "Align at start",
+            "Align at end",
+            "Stack items"
+        ]
+    },
+    {
+        "q": "What does the property align-self do?",
+        "o": [
+            "Aligns an individual flex item",
+            "Sets the flex basis",
+            "Defines the order of flex items",
+            "Sets the margin"
+        ]
+    },
+    {
+        "q": "What does this code add gaps?",
+        "l": "css",
+        "c": "gap: 10px;",
+        "o": [
+            "10px gap",
+            "Margin 10px",
+            "Padding 10px",
+            "No gaps"
+        ]
+    },
+    {
+        "q": "What is the default value of flex-wrap?",
+        "o": [
+            "nowrap",
+            "wrap",
+            "wrap-reverse",
+            "inherit"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-grow: 1;",
+        "o": [
+            "Item grows",
+            "Item shrinks",
+            "Item fixed",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you set the size of a grid column?",
+        "o": [
+            "grid-template-columns",
+            "grid-column-size",
+            "grid-column-width",
+            "column-size"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-auto-rows: 100px;",
+        "o": [
+            "Fixed row height",
+            "Flexible height",
+            "No height",
+            "Auto height"
+        ]
+    },
+    {
+        "q": "What is a track in CSS Grid?",
+        "o": [
+            "Space between items",
+            "Row or column",
+            "Grid line",
+            "A grid item"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template: auto / 1fr 2fr;",
+        "o": [
+            "Two columns",
+            "One column",
+            "Two rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "How do you center items in a flex container?",
+        "o": [
+            "justify-content: center",
+            "align-items: center",
+            "Both A and B",
+            "flex-direction: center"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: flex;\nflex-direction: row-reverse;",
+        "o": [
+            "Row reversed",
+            "Column layout",
+            "Column reversed",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "What does grid-area define?",
+        "o": [
+            "Location of grid items",
+            "The grid itself",
+            "The number of tracks",
+            "The grid gap"
+        ]
+    },
+    {
+        "q": "What does this code center content?",
+        "l": "css",
+        "c": "justify-content: center;\nalign-items: center;",
+        "o": [
+            "Center all",
+            "Align left",
+            "Align right",
+            "Stack items"
+        ]
+    },
+    {
+        "q": "What does align-items do in a flex container?",
+        "o": [
+            "Aligns items in the cross axis",
+            "Aligns items in the main axis",
+            "Sets flex grow",
+            "Sets flex shrink"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "grid-column-gap: 15px;",
+        "o": [
+            "Column gap",
+            "Row gap",
+            "No gaps",
+            "Fixed gap"
+        ]
+    },
+    {
+        "q": "What property specifies the space between grid items?",
+        "o": [
+            "grid-gap",
+            "grid-space",
+            "gap",
+            "grid-margin"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-direction: column;",
+        "o": [
+            "Column layout",
+            "Row layout",
+            "Grid layout",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "What does flex-grow do?",
+        "o": [
+            "Expands the item",
+            "Shrinks the item",
+            "Sets the base size",
+            "Changes the order"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "align-self: flex-start;",
+        "o": [
+            "Aligns at start",
+            "Centers item",
+            "Aligns at end",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which of the following is not a flex property?",
+        "o": [
+            "flex-basis",
+            "flex-wrap",
+            "grid-template",
+            "flex-grow"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-auto-flow: dense;",
+        "o": [
+            "Fills gaps",
+            "Aligns items",
+            "No effect",
+            "Creates gaps"
+        ]
+    },
+    {
+        "q": "How do you create equal spacing between flex items?",
+        "o": [
+            "justify-content: space-between",
+            "justify-content: center",
+            "align-items: stretch",
+            "flex-grow: 1"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "flex: 1 0 auto;",
+        "o": [
+            "Grows and shrinks",
+            "Fixed size",
+            "No effect",
+            "Hides item"
+        ]
+    },
+    {
+        "q": "Which value allows a grid item to span multiple columns?",
+        "o": [
+            "grid-column: span 2",
+            "grid-column-start",
+            "grid-column-end",
+            "grid-area"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "justify-items: stretch;",
+        "o": [
+            "Stretches items",
+            "Centers items",
+            "Aligns at start",
+            "Aligns at end"
+        ]
+    },
+    {
+        "q": "What is the default value of align-items in a flex container?",
+        "o": [
+            "stretch",
+            "center",
+            "baseline",
+            "flex-start"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template-rows: repeat(3, 100px);",
+        "o": [
+            "Three fixed rows",
+            "Flexible rows",
+            "One row",
+            "Auto height rows"
+        ]
+    },
+    {
+        "q": "Which property defines the main axis direction in a flex container?",
+        "o": [
+            "flex-direction",
+            "flex-flow",
+            "justify-content",
+            "align-items"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-basis: 100px;",
+        "o": [
+            "Sets base size",
+            "No effect",
+            "Centers item",
+            "Aligns item"
+        ]
+    },
+    {
+        "q": "How do you specify grid rows?",
+        "o": [
+            "grid-template-rows",
+            "grid-rows",
+            "row-template",
+            "grid-row"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "align-content: space-between;",
+        "o": [
+            "Distributes space",
+            "Centers content",
+            "Aligns items",
+            "Stacks items"
+        ]
+    },
+    {
+        "q": "What is the purpose of the flex-basis property?",
+        "o": [
+            "Sets the initial size",
+            "Sets the maximum size",
+            "Sets the minimum size",
+            "Changes the order"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-area: header;",
+        "o": [
+            "Defines grid area",
+            "Creates header",
+            "Sets gap",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "What does the property gap do in CSS Grid?",
+        "o": [
+            "Sets space between grid items",
+            "Defines grid area",
+            "Sets column size",
+            "Aligns grid items"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "flex-wrap: wrap-reverse;",
+        "o": [
+            "Wraps in reverse",
+            "No wrap",
+            "Aligns items",
+            "Stacks items"
+        ]
+    },
+    {
+        "q": "What does flex-shrink do?",
+        "o": [
+            "Controls item shrinking",
+            "Controls item expanding",
+            "Sets item size",
+            "Defines item order"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template: 'header header'\n'side main';",
+        "o": [
+            "Two areas",
+            "Three areas",
+            "One area",
+            "No areas"
+        ]
+    },
+    {
+        "q": "How do you create a responsive grid layout?",
+        "o": [
+            "Use media queries",
+            "Use fixed sizes",
+            "Use absolute positioning",
+            "Use floats"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-shrink: 0;",
+        "o": [
+            "Does not shrink",
+            "Grows item",
+            "Fixed size",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does grid-template-areas do?",
+        "o": [
+            "Defines a layout structure",
+            "Creates a grid item",
+            "Sets row size",
+            "Sets column size"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "justify-content: space-around;",
+        "o": [
+            "Even space",
+            "Center items",
+            "Align at edges",
+            "Stack items"
+        ]
+    },
+    {
+        "q": "What is the effect of setting flex-wrap to wrap?",
+        "o": [
+            "Items wrap to the next line",
+            "Items do not wrap",
+            "Items stretch",
+            "Items shrink"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "align-items: baseline;",
+        "o": [
+            "Aligns to baseline",
+            "Centers items",
+            "Aligns at start",
+            "Stacks items"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to occupy a specific area?",
+        "o": [
+            "grid-area property",
+            "grid-column",
+            "grid-row",
+            "area property"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-column: 1 / 3;",
+        "o": [
+            "Spans two columns",
+            "Spans one column",
+            "Aligns items",
+            "Sets gap"
+        ]
+    },
+    {
+        "q": "What does justify-self do?",
+        "o": [
+            "Aligns an individual grid item",
+            "Aligns all grid items",
+            "Sets grid size",
+            "Changes item order"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "flex-direction: row;",
+        "o": [
+            "Row layout",
+            "Column layout",
+            "Grid layout",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "How can you create a simple grid layout?",
+        "o": [
+            "Use grid-template-columns",
+            "Use float",
+            "Use flexbox",
+            "Use inline-block"
+        ]
+    },
+    {
+        "q": "What does this code align?",
+        "l": "css",
+        "c": "align-content: flex-end;",
+        "o": [
+            "Aligns at end",
+            "Centers content",
+            "Aligns at start",
+            "Stacks items"
+        ]
+    },
+    {
+        "q": "What is a grid line?",
+        "o": [
+            "Boundary between grid cells",
+            "A single grid item",
+            "A container element",
+            "The space between items"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "grid-row-gap: 20px;",
+        "o": [
+            "Row gap",
+            "Column gap",
+            "No gaps",
+            "Fixed gap"
+        ]
+    },
+    {
+        "q": "Which of these can be a grid container?",
+        "o": [
+            "Any block element",
+            "Only div elements",
+            "Only section elements",
+            "Only articles"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex: 2;",
+        "o": [
+            "Grows twice as much",
+            "Shrinks",
+            "Fixed size",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the purpose of the property grid-auto-rows?",
+        "o": [
+            "Sets height for implicit rows",
+            "Sets width for columns",
+            "Defines grid lines",
+            "Aligns grid items"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-auto-flow: column;",
+        "o": [
+            "Flow in columns",
+            "Flow in rows",
+            "No effect",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "What does the property order do in flexbox?",
+        "o": [
+            "Changes item display order",
+            "Sets size of items",
+            "Aligns items",
+            "Wraps items"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "grid-template-columns: auto 1fr;",
+        "o": [
+            "Two columns",
+            "One column",
+            "Two rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "What is the grid template shorthand?",
+        "o": [
+            "grid-template",
+            "grid",
+            "grid-area",
+            "template"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "justify-self: center;",
+        "o": [
+            "Centers item",
+            "Aligns at start",
+            "Aligns at end",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you define multiple rows in CSS Grid?",
+        "o": [
+            "grid-template-rows: repeat(3, 1fr)",
+            "grid-rows: 3",
+            "rows: 3",
+            "grid-row: 1fr"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: grid;\ngrid-template-rows: repeat(2, 1fr);",
+        "o": [
+            "Two equal rows",
+            "One row",
+            "Two fixed rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "Which property defines the size of a grid item?",
+        "o": [
+            "grid-column",
+            "grid-area",
+            "flex-basis",
+            "grid-item-size"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "align-self: center;",
+        "o": [
+            "Centers item",
+            "Aligns at start",
+            "Aligns at end",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the flex property combine?",
+        "o": [
+            "flex-grow, flex-shrink, flex-basis",
+            "flex-basis, flex-wrap, flex-direction",
+            "justify-content, align-items",
+            "align-self, flex-basis"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-gap: 5px;",
+        "o": [
+            "5px gap",
+            "Margin 5px",
+            "Padding 5px",
+            "No gaps"
+        ]
+    },
+    {
+        "q": "What value allows a grid item to span multiple rows?",
+        "o": [
+            "grid-row: span 2",
+            "grid-row-end",
+            "grid-row-start",
+            "grid-area"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex: 1 1 auto;",
+        "o": [
+            "Grows and shrinks",
+            "Fixed size",
+            "No effect",
+            "Hides item"
+        ]
+    },
+    {
+        "q": "Which property is used to align the content of a flex container?",
+        "o": [
+            "justify-content",
+            "align-items",
+            "flex-direction",
+            "flex-flow"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: flex;\nflex-direction: column-reverse;",
+        "o": [
+            "Column reversed",
+            "Row layout",
+            "Column layout",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "What is the main axis in a flex container?",
+        "o": [
+            "Direction of flex items",
+            "Opposite of cross axis",
+            "Height of container",
+            "Width of container"
+        ]
+    },
+    {
+        "q": "What does this code align?",
+        "l": "css",
+        "c": "align-items: stretch;",
+        "o": [
+            "Stretches items",
+            "Aligns at start",
+            "Centers items",
+            "Stacks items"
+        ]
+    },
+    {
+        "q": "What property controls the spacing between rows in a grid?",
+        "o": [
+            "grid-row-gap",
+            "grid-column-gap",
+            "gap",
+            "grid-space"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "grid-template-areas: 'nav content';",
+        "o": [
+            "Defines areas",
+            "Creates header",
+            "Sets gap",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "Which of the following is a CSS Grid property?",
+        "o": [
+            "grid-template-columns",
+            "flex-flow",
+            "align-items",
+            "justify-content"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: grid;\ngrid-template-columns: 100px 1fr 100px;",
+        "o": [
+            "Three columns",
+            "One column",
+            "Two rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "How do you create a two-column grid layout?",
+        "o": [
+            "grid-template-columns: 1fr 1fr",
+            "grid: 2",
+            "grid-columns: 2",
+            "columns: 2"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "flex-wrap: nowrap;",
+        "o": [
+            "No wrap",
+            "Wrap items",
+            "Aligns items",
+            "Stacks items"
+        ]
+    },
+    {
+        "q": "What does the property align-content do?",
+        "o": [
+            "Aligns flex lines",
+            "Aligns grid items",
+            "Sets item size",
+            "Changes item order"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-row: 1 / 2;",
+        "o": [
+            "Spans one row",
+            "Spans two rows",
+            "Aligns items",
+            "Sets gap"
+        ]
+    },
+    {
+        "q": "What does the property grid-auto-flow control?",
+        "o": [
+            "How grid items are placed",
+            "How items are sized",
+            "How items are aligned",
+            "How gaps are set"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: flex;\njustify-content: space-evenly;",
+        "o": [
+            "Even space",
+            "Center items",
+            "Aligns at edges",
+            "Stack items"
+        ]
+    },
+    {
+        "q": "What does flex-basis determine?",
+        "o": [
+            "Initial size of an item",
+            "Maximum size of an item",
+            "Minimum size of an item",
+            "Order of items"
+        ]
+    },
+    {
+        "q": "What does this code align?",
+        "l": "css",
+        "c": "align-content: center;",
+        "o": [
+            "Aligns content",
+            "Aligns items",
+            "Centers items",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What value does flex-direction take for a column layout?",
+        "o": [
+            "column",
+            "row",
+            "row-reverse",
+            "column-reverse"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "grid-auto-columns: 100px;",
+        "o": [
+            "Fixed column width",
+            "Flexible width",
+            "No width",
+            "Auto width"
+        ]
+    },
+    {
+        "q": "How do you change the order of flex items?",
+        "o": [
+            "Use order property",
+            "Use align-items",
+            "Use flex-wrap",
+            "Use flex-grow"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "flex-direction: column;\nflex-wrap: wrap;",
+        "o": [
+            "Column wrap",
+            "Row layout",
+            "Column layout",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "What is the purpose of grid-gap?",
+        "o": [
+            "Sets space between rows and columns",
+            "Aligns grid items",
+            "Defines grid template",
+            "Sets item size"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-flow: column wrap;",
+        "o": [
+            "Column wrap",
+            "Row layout",
+            "Column layout",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to fill the entire grid?",
+        "o": [
+            "grid-area: 1 / 1 / -1 / -1",
+            "grid-column: 1 / -1",
+            "grid-row: 1 / -1",
+            "All of the above"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "grid-template-columns: repeat(4, 1fr);",
+        "o": [
+            "Four equal columns",
+            "One column",
+            "Two rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "What does justify-items do?",
+        "o": [
+            "Aligns items in the inline axis",
+            "Aligns items in the block axis",
+            "Sets item order",
+            "Changes item size"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "justify-items: end;",
+        "o": [
+            "Aligns at end",
+            "Centers items",
+            "Aligns at start",
+            "Stacks items"
+        ]
+    },
+    {
+        "q": "Which value of flex-wrap allows items to wrap onto multiple lines?",
+        "o": [
+            "wrap",
+            "nowrap",
+            "wrap-reverse",
+            "inherit"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template: 'header'\n'side'\n'main';",
+        "o": [
+            "Three areas",
+            "Two areas",
+            "One area",
+            "No areas"
+        ]
+    },
+    {
+        "q": "What is the purpose of flexbox?",
+        "o": [
+            "Layout items in one dimension",
+            "Layout items in two dimensions",
+            "Create fixed layouts",
+            "Set colors and backgrounds"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-grow: 0;",
+        "o": [
+            "Does not grow",
+            "Grows item",
+            "Fixed size",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the grid property combine?",
+        "o": [
+            "grid-template, grid-gap",
+            "grid-auto-flow, grid-template",
+            "grid-column, grid-row",
+            "grid-template-areas, grid-template-columns"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "grid-auto-flow: row;",
+        "o": [
+            "Flow in rows",
+            "Flow in columns",
+            "No effect",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "What does the property grid-column-gap control?",
+        "o": [
+            "Space between grid columns",
+            "Space between grid rows",
+            "Sets column size",
+            "Sets row size"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "align-self: flex-end;",
+        "o": [
+            "Aligns at end",
+            "Centers item",
+            "Aligns at start",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the property align-items control?",
+        "o": [
+            "Aligns flex items in the cross axis",
+            "Aligns grid items",
+            "Sets item size",
+            "Defines gaps"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: grid;\ngrid-gap: 10px;",
+        "o": [
+            "10px gap",
+            "Margin 10px",
+            "Padding 10px",
+            "No gaps"
+        ]
+    },
+    {
+        "q": "What is the default value of grid-template-rows?",
+        "o": [
+            "none",
+            "auto",
+            "100px",
+            "1fr"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "justify-self: stretch;",
+        "o": [
+            "Stretches item",
+            "Centers item",
+            "Aligns at start",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property defines the number of rows in CSS Grid?",
+        "o": [
+            "grid-template-rows",
+            "grid-rows",
+            "row-template",
+            "grid-row"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template-columns: 200px auto;",
+        "o": [
+            "Two columns",
+            "One column",
+            "Two rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "How do you set flex-grow to allow an item to grow?",
+        "o": [
+            "flex-grow: 1",
+            "flex: grow",
+            "flex: 1",
+            "grow: 1"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-basis: 50%;",
+        "o": [
+            "Sets base size",
+            "No effect",
+            "Centers item",
+            "Aligns item"
+        ]
+    },
+    {
+        "q": "What does the property grid-template-columns do?",
+        "o": [
+            "Defines the width of grid columns",
+            "Sets item order",
+            "Aligns grid items",
+            "Sets the height of grid items"
+        ]
+    },
+    {
+        "q": "What does this code align?",
+        "l": "css",
+        "c": "align-items: flex-end;",
+        "o": [
+            "Aligns at end",
+            "Centers items",
+            "Aligns at start",
+            "Stacks items"
+        ]
+    },
+    {
+        "q": "What does flex-direction: row-reverse do?",
+        "o": [
+            "Reverses item order",
+            "Aligns items in a column",
+            "Aligns items at the end",
+            "Wraps items"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: flex;\nflex-direction: row;",
+        "o": [
+            "Row layout",
+            "Column layout",
+            "Grid layout",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "What value allows a grid item to span across all columns?",
+        "o": [
+            "grid-column: 1 / -1",
+            "grid-column: span 2",
+            "grid-row: span 2",
+            "grid-area: all"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-wrap: wrap;",
+        "o": [
+            "Items wrap",
+            "Items stack",
+            "Items align",
+            "Items shrink"
+        ]
+    },
+    {
+        "q": "Which property sets the vertical alignment of flex items?",
+        "o": [
+            "align-items",
+            "justify-content",
+            "flex-direction",
+            "flex-align"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template-columns: 1fr 2fr;",
+        "o": [
+            "Two columns",
+            "One column",
+            "Two rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "How do you specify a fixed height for grid rows?",
+        "o": [
+            "grid-template-rows: 100px",
+            "row-height: 100px",
+            "grid-rows: 100px",
+            "row-template: 100px"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-auto-rows: 100px;",
+        "o": [
+            "Fixed row height",
+            "Flexible height",
+            "No height",
+            "Auto height"
+        ]
+    },
+    {
+        "q": "What does flex-basis: auto do?",
+        "o": [
+            "Size based on content",
+            "Size based on parent",
+            "Size based on min-width",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "grid-template-areas: 'header header'\n'nav main';",
+        "o": [
+            "Two areas",
+            "One area",
+            "Three areas",
+            "No areas"
+        ]
+    },
+    {
+        "q": "What does the property grid-column-start do?",
+        "o": [
+            "Specifies starting column for an item",
+            "Specifies starting row",
+            "Aligns grid items",
+            "Sets size"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex: 1 0 0;",
+        "o": [
+            "Grows and does not shrink",
+            "Fixed size",
+            "No effect",
+            "Hides item"
+        ]
+    },
+    {
+        "q": "Which of the following controls the space between rows?",
+        "o": [
+            "grid-row-gap",
+            "grid-column-gap",
+            "gap",
+            "grid-spacing"
+        ]
+    },
+    {
+        "q": "What does this code align?",
+        "l": "css",
+        "c": "align-content: stretch;",
+        "o": [
+            "Stretches content",
+            "Aligns items",
+            "Centers items",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the property justify-content do?",
+        "o": [
+            "Aligns items in the main axis",
+            "Aligns items in the cross axis",
+            "Sets gaps",
+            "Defines item size"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "grid-column: 2 / 4;",
+        "o": [
+            "Spans two columns",
+            "Spans three columns",
+            "Aligns items",
+            "Sets gap"
+        ]
+    },
+    {
+        "q": "How can you center items in a grid container?",
+        "o": [
+            "justify-items: center",
+            "align-items: center",
+            "grid-template-columns: auto",
+            "Both A and B"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: grid;\ngrid-template-columns: repeat(3, 100px);",
+        "o": [
+            "Three fixed columns",
+            "One column",
+            "Two rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "What does flex-wrap: wrap-reverse do?",
+        "o": [
+            "Items wrap in reverse order",
+            "Items do not wrap",
+            "Items wrap normally",
+            "Items align at the start"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-direction: row-reverse;",
+        "o": [
+            "Reverses row",
+            "Column layout",
+            "Column reversed",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "Which property specifies the size of grid items?",
+        "o": [
+            "grid-template-rows",
+            "grid-template-columns",
+            "grid-auto-rows",
+            "grid-auto-columns"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "justify-items: start;",
+        "o": [
+            "Aligns at start",
+            "Centers items",
+            "Aligns at end",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the default grid-template-columns value?",
+        "o": [
+            "none",
+            "auto",
+            "1fr",
+            "100px"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template-rows: repeat(4, 1fr);",
+        "o": [
+            "Four equal rows",
+            "One row",
+            "Two rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "Which of the following defines the number of columns in a grid?",
+        "o": [
+            "grid-template-columns",
+            "grid-columns",
+            "column-template",
+            "grid-column"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-column-gap: 15px;",
+        "o": [
+            "Column gap",
+            "Row gap",
+            "No gaps",
+            "Fixed gap"
+        ]
+    },
+    {
+        "q": "What does the property justify-self control?",
+        "o": [
+            "Aligns individual grid items",
+            "Aligns all grid items",
+            "Sets column size",
+            "Sets row size"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "flex: 1;",
+        "o": [
+            "Grows item",
+            "Shrinks",
+            "Fixed size",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does flex-grow: 0 do?",
+        "o": [
+            "Item does not grow",
+            "Item grows infinitely",
+            "Item grows proportionally",
+            "Item shrinks"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "flex-direction: column-reverse;\nflex-wrap: wrap;",
+        "o": [
+            "Column wrap",
+            "Row layout",
+            "Column layout",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "What does the property align-content control?",
+        "o": [
+            "Space between flex lines",
+            "Aligns grid items",
+            "Sets item size",
+            "Changes item order"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-auto-flow: dense;",
+        "o": [
+            "Fills gaps",
+            "Aligns items",
+            "No effect",
+            "Creates gaps"
+        ]
+    },
+    {
+        "q": "What does grid-auto-flow: column do?",
+        "o": [
+            "Places items in columns",
+            "Places items in rows",
+            "Sets item size",
+            "Defines gaps"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "align-items: baseline;",
+        "o": [
+            "Aligns to baseline",
+            "Centers items",
+            "Aligns at start",
+            "Stacks items"
+        ]
+    },
+    {
+        "q": "How do you specify the size of a grid row?",
+        "o": [
+            "grid-template-rows: 100px",
+            "grid-rows: 100px",
+            "row-template: 100px",
+            "grid-row: 100px"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template-columns: auto 1fr;",
+        "o": [
+            "Two columns",
+            "One column",
+            "Two rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "What does align-self control?",
+        "o": [
+            "Alignment of individual flex items",
+            "Alignment of all items",
+            "Sets gaps",
+            "Defines grid areas"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-basis: auto;",
+        "o": [
+            "Sets auto size",
+            "No effect",
+            "Centers item",
+            "Aligns item"
+        ]
+    },
+    {
+        "q": "Which value allows a flex item to not shrink?",
+        "o": [
+            "flex-shrink: 0",
+            "flex-grow: 1",
+            "flex: none",
+            "flex: auto"
+        ]
+    },
+    {
+        "q": "What does this code align?",
+        "l": "css",
+        "c": "justify-content: space-around;",
+        "o": [
+            "Even space",
+            "Center items",
+            "Aligns at edges",
+            "Stack items"
+        ]
+    },
+    {
+        "q": "What does the property grid-area do?",
+        "o": [
+            "Defines the area of grid items",
+            "Sets item order",
+            "Aligns items",
+            "Defines size"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: flex;\nflex-direction: row-reverse;",
+        "o": [
+            "Reversed row",
+            "Column layout",
+            "Row layout",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "How do you set a flex container to have multiple lines?",
+        "o": [
+            "flex-wrap: wrap",
+            "flex-wrap: nowrap",
+            "flex-direction: row",
+            "flex-grow: 1"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-area: main;",
+        "o": [
+            "Defines main area",
+            "Defines grid area",
+            "Aligns items",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the property grid-column-end do?",
+        "o": [
+            "Specifies end column for an item",
+            "Specifies end row",
+            "Aligns grid items",
+            "Sets size"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "flex-shrink: 1;",
+        "o": [
+            "Allows shrinking",
+            "Prevents shrinking",
+            "No effect",
+            "Hides item"
+        ]
+    },
+    {
+        "q": "How do you specify grid rows with equal height?",
+        "o": [
+            "grid-template-rows: repeat(3, 1fr)",
+            "grid-rows: equal",
+            "rows: auto",
+            "grid: equal"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template-areas: 'header'\n'footer';",
+        "o": [
+            "Two areas",
+            "One area",
+            "Three areas",
+            "No areas"
+        ]
+    },
+    {
+        "q": "What does flex-direction: column-reverse do?",
+        "o": [
+            "Reverses item order in a column",
+            "Aligns items in a row",
+            "Wraps items",
+            "Aligns items at the start"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "justify-content: flex-start;",
+        "o": [
+            "Aligns at start",
+            "Centers items",
+            "Aligns at end",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property controls the space between columns in CSS Grid?",
+        "o": [
+            "grid-column-gap",
+            "grid-row-gap",
+            "gap",
+            "grid-space"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "grid-row-gap: 20px;",
+        "o": [
+            "Row gap",
+            "Column gap",
+            "No gaps",
+            "Fixed gap"
+        ]
+    },
+    {
+        "q": "What does grid-template-areas define?",
+        "o": [
+            "Named areas for grid items",
+            "Sets item order",
+            "Defines size",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: flex;\njustify-content: space-between;",
+        "o": [
+            "Space between",
+            "Aligns at edges",
+            "Center items",
+            "Stack items"
+        ]
+    },
+    {
+        "q": "Which of these properties controls how items are sized in Flexbox?",
+        "o": [
+            "flex-basis",
+            "grid-template-columns",
+            "gap",
+            "flex-direction"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-wrap: wrap-reverse;",
+        "o": [
+            "Wraps in reverse",
+            "No wrap",
+            "Aligns items",
+            "Stacks items"
+        ]
+    },
+    {
+        "q": "What does the property justify-content: space-between do?",
+        "o": [
+            "Distributes space between items",
+            "Aligns items at start",
+            "Aligns items at center",
+            "Sets gaps"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template: 'header header'\n'nav main';",
+        "o": [
+            "Two areas",
+            "One area",
+            "Three areas",
+            "No areas"
+        ]
+    },
+    {
+        "q": "Which property sets the alignment of grid items?",
+        "o": [
+            "align-items",
+            "justify-content",
+            "grid-template",
+            "grid-auto-flow"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-template-columns: repeat(2, 50px);",
+        "o": [
+            "Two 50px columns",
+            "One column",
+            "Flexible layout",
+            "Two rows"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to occupy multiple rows?",
+        "o": [
+            "grid-row: span 2",
+            "grid-rows: 2",
+            "row: span 2",
+            "grid-area: 2"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "flex: 2 1 50%;",
+        "o": [
+            "Grows more",
+            "Shrinks less",
+            "Fixed size",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the purpose of the gap property?",
+        "o": [
+            "Sets space between grid items",
+            "Aligns items",
+            "Defines sizes",
+            "Changes order"
+        ]
+    },
+    {
+        "q": "What does this code align?",
+        "l": "css",
+        "c": "align-self: center;",
+        "o": [
+            "Centers item",
+            "Aligns at end",
+            "Aligns at start",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you center a flex item?",
+        "o": [
+            "margin: auto",
+            "align: center",
+            "flex: center",
+            "justify: center"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template-columns: 1fr 2fr 1fr;",
+        "o": [
+            "Three columns",
+            "One column",
+            "Two rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "What does the property align-content do?",
+        "o": [
+            "Aligns flex lines",
+            "Aligns grid items",
+            "Sets gaps",
+            "Defines item size"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-auto-flow: column;",
+        "o": [
+            "Flow in columns",
+            "Flow in rows",
+            "Aligns items",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does grid-auto-columns do?",
+        "o": [
+            "Sets width of auto columns",
+            "Sets height of auto rows",
+            "Aligns items",
+            "Defines gaps"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "justify-content: space-evenly;",
+        "o": [
+            "Even space",
+            "Center items",
+            "Aligns at edges",
+            "Stack items"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to occupy specific area?",
+        "o": [
+            "grid-area: name",
+            "grid-item: name",
+            "item-area: name",
+            "grid-column: name"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: grid;\ngrid-template-rows: 100px auto;",
+        "o": [
+            "Two rows",
+            "One row",
+            "Two columns",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "Which property is used to control flex item alignment?",
+        "o": [
+            "align-items",
+            "grid-area",
+            "flex-direction",
+            "gap"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex: 0 1 auto;",
+        "o": [
+            "Does not grow",
+            "Grows item",
+            "Fixed size",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the property grid-template-columns: repeat(3, 1fr) do?",
+        "o": [
+            "Creates 3 equal columns",
+            "Creates 3 fixed columns",
+            "Creates 3 rows",
+            "Creates 3 auto columns"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "grid-column: 1 / -1;",
+        "o": [
+            "Spans all columns",
+            "Spans two columns",
+            "Aligns items",
+            "Sets gap"
+        ]
+    },
+    {
+        "q": "How do you set flex items to stretch?",
+        "o": [
+            "align-items: stretch",
+            "flex: stretch",
+            "flex-stretch: 1",
+            "stretch: auto"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "flex-direction: row;\nflex-wrap: wrap;",
+        "o": [
+            "Row wrap",
+            "Column layout",
+            "Column reversed",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "What does the property grid-row-gap do?",
+        "o": [
+            "Space between grid rows",
+            "Space between grid columns",
+            "Aligns grid items",
+            "Sets item size"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-row: 1 / span 2;",
+        "o": [
+            "Spans two rows",
+            "Aligns items",
+            "No effect",
+            "Sets gap"
+        ]
+    },
+    {
+        "q": "What does flex: 1 do?",
+        "o": [
+            "Item grows and shrinks",
+            "Item does not grow",
+            "Item has fixed size",
+            "Item is hidden"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "justify-self: end;",
+        "o": [
+            "Aligns at end",
+            "Centers item",
+            "Aligns at start",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you create a grid with equal-sized items?",
+        "o": [
+            "grid-template-columns: repeat(3, 1fr)",
+            "grid-columns: equal",
+            "grid: auto",
+            "grid: equal"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: grid;\ngrid-auto-rows: 150px;",
+        "o": [
+            "Fixed row height",
+            "Flexible height",
+            "No height",
+            "Auto height"
+        ]
+    },
+    {
+        "q": "What does align-items: center do?",
+        "o": [
+            "Centers items in the cross axis",
+            "Aligns items in the main axis",
+            "Sets gaps",
+            "Defines item size"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-basis: 30%;",
+        "o": [
+            "Sets base size",
+            "No effect",
+            "Centers item",
+            "Aligns item"
+        ]
+    },
+    {
+        "q": "How do you make a grid item take the entire width?",
+        "o": [
+            "grid-column: 1 / -1",
+            "grid: full",
+            "column: all",
+            "grid: auto"
+        ]
+    },
+    {
+        "q": "What does this code align?",
+        "l": "css",
+        "c": "align-items: center;",
+        "o": [
+            "Centers items",
+            "Aligns at end",
+            "Aligns at start",
+            "Stacks items"
+        ]
+    },
+    {
+        "q": "Which property defines how many columns an item spans?",
+        "o": [
+            "grid-column",
+            "grid-row",
+            "column-span",
+            "grid-area"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template-columns: repeat(3, 1fr);",
+        "o": [
+            "Three equal columns",
+            "One column",
+            "Two rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "What does flex-shrink: 1 do?",
+        "o": [
+            "Item can shrink",
+            "Item grows",
+            "Item does not shrink",
+            "Item is hidden"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "justify-content: flex-end;",
+        "o": [
+            "Aligns at end",
+            "Centers items",
+            "Aligns at start",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you specify a grid container?",
+        "o": [
+            "display: grid",
+            "grid: container",
+            "grid-display: true",
+            "flex: container"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "grid-gap: 25px;",
+        "o": [
+            "25px gap",
+            "Margin 25px",
+            "Padding 25px",
+            "No gaps"
+        ]
+    },
+    {
+        "q": "What does flex-basis: 0 do?",
+        "o": [
+            "Item size is 0",
+            "Item is not visible",
+            "Sets minimum size",
+            "Sets maximum size"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "flex-direction: column;\njustify-content: center;",
+        "o": [
+            "Center items",
+            "Aligns at start",
+            "Aligns at end",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you change the order of grid items?",
+        "o": [
+            "grid-area: order",
+            "grid-column: order",
+            "order: value",
+            "grid-row: order"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-template: 'nav content'\n'footer footer';",
+        "o": [
+            "Defines layout",
+            "Aligns items",
+            "Sets gap",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the default value of flex-wrap?",
+        "o": [
+            "nowrap",
+            "wrap",
+            "wrap-reverse",
+            "inherit"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "align-self: stretch;",
+        "o": [
+            "Stretches item",
+            "Centers item",
+            "Aligns at start",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you center a grid container?",
+        "o": [
+            "margin: auto",
+            "align: center",
+            "grid: center",
+            "flex: center"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: flex;\nflex: 1 1 50%;",
+        "o": [
+            "Flexible item",
+            "Fixed size",
+            "No effect",
+            "Hides item"
+        ]
+    },
+    {
+        "q": "What does grid-template-rows: repeat(2, 1fr) do?",
+        "o": [
+            "Creates 2 equal rows",
+            "Creates 2 fixed rows",
+            "Creates 2 columns",
+            "Creates 2 auto rows"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-grow: 1;",
+        "o": [
+            "Allows growing",
+            "Prevents growing",
+            "No effect",
+            "Hides item"
+        ]
+    },
+    {
+        "q": "Which property controls the size of flex items?",
+        "o": [
+            "flex-basis",
+            "flex-size",
+            "flex-width",
+            "flex-height"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "grid-column-gap: 30px;",
+        "o": [
+            "Column gap",
+            "Row gap",
+            "No gaps",
+            "Fixed gap"
+        ]
+    },
+    {
+        "q": "What does align-self: flex-start do?",
+        "o": [
+            "Aligns item at the start",
+            "Aligns item at the end",
+            "Centers item",
+            "Does not align"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template-columns: 1fr;\ngrid-template-rows: auto;",
+        "o": [
+            "One column",
+            "One row",
+            "Two columns",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "How do you make a grid responsive?",
+        "o": [
+            "Use media queries",
+            "Use fixed sizes",
+            "Set min-width",
+            "Use percentage"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "justify-content: space-between;",
+        "o": [
+            "Space between",
+            "Aligns at edges",
+            "Center items",
+            "Stack items"
+        ]
+    },
+    {
+        "q": "What does the property justify-items: stretch do?",
+        "o": [
+            "Items stretch to fill grid cell",
+            "Items align at center",
+            "Items align at start",
+            "Items do not stretch"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "flex-shrink: 0;",
+        "o": [
+            "Prevents shrinking",
+            "Allows shrinking",
+            "No effect",
+            "Hides item"
+        ]
+    },
+    {
+        "q": "How do you specify the size of grid columns?",
+        "o": [
+            "grid-template-columns: 100px",
+            "column-size: 100px",
+            "grid-columns: 100px",
+            "grid-column: 100px"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: grid;\ngrid-template-rows: repeat(2, 100px);",
+        "o": [
+            "Two rows",
+            "One row",
+            "Two columns",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "What does the property grid-template-columns: auto do?",
+        "o": [
+            "Auto sizes columns",
+            "Creates fixed columns",
+            "Creates equal columns",
+            "Creates no columns"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-auto-rows: minmax(100px, auto);",
+        "o": [
+            "Min-max row height",
+            "Fixed height",
+            "Flexible height",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to occupy specific columns?",
+        "o": [
+            "grid-column: 1 / 3",
+            "grid-columns: 1 / 3",
+            "column: 1 / 3",
+            "grid-area: 1 / 3"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "align-items: stretch;",
+        "o": [
+            "Stretches items",
+            "Centers items",
+            "Aligns at end",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does align-content: space-between do?",
+        "o": [
+            "Distributes space between lines",
+            "Centers items",
+            "Aligns at the start",
+            "Sets gaps"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "flex-direction: row;\nflex-wrap: nowrap;",
+        "o": [
+            "No wrap",
+            "Row wrap",
+            "Column layout",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "Which property specifies the grid auto-flow direction?",
+        "o": [
+            "grid-auto-flow",
+            "grid-direction",
+            "grid-flow",
+            "auto-flow"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-template-areas: 'header nav'\n'footer footer';",
+        "o": [
+            "Defines areas",
+            "Aligns items",
+            "Sets gap",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you create a simple grid layout?",
+        "o": [
+            "grid-template: auto / 1fr",
+            "grid: simple",
+            "grid: auto",
+            "grid: layout"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "justify-items: start;",
+        "o": [
+            "Aligns items at start",
+            "Centers items",
+            "Aligns at end",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does flex-shrink: 0 do?",
+        "o": [
+            "Item does not shrink",
+            "Item can grow",
+            "Item is hidden",
+            "Item has fixed size"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template-rows: 100px 200px;",
+        "o": [
+            "Two rows",
+            "One row",
+            "Two columns",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "What does the property grid-auto-rows do?",
+        "o": [
+            "Sets height of auto rows",
+            "Sets width of auto columns",
+            "Aligns items",
+            "Defines gaps"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-grow: 0;",
+        "o": [
+            "Does not grow",
+            "Allows growing",
+            "No effect",
+            "Hides item"
+        ]
+    },
+    {
+        "q": "What is the purpose of the display: flex property?",
+        "o": [
+            "Creates a flex container",
+            "Creates a grid",
+            "Sets item size",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "align-content: space-between;",
+        "o": [
+            "Distributes space",
+            "Centers items",
+            "Aligns items",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you specify multiple grid areas?",
+        "o": [
+            "grid-template-areas: 'header main'",
+            "grid-areas: multiple",
+            "grid: areas",
+            "grid-template: multiple"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-area: header;",
+        "o": [
+            "Defines header area",
+            "Aligns items",
+            "Sets gap",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does flex: auto do?",
+        "o": [
+            "Item grows and shrinks based on content",
+            "Item does not grow",
+            "Item is fixed",
+            "Item is hidden"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "display: flex;\nflex-direction: column-reverse;",
+        "o": [
+            "Reversed column",
+            "Row layout",
+            "Column layout",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to occupy multiple columns?",
+        "o": [
+            "grid-column: span 2",
+            "grid-columns: span 2",
+            "column: span 2",
+            "grid-area: span 2"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "grid-column: span 2;",
+        "o": [
+            "Spans two columns",
+            "Aligns items",
+            "Sets gap",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the property justify-self: end do?",
+        "o": [
+            "Aligns item at the end",
+            "Aligns item at the start",
+            "Centers item",
+            "Stretches item"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template-columns: 100px auto 100px;",
+        "o": [
+            "Three columns",
+            "One column",
+            "Two rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "What does the property grid-gap control?",
+        "o": [
+            "Space between grid rows and columns",
+            "Aligns grid items",
+            "Sets item size",
+            "Defines gaps"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-basis: 50%;",
+        "o": [
+            "Sets base size",
+            "No effect",
+            "Centers item",
+            "Aligns item"
+        ]
+    },
+    {
+        "q": "What does align-items: flex-end do?",
+        "o": [
+            "Aligns items at the end",
+            "Aligns items at the start",
+            "Centers items",
+            "Does not align"
+        ]
+    },
+    {
+        "q": "What does this code align?",
+        "l": "css",
+        "c": "justify-self: stretch;",
+        "o": [
+            "Stretches item",
+            "Centers item",
+            "Aligns at start",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property controls the size of a grid item?",
+        "o": [
+            "grid-column",
+            "grid-row",
+            "item-size",
+            "size"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-auto-flow: dense;",
+        "o": [
+            "Fills gaps",
+            "Aligns items",
+            "No effect",
+            "Sets rows"
+        ]
+    },
+    {
+        "q": "What does grid-auto-flow: dense do?",
+        "o": [
+            "Fills gaps in the grid",
+            "Sets auto flow direction",
+            "Aligns items",
+            "Defines gaps"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "align-self: end;",
+        "o": [
+            "Aligns at end",
+            "Centers item",
+            "Aligns at start",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you set flex items to wrap?",
+        "o": [
+            "flex-wrap: wrap",
+            "flex: wrap",
+            "wrap: true",
+            "flex-wrap: true"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "grid-template: 'sidebar content'\n'footer footer';",
+        "o": [
+            "Defines layout",
+            "Aligns items",
+            "Sets gap",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the property grid-template-areas do?",
+        "o": [
+            "Defines named grid areas",
+            "Sets item sizes",
+            "Aligns items",
+            "Creates gaps"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "flex-direction: column;\nflex-wrap: wrap;",
+        "o": [
+            "Column wrap",
+            "Row layout",
+            "Row wrap",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "How do you create a grid with fixed-width columns?",
+        "o": [
+            "grid-template-columns: 100px",
+            "grid-columns: fixed",
+            "grid: fixed",
+            "grid-template: auto"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-row: 1 / -1;",
+        "o": [
+            "Spans all rows",
+            "Aligns items",
+            "No effect",
+            "Sets gap"
+        ]
+    },
+    {
+        "q": "What does flex-direction: column do?",
+        "o": [
+            "Items stack vertically",
+            "Items stack horizontally",
+            "Items align at center",
+            "Items do not stack"
+        ]
+    },
+    {
+        "q": "What does this code align?",
+        "l": "css",
+        "c": "align-items: baseline;",
+        "o": [
+            "Aligns by baseline",
+            "Centers items",
+            "Aligns at end",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to occupy the first row and first column?",
+        "o": [
+            "grid-area: 1 / 1",
+            "grid: 1 / 1",
+            "grid-column: 1 / 1",
+            "grid-row: 1 / 1"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template-columns: repeat(4, 1fr);",
+        "o": [
+            "Four equal columns",
+            "One column",
+            "Two rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "What does the property align-content: stretch do?",
+        "o": [
+            "Aligns items to fill space",
+            "Aligns items at center",
+            "Sets gaps",
+            "Defines item size"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "justify-content: start;",
+        "o": [
+            "Aligns at start",
+            "Centers items",
+            "Aligns at end",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you specify the height of a grid row?",
+        "o": [
+            "grid-template-rows: 100px",
+            "row-height: 100px",
+            "grid-row: 100px",
+            "grid: 100px"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "grid-gap: 10px;",
+        "o": [
+            "10px gap",
+            "Margin 10px",
+            "Padding 10px",
+            "No gaps"
+        ]
+    },
+    {
+        "q": "What does the property justify-content: center do?",
+        "o": [
+            "Centers items in the main axis",
+            "Aligns items in the cross axis",
+            "Sets gaps",
+            "Defines item size"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: flex;\nflex-direction: row;\njustify-content: center;",
+        "o": [
+            "Center items",
+            "Aligns at start",
+            "Aligns at end",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the property grid-column-start do?",
+        "o": [
+            "Defines starting column of an item",
+            "Sets item size",
+            "Aligns items",
+            "Defines gaps"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-auto-rows: 100px;",
+        "o": [
+            "Sets row height",
+            "Sets column height",
+            "Aligns items",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you create a responsive flexbox layout?",
+        "o": [
+            "Use media queries",
+            "Use fixed sizes",
+            "Set min-width",
+            "Use percentage"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "flex: 1 0 auto;",
+        "o": [
+            "Grows, no shrink",
+            "Shrinks, no grow",
+            "Fixed size",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does flex-basis: 100px do?",
+        "o": [
+            "Sets item size to 100px",
+            "Sets minimum size",
+            "Sets maximum size",
+            "Sets hidden size"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "grid-template-areas: 'header header'\n'sidebar content';",
+        "o": [
+            "Defines layout",
+            "Aligns items",
+            "Sets gap",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the default value of justify-content?",
+        "o": [
+            "flex-start",
+            "center",
+            "space-between",
+            "space-around"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "justify-items: center;",
+        "o": [
+            "Centers items",
+            "Aligns at end",
+            "Aligns at start",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you create a 3-column grid layout?",
+        "o": [
+            "grid-template-columns: repeat(3, 1fr)",
+            "grid-columns: 3",
+            "grid: 3",
+            "grid-template: 3"
+        ]
+    },
+    {
+        "q": "What does this code align?",
+        "l": "css",
+        "c": "align-content: center;",
+        "o": [
+            "Centers content",
+            "Aligns at end",
+            "Aligns at start",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does flex-direction: row do?",
+        "o": [
+            "Items stack horizontally",
+            "Items stack vertically",
+            "Items align at center",
+            "Items do not stack"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: grid;\ngrid-template-columns: auto auto;",
+        "o": [
+            "Two columns",
+            "One column",
+            "Two rows",
+            "Flexible layout"
+        ]
+    },
+    {
+        "q": "How do you specify multiple values for grid-template-rows?",
+        "o": [
+            "grid-template-rows: 100px 200px",
+            "rows: 100px 200px",
+            "grid-rows: 100px 200px",
+            "grid-template: 100px 200px"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "flex-wrap: wrap;",
+        "o": [
+            "Allows wrapping",
+            "No wrap",
+            "Aligns items",
+            "Stacks items"
+        ]
+    },
+    {
+        "q": "What does the property grid-column-end do?",
+        "o": [
+            "Defines ending column of an item",
+            "Sets item size",
+            "Aligns items",
+            "Defines gaps"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "grid-auto-columns: 100px;",
+        "o": [
+            "Sets column width",
+            "Sets row height",
+            "Aligns items",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the purpose of the display: grid property?",
+        "o": [
+            "Creates a grid container",
+            "Creates a flex container",
+            "Sets item size",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "display: flex;\njustify-content: space-evenly;",
+        "o": [
+            "Even space",
+            "Aligns at edges",
+            "Center items",
+            "Stack items"
+        ]
+    },
+    {
+        "q": "How do you set a flex container to wrap items?",
+        "o": [
+            "flex-wrap: wrap",
+            "flex: wrap",
+            "wrap: true",
+            "flex-wrap: true"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "grid-column: 1 / 3;",
+        "o": [
+            "Spans two columns",
+            "Aligns items",
+            "No effect",
+            "Sets gap"
+        ]
+    },
+    {
+        "q": "What does the property align-self: auto do?",
+        "o": [
+            "Aligns item based on parent",
+            "Centers item",
+            "Does not align",
+            "Aligns item at the end"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "flex-direction: row;\nflex-wrap: wrap-reverse;",
+        "o": [
+            "Row wrap reverse",
+            "Column layout",
+            "Column reversed",
+            "Stacked layout"
+        ]
+    },
+    {
+        "q": "How do you create a responsive grid layout?",
+        "o": [
+            "Use media queries",
+            "Use fixed sizes",
+            "Set min-width",
+            "Use percentage"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "align-self: baseline;",
+        "o": [
+            "Aligns by baseline",
+            "Centers item",
+            "Aligns at end",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the property justify-self: stretch do?",
+        "o": [
+            "Item stretches to fill grid cell",
+            "Item aligns at center",
+            "Item aligns at start",
+            "Item does not stretch"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "justify-content: space-around;",
+        "o": [
+            "Even space",
+            "Centers items",
+            "Aligns at edges",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you specify the size of a grid item?",
+        "o": [
+            "grid-column: 100px",
+            "item-size: 100px",
+            "size: 100px",
+            "grid-area: 100px"
+        ]
+    },
+    {
+        "q": "What does flex-grow: 0 do?",
+        "o": [
+            "Item does not grow",
+            "Item can shrink",
+            "Item is hidden",
+            "Item has fixed size"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to occupy the last column?",
+        "o": [
+            "grid-column: -1",
+            "grid-column: last",
+            "column: last",
+            "grid-area: last"
+        ]
+    },
+    {
+        "q": "What does the property grid-auto-flow: row do?",
+        "o": [
+            "Fills rows before columns",
+            "Sets auto flow direction",
+            "Aligns items",
+            "Defines gaps"
+        ]
+    },
+    {
+        "q": "What does flex-basis: auto do?",
+        "o": [
+            "Item size is based on content",
+            "Item has fixed size",
+            "Sets minimum size",
+            "Sets maximum size"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to occupy specific area?",
+        "o": [
+            "grid-area: name",
+            "grid-item: name",
+            "item-area: name",
+            "grid-column: name"
+        ]
+    },
+    {
+        "q": "What does align-content: center do?",
+        "o": [
+            "Centers items in the cross axis",
+            "Aligns items in the main axis",
+            "Sets gaps",
+            "Defines item size"
+        ]
+    },
+    {
+        "q": "What is the purpose of the display: block property?",
+        "o": [
+            "Makes element a block container",
+            "Creates a grid",
+            "Aligns items",
+            "Sets item size"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to occupy the first column?",
+        "o": [
+            "grid-column: 1",
+            "column: 1",
+            "grid-area: 1",
+            "grid-item: 1"
+        ]
+    },
+    {
+        "q": "What does the property justify-items: center do?",
+        "o": [
+            "Items align at the center",
+            "Items stretch to fill",
+            "Items align at start",
+            "Items do not align"
+        ]
+    },
+    {
+        "q": "What does the property grid-template-columns: 1fr 2fr do?",
+        "o": [
+            "Creates 2 columns with different sizes",
+            "Creates 2 equal columns",
+            "Creates 2 fixed columns",
+            "Creates 2 auto columns"
+        ]
+    },
+    {
+        "q": "How do you set the height of a flex container?",
+        "o": [
+            "height: auto",
+            "flex-height: auto",
+            "flex: auto",
+            "container-height: auto"
+        ]
+    },
+    {
+        "q": "What does the property grid-auto-flow: column do?",
+        "o": [
+            "Fills columns before rows",
+            "Sets auto flow direction",
+            "Aligns items",
+            "Defines gaps"
+        ]
+    },
+    {
+        "q": "What does flex-wrap: wrap-reverse do?",
+        "o": [
+            "Items wrap in reverse order",
+            "Items do not wrap",
+            "Items align at center",
+            "Items do not align"
+        ]
+    },
+    {
+        "q": "How do you specify the size of a grid item using fr units?",
+        "o": [
+            "grid-column: 1fr",
+            "grid-size: 1fr",
+            "item-size: 1fr",
+            "grid-area: 1fr"
+        ]
+    },
+    {
+        "q": "What does the property grid-column-gap do?",
+        "o": [
+            "Sets space between grid columns",
+            "Sets space between rows",
+            "Aligns grid items",
+            "Sets item size"
+        ]
+    },
+    {
+        "q": "What does align-items: baseline do?",
+        "o": [
+            "Aligns items along their baselines",
+            "Centers items",
+            "Sets gaps",
+            "Defines item size"
+        ]
+    },
+    {
+        "q": "What does the property flex-direction: row-reverse do?",
+        "o": [
+            "Items stack horizontally in reverse order",
+            "Items stack vertically",
+            "Items align at center",
+            "Items do not stack"
+        ]
+    },
+    {
+        "q": "How do you create a grid with equal-sized items?",
+        "o": [
+            "grid-template-columns: repeat(3, 1fr)",
+            "grid-columns: equal",
+            "grid: auto",
+            "grid: equal"
+        ]
+    },
+    {
+        "q": "What does align-self: center do?",
+        "o": [
+            "Centers item in the cross axis",
+            "Aligns item at the start",
+            "Sets gaps",
+            "Defines item size"
+        ]
+    },
+    {
+        "q": "What is the default value of flex-wrap?",
+        "o": [
+            "nowrap",
+            "wrap",
+            "wrap-reverse",
+            "inherit"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to occupy multiple rows?",
+        "o": [
+            "grid-row: span 2",
+            "row: span 2",
+            "grid: span 2",
+            "grid-area: span 2"
+        ]
+    },
+    {
+        "q": "What does the property grid-gap do?",
+        "o": [
+            "Sets space between rows and columns",
+            "Sets item size",
+            "Aligns items",
+            "Defines grid area"
+        ]
+    },
+    {
+        "q": "How do you set the width of a flex item?",
+        "o": [
+            "width: auto",
+            "flex-width: auto",
+            "item-width: auto",
+            "flex: auto"
+        ]
+    },
+    {
+        "q": "What does the property justify-items: stretch do?",
+        "o": [
+            "Items stretch to fill grid cell",
+            "Items align at center",
+            "Items align at start",
+            "Items do not stretch"
+        ]
+    },
+    {
+        "q": "What is the default value of align-items?",
+        "o": [
+            "stretch",
+            "center",
+            "baseline",
+            "start"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to occupy the last row?",
+        "o": [
+            "grid-row: -1",
+            "grid-row: last",
+            "row: last",
+            "grid-area: last"
+        ]
+    },
+    {
+        "q": "What does flex-shrink: 1 do?",
+        "o": [
+            "Allows item to shrink",
+            "Disables item shrink",
+            "Sets fixed size",
+            "Expands item"
+        ]
+    },
+    {
+        "q": "How do you create a grid with fractional units?",
+        "o": [
+            "grid-template-columns: 1fr 2fr",
+            "grid-columns: fr",
+            "grid: auto",
+            "grid-template: fraction"
+        ]
+    },
+    {
+        "q": "What does justify-content: space-between do?",
+        "o": [
+            "Distributes space between items",
+            "Centers items",
+            "Aligns items at start",
+            "Aligns items at end"
+        ]
+    },
+    {
+        "q": "How do you set the minimum width of a flex item?",
+        "o": [
+            "min-width: 100px",
+            "flex-min: 100px",
+            "item-min-width: 100px",
+            "flex: 100px"
+        ]
+    },
+    {
+        "q": "What does align-items: stretch do?",
+        "o": [
+            "Items fill the container height",
+            "Items center vertically",
+            "Items align at start",
+            "Items align at end"
+        ]
+    },
+    {
+        "q": "How do you create a grid with 4 equal columns?",
+        "o": [
+            "grid-template-columns: repeat(4, 1fr)",
+            "grid-columns: 4",
+            "grid: 4",
+            "grid-template: 4"
+        ]
+    },
+    {
+        "q": "What does grid-template-rows: auto do?",
+        "o": [
+            "Rows size to content",
+            "Rows have fixed size",
+            "Sets equal row sizes",
+            "Defines gaps"
+        ]
+    },
+    {
+        "q": "What does the property align-content: space-around do?",
+        "o": [
+            "Distributes space evenly",
+            "Aligns items at center",
+            "Aligns items at start",
+            "Aligns items at end"
+        ]
+    },
+    {
+        "q": "What is the purpose of the property grid-area?",
+        "o": [
+            "Assigns grid item to an area",
+            "Defines item size",
+            "Aligns items",
+            "Creates gaps"
+        ]
+    },
+    {
+        "q": "How do you center a flex item vertically?",
+        "o": [
+            "align-self: center",
+            "vertical-align: center",
+            "flex-align: center",
+            "justify-self: center"
+        ]
+    },
+    {
+        "q": "What does the property justify-content: flex-end do?",
+        "o": [
+            "Aligns items at the end",
+            "Centers items",
+            "Aligns items at the start",
+            "Distributes space between items"
+        ]
+    },
+    {
+        "q": "How do you create a responsive grid layout?",
+        "o": [
+            "Use grid-template-columns with fr",
+            "Use fixed sizes",
+            "Set min-height",
+            "Use percentage"
+        ]
+    },
+    {
+        "q": "What does align-self: flex-start do?",
+        "o": [
+            "Aligns item at the start",
+            "Centers item",
+            "Aligns item at the end",
+            "Disables alignment"
+        ]
+    },
+    {
+        "q": "What does flex-wrap: nowrap do?",
+        "o": [
+            "Items do not wrap",
+            "Items wrap",
+            "Items align at center",
+            "Items stack vertically"
+        ]
+    },
+    {
+        "q": "How do you specify grid item sizes in pixels?",
+        "o": [
+            "grid-column: 100px",
+            "item-size: 100px",
+            "size: 100px",
+            "grid-area: 100px"
+        ]
+    },
+    {
+        "q": "What does the property grid-auto-rows do?",
+        "o": [
+            "Sets size of auto-created rows",
+            "Defines item sizes",
+            "Aligns items",
+            "Sets gaps"
+        ]
+    },
+    {
+        "q": "How do you create a grid with a fixed number of rows?",
+        "o": [
+            "grid-template-rows: repeat(3, 100px)",
+            "grid-rows: fixed",
+            "grid: 3 rows",
+            "rows: 3"
+        ]
+    },
+    {
+        "q": "What does flex-basis: 50% do?",
+        "o": [
+            "Sets item size to 50%",
+            "Sets minimum size",
+            "Sets maximum size",
+            "Sets hidden size"
+        ]
+    },
+    {
+        "q": "What is the purpose of the property flex-direction?",
+        "o": [
+            "Defines main axis direction",
+            "Sets item size",
+            "Aligns items",
+            "Defines gaps"
+        ]
+    },
+    {
+        "q": "How do you specify the spacing between grid rows?",
+        "o": [
+            "grid-row-gap: 10px",
+            "row-gap: 10px",
+            "grid-gap: 10px",
+            "gap: 10px"
+        ]
+    },
+    {
+        "q": "What does the property grid-column: span 2 do?",
+        "o": [
+            "Item spans 2 columns",
+            "Item fills grid",
+            "Sets gaps",
+            "Defines area"
+        ]
+    },
+    {
+        "q": "How do you align items at the end of a flex container?",
+        "o": [
+            "justify-content: flex-end",
+            "align-items: flex-end",
+            "align-self: flex-end",
+            "justify-items: flex-end"
+        ]
+    },
+    {
+        "q": "What does the property grid-template-columns: repeat(2, 1fr) do?",
+        "o": [
+            "Creates 2 equal columns",
+            "Creates 2 fixed columns",
+            "Creates 2 auto columns",
+            "Creates 2 rows"
+        ]
+    },
+    {
+        "q": "How do you specify a grid item to fill the available space?",
+        "o": [
+            "grid-column: 1 / -1",
+            "column: fill",
+            "grid: fill",
+            "grid-area: 1 / 1"
+        ]
+    },
+    {
+        "q": "What does justify-self: start do?",
+        "o": [
+            "Aligns item at the start",
+            "Centers item",
+            "Stretches item",
+            "Aligns item at the end"
+        ]
+    },
+    {
+        "q": "What does flex-grow: 1 do?",
+        "o": [
+            "Item grows to fill space",
+            "Item does not grow",
+            "Sets fixed size",
+            "Expands item"
+        ]
+    },
+    {
+        "q": "How do you set the width of a flex container?",
+        "o": [
+            "width: auto",
+            "flex-width: auto",
+            "container-width: auto",
+            "flex: auto"
+        ]
+    },
+    {
+        "q": "What does grid-auto-flow: dense do?",
+        "o": [
+            "Fills gaps in grid",
+            "Sets auto flow direction",
+            "Aligns items",
+            "Defines gaps"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to occupy multiple columns?",
+        "o": [
+            "grid-column: span 2",
+            "column: span 2",
+            "grid: span 2",
+            "grid-area: span 2"
+        ]
+    },
+    {
+        "q": "What does align-content: space-between do?",
+        "o": [
+            "Distributes space between rows",
+            "Centers items",
+            "Aligns items at start",
+            "Aligns items at end"
+        ]
+    },
+    {
+        "q": "What does flex: 1 0 50% do?",
+        "o": [
+            "Grow, do not shrink, base 50%",
+            "Grow and shrink 0",
+            "Fixed size 50%",
+            "Do not grow, do not shrink"
+        ]
+    },
+    {
+        "q": "How do you create a single-column grid layout?",
+        "o": [
+            "grid-template-columns: 1fr",
+            "grid-columns: 1",
+            "grid: 1",
+            "grid-template: 1"
+        ]
+    },
+    {
+        "q": "What does justify-items: center do?",
+        "o": [
+            "Items align at the center",
+            "Items stretch to fill",
+            "Items align at start",
+            "Items do not align"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to occupy specific rows?",
+        "o": [
+            "grid-row: 1 / 3",
+            "row: 1 / 3",
+            "grid: 1 / 3",
+            "grid-area: 1 / 3"
+        ]
+    },
+    {
+        "q": "What does align-items: center do?",
+        "o": [
+            "Centers items in the cross axis",
+            "Aligns items at the start",
+            "Sets gaps",
+            "Defines item size"
+        ]
+    },
+    {
+        "q": "How do you create a layout with equal gaps between items?",
+        "o": [
+            "gap: 10px",
+            "grid-gap: 10px",
+            "spacing: 10px",
+            "item-gap: 10px"
+        ]
+    },
+    {
+        "q": "What does the property flex-direction: column-reverse do?",
+        "o": [
+            "Items stack vertically in reverse",
+            "Items stack horizontally",
+            "Items align at center",
+            "Items do not stack"
+        ]
+    },
+    {
+        "q": "What does grid-template: auto auto do?",
+        "o": [
+            "Creates 2 auto rows",
+            "Creates fixed rows",
+            "Creates equal columns",
+            "Creates gaps"
+        ]
+    },
+    {
+        "q": "How do you specify the height of a flex item?",
+        "o": [
+            "height: auto",
+            "flex-height: auto",
+            "item-height: auto",
+            "flex: auto"
+        ]
+    },
+    {
+        "q": "What is the default value of align-content?",
+        "o": [
+            "stretch",
+            "center",
+            "baseline",
+            "start"
+        ]
+    },
+    {
+        "q": "How do you create a grid with fixed height rows?",
+        "o": [
+            "grid-template-rows: 100px",
+            "grid-rows: fixed",
+            "grid: fixed",
+            "grid-template: 100px"
+        ]
+    },
+    {
+        "q": "What does justify-self: stretch do?",
+        "o": [
+            "Item stretches to fill cell",
+            "Item aligns at center",
+            "Item aligns at start",
+            "Item aligns at end"
+        ]
+    },
+    {
+        "q": "How do you set the maximum width of a flex item?",
+        "o": [
+            "max-width: 100px",
+            "flex-max: 100px",
+            "item-max-width: 100px",
+            "flex: 100px"
+        ]
+    },
+    {
+        "q": "What does the property grid-gap: 20px do?",
+        "o": [
+            "Sets gap between items",
+            "Aligns items",
+            "Defines item size",
+            "Sets fixed size"
+        ]
+    },
+    {
+        "q": "How do you create a grid with named areas?",
+        "o": [
+            "grid-template-areas: 'header main'",
+            "grid-areas: header",
+            "grid: named areas",
+            "grid-template: areas"
+        ]
+    },
+    {
+        "q": "What does the property align-content: flex-start do?",
+        "o": [
+            "Aligns content at the start",
+            "Centers content",
+            "Aligns content at the end",
+            "Disables alignment"
+        ]
+    },
+    {
+        "q": "What is the default value of flex-direction?",
+        "o": [
+            "row",
+            "column",
+            "column-reverse",
+            "row-reverse"
+        ]
+    },
+    {
+        "q": "What does align-self: baseline do?",
+        "o": [
+            "Aligns item along the baseline",
+            "Centers item",
+            "Aligns item at end",
+            "Stretches item"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to span multiple tracks?",
+        "o": [
+            "grid-column: 1 / span 3",
+            "column: span 3",
+            "grid: span 3",
+            "grid-area: 1 / span 3"
+        ]
+    },
+    {
+        "q": "What does the property flex-flow: column wrap do?",
+        "o": [
+            "Items stack vertically and wrap",
+            "Items stack horizontally",
+            "Items center",
+            "Items do not stack"
+        ]
+    },
+    {
+        "q": "What does the property align-items: flex-end do?",
+        "o": [
+            "Aligns items at the end",
+            "Centers items",
+            "Aligns items at the start",
+            "Disables alignment"
+        ]
+    },
+    {
+        "q": "How do you create a responsive flex container?",
+        "o": [
+            "Use flex-basis with percentages",
+            "Use fixed sizes",
+            "Set min-height",
+            "Use media queries"
+        ]
+    },
+    {
+        "q": "What does the property justify-content: center do?",
+        "o": [
+            "Centers items in the main axis",
+            "Aligns items at start",
+            "Aligns items at end",
+            "Distributes space between items"
+        ]
+    },
+    {
+        "q": "How do you specify the grid area for an item?",
+        "o": [
+            "grid-area: header",
+            "area: header",
+            "grid: header",
+            "grid-column: header"
+        ]
+    },
+    {
+        "q": "What does flex-direction: row-reverse do?",
+        "o": [
+            "Items stack horizontally in reverse",
+            "Items stack vertically",
+            "Items align at center",
+            "Items do not stack"
+        ]
+    },
+    {
+        "q": "What does the property grid-auto-columns do?",
+        "o": [
+            "Sets size of auto-created columns",
+            "Defines item sizes",
+            "Aligns items",
+            "Sets gaps"
+        ]
+    },
+    {
+        "q": "How do you create a grid with unequal columns?",
+        "o": [
+            "grid-template-columns: 1fr 2fr",
+            "grid-columns: unequal",
+            "grid: unequal",
+            "grid-template: unequal"
+        ]
+    },
+    {
+        "q": "What does the property flex-basis: auto do?",
+        "o": [
+            "Size based on content",
+            "Sets fixed size",
+            "Sets maximum size",
+            "Sets hidden size"
+        ]
+    },
+    {
+        "q": "What does the property grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) do?",
+        "o": [
+            "Creates responsive columns",
+            "Creates fixed columns",
+            "Creates equal rows",
+            "Creates gaps"
+        ]
+    },
+    {
+        "q": "What is the purpose of the property flex-wrap?",
+        "o": [
+            "Controls item wrapping",
+            "Sets item size",
+            "Aligns items",
+            "Defines gaps"
+        ]
+    },
+    {
+        "q": "How do you create a grid with overlapping items?",
+        "o": [
+            "grid-area: overlap",
+            "item-overlap: true",
+            "grid: overlap",
+            "grid-template: overlap"
+        ]
+    },
+    {
+        "q": "What does the property align-content: space-evenly do?",
+        "o": [
+            "Distributes space evenly",
+            "Centers items",
+            "Aligns items at start",
+            "Aligns items at end"
+        ]
+    },
+    {
+        "q": "What does flex: none do?",
+        "o": [
+            "Item does not grow or shrink",
+            "Item grows and shrinks",
+            "Sets fixed size",
+            "Sets hidden size"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to be fixed in size?",
+        "o": [
+            "grid: 100px",
+            "fixed-size: 100px",
+            "grid-area: 100px",
+            "size: 100px"
+        ]
+    },
+    {
+        "q": "What does the property flex-grow: 0 do?",
+        "o": [
+            "Item does not grow",
+            "Item grows to fill space",
+            "Sets fixed size",
+            "Expands item"
+        ]
+    },
+    {
+        "q": "How do you set the minimum height of a flex item?",
+        "o": [
+            "min-height: 100px",
+            "flex-min: 100px",
+            "item-min-height: 100px",
+            "flex: 100px"
+        ]
+    },
+    {
+        "q": "What does grid-auto-flow: row do?",
+        "o": [
+            "Items flow in rows",
+            "Items flow in columns",
+            "Sets gaps",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "How do you create a grid with variable gaps?",
+        "o": [
+            "grid-gap: 10px 20px",
+            "gap: variable",
+            "grid: gaps",
+            "grid-template: gaps"
+        ]
+    },
+    {
+        "q": "What does justify-self: end do?",
+        "o": [
+            "Aligns item at the end",
+            "Centers item",
+            "Stretches item",
+            "Aligns item at the start"
+        ]
+    },
+    {
+        "q": "What does flex-wrap: wrap-reverse do?",
+        "o": [
+            "Items wrap in reverse",
+            "Items do not wrap",
+            "Items stack vertically",
+            "Items align at center"
+        ]
+    },
+    {
+        "q": "What is the default value of grid-template-areas?",
+        "o": [
+            "none",
+            "auto",
+            "fixed",
+            "unset"
+        ]
+    },
+    {
+        "q": "How do you create a grid with auto rows and columns?",
+        "o": [
+            "grid-template: auto / auto",
+            "grid: auto",
+            "grid-template-columns: auto",
+            "grid-template-rows: auto"
+        ]
+    },
+    {
+        "q": "What does the property align-self: stretch do?",
+        "o": [
+            "Item stretches to fill cell",
+            "Centers item",
+            "Aligns item at end",
+            "Aligns item at start"
+        ]
+    },
+    {
+        "q": "How do you set a grid container to be a flex container?",
+        "o": [
+            "display: flex",
+            "grid: flex",
+            "flex-container: true",
+            "display: grid"
+        ]
+    },
+    {
+        "q": "What does the property grid-column-gap do?",
+        "o": [
+            "Sets gap between columns",
+            "Aligns items",
+            "Defines item size",
+            "Sets fixed size"
+        ]
+    },
+    {
+        "q": "How do you create a grid with fixed gaps?",
+        "o": [
+            "gap: 10px",
+            "grid-gap: 10px",
+            "spacing: 10px",
+            "item-gap: 10px"
+        ]
+    },
+    {
+        "q": "What does the property justify-content: start do?",
+        "o": [
+            "Aligns items at the start",
+            "Centers items",
+            "Aligns items at the end",
+            "Distributes space between items"
+        ]
+    },
+    {
+        "q": "How do you create a flex container that does not wrap?",
+        "o": [
+            "flex-wrap: nowrap",
+            "wrap: no",
+            "no-wrap: true",
+            "flex: no-wrap"
+        ]
+    },
+    {
+        "q": "What does the property align-items: stretch do?",
+        "o": [
+            "Items stretch to fill the height",
+            "Items center vertically",
+            "Items align at start",
+            "Items align at end"
+        ]
+    },
+    {
+        "q": "How do you create a grid with responsive height?",
+        "o": [
+            "grid-template-rows: auto",
+            "rows: responsive",
+            "grid: height",
+            "grid-template: height"
+        ]
+    },
+    {
+        "q": "What does the property flex-basis: 0 do?",
+        "o": [
+            "Sets item size to 0",
+            "Sets fixed size",
+            "Sets maximum size",
+            "Sets hidden size"
+        ]
+    },
+    {
+        "q": "How do you specify gaps between items in a grid?",
+        "o": [
+            "gap: 10px",
+            "grid-gap: 10px",
+            "spacing: 10px",
+            "item-gap: 10px"
+        ]
+    },
+    {
+        "q": "What does the property grid-template-columns: auto do?",
+        "o": [
+            "Creates columns sized by content",
+            "Creates fixed columns",
+            "Creates equal rows",
+            "Creates gaps"
+        ]
+    },
+    {
+        "q": "How do you align a grid item to the center?",
+        "o": [
+            "justify-self: center; align-self: center",
+            "grid-area: center",
+            "item-align: center",
+            "grid: center"
+        ]
+    },
+    {
+        "q": "What does flex: 1 0 auto do?",
+        "o": [
+            "Item grows but does not shrink",
+            "Item does not grow",
+            "Item shrinks but does not grow",
+            "Sets fixed size"
+        ]
+    },
+    {
+        "q": "How do you create a grid with dynamic rows?",
+        "o": [
+            "grid-template-rows: repeat(auto-fill, minmax(100px, 1fr))",
+            "grid-rows: dynamic",
+            "grid-template: dynamic",
+            "grid-template-areas: dynamic"
+        ]
+    },
+    {
+        "q": "What does the property align-content: stretch do?",
+        "o": [
+            "Stretches content to fill space",
+            "Centers content",
+            "Aligns content at start",
+            "Aligns content at end"
+        ]
+    },
+    {
+        "q": "What does the property justify-items: stretch do?",
+        "o": [
+            "Items stretch to fill grid cells",
+            "Items align at start",
+            "Items center",
+            "Items align at end"
+        ]
+    },
+    {
+        "q": "How do you create a grid with fixed height items?",
+        "o": [
+            "grid-template-rows: 100px",
+            "fixed-height: 100px",
+            "grid: fixed-height",
+            "item-height: 100px"
+        ]
+    },
+    {
+        "q": "What does the property align-items: center do?",
+        "o": [
+            "Centers items vertically",
+            "Aligns items at start",
+            "Aligns items at end",
+            "Disables alignment"
+        ]
+    },
+    {
+        "q": "How do you set a grid item to overlap another item?",
+        "o": [
+            "grid-area: overlap",
+            "item-overlap: true",
+            "grid: overlap",
+            "grid-template: overlap"
+        ]
+    },
+    {
+        "q": "What does the property justify-content: space-between do?",
+        "o": [
+            "Distributes space between items",
+            "Centers items",
+            "Aligns items at start",
+            "Aligns items at end"
+        ]
+    },
+    {
+        "q": "How do you create a flex container with equal spacing?",
+        "o": [
+            "justify-content: space-between",
+            "flex-space: equal",
+            "item-spacing: equal",
+            "flex: equal-spacing"
+        ]
+    },
+    {
+        "q": "What does the property grid-template-columns: 1fr do?",
+        "o": [
+            "Creates a single column that takes all available space",
+            "Creates a fixed column",
+            "Creates equal rows",
+            "Creates gaps"
+        ]
+    },
+    {
+        "q": "What does align-self: center do?",
+        "o": [
+            "Centers item vertically",
+            "Aligns item at start",
+            "Aligns item at end",
+            "Disables alignment"
+        ]
+    },
+    {
+        "q": "How do you create a grid with empty cells?",
+        "o": [
+            "grid-template-areas: 'header . main'",
+            "grid: empty",
+            "grid-template: empty",
+            "grid-areas: empty"
+        ]
+    },
+    {
+        "q": "What does the property flex-basis: 50% do?",
+        "o": [
+            "Sets item size to 50% of the container",
+            "Sets fixed size",
+            "Sets maximum size",
+            "Sets hidden size"
+        ]
+    },
+    {
+        "q": "How do you specify the number of columns in a grid?",
+        "o": [
+            "grid-template-columns: 3",
+            "columns: 3",
+            "grid-columns: 3",
+            "grid: 3 columns"
+        ]
+    },
+    {
+        "q": "What does the property justify-self: start do?",
+        "o": [
+            "Aligns item at the start",
+            "Centers item",
+            "Stretches item",
+            "Aligns item at the end"
+        ]
+    },
+    {
+        "q": "How do you create a grid that fills the available space?",
+        "o": [
+            "grid-template-columns: 1fr",
+            "grid: fill",
+            "grid-template: fill",
+            "grid-areas: fill"
+        ]
+    },
+    {
+        "q": "What does the property align-content: center do?",
+        "o": [
+            "Centers content vertically",
+            "Aligns content at start",
+            "Aligns content at end",
+            "Disables alignment"
+        ]
+    },
+    {
+        "q": "How do you create a grid with a specific aspect ratio?",
+        "o": [
+            "grid-template: 'aspect' 1fr",
+            "aspect: ratio",
+            "grid-ratio: specific",
+            "grid-template-areas: 'aspect'"
+        ]
+    },
+    {
+        "q": "What does the property flex-grow: 1 do?",
+        "o": [
+            "Item grows to fill available space",
+            "Item does not grow",
+            "Sets fixed size",
+            "Sets hidden size"
+        ]
+    },
+    {
+        "q": "How do you specify the order of flex items?",
+        "o": [
+            "order: 1",
+            "flex-order: 1",
+            "item-order: 1",
+            "flex: order 1"
+        ]
+    },
+    {
+        "q": "What does the property grid-auto-flow: dense do?",
+        "o": [
+            "Fills gaps with items",
+            "Sets item sizes",
+            "Aligns items",
+            "Sets gaps"
+        ]
+    },
+    {
+        "q": "How do you create a flex item that grows?",
+        "o": [
+            "flex-grow: 1",
+            "grow: true",
+            "flex: grow",
+            "item-grow: true"
+        ]
+    },
+    {
+        "q": "What does the property align-self: flex-end do?",
+        "o": [
+            "Aligns item at the end",
+            "Centers item",
+            "Aligns item at start",
+            "Stretches item"
+        ]
+    },
+    {
+        "q": "How do you create a grid that has a fixed number of rows?",
+        "o": [
+            "grid-template-rows: repeat(3, 100px)",
+            "rows: fixed",
+            "grid: fixed-rows",
+            "grid-template: fixed-rows"
+        ]
+    },
+    {
+        "q": "What does the property justify-content: space-around do?",
+        "o": [
+            "Distributes space around items",
+            "Centers items",
+            "Aligns items at start",
+            "Aligns items at end"
+        ]
+    },
+    {
+        "q": "How do you create a flex container with direction set to column?",
+        "o": [
+            "flex-direction: column",
+            "flex: column",
+            "column: true",
+            "flex-direction: vertical"
+        ]
+    },
+    {
+        "q": "What does the property grid-template-rows: 1fr do?",
+        "o": [
+            "Creates a single row that takes all available space",
+            "Creates a fixed row",
+            "Creates equal columns",
+            "Creates gaps"
+        ]
+    },
+    {
+        "q": "How do you create a grid with explicit gaps?",
+        "o": [
+            "gap: 10px",
+            "grid-gap: 10px",
+            "spacing: 10px",
+            "item-gap: 10px"
+        ]
+    },
+    {
+        "q": "What does the property flex-wrap: wrap do?",
+        "o": [
+            "Items wrap to next line",
+            "Items do not wrap",
+            "Items stack vertically",
+            "Items align at center"
+        ]
+    },
+    {
+        "q": "How do you create a grid with fixed item sizes?",
+        "o": [
+            "grid-template: 100px",
+            "fixed-size: 100px",
+            "grid-area: 100px",
+            "item-size: 100px"
+        ]
+    },
+    {
+        "q": "What does the property justify-self: stretch do?",
+        "o": [
+            "Stretches item to fill grid cell",
+            "Centers item",
+            "Aligns item at end",
+            "Aligns item at start"
+        ]
+    },
+    {
+        "q": "How do you create a flex container with wrapping?",
+        "o": [
+            "flex-wrap: wrap",
+            "wrap: true",
+            "flex: wrapping",
+            "flex-container: true"
+        ]
+    },
+    {
+        "q": "What does the property grid-template-columns: repeat(3, 1fr) do?",
+        "o": [
+            "Creates three equal columns",
+            "Creates fixed columns",
+            "Creates equal rows",
+            "Creates gaps"
+        ]
+    },
+    {
+        "q": "How do you specify alignment for a flex item?",
+        "o": [
+            "align-self: center",
+            "item-align: center",
+            "flex-align: center",
+            "align-item: center"
+        ]
+    },
+    {
+        "q": "What does the property grid-auto-rows: 100px do?",
+        "o": [
+            "Sets default height for auto rows",
+            "Sets fixed size for rows",
+            "Aligns items",
+            "Defines item sizes"
+        ]
+    },
+    {
+        "q": "How do you create a grid that takes the full height of its container?",
+        "o": [
+            "grid-template-rows: 100%",
+            "grid: full-height",
+            "grid-template: height",
+            "height: 100%"
+        ]
+    },
+    {
+        "q": "What does the property flex: 0 1 auto do?",
+        "o": [
+            "Item does not grow but can shrink",
+            "Item grows and shrinks",
+            "Sets fixed size",
+            "Sets hidden size"
+        ]
+    },
+    {
+        "q": "How do you create a grid with items aligned at the start?",
+        "o": [
+            "align-items: start",
+            "grid-align: start",
+            "item-align: start",
+            "grid-template: start"
+        ]
+    },
+    {
+        "q": "What does the property justify-content: flex-end do?",
+        "o": [
+            "Aligns items at the end",
+            "Centers items",
+            "Aligns items at start",
+            "Distributes space between items"
+        ]
+    },
+    {
+        "q": "How do you create a grid with equal height items?",
+        "o": [
+            "grid-template-rows: 1fr",
+            "fixed-height: 100px",
+            "grid: equal-height",
+            "item-height: equal"
+        ]
+    },
+    {
+        "q": "What does the property flex-direction: row do?",
+        "o": [
+            "Arranges items horizontally",
+            "Arranges items vertically",
+            "Stacks items",
+            "Disables direction"
+        ]
+    },
+    {
+        "q": "How do you create a grid that has gaps between rows?",
+        "o": [
+            "grid-row-gap: 10px",
+            "row-gap: 10px",
+            "grid-gap: 10px",
+            "spacing: 10px"
+        ]
+    },
+    {
+        "q": "What does the property align-items: stretch do?",
+        "o": [
+            "Stretches items to fill grid cells",
+            "Aligns items at start",
+            "Centers items",
+            "Aligns items at end"
+        ]
+    },
+    {
+        "q": "How do you create a flex container that takes the full width?",
+        "o": [
+            "width: 100%",
+            "flex: full-width",
+            "container: full-width",
+            "flex-container: 100%"
+        ]
+    },
+    {
+        "q": "What does the property grid-auto-columns: 100px do?",
+        "o": [
+            "Sets default width for auto columns",
+            "Sets fixed size for columns",
+            "Aligns items",
+            "Defines item sizes"
+        ]
+    },
+    {
+        "q": "How do you create a grid with flexible columns?",
+        "o": [
+            "grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))",
+            "flex-columns: dynamic",
+            "grid-columns: flexible",
+            "grid: flexible-columns"
+        ]
+    },
+    {
+        "q": "What does the property justify-items: center do?",
+        "o": [
+            "Centers items within their grid cells",
+            "Aligns items at start",
+            "Aligns items at end",
+            "Stretches items"
+        ]
+    },
+    {
+        "q": "How do you create a flex container with direction set to row?",
+        "o": [
+            "flex-direction: row",
+            "flex: row",
+            "row: true",
+            "flex-direction: horizontal"
+        ]
+    },
+    {
+        "q": "What does the property grid-template: auto-fit do?",
+        "o": [
+            "Creates responsive grid items",
+            "Sets fixed item sizes",
+            "Aligns items",
+            "Creates gaps"
+        ]
+    },
+    {
+        "q": "How do you create a grid with a specific row height?",
+        "o": [
+            "grid-template-rows: 200px",
+            "row-height: 200px",
+            "grid-area: 200px",
+            "item-height: 200px"
+        ]
+    },
+    {
+        "q": "What does the property flex: 1 1 0 do?",
+        "o": [
+            "Item grows and shrinks to fill space",
+            "Item does not grow",
+            "Sets fixed size",
+            "Sets hidden size"
+        ]
+    },
+    {
+        "q": "How do you create a grid that has a fixed number of columns?",
+        "o": [
+            "grid-template-columns: repeat(3, 1fr)",
+            "columns: fixed",
+            "grid: fixed-columns",
+            "grid-template: fixed-columns"
+        ]
+    },
+    {
+        "q": "What does the property align-content: start do?",
+        "o": [
+            "Aligns content at the start",
+            "Centers content",
+            "Aligns content at end",
+            "Stretches content"
+        ]
+    },
+    {
+        "q": "How do you create a flex container that allows items to grow?",
+        "o": [
+            "flex-grow: 1",
+            "flex: grow",
+            "item-grow: true",
+            "flex-container: true"
+        ]
+    },
+    {
+        "q": "What does the property grid-auto-flow: row do?",
+        "o": [
+            "Items flow in rows",
+            "Items flow in columns",
+            "Sets item sizes",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "How do you create a grid that adjusts to its content?",
+        "o": [
+            "grid-template: auto",
+            "grid-auto: content",
+            "grid: content",
+            "grid-template-areas: auto"
+        ]
+    },
+    {
+        "q": "What does the property flex: 2 do?",
+        "o": [
+            "Item grows twice as much",
+            "Item grows and shrinks",
+            "Sets fixed size",
+            "Sets hidden size"
+        ]
+    },
+    {
+        "q": "How do you create a grid with multiple rows of equal height?",
+        "o": [
+            "grid-template-rows: repeat(3, 1fr)",
+            "fixed-height: equal",
+            "grid: equal-height",
+            "item-height: equal"
+        ]
+    },
+    {
+        "q": "What does the property justify-content: center do?",
+        "o": [
+            "Centers items within the container",
+            "Aligns items at start",
+            "Aligns items at end",
+            "Distributes space between items"
+        ]
+    },
+    {
+        "q": "How do you create a flex container that aligns items at the start?",
+        "o": [
+            "align-items: flex-start",
+            "flex-align: start",
+            "item-align: start",
+            "flex-container: start"
+        ]
+    },
+    {
+        "q": "What does the property grid-template: 1fr 2fr do?",
+        "o": [
+            "Creates a grid with two columns of unequal size",
+            "Creates equal columns",
+            "Sets fixed item sizes",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "How do you create a grid that fills the entire space?",
+        "o": [
+            "grid-template: 1fr",
+            "grid: fill",
+            "grid-template-areas: 'fill'",
+            "height: 100%"
+        ]
+    },
+    {
+        "q": "What does the property flex-basis: auto do?",
+        "o": [
+            "Sets item size based on its content",
+            "Sets fixed size",
+            "Sets maximum size",
+            "Sets hidden size"
+        ]
+    },
+    {
+        "q": "How do you create a grid that has a specific number of gaps?",
+        "o": [
+            "gap: 10px",
+            "grid-gap: 10px",
+            "spacing: 10px",
+            "item-gap: 10px"
+        ]
+    },
+    {
+        "q": "What does the property align-self: auto do?",
+        "o": [
+            "Aligns item based on its default value",
+            "Centers item",
+            "Aligns item at start",
+            "Stretches item"
+        ]
+    },
+    {
+        "q": "How do you create a grid that has a minimum width?",
+        "o": [
+            "grid-template-columns: minmax(100px, 1fr)",
+            "min-width: 100px",
+            "grid: min-width",
+            "grid-template: min-width"
+        ]
+    },
+    {
+        "q": "What does the property justify-items: stretch do?",
+        "o": [
+            "Stretches items to fill their grid cells",
+            "Centers items",
+            "Aligns items at start",
+            "Aligns items at end"
+        ]
+    },
+    {
+        "q": "How do you create a flex container with direction set to row-reverse?",
+        "o": [
+            "flex-direction: row-reverse",
+            "row-direction: reverse",
+            "flex: row-reverse",
+            "flex-direction: horizontal-reverse"
+        ]
+    },
+    {
+        "q": "What does the property grid-template: 100px 1fr do?",
+        "o": [
+            "Creates a grid with one fixed height row and one flexible row",
+            "Creates equal rows",
+            "Sets fixed item sizes",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "How do you create a grid with items aligned at the end?",
+        "o": [
+            "align-items: flex-end",
+            "grid-align: end",
+            "item-align: end",
+            "grid-template: end"
+        ]
+    },
+    {
+        "q": "What does the property justify-content: space-evenly do?",
+        "o": [
+            "Distributes space evenly between items",
+            "Centers items",
+            "Aligns items at start",
+            "Aligns items at end"
+        ]
+    },
+    {
+        "q": "How do you create a grid that allows items to overlap?",
+        "o": [
+            "grid-area: overlap",
+            "item-overlap: true",
+            "grid-template: overlap",
+            "grid: overlap"
+        ]
+    },
+    {
+        "q": "What does the property flex-wrap: nowrap do?",
+        "o": [
+            "Items do not wrap to the next line",
+            "Items wrap to next line",
+            "Items stack vertically",
+            "Items align at center"
+        ]
+    },
+    {
+        "q": "How do you create a grid that adjusts its size automatically?",
+        "o": [
+            "grid-template: auto",
+            "grid-auto: size",
+            "grid: size",
+            "grid-template-areas: auto"
+        ]
+    },
+    {
+        "q": "What does the property align-items: center do?",
+        "o": [
+            "Centers items vertically",
+            "Aligns items at start",
+            "Aligns items at end",
+            "Disables alignment"
+        ]
+    },
+    {
+        "q": "How do you create a flex container with a fixed width?",
+        "o": [
+            "width: 500px",
+            "flex: fixed-width",
+            "container: fixed-width",
+            "flex-container: 500px"
+        ]
+    },
+    {
+        "q": "What does the property grid-template-areas: 'header main' do?",
+        "o": [
+            "Defines named grid areas",
+            "Sets gaps",
+            "Aligns items",
+            "Sets item sizes"
+        ]
+    },
+    {
+        "q": "How do you create a grid that has items centered within their cells?",
+        "o": [
+            "align-items: center",
+            "item-align: center",
+            "grid-align: center",
+            "grid-template: center"
+        ]
+    }
+]

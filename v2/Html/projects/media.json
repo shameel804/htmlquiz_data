@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Embedding a Video",
+    "ques": "How do you embed a video in HTML using the ```<video>``` tag with multiple formats for browser compatibility?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<video width=\"400\" controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <source src=\"video.ogg\" type=\"video/ogg\">\n  Your browser does not support the video tag.\n</video>"
+    },
+    "explanation": "The ```<video>``` tag is used to embed videos in HTML.\n\n- The ```width=\"400\"``` attribute sets the width of the video.\n- The ```controls``` attribute adds play, pause, and volume controls.\n- Inside the ```<video>``` tag, multiple ```<source>``` elements are used to provide different formats for browser compatibility.\n- If the browser does not support the ```<video>``` element, the fallback text ```Your browser does not support the video tag.``` is displayed."
+  },
+  {
+    "title": "Embedding an Audio File",
+    "ques": "How do you embed an audio file in HTML and ensure compatibility with different browsers?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<audio controls>\n  <source src=\"audio.mp3\" type=\"audio/mpeg\">\n  <source src=\"audio.ogg\" type=\"audio/ogg\">\n  Your browser does not support the audio tag.\n</audio>"
+    },
+    "explanation": "The ```<audio>``` tag is used to embed audio in HTML.\n\n- The ```controls``` attribute provides play, pause, and volume controls.\n- The ```<source>``` elements allow multiple formats for browser compatibility.\n- If the browser does not support the ```<audio>``` tag, the fallback text ```Your browser does not support the audio tag.``` is displayed."
+  },
+  {
+    "title": "Embedding an Image",
+    "ques": "How do you embed an image in HTML and provide alternative text for accessibility?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<img src=\"image.jpg\" alt=\"A beautiful sunset\" width=\"500\" height=\"300\">"
+    },
+    "explanation": "The ```<img>``` tag is used to embed images in HTML.\n\n- The ```src``` attribute specifies the image source.\n- The ```alt``` attribute provides alternative text for screen readers and when the image cannot be loaded.\n- The ```width``` and ```height``` attributes define the dimensions of the image."
+  },
+  {
+    "title": "Embedding a YouTube Video",
+    "ques": "How do you embed a YouTube video in an HTML page?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" frameborder=\"0\" allowfullscreen></iframe>"
+    },
+    "explanation": "The ```<iframe>``` tag is used to embed external content, such as YouTube videos.\n\n- The ```src``` attribute contains the URL of the embedded YouTube video.\n- The ```width``` and ```height``` attributes define the video size.\n- The ```frameborder=\"0\"``` removes the border around the iframe.\n- The ```allowfullscreen``` attribute allows users to watch the video in full-screen mode."
+  },
+  {
+    "title": "Autoplay and Loop in Video",
+    "ques": "How do you make a video automatically play and loop indefinitely in HTML?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<video width=\"400\" autoplay loop muted>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>"
+    },
+    "explanation": "The ```autoplay``` and ```loop``` attributes are used to control video playback.\n\n- ```autoplay``` makes the video start playing automatically when the page loads.\n- ```loop``` restarts the video from the beginning when it ends.\n- ```muted``` mutes the video by default to comply with modern browser restrictions."
+  },
+  {
+    "title": "Adding Captions to a Video",
+    "ques": "How do you add captions to a video using the ```<track>``` element in HTML?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<video width=\"400\" controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <track src=\"captions.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\">\n</video>"
+    },
+    "explanation": "The ```<track>``` element is used to add captions to a video.\n\n- The ```src``` attribute specifies the caption file (```.vtt``` format).\n- The ```kind=\"subtitles\"``` defines the type of text track.\n- The ```srclang=\"en\"``` sets the language of the subtitles.\n- The ```label=\"English\"``` specifies the name of the track that appears in the player."
+  },
+  {
+    "title": "Customizing Audio Player",
+    "ques": "How do you create a customized audio player using the ```<audio>``` tag with additional attributes?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<audio controls loop preload=\"auto\">\n  <source src=\"audio.mp3\" type=\"audio/mpeg\">\n  Your browser does not support the audio tag.\n</audio>"
+    },
+    "explanation": "Additional attributes can be used to customize the ```<audio>``` player.\n\n- ```controls``` adds playback controls like play, pause, and volume.\n- ```loop``` makes the audio replay automatically when it ends.\n- ```preload=\"auto\"``` tells the browser to load the audio file when the page loads for faster playback."
+  },
+  {
+    "title": "Responsive Images with ```<picture>```",
+    "ques": "How do you use the ```<picture>``` element to load different images based on screen size?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<picture>\n  <source srcset=\"image-small.jpg\" media=\"(max-width: 600px)\">\n  <source srcset=\"image-large.jpg\" media=\"(min-width: 601px)\">\n  <img src=\"fallback.jpg\" alt=\"Responsive Image\">\n</picture>"
+    },
+    "explanation": "The ```<picture>``` element allows responsive images by selecting different sources based on screen size.\n\n- The ```<source>``` elements define different images for different screen widths.\n- The ```media``` attribute specifies the condition for loading each image.\n- The ```<img>``` tag provides a fallback image if no conditions match."
+  },
+  {
+    "title": "Background Image with CSS",
+    "ques": "How do you set an image as the background of a webpage using CSS?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<style>\n  body {\n    background-image: url('background.jpg');\n    background-size: cover;\n    background-position: center;\n  }\n</style>"
+    },
+    "explanation": "CSS is used to set an image as the background of a webpage.\n\n- ```background-image``` sets the image.\n- ```background-size: cover;``` ensures the image covers the entire viewport.\n- ```background-position: center;``` centers the image."
+  },
+  {
+    "title": "Lazy Loading Images",
+    "ques": "How do you enable lazy loading for images in HTML?",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<img src=\"large-image.jpg\" alt=\"Lazy Loaded Image\" loading=\"lazy\">"
+    },
+    "explanation": "The ```loading=\"lazy\"``` attribute defers the loading of images until they are needed.\n\n- It helps improve page load speed by loading images only when they are visible in the viewport."
+  }
+]

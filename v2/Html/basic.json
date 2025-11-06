@@ -1,0 +1,7061 @@
+[
+  {
+    "q": "Which of the following is the correct way to define an HTML paragraph?",
+    "o": [
+      "<p>This is a paragraph.</p>",
+      "<para>This is a paragraph.</para>",
+      "<paragraph>This is a paragraph.</paragraph>",
+      "<p>This is a paragraph."
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<h1>Hello, World!</h1>",
+    "o": [
+      "Hello, World! (Large heading)",
+      "hello, world!",
+      "HELLO, WORLD!",
+      "Error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<url>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML code?",
+    "c": "<p style='color:red;'>This is a red paragraph.</p>",
+    "o": [
+      "A paragraph with red text",
+      "A paragraph with default black text",
+      "An error message",
+      "A paragraph with blue text"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to specify an image in HTML?",
+    "o": [
+      "<img src='image.jpg' alt='Image description'>",
+      "<image src='image.jpg'>",
+      "<img>image.jpg</img>",
+      "<img href='image.jpg'>"
+    ]
+  },
+  {
+    "q": "What does the 'alt' attribute in the <img> tag specify?",
+    "o": [
+      "Alternative text for the image",
+      "Image size",
+      "Background color",
+      "Image alignment"
+    ]
+  },
+  {
+    "q": "What is the correct structure of a basic HTML document?",
+    "o": [
+      "<!DOCTYPE html>\n<html>\n<head>\n<title>Page Title</title>\n</head>\n<body>\nContent here\n</body>\n</html>",
+      "<html>\n<title>Page Title</title>\n<head>\n</head>\n<body>\nContent here\n</body>",
+      "<head>\n<html>\n<title>Page Title</title>\n<body>\nContent here\n</body>\n</html>",
+      "<html>\n<head>\n<body>\n<title>Page Title</title>\nContent here\n</body>\n</head>\n</html>"
+    ]
+  },
+  {
+    "q": "Which tag is used to create a table in HTML?",
+    "o": [
+      "<table>",
+      "<tbl>",
+      "<tr>",
+      "<td>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML code?",
+    "c": "<b>Hello</b> <i>World</i>",
+    "o": [
+      "Hello (bold) World (italic)",
+      "HELLO WORLD",
+      "Hello World",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to specify a list item inside an ordered or unordered list?",
+    "o": [
+      "<li>",
+      "<list>",
+      "<ul>",
+      "<ol>"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a line break?",
+    "o": [
+      "<br>",
+      "<lb>",
+      "<break>",
+      "<line>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n  <li>Cherry</li>\n</ul>",
+    "o": [
+      "A bulleted list with Apple, Banana, and Cherry",
+      "A numbered list with Apple, Banana, and Cherry",
+      "Plain text: Apple, Banana, Cherry",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define important text?",
+    "o": [
+      "<strong>",
+      "<b>",
+      "<em>",
+      "<important>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML code?",
+    "c": "<h3>Welcome</h3>\n<p>This is a paragraph.</p>",
+    "o": [
+      "A heading with 'Welcome' and a paragraph with 'This is a paragraph.'",
+      "Only 'Welcome' in large text",
+      "Only 'This is a paragraph.' in normal text",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid HTML comment?",
+    "o": [
+      "<!-- This is a comment -->",
+      "// This is a comment",
+      "/* This is a comment */",
+      "# This is a comment"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click here</a>",
+    "o": [
+      "A clickable hyperlink with text 'Click here'",
+      "A plain text 'Click here'",
+      "An error message",
+      "A button with the label 'Click here'"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a numbered list?",
+    "o": [
+      "<ol>",
+      "<ul>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML code?",
+    "c": "<p title='Hello!'>Hover over me</p>",
+    "o": [
+      "A paragraph that shows 'Hello!' when hovered over",
+      "A paragraph with the text 'Hello!'",
+      "A paragraph with 'Hover over me' in bold",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which attribute is used to open a link in a new tab?",
+    "o": [
+      "target='_blank'",
+      "new='tab'",
+      "open='new'",
+      "window='_new'"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<input type='text' placeholder='Enter your name'>",
+    "o": [
+      "A text input field with 'Enter your name' as a placeholder",
+      "A text input field with 'Enter your name' as default text",
+      "A text input field with a label 'Enter your name'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define the largest heading?",
+    "o": [
+      "<h1>",
+      "<h6>",
+      "<head>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p style='color: red;'>This is red text</p>",
+    "o": [
+      "A paragraph with red text",
+      "A paragraph with black text",
+      "Plain text 'This is red text'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<url>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<b>Hello</b> <i>World</i>",
+    "o": [
+      "Hello in bold and World in italics",
+      "Hello and World in normal text",
+      "Hello in italics and World in bold",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which attribute is used to define an image’s alternative text?",
+    "o": [
+      "alt",
+      "title",
+      "description",
+      "text"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<title>My Web Page</title>",
+    "o": [
+      "Sets the webpage title to 'My Web Page'",
+      "Displays 'My Web Page' in the body",
+      "Creates a header with 'My Web Page'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to group multiple options in a dropdown list?",
+    "o": [
+      "<optgroup>",
+      "<select>",
+      "<dropdown>",
+      "<option>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<marquee>Scrolling Text</marquee>",
+    "o": [
+      "A scrolling text 'Scrolling Text'",
+      "Plain text 'Scrolling Text'",
+      "An underlined text 'Scrolling Text'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which tag is used to define a block of preformatted text?",
+    "o": [
+      "<pre>",
+      "<code>",
+      "<format>",
+      "<block>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<abbr title='Hypertext Markup Language'>HTML</abbr>",
+    "o": [
+      "Shows 'HTML' with a tooltip displaying 'Hypertext Markup Language'",
+      "Displays 'HTML' in bold",
+      "Displays 'HTML' with an underline",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define an unordered list?",
+    "o": [
+      "<ul>",
+      "<ol>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ol>\n  <li>Apple</li>\n  <li>Banana</li>\n  <li>Cherry</li>\n</ol>",
+    "o": [
+      "A numbered list with Apple, Banana, and Cherry",
+      "A bulleted list with Apple, Banana, and Cherry",
+      "Plain text 'Apple, Banana, Cherry'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which attribute is used to open a hyperlink in a new tab?",
+    "o": [
+      "target='_blank'",
+      "target='_new'",
+      "new='tab'",
+      "open='new'"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com' target='_blank'>Visit Example</a>",
+    "o": [
+      "A clickable link that opens in a new tab",
+      "A clickable link that opens in the same tab",
+      "Plain text 'Visit Example'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which tag is used to embed a video in HTML?",
+    "o": [
+      "<video>",
+      "<embed>",
+      "<media>",
+      "<movie>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<video width='320' height='240' controls>\n  <source src='video.mp4' type='video/mp4'>\n  Your browser does not support the video tag.\n</video>",
+    "o": [
+      "A video player with controls",
+      "A broken video icon",
+      "Plain text 'Your browser does not support the video tag.'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which tag is used to define a footer in HTML?",
+    "o": [
+      "<footer>",
+      "<bottom>",
+      "<end>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<footer>\n  <p>Copyright 2024</p>\n</footer>",
+    "o": [
+      "A footer section with 'Copyright 2024'",
+      "A bold text 'Copyright 2024'",
+      "Plain text 'Copyright 2024'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify a tooltip for an element?",
+    "o": [
+      "title",
+      "tooltip",
+      "alt",
+      "hint"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p title='Hello!'>Hover over me</p>",
+    "o": [
+      "A paragraph with a tooltip saying 'Hello!' when hovered",
+      "A paragraph with bold text",
+      "Plain text 'Hover over me'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a table?",
+    "o": [
+      "<table>",
+      "<tab>",
+      "<tr>",
+      "<td>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<table border='1'>\n  <tr>\n    <td>Row 1, Cell 1</td>\n    <td>Row 1, Cell 2</td>\n  </tr>\n  <tr>\n    <td>Row 2, Cell 1</td>\n    <td>Row 2, Cell 2</td>\n  </tr>\n</table>",
+    "o": [
+      "A table with two rows and two columns, bordered",
+      "A table with no border",
+      "A paragraph with text 'Row 1, Cell 1'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which attribute is used to define a unique identifier for an HTML element?",
+    "o": [
+      "id",
+      "class",
+      "name",
+      "key"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p id='intro'>Welcome to HTML</p>",
+    "o": [
+      "A paragraph with the text 'Welcome to HTML' and an id 'intro'",
+      "A paragraph with bold text 'Welcome to HTML'",
+      "Plain text 'Welcome to HTML'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a section in a document?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<article>",
+      "<span>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<section>\n  <h2>About Us</h2>\n  <p>We provide web solutions.</p>\n</section>",
+    "o": [
+      "A section with a heading 'About Us' and a paragraph",
+      "A paragraph inside a div",
+      "Plain text 'We provide web solutions.'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which tag is used to define an input field in an HTML form?",
+    "o": [
+      "<input>",
+      "<form>",
+      "<textfield>",
+      "<entry>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<form>\n  <input type='text' placeholder='Enter name'>\n  <input type='submit' value='Submit'>\n</form>",
+    "o": [
+      "A text input field with a submit button",
+      "A submit button only",
+      "Plain text 'Enter name'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to display a horizontal line?",
+    "o": [
+      "<hr>",
+      "<br>",
+      "<line>",
+      "<separator>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "Hello<br>World",
+    "o": [
+      "Hello on one line and World on the next line",
+      "Hello and World on the same line",
+      "Hello in bold and World in italics",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which tag is used to define the main heading in an HTML document?",
+    "o": [
+      "<h1>",
+      "<heading>",
+      "<head>",
+      "<title>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<h1>Welcome to My Website</h1>",
+    "o": [
+      "A large heading with the text 'Welcome to My Website'",
+      "A paragraph with bold text",
+      "Plain text 'Welcome to My Website'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to group multiple elements together for styling?",
+    "o": [
+      "<div>",
+      "<span>",
+      "<group>",
+      "<container>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<div>\n  <p>Hello</p>\n  <p>World</p>\n</div>",
+    "o": [
+      "Two paragraphs inside a div",
+      "A bold paragraph 'Hello World'",
+      "Plain text 'Hello World'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define an inline container?",
+    "o": [
+      "<span>",
+      "<div>",
+      "<section>",
+      "<p>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p>This is <span style='color:red;'>important</span> text.</p>",
+    "o": [
+      "The word 'important' will be red",
+      "All text will be red",
+      "Plain text 'This is important text.'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to provide alternative text for an image?",
+    "o": [
+      "alt",
+      "title",
+      "src",
+      "description"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='A beautiful landscape'>",
+    "o": [
+      "An image with 'A beautiful landscape' as alt text",
+      "A broken image icon",
+      "Plain text 'A beautiful landscape'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<url>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click here</a>",
+    "o": [
+      "A clickable link with text 'Click here'",
+      "A button with text 'Click here'",
+      "Plain text 'Click here'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a list with bullet points?",
+    "o": [
+      "<ul>",
+      "<ol>",
+      "<li>",
+      "<dl>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n</ul>",
+    "o": [
+      "A bulleted list with two items",
+      "A numbered list with two items",
+      "Plain text 'Item 1 Item 2'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a numbered list?",
+    "o": [
+      "<ol>",
+      "<ul>",
+      "<li>",
+      "<dl>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ol>\n  <li>Step 1</li>\n  <li>Step 2</li>\n</ol>",
+    "o": [
+      "A numbered list with two items",
+      "A bulleted list with two items",
+      "Plain text 'Step 1 Step 2'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to open a hyperlink in a new tab?",
+    "o": [
+      "target='_blank'",
+      "open='new'",
+      "tab='new'",
+      "window='blank'"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com' target='_blank'>Visit Example</a>",
+    "o": [
+      "A link that opens in a new tab",
+      "A regular link that opens in the same tab",
+      "Plain text 'Visit Example'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to display a dropdown list?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<option>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<select>\n  <option>Option 1</option>\n  <option>Option 2</option>\n</select>",
+    "o": [
+      "A dropdown with two options",
+      "Two radio buttons",
+      "A bulleted list",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which tag is used to embed an image in an HTML document?",
+    "o": [
+      "<img>",
+      "<picture>",
+      "<src>",
+      "<image>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='photo.jpg' alt='A scenic view'>",
+    "o": [
+      "An image with 'A scenic view' as alt text",
+      "A broken image icon",
+      "Plain text 'A scenic view'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which tag is used to define a table in HTML?",
+    "o": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<th>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<table border='1'>\n  <tr>\n    <th>Heading</th>\n  </tr>\n  <tr>\n    <td>Data</td>\n  </tr>\n</table>",
+    "o": [
+      "A table with one heading and one data cell",
+      "A bulleted list",
+      "An error message",
+      "Plain text 'Heading Data'"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a table row?",
+    "o": [
+      "<tr>",
+      "<td>",
+      "<table>",
+      "<th>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<tr>\n  <td>Row 1, Cell 1</td>\n  <td>Row 1, Cell 2</td>\n</tr>",
+    "o": [
+      "A row with two data cells",
+      "A column with two data cells",
+      "An error message",
+      "Plain text 'Row 1, Cell 1 Row 1, Cell 2'"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<submit>",
+      "<button>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<form>\n  <input type='text' placeholder='Enter name'>\n  <button type='submit'>Submit</button>\n</form>",
+    "o": [
+      "A text input with a submit button",
+      "A paragraph with a submit button",
+      "An error message",
+      "Plain text 'Enter name Submit'"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify the URL for form submission?",
+    "o": [
+      "action",
+      "method",
+      "target",
+      "href"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a line break?",
+    "o": [
+      "<br>",
+      "<hr>",
+      "<lb>",
+      "<break>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "Hello<br>World",
+    "o": [
+      "'Hello' on one line and 'World' on the next",
+      "Plain text 'Hello World'",
+      "An error message",
+      "A horizontal line between 'Hello' and 'World'"
+    ]
+  },
+  {
+    "q": "Which tag is used to define an HTML comment?",
+    "o": [
+      "<!-- This is a comment -->",
+      "// This is a comment",
+      "/* This is a comment */",
+      "# This is a comment"
+    ]
+  },
+  {
+    "q": "Which tag is used to define the largest heading in HTML?",
+    "o": [
+      "<h1>",
+      "<h6>",
+      "<header>",
+      "<head>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<h1>Welcome to HTML</h1>\n<h6>Smallest Heading</h6>",
+    "o": [
+      "A large 'Welcome to HTML' heading and a small 'Smallest Heading'",
+      "Two paragraphs with different font sizes",
+      "A bulleted list",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a paragraph?",
+    "o": [
+      "<p>",
+      "<para>",
+      "<paragraph>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p>This is a paragraph.</p>",
+    "o": [
+      "A block of text saying 'This is a paragraph.'",
+      "A bolded text",
+      "Plain text without formatting",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to make text bold?",
+    "o": [
+      "<b>",
+      "<strong>",
+      "<bold>",
+      "<em>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<b>Bold Text</b>",
+    "o": [
+      "Bold Text",
+      "Italic Text",
+      "Underlined Text",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to make text italic?",
+    "o": [
+      "<i>",
+      "<em>",
+      "<italic>",
+      "<strong>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<i>Italic Text</i>",
+    "o": [
+      "Italic Text",
+      "Bold Text",
+      "Underlined Text",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<url>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click Here</a>",
+    "o": [
+      "A clickable link with text 'Click Here'",
+      "Plain text 'Click Here'",
+      "A button",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which tag is used to define an unordered list in HTML?",
+    "o": [
+      "<ul>",
+      "<ol>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n</ul>",
+    "o": [
+      "A bulleted list with 'Apple' and 'Banana'",
+      "A numbered list with 'Apple' and 'Banana'",
+      "Plain text 'Apple Banana'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which tag is used to define an ordered list in HTML?",
+    "o": [
+      "<ol>",
+      "<ul>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ol>\n  <li>First</li>\n  <li>Second</li>\n</ol>",
+    "o": [
+      "A numbered list with 'First' and 'Second'",
+      "A bulleted list with 'First' and 'Second'",
+      "Plain text 'First Second'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to insert an image?",
+    "o": [
+      "<img>",
+      "<image>",
+      "<pic>",
+      "<src>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='Sample Image'>",
+    "o": [
+      "An image with alt text 'Sample Image' if the image is not found",
+      "A broken image with no text",
+      "Plain text 'Sample Image'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to define inline styles?",
+    "o": [
+      "style",
+      "css",
+      "class",
+      "id"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p style='color: red;'>This is red text</p>",
+    "o": [
+      "A red-colored text saying 'This is red text'",
+      "A bold text",
+      "Plain text without styling",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a division or section?",
+    "o": [
+      "<div>",
+      "<section>",
+      "<span>",
+      "<container>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<div>\n  <p>Inside a div</p>\n</div>",
+    "o": [
+      "A paragraph inside a division",
+      "A bolded text",
+      "Plain text 'Inside a div'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a table?",
+    "o": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<th>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<table border='1'>\n  <tr>\n    <th>Heading</th>\n  </tr>\n  <tr>\n    <td>Data</td>\n  </tr>\n</table>",
+    "o": [
+      "A table with a heading row and one data row",
+      "A list with items 'Heading' and 'Data'",
+      "Plain text 'Heading Data'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<fieldset>",
+      "<submit>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<form>\n  <input type='text' placeholder='Enter name'>\n</form>",
+    "o": [
+      "A text input field with placeholder 'Enter name'",
+      "A paragraph with text 'Enter name'",
+      "A button with label 'Enter name'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a text input field?",
+    "o": [
+      "<input>",
+      "<textbox>",
+      "<textfield>",
+      "<enter>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<input type='password'>",
+    "o": [
+      "A password input field where text is hidden",
+      "A normal text input field",
+      "A text area",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify that an input field is required?",
+    "o": [
+      "required",
+      "mandatory",
+      "validate",
+      "needed"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<input type='email' required>",
+    "o": [
+      "An email input field that must be filled before submission",
+      "A normal input field",
+      "A text input field without validation",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to display a video?",
+    "o": [
+      "<video>",
+      "<media>",
+      "<mp4>",
+      "<play>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<video controls>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "A video player with play, pause, and volume controls",
+      "A broken image icon",
+      "Plain text 'video.mp4'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click Here</a>",
+    "o": [
+      "A clickable link labeled 'Click Here' that navigates to example.com",
+      "Plain text 'Click Here'",
+      "A button with the text 'Click Here'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to open a link in a new tab?",
+    "o": [
+      "target='_blank'",
+      "newtab='true'",
+      "open='new'",
+      "window='new'"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com' target='_blank'>Visit Example</a>",
+    "o": [
+      "A link labeled 'Visit Example' that opens in a new tab",
+      "A link labeled 'Visit Example' that opens in the same tab",
+      "Plain text 'Visit Example'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a dropdown selection list?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<list>",
+      "<option>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<select>\n  <option>Option 1</option>\n  <option>Option 2</option>\n</select>",
+    "o": [
+      "A dropdown menu with two options: 'Option 1' and 'Option 2'",
+      "A list with two items",
+      "Plain text 'Option 1 Option 2'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to group related options in a dropdown?",
+    "o": [
+      "<optgroup>",
+      "<option>",
+      "<fieldset>",
+      "<group>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<select>\n  <optgroup label='Fruits'>\n    <option>Apple</option>\n    <option>Banana</option>\n  </optgroup>\n</select>",
+    "o": [
+      "A dropdown menu with a grouped section labeled 'Fruits' containing 'Apple' and 'Banana'",
+      "A plain list with 'Apple' and 'Banana'",
+      "Plain text 'Fruits Apple Banana'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to display a horizontal rule (line)?",
+    "o": [
+      "<hr>",
+      "<br>",
+      "<line>",
+      "<divider>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "This is a line above<hr>This is a line below",
+    "o": [
+      "Two lines of text separated by a horizontal line",
+      "Two paragraphs with a blank space in between",
+      "A new line without a horizontal rule",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define the largest heading?",
+    "o": [
+      "<h1>",
+      "<heading>",
+      "<h6>",
+      "<title>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<h1>Welcome to HTML</h1>\n<h3>Learn the Basics</h3>",
+    "o": [
+      "A large 'Welcome to HTML' heading followed by a smaller 'Learn the Basics' heading",
+      "A paragraph with 'Welcome to HTML' and 'Learn the Basics'",
+      "Plain text 'Welcome to HTML Learn the Basics'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create an ordered list?",
+    "o": [
+      "<ol>",
+      "<ul>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ol>\n  <li>Item 1</li>\n  <li>Item 2</li>\n</ol>",
+    "o": [
+      "A numbered list with 'Item 1' and 'Item 2'",
+      "A bulleted list with 'Item 1' and 'Item 2'",
+      "Plain text 'Item 1 Item 2'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to provide alternative text for an image?",
+    "o": [
+      "alt",
+      "title",
+      "src",
+      "description"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='A sample image'>",
+    "o": [
+      "An image if 'image.jpg' exists; otherwise, the text 'A sample image'",
+      "A blank space if 'image.jpg' is missing",
+      "Plain text 'image.jpg'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a division or section?",
+    "o": [
+      "<div>",
+      "<section>",
+      "<span>",
+      "<article>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<div>\n  <p>This is inside a division.</p>\n</div>",
+    "o": [
+      "A paragraph inside a division",
+      "A separate heading",
+      "Plain text 'This is inside a division.'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to group inline elements together?",
+    "o": [
+      "<span>",
+      "<div>",
+      "<section>",
+      "<p>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p>This is a <span style='color:red;'>red</span> word.</p>",
+    "o": [
+      "A sentence with the word 'red' displayed in red color",
+      "A sentence with all text in black",
+      "Plain text 'This is a red word.'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a table?",
+    "o": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<th>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<table border='1'>\n  <tr>\n    <th>Header 1</th>\n    <th>Header 2</th>\n  </tr>\n  <tr>\n    <td>Data 1</td>\n    <td>Data 2</td>\n  </tr>\n</table>",
+    "o": [
+      "A table with two columns, 'Header 1' and 'Header 2', and one row of data",
+      "A list of headers and data without a table structure",
+      "Plain text 'Header 1 Header 2 Data 1 Data 2'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to merge two or more columns in a table?",
+    "o": [
+      "colspan",
+      "rowspan",
+      "merge",
+      "colwidth"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<table border='1'>\n  <tr>\n    <td colspan='2'>Merged Cell</td>\n  </tr>\n</table>",
+    "o": [
+      "A table with one row where a single cell spans two columns",
+      "A table with two separate columns",
+      "Plain text 'Merged Cell'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to embed a video?",
+    "o": [
+      "<video>",
+      "<embed>",
+      "<source>",
+      "<media>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<video width='320' height='240' controls>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "A playable video if 'video.mp4' exists",
+      "A broken video player",
+      "Plain text 'video.mp4'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<fieldset>",
+      "<button>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<form>\n  <input type='text' placeholder='Enter your name'>\n</form>",
+    "o": [
+      "A text input field with a placeholder 'Enter your name'",
+      "A button labeled 'Enter your name'",
+      "Plain text 'Enter your name'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML input type is used to create a checkbox?",
+    "o": [
+      "checkbox",
+      "radio",
+      "text",
+      "button"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<input type='checkbox' checked>",
+    "o": [
+      "A checked checkbox",
+      "An unchecked checkbox",
+      "A button",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click here</a>",
+    "o": [
+      "A clickable link with the text 'Click here' that redirects to 'https://example.com'",
+      "Plain text 'Click here'",
+      "A button labeled 'Click here'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to open a link in a new tab?",
+    "o": [
+      "target='_blank'",
+      "newtab='true'",
+      "window='_new'",
+      "open='new'"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com' target='_blank'>Open in new tab</a>",
+    "o": [
+      "A link that opens 'https://example.com' in a new tab",
+      "A link that opens in the same tab",
+      "Plain text 'Open in new tab'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a section of navigation links?",
+    "o": [
+      "<nav>",
+      "<section>",
+      "<aside>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<nav>\n  <a href='home.html'>Home</a>\n  <a href='about.html'>About</a>\n</nav>",
+    "o": [
+      "A navigation section with 'Home' and 'About' links",
+      "A paragraph containing 'Home' and 'About'",
+      "Plain text 'Home About'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define metadata about a web page?",
+    "o": [
+      "<meta>",
+      "<head>",
+      "<title>",
+      "<script>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<meta name='description' content='This is a sample page'>",
+    "o": [
+      "Adds a description for search engines but does not display anything on the page",
+      "Displays the text 'This is a sample page' on the webpage",
+      "Creates a paragraph with the content",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to include external CSS files?",
+    "o": [
+      "<link>",
+      "<style>",
+      "<css>",
+      "<stylesheet>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<link rel='stylesheet' href='styles.css'>",
+    "o": [
+      "Applies the styles from 'styles.css' to the webpage",
+      "Displays a link to 'styles.css'",
+      "Plain text 'styles.css'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define the largest heading?",
+    "o": [
+      "<h1>",
+      "<h6>",
+      "<header>",
+      "<title>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<h1>Welcome to HTML</h1>",
+    "o": [
+      "A large heading with the text 'Welcome to HTML'",
+      "A small heading with the text 'Welcome to HTML'",
+      "Plain text 'Welcome to HTML'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to group multiple elements for styling?",
+    "o": [
+      "<div>",
+      "<span>",
+      "<section>",
+      "<group>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<div style='color:blue;'>Hello World</div>",
+    "o": [
+      "Displays 'Hello World' in blue color",
+      "Displays 'Hello World' in black color",
+      "Displays 'Hello World' in bold",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create an unordered list?",
+    "o": [
+      "<ul>",
+      "<ol>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n</ul>",
+    "o": [
+      "A bullet-point list with 'Apple' and 'Banana'",
+      "A numbered list with 'Apple' and 'Banana'",
+      "Plain text 'Apple Banana'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to provide alternative text for an image?",
+    "o": [
+      "alt",
+      "title",
+      "src",
+      "description"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='A beautiful scenery'>",
+    "o": [
+      "Displays the image 'image.jpg' with 'A beautiful scenery' as alt text",
+      "Displays only the alt text",
+      "Displays a broken image icon",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define emphasized text?",
+    "o": [
+      "<em>",
+      "<strong>",
+      "<i>",
+      "<b>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<em>This is important</em>",
+    "o": [
+      "Displays 'This is important' in italic",
+      "Displays 'This is important' in bold",
+      "Displays 'This is important' in normal text",
+      "An error message"
+    ]
+  },
+  {
+    "q": "What is the correct HTML structure for a basic webpage?",
+    "o": [
+      "<!DOCTYPE html><html><head></head><body></body></html>",
+      "<html><body></body></html>",
+      "<head><title></title></head><body></body>",
+      "<html><head></head></html>"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<url>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<img src=\"image.jpg\" alt=\"Description\">",
+    "o": [
+      "An image with a description",
+      "A clickable image link",
+      "A video element",
+      "A background image"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify the text displayed when hovering over an element?",
+    "o": [
+      "title",
+      "hover",
+      "alt",
+      "tooltip"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<h1>Hello</h1><p>World</p>",
+    "o": [
+      "A heading 'Hello' followed by a paragraph 'World'",
+      "A single line 'Hello World'",
+      "Only 'Hello' is displayed",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define the most important heading?",
+    "o": [
+      "<h1>",
+      "<head>",
+      "<header>",
+      "<heading>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet do?",
+    "c": "<input type=\"text\" placeholder=\"Enter name\">",
+    "o": [
+      "Creates a text input field with a placeholder",
+      "Creates a submit button",
+      "Displays a text paragraph",
+      "Creates a password field"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create an unordered list?",
+    "o": [
+      "<ul>",
+      "<ol>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the <meta charset=\"UTF-8\"> tag in HTML?",
+    "o": [
+      "Specifies the character encoding for the document",
+      "Creates metadata for search engines",
+      "Defines a CSS style",
+      "Links to an external JavaScript file"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to contain the main content of the webpage?",
+    "o": [
+      "<main>",
+      "<content>",
+      "<body>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<table><tr><td>Cell 1</td><td>Cell 2</td></tr></table>",
+    "o": [
+      "A table with one row and two cells",
+      "A table with two rows and one cell",
+      "A list with two items",
+      "Two separate tables"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to make an input field required?",
+    "o": [
+      "required",
+      "mandatory",
+      "mustfill",
+      "validate"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a paragraph?",
+    "o": [
+      "<p>",
+      "<para>",
+      "<paragraph>",
+      "<pg>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<ol>\n  <li>First</li>\n  <li>Second</li>\n</ol>",
+    "o": [
+      "A numbered list with two items",
+      "A bulleted list with two items",
+      "Two separate paragraphs",
+      "A dropdown menu"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify where to open a linked document?",
+    "o": [
+      "target",
+      "href",
+      "open",
+      "location"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<div style=\"color:red;\">Warning!</div>",
+    "o": [
+      "The text 'Warning!' in red color",
+      "A red colored box with no text",
+      "An error message",
+      "The word 'Warning!' with default styling"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a line break?",
+    "o": [
+      "<br>",
+      "<lb>",
+      "<break>",
+      "<newline>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet do?",
+    "c": "<form action=\"/submit\" method=\"post\">\n  <input type=\"text\" name=\"username\">\n</form>",
+    "o": [
+      "Creates a form with a text input field that submits to /submit",
+      "Creates a login page automatically",
+      "Displays a text paragraph with username",
+      "Creates a table with user information"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define the header of a document or section?",
+    "o": [
+      "<header>",
+      "<head>",
+      "<heading>",
+      "<hgroup>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the alt attribute in an <img> tag?",
+    "o": [
+      "Provides alternative text for the image",
+      "Specifies the image alignment",
+      "Determines the image size",
+      "Creates a thumbnail version"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<!DOCTYPE html>\n<html>\n<head>\n  <title>Page Title</title>\n</head>\n<body>\n  <h1>Hello</h1>\n</body>\n</html>",
+    "o": [
+      "A complete HTML document with a heading",
+      "Just the text 'Hello'",
+      "An HTML document without proper structure",
+      "A webpage with only a title"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to create a dropdown list?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<list>",
+      "<option>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<strong>Important</strong> text",
+    "o": [
+      "The word 'Important' in bold followed by normal 'text'",
+      "All text in bold",
+      "Only the word 'Important' is displayed",
+      "The text with increased font size"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to embed CSS styles directly in a document?",
+    "o": [
+      "<style>",
+      "<css>",
+      "<script>",
+      "<link>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<video width=\"320\" height=\"240\" controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "A video player with controls for an MP4 file",
+      "An audio player",
+      "A YouTube embed",
+      "A static image with video dimensions"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a footer for a document or section?",
+    "o": [
+      "<footer>",
+      "<bottom>",
+      "<foot>",
+      "<end>"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a horizontal rule?",
+    "o": [
+      "<hr>",
+      "<line>",
+      "<hrule>",
+      "<divider>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<input type=\"checkbox\" id=\"agree\" checked>",
+    "o": [
+      "A pre-checked checkbox",
+      "An unchecked checkbox",
+      "A radio button",
+      "A text input field"
+    ]
+  },
+  {
+    "q": "Which attribute is used to provide additional information about an element?",
+    "o": [
+      "data-*",
+      "info",
+      "extra",
+      "meta"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<span style=\"font-size: 20px;\">Large</span> text",
+    "o": [
+      "The word 'Large' in bigger font followed by normal 'text'",
+      "All text in 20px size",
+      "Only the word 'Large' is displayed",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define important text?",
+    "o": [
+      "<strong>",
+      "<important>",
+      "<bold>",
+      "<imp>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet do?",
+    "c": "<nav>\n  <a href=\"#home\">Home</a>\n  <a href=\"#about\">About</a>\n</nav>",
+    "o": [
+      "Creates a navigation section with two links",
+      "Creates a list of two items",
+      "Creates two separate buttons",
+      "Creates a dropdown menu"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a section in a document?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<area>",
+      "<part>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the lang attribute in the <html> tag?",
+    "o": [
+      "Defines the language of the document",
+      "Specifies the page layout",
+      "Determines text alignment",
+      "Sets the background color"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<audio controls>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "An audio player with controls for an MP3 file",
+      "A video player",
+      "A silent placeholder",
+      "A download link for audio"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a submit button in a form?",
+    "o": [
+      "<input type=\"submit\">",
+      "<submit>",
+      "<button type=\"submit\">",
+      "<formbutton>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n</ul>",
+    "o": [
+      "A bulleted list with two items",
+      "A numbered list with two items",
+      "Two separate paragraphs",
+      "The text 'Item 1 Item 2'"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a table row?",
+    "o": [
+      "<tr>",
+      "<row>",
+      "<table-row>",
+      "<trow>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<textarea rows=\"4\" cols=\"50\"></textarea>",
+    "o": [
+      "A text input area with 4 rows and 50 columns",
+      "A 4x50 grid layout",
+      "A table with 4 rows and 50 columns",
+      "A scrollable div"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a clickable button?",
+    "o": [
+      "<button>",
+      "<click>",
+      "<btn>",
+      "<input type=\"button\">"
+    ]
+  },
+  {
+    "q": "What is the purpose of the colspan attribute in HTML tables?",
+    "o": [
+      "Makes a cell span multiple columns",
+      "Colors multiple columns",
+      "Creates columns in a table",
+      "Aligns content across columns"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define the document's body content?",
+    "o": [
+      "<body>",
+      "<main>",
+      "<content>",
+      "<document>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<input type=\"radio\" name=\"gender\" value=\"male\">",
+    "o": [
+      "A radio button option for gender selection",
+      "A checkbox for multiple selections",
+      "A text input field",
+      "A dropdown menu"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify the source URL of an image?",
+    "o": [
+      "src",
+      "href",
+      "link",
+      "source"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<em>Important</em> notice",
+    "o": [
+      "The word 'Important' in italics followed by normal 'notice'",
+      "All text in italics",
+      "Only the word 'Important' is displayed",
+      "The text with increased importance"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a numbered list?",
+    "o": [
+      "<ol>",
+      "<ul>",
+      "<nl>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet do?",
+    "c": "<iframe src=\"https://example.com\" width=\"300\" height=\"200\"></iframe>",
+    "o": [
+      "Embeds another webpage within the current page",
+      "Creates a clickable link",
+      "Displays an image",
+      "Creates a scrollable text area"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a table header cell?",
+    "o": [
+      "<th>",
+      "<td>",
+      "<thead>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the defer attribute in a script tag?",
+    "o": [
+      "Delays script execution until page parsing is complete",
+      "Prevents the script from executing",
+      "Speeds up script execution",
+      "Makes the script execute immediately"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<details>\n  <summary>Click me</summary>\n  <p>Hidden content</p>\n</details>",
+    "o": [
+      "A collapsible content section with a clickable summary",
+      "A dropdown menu",
+      "A popup dialog box",
+      "A hidden element that appears on hover"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<fieldset>",
+      "<formset>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<code>print(\"Hello\")</code>",
+    "o": [
+      "The text 'print(\"Hello\")' displayed as code",
+      "An executable code block",
+      "The word 'Hello' in a special font",
+      "A syntax error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a table cell?",
+    "o": [
+      "<td>",
+      "<cell>",
+      "<tablecell>",
+      "<tc>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<progress value=\"50\" max=\"100\"></progress>",
+    "o": [
+      "A progress bar showing 50% completion",
+      "A loading spinner",
+      "A countdown timer",
+      "A percentage display"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a caption for a table?",
+    "o": [
+      "<caption>",
+      "<tabletitle>",
+      "<description>",
+      "<tablecaption>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the placeholder attribute in an input element?",
+    "o": [
+      "Displays hint text in the input field",
+      "Sets the default value",
+      "Creates a watermark effect",
+      "Defines the input pattern"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a clickable button that submits a form?",
+    "o": [
+      "<button type=\"submit\">",
+      "<input type=\"button\">",
+      "<submit>",
+      "<formbutton>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<label for=\"username\">Username:</label>\n<input id=\"username\" type=\"text\">",
+    "o": [
+      "A text input field with associated label",
+      "Two separate unrelated elements",
+      "A username validation system",
+      "A login button"
+    ]
+  },
+  {
+    "q": "Which attribute is used to make an input field read-only?",
+    "o": [
+      "readonly",
+      "disabled",
+      "static",
+      "fixed"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<blockquote cite=\"https://example.com\">\n  This is a quote\n</blockquote>",
+    "o": [
+      "An indented quote with citation reference",
+      "A regular paragraph",
+      "A clickable link",
+      "A highlighted text box"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a multi-line text input?",
+    "o": [
+      "<textarea>",
+      "<input type=\"text\" multiline>",
+      "<textbox>",
+      "<mtext>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet do?",
+    "c": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+    "o": [
+      "Configures viewport settings for responsive design",
+      "Sets the page width to 1000px",
+      "Creates a mobile-only version",
+      "Disables zooming on mobile"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to group related form elements together?",
+    "o": [
+      "<fieldset>",
+      "<formgroup>",
+      "<div>",
+      "<group>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the async attribute in a script tag?",
+    "o": [
+      "Downloads script without blocking page rendering",
+      "Delays script execution",
+      "Makes script execute in order",
+      "Prevents script caching"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<datalist id=\"browsers\">\n  <option value=\"Chrome\">\n  <option value=\"Firefox\">\n</datalist>\n<input list=\"browsers\">",
+    "o": [
+      "An input field with browser name suggestions",
+      "A dropdown list of browsers",
+      "Two separate input fields",
+      "A list of clickable browser links"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a header cell in a table?",
+    "o": [
+      "<th>",
+      "<thead>",
+      "<td header>",
+      "<hcell>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<pre>\n  Line 1\n  Line 2\n</pre>",
+    "o": [
+      "Text displayed exactly as written with line breaks",
+      "A single line of text",
+      "A code editor",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a definition list?",
+    "o": [
+      "<dl>",
+      "<def>",
+      "<dlist>",
+      "<list type=\"definition\">"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<output name=\"result\" for=\"a b\"></output>",
+    "o": [
+      "A container for calculation results",
+      "A form submission button",
+      "An error message box",
+      "A hidden input field"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a footer for a table?",
+    "o": [
+      "<tfoot>",
+      "<tablefooter>",
+      "<footer>",
+      "<tfooter>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the pattern attribute in an input element?",
+    "o": [
+      "Specifies a regular expression for validation",
+      "Defines the input's visual pattern",
+      "Creates a repeating background",
+      "Sets the input format for numbers"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a subscript text?",
+    "o": [
+      "<sub>",
+      "<subscript>",
+      "<low>",
+      "<below>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<ruby>\n  漢 <rt>かん</rt>\n  字 <rt>じ</rt>\n</ruby>",
+    "o": [
+      "Ruby annotations for pronunciation",
+      "A table with two columns",
+      "Highlighted text",
+      "A coding example"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify that an input field must be filled out?",
+    "o": [
+      "required",
+      "mandatory",
+      "mustfill",
+      "validate"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define the root of an HTML document?",
+    "o": [
+      "<html>",
+      "<root>",
+      "<document>",
+      "<!DOCTYPE>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<input type=\"color\" id=\"favcolor\">",
+    "o": [
+      "A color picker control",
+      "A colored text box",
+      "A rainbow gradient",
+      "A color-coded input field"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify that an input field should be automatically focused when the page loads?",
+    "o": [
+      "autofocus",
+      "focus",
+      "auto",
+      "selected"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<abbr title=\"HyperText Markup Language\">HTML</abbr>",
+    "o": [
+      "The text 'HTML' with a tooltip showing the full form",
+      "A clickable link to HTML documentation",
+      "The full expanded text 'HyperText Markup Language'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a superscript text?",
+    "o": [
+      "<sup>",
+      "<super>",
+      "<superscript>",
+      "<above>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet do?",
+    "c": "<template>\n  <div>This content is hidden</div>\n</template>",
+    "o": [
+      "Creates hidden content that can be cloned and inserted later",
+      "Displays invisible content",
+      "Creates a transparent overlay",
+      "Nothing - it's invalid HTML"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a header for a table column group?",
+    "o": [
+      "<colgroup>",
+      "<thead>",
+      "<tableheader>",
+      "<hcol>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the multiple attribute in a file input element?",
+    "o": [
+      "Allows selecting multiple files",
+      "Creates multiple file inputs",
+      "Duplicates the selected file",
+      "Enables file previews"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<meter value=\"0.6\" min=\"0\" max=\"1\">60%</meter>",
+    "o": [
+      "A gauge showing 60% completion",
+      "A loading animation",
+      "A countdown timer",
+      "A progress bar"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a definition term in a definition list?",
+    "o": [
+      "<dt>",
+      "<def>",
+      "<term>",
+      "<dd>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<samp>Sample output from a program</samp>",
+    "o": [
+      "Text displayed in a monospace font representing sample output",
+      "A clickable sample button",
+      "A download link for sample files",
+      "A sample code editor"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a keyboard input representation?",
+    "o": [
+      "<kbd>",
+      "<key>",
+      "<keyboard>",
+      "<input type=\"keyboard\">"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<dialog open>\n  <p>This is an open dialog</p>\n</dialog>",
+    "o": [
+      "A visible modal dialog box",
+      "A hidden dialog element",
+      "A popup window",
+      "A transparent overlay"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a scalar measurement within a known range?",
+    "o": [
+      "<meter>",
+      "<range>",
+      "<measure>",
+      "<gauge>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the reversed attribute in an ordered list?",
+    "o": [
+      "Numbers the list items in descending order",
+      "Reverses the order of list items",
+      "Creates a mirrored list",
+      "Alternates numbering direction"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a variable in programming or mathematical context?",
+    "o": [
+      "<var>",
+      "<variable>",
+      "<math>",
+      "<v>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<time datetime=\"2023-12-25\">Christmas Day</time>",
+    "o": [
+      "Machine-readable date with human-readable text",
+      "A countdown to Christmas",
+      "A calendar widget",
+      "A holiday reminder alert"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify that a form should not be validated on submission?",
+    "o": [
+      "novalidate",
+      "no-validation",
+      "skipvalidate",
+      "formnovalidate"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define navigation links?",
+    "o": [
+      "<nav>",
+      "<navigate>",
+      "<links>",
+      "<menu>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<input type=\"range\" min=\"0\" max=\"100\" value=\"50\">",
+    "o": [
+      "A slider control with default value at 50",
+      "A progress bar showing 50%",
+      "A number input field",
+      "A gauge displaying 50"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify alternative text for an image if it cannot be displayed?",
+    "o": [
+      "alt",
+      "title",
+      "description",
+      "imgtext"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<mark>Highlighted text</mark>",
+    "o": [
+      "Yellow-highlighted text",
+      "Bold text",
+      "Underlined text",
+      "Italic text"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a dropdown selection list?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<list>",
+      "<options>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet do?",
+    "c": "<article>\n  <h2>Blog Post</h2>\n  <p>Content goes here</p>\n</article>",
+    "o": [
+      "Creates a self-contained composition in a document",
+      "Creates a newspaper-style layout",
+      "Generates a blog post automatically",
+      "Links to an external article"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a group of related options in a dropdown list?",
+    "o": [
+      "<optgroup>",
+      "<optiongroup>",
+      "<group>",
+      "<selectgroup>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the download attribute in an anchor tag?",
+    "o": [
+      "Indicates the link should download a file",
+      "Forces the page to download instead of render",
+      "Downloads all page resources",
+      "Creates a download manager"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<figure>\n  <img src=\"image.jpg\" alt=\"Sample\">\n  <figcaption>Sample Image</figcaption>\n</figure>",
+    "o": [
+      "An image with a caption",
+      "A gallery of images",
+      "A figure with multiple images",
+      "A decorative image box"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a header for a section?",
+    "o": [
+      "<header>",
+      "<hgroup>",
+      "<sectionheader>",
+      "<top>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<small>Disclaimer text</small>",
+    "o": [
+      "Text displayed in a smaller font size",
+      "Hidden text that appears on hover",
+      "Text with reduced importance",
+      "A clickable disclaimer link"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a thematic break between paragraph-level elements?",
+    "o": [
+      "<hr>",
+      "<break>",
+      "<divider>",
+      "<separator>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<bdo dir=\"rtl\">This text will go right-to-left</bdo>",
+    "o": [
+      "Text displayed right-to-left",
+      "Bidirectional text",
+      "Rotated text",
+      "Mirrored text"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a container for external content?",
+    "o": [
+      "<iframe>",
+      "<embed>",
+      "<external>",
+      "<container>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the spellcheck attribute in HTML?",
+    "o": [
+      "Specifies whether to enable spell checking",
+      "Automatically corrects spelling errors",
+      "Adds a dictionary to the page",
+      "Highlights misspelled words"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a clickable area inside an image map?",
+    "o": [
+      "<area>",
+      "<maparea>",
+      "<imagemap>",
+      "<hotspot>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<wbr>",
+    "o": [
+      "A word break opportunity",
+      "A line break",
+      "A non-breaking space",
+      "A whitespace character"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify that a form field cannot be modified?",
+    "o": [
+      "readonly",
+      "disabled",
+      "static",
+      "fixed"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a section of introductory content?",
+    "o": [
+      "<header>",
+      "<intro>",
+      "<start>",
+      "<begin>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<input type=\"search\" placeholder=\"Search...\">",
+    "o": [
+      "A search input field with placeholder text",
+      "A button that initiates a search",
+      "A dropdown search menu",
+      "A search results display area"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify that a form field should be automatically completed by the browser?",
+    "o": [
+      "autocomplete",
+      "autofill",
+      "complete",
+      "suggest"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<cite>The Art of Programming</cite>",
+    "o": [
+      "The title in italicized format",
+      "A clickable citation link",
+      "A book cover image",
+      "A reference number"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a container for SVG graphics?",
+    "o": [
+      "<svg>",
+      "<canvas>",
+      "<graphic>",
+      "<vector>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet do?",
+    "c": "<aside>\n  <h3>Related Links</h3>\n  <ul>\n    <li><a href=\"#\">Link 1</a></li>\n  </ul>\n</aside>",
+    "o": [
+      "Creates a sidebar with related content",
+      "Makes the links less important",
+      "Hides the links until hovered",
+      "Creates a floating menu"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a scalar measurement within a known range?",
+    "o": [
+      "<meter>",
+      "<range>",
+      "<scale>",
+      "<measure>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the contenteditable attribute in HTML?",
+    "o": [
+      "Specifies that the element's content is editable",
+      "Makes content copyable",
+      "Allows content to be selected",
+      "Enables drag-and-drop functionality"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<data value=\"978-1234567890\">Book Title</data>",
+    "o": [
+      "Machine-readable data with human-readable text",
+      "A clickable book title",
+      "A book cover image",
+      "A library catalog entry"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a container for multiple image resources?",
+    "o": [
+      "<picture>",
+      "<images>",
+      "<gallery>",
+      "<imgset>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<s>No longer valid</s>",
+    "o": [
+      "Text displayed with a strikethrough",
+      "Deleted text that leaves a marker",
+      "Text shown in red color",
+      "A warning symbol"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a container for external applications?",
+    "o": [
+      "<embed>",
+      "<object>",
+      "<external>",
+      "<app>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<track kind=\"captions\" src=\"captions.vtt\" srclang=\"en\">",
+    "o": [
+      "Text tracks for media elements",
+      "A tracking pixel",
+      "A clickable track button",
+      "A navigation path"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a dialog box or window?",
+    "o": [
+      "<dialog>",
+      "<popup>",
+      "<modal>",
+      "<window>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the translate attribute in HTML?",
+    "o": [
+      "Specifies whether the element's content should be translated",
+      "Automatically translates the content",
+      "Creates a translation button",
+      "Links to a translation service"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a container for JavaScript-generated bitmap graphics?",
+    "o": [
+      "<canvas>",
+      "<bitmap>",
+      "<script>",
+      "<draw>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<slot name=\"content\">Default content</slot>",
+    "o": [
+      "A placeholder in a web component",
+      "A named empty space",
+      "A content hiding mechanism",
+      "A sliding panel"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify that a script should be executed asynchronously?",
+    "o": [
+      "async",
+      "defer",
+      "load",
+      "execute"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define the main content area of a document?",
+    "o": [
+      "<main>",
+      "<content>",
+      "<body>",
+      "<container>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<input type=\"date\" min=\"2023-01-01\" max=\"2023-12-31\">",
+    "o": [
+      "A date picker restricted to 2023 dates",
+      "A calendar display for 2023",
+      "A text field for entering dates",
+      "A countdown timer"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify that an input field should be disabled?",
+    "o": [
+      "disabled",
+      "readonly",
+      "inactive",
+      "static"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<dfn>HTML</dfn> stands for HyperText Markup Language",
+    "o": [
+      "The term 'HTML' marked as a definition instance",
+      "A clickable definition link",
+      "A popup definition box",
+      "The text in italics"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a container for metadata about the document?",
+    "o": [
+      "<head>",
+      "<meta>",
+      "<info>",
+      "<metadata>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet do?",
+    "c": "<section>\n  <h2>Chapter 1</h2>\n  <p>Content goes here</p>\n</section>",
+    "o": [
+      "Creates a thematic grouping of content",
+      "Creates a collapsible section",
+      "Generates a numbered chapter",
+      "Links to another section"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a footer for a document or section?",
+    "o": [
+      "<footer>",
+      "<bottom>",
+      "<end>",
+      "<foot>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the loading attribute in an img tag?",
+    "o": [
+      "Controls lazy loading behavior",
+      "Sets a loading animation",
+      "Determines image load priority",
+      "Shows a placeholder while loading"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<figure>\n  <pre>\n    <code>\n      function hello() {\n        console.log('Hello');\n      }\n    </code>\n  </pre>\n  <figcaption>Code Example</figcaption>\n</figure>",
+    "o": [
+      "A code block with caption",
+      "An executable code example",
+      "A syntax-highlighted editor",
+      "A clickable code snippet"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a thematic break between content sections?",
+    "o": [
+      "<hr>",
+      "<break>",
+      "<divider>",
+      "<separator>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<ins>New content</ins> <del>Old content</del>",
+    "o": [
+      "'New content' underlined and 'Old content' strikethrough",
+      "Both texts highlighted differently",
+      "Only 'New content' visible",
+      "A version comparison table"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a container for independent, self-contained content?",
+    "o": [
+      "<article>",
+      "<independent>",
+      "<standalone>",
+      "<content>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<input type=\"tel\" pattern=\"[0-9]{3}-[0-9]{3}-[0-9]{4}\">",
+    "o": [
+      "A telephone input field with pattern validation",
+      "A numeric keypad",
+      "A telephone directory lookup",
+      "A click-to-call button"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a group of table columns?",
+    "o": [
+      "<colgroup>",
+      "<columns>",
+      "<tablecols>",
+      "<colset>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the crossorigin attribute in media elements?",
+    "o": [
+      "Handles cross-origin requests properly",
+      "Enables cross-site media sharing",
+      "Allows media editing across domains",
+      "Creates cross-origin media copies"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a container for navigation links?",
+    "o": [
+      "<nav>",
+      "<links>",
+      "<menu>",
+      "<navigation>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<template id=\"productTemplate\">\n  <div class=\"product\">\n    <h2></h2>\n    <p class=\"price\"></p>\n  </div>\n</template>",
+    "o": [
+      "A reusable content template for JavaScript",
+      "An invisible product display",
+      "A hidden product catalog",
+      "A sample product page"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify that a form field must contain a value?",
+    "o": [
+      "required",
+      "mandatory",
+      "mustfill",
+      "validate"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a clickable button?",
+    "o": [
+      "<button>",
+      "<click>",
+      "<btn>",
+      "<press>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<input type=\"email\" required>",
+    "o": [
+      "An email input field that must be filled",
+      "A button to send emails",
+      "A display of email addresses",
+      "A contact form"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify an image's width in HTML?",
+    "o": [
+      "width",
+      "size",
+      "w",
+      "imgwidth"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<q>This is a short quotation</q>",
+    "o": [
+      "The text in quotes with quotation marks",
+      "The text in italics",
+      "A clickable quote reference",
+      "A block of quoted text"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a numbered list?",
+    "o": [
+      "<ol>",
+      "<ul>",
+      "<nl>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet do?",
+    "c": "<label>\n  <input type=\"checkbox\"> I agree\n</label>",
+    "o": [
+      "Creates a checkbox with clickable label text",
+      "Makes a standalone checkbox",
+      "Creates a text input field",
+      "Generates a terms agreement box"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a table row?",
+    "o": [
+      "<tr>",
+      "<trow>",
+      "<row>",
+      "<table-row>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the alt attribute in an image tag?",
+    "o": [
+      "Provides alternative text for screen readers",
+      "Sets the image alignment",
+      "Creates a tooltip",
+      "Specifies the image source"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<video width=\"320\" controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "A video player with controls",
+      "A static image placeholder",
+      "An audio player",
+      "A YouTube embed"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a paragraph?",
+    "o": [
+      "<p>",
+      "<para>",
+      "<paragraph>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<h3>Subheading</h3>",
+    "o": [
+      "A medium-sized heading at level 3",
+      "A small caption text",
+      "A highlighted subtext",
+      "A sidebar heading"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<url>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<textarea rows=\"4\" cols=\"50\"></textarea>",
+    "o": [
+      "A multi-line text input box",
+      "A small single-line input",
+      "A code editor",
+      "A scrollable content area"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define important text?",
+    "o": [
+      "<strong>",
+      "<important>",
+      "<bold>",
+      "<imp>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the title attribute in HTML elements?",
+    "o": [
+      "Displays tooltip text on hover",
+      "Sets the browser tab title",
+      "Defines the element's purpose",
+      "Creates a popup title"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a line break?",
+    "o": [
+      "<br>",
+      "<lb>",
+      "<break>",
+      "<newline>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<div style=\"background-color: yellow;\">Highlight</div>",
+    "o": [
+      "A yellow-colored box with text",
+      "A warning message",
+      "A transparent container",
+      "A flashing text element"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify a unique identifier for an element?",
+    "o": [
+      "id",
+      "name",
+      "class",
+      "uid"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define the document's title displayed in the browser tab?",
+    "o": [
+      "<title>",
+      "<head>",
+      "<tab>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<input type=\"password\" placeholder=\"Enter password\">",
+    "o": [
+      "A password input field with masked text",
+      "A text field for general input",
+      "A button to submit passwords",
+      "A hidden security question"
+    ]
+  },
+  {
+    "q": "Which attribute is used to link a label to an input element?",
+    "o": [
+      "for",
+      "id",
+      "name",
+      "link"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<ul>\n  <li>Coffee</li>\n  <li>Tea</li>\n</ul>",
+    "o": [
+      "A bulleted list with two items",
+      "A numbered list with two items",
+      "A dropdown menu",
+      "Plain text separated by commas"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to embed a script in a document?",
+    "o": [
+      "<script>",
+      "<javascript>",
+      "<code>",
+      "<js>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet do?",
+    "c": "<meta name=\"description\" content=\"A sample webpage\">",
+    "o": [
+      "Defines metadata about the page for search engines",
+      "Creates a visible description on the page",
+      "Links to an external stylesheet",
+      "Generates a tooltip for the page"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a table header?",
+    "o": [
+      "<th>",
+      "<thead>",
+      "<header>",
+      "<tableheader>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the `lang` attribute in the `<html>` tag?",
+    "o": [
+      "Declares the language of the webpage",
+      "Links to a language translation service",
+      "Enables multilingual text rendering",
+      "Specifies the scripting language"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<audio controls>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "An audio player with playback controls",
+      "A silent placeholder for audio",
+      "A download link for an MP3 file",
+      "A background music player"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a superscript text (e.g., for exponents)?",
+    "o": [
+      "<sup>",
+      "<super>",
+      "<exponent>",
+      "<high>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<s>Outdated information</s>",
+    "o": [
+      "Text with a strikethrough effect",
+      "Deleted text marked with a line",
+      "Red-colored warning text",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a container for navigation links?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<links>",
+      "<navigate>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<progress value=\"70\" max=\"100\"></progress>",
+    "o": [
+      "A progress bar showing 70% completion",
+      "A loading spinner",
+      "A countdown timer",
+      "A percentage display"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify an image's alternative text for accessibility?",
+    "o": [
+      "alt",
+      "title",
+      "description",
+      "aria-label"
+    ]
+  },
+  {
+    "q": "What is the purpose of the `<footer>` element in HTML?",
+    "o": [
+      "Defines footer content for a document/section",
+      "Creates a page divider at the bottom",
+      "Marks copyright information only",
+      "Hides secondary content"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a horizontal line/rule?",
+    "o": [
+      "<hr>",
+      "<line>",
+      "<divider>",
+      "<hrule>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<abbr title=\"HyperText Markup Language\">HTML</abbr>",
+    "o": [
+      "An abbreviation with a tooltip explanation",
+      "A clickable link to HTML documentation",
+      "Bold text for acronyms",
+      "A superscript reference"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to make an input field required in a form?",
+    "o": [
+      "required",
+      "mandatory",
+      "validate",
+      "necessary"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a division or section in a document?",
+    "o": [
+      "<div>",
+      "<section>",
+      "<span>",
+      "<block>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<input type=\"checkbox\" id=\"agree\" name=\"terms\">",
+    "o": [
+      "A checkbox input field",
+      "A radio button",
+      "A text input field",
+      "A dropdown menu"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify that an input field should be automatically focused when the page loads?",
+    "o": [
+      "autofocus",
+      "focus",
+      "auto",
+      "selected"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<p>This is <b>bold</b> text</p>",
+    "o": [
+      "The word 'bold' appears in bold font",
+      "All text appears in bold",
+      "The text is displayed in a larger font",
+      "An error message appears"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a subscript text (e.g., for chemical formulas)?",
+    "o": [
+      "<sub>",
+      "<subscript>",
+      "<low>",
+      "<below>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet do?",
+    "c": "<link rel=\"stylesheet\" href=\"styles.css\">",
+    "o": [
+      "Links an external CSS stylesheet",
+      "Creates a hyperlink to another page",
+      "Embeds a style directly in the document",
+      "Imports a JavaScript file"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a table cell?",
+    "o": [
+      "<td>",
+      "<cell>",
+      "<tablecell>",
+      "<tc>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the placeholder attribute in an input element?",
+    "o": [
+      "Displays hint text in the input field",
+      "Sets the default value",
+      "Creates a watermark effect",
+      "Defines the input pattern"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<select>\n  <option value=\"red\">Red</option>\n  <option value=\"blue\">Blue</option>\n</select>",
+    "o": [
+      "A dropdown list with two color options",
+      "A set of radio buttons",
+      "A color picker",
+      "A text field with suggestions"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a line break without starting a new paragraph?",
+    "o": [
+      "<br>",
+      "<lb>",
+      "<break>",
+      "<newline>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<h2>Section Title</h2>",
+    "o": [
+      "A medium-sized heading at level 2",
+      "A small subheading",
+      "A large main title",
+      "A sidebar heading"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink that opens in a new tab?",
+    "o": [
+      "<a target=\"_blank\">",
+      "<a newtab>",
+      "<link target=\"new\">",
+      "<a open=\"new\">"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<img src=\"logo.png\" alt=\"Company Logo\">",
+    "o": [
+      "An image with alternative text",
+      "A clickable logo",
+      "A background image",
+      "A placeholder for an image"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define emphasized text?",
+    "o": [
+      "<em>",
+      "<emphasis>",
+      "<italic>",
+      "<highlight>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the charset attribute in a meta tag?",
+    "o": [
+      "Specifies the character encoding for the document",
+      "Defines the document's style characteristics",
+      "Sets the page's default language",
+      "Controls the document's zoom level"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a form?",
+    "o": [
+      "<form>",
+      "<inputform>",
+      "<webform>",
+      "<frm>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<input type=\"radio\" name=\"gender\" value=\"female\">",
+    "o": [
+      "A radio button for gender selection",
+      "A checkbox for multiple selections",
+      "A text field for gender input",
+      "A dropdown menu for gender options"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify a unique identifier for an element?",
+    "o": [
+      "id",
+      "name",
+      "class",
+      "unique"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a clickable button that submits a form?",
+    "o": [
+      "<button type=\"submit\">",
+      "<input type=\"button\">",
+      "<submit>",
+      "<formbutton>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<label for=\"username\">Username:</label>\n<input id=\"username\" type=\"text\">",
+    "o": [
+      "A text input field with associated label",
+      "Two separate unrelated elements",
+      "A username validation system",
+      "A login button"
+    ]
+  },
+  {
+    "q": "Which attribute is used to make an input field read-only?",
+    "o": [
+      "readonly",
+      "disabled",
+      "static",
+      "fixed"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<blockquote cite=\"https://example.com\">\n  This is a quote\n</blockquote>",
+    "o": [
+      "An indented quote with citation reference",
+      "A regular paragraph",
+      "A clickable link",
+      "A highlighted text box"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a multi-line text input?",
+    "o": [
+      "<textarea>",
+      "<input type=\"text\" multiline>",
+      "<textbox>",
+      "<mtext>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet do?",
+    "c": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+    "o": [
+      "Configures viewport settings for responsive design",
+      "Sets the page width to 1000px",
+      "Creates a mobile-only version",
+      "Disables zooming on mobile"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to group related form elements together?",
+    "o": [
+      "<fieldset>",
+      "<formgroup>",
+      "<div>",
+      "<group>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the async attribute in a script tag?",
+    "o": [
+      "Downloads script without blocking page rendering",
+      "Delays script execution",
+      "Makes script execute in order",
+      "Prevents script caching"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<datalist id=\"browsers\">\n  <option value=\"Chrome\">\n  <option value=\"Firefox\">\n</datalist>\n<input list=\"browsers\">",
+    "o": [
+      "An input field with browser name suggestions",
+      "A dropdown list of browsers",
+      "Two separate input fields",
+      "A list of clickable browser links"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a header cell in a table?",
+    "o": [
+      "<th>",
+      "<thead>",
+      "<td header>",
+      "<hcell>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code when rendered in a browser?",
+    "c": "<pre>\n  Line 1\n  Line 2\n</pre>",
+    "o": [
+      "Text displayed exactly as written with line breaks",
+      "A single line of text",
+      "A code editor",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a definition list?",
+    "o": [
+      "<dl>",
+      "<def>",
+      "<dlist>",
+      "<list type=\"definition\">"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<output name=\"result\" for=\"a b\"></output>",
+    "o": [
+      "A container for calculation results",
+      "A form submission button",
+      "An error message box",
+      "A hidden input field"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a footer for a table?",
+    "o": [
+      "<tfoot>",
+      "<tablefooter>",
+      "<footer>",
+      "<tfooter>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the pattern attribute in an input element?",
+    "o": [
+      "Specifies a regular expression for validation",
+      "Defines the input's visual pattern",
+      "Creates a repeating background",
+      "Sets the input format for numbers"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a subscript text?",
+    "o": [
+      "<sub>",
+      "<subscript>",
+      "<low>",
+      "<below>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code snippet create?",
+    "c": "<ruby>\n  漢 <rt>かん</rt>\n  字 <rt>じ</rt>\n</ruby>",
+    "o": [
+      "Ruby annotations for pronunciation",
+      "A table with two columns",
+      "Highlighted text",
+      "A coding example"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify that an input field must be filled out?",
+    "o": [
+      "required",
+      "mandatory",
+      "mustfill",
+      "validate"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a table?",
+    "o": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<th>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<table>\n  <tr>\n    <td>Row 1, Cell 1</td>\n    <td>Row 1, Cell 2</td>\n  </tr>\n</table>",
+    "o": [
+      "A table with one row and two cells",
+      "A paragraph with text 'Row 1, Cell 1 Row 1, Cell 2'",
+      "An ordered list with two items",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<label>",
+      "<fieldset>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<form>\n  <input type='text' placeholder='Enter your name'>\n</form>",
+    "o": [
+      "A text input field with a placeholder 'Enter your name'",
+      "A button labeled 'Enter your name'",
+      "A text area with 'Enter your name'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify that an input field must be filled out?",
+    "o": [
+      "required",
+      "validate",
+      "mandatory",
+      "fill"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<form>\n  <input type='text' required>\n</form>",
+    "o": [
+      "Prevents form submission if the input is empty",
+      "Automatically fills the input field with default text",
+      "Displays an error message before typing",
+      "Hides the input field"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to embed a video?",
+    "o": [
+      "<video>",
+      "<media>",
+      "<embed>",
+      "<iframe>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<video controls>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "A video player with controls for 'video.mp4'",
+      "A link to download 'video.mp4'",
+      "A blank page",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define an inline container for styling?",
+    "o": [
+      "<span>",
+      "<div>",
+      "<p>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p>This is <span style='color:red;'>red</span> text.</p>",
+    "o": [
+      "Displays 'red' in red color",
+      "Displays all text in red",
+      "Displays 'red' in bold",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click here</a>",
+    "o": [
+      "A clickable link labeled 'Click here' that redirects to 'https://example.com'",
+      "Plain text 'Click here'",
+      "A button labeled 'Click here'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to open a link in a new tab?",
+    "o": [
+      "target='_blank'",
+      "newtab='true'",
+      "open='new'",
+      "tab='new'"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com' target='_blank'>Open in new tab</a>",
+    "o": [
+      "A link that opens 'https://example.com' in a new tab",
+      "A link that opens 'https://example.com' in the same tab",
+      "A button labeled 'Open in new tab'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a section in a document?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<article>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<section>\n  <h2>About Us</h2>\n  <p>We provide the best services.</p>\n</section>",
+    "o": [
+      "A section with a heading 'About Us' and a paragraph",
+      "A list with the text 'About Us' and 'We provide the best services.'",
+      "A table with 'About Us' and 'We provide the best services.'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to display a horizontal line?",
+    "o": [
+      "<hr>",
+      "<line>",
+      "<br>",
+      "<border>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p>First paragraph.</p>\n<hr>\n<p>Second paragraph.</p>",
+    "o": [
+      "A horizontal line between two paragraphs",
+      "A blank space between two paragraphs",
+      "A vertical line between two paragraphs",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define metadata about a document?",
+    "o": [
+      "<meta>",
+      "<head>",
+      "<data>",
+      "<info>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<meta charset='UTF-8'>",
+    "o": [
+      "Defines character encoding as UTF-8",
+      "Changes the font of the page",
+      "Creates a button",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define the largest heading?",
+    "o": [
+      "<h1>",
+      "<h6>",
+      "<header>",
+      "<title>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<h1>Welcome to HTML</h1>",
+    "o": [
+      "Displays 'Welcome to HTML' as the largest heading",
+      "Displays 'Welcome to HTML' as normal text",
+      "Displays 'Welcome to HTML' in italics",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute provides additional information about an element when hovered over?",
+    "o": [
+      "title",
+      "alt",
+      "tooltip",
+      "hover"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p title='This is a tooltip'>Hover over me</p>",
+    "o": [
+      "Displays a tooltip 'This is a tooltip' when hovered over",
+      "Changes the color of the text when hovered over",
+      "Displays 'This is a tooltip' below the paragraph",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define an unordered list?",
+    "o": [
+      "<ul>",
+      "<ol>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n</ul>",
+    "o": [
+      "A bulleted list with 'Item 1' and 'Item 2'",
+      "A numbered list with 'Item 1' and 'Item 2'",
+      "A table with 'Item 1' and 'Item 2'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define an image?",
+    "o": [
+      "<img>",
+      "<picture>",
+      "<figure>",
+      "<image>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='A sample image'>",
+    "o": [
+      "Displays an image with 'image.jpg' or shows 'A sample image' if the image is missing",
+      "Displays a text link to 'image.jpg'",
+      "Displays a blank page",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify an image's alternative text?",
+    "o": [
+      "alt",
+      "title",
+      "desc",
+      "caption"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='Beautiful scenery'>",
+    "o": [
+      "Displays an image, and if it fails to load, shows 'Beautiful scenery'",
+      "Shows 'Beautiful scenery' as a caption below the image",
+      "Displays a popup with 'Beautiful scenery' on hover",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a table?",
+    "o": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<tab>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<table>\n  <tr>\n    <td>Row 1, Cell 1</td>\n    <td>Row 1, Cell 2</td>\n  </tr>\n</table>",
+    "o": [
+      "A table with one row and two columns",
+      "A table with two rows and one column",
+      "A list with two items",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to merge two columns in a table?",
+    "o": [
+      "colspan",
+      "rowspan",
+      "merge",
+      "span"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<table>\n  <tr>\n    <td colspan='2'>Merged Cell</td>\n  </tr>\n</table>",
+    "o": [
+      "A table with a single row where one cell spans two columns",
+      "A table with two separate cells in a row",
+      "An error message",
+      "A table with one column and two rows"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to group input fields together in a form?",
+    "o": [
+      "<fieldset>",
+      "<group>",
+      "<section>",
+      "<formgroup>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<fieldset>\n  <legend>Personal Information</legend>\n  <input type='text' placeholder='Enter name'>\n</fieldset>",
+    "o": [
+      "A bordered section labeled 'Personal Information' containing a text input field",
+      "A plain text field with no label",
+      "A form without a border",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to make an input field mandatory?",
+    "o": [
+      "required",
+      "mandatory",
+      "validate",
+      "mustfill"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<input type='text' required>",
+    "o": [
+      "An input field that must be filled before submitting the form",
+      "An input field with no restrictions",
+      "A disabled input field",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a dropdown selection menu?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<option>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<select>\n  <option value='1'>Option 1</option>\n  <option value='2'>Option 2</option>\n</select>",
+    "o": [
+      "A dropdown menu with 'Option 1' and 'Option 2'",
+      "A list of clickable links",
+      "A text box with two options",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click here</a>",
+    "o": [
+      "A clickable link labeled 'Click here' that navigates to example.com",
+      "Displays 'Click here' as plain text",
+      "An error message",
+      "Opens example.com in a new tab by default"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to open a link in a new tab?",
+    "o": [
+      "target='_blank'",
+      "open='new'",
+      "window='new'",
+      "newtab='true'"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com' target='_blank'>Visit</a>",
+    "o": [
+      "A link labeled 'Visit' that opens example.com in a new tab",
+      "A link labeled 'Visit' that opens example.com in the same tab",
+      "An error message",
+      "A disabled link"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a section in a webpage?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<article>",
+      "<part>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<section>\n  <h2>About Us</h2>\n  <p>Welcome to our website.</p>\n</section>",
+    "o": [
+      "A section with a heading 'About Us' and a paragraph 'Welcome to our website.'",
+      "A bold paragraph with 'Welcome to our website.'",
+      "An error message",
+      "A table containing the text"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to embed a video?",
+    "o": [
+      "<video>",
+      "<media>",
+      "<embed>",
+      "<mp4>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<video controls>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "A video player with controls to play 'video.mp4'",
+      "An image preview of the video",
+      "A broken media element",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify placeholder text in an input field?",
+    "o": [
+      "placeholder",
+      "hint",
+      "default",
+      "value"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<input type='text' placeholder='Enter your name'>",
+    "o": [
+      "A text input field with a hint 'Enter your name'",
+      "A text input field with 'Enter your name' as default text",
+      "A disabled text input field",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create an ordered list?",
+    "o": [
+      "<ol>",
+      "<ul>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ol>\n  <li>Item 1</li>\n  <li>Item 2</li>\n</ol>",
+    "o": [
+      "A numbered list with 'Item 1' and 'Item 2'",
+      "A bulleted list with 'Item 1' and 'Item 2'",
+      "Plain text displaying 'Item 1' and 'Item 2'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create an unordered list?",
+    "o": [
+      "<ul>",
+      "<ol>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n</ul>",
+    "o": [
+      "A bulleted list with 'Apple' and 'Banana'",
+      "A numbered list with 'Apple' and 'Banana'",
+      "Plain text displaying 'Apple' and 'Banana'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to define inline CSS styles?",
+    "o": [
+      "style",
+      "css",
+      "class",
+      "design"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p style='color: red;'>Hello World</p>",
+    "o": [
+      "A red-colored 'Hello World' text",
+      "A bold 'Hello World' text",
+      "A blue-colored 'Hello World' text",
+      "Plain black 'Hello World' text"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<label>",
+      "<fieldset>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<form>\n  <input type='text' placeholder='Enter name'>\n</form>",
+    "o": [
+      "A form with a text input field",
+      "A form with a submit button",
+      "A button that submits data",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a button?",
+    "o": [
+      "<button>",
+      "<input>",
+      "<click>",
+      "<btn>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<button>Click Me</button>",
+    "o": [
+      "A clickable button labeled 'Click Me'",
+      "A hyperlink labeled 'Click Me'",
+      "Plain text 'Click Me'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define the largest heading?",
+    "o": [
+      "<h1>",
+      "<h6>",
+      "<heading>",
+      "<title>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<h1>Welcome to My Website</h1>",
+    "o": [
+      "A large, bold text displaying 'Welcome to My Website'",
+      "A small, italic text displaying 'Welcome to My Website'",
+      "A button labeled 'Welcome to My Website'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute provides additional information about an element as a tooltip?",
+    "o": [
+      "title",
+      "tooltip",
+      "hint",
+      "info"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p title='This is a tooltip'>Hover over me</p>",
+    "o": [
+      "When hovered, a tooltip saying 'This is a tooltip' appears",
+      "Text 'Hover over me' appears with an underline",
+      "A pop-up appears on click",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to insert an image?",
+    "o": [
+      "<img>",
+      "<image>",
+      "<picture>",
+      "<src>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='Sample Image'>",
+    "o": [
+      "An image is displayed with 'Sample Image' as alternate text",
+      "A broken image icon is displayed",
+      "The text 'image.jpg' appears instead of an image",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which attribute is required for an image tag to display an image?",
+    "o": [
+      "src",
+      "href",
+      "link",
+      "alt"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='image.png'>",
+    "o": [
+      "An image is displayed if 'image.png' exists",
+      "An empty box appears",
+      "A blue hyperlink to 'image.png' is displayed",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a table?",
+    "o": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<th>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<table>\n  <tr>\n    <td>Row 1, Cell 1</td>\n    <td>Row 1, Cell 2</td>\n  </tr>\n</table>",
+    "o": [
+      "A table with one row and two columns",
+      "A table with two rows and one column",
+      "Plain text displayed as 'Row 1, Cell 1 Row 1, Cell 2'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click here</a>",
+    "o": [
+      "A clickable hyperlink labeled 'Click here' that redirects to 'https://example.com'",
+      "Plain text displaying 'Click here'",
+      "An error message",
+      "A button labeled 'Click here'"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a division or section in an HTML document?",
+    "o": [
+      "<div>",
+      "<span>",
+      "<section>",
+      "<container>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<div style='background-color: lightgray;'>Hello World</div>",
+    "o": [
+      "A gray-colored box with 'Hello World' inside",
+      "A bold 'Hello World' text",
+      "Plain text 'Hello World'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define inline text formatting?",
+    "o": [
+      "<span>",
+      "<div>",
+      "<p>",
+      "<block>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<span style='color: blue;'>Hello</span> World",
+    "o": [
+      "The word 'Hello' appears in blue, followed by 'World' in default color",
+      "Both words appear in blue",
+      "Both words appear in bold",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to open a link in a new tab?",
+    "o": [
+      "target='_blank'",
+      "new='tab'",
+      "open='new'",
+      "tab='_new'"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com' target='_blank'>Visit</a>",
+    "o": [
+      "A hyperlink labeled 'Visit' that opens in a new tab",
+      "A hyperlink labeled 'Visit' that opens in the same tab",
+      "Plain text displaying 'Visit'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to embed a video?",
+    "o": [
+      "<video>",
+      "<media>",
+      "<embed>",
+      "<movie>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<video controls>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "A video player with play, pause, and other controls",
+      "A broken image icon",
+      "A hyperlink to 'video.mp4'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<button>",
+      "<fieldset>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<form action='/submit'>\n  <input type='text' name='username'>\n  <button type='submit'>Submit</button>\n</form>",
+    "o": [
+      "A text input field with a 'Submit' button",
+      "A button labeled 'Submit'",
+      "A plain text field with no button",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify the default value for an input field?",
+    "o": [
+      "value",
+      "placeholder",
+      "default",
+      "input"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<input type='text' value='John Doe'>",
+    "o": [
+      "A text input field with 'John Doe' pre-filled",
+      "A blank text input field",
+      "A button labeled 'John Doe'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a dropdown list?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<list>",
+      "<option>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<select>\n  <option value='1'>Apple</option>\n  <option value='2'>Banana</option>\n</select>",
+    "o": [
+      "A dropdown menu with 'Apple' and 'Banana' as options",
+      "A text box displaying 'Apple' and 'Banana'",
+      "Two buttons labeled 'Apple' and 'Banana'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define important text?",
+    "o": [
+      "<strong>",
+      "<b>",
+      "<i>",
+      "<mark>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<strong>Warning!</strong> This is important.",
+    "o": [
+      "The word 'Warning!' appears in bold and carries semantic importance",
+      "The entire text appears in bold",
+      "The word 'Warning!' appears in italics",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a checkbox?",
+    "o": [
+      "<input type='checkbox'>",
+      "<checkbox>",
+      "<input type='check'>",
+      "<box>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<input type='checkbox' checked>",
+    "o": [
+      "A checked checkbox",
+      "An unchecked checkbox",
+      "A radio button",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a table?",
+    "o": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<th>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<table border='1'>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>25</td>\n  </tr>\n</table>",
+    "o": [
+      "A table with two columns: 'Name' and 'Age', and one row with 'Alice' and '25'",
+      "A plain text list of names and ages",
+      "A blank page",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a list item?",
+    "o": [
+      "<li>",
+      "<ul>",
+      "<ol>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n</ul>",
+    "o": [
+      "A bulleted list with 'Apple' and 'Banana'",
+      "A numbered list with 'Apple' and 'Banana'",
+      "A paragraph with 'Apple' and 'Banana'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a numbered list?",
+    "o": [
+      "<ol>",
+      "<ul>",
+      "<li>",
+      "<dl>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ol>\n  <li>First</li>\n  <li>Second</li>\n</ol>",
+    "o": [
+      "A numbered list with 'First' and 'Second'",
+      "A bulleted list with 'First' and 'Second'",
+      "A table with two rows: 'First' and 'Second'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to display an image?",
+    "o": [
+      "<img>",
+      "<picture>",
+      "<image>",
+      "<src>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='A sample image'>",
+    "o": [
+      "An image from 'image.jpg' with alternative text 'A sample image' if the image fails to load",
+      "A blank page",
+      "A broken link",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify an alternative text for an image?",
+    "o": [
+      "alt",
+      "title",
+      "src",
+      "description"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='invalid.jpg' alt='Placeholder image'>",
+    "o": [
+      "Displays 'Placeholder image' if the image fails to load",
+      "A blank space",
+      "A missing file error",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<hyperlink>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://www.example.com'>Visit Example</a>",
+    "o": [
+      "A clickable link with text 'Visit Example' leading to 'https://www.example.com'",
+      "A button labeled 'Visit Example'",
+      "Plain text 'Visit Example' with no link",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to open a link in a new tab?",
+    "o": [
+      "target='_blank'",
+      "open='new'",
+      "new='tab'",
+      "window='new'"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://www.example.com' target='_blank'>Visit Example</a>",
+    "o": [
+      "A link that opens 'https://www.example.com' in a new tab",
+      "A link that opens in the same tab",
+      "A link that does not work",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a section in a document?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<article>",
+      "<span>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<section>\n  <h2>About Us</h2>\n  <p>We provide web solutions.</p>\n</section>",
+    "o": [
+      "A section containing a heading 'About Us' and a paragraph",
+      "A bold paragraph with 'About Us' as the heading",
+      "A div containing text",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to group inline elements?",
+    "o": [
+      "<span>",
+      "<div>",
+      "<section>",
+      "<article>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p>This is <span style='color:red;'>important</span> text.</p>",
+    "o": [
+      "A paragraph with the word 'important' in red color",
+      "A paragraph with all text in red",
+      "A paragraph with default styling",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to provide additional information about an element when hovered?",
+    "o": [
+      "title",
+      "alt",
+      "tooltip",
+      "info"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p title='This is a tooltip'>Hover over this text</p>",
+    "o": [
+      "Displays 'This is a tooltip' when hovered over",
+      "A paragraph with a visible tooltip",
+      "An underlined paragraph",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define the largest heading?",
+    "o": [
+      "<h1>",
+      "<h6>",
+      "<header>",
+      "<heading>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<h1>Welcome to My Website</h1>",
+    "o": [
+      "A large heading displaying 'Welcome to My Website'",
+      "A small heading displaying 'Welcome to My Website'",
+      "A paragraph with 'Welcome to My Website'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a line break?",
+    "o": [
+      "<br>",
+      "<lb>",
+      "<break>",
+      "<newline>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p>This is the first line.<br>This is the second line.</p>",
+    "o": [
+      "Displays two lines of text with a break between them",
+      "Displays one continuous line of text",
+      "Displays text inside a box",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define emphasized text?",
+    "o": [
+      "<em>",
+      "<strong>",
+      "<bold>",
+      "<italic>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p>This is <em>important</em> text.</p>",
+    "o": [
+      "Displays 'important' text in italics",
+      "Displays 'important' text in bold",
+      "Displays 'important' text underlined",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a block of quoted text?",
+    "o": [
+      "<blockquote>",
+      "<quote>",
+      "<q>",
+      "<cite>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<blockquote>This is a quoted text.</blockquote>",
+    "o": [
+      "A block of text that is indented and styled as a quote",
+      "A paragraph with quotation marks",
+      "A bold text block",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define preformatted text?",
+    "o": [
+      "<pre>",
+      "<code>",
+      "<format>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<pre>\n  Line 1\n  Line 2\n  Line 3\n</pre>",
+    "o": [
+      "Displays text with preserved spacing and line breaks",
+      "Displays text in a single line",
+      "Displays text in bold",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create an unordered list?",
+    "o": [
+      "<ul>",
+      "<ol>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ul>",
+    "o": [
+      "A bulleted list with three items",
+      "A numbered list with three items",
+      "A single line of text",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a numbered list?",
+    "o": [
+      "<ol>",
+      "<ul>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ol>\n  <li>First</li>\n  <li>Second</li>\n  <li>Third</li>\n</ol>",
+    "o": [
+      "A numbered list with three items",
+      "A bulleted list with three items",
+      "A single line of text",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a table?",
+    "o": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<th>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<table border='1'>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>25</td>\n  </tr>\n</table>",
+    "o": [
+      "A table with a header row and one data row",
+      "A list with two items",
+      "Plain text output",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute specifies an image source?",
+    "o": [
+      "src",
+      "href",
+      "alt",
+      "link"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='Sample Image'>",
+    "o": [
+      "An image if 'image.jpg' exists, otherwise 'Sample Image' as alt text",
+      "A broken link",
+      "A blank space",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<fieldset>",
+      "<button>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<form>\n  <label for='name'>Name:</label>\n  <input type='text' id='name' name='name'>\n</form>",
+    "o": [
+      "A text input field with a label 'Name:'",
+      "A dropdown selection field",
+      "A password input field",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<url>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click here</a>",
+    "o": [
+      "A clickable link that redirects to 'https://example.com'",
+      "A non-clickable text 'Click here'",
+      "An image linking to 'https://example.com'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to embed a video?",
+    "o": [
+      "<video>",
+      "<media>",
+      "<embed>",
+      "<movie>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<video controls>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "A playable video with controls if 'video.mp4' exists",
+      "A broken image icon",
+      "A hyperlink to download 'video.mp4'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to provide alternative text for an image?",
+    "o": [
+      "alt",
+      "title",
+      "src",
+      "desc"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='missing.jpg' alt='Placeholder Image'>",
+    "o": [
+      "Displays 'Placeholder Image' if 'missing.jpg' is not found",
+      "Displays a broken image icon with no text",
+      "Displays the text 'missing.jpg'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to group related form elements together?",
+    "o": [
+      "<fieldset>",
+      "<group>",
+      "<form>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<fieldset>\n  <legend>Personal Information</legend>\n  <label for='name'>Name:</label>\n  <input type='text' id='name'>\n</fieldset>",
+    "o": [
+      "A grouped form section with 'Personal Information' as a legend",
+      "A form without a title",
+      "A table displaying form elements",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define metadata about a web page?",
+    "o": [
+      "<meta>",
+      "<head>",
+      "<script>",
+      "<style>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<meta name='description' content='This is a sample page'>",
+    "o": [
+      "Adds a page description for search engines but does not display any visible content",
+      "Displays 'This is a sample page' at the top of the page",
+      "Changes the background color of the page",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a division or section in a webpage?",
+    "o": [
+      "<div>",
+      "<section>",
+      "<span>",
+      "<container>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<div>\n  <p>Hello, World!</p>\n</div>",
+    "o": [
+      "A paragraph inside a division",
+      "A heading inside a division",
+      "An error message",
+      "A link inside a division"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to emphasize text?",
+    "o": [
+      "<em>",
+      "<b>",
+      "<i>",
+      "<strong>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<em>Important Text</em>",
+    "o": [
+      "Displays 'Important Text' in italics",
+      "Displays 'Important Text' in bold",
+      "Displays 'Important Text' in underlined format",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a navigation section?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<section>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<nav>\n  <ul>\n    <li><a href='home.html'>Home</a></li>\n    <li><a href='about.html'>About</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A navigation menu with two links: 'Home' and 'About'",
+      "A paragraph with links",
+      "An error message",
+      "A single link without bullets"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define an inline container for text?",
+    "o": [
+      "<span>",
+      "<div>",
+      "<section>",
+      "<article>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p>This is a <span style='color: red;'>red</span> word.</p>",
+    "o": [
+      "Displays the word 'red' in red color",
+      "Displays the entire sentence in red",
+      "Displays plain text without styling",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to define inline styles?",
+    "o": [
+      "style",
+      "class",
+      "id",
+      "css"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p style='font-weight: bold;'>Bold Text</p>",
+    "o": [
+      "Displays 'Bold Text' in bold",
+      "Displays 'Bold Text' in italics",
+      "Displays 'Bold Text' in red",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define the largest heading?",
+    "o": [
+      "<h1>",
+      "<h6>",
+      "<heading>",
+      "<head>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<h1>Welcome to My Website</h1>",
+    "o": [
+      "A large heading displaying 'Welcome to My Website'",
+      "A small heading displaying 'Welcome to My Website'",
+      "Plain text without styling",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a table?",
+    "o": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<tab>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<table border='1'>\n  <tr>\n    <td>Row 1, Col 1</td>\n    <td>Row 1, Col 2</td>\n  </tr>\n</table>",
+    "o": [
+      "A table with one row and two columns",
+      "A table with two rows and one column",
+      "An error message",
+      "Plain text output"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create an unordered list?",
+    "o": [
+      "<ul>",
+      "<ol>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n</ul>",
+    "o": [
+      "A bulleted list with two items",
+      "A numbered list with two items",
+      "A dropdown menu",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to display a horizontal line?",
+    "o": [
+      "<hr>",
+      "<br>",
+      "<line>",
+      "<border>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "Hello <hr> World",
+    "o": [
+      "The words 'Hello' and 'World' separated by a horizontal line",
+      "The words 'Hello' and 'World' in bold",
+      "A vertical line between 'Hello' and 'World'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to collect user input?",
+    "o": [
+      "<input>",
+      "<form>",
+      "<button>",
+      "<textarea>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<input type='text' placeholder='Enter your name'>",
+    "o": [
+      "A text box with placeholder text 'Enter your name'",
+      "A button labeled 'Enter your name'",
+      "A dropdown menu",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<url>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click Here</a>",
+    "o": [
+      "A clickable link labeled 'Click Here' that redirects to example.com",
+      "A button labeled 'Click Here'",
+      "Plain text 'Click Here'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify an image source?",
+    "o": [
+      "src",
+      "href",
+      "alt",
+      "link"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='A sample image'>",
+    "o": [
+      "Displays an image with 'image.jpg' as the source",
+      "Displays a broken image icon",
+      "Displays the text 'A sample image'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to group form elements together?",
+    "o": [
+      "<fieldset>",
+      "<form>",
+      "<div>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<fieldset>\n  <legend>Personal Info</legend>\n  <input type='text' placeholder='Enter name'>\n</fieldset>",
+    "o": [
+      "A form section titled 'Personal Info' with a text input",
+      "A bold title 'Personal Info' with no input field",
+      "A disabled input field",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define metadata about a document?",
+    "o": [
+      "<meta>",
+      "<head>",
+      "<title>",
+      "<script>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<meta charset='UTF-8'>",
+    "o": [
+      "Defines character encoding as UTF-8",
+      "Adds a title to the webpage",
+      "Links an external stylesheet",
+      "Loads a JavaScript file"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a dropdown list?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<option>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<select>\n  <option>Apple</option>\n  <option>Banana</option>\n</select>",
+    "o": [
+      "A dropdown list with options 'Apple' and 'Banana'",
+      "A bulleted list with 'Apple' and 'Banana'",
+      "A text box displaying 'Apple Banana'",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a paragraph?",
+    "o": [
+      "<p>",
+      "<paragraph>",
+      "<text>",
+      "<para>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p>This is a paragraph.</p>",
+    "o": [
+      "Displays 'This is a paragraph.' as a block of text",
+      "Displays 'This is a paragraph.' in bold",
+      "Displays text inside a box",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to provide alternative text for an image?",
+    "o": [
+      "alt",
+      "title",
+      "src",
+      "description"
+    ]
+  },
+  {
+    "q": "What will be displayed if the image file is missing in the following HTML snippet?",
+    "c": "<img src='missing.jpg' alt='Image not found'>",
+    "o": [
+      "The text 'Image not found'",
+      "A broken image icon",
+      "An empty space",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a section in a webpage?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<span>",
+      "<article>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<section>\n  <h2>Introduction</h2>\n  <p>This is the first section.</p>\n</section>",
+    "o": [
+      "Creates a section with a heading and a paragraph",
+      "Creates a box around the content",
+      "Hides the content",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define inline styling?",
+    "o": [
+      "<span>",
+      "<div>",
+      "<style>",
+      "<class>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<span style='color: red;'>Hello</span>",
+    "o": [
+      "Displays 'Hello' in red color",
+      "Displays 'Hello' in bold",
+      "Displays 'Hello' inside a box",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a navigation bar?",
+    "o": [
+      "<nav>",
+      "<header>",
+      "<menu>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<nav>\n  <ul>\n    <li><a href='#'>Home</a></li>\n    <li><a href='#'>About</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "Creates a navigation menu with 'Home' and 'About' links",
+      "Creates a vertical menu",
+      "Creates a footer section",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<url>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click Here</a>",
+    "o": [
+      "Creates a clickable link labeled 'Click Here'",
+      "Displays 'Click Here' as plain text",
+      "Shows an error message",
+      "Redirects to a default page"
+    ]
+  },
+  {
+    "q": "Which attribute is used to open a link in a new tab?",
+    "o": [
+      "target='_blank'",
+      "newtab='true'",
+      "open='new'",
+      "window='new'"
+    ]
+  },
+  {
+    "q": "What does the 'title' attribute do in an HTML element?",
+    "o": [
+      "Displays a tooltip when hovering over the element",
+      "Changes the page title",
+      "Sets the main heading of the page",
+      "Defines an alternate text for images"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to display the largest heading?",
+    "o": [
+      "<h1>",
+      "<h6>",
+      "<heading>",
+      "<title>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<h1>Welcome to My Website</h1>",
+    "o": [
+      "Displays 'Welcome to My Website' as a large heading",
+      "Displays 'Welcome to My Website' in bold",
+      "Creates a clickable title",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create an ordered list?",
+    "o": [
+      "<ol>",
+      "<ul>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<ol>\n  <li>Item 1</li>\n  <li>Item 2</li>\n</ol>",
+    "o": [
+      "Creates a numbered list with 'Item 1' and 'Item 2'",
+      "Creates a bulleted list",
+      "Displays items in bold",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to group elements for styling purposes?",
+    "o": [
+      "<div>",
+      "<section>",
+      "<group>",
+      "<container>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<div style='background-color: lightgray;'>Content</div>",
+    "o": [
+      "Creates a section with a gray background",
+      "Creates a heading with gray color",
+      "Displays text in bold",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to display a table?",
+    "o": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<tab>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<table>\n  <tr>\n    <td>Row 1, Column 1</td>\n    <td>Row 1, Column 2</td>\n  </tr>\n</table>",
+    "o": [
+      "Creates a table with one row and two columns",
+      "Creates a bulleted list",
+      "Displays text in bold",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which HTML attribute specifies the URL of an image?",
+    "o": [
+      "src",
+      "href",
+      "alt",
+      "link"
+    ]
+  },
+  {
+    "q": "What will be displayed if the image file is not found in the following HTML snippet?",
+    "c": "<img src='missing.jpg' alt='Image not found'>",
+    "o": [
+      "The text 'Image not found'",
+      "A broken image icon",
+      "An empty space",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define important text?",
+    "o": [
+      "<strong>",
+      "<bold>",
+      "<b>",
+      "<highlight>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<strong>Warning!</strong>",
+    "o": [
+      "Displays 'Warning!' in bold and important",
+      "Displays 'Warning!' in italics",
+      "Creates a heading",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<button>",
+      "<submit>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<form>\n  <input type='text' placeholder='Enter name'>\n</form>",
+    "o": [
+      "Creates a text input field with a placeholder",
+      "Creates a button",
+      "Displays plain text",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to embed a video?",
+    "o": [
+      "<video>",
+      "<embed>",
+      "<media>",
+      "<source>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<video controls>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "Embeds a video with play controls",
+      "Displays a broken video icon",
+      "Creates an image",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a line break?",
+    "o": [
+      "<br>",
+      "<lb>",
+      "<break>",
+      "<line>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "Hello<br>World",
+    "o": [
+      "Displays 'Hello' on one line and 'World' on the next line",
+      "Displays 'HelloWorld' without any space",
+      "Shows an error message",
+      "Adds a horizontal line between 'Hello' and 'World'"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create an unordered list?",
+    "o": [
+      "<ul>",
+      "<ol>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n</ul>",
+    "o": [
+      "Creates a bulleted list with 'Apple' and 'Banana'",
+      "Creates a numbered list",
+      "Displays text in bold",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which attribute is used to provide alternative text for an image?",
+    "o": [
+      "alt",
+      "title",
+      "description",
+      "text"
+    ]
+  },
+  {
+    "q": "What will happen if the image file is missing in the following HTML snippet?",
+    "c": "<img src='notfound.jpg' alt='Placeholder image'>",
+    "o": [
+      "The text 'Placeholder image' will be displayed",
+      "An empty space will appear",
+      "The browser will close automatically",
+      "The webpage will stop loading"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create an input field?",
+    "o": [
+      "<input>",
+      "<text>",
+      "<form>",
+      "<field>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<input type='password'>",
+    "o": [
+      "Creates a password field that hides typed characters",
+      "Creates a normal text input",
+      "Creates a button",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define emphasized text?",
+    "o": [
+      "<em>",
+      "<strong>",
+      "<b>",
+      "<italic>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<em>Important Text</em>",
+    "o": [
+      "Displays 'Important Text' in italics",
+      "Displays 'Important Text' in bold",
+      "Creates a new paragraph",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<url>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click here</a>",
+    "o": [
+      "A clickable link with the text 'Click here'",
+      "Displays 'Click here' as plain text",
+      "Shows an image",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify an inline CSS style in an HTML element?",
+    "o": [
+      "style",
+      "css",
+      "design",
+      "format"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<p style='color: red;'>This is a paragraph.</p>",
+    "o": [
+      "Displays 'This is a paragraph.' in red",
+      "Displays 'This is a paragraph.' in bold",
+      "Creates a new paragraph without styling",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a section in a document?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<span>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<section>\n  <h2>Introduction</h2>\n  <p>This is the first section.</p>\n</section>",
+    "o": [
+      "Displays a heading and a paragraph under a section",
+      "Creates a button",
+      "Shows a numbered list",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to group multiple block elements together?",
+    "o": [
+      "<div>",
+      "<span>",
+      "<p>",
+      "<container>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<div>\n  <h1>Title</h1>\n  <p>Content goes here.</p>\n</div>",
+    "o": [
+      "Groups the heading and paragraph together",
+      "Creates a table",
+      "Displays text in bold",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used for adding a tooltip to an element?",
+    "o": [
+      "title",
+      "tooltip",
+      "alt",
+      "hint"
+    ]
+  },
+  {
+    "q": "What will happen when the user hovers over the following element?",
+    "c": "<p title='Tooltip text'>Hover over me</p>",
+    "o": [
+      "Displays 'Tooltip text' as a tooltip",
+      "Changes the text color",
+      "Hides the paragraph",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a table?",
+    "o": [
+      "<table>",
+      "<tab>",
+      "<tr>",
+      "<td>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<table>\n  <tr>\n    <td>Row 1, Cell 1</td>\n    <td>Row 1, Cell 2</td>\n  </tr>\n</table>",
+    "o": [
+      "Creates a table with one row and two columns",
+      "Creates a list",
+      "Displays text without formatting",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<button>",
+      "<fieldset>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<form>\n  <input type='text' placeholder='Enter your name'>\n  <button>Submit</button>\n</form>",
+    "o": [
+      "Creates a text input field with a submit button",
+      "Creates a dropdown menu",
+      "Displays plain text",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify a unique identifier for an element?",
+    "o": [
+      "id",
+      "class",
+      "name",
+      "key"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<p id='unique'>This is a paragraph.</p>",
+    "o": [
+      "Assigns a unique ID to the paragraph",
+      "Changes the text color",
+      "Groups multiple elements together",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to display a horizontal line?",
+    "o": [
+      "<hr>",
+      "<line>",
+      "<br>",
+      "<border>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<hr>",
+    "o": [
+      "Displays a horizontal line",
+      "Creates a new paragraph",
+      "Breaks the text into two lines",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to add a comment in the code?",
+    "o": [
+      "<!-- Comment -->",
+      "// Comment",
+      "<comment>",
+      "/* Comment */"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<!-- This is a comment -->",
+    "o": [
+      "The comment will be ignored by the browser",
+      "The comment will be displayed on the webpage",
+      "The comment will be shown in bold",
+      "An error message will appear"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define the largest heading?",
+    "o": [
+      "<h1>",
+      "<heading>",
+      "<h6>",
+      "<head>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<h1>Welcome to HTML</h1>",
+    "o": [
+      "Displays 'Welcome to HTML' as a large heading",
+      "Displays 'Welcome to HTML' in italics",
+      "Displays 'Welcome to HTML' as a paragraph",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click here</a>",
+    "o": [
+      "Creates a clickable link to 'https://example.com'",
+      "Displays 'Click here' without a link",
+      "Creates an email link",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which attribute is used to open a hyperlink in a new tab?",
+    "o": [
+      "target='_blank'",
+      "new='true'",
+      "window='new'",
+      "open='tab'"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<a href='https://example.com' target='_blank'>Visit Site</a>",
+    "o": [
+      "Opens the link in a new tab",
+      "Opens the link in the same tab",
+      "Creates a button",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to insert an image?",
+    "o": [
+      "<img>",
+      "<picture>",
+      "<image>",
+      "<src>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='A sample image'>",
+    "o": [
+      "Displays an image with 'A sample image' as alternate text",
+      "Displays only the text 'A sample image'",
+      "Creates a blank space",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify an image’s alternative text?",
+    "o": [
+      "alt",
+      "title",
+      "src",
+      "text"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<img src='notfound.jpg' alt='Image not found'>",
+    "o": [
+      "Displays the text 'Image not found' if the image is missing",
+      "Displays the image even if it's not found",
+      "Shows an error message",
+      "Displays a blank image"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a paragraph?",
+    "o": [
+      "<p>",
+      "<paragraph>",
+      "<para>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<p>This is a paragraph.</p>",
+    "o": [
+      "Displays 'This is a paragraph.' as a separate paragraph",
+      "Displays text in bold",
+      "Creates a hyperlink",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a line break?",
+    "o": [
+      "<br>",
+      "<lb>",
+      "<break>",
+      "<line>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "Hello<br>World",
+    "o": [
+      "Displays 'Hello' and 'World' on separate lines",
+      "Displays 'HelloWorld' in bold",
+      "Creates a horizontal line",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which attribute is used to set the background color of an element?",
+    "o": [
+      "style='background-color: red;'",
+      "bg='red'",
+      "color='red'",
+      "background='red'"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<div style='background-color: yellow;'>Text</div>",
+    "o": [
+      "Displays 'Text' with a yellow background",
+      "Displays 'Text' with a black background",
+      "Displays 'Text' in bold",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a table?",
+    "o": [
+      "<table>",
+      "<tab>",
+      "<tbl>",
+      "<tr>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<table><tr><td>Cell</td></tr></table>",
+    "o": [
+      "Creates a table with one row and one cell containing 'Cell'",
+      "Creates a table with two rows",
+      "Displays only 'Cell' without a table",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define an unordered list?",
+    "o": [
+      "<ul>",
+      "<ol>",
+      "<list>",
+      "<li>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<ul><li>Item 1</li><li>Item 2</li></ul>",
+    "o": [
+      "Creates a bulleted list with 'Item 1' and 'Item 2'",
+      "Creates a numbered list",
+      "Displays only 'Item 1' without bullets",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define the largest heading?",
+    "o": [
+      "<h1>",
+      "<heading>",
+      "<h6>",
+      "<head>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<h1>Hello World</h1>",
+    "o": [
+      "Displays 'Hello World' as the largest heading",
+      "Displays 'Hello World' in normal text",
+      "Displays 'Hello World' in italics",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define an image?",
+    "o": [
+      "<img>",
+      "<image>",
+      "<picture>",
+      "<photo>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='Sample Image'>",
+    "o": [
+      "Displays an image with 'image.jpg' as the source",
+      "Displays 'Sample Image' as text",
+      "Creates a link to an image",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify a hyperlink in an anchor tag?",
+    "o": [
+      "href",
+      "src",
+      "link",
+      "url"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click Here</a>",
+    "o": [
+      "Creates a hyperlink with the text 'Click Here'",
+      "Displays 'https://example.com' as text",
+      "Creates a button",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<button>",
+      "<submit>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<form><input type='text'></form>",
+    "o": [
+      "Creates a text input field",
+      "Creates a button",
+      "Creates a dropdown menu",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a dropdown list?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<list>",
+      "<menu>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<select><option>Option 1</option><option>Option 2</option></select>",
+    "o": [
+      "Creates a dropdown with 'Option 1' and 'Option 2'",
+      "Creates a radio button selection",
+      "Displays only 'Option 1' without a dropdown",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a paragraph?",
+    "o": [
+      "<p>",
+      "<para>",
+      "<paragraph>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p>This is a paragraph.</p>",
+    "o": [
+      "Displays 'This is a paragraph.' as a paragraph",
+      "Displays 'This is a paragraph.' in bold",
+      "Displays 'This is a paragraph.' in italics",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a table?",
+    "o": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<tab>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<table>\n  <tr>\n    <td>Row 1, Cell 1</td>\n    <td>Row 1, Cell 2</td>\n  </tr>\n</table>",
+    "o": [
+      "Creates a table with one row and two columns",
+      "Creates two separate tables",
+      "Displays plain text without a table",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a list with bullet points?",
+    "o": [
+      "<ul>",
+      "<ol>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n</ul>",
+    "o": [
+      "Creates an unordered list with two items",
+      "Creates an ordered list with two items",
+      "Displays 'Item 1' and 'Item 2' as plain text",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a numbered list?",
+    "o": [
+      "<ol>",
+      "<ul>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<ol>\n  <li>First</li>\n  <li>Second</li>\n</ol>",
+    "o": [
+      "Creates an ordered list with 'First' and 'Second' as items",
+      "Creates an unordered list",
+      "Displays 'First' and 'Second' as plain text",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify an image's alternate text?",
+    "o": [
+      "alt",
+      "title",
+      "src",
+      "text"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='Sample Image'>",
+    "o": [
+      "Displays an image and uses 'Sample Image' as alternative text",
+      "Displays only the text 'Sample Image'",
+      "Creates a hyperlink to 'image.jpg'",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<url>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click Here</a>",
+    "o": [
+      "Creates a hyperlink labeled 'Click Here' pointing to 'https://example.com'",
+      "Displays 'Click Here' as plain text",
+      "Generates an error due to incorrect syntax",
+      "Creates a button that redirects to 'https://example.com'"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify the destination of a hyperlink?",
+    "o": [
+      "href",
+      "src",
+      "alt",
+      "link"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<a href='https://example.com' target='_blank'>Visit Site</a>",
+    "o": [
+      "Opens 'https://example.com' in a new tab",
+      "Opens 'https://example.com' in the same tab",
+      "Creates a button instead of a link",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to insert an image?",
+    "o": [
+      "<img>",
+      "<image>",
+      "<pic>",
+      "<src>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<img src='photo.jpg' width='200' height='100'>",
+    "o": [
+      "Displays 'photo.jpg' with width 200px and height 100px",
+      "Displays 'photo.jpg' without resizing",
+      "Generates an error due to missing 'alt' attribute",
+      "Displays a broken image icon"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define the largest heading?",
+    "o": [
+      "<h1>",
+      "<h6>",
+      "<head>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<h1>Welcome</h1>\n<h6>Thank You</h6>",
+    "o": [
+      "Displays 'Welcome' as the largest heading and 'Thank You' as the smallest heading",
+      "Displays both texts with the same size",
+      "Displays 'Welcome' smaller than 'Thank You'",
+      "Generates an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<button>",
+      "<fieldset>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<form>\n  <input type='text' name='username'>\n  <input type='submit' value='Login'>\n</form>",
+    "o": [
+      "Creates a form with a text field and a submit button",
+      "Creates a button without any input field",
+      "Generates an error due to missing action attribute",
+      "Displays plain text instead of form fields"
+    ]
+  },
+  {
+    "q": "Which attribute is used to provide a placeholder text in an input field?",
+    "o": [
+      "placeholder",
+      "value",
+      "text",
+      "name"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<input type='text' placeholder='Enter your name'>",
+    "o": [
+      "Displays an input field with placeholder text 'Enter your name'",
+      "Displays an input field with a default value of 'Enter your name'",
+      "Generates an error due to missing name attribute",
+      "Creates a disabled input field"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a paragraph?",
+    "o": [
+      "<p>",
+      "<para>",
+      "<text>",
+      "<paragraph>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p>This is a paragraph.</p>\n<p>This is another paragraph.</p>",
+    "o": [
+      "Displays two separate paragraphs",
+      "Displays both sentences in a single line",
+      "Generates an error",
+      "Displays the text as a heading"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define an unordered list?",
+    "o": [
+      "<ul>",
+      "<ol>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n</ul>",
+    "o": [
+      "Displays an unordered list with 'Item 1' and 'Item 2'",
+      "Displays a numbered list",
+      "Generates an error",
+      "Displays the text as plain text"
+    ]
+  },
+  {
+    "q": "Which attribute is used to set an image source in an <img> tag?",
+    "o": [
+      "src",
+      "href",
+      "alt",
+      "source"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='Sample Image'>",
+    "o": [
+      "Displays 'image.jpg' with an alternative text 'Sample Image' if the image fails to load",
+      "Displays a broken image icon",
+      "Generates an error due to missing width and height",
+      "Displays 'Sample Image' as plain text"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a table?",
+    "o": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<tab>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<table>\n  <tr>\n    <td>Cell 1</td>\n    <td>Cell 2</td>\n  </tr>\n</table>",
+    "o": [
+      "Creates a table with one row and two columns",
+      "Generates an error due to missing table headers",
+      "Displays the text as plain text",
+      "Creates two separate tables"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a dropdown list?",
+    "o": [
+      "<select>",
+      "<option>",
+      "<dropdown>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following HTML snippet?",
+    "c": "<select>\n  <option value='1'>Option 1</option>\n  <option value='2'>Option 2</option>\n</select>",
+    "o": [
+      "Creates a dropdown menu with two options",
+      "Creates a button with two options",
+      "Generates an error due to missing form tag",
+      "Displays 'Option 1' and 'Option 2' as plain text"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to emphasize text?",
+    "o": [
+      "<em>",
+      "<strong>",
+      "<bold>",
+      "<i>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<em>Important Text</em>",
+    "o": [
+      "Displays 'Important Text' in italic",
+      "Displays 'Important Text' in bold",
+      "Generates an error",
+      "Displays the text in uppercase"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a line break?",
+    "o": [
+      "<br>",
+      "<lb>",
+      "<break>",
+      "<newline>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "Hello<br>World",
+    "o": [
+      "Displays 'Hello' on one line and 'World' on the next line",
+      "Displays 'Hello World' on a single line",
+      "Generates an error",
+      "Adds a space between 'Hello' and 'World'"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define the largest heading?",
+    "o": [
+      "<h1>",
+      "<h6>",
+      "<head>",
+      "<title>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<h1>Main Heading</h1>\n<h3>Subheading</h3>",
+    "o": [
+      "Displays 'Main Heading' larger than 'Subheading'",
+      "Displays 'Subheading' larger than 'Main Heading'",
+      "Generates an error",
+      "Displays both headings in the same size"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<hyperlink>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click Here</a>",
+    "o": [
+      "Creates a clickable link with text 'Click Here' that redirects to 'https://example.com'",
+      "Displays 'Click Here' as plain text",
+      "Generates an error due to missing target attribute",
+      "Displays the full URL instead of 'Click Here'"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify an alternative text for an image?",
+    "o": [
+      "alt",
+      "src",
+      "title",
+      "description"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='logo.png' alt='Company Logo'>",
+    "o": [
+      "Displays 'logo.png' image with alternative text 'Company Logo' if the image fails to load",
+      "Generates an error due to missing width and height",
+      "Displays only the alt text",
+      "Displays a broken image icon without alt text"
+    ]
+  },
+  {
+    "q": "Which tag is used to create a text input field in a form?",
+    "o": [
+      "<input>",
+      "<textfield>",
+      "<text>",
+      "<form>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<form>\n  <input type='text' placeholder='Enter your name'>\n</form>",
+    "o": [
+      "Displays a text input field with placeholder text 'Enter your name'",
+      "Creates a button",
+      "Generates an error due to missing submit button",
+      "Displays 'Enter your name' as plain text"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a checkbox?",
+    "o": [
+      "<input type='checkbox'>",
+      "<checkbox>",
+      "<check>",
+      "<box>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<input type='checkbox' checked>",
+    "o": [
+      "Displays a checked checkbox",
+      "Displays an unchecked checkbox",
+      "Generates an error",
+      "Displays a button instead of a checkbox"
+    ]
+  },
+  {
+    "q": "Which tag is used to define metadata about an HTML document?",
+    "o": [
+      "<meta>",
+      "<head>",
+      "<info>",
+      "<data>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<meta name='description' content='This is a sample page'>",
+    "o": [
+      "Provides metadata description for search engines",
+      "Displays 'This is a sample page' on the webpage",
+      "Generates an error",
+      "Creates a paragraph with the description text"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a button?",
+    "o": [
+      "<button>",
+      "<input type='button'>",
+      "<click>",
+      "<btn>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<button>Click Me</button>",
+    "o": [
+      "Displays a button labeled 'Click Me'",
+      "Creates a text link",
+      "Generates an error due to missing action",
+      "Displays 'Click Me' as plain text"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to embed a video?",
+    "o": [
+      "<video>",
+      "<media>",
+      "<vid>",
+      "<embed>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<video controls>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "Displays a video player with playback controls",
+      "Generates an error due to missing autoplay",
+      "Displays the text 'video.mp4' instead of playing the video",
+      "Creates a broken video element"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create an ordered list?",
+    "o": [
+      "<ol>",
+      "<ul>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ol>\n  <li>Item 1</li>\n  <li>Item 2</li>\n  <li>Item 3</li>\n</ol>",
+    "o": [
+      "Displays a numbered list with three items",
+      "Displays a bulleted list with three items",
+      "Generates an error",
+      "Displays plain text without formatting"
+    ]
+  },
+  {
+    "q": "Which tag is used to create a table in HTML?",
+    "o": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<tbl>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<table border='1'>\n  <tr>\n    <td>Row 1, Column 1</td>\n    <td>Row 1, Column 2</td>\n  </tr>\n  <tr>\n    <td>Row 2, Column 1</td>\n    <td>Row 2, Column 2</td>\n  </tr>\n</table>",
+    "o": [
+      "Displays a table with two rows and two columns",
+      "Generates an error due to missing <thead> tag",
+      "Displays data without a table structure",
+      "Creates a table without borders"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to define inline styles?",
+    "o": [
+      "style",
+      "css",
+      "class",
+      "design"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<p style='color:red;'>This is a red text.</p>",
+    "o": [
+      "Displays the text in red color",
+      "Displays the text in blue color",
+      "Generates an error",
+      "Displays normal black text"
+    ]
+  },
+  {
+    "q": "Which tag is used to create a dropdown list in HTML?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<list>",
+      "<option>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<select>\n  <option value='1'>Option 1</option>\n  <option value='2'>Option 2</option>\n  <option value='3'>Option 3</option>\n</select>",
+    "o": [
+      "Displays a dropdown menu with three options",
+      "Generates an error",
+      "Displays a list of checkboxes",
+      "Displays plain text"
+    ]
+  },
+  {
+    "q": "Which tag is used to define a footer section in HTML?",
+    "o": [
+      "<footer>",
+      "<bottom>",
+      "<section>",
+      "<div>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<footer>\n  <p>Copyright 2025</p>\n</footer>",
+    "o": [
+      "Displays 'Copyright 2025' at the bottom of the webpage",
+      "Generates an error",
+      "Hides the text",
+      "Displays 'Copyright 2025' as plain text without formatting"
+    ]
+  },
+  {
+    "q": "Which tag is used to define an HTML form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<submit>",
+      "<action>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<form action='/submit'>\n  <input type='text' placeholder='Enter your name'>\n  <input type='submit' value='Submit'>\n</form>",
+    "o": [
+      "Displays a text input field and a submit button",
+      "Generates an error due to missing method attribute",
+      "Only displays the submit button",
+      "Creates a form but does not allow submission"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to insert a line break?",
+    "o": [
+      "<br>",
+      "<hr>",
+      "<lb>",
+      "<newline>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "Hello<br>World",
+    "o": [
+      "Displays 'Hello' and 'World' on separate lines",
+      "Generates an error",
+      "Displays 'Hello' and 'World' on the same line",
+      "Adds a horizontal line between 'Hello' and 'World'"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a navigation menu?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<section>",
+      "<ul>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<nav>\n  <ul>\n    <li><a href='/home'>Home</a></li>\n    <li><a href='/about'>About</a></li>\n    <li><a href='/contact'>Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "Displays a navigation menu with three links",
+      "Generates an error",
+      "Displays plain text without links",
+      "Only displays the 'Home' link"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to display the largest heading?",
+    "o": [
+      "<h1>",
+      "<h6>",
+      "<head>",
+      "<title>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<h1>Welcome to HTML</h1>",
+    "o": [
+      "Displays 'Welcome to HTML' in the largest heading size",
+      "Displays 'Welcome to HTML' in bold",
+      "Generates an error",
+      "Displays normal text without any formatting"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com'>Click Here</a>",
+    "o": [
+      "Creates a clickable link with the text 'Click Here'",
+      "Displays 'Click Here' but is not clickable",
+      "Generates an error",
+      "Creates a button instead of a link"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify the alternative text for an image in HTML?",
+    "o": [
+      "alt",
+      "title",
+      "src",
+      "description"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<img src='image.jpg' alt='A beautiful scenery'>",
+    "o": [
+      "Displays an image with 'A beautiful scenery' as alternative text",
+      "Generates an error",
+      "Displays only the alternative text without an image",
+      "Shows a broken image icon without text"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a horizontal line?",
+    "o": [
+      "<hr>",
+      "<br>",
+      "<line>",
+      "<separator>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "Hello<hr>World",
+    "o": [
+      "Displays 'Hello' and 'World' separated by a horizontal line",
+      "Generates an error",
+      "Displays 'Hello' and 'World' on the same line",
+      "Creates a vertical line between 'Hello' and 'World'"
+    ]
+  },
+  {
+    "q": "Which tag is used to define a section in an HTML document?",
+    "o": [
+      "<section>",
+      "<div>",
+      "<article>",
+      "<span>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<section>\n  <h2>About Us</h2>\n  <p>We provide quality services.</p>\n</section>",
+    "o": [
+      "Displays a section with a heading and a paragraph",
+      "Generates an error",
+      "Hides the content",
+      "Creates an empty section"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to display preformatted text?",
+    "o": [
+      "<pre>",
+      "<code>",
+      "<text>",
+      "<format>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<pre>\n  This is\n  preformatted text.\n</pre>",
+    "o": [
+      "Displays text with spaces and line breaks exactly as written",
+      "Generates an error",
+      "Displays text in a single line",
+      "Removes extra spaces and line breaks"
+    ]
+  },
+  {
+    "q": "Which tag is used to embed a video in HTML?",
+    "o": [
+      "<video>",
+      "<embed>",
+      "<media>",
+      "<source>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<video controls>\n  <source src='video.mp4' type='video/mp4'>\n</video>",
+    "o": [
+      "Displays a video player with controls",
+      "Generates an error",
+      "Displays a broken video icon",
+      "Shows only the video file name as text"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define metadata about a webpage?",
+    "o": [
+      "<meta>",
+      "<head>",
+      "<title>",
+      "<link>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<meta name='description' content='This is a sample webpage.'>",
+    "o": [
+      "Adds a description for search engines",
+      "Displays 'This is a sample webpage.' on the page",
+      "Generates an error",
+      "Creates a visible header on the webpage"
+    ]
+  },
+  {
+    "q": "Which tag is used to define a list item in an unordered list?",
+    "o": [
+      "<li>",
+      "<ul>",
+      "<list>",
+      "<ol>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ul>\n  <li>Item 1</li>\n  <li>Item 2</li>\n</ul>",
+    "o": [
+      "Displays a bulleted list with two items",
+      "Generates an error",
+      "Displays a numbered list with two items",
+      "Displays plain text without formatting"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to make text bold?",
+    "o": [
+      "<b>",
+      "<strong>",
+      "<bold>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<b>Bold Text</b>",
+    "o": [
+      "Displays 'Bold Text' in bold",
+      "Displays 'Bold Text' in italic",
+      "Generates an error",
+      "Displays 'Bold Text' in normal text"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a table?",
+    "o": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "<th>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<table border='1'>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>John</td>\n    <td>25</td>\n  </tr>\n</table>",
+    "o": [
+      "Displays a table with two columns: Name and Age",
+      "Generates an error",
+      "Displays text without a table structure",
+      "Creates a form instead of a table"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define an ordered list?",
+    "o": [
+      "<ol>",
+      "<ul>",
+      "<li>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<ol>\n  <li>Item 1</li>\n  <li>Item 2</li>\n</ol>",
+    "o": [
+      "Displays a numbered list with two items",
+      "Displays a bulleted list",
+      "Generates an error",
+      "Displays plain text without numbering"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<label>",
+      "<fieldset>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<form>\n  <input type='text' name='username'>\n  <input type='submit' value='Submit'>\n</form>",
+    "o": [
+      "Displays a text input field with a submit button",
+      "Generates an error",
+      "Displays a password field",
+      "Creates a dropdown selection box"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a dropdown selection menu?",
+    "o": [
+      "<select>",
+      "<option>",
+      "<dropdown>",
+      "<menu>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<select>\n  <option value='apple'>Apple</option>\n  <option value='banana'>Banana</option>\n</select>",
+    "o": [
+      "Creates a dropdown menu with Apple and Banana as options",
+      "Displays a text input field",
+      "Generates an error",
+      "Creates checkboxes instead of a dropdown"
+    ]
+  },
+  {
+    "q": "Which attribute is used to make a text input field required in a form?",
+    "o": [
+      "required",
+      "validate",
+      "mandatory",
+      "mustfill"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<form>\n  <input type='email' required>\n  <input type='submit'>\n</form>",
+    "o": [
+      "User must enter an email before submitting",
+      "Generates an error",
+      "Allows submission without filling in the email",
+      "Displays a password input field"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to add an inline JavaScript code?",
+    "o": [
+      "<script>",
+      "<js>",
+      "<code>",
+      "<javascript>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<script>\n  alert('Hello World');\n</script>",
+    "o": [
+      "Displays an alert box with 'Hello World'",
+      "Generates an error",
+      "Displays 'Hello World' as normal text",
+      "Creates a button instead of an alert"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a footer section in a webpage?",
+    "o": [
+      "<footer>",
+      "<bottom>",
+      "<section>",
+      "<end>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<footer>\n  <p>Copyright 2025</p>\n</footer>",
+    "o": [
+      "Displays a footer with 'Copyright 2025'",
+      "Generates an error",
+      "Hides the content",
+      "Creates a header instead of a footer"
+    ]
+  },
+  {
+    "q": "Which attribute is used to open a link in a new tab?",
+    "o": [
+      "target='_blank'",
+      "newtab='true'",
+      "open='new'",
+      "tab='new'"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href='https://example.com' target='_blank'>Visit Example</a>",
+    "o": [
+      "Opens 'https://example.com' in a new tab",
+      "Generates an error",
+      "Opens 'https://example.com' in the same tab",
+      "Creates a button instead of a link"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define emphasized text?",
+    "o": [
+      "<em>",
+      "<i>",
+      "<strong>",
+      "<bold>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<em>Important Text</em>",
+    "o": [
+      "Displays 'Important Text' in italic",
+      "Displays 'Important Text' in bold",
+      "Generates an error",
+      "Shows normal text without formatting"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to embed an external webpage inside another webpage?",
+    "o": [
+      "<iframe>",
+      "<embed>",
+      "<frame>",
+      "<window>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<iframe src='https://example.com' width='400' height='300'></iframe>",
+    "o": [
+      "Embeds 'https://example.com' within the page in a 400x300 frame",
+      "Generates an error",
+      "Displays a blank page",
+      "Creates a button to visit 'https://example.com'"
+    ]
+  }
+]

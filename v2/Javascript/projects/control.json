@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Check Even or Odd",
+    "ques": "Write a JavaScript program that checks if a given number is even or odd using an if-else statement.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function checkEvenOdd(num) {\n  if (num % 2 === 0) {\n    console.log(`${num} is even`);\n  } else {\n    console.log(`${num} is odd`);\n  }\n}\n\ncheckEvenOdd(7);"
+    },
+    "explanation": "***Function Definition:*** The function `checkEvenOdd(num)` takes a number as input.\n\n***If Condition:*** The expression `num % 2 === 0` checks if the number is divisible by 2.\n\n***Console Output:*** If the condition is true, it prints that the number is even; otherwise, it prints that the number is odd.\n\n***Function Call:*** `checkEvenOdd(7)` calls the function with `7` as an argument."
+  },
+  {
+    "title": "Simple Calculator using Switch-Case",
+    "ques": "Write a JavaScript program that performs basic arithmetic operations (addition, subtraction, multiplication, division) based on user input using a switch-case statement.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function calculator(a, b, operator) {\n  switch (operator) {\n    case '+':\n      console.log(`Result: ${a + b}`);\n      break;\n    case '-':\n      console.log(`Result: ${a - b}`);\n      break;\n    case '*':\n      console.log(`Result: ${a * b}`);\n      break;\n    case '/':\n      console.log(b !== 0 ? `Result: ${a / b}` : 'Cannot divide by zero');\n      break;\n    default:\n      console.log('Invalid operator');\n  }\n}\n\ncalculator(10, 5, '+');"
+    },
+    "explanation": "***Function Definition:*** The function `calculator(a, b, operator)` takes two numbers and an operator as input.\n\n***Switch-Case:*** \n- If the operator is `'+'`, it adds the numbers.\n- If the operator is `'-'`, it subtracts the numbers.\n- If the operator is `'*'`, it multiplies the numbers.\n- If the operator is `'/'`, it checks if `b` is not zero before dividing.\n- The `default` case handles invalid operators.\n\n***Function Call:*** `calculator(10, 5, '+')` performs `10 + 5` and prints the result."
+  },
+  {
+    "title": "Print Numbers Using For Loop",
+    "ques": "Write a JavaScript program that prints numbers from 1 to 10 using a for loop.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "for (let i = 1; i <= 10; i++) {\n  console.log(i);\n}"
+    },
+    "explanation": "***Loop Initialization:*** `let i = 1;` initializes the loop variable `i`.\n\n***Condition:*** The loop runs while `i <= 10`.\n\n***Increment:*** `i++` increases `i` by 1 after each iteration.\n\n***Output:*** The numbers `1` to `10` are printed on the console."
+  },
+  {
+    "title": "Sum of Numbers Using While Loop",
+    "ques": "Write a JavaScript program that calculates the sum of numbers from 1 to 5 using a while loop.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "let sum = 0;\nlet i = 1;\nwhile (i <= 5) {\n  sum += i;\n  i++;\n}\nconsole.log(`Sum: ${sum}`);"
+    },
+    "explanation": "***Variable Initialization:*** `sum = 0` stores the total sum, `i = 1` starts from 1.\n\n***While Condition:*** The loop runs as long as `i <= 5`.\n\n***Inside the Loop:*** \n- `sum += i;` adds `i` to `sum`.\n- `i++` increases `i` by 1.\n\n***Final Output:*** The sum of numbers from `1` to `5` is printed."
+  },
+  {
+    "title": "Print Numbers Using Do-While Loop",
+    "ques": "Write a JavaScript program that prints numbers from 1 to 5 using a do-while loop.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "let i = 1;\ndo {\n  console.log(i);\n  i++;\n} while (i <= 5);"
+    },
+    "explanation": "***Variable Initialization:*** `i = 1` starts the loop from 1.\n\n***Do-While Loop:*** \n- The loop body runs at least once before checking the condition.\n- `console.log(i);` prints `i`.\n- `i++` increases `i` by 1.\n\n***Condition Check:*** The loop stops when `i > 5`."
+  },
+  {
+    "title": "Find the Greatest of Two Numbers",
+    "ques": "Write a JavaScript program that takes two numbers as input and prints the larger number using an if-else statement.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function findGreater(a, b) {\n  if (a > b) {\n    console.log(`${a} is greater than ${b}`);\n  } else if (b > a) {\n    console.log(`${b} is greater than ${a}`);\n  } else {\n    console.log('Both numbers are equal');\n  }\n}\n\nfindGreater(8, 12);"
+    },
+    "explanation": "***Function Definition:*** The function `findGreater(a, b)` takes two numbers as input.\n\n***If Condition:*** It checks if `a` is greater than `b` and prints `a` if true.\n\n***Else-if Condition:*** If `b` is greater than `a`, it prints `b`.\n\n***Else Condition:*** If both are equal, it prints that they are the same.\n\n***Function Call:*** `findGreater(8, 12)` checks which number is greater."
+  },
+  {
+    "title": "Day of the Week",
+    "ques": "Write a JavaScript program that takes a number (1-7) as input and prints the corresponding day of the week using a switch-case statement.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function getDayOfWeek(day) {\n  switch (day) {\n    case 1: console.log('Monday'); break;\n    case 2: console.log('Tuesday'); break;\n    case 3: console.log('Wednesday'); break;\n    case 4: console.log('Thursday'); break;\n    case 5: console.log('Friday'); break;\n    case 6: console.log('Saturday'); break;\n    case 7: console.log('Sunday'); break;\n    default: console.log('Invalid day number');\n  }\n}\n\ngetDayOfWeek(3);"
+    },
+    "explanation": "***Function Definition:*** The function `getDayOfWeek(day)` takes a number from `1-7` as input.\n\n***Switch-Case:*** \n- Each case matches a number with the corresponding weekday.\n- The `break` statement prevents unnecessary execution of the following cases.\n- The `default` case handles invalid input.\n\n***Function Call:*** `getDayOfWeek(3)` prints `Wednesday`."
+  },
+  {
+    "title": "Find Factorial Using For Loop",
+    "ques": "Write a JavaScript program that calculates the factorial of a number using a for loop.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function factorial(n) {\n  let result = 1;\n  for (let i = 1; i <= n; i++) {\n    result *= i;\n  }\n  console.log(`Factorial of ${n} is ${result}`);\n}\n\nfactorial(5);"
+    },
+    "explanation": "***Function Definition:*** The function `factorial(n)` calculates the factorial of a number.\n\n***Variable Initialization:*** `result = 1` stores the factorial result.\n\n***For Loop:*** \n- Starts from `1` and iterates up to `n`.\n- Multiplies `result` by `i` in each iteration.\n\n***Function Call:*** `factorial(5)` calculates `5! = 5 × 4 × 3 × 2 × 1`."
+  },
+  {
+    "title": "Guess the Secret Number (While Loop)",
+    "ques": "Write a JavaScript program that keeps asking the user for a number until they guess a predefined secret number using a while loop.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const secretNumber = 7;\nlet guess = 0;\nwhile (guess !== secretNumber) {\n  guess = parseInt(prompt('Guess the number:'));\n  if (guess !== secretNumber) {\n    console.log('Try again!');\n  }\n}\nconsole.log('Congratulations! You guessed the correct number.');"
+    },
+    "explanation": "***Variable Initialization:*** `secretNumber = 7` is the number to be guessed.\n\n***While Loop:*** \n- Keeps running until `guess` equals `secretNumber`.\n- The user is prompted to enter a number.\n\n***Condition Check:*** If the guess is incorrect, it prints `'Try again!'`.\n\n***Loop Exit:*** When the correct number is guessed, it prints `'Congratulations!'`."
+  },
+  {
+    "title": "Reverse a Number Using Do-While Loop",
+    "ques": "Write a JavaScript program that reverses a given number using a do-while loop.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function reverseNumber(num) {\n  let reversed = 0;\n  do {\n    reversed = reversed * 10 + (num % 10);\n    num = Math.floor(num / 10);\n  } while (num > 0);\n  console.log(`Reversed number: ${reversed}`);\n}\n\nreverseNumber(1234);"
+    },
+    "explanation": "***Function Definition:*** The function `reverseNumber(num)` reverses a number.\n\n***Variable Initialization:*** `reversed = 0` stores the reversed number.\n\n***Do-While Loop:*** \n- Extracts the last digit using `num % 10` and appends it to `reversed`.\n- Removes the last digit from `num` using `Math.floor(num / 10)`.\n- Continues until `num > 0`.\n\n***Function Call:*** `reverseNumber(1234)` returns `4321`."
+  }
+]

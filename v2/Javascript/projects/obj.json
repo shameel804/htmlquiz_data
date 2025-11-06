@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Create an Object",
+    "ques": "How do you create an object in JavaScript with properties name, age, and city?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const person = {\n  name: \"John\",\n  age: 30,\n  city: \"New York\"\n};"
+    },
+    "explanation": "We use an object literal `{}` to define an object in JavaScript.\n\n- ***const person***: Declares a constant object.\n- ***name: \"John\"***: Defines a key-value pair where ***name*** is the key and ***\"John\"*** is the value.\n- ***age: 30***: Another key-value pair where ***age*** is the key and ***30*** is the value.\n- ***city: \"New York\"***: Defines another key-value pair."
+  },
+  {
+    "title": "Array Methods - map()",
+    "ques": "How do you use the map() method to double each number in an array [1, 2, 3, 4]?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const numbers = [1, 2, 3, 4];\nconst doubled = numbers.map(num => num * 2);\nconsole.log(doubled); // [2, 4, 6, 8]"
+    },
+    "explanation": "The ***map()*** method is used to transform each element in an array and return a new array.\n\n- ***numbers.map(num => num * 2)***: Iterates through ***numbers*** and multiplies each ***num*** by 2.\n- ***num => num * 2***: Arrow function that takes each number and returns its double.\n- ***console.log(doubled)***: Prints the new array ***[2, 4, 6, 8]***."
+  },
+  {
+    "title": "Object Destructuring",
+    "ques": "How do you extract name and age from an object { name: 'Alice', age: 25, city: 'Paris' } using destructuring?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const person = { name: 'Alice', age: 25, city: 'Paris' };\nconst { name, age } = person;\nconsole.log(name, age); // Alice 25"
+    },
+    "explanation": "Object destructuring allows extracting specific properties from an object.\n\n- ***const person***: Defines an object with properties ***name, age, city***.\n- ***const { name, age } = person***: Extracts ***name*** and ***age*** from ***person*** and stores them in variables.\n- ***console.log(name, age)***: Prints ***Alice 25***."
+  },
+  {
+    "title": "Array Destructuring",
+    "ques": "How do you extract the first and second elements from an array [10, 20, 30] using destructuring?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const numbers = [10, 20, 30];\nconst [first, second] = numbers;\nconsole.log(first, second); // 10 20"
+    },
+    "explanation": "Array destructuring allows extracting values from an array into variables.\n\n- ***const numbers = [10, 20, 30]***: Defines an array with values ***10, 20, 30***.\n- ***const [first, second] = numbers***: Assigns ***10*** to ***first*** and ***20*** to ***second***.\n- ***console.log(first, second)***: Prints ***10 20***."
+  },
+  {
+    "title": "Object Method",
+    "ques": "How do you create an object with a method that returns the person's full name?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const person = {\n  firstName: \"John\",\n  lastName: \"Doe\",\n  fullName() {\n    return this.firstName + \" \" + this.lastName;\n  }\n};\nconsole.log(person.fullName()); // John Doe"
+    },
+    "explanation": "An object can have methods that operate on its properties.\n\n- ***fullName()***: A method inside the ***person*** object.\n- ***this.firstName + \" \" + this.lastName***: Uses ***this*** to access object properties.\n- ***person.fullName()***: Calls the method to return ***John Doe***."
+  },
+  {
+    "title": "Create an Object with Nested Properties",
+    "ques": "How do you create an object representing a book with title, author (name and age), and price?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const book = {\n  title: \"The Great Adventure\",\n  author: {\n    name: \"Alice Johnson\",\n    age: 40\n  },\n  price: 19.99\n};"
+    },
+    "explanation": "This object contains nested properties:\n\n- ***title***: Holds the book's title.\n- ***author***: A nested object with ***name*** and ***age***.\n- ***price***: Holds the book's cost."
+  },
+  {
+    "title": "Use filter() to Find Even Numbers",
+    "ques": "How do you use the filter() method to find only even numbers from an array [3, 8, 5, 10, 13, 22]?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const numbers = [3, 8, 5, 10, 13, 22];\nconst evens = numbers.filter(num => num % 2 === 0);\nconsole.log(evens); // [8, 10, 22]"
+    },
+    "explanation": "The ***filter()*** method creates a new array with elements that match a condition:\n\n- ***numbers.filter(num => num % 2 === 0)***: Filters out only even numbers.\n- ***num % 2 === 0***: Checks if a number is divisible by 2.\n- ***console.log(evens)***: Prints ***[8, 10, 22]***."
+  },
+  {
+    "title": "Destructuring Nested Objects",
+    "ques": "How do you extract the name and age from the author object inside { title: 'Novel', author: { name: 'Bob', age: 45 } } using destructuring?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const book = { title: 'Novel', author: { name: 'Bob', age: 45 } };\nconst { author: { name, age } } = book;\nconsole.log(name, age); // Bob 45"
+    },
+    "explanation": "To extract properties from a nested object, we use nested destructuring:\n\n- ***const { author: { name, age } } = book***: Extracts ***name*** and ***age*** from ***book.author***.\n- ***console.log(name, age)***: Prints ***Bob 45***."
+  },
+  {
+    "title": "Find the First Element in an Array that Meets a Condition",
+    "ques": "How do you find the first number greater than 15 from the array [5, 12, 18, 7] using the find() method?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const numbers = [5, 12, 18, 7];\nconst firstLarge = numbers.find(num => num > 15);\nconsole.log(firstLarge); // 18"
+    },
+    "explanation": "The ***find()*** method returns the first element that meets a condition:\n\n- ***numbers.find(num => num > 15)***: Searches for the first number greater than 15.\n- ***console.log(firstLarge)***: Prints ***18*** since it's the first match."
+  },
+  {
+    "title": "Swap Values Using Array Destructuring",
+    "ques": "How do you swap two variables a = 5 and b = 10 using array destructuring?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "let a = 5, b = 10;\n[a, b] = [b, a];\nconsole.log(a, b); // 10 5"
+    },
+    "explanation": "Array destructuring can swap values without a temporary variable:\n\n- ***[a, b] = [b, a]***: Assigns ***b*** to ***a*** and ***a*** to ***b***.\n- ***console.log(a, b)***: Prints ***10 5***."
+  }
+]

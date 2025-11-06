@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Function Declarations",
+    "ques": "What is the difference between a function declaration and a function expression in JavaScript?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function greet() {\n  return 'Hello, World!';\n}\n\nconst greetExpression = function() {\n  return 'Hello, World!';\n};"
+    },
+    "explanation": "***Function declarations*** are function definitions that are hoisted to the top of their scope. This means that you can call the function before it is declared.\n\nIn the example above, ```greet``` is a function declaration.\n\n***Function expressions***, on the other hand, are assigned to variables and are not hoisted. You must declare and assign the function before calling it.\n\nIn the example, ```greetExpression``` is a function expression."
+  },
+  {
+    "title": "Arrow Functions",
+    "ques": "How does an arrow function differ from a traditional function declaration in JavaScript?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function sum(a, b) {\n  return a + b;\n}\n\nconst sumArrow = (a, b) => a + b;"
+    },
+    "explanation": "***Arrow functions*** provide a shorter syntax for writing functions. They implicitly return the result of the expression without needing the ```return``` keyword when the function body contains a single expression.\n\nIn the example, ```sumArrow``` is an arrow function, whereas ```sum``` is a traditional function declaration.\n\n***Arrow functions*** also do not have their own ```this``` context, unlike traditional functions that bind ```this``` based on how they are called."
+  },
+  {
+    "title": "Function Expressions",
+    "ques": "How can a function expression be used as an argument in another function?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const multiply = (a, b) => a * b;\n\nfunction performOperation(a, b, operation) {\n  return operation(a, b);\n}\n\nperformOperation(2, 3, multiply);"
+    },
+    "explanation": "In this example, ```multiply``` is a function expression defined using the arrow function syntax.\n\nThe ```performOperation``` function takes another function (```operation```) as an argument and calls it with ```a``` and ```b```.\n\nWe pass the ```multiply``` function as an argument to ```performOperation```, which results in calling ```multiply(2, 3)``` and returning ```6```."
+  },
+  {
+    "title": "Scopes",
+    "ques": "What is the scope of a variable defined inside a function, and how is it different from a variable defined in the global scope?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "let globalVar = 'Global';\n\nfunction testScope() {\n  let localVar = 'Local';\n  console.log(globalVar);  // Accessible\n  console.log(localVar);  // Accessible\n}\n\ntestScope();\nconsole.log(globalVar);  // Accessible\nconsole.log(localVar);  // Error: localVar is not defined"
+    },
+    "explanation": "A variable defined inside a function, like ```localVar```, has ***local scope***. It is only accessible within that function.\n\nOn the other hand, ```globalVar``` has ***global scope***, meaning it is accessible throughout the entire script.\n\nIn the example above, ```globalVar``` can be accessed both inside and outside the function, but ```localVar``` can only be accessed inside the ```testScope``` function."
+  },
+  {
+    "title": "Function Declarations",
+    "ques": "Why can you call a function declaration before defining it, but not a function expression?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "console.log(greet());  // Works\nfunction greet() {\n  return 'Hello!';\n}\n\nconsole.log(sayHello());  // Error: Cannot access 'sayHello' before initialization\nconst sayHello = function() {\n  return 'Hi!';\n};"
+    },
+    "explanation": "***Function declarations*** are hoisted, meaning they are available in the execution context before they appear in the code.\n\nIn the example, ```greet()``` can be called before its declaration because function declarations are hoisted.\n\nHowever, ***function expressions*** like ```sayHello``` are only defined when the code reaches them. Trying to access ```sayHello``` before its definition results in an error."
+  },
+  {
+    "title": "Arrow Functions and 'this'",
+    "ques": "How does the behavior of 'this' differ between arrow functions and regular functions?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const person = {\n  name: 'Alice',\n  sayHello: function() {\n    console.log('Hello, ' + this.name);\n  },\n  sayHi: () => {\n    console.log('Hi, ' + this.name);\n  }\n};\n\nperson.sayHello();  // 'Hello, Alice'\nperson.sayHi();  // 'Hi, undefined'"
+    },
+    "explanation": "***Regular functions*** bind ```this``` dynamically based on how they are called. In ```sayHello```, ```this``` refers to the ```person``` object.\n\n***Arrow functions*** do not have their own ```this``` context; they inherit ```this``` from the surrounding scope. Since ```sayHi``` is an arrow function, ```this``` does not refer to ```person```, leading to ```undefined``` instead of ```Alice```."
+  },
+  {
+    "title": "Immediately Invoked Function Expressions (IIFE)",
+    "ques": "What is an IIFE (Immediately Invoked Function Expression), and why is it used?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "(function() {\n  console.log('This function runs immediately!');\n})();"
+    },
+    "explanation": "An ***IIFE (Immediately Invoked Function Expression)*** is a function that executes immediately after being defined.\n\nIt is wrapped in parentheses ```(function() { ... })();``` to prevent naming conflicts and keep variables out of the global scope.\n\nIn the example, the function runs as soon as the script is executed, printing ***'This function runs immediately!'***."
+  },
+  {
+    "title": "Function Closures",
+    "ques": "How does JavaScript handle closures, and how can they be useful?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function createCounter() {\n  let count = 0;\n  return function() {\n    count++;\n    return count;\n  };\n}\n\nconst counter = createCounter();\nconsole.log(counter());  // 1\nconsole.log(counter());  // 2"
+    },
+    "explanation": "***Closures*** occur when a function retains access to its parent scope, even after the parent function has executed.\n\nIn this example, ```createCounter``` returns a function that increments ```count``` every time it is called.\n\nEven though ```createCounter``` has finished executing, ```counter``` still remembers ```count``` because of closure. This is useful for creating ***private variables***."
+  },
+  {
+    "title": "Block Scope with let and var",
+    "ques": "How do function scope and block scope differ in JavaScript?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function testScope() {\n  if (true) {\n    var a = 'Function scoped';\n    let b = 'Block scoped';\n  }\n  console.log(a);  // Works\n  console.log(b);  // Error: b is not defined\n}\n\ntestScope();"
+    },
+    "explanation": "***var*** is function-scoped, meaning it is accessible throughout the function where it is declared.\n\n***let*** and ***const*** are block-scoped, meaning they exist only inside the block ```{}``` where they are declared.\n\nIn the example, ```a``` is accessible outside the ```if``` block because ```var``` is function-scoped. However, ```b``` causes an error because it is declared with ```let```, which is block-scoped."
+  }
+]

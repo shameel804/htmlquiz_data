@@ -1,0 +1,3353 @@
+[
+  {
+    "q": "Which HTML element is used to embed a video file?",
+    "o": [
+      "<video>",
+      "<embed>",
+      "<media>",
+      "<movie>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML snippet?",
+    "c": "<video width=\"320\" height=\"240\" controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>",
+    "o": [
+      "A video player with controls to play 'video.mp4'",
+      "A broken link since 'video.mp4' is missing",
+      "A text message saying 'Your browser does not support the video tag.'",
+      "Nothing will be displayed"
+    ]
+  },
+  {
+    "q": "Which attribute is required for the <audio> element to add playback controls?",
+    "o": [
+      "controls",
+      "autoplay",
+      "play",
+      "muted"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<audio controls>\n  <source src=\"audio.mp3\" type=\"audio/mpeg\">\n  Your browser does not support the audio element.\n</audio>",
+    "o": [
+      "It will display an audio player with controls to play 'audio.mp3'",
+      "It will display only text: 'Your browser does not support the audio element.'",
+      "It will not play the audio file automatically",
+      "It will throw an error because the 'controls' attribute is invalid"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to display an image?",
+    "o": [
+      "<img>",
+      "<image>",
+      "<picture>",
+      "<src>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML snippet?",
+    "c": "<img src=\"image.jpg\" alt=\"A beautiful scenery\" width=\"500\" height=\"300\">",
+    "o": [
+      "An image with dimensions 500x300 pixels, with alt text 'A beautiful scenery' if the image is unavailable",
+      "A broken image icon since 'image.jpg' is missing",
+      "A plain text message: 'A beautiful scenery'",
+      "Nothing will be displayed"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify multiple sources for an image?",
+    "o": [
+      "srcset",
+      "multiple",
+      "source",
+      "data-src"
+    ]
+  },
+  {
+    "q": "What is the purpose of the <source> element inside a <video> or <audio> tag?",
+    "o": [
+      "To provide multiple media file formats for browser compatibility",
+      "To define a default video or audio file",
+      "To specify the location of a media player",
+      "To add subtitles to a video"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to make a video start playing automatically?",
+    "o": [
+      "autoplay",
+      "start",
+      "play",
+      "loop"
+    ]
+  },
+  {
+    "q": "What will happen when you use the 'loop' attribute in a <video> element?",
+    "o": [
+      "The video will restart automatically after it ends",
+      "The video will play only once",
+      "The video will stop after the first play",
+      "The video will require user interaction to restart"
+    ]
+  },
+  {
+    "q": "What does the following HTML code do?",
+    "c": "<video controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n  <source src=\"movie.ogg\" type=\"video/ogg\">\n  Your browser does not support the video tag.\n</video>",
+    "o": [
+      "Attempts to play 'movie.mp4' first, then 'movie.ogg' if the first format is unsupported",
+      "Plays both 'movie.mp4' and 'movie.ogg' simultaneously",
+      "Displays only the fallback text",
+      "Fails to play any video"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to embed an audio file in HTML?",
+    "o": [
+      "<audio src=\"sound.mp3\" controls></audio>",
+      "<audio href=\"sound.mp3\" play></audio>",
+      "<audio link=\"sound.mp3\" controls></audio>",
+      "<audio file=\"sound.mp3\" autoplay></audio>"
+    ]
+  },
+  {
+    "q": "What does the 'muted' attribute do in an <audio> or <video> element?",
+    "o": [
+      "Starts playback with no sound",
+      "Disables volume controls",
+      "Prevents the media from playing",
+      "Stops autoplay from working"
+    ]
+  },
+  {
+    "q": "What will be the result of the following HTML snippet?",
+    "c": "<img src=\"photo.jpg\" width=\"200\" height=\"100\" alt=\"A sunset\">",
+    "o": [
+      "Displays an image with width 200px and height 100px, with alt text 'A sunset' if the image is unavailable",
+      "Displays a default image with no specific dimensions",
+      "Hides the image unless hovered over",
+      "Fails to display any image"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define multiple image sources for different screen sizes?",
+    "o": [
+      "<picture>",
+      "<multi-img>",
+      "<imgset>",
+      "<responsive-img>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'poster' attribute in the <video> element?",
+    "o": [
+      "Specifies an image to be shown before the video starts playing",
+      "Automatically plays the video when the image is clicked",
+      "Replaces the video if it fails to load",
+      "Displays captions over the video"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<picture>\n  <source srcset=\"image-small.jpg\" media=\"(max-width: 600px)\">\n  <source srcset=\"image-large.jpg\" media=\"(min-width: 601px)\">\n  <img src=\"default.jpg\" alt=\"A responsive image\">\n</picture>",
+    "o": [
+      "Loads 'image-small.jpg' for small screens and 'image-large.jpg' for larger screens, with 'default.jpg' as a fallback",
+      "Displays all three images at once",
+      "Always loads 'default.jpg' regardless of screen size",
+      "Causes an error due to incorrect syntax"
+    ]
+  },
+  {
+    "q": "Which attribute ensures an <audio> element will not play until the user interacts with it?",
+    "o": [
+      "controls",
+      "autoplay",
+      "loop",
+      "preload"
+    ]
+  },
+  {
+    "q": "Which attribute should be used in an <audio> or <video> tag to preload media content before playing?",
+    "o": [
+      "preload",
+      "buffer",
+      "load",
+      "fetch"
+    ]
+  },
+  {
+    "q": "What will be the result of the following HTML snippet?",
+    "c": "<video width=\"400\" controls>\n  <source src=\"sample.mp4\" type=\"video/mp4\">\n  <source src=\"sample.ogg\" type=\"video/ogg\">\n</video>",
+    "o": [
+      "A video player with controls will attempt to play 'sample.mp4' first, then 'sample.ogg' if needed",
+      "Both 'sample.mp4' and 'sample.ogg' will play simultaneously",
+      "The browser will display an error because multiple sources are not allowed",
+      "The video will only play in browsers that support both formats"
+    ]
+  },
+  {
+    "q": "Which HTML tag should be used to embed an image in a webpage?",
+    "o": [
+      "<img>",
+      "<image>",
+      "<media>",
+      "<picture>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag specifies an alternative text message when the browser does not support videos?",
+    "o": [
+      "Fallback text inside the <video> element",
+      "alt",
+      "text",
+      "error"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<img src=\"landscape.jpg\" alt=\"A beautiful landscape\" loading=\"lazy\">",
+    "o": [
+      "Loads the image lazily, only when it enters the viewport",
+      "Forces the image to load immediately",
+      "Displays a broken image icon until fully loaded",
+      "Delays the image loading indefinitely"
+    ]
+  },
+  {
+    "q": "Which attribute is used in the <source> element to specify the media type?",
+    "o": [
+      "type",
+      "media",
+      "format",
+      "mime"
+    ]
+  },
+  {
+    "q": "What does the 'controls' attribute do in a <video> element?",
+    "o": [
+      "Displays playback controls like play, pause, and volume",
+      "Forces the video to play automatically",
+      "Hides the video player",
+      "Loops the video continuously"
+    ]
+  },
+  {
+    "q": "What will happen when the 'autoplay' and 'muted' attributes are both present in a <video> tag?",
+    "o": [
+      "The video will start playing automatically without sound",
+      "The video will not play unless the user clicks play",
+      "The video will play with sound automatically",
+      "The 'muted' attribute will be ignored"
+    ]
+  },
+  {
+    "q": "Which HTML element allows you to define multiple image sources for responsive design?",
+    "o": [
+      "<picture>",
+      "<img>",
+      "<responsive>",
+      "<figure>"
+    ]
+  },
+  {
+    "q": "What will happen if the browser does not support the <video> element?",
+    "o": [
+      "The fallback text inside the <video> tag will be displayed",
+      "The browser will show a broken video icon",
+      "The page will fail to load",
+      "The video will still play but with errors"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define alternative text for an image?",
+    "o": [
+      "alt",
+      "title",
+      "desc",
+      "caption"
+    ]
+  },
+  {
+    "q": "What happens if the 'autoplay' attribute is used in an <audio> element?",
+    "o": [
+      "The audio will start playing as soon as the page loads",
+      "The user must click play to start the audio",
+      "The browser will block the audio from playing",
+      "The audio will only play after the page fully loads"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<video width=\"500\" height=\"300\" controls>\n  <source src=\"clip.mp4\" type=\"video/mp4\">\n  <track src=\"subtitles.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\">\n</video>",
+    "o": [
+      "Displays a video player with subtitles in English",
+      "Displays a video player but without subtitles",
+      "Fails to load because subtitles are not supported in <video>",
+      "Shows a blank page"
+    ]
+  },
+  {
+    "q": "Which attribute in the <audio> element tells the browser to download the file when the page loads?",
+    "o": [
+      "preload",
+      "buffer",
+      "autoplay",
+      "cache"
+    ]
+  },
+  {
+    "q": "What does the 'crossorigin' attribute do in a <video> or <audio> element?",
+    "o": [
+      "Allows media files from different origins to be used",
+      "Blocks external media from loading",
+      "Adds a watermark to the video",
+      "Increases video quality"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to use the <source> element inside a <picture> tag?",
+    "o": [
+      "<source srcset=\"image-small.jpg\" media=\"(max-width: 600px)\">",
+      "<source href=\"image-small.jpg\" media=\"(max-width: 600px)\">",
+      "<source src=\"image-small.jpg\" max-width=\"600px\">",
+      "<source link=\"image-small.jpg\" media=\"max-width: 600px\">"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<picture>\n  <source srcset=\"small.jpg\" media=\"(max-width: 600px)\">\n  <source srcset=\"large.jpg\" media=\"(min-width: 601px)\">\n  <img src=\"default.jpg\" alt=\"A responsive image\">\n</picture>",
+    "o": [
+      "Loads 'small.jpg' for small screens and 'large.jpg' for larger screens, with 'default.jpg' as a fallback",
+      "Displays 'default.jpg' regardless of screen size",
+      "Fails to display any image",
+      "Displays both 'small.jpg' and 'large.jpg' at the same time"
+    ]
+  },
+  {
+    "q": "Which HTML tag allows embedding of external media players such as YouTube or Vimeo?",
+    "o": [
+      "<iframe>",
+      "<embed>",
+      "<media>",
+      "<player>"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/videoID\" allowfullscreen></iframe>",
+    "o": [
+      "Embeds a YouTube video with fullscreen capability",
+      "Displays a blank box because YouTube videos cannot be embedded",
+      "Shows an error message due to missing attributes",
+      "Opens the video in a new tab instead of embedding it"
+    ]
+  },
+  {
+    "q": "Which attribute in an <img> tag improves performance by deferring the loading of images until they are needed?",
+    "o": [
+      "loading",
+      "lazyload",
+      "defer",
+      "async"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify a default image when an <img> element fails to load?",
+    "o": [
+      "alt",
+      "fallback",
+      "default",
+      "srcbackup"
+    ]
+  },
+  {
+    "q": "What does the 'playsinline' attribute do in a <video> element?",
+    "o": [
+      "Forces the video to play inside the webpage instead of fullscreen on mobile devices",
+      "Enables autoplay without sound",
+      "Loops the video infinitely",
+      "Adds subtitles automatically"
+    ]
+  },
+  {
+    "q": "What will happen when you use the 'poster' attribute in a <video> element?",
+    "o": [
+      "Displays an image before the video starts playing",
+      "Adds a watermark to the video",
+      "Hides the video controls",
+      "Forces autoplay"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to embed an audio file with multiple formats for browser compatibility?",
+    "o": [
+      "<audio controls>\n  <source src=\"audio.mp3\" type=\"audio/mpeg\">\n  <source src=\"audio.ogg\" type=\"audio/ogg\">\n</audio>",
+      "<audio controls>\n  <src href=\"audio.mp3\" type=\"audio/mpeg\">\n  <src href=\"audio.ogg\" type=\"audio/ogg\">\n</audio>",
+      "<audio>\n  <source=\"audio.mp3\" type=\"audio/mpeg\">\n  <source=\"audio.ogg\" type=\"audio/ogg\">\n</audio>",
+      "<audio>\n  <file src=\"audio.mp3\" format=\"audio/mpeg\">\n  <file src=\"audio.ogg\" format=\"audio/ogg\">\n</audio>"
+    ]
+  },
+  {
+    "q": "Which HTML element is best suited for embedding an SVG image?",
+    "o": [
+      "<img>",
+      "<svg>",
+      "<source>",
+      "<vector>"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<iframe src=\"https://player.vimeo.com/video/123456\" width=\"640\" height=\"360\" frameborder=\"0\" allowfullscreen></iframe>",
+    "o": [
+      "Embeds a Vimeo video with fullscreen support",
+      "Displays an error because Vimeo videos cannot be embedded",
+      "Opens the video in a new window instead of embedding",
+      "Fails to display due to missing video controls"
+    ]
+  },
+  {
+    "q": "Which attribute is used in the <audio> element to start playback automatically but without sound?",
+    "o": [
+      "autoplay muted",
+      "autoplay silent",
+      "autoplay hidden",
+      "autoplay nosound"
+    ]
+  },
+  {
+    "q": "What will happen when the following code runs?",
+    "c": "<audio>\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "The audio will not play because 'controls' is missing",
+      "The audio will play automatically",
+      "The browser will display an error",
+      "The file will not load"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid video format supported by the <video> element?",
+    "o": [
+      ".flv",
+      ".mp4",
+      ".ogg",
+      ".webm"
+    ]
+  },
+  {
+    "q": "Which HTML element allows embedding of external Flash content?",
+    "o": [
+      "<embed>",
+      "<flash>",
+      "<media>",
+      "<applet>"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define captions or subtitles for a <video> element?",
+    "o": [
+      "<track>",
+      "<caption>",
+      "<subtitle>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "Which attribute of the <img> tag provides alternative text for screen readers and when the image fails to load?",
+    "o": [
+      "alt",
+      "title",
+      "desc",
+      "fallback"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <source src=\"video.webm\" type=\"video/webm\">\n  <track src=\"subtitles.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\">\n</video>",
+    "o": [
+      "Displays a video with subtitles in English",
+      "Displays a video without subtitles",
+      "Fails to load because <track> is not supported",
+      "Shows only the first source and ignores the second one"
+    ]
+  },
+  {
+    "q": "Which attribute allows an <audio> element to play continuously after it ends?",
+    "o": [
+      "loop",
+      "autoplay",
+      "controls",
+      "repeat"
+    ]
+  },
+  {
+    "q": "What does the 'poster' attribute in a <video> element do?",
+    "o": [
+      "Specifies an image to display before the video starts playing",
+      "Forces the video to autoplay",
+      "Adds a watermark to the video",
+      "Enables fullscreen mode"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to preload an audio file?",
+    "o": [
+      "<audio preload=\"auto\" src=\"sound.mp3\"></audio>",
+      "<audio load=\"true\" src=\"sound.mp3\"></audio>",
+      "<audio buffer=\"on\" src=\"sound.mp3\"></audio>",
+      "<audio download=\"true\" src=\"sound.mp3\"></audio>"
+    ]
+  },
+  {
+    "q": "What will happen when this code is executed?",
+    "c": "<img src=\"photo.jpg\" width=\"300\" height=\"200\" loading=\"lazy\">",
+    "o": [
+      "The image will load only when it is about to be viewed",
+      "The image will load immediately with the page",
+      "The image will not load unless clicked",
+      "The browser will display an error"
+    ]
+  },
+  {
+    "q": "Which of the following formats is NOT natively supported by the <audio> element?",
+    "o": [
+      ".wma",
+      ".mp3",
+      ".ogg",
+      ".wav"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag prevents the user from downloading or saving the video?",
+    "o": [
+      "There is no built-in attribute to prevent downloads",
+      "disable-download",
+      "nodownload",
+      "readonly"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'playsinline' attribute in a <video> tag?",
+    "o": [
+      "Prevents the video from entering fullscreen mode on mobile devices",
+      "Forces the video to autoplay",
+      "Adds automatic subtitles",
+      "Enables looping playback"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag allows it to start playing automatically when the page loads?",
+    "o": [
+      "autoplay",
+      "play",
+      "start",
+      "loop"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<audio controls>\n  <source src=\"sound.ogg\" type=\"audio/ogg\">\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "Plays 'sound.ogg' if supported; otherwise, plays 'sound.mp3'",
+      "Plays both 'sound.ogg' and 'sound.mp3' simultaneously",
+      "Fails to load the audio",
+      "Shows an error due to multiple sources"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to display multiple image sources for responsive images?",
+    "o": [
+      "<picture>",
+      "<imgset>",
+      "<figure>",
+      "<srcset>"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to define an embedded YouTube video?",
+    "o": [
+      "<iframe src=\"https://www.youtube.com/embed/VIDEO_ID\" allowfullscreen></iframe>",
+      "<video src=\"https://www.youtube.com/embed/VIDEO_ID\" controls></video>",
+      "<embed src=\"https://www.youtube.com/embed/VIDEO_ID\">",
+      "<media src=\"https://www.youtube.com/embed/VIDEO_ID\">"
+    ]
+  },
+  {
+    "q": "What happens if an <audio> element is used without the 'controls' attribute?",
+    "o": [
+      "The audio will play but without user controls",
+      "The browser will display an error",
+      "The audio will not load",
+      "The audio will be muted by default"
+    ]
+  },
+  {
+    "q": "Which attribute in the <img> tag helps improve accessibility and SEO?",
+    "o": [
+      "alt",
+      "title",
+      "desc",
+      "caption"
+    ]
+  },
+  {
+    "q": "What will happen when the following code is executed?",
+    "c": "<video width=\"640\" height=\"360\" controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "Displays a video player with play/pause controls",
+      "Plays the video automatically without controls",
+      "The video will not play unless looped",
+      "Shows an error message due to missing controls"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag allows a thumbnail image to be shown before playback?",
+    "o": [
+      "poster",
+      "thumbnail",
+      "preview",
+      "cover"
+    ]
+  },
+  {
+    "q": "Which media file format is best suited for web-compatible audio playback?",
+    "o": [
+      ".mp3",
+      ".wav",
+      ".flac",
+      ".aac"
+    ]
+  },
+  {
+    "q": "What is the correct way to specify multiple image sources for different screen sizes?",
+    "o": [
+      "<img srcset=\"small.jpg 480w, medium.jpg 1024w, large.jpg 1920w\" sizes=\"(max-width: 600px) 480px, (max-width: 1200px) 1024px, 1920px\" src=\"fallback.jpg\">",
+      "<img src=\"fallback.jpg\" imgset=\"small.jpg, medium.jpg, large.jpg\">",
+      "<picture src=\"small.jpg, medium.jpg, large.jpg\">",
+      "<img responsive src=\"small.jpg, medium.jpg, large.jpg\">"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to group multiple images and captions together?",
+    "o": [
+      "<figure>",
+      "<picture>",
+      "<gallery>",
+      "<imgset>"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<video width=\"500\" height=\"300\" controls loop>\n  <source src=\"clip.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "Plays the video in a loop indefinitely",
+      "Plays the video once and then stops",
+      "Does not play because the loop attribute is invalid",
+      "Shows an error message"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to define a fallback for a video element?",
+    "c": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <p>Your browser does not support the video tag.</p>\n</video>",
+    "o": [
+      "Displays the message if the video format is not supported",
+      "Ignores the message and plays the video",
+      "Displays the message and does not play the video",
+      "Throws an error in the browser"
+    ]
+  },
+  {
+    "q": "Which of the following attributes allows an <audio> element to play without user interaction?",
+    "o": [
+      "autoplay",
+      "play",
+      "start",
+      "controls"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'muted' attribute in a <video> element?",
+    "o": [
+      "Ensures the video starts with no sound",
+      "Prevents the user from adjusting the volume",
+      "Disables the video playback",
+      "Forces autoplay"
+    ]
+  },
+  {
+    "q": "Which attribute should be used to delay loading of an image until it's needed?",
+    "o": [
+      "loading=\"lazy\"",
+      "defer=\"true\"",
+      "delay=\"on\"",
+      "fetch=\"later\""
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to embed an image inside an <svg> element?",
+    "o": [
+      "<image href=\"image.jpg\" width=\"100\" height=\"100\"/>",
+      "<img src=\"image.jpg\"/>",
+      "<svg src=\"image.jpg\"/>",
+      "<source src=\"image.jpg\"/>"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<picture>\n  <source srcset=\"small.jpg\" media=\"(max-width: 600px)\">\n  <source srcset=\"large.jpg\" media=\"(min-width: 601px)\">\n  <img src=\"fallback.jpg\" alt=\"Responsive image\">\n</picture>",
+    "o": [
+      "Loads 'small.jpg' on small screens and 'large.jpg' on larger screens, with 'fallback.jpg' as a backup",
+      "Only loads 'fallback.jpg' regardless of screen size",
+      "Fails to display any image",
+      "Shows all images simultaneously"
+    ]
+  },
+  {
+    "q": "Which attribute is required in the <track> element for adding subtitles to a video?",
+    "o": [
+      "src",
+      "text",
+      "sub",
+      "caption"
+    ]
+  },
+  {
+    "q": "Which file format is NOT natively supported by the HTML5 <video> element?",
+    "o": [
+      ".avi",
+      ".mp4",
+      ".webm",
+      ".ogg"
+    ]
+  },
+  {
+    "q": "Which attribute in the <audio> tag ensures that the audio file starts playing as soon as it is ready?",
+    "o": [
+      "autoplay",
+      "play",
+      "start",
+      "controls"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'crossorigin' attribute in the <video> and <audio> elements?",
+    "o": [
+      "Allows media to be loaded from a different domain",
+      "Enables autoplay without user interaction",
+      "Preloads the media before the page is loaded",
+      "Forces the media to loop indefinitely"
+    ]
+  },
+  {
+    "q": "Which of the following HTML elements allows embedding an animated GIF?",
+    "o": [
+      "<img>",
+      "<video>",
+      "<gif>",
+      "<embed>"
+    ]
+  },
+  {
+    "q": "What happens if an <audio> element has both the 'muted' and 'autoplay' attributes?",
+    "o": [
+      "The audio will play automatically but with no sound",
+      "The audio will not play until the user interacts",
+      "The browser will show an error",
+      "The audio will play at full volume"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to define a high-resolution image for a Retina display?",
+    "o": [
+      "<img srcset=\"image@2x.jpg 2x, image@3x.jpg 3x\" src=\"image.jpg\">",
+      "<img retina=\"true\" src=\"image.jpg\">",
+      "<picture src=\"image_hd.jpg\">",
+      "<img src=\"image.jpg\" dpi=\"2\">"
+    ]
+  },
+  {
+    "q": "What does the 'default' attribute do in a <track> element?",
+    "o": [
+      "Specifies the default subtitle or caption track",
+      "Forces the video to use subtitles",
+      "Makes the track optional",
+      "Hides the track by default"
+    ]
+  },
+  {
+    "q": "Which of the following video formats is best suited for web streaming?",
+    "o": [
+      ".webm",
+      ".avi",
+      ".mov",
+      ".mpg"
+    ]
+  },
+  {
+    "q": "What will happen when this code is executed?",
+    "c": "<img src=\"photo.jpg\" width=\"200\" height=\"150\" decoding=\"async\">",
+    "o": [
+      "The image will load asynchronously to improve performance",
+      "The image will not load until clicked",
+      "The browser will display an error",
+      "The image will only load when the page fully loads"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a container for multiple image sources in responsive design?",
+    "o": [
+      "<picture>",
+      "<imgset>",
+      "<source>",
+      "<figure>"
+    ]
+  },
+  {
+    "q": "What happens if a browser does not support the <video> element?",
+    "o": [
+      "It will display the fallback content inside the <video> tag",
+      "The video will not load, and an error will be shown",
+      "The browser will attempt to convert the video format",
+      "The page will crash"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag allows it to preload metadata without downloading the entire file?",
+    "o": [
+      "preload=\"metadata\"",
+      "preload=\"auto\"",
+      "preload=\"none\"",
+      "preload=\"buffer\""
+    ]
+  },
+  {
+    "q": "What will happen when this HTML snippet is executed?",
+    "c": "<audio controls loop>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n  <source src=\"sound.ogg\" type=\"audio/ogg\">\n</audio>",
+    "o": [
+      "The audio will continuously repeat once it reaches the end",
+      "The audio will play only once",
+      "The audio will not play due to multiple source elements",
+      "The browser will show an error message"
+    ]
+  },
+  {
+    "q": "Which HTML tag is best suited for embedding an external interactive media player, such as a YouTube video?",
+    "o": [
+      "<iframe>",
+      "<video>",
+      "<embed>",
+      "<object>"
+    ]
+  },
+  {
+    "q": "What does the 'object-fit' property do when applied to an <img> element?",
+    "o": [
+      "Controls how an image fits inside its container",
+      "Adjusts the resolution of the image",
+      "Forces the image to maintain aspect ratio",
+      "Adds a border around the image"
+    ]
+  },
+  {
+    "q": "Which file format is NOT commonly supported by the <video> tag?",
+    "o": [
+      ".flv",
+      ".mp4",
+      ".webm",
+      ".ogg"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<img src=\"image.jpg\" width=\"400\" height=\"300\" srcset=\"image-small.jpg 480w, image-medium.jpg 1024w\">",
+    "o": [
+      "Selects the best image based on screen width",
+      "Loads all images at once",
+      "Only loads 'image-small.jpg' regardless of screen size",
+      "Throws an error due to an invalid srcset"
+    ]
+  },
+  {
+    "q": "Which attribute ensures that a video starts playing only when the user clicks the play button?",
+    "o": [
+      "controls",
+      "autoplay",
+      "muted",
+      "start"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to add closed captions to a video?",
+    "o": [
+      "<track src=\"captions.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\">",
+      "<caption src=\"captions.vtt\">",
+      "<subtitle src=\"captions.vtt\">",
+      "<track captions=\"captions.vtt\">"
+    ]
+  },
+  {
+    "q": "What does the 'playsinline' attribute do in a <video> element?",
+    "o": [
+      "Forces the video to play within the page instead of fullscreen on mobile",
+      "Enables autoplay without sound",
+      "Adds default subtitles",
+      "Preloads the video before user interaction"
+    ]
+  },
+  {
+    "q": "Which of the following elements is used to display vector graphics in HTML?",
+    "o": [
+      "<svg>",
+      "<canvas>",
+      "<img>",
+      "<picture>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> element allows users to see the video's timeline and controls?",
+    "o": [
+      "controls",
+      "autoplay",
+      "timeline",
+      "interface"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML code is executed?",
+    "c": "<audio src=\"music.mp3\" autoplay muted></audio>",
+    "o": [
+      "The audio will play automatically but will be muted",
+      "The audio will not play until the user interacts",
+      "The browser will throw an error",
+      "The audio will play with sound"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid value for the 'preload' attribute in the <video> element?",
+    "o": [
+      "preload=\"lazy\"",
+      "preload=\"auto\"",
+      "preload=\"metadata\"",
+      "preload=\"none\""
+    ]
+  },
+  {
+    "q": "Which attribute in the <img> element helps browsers load the appropriate image size for different screen resolutions?",
+    "o": [
+      "srcset",
+      "responsive",
+      "picture",
+      "scalable"
+    ]
+  },
+  {
+    "q": "What happens if multiple <source> elements are defined inside a <video> tag?",
+    "o": [
+      "The browser plays the first supported video format",
+      "All video sources play simultaneously",
+      "The browser will load all sources at once",
+      "The last <source> in the list will always play"
+    ]
+  },
+  {
+    "q": "Which HTML tag allows embedding an external audio stream such as a live radio broadcast?",
+    "o": [
+      "<audio>",
+      "<stream>",
+      "<embed>",
+      "<sound>"
+    ]
+  },
+  {
+    "q": "What does the 'loop' attribute do in a <video> element?",
+    "o": [
+      "Plays the video in a continuous loop",
+      "Plays the video once and stops",
+      "Enables automatic fullscreen mode",
+      "Disables user controls"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to define an alternative text for an image?",
+    "o": [
+      "<img src=\"image.jpg\" alt=\"A description of the image\">",
+      "<img src=\"image.jpg\" description=\"A description of the image\">",
+      "<img src=\"image.jpg\" text=\"A description of the image\">",
+      "<img src=\"image.jpg\" title=\"A description of the image\">"
+    ]
+  },
+  {
+    "q": "Which file format is widely supported for transparent images on the web?",
+    "o": [
+      ".png",
+      ".jpg",
+      ".bmp",
+      ".gif"
+    ]
+  },
+  {
+    "q": "What happens when the 'poster' attribute is added to a <video> element?",
+    "o": [
+      "Displays a preview image before the video plays",
+      "Forces the video to start muted",
+      "Reduces the video file size",
+      "Enables automatic captions"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to specify multiple image sources for responsive images?",
+    "o": [
+      "<picture>",
+      "<source>",
+      "<responsive>",
+      "<imgset>"
+    ]
+  },
+  {
+    "q": "What will happen when this HTML snippet is executed?",
+    "c": "<video width=\"640\" height=\"360\" controls muted>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "The video will start muted, and users can manually enable sound",
+      "The video will not play due to the muted attribute",
+      "The browser will ignore the muted attribute",
+      "The video will automatically play with sound"
+    ]
+  },
+  {
+    "q": "Which attribute is used in the <video> tag to provide an image before the video starts?",
+    "o": [
+      "poster",
+      "thumbnail",
+      "preview",
+      "image"
+    ]
+  },
+  {
+    "q": "Which attribute of the <audio> element prevents the user from seeing playback controls?",
+    "o": [
+      "Omitting the 'controls' attribute",
+      "Adding 'hidden' to the tag",
+      "Setting 'controls' to false",
+      "Using 'disable-controls'"
+    ]
+  },
+  {
+    "q": "Which of the following file formats supports lossless audio compression?",
+    "o": [
+      ".flac",
+      ".mp3",
+      ".aac",
+      ".ogg"
+    ]
+  },
+  {
+    "q": "What is the purpose of the <track> element inside a <video> tag?",
+    "o": [
+      "Adds subtitles or captions",
+      "Specifies multiple video sources",
+      "Syncs background audio",
+      "Defines a fallback video"
+    ]
+  },
+  {
+    "q": "What does the 'decoding' attribute do in an <img> element?",
+    "o": [
+      "Optimizes when the image is processed by the browser",
+      "Prevents the image from loading",
+      "Changes the color profile of the image",
+      "Automatically compresses the image"
+    ]
+  },
+  {
+    "q": "Which HTML element allows defining a fallback message when a browser does not support a media element?",
+    "o": [
+      "<noscript>",
+      "<fallback>",
+      "<alt>",
+      "<default>"
+    ]
+  },
+  {
+    "q": "Which attribute allows an <audio> or <video> file to start playing only when it enters the viewport?",
+    "o": [
+      "autoplay with JavaScript intersection observer",
+      "playsinline",
+      "buffered",
+      "visible-play"
+    ]
+  },
+  {
+    "q": "What does the 'kind' attribute in a <track> element specify?",
+    "o": [
+      "The type of text track (subtitles, captions, descriptions, etc.)",
+      "The language of the subtitles",
+      "The position of the captions on the screen",
+      "The video quality"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a caption for an image or a media element?",
+    "o": [
+      "<figcaption>",
+      "<caption>",
+      "<legend>",
+      "<description>"
+    ]
+  },
+  {
+    "q": "What will the following code do?",
+    "c": "<video controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n  <source src=\"movie.ogg\" type=\"video/ogg\">\n  <p>Your browser does not support HTML5 video.</p>\n</video>",
+    "o": [
+      "Display the message if no supported video format is available",
+      "Ignore the message and show nothing",
+      "Automatically download both video files",
+      "Show an error due to multiple source elements"
+    ]
+  },
+  {
+    "q": "Which attribute prevents a video from being downloaded until the user clicks play?",
+    "o": [
+      "preload=\"none\"",
+      "autoplay",
+      "preload=\"metadata\"",
+      "buffered"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'playsinline' attribute in a <video> element?",
+    "o": [
+      "Prevents fullscreen playback on mobile devices",
+      "Forces autoplay without sound",
+      "Optimizes video buffering",
+      "Forces subtitles to always be displayed"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to embed an audio file that allows fallback text for unsupported browsers?",
+    "o": [
+      "<audio controls>\n  <source src=\"audio.mp3\" type=\"audio/mpeg\">\n  <p>Your browser does not support the audio element.</p>\n</audio>",
+      "<audio src=\"audio.mp3\" fallback=\"Your browser does not support this audio format.\"></audio>",
+      "<audio>\n  <track kind=\"fallback\" label=\"Audio not supported\">\n</audio>",
+      "<audio source=\"audio.mp3\" alternative=\"No audio support\"></audio>"
+    ]
+  },
+  {
+    "q": "What is the default behavior of the <audio> element if no 'controls' attribute is provided?",
+    "o": [
+      "The audio plays but is invisible",
+      "The audio plays with default controls",
+      "The browser prevents the audio from playing",
+      "A play button is automatically generated"
+    ]
+  },
+  {
+    "q": "Which of the following formats is best suited for lossless transparent images?",
+    "o": [
+      ".png",
+      ".jpeg",
+      ".webp",
+      ".gif"
+    ]
+  },
+  {
+    "q": "What does the 'object-position' CSS property do when applied to an <img> element?",
+    "o": [
+      "Adjusts the positioning of an image within its container",
+      "Changes the image resolution",
+      "Modifies the image opacity",
+      "Forces the image to maintain its aspect ratio"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid video file format?",
+    "o": [
+      ".mp5",
+      ".mp4",
+      ".webm",
+      ".ogv"
+    ]
+  },
+  {
+    "q": "What happens when a <source> tag is used inside a <picture> element?",
+    "o": [
+      "The browser selects the most appropriate image based on screen conditions",
+      "All images inside the <picture> element load simultaneously",
+      "Only the first <source> tag is used, and others are ignored",
+      "The <img> tag inside the <picture> element becomes invalid"
+    ]
+  },
+  {
+    "q": "Which attribute allows an audio file to start playing automatically when the page loads?",
+    "o": [
+      "autoplay",
+      "start",
+      "loop",
+      "play"
+    ]
+  },
+  {
+    "q": "What will happen when this HTML code is executed?",
+    "c": "<video width=\"500\" height=\"300\" controls preload=\"auto\">\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <source src=\"video.ogg\" type=\"video/ogg\">\n</video>",
+    "o": [
+      "The video will be preloaded before playback starts",
+      "The video will only load when clicked",
+      "The video will loop automatically",
+      "The browser will ignore the preload attribute"
+    ]
+  },
+  {
+    "q": "Which element is used to group an image and a caption together?",
+    "o": [
+      "<figure>",
+      "<img>",
+      "<caption>",
+      "<container>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <audio> tag ensures that the audio file starts over when it finishes playing?",
+    "o": [
+      "loop",
+      "restart",
+      "reload",
+      "autoplay"
+    ]
+  },
+  {
+    "q": "Which of the following correctly embeds a YouTube video into a webpage?",
+    "o": [
+      "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/videoID\" allowfullscreen></iframe>",
+      "<video src=\"https://www.youtube.com/watch?v=videoID\" controls></video>",
+      "<embed src=\"https://www.youtube.com/watch?v=videoID\">",
+      "<media src=\"https://www.youtube.com/videoID\"></media>"
+    ]
+  },
+  {
+    "q": "What happens when the 'crossorigin' attribute is added to a <video> element?",
+    "o": [
+      "Allows loading video files from different domains",
+      "Blocks video playback from other websites",
+      "Forces the video to load in low resolution",
+      "Automatically adds captions to the video"
+    ]
+  },
+  {
+    "q": "Which HTML element provides multiple sources for different screen resolutions?",
+    "o": [
+      "<picture>",
+      "<source>",
+      "<img>",
+      "<media>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <img> tag improves loading performance by delaying the image download?",
+    "o": [
+      "loading=\"lazy\"",
+      "delay=\"true\"",
+      "preload=\"off\"",
+      "lazyload=\"yes\""
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify subtitles for a video?",
+    "o": [
+      "kind=\"subtitles\"",
+      "text=\"captions\"",
+      "subtitles=\"on\"",
+      "caption=\"true\""
+    ]
+  },
+  {
+    "q": "What will the following HTML code do?",
+    "c": "<audio controls>\n  <source src=\"music.mp3\" type=\"audio/mpeg\">\n  <source src=\"music.ogg\" type=\"audio/ogg\">\n</audio>",
+    "o": [
+      "Play the first supported audio format",
+      "Play both audio files simultaneously",
+      "Cause an error due to multiple sources",
+      "Require user input before selecting an audio format"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to make a video play in a continuous loop?",
+    "o": [
+      "loop",
+      "repeat",
+      "autoplay",
+      "cycle"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML code is executed?",
+    "c": "<audio controls>\n  <source src=\"song.wav\" type=\"audio/wav\">\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "The browser will play the first supported audio format",
+      "Both audio files will play simultaneously",
+      "The browser will load all formats regardless of support",
+      "The last audio source will always play"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid audio file format supported by HTML5?",
+    "o": [
+      ".exe",
+      ".wav",
+      ".ogg",
+      ".mp3"
+    ]
+  },
+  {
+    "q": "Which HTML element allows multiple image sources to be defined based on screen size?",
+    "o": [
+      "<picture>",
+      "<source>",
+      "<imgset>",
+      "<media>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag prevents a video from being downloaded before the user plays it?",
+    "o": [
+      "preload=\"none\"",
+      "autoplay=\"false\"",
+      "buffer=\"off\"",
+      "download=\"disable\""
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'muted' attribute in the <video> element?",
+    "o": [
+      "Prevents audio from playing initially",
+      "Disables the video's volume control",
+      "Automatically enables captions",
+      "Prevents video playback"
+    ]
+  },
+  {
+    "q": "Which HTML tag is recommended for embedding a responsive YouTube video?",
+    "o": [
+      "<iframe>",
+      "<video>",
+      "<embed>",
+      "<object>"
+    ]
+  },
+  {
+    "q": "What does the 'loading=\"lazy\"' attribute do when added to an <img> tag?",
+    "o": [
+      "Delays image loading until it appears in the viewport",
+      "Preloads the image before the page fully loads",
+      "Caches the image for offline viewing",
+      "Automatically compresses the image"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to provide subtitles or captions for a <video>?",
+    "o": [
+      "<track>",
+      "<caption>",
+      "<subtitle>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "What happens if a browser does not support the specified video formats?",
+    "o": [
+      "It will display the fallback text inside the <video> element",
+      "It will attempt to download the video",
+      "The browser will show a broken video icon",
+      "It will replace the video with an error message"
+    ]
+  },
+  {
+    "q": "Which attribute in the <audio> element allows an audio file to start playing without user interaction?",
+    "o": [
+      "autoplay",
+      "loop",
+      "controls",
+      "start"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<video controls poster=\"thumbnail.jpg\">\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "Display 'thumbnail.jpg' before the video starts playing",
+      "Ignore the poster image and only display the video",
+      "Automatically play the video when loaded",
+      "Stretch the poster image to fit the video size"
+    ]
+  },
+  {
+    "q": "Which of the following file formats is NOT commonly used for web video?",
+    "o": [
+      ".mkv",
+      ".mp4",
+      ".webm",
+      ".ogg"
+    ]
+  },
+  {
+    "q": "Which HTML attribute should be used to ensure an <img> element maintains its aspect ratio while resizing?",
+    "o": [
+      "width and height set proportionally",
+      "stretch=\"true\"",
+      "scalable=\"yes\"",
+      "ratio=\"lock\""
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define multiple sources for an audio file?",
+    "o": [
+      "<source>",
+      "<track>",
+      "<media>",
+      "<audio-source>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'controls' attribute in the <video> and <audio> elements?",
+    "o": [
+      "Displays built-in playback controls",
+      "Automatically plays the media",
+      "Enables subtitles by default",
+      "Speeds up media playback"
+    ]
+  },
+  {
+    "q": "Which HTML attribute can be added to an <img> tag to improve accessibility for visually impaired users?",
+    "o": [
+      "alt",
+      "desc",
+      "title",
+      "tooltip"
+    ]
+  },
+  {
+    "q": "Which element allows you to provide different image files for different screen sizes?",
+    "o": [
+      "<picture>",
+      "<srcset>",
+      "<image>",
+      "<breakpoints>"
+    ]
+  },
+  {
+    "q": "What does the 'poster' attribute do in the <video> tag?",
+    "o": [
+      "Displays an image before the video starts",
+      "Automatically adds subtitles to the video",
+      "Enables fullscreen playback",
+      "Prevents the video from being muted"
+    ]
+  },
+  {
+    "q": "Which attribute should be used in a <video> element to allow playback without fullscreen mode on mobile browsers?",
+    "o": [
+      "playsinline",
+      "nofullscreen",
+      "minimized",
+      "disable-fullscreen"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to provide alternative text descriptions for an image?",
+    "o": [
+      "alt",
+      "title",
+      "caption",
+      "desc"
+    ]
+  },
+  {
+    "q": "What happens when the 'muted' attribute is set on a <video> element?",
+    "o": [
+      "The video will start without sound",
+      "The volume slider is disabled",
+      "The video cannot be played",
+      "The browser blocks the video"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to embed an audio file with fallback text?",
+    "o": [
+      "<audio controls>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n  <p>Your browser does not support this audio format.</p>\n</audio>",
+      "<audio>\n  <track kind=\"fallback\" label=\"Audio not supported\">\n</audio>",
+      "<audio fallback=\"Your browser does not support this audio.\"></audio>",
+      "<audio source=\"sound.mp3\" alternative=\"No support\"></audio>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag prevents the video from downloading before playback starts?",
+    "o": [
+      "preload=\"none\"",
+      "autoplay=\"false\"",
+      "buffering=\"off\"",
+      "download=\"disable\""
+    ]
+  },
+  {
+    "q": "Which CSS property ensures an image does not exceed its container's width?",
+    "o": [
+      "max-width: 100%;",
+      "object-fit: contain;",
+      "width: auto;",
+      "display: block;"
+    ]
+  },
+  {
+    "q": "Which element is best for embedding responsive images that adapt to different screen resolutions?",
+    "o": [
+      "<picture>",
+      "<img>",
+      "<media>",
+      "<srcset>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'kind' attribute in the <track> element inside a <video> tag?",
+    "o": [
+      "Specifies the type of text track, such as subtitles or captions",
+      "Defines the video format",
+      "Controls playback speed",
+      "Forces autoplay"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid video file format supported by HTML5?",
+    "o": [
+      ".flv",
+      ".mp4",
+      ".webm",
+      ".ogg"
+    ]
+  },
+  {
+    "q": "Which attribute in an <img> tag helps improve webpage performance by delaying the loading of offscreen images?",
+    "o": [
+      "loading=\"lazy\"",
+      "preload=\"none\"",
+      "defer=\"true\"",
+      "fetchpriority=\"low\""
+    ]
+  },
+  {
+    "q": "What does the 'controls' attribute do when added to an <audio> or <video> element?",
+    "o": [
+      "Displays built-in media controls",
+      "Automatically plays the media",
+      "Disables media looping",
+      "Forces fullscreen playback"
+    ]
+  },
+  {
+    "q": "Which HTML attribute in the <video> tag ensures the video starts playing as soon as it is ready?",
+    "o": [
+      "autoplay",
+      "preload",
+      "loop",
+      "controls"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML code is executed?",
+    "c": "<video controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n  <source src=\"movie.ogg\" type=\"video/ogg\">\n  <p>Your browser does not support HTML5 video.</p>\n</video>",
+    "o": [
+      "The first compatible video format will be played",
+      "Both video sources will play simultaneously",
+      "The browser will download all video sources at once",
+      "The <p> tag will always be displayed"
+    ]
+  },
+  {
+    "q": "Which HTML element allows you to specify multiple sources for an image?",
+    "o": [
+      "<picture>",
+      "<imgset>",
+      "<source>",
+      "<figure>"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid attribute of the <audio> element?",
+    "o": [
+      "buffer",
+      "loop",
+      "autoplay",
+      "controls"
+    ]
+  },
+  {
+    "q": "What is the default behavior of the 'preload' attribute in the <video> element when no value is set?",
+    "o": [
+      "The browser decides whether to preload the video or not",
+      "The video will not be preloaded",
+      "The video will preload fully before playing",
+      "The video will always preload metadata only"
+    ]
+  },
+  {
+    "q": "Which of the following correctly embeds an audio file with a fallback text message?",
+    "o": [
+      "<audio controls>\n  <source src=\"music.mp3\" type=\"audio/mpeg\">\n  Your browser does not support the audio element.\n</audio>",
+      "<audio>\n  <fallback>Your browser does not support audio.</fallback>\n</audio>",
+      "<sound src=\"music.mp3\">Audio not supported</sound>",
+      "<media src=\"music.mp3\" type=\"audio/mpeg\">Fallback message</media>"
+    ]
+  },
+  {
+    "q": "Which CSS property is commonly used to make images responsive?",
+    "o": [
+      "max-width: 100%;",
+      "width: 200px;",
+      "object-fit: stretch;",
+      "display: flex;"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to prevent an image from stretching while maintaining its aspect ratio?",
+    "o": [
+      "object-fit: contain;",
+      "width: 100%; height: 100%;",
+      "scale: fixed;",
+      "image-fit: preserve;"
+    ]
+  },
+  {
+    "q": "Which HTML attribute allows the <video> element to display a still image before playback?",
+    "o": [
+      "poster",
+      "thumbnail",
+      "preview",
+      "image"
+    ]
+  },
+  {
+    "q": "Which of the following is the best way to embed a YouTube video in an HTML page?",
+    "o": [
+      "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/videoID\" allowfullscreen></iframe>",
+      "<video src=\"https://www.youtube.com/watch?v=videoID\" controls></video>",
+      "<embed src=\"https://www.youtube.com/watch?v=videoID\">",
+      "<object data=\"https://www.youtube.com/embed/videoID\"></object>"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to embed a video in a webpage?",
+    "o": [
+      "<video>",
+      "<media>",
+      "<vid>",
+      "<embed>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<video width=\"320\" height=\"240\" controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "A video player with controls allowing playback of 'movie.mp4'",
+      "An audio player for 'movie.mp4'",
+      "A broken element because the <video> tag is invalid",
+      "A hyperlink to 'movie.mp4'"
+    ]
+  },
+  {
+    "q": "Which attribute is used to display player controls in an <audio> element?",
+    "o": [
+      "controls",
+      "autoplay",
+      "muted",
+      "loop"
+    ]
+  },
+  {
+    "q": "What will be the result of the following HTML code?",
+    "c": "<audio controls>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n  Your browser does not support the audio element.\n</audio>",
+    "o": [
+      "An audio player with playback controls for 'sound.mp3'",
+      "A video player for 'sound.mp3'",
+      "No output, as the <audio> tag is invalid",
+      "A broken link to 'sound.mp3'"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to embed an image in a webpage?",
+    "o": [
+      "<img>",
+      "<image>",
+      "<pic>",
+      "<media>"
+    ]
+  },
+  {
+    "q": "What happens if the 'alt' attribute is missing in an <img> tag?",
+    "o": [
+      "Screen readers may not describe the image for visually impaired users",
+      "The image will not be displayed",
+      "The browser will display 'alt missing' text",
+      "The image will break the page layout"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to provide multiple sources for a video file?",
+    "o": [
+      "<source>",
+      "<track>",
+      "<media>",
+      "<embed>"
+    ]
+  },
+  {
+    "q": "What is the correct syntax to autoplay a video in HTML?",
+    "o": [
+      "<video src=\"video.mp4\" autoplay>",
+      "<video src=\"video.mp4\" auto>",
+      "<video autoplay=\"true\">",
+      "<video play=\"auto\">"
+    ]
+  },
+  {
+    "q": "What will be the result of the following HTML snippet?",
+    "c": "<video width=\"320\" height=\"240\" autoplay muted>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "The video will play automatically without sound",
+      "The video will not play unless clicked",
+      "The video will play with sound",
+      "An error will occur because 'muted' is not a valid attribute"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to provide subtitles for a video?",
+    "o": [
+      "<track>",
+      "<subtitles>",
+      "<caption>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "Which attribute ensures a video starts playing as soon as it loads in HTML?",
+    "o": [
+      "autoplay",
+      "start",
+      "loop",
+      "controls"
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML code runs?",
+    "c": "<audio src=\"music.mp3\" autoplay></audio>",
+    "o": [
+      "The audio will start playing automatically",
+      "The audio will not play because the 'controls' attribute is missing",
+      "An error will occur because the <source> element is missing",
+      "The browser will prompt the user to download the audio file"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid video format for the HTML5 <video> element?",
+    "o": [
+      ".flv",
+      ".mp4",
+      ".ogg",
+      ".webm"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<img src=\"image.jpg\" width=\"200\" height=\"100\" alt=\"A sample image\">",
+    "o": [
+      "It will display an image with a width of 200 pixels and height of 100 pixels",
+      "It will display an image with default size settings",
+      "It will only display text because 'alt' is present",
+      "The image will not load without the 'title' attribute"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to embed a YouTube video?",
+    "o": [
+      "<iframe>",
+      "<video>",
+      "<youtube>",
+      "<embed>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'loop' attribute in the <video> and <audio> elements?",
+    "o": [
+      "It makes the media file restart automatically after finishing",
+      "It enables the 'next' button for media files",
+      "It ensures media files play only once",
+      "It stops the media file from playing automatically"
+    ]
+  },
+  {
+    "q": "What will happen when this HTML code is executed?",
+    "c": "<video width=\"300\" height=\"200\" controls loop>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "The video will play in a 300x200 player and restart automatically after finishing",
+      "The video will not restart after finishing",
+      "The video will play without controls",
+      "An error will occur because 'loop' is not a valid attribute"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to group multiple images into a gallery-like structure?",
+    "o": [
+      "<figure>",
+      "<gallery>",
+      "<img-group>",
+      "<media-container>"
+    ]
+  },
+  {
+    "q": "What happens if a browser does not support the given video format?",
+    "o": [
+      "It will try the next <source> element",
+      "It will display an error message",
+      "It will not load the page",
+      "It will play the audio of the video file"
+    ]
+  },
+  {
+    "q": "What does the 'poster' attribute do in the <video> element?",
+    "o": [
+      "Displays an image before the video starts playing",
+      "Adds captions to the video",
+      "Controls the playback speed",
+      "Ensures the video is played in full screen"
+    ]
+  },
+  {
+    "q": "Which attribute is used in the <video> element to mute the video by default?",
+    "o": [
+      "muted",
+      "silence",
+      "disable-audio",
+      "volume=\"0\""
+    ]
+  },
+  {
+    "q": "What will happen when the following HTML code runs?",
+    "c": "<video width=\"400\" height=\"300\" controls>\n  <source src=\"movie.ogg\" type=\"video/ogg\">\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "The browser will try to play 'movie.ogg' first and fall back to 'movie.mp4' if not supported",
+      "Both video sources will play simultaneously",
+      "The browser will display an error if 'movie.ogg' is unsupported",
+      "Only 'movie.mp4' will be played regardless of browser support"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid audio file format supported by the <audio> element?",
+    "o": [
+      ".wavx",
+      ".mp3",
+      ".ogg",
+      ".wav"
+    ]
+  },
+  {
+    "q": "What does the 'preload' attribute do in an <audio> or <video> element?",
+    "o": [
+      "Specifies how the browser should load the media file",
+      "Starts playing the media automatically",
+      "Hides the media player controls",
+      "Reduces the volume of the media file"
+    ]
+  },
+  {
+    "q": "What will happen if the browser does not support the <audio> tag?",
+    "c": "<audio controls>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n  Your browser does not support the audio element.\n</audio>",
+    "o": [
+      "The text 'Your browser does not support the audio element.' will be displayed",
+      "The browser will crash",
+      "The browser will attempt to download the file",
+      "An alert box will appear"
+    ]
+  },
+  {
+    "q": "Which attribute allows an audio file to start over automatically after it finishes?",
+    "o": [
+      "loop",
+      "restart",
+      "autoplay",
+      "repeat"
+    ]
+  },
+  {
+    "q": "What will be the result of the following HTML snippet?",
+    "c": "<img src=\"photo.jpg\" loading=\"lazy\" alt=\"A beautiful landscape\">",
+    "o": [
+      "The image will load only when it enters the viewport",
+      "The image will be preloaded before the page finishes loading",
+      "The image will not be displayed due to lazy loading",
+      "The browser will ignore the 'loading' attribute"
+    ]
+  },
+  {
+    "q": "Which HTML element provides captions or subtitles for a video?",
+    "o": [
+      "<track>",
+      "<subtitle>",
+      "<caption>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "What will happen if an image specified in the <img> tag is not found?",
+    "c": "<img src=\"missing.jpg\" alt=\"Image not found\">",
+    "o": [
+      "The 'alt' text 'Image not found' will be displayed",
+      "The browser will crash",
+      "The page will not load",
+      "The browser will replace the image with a default icon"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax to embed an audio file with multiple sources?",
+    "o": [
+      "<audio controls>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n  <source src=\"sound.ogg\" type=\"audio/ogg\">\n</audio>",
+      "<audio src=\"sound.mp3\" src=\"sound.ogg\" controls>",
+      "<audio controls source=\"sound.mp3\" source=\"sound.ogg\">",
+      "<audio><src>sound.mp3</src><src>sound.ogg</src></audio>"
+    ]
+  },
+  {
+    "q": "Which attribute ensures a video will not start playing until the user initiates it?",
+    "o": [
+      "controls",
+      "autoplay",
+      "loop",
+      "muted"
+    ]
+  },
+  {
+    "q": "What will be displayed if the following HTML code is executed?",
+    "c": "<img src=\"picture.jpg\" width=\"150\" height=\"100\" alt=\"Sample Image\">",
+    "o": [
+      "An image with dimensions 150x100 pixels",
+      "An image with default width and height",
+      "A clickable link to 'picture.jpg'",
+      "An empty box because the 'alt' attribute is missing"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify multiple images for different screen sizes?",
+    "o": [
+      "srcset",
+      "responsive",
+      "alt",
+      "sizes"
+    ]
+  },
+  {
+    "q": "What will happen when the following code runs in a browser that does not support MP4 video format?",
+    "c": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <source src=\"video.webm\" type=\"video/webm\">\n</video>",
+    "o": [
+      "The browser will try to play 'video.webm' if 'video.mp4' is unsupported",
+      "The video will not play at all",
+      "The browser will crash",
+      "A download link for 'video.mp4' will be displayed"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax to add subtitles to a video?",
+    "o": [
+      "<track src=\"subtitles.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\">",
+      "<subtitle src=\"subtitles.vtt\" language=\"en\">",
+      "<caption src=\"subtitles.vtt\" lang=\"en\">",
+      "<text src=\"subtitles.vtt\" type=\"subtitle\">"
+    ]
+  },
+  {
+    "q": "What will be the behavior of the following <audio> element?",
+    "c": "<audio controls loop>\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "The audio will continuously repeat after finishing",
+      "The audio will stop after playing once",
+      "The audio will play without controls",
+      "An error will occur because 'loop' is not a valid attribute"
+    ]
+  },
+  {
+    "q": "Which attribute allows a video to start playing without sound?",
+    "o": [
+      "muted",
+      "nosound",
+      "disable-audio",
+      "silent"
+    ]
+  },
+  {
+    "q": "What will be the effect of using the 'poster' attribute in the <video> element?",
+    "c": "<video controls poster=\"thumbnail.jpg\">\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "Displays 'thumbnail.jpg' before the video starts playing",
+      "Automatically plays the video when loaded",
+      "Forces the video to use the image as a watermark",
+      "Hides the video controls"
+    ]
+  },
+  {
+    "q": "Which of the following HTML elements is used to define a caption for an image?",
+    "o": [
+      "<figcaption>",
+      "<caption>",
+      "<subtitle>",
+      "<image-caption>"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to embed an MP4 video with a fallback message?",
+    "o": [
+      "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>",
+      "<video source=\"video.mp4\" type=\"video/mp4\">Your browser does not support this video.</video>",
+      "<media src=\"video.mp4\" type=\"video/mp4\">Your browser does not support media.</media>",
+      "<embed src=\"video.mp4\" type=\"video/mp4\">Your browser does not support embedding.</embed>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag specifies that the video should start playing as soon as it is loaded?",
+    "o": [
+      "autoplay",
+      "play",
+      "start",
+      "autostart"
+    ]
+  },
+  {
+    "q": "What will happen when the following code is executed?",
+    "c": "<img src=\"landscape.jpg\" alt=\"Beautiful scenery\" width=\"200\" height=\"100\">",
+    "o": [
+      "An image with a width of 200 pixels and a height of 100 pixels will be displayed",
+      "The image will be resized to fit the screen",
+      "The browser will ignore the width and height attributes",
+      "The 'alt' text will be displayed instead of the image"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid value for the 'preload' attribute in the <video> tag?",
+    "o": [
+      "stream",
+      "auto",
+      "metadata",
+      "none"
+    ]
+  },
+  {
+    "q": "What does the following code do?",
+    "c": "<audio controls>\n  <source src=\"music.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "Embeds an audio player with controls",
+      "Plays the audio automatically without controls",
+      "Displays a download link for 'music.mp3'",
+      "Embeds an invisible audio file"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a self-contained media object like an image with a caption?",
+    "o": [
+      "<figure>",
+      "<caption>",
+      "<media>",
+      "<picture>"
+    ]
+  },
+  {
+    "q": "What will happen if a browser does not support the <video> tag?",
+    "c": "<video controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n  <p>Your browser does not support HTML5 video.</p>\n</video>",
+    "o": [
+      "The text 'Your browser does not support HTML5 video.' will be displayed",
+      "The browser will crash",
+      "The page will not load",
+      "The browser will show an empty space"
+    ]
+  },
+  {
+    "q": "Which attribute allows a video to play repeatedly without user interaction?",
+    "o": [
+      "loop",
+      "repeat",
+      "restart",
+      "autoplay"
+    ]
+  },
+  {
+    "q": "What will happen when the following code runs?",
+    "c": "<picture>\n  <source srcset=\"image-large.jpg\" media=\"(min-width: 800px)\">\n  <source srcset=\"image-medium.jpg\" media=\"(min-width: 500px)\">\n  <img src=\"image-small.jpg\" alt=\"Responsive image\">\n</picture>",
+    "o": [
+      "The most appropriate image will be loaded based on screen width",
+      "All images will load at the same time",
+      "Only 'image-small.jpg' will be displayed",
+      "The browser will ignore the <picture> element"
+    ]
+  },
+  {
+    "q": "Which attribute ensures an image loads only when it appears in the viewport?",
+    "o": [
+      "loading=\"lazy\"",
+      "load-on-demand",
+      "preload=\"none\"",
+      "defer-load"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for embedding an MP4 video with fallback content?",
+    "o": [
+      "<video controls>\n  <source src=\"clip.mp4\" type=\"video/mp4\">\n  Your browser does not support video.\n</video>",
+      "<video src=\"clip.mp4\" controls>Video not supported.</video>",
+      "<media>\n  <source src=\"clip.mp4\" type=\"video/mp4\">\n</media>",
+      "<embed src=\"clip.mp4\" type=\"video/mp4\">"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to play an audio file in a web page?",
+    "o": [
+      "<audio>",
+      "<sound>",
+      "<music>",
+      "<track>"
+    ]
+  },
+  {
+    "q": "What will happen if the browser does not support the <audio> element?",
+    "c": "<audio controls>\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n  Your browser does not support the audio element.\n</audio>",
+    "o": [
+      "The text 'Your browser does not support the audio element.' will be displayed",
+      "An error message will appear",
+      "The page will not load",
+      "The browser will crash"
+    ]
+  },
+  {
+    "q": "Which attribute is used to add a fallback text when an image fails to load?",
+    "o": [
+      "alt",
+      "title",
+      "fallback",
+      "text"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?",
+    "c": "<video width=\"400\" height=\"300\" controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <source src=\"video.ogg\" type=\"video/ogg\">\n</video>",
+    "o": [
+      "A video player with 400x300 dimensions will appear, playing 'video.mp4' if supported",
+      "Only 'video.ogg' will play, even if 'video.mp4' is supported",
+      "A blank screen will appear",
+      "A video will play in full screen automatically"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to group multiple image sources for responsive loading?",
+    "o": [
+      "<picture>",
+      "<source>",
+      "<figure>",
+      "<imgset>"
+    ]
+  },
+  {
+    "q": "What will be displayed when the following code runs?",
+    "c": "<img src=\"photo.jpg\" alt=\"A beautiful sunset\" loading=\"lazy\">",
+    "o": [
+      "The image 'photo.jpg' will load only when it enters the viewport",
+      "The image will load immediately when the page loads",
+      "The image will not load at all",
+      "The browser will display an error"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to display an image in HTML?",
+    "o": [
+      "<img src=\"image.jpg\" alt=\"Sample Image\">",
+      "<image src=\"image.jpg\">",
+      "<img>image.jpg</img>",
+      "<picture src=\"image.jpg\">"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax to autoplay an audio file in HTML?",
+    "o": [
+      "<audio src=\"music.mp3\" autoplay></audio>",
+      "<audio src=\"music.mp3\" autostart></audio>",
+      "<audio play=\"true\" src=\"music.mp3\"></audio>",
+      "<audio src=\"music.mp3\" startsound></audio>"
+    ]
+  },
+  {
+    "q": "What will be the effect of adding the 'muted' attribute to a <video> element?",
+    "c": "<video controls muted>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "The video will play without sound",
+      "The video will not play at all",
+      "The video will play with sound enabled by default",
+      "An error will be thrown in the browser console"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to provide text tracks (captions) for a video?",
+    "o": [
+      "<track>",
+      "<caption>",
+      "<subtitles>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <audio> tag specifies that the audio should start playing automatically when the page loads?",
+    "o": [
+      "autoplay",
+      "play",
+      "start",
+      "autostart"
+    ]
+  },
+  {
+    "q": "What is the correct way to define multiple sources for an image to support different screen sizes?",
+    "c": "<picture>\n  <source srcset=\"small.jpg\" media=\"(max-width: 600px)\">\n  <source srcset=\"large.jpg\" media=\"(min-width: 601px)\">\n  <img src=\"fallback.jpg\" alt=\"A responsive image\">\n</picture>",
+    "o": [
+      "The browser will select the appropriate image based on screen width",
+      "All images will load regardless of screen size",
+      "Only 'fallback.jpg' will be displayed",
+      "The browser will show an empty space"
+    ]
+  },
+  {
+    "q": "Which of the following attributes is used to ensure an audio file can be played multiple times without manual intervention?",
+    "o": [
+      "loop",
+      "repeat",
+      "reload",
+      "restart"
+    ]
+  },
+  {
+    "q": "What happens when the following code is executed?",
+    "c": "<video width=\"300\" height=\"200\" controls>\n  <source src=\"clip.mp4\" type=\"video/mp4\">\n  <source src=\"clip.ogg\" type=\"video/ogg\">\n  Your browser does not support the video tag.\n</video>",
+    "o": [
+      "The video will play if a supported format is found",
+      "Only the first <source> tag will be used",
+      "An error message will be displayed",
+      "All source files will play simultaneously"
+    ]
+  },
+  {
+    "q": "Which tag is used to provide a caption for an image or multimedia content?",
+    "o": [
+      "<figcaption>",
+      "<caption>",
+      "<description>",
+      "<subtitle>"
+    ]
+  },
+  {
+    "q": "What will be displayed if an image fails to load and an 'alt' attribute is provided?",
+    "c": "<img src=\"notfound.jpg\" alt=\"Image not available\">",
+    "o": [
+      "The text 'Image not available' will be displayed",
+      "A broken image icon with no text",
+      "A blank space",
+      "An error message in the console"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to specify multiple formats for an audio file?",
+    "o": [
+      "<source>",
+      "<track>",
+      "<format>",
+      "<audioformat>"
+    ]
+  },
+  {
+    "q": "What does the 'controls' attribute do in an <audio> or <video> tag?",
+    "o": [
+      "Displays play, pause, and volume control buttons",
+      "Autoplays the media",
+      "Loops the media",
+      "Hides the media player"
+    ]
+  },
+  {
+    "q": "Which attribute ensures an image is only loaded when it is about to enter the viewport?",
+    "c": "<img src=\"photo.jpg\" alt=\"Lazy loading image\" loading=\"lazy\">",
+    "o": [
+      "loading=\"lazy\"",
+      "preload",
+      "defer",
+      "async"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?",
+    "c": "<audio controls muted>\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "An audio player with muted sound will be displayed",
+      "The audio will not play at all",
+      "The volume will be set to maximum",
+      "An error will be displayed in the browser console"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to embed a video file in a webpage?",
+    "o": [
+      "<video>",
+      "<media>",
+      "<embed>",
+      "<movie>"
+    ]
+  },
+  {
+    "q": "What happens if a browser does not support the <video> tag?",
+    "c": "<video controls>\n  <source src=\"example.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>",
+    "o": [
+      "The text 'Your browser does not support the video tag.' will be displayed",
+      "An error will appear",
+      "The video will try to load but fail silently",
+      "The page will crash"
+    ]
+  },
+  {
+    "q": "Which attribute of the <audio> tag prevents users from manually controlling playback?",
+    "o": [
+      "controls=\"false\"",
+      "disable",
+      "autoplay",
+      "hidden"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?",
+    "c": "<audio controls loop>\n  <source src=\"audio.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "An audio player will appear, and the file will play in a loop",
+      "The audio will play only once",
+      "The file will not load",
+      "A download button will be shown instead of a player"
+    ]
+  },
+  {
+    "q": "Which tag is used to provide text descriptions for a video?",
+    "o": [
+      "<track>",
+      "<caption>",
+      "<subtitle>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "What happens when you add the 'poster' attribute to a <video> tag?",
+    "c": "<video controls poster=\"thumbnail.jpg\">\n  <source src=\"clip.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "A thumbnail image (poster) will be displayed before the video starts",
+      "The video will automatically play the first frame as a thumbnail",
+      "The video will not play",
+      "The poster will remain visible even when the video starts playing"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to embed an external media file such as Flash or PDF?",
+    "o": [
+      "<embed>",
+      "<external>",
+      "<flash>",
+      "<media>"
+    ]
+  },
+  {
+    "q": "Which attribute is used to prevent an image from being displayed if it fails to load?",
+    "o": [
+      "alt",
+      "title",
+      "srcset",
+      "fallback"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?",
+    "c": "<img src=\"photo.jpg\" alt=\"A beautiful scene\" loading=\"lazy\">",
+    "o": [
+      "The image will load only when it is about to be displayed on the screen",
+      "The image will load immediately",
+      "The image will not load at all",
+      "An error will be displayed"
+    ]
+  },
+  {
+    "q": "Which tag is used for embedding YouTube videos in an HTML page?",
+    "o": [
+      "<iframe>",
+      "<video>",
+      "<embed>",
+      "<youtube>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag ensures that the video file is downloaded in advance, improving playback performance?",
+    "o": [
+      "preload",
+      "buffer",
+      "autoplay",
+      "pre-fetch"
+    ]
+  },
+  {
+    "q": "What will be displayed if the following image file fails to load?",
+    "c": "<img src=\"missing.jpg\" alt=\"Image not found\">",
+    "o": [
+      "The text 'Image not found' will be displayed",
+      "An empty space will be shown",
+      "The browser will crash",
+      "A broken image icon with no text"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to add multiple audio sources for better browser compatibility?",
+    "c": "<audio controls>\n  <source src=\"audio.mp3\" type=\"audio/mpeg\">\n  <source src=\"audio.ogg\" type=\"audio/ogg\">\n  Your browser does not support the audio element.\n</audio>",
+    "o": [
+      "The browser will play the first supported format",
+      "Both audio files will play simultaneously",
+      "Only the last source will be used",
+      "An error will be displayed if the first format is unsupported"
+    ]
+  },
+  {
+    "q": "Which attribute in the <img> tag helps improve SEO and accessibility?",
+    "o": [
+      "alt",
+      "title",
+      "description",
+      "tooltip"
+    ]
+  },
+  {
+    "q": "What does the 'muted' attribute do in an HTML video?",
+    "c": "<video controls muted>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "The video will start with no sound",
+      "The video will not play",
+      "The sound will be at 50% volume",
+      "The video will be disabled"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid way to embed an image in HTML?",
+    "o": [
+      "<media src=\"image.jpg\">",
+      "<img src=\"image.jpg\">",
+      "<picture><source srcset=\"image.jpg\"></picture>",
+      "<figure><img src=\"image.jpg\"></figure>"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to provide closed captions for a video?",
+    "o": [
+      "<track>",
+      "<caption>",
+      "<subtitles>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "What happens if the 'autoplay' attribute is set on a video element?",
+    "c": "<video autoplay>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "The video will start playing as soon as it loads",
+      "A play button will appear but require user action",
+      "The video will not load",
+      "A download button will be shown instead"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to group an image with its caption?",
+    "o": [
+      "<figure>",
+      "<figcaption>",
+      "<caption>",
+      "<image-group>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'controls' attribute in a video or audio element?",
+    "o": [
+      "It displays play, pause, and volume controls",
+      "It loops the media",
+      "It disables manual playback",
+      "It forces the media to play automatically"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag allows the user to start playback from the beginning after it ends?",
+    "o": [
+      "loop",
+      "restart",
+      "play-again",
+      "replay"
+    ]
+  },
+  {
+    "q": "What happens when you use multiple <source> elements inside a <video> tag?",
+    "c": "<video controls>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <source src=\"video.webm\" type=\"video/webm\">\n  Your browser does not support the video tag.\n</video>",
+    "o": [
+      "The browser will play the first supported format",
+      "All video sources will play one after another",
+      "The browser will load all formats simultaneously",
+      "None of the sources will be played"
+    ]
+  },
+  {
+    "q": "Which attribute in the <audio> tag makes an audio file start playing as soon as the page loads?",
+    "o": [
+      "autoplay",
+      "start",
+      "play-now",
+      "loop"
+    ]
+  },
+  {
+    "q": "What is the correct way to specify multiple images for different screen sizes?",
+    "c": "<picture>\n  <source srcset=\"image-small.jpg\" media=\"(max-width: 600px)\">\n  <source srcset=\"image-large.jpg\" media=\"(min-width: 601px)\">\n  <img src=\"fallback.jpg\" alt=\"A sample image\">\n</picture>",
+    "o": [
+      "The browser will display the most suitable image based on screen size",
+      "All images will be loaded together",
+      "Only the first <source> image will be used",
+      "The fallback image will always be displayed"
+    ]
+  },
+  {
+    "q": "Which of the following formats is NOT supported by the <audio> tag?",
+    "o": [
+      ".wav",
+      ".mp3",
+      ".ogg",
+      ".exe"
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag is used to specify a default image before the video starts?",
+    "c": "<video controls poster=\"thumbnail.jpg\">\n  <source src=\"clip.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "poster",
+      "preview",
+      "start-image",
+      "background"
+    ]
+  },
+  {
+    "q": "What will be displayed if the browser does not support the <audio> tag?",
+    "c": "<audio controls>\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n  Your browser does not support the audio tag.\n</audio>",
+    "o": [
+      "The text 'Your browser does not support the audio tag.'",
+      "An error message",
+      "An empty space",
+      "A silent player with no functionality"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to define alternative text for an image?",
+    "o": [
+      "alt",
+      "title",
+      "description",
+      "text"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to embed a YouTube video in an HTML page?",
+    "c": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/videoid\" frameborder=\"0\" allowfullscreen></iframe>",
+    "o": [
+      "Using an <iframe> tag with the YouTube embed link",
+      "Using a <video> tag with the YouTube URL",
+      "Using an <embed> tag with the YouTube URL",
+      "Using a <source> tag inside a <video> tag"
+    ]
+  },
+  {
+    "q": "Which of the following attributes in the <audio> or <video> tag hides the player controls?",
+    "o": [
+      "Removing the 'controls' attribute",
+      "Setting controls=\"false\"",
+      "Adding hidden=\"true\"",
+      "Setting display=\"none\""
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag forces the browser to play the video inline instead of fullscreen on mobile devices?",
+    "o": [
+      "playsinline",
+      "fullscreen-disable",
+      "inline-mode",
+      "prevent-fullscreen"
+    ]
+  },
+  {
+    "q": "What will happen if you include an invalid video format inside the <video> tag?",
+    "c": "<video controls>\n  <source src=\"video.xyz\" type=\"video/xyz\">\n</video>",
+    "o": [
+      "The video will not play",
+      "The browser will attempt to convert the format",
+      "An error message will pop up",
+      "The browser will download the file instead"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid image format for the <img> tag?",
+    "o": [
+      ".mp4",
+      ".png",
+      ".jpg",
+      ".webp"
+    ]
+  },
+  {
+    "q": "What does the ‘crossorigin’ attribute do in a media element?",
+    "c": "<video src=\"video.mp4\" crossorigin=\"anonymous\" controls></video>",
+    "o": [
+      "Allows media to be loaded from a different domain",
+      "Forces the media to be encrypted",
+      "Prevents the media from being cached",
+      "Ensures that only logged-in users can view the media"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to provide text descriptions for an <img> inside a <figure> element?",
+    "o": [
+      "<figcaption>",
+      "<caption>",
+      "<title>",
+      "<desc>"
+    ]
+  },
+  {
+    "q": "What happens when the ‘loop’ attribute is set in an <audio> element?",
+    "c": "<audio controls loop>\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "The audio will replay continuously",
+      "The audio will stop after one play",
+      "The browser will play the next audio file",
+      "An error will be thrown"
+    ]
+  },
+  {
+    "q": "Which tag is used to display a video from an external URL like Vimeo or YouTube?",
+    "o": [
+      "<iframe>",
+      "<video>",
+      "<embed>",
+      "<media>"
+    ]
+  },
+  {
+    "q": "What will happen if the ‘muted’ attribute is set on an <audio> element?",
+    "c": "<audio muted>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "The audio will start with no sound",
+      "The audio will not play at all",
+      "The volume will be set to 50%",
+      "The volume slider will be disabled"
+    ]
+  },
+  {
+    "q": "Which CSS property is commonly used to make images responsive in modern web design?",
+    "o": [
+      "max-width: 100%",
+      "display: block",
+      "resize: auto",
+      "image-fit: fill"
+    ]
+  },
+  {
+    "q": "Which of the following attributes prevents a video from playing automatically when the page loads?",
+    "o": [
+      "Removing the 'autoplay' attribute",
+      "Setting autoplay=\"false\"",
+      "Adding stop=\"true\"",
+      "Setting playmode=\"manual\""
+    ]
+  },
+  {
+    "q": "Which attribute in the <video> tag ensures the video will only load metadata without downloading the entire file?",
+    "o": [
+      "preload=\"metadata\"",
+      "preload=\"none\"",
+      "preload=\"auto\"",
+      "preload=\"full\""
+    ]
+  },
+  {
+    "q": "What is the default behavior of the <audio> tag if the 'controls' attribute is omitted?",
+    "c": "<audio>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "The audio will be hidden and cannot be controlled by the user",
+      "The audio will autoplay",
+      "The audio will loop infinitely",
+      "The browser will display an error message"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to provide captions or subtitles for a video?",
+    "c": "<video controls>\n  <track src=\"subtitles.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\">\n</video>",
+    "o": [
+      "<track>",
+      "<caption>",
+      "<subtitles>",
+      "<desc>"
+    ]
+  },
+  {
+    "q": "What happens if you specify multiple <source> elements inside an <audio> tag?",
+    "c": "<audio controls>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n  <source src=\"sound.ogg\" type=\"audio/ogg\">\n</audio>",
+    "o": [
+      "The browser will play the first supported format",
+      "Both audio files will play simultaneously",
+      "The browser will merge both files into one",
+      "An error will occur"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid value for the 'preload' attribute in the <video> tag?",
+    "o": [
+      "preload=\"buffer\"",
+      "preload=\"none\"",
+      "preload=\"metadata\"",
+      "preload=\"auto\""
+    ]
+  },
+  {
+    "q": "Which attribute in the <img> tag provides a text alternative in case the image does not load?",
+    "c": "<img src=\"photo.jpg\" alt=\"A scenic mountain view\">",
+    "o": [
+      "alt",
+      "title",
+      "desc",
+      "text"
+    ]
+  },
+  {
+    "q": "Which of the following HTML5 elements is used to wrap media elements such as <img> and provide a descriptive caption?",
+    "o": [
+      "<figure>",
+      "<media>",
+      "<container>",
+      "<image>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the ‘poster’ attribute in the <video> tag?",
+    "c": "<video controls poster=\"preview.jpg\">\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "To display an image before the video plays",
+      "To replace the video file if it fails to load",
+      "To set the video as a background",
+      "To show subtitles before the video starts"
+    ]
+  },
+  {
+    "q": "Which CSS property ensures that an image scales proportionally to fit within its container?",
+    "o": [
+      "object-fit: cover",
+      "image-scale: fit",
+      "scale-mode: proportional",
+      "fit-image: auto"
+    ]
+  },
+  {
+    "q": "What will happen if the ‘controls’ attribute is not included in an <audio> tag?",
+    "c": "<audio>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "The user cannot play or pause the audio",
+      "The audio will loop indefinitely",
+      "The browser will display a default play button",
+      "The audio will not load at all"
+    ]
+  },
+  {
+    "q": "Which attribute ensures an <audio> file starts playing automatically when the page loads?",
+    "c": "<audio autoplay>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "autoplay",
+      "play",
+      "start",
+      "loop"
+    ]
+  },
+  {
+    "q": "What is the purpose of the ‘muted’ attribute in a <video> element?",
+    "c": "<video muted>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "The video starts with no sound",
+      "The video cannot play sound at all",
+      "The video volume is locked at 50%",
+      "The mute button is disabled"
+    ]
+  },
+  {
+    "q": "Which of the following media formats is NOT supported by the <video> tag?",
+    "o": [
+      ".wmv",
+      ".mp4",
+      ".webm",
+      ".ogg"
+    ]
+  },
+  {
+    "q": "Which attribute allows an <audio> or <video> element to start loading before being played?",
+    "c": "<video preload=\"auto\">\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "preload",
+      "buffer",
+      "load",
+      "fetch"
+    ]
+  },
+  {
+    "q": "Which HTML element should be used to provide multiple image formats for better browser compatibility?",
+    "c": "<picture>\n  <source srcset=\"image.webp\" type=\"image/webp\">\n  <source srcset=\"image.jpg\" type=\"image/jpeg\">\n  <img src=\"fallback.jpg\" alt=\"A beautiful landscape\">\n</picture>",
+    "o": [
+      "<picture>",
+      "<source>",
+      "<figure>",
+      "<media>"
+    ]
+  },
+  {
+    "q": "What does the ‘loop’ attribute do in the <video> element?",
+    "c": "<video loop>\n  <source src=\"clip.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "The video restarts automatically after finishing",
+      "The video plays in reverse after finishing",
+      "The video plays only once",
+      "The browser crashes when it reaches the end"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify an image that represents a video before it starts playing?",
+    "c": "<video poster=\"preview.jpg\">\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "poster",
+      "preview",
+      "thumbnail",
+      "background"
+    ]
+  },
+  {
+    "q": "What will happen if the ‘controls’ attribute is not included in a <video> tag?",
+    "c": "<video>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "The user cannot play, pause, or seek the video",
+      "The video will automatically play",
+      "The browser will display an error",
+      "The video will loop by default"
+    ]
+  },
+  {
+    "q": "Which CSS property is used to maintain an image’s aspect ratio while fitting it inside a container?",
+    "o": [
+      "object-fit: contain",
+      "background-size: stretch",
+      "image-scale: fit",
+      "size-mode: proportional"
+    ]
+  },
+  {
+    "q": "Which HTML5 element is used to group an image with a caption?",
+    "o": [
+      "<figure>",
+      "<caption>",
+      "<group>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "Which HTML attribute prevents a video from displaying controls like play and pause buttons?",
+    "c": "<video>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "Omitting the 'controls' attribute",
+      "Adding 'controls=\"false\"'",
+      "Using 'controls=\"hidden\"'",
+      "Setting 'controls' to 'none'"
+    ]
+  },
+  {
+    "q": "Which audio format is widely supported across modern browsers?",
+    "o": [
+      ".mp3",
+      ".wav",
+      ".flac",
+      ".aac"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid way to embed a video in HTML?",
+    "o": [
+      "<video src=\"video.mp4\"></video>",
+      "<embed src=\"video.mp4\">",
+      "<source src=\"video.mp4\">",
+      "<iframe src=\"video.mp4\"></iframe>"
+    ]
+  },
+  {
+    "q": "What happens if multiple <source> elements are provided in a <video> tag?",
+    "c": "<video>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <source src=\"video.ogg\" type=\"video/ogg\">\n</video>",
+    "o": [
+      "The browser plays the first supported format",
+      "All sources play simultaneously",
+      "The browser asks the user to choose a format",
+      "The video will not play at all"
+    ]
+  },
+  {
+    "q": "Which attribute forces an audio file to start over automatically when it ends?",
+    "c": "<audio loop>\n  <source src=\"music.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "loop",
+      "restart",
+      "repeat",
+      "autoplay"
+    ]
+  },
+  {
+    "q": "Which tag is used to provide a caption for an image inside a <figure> element?",
+    "c": "<figure>\n  <img src=\"photo.jpg\" alt=\"A beach view\">\n  <figcaption>A beautiful beach</figcaption>\n</figure>",
+    "o": [
+      "<figcaption>",
+      "<caption>",
+      "<legend>",
+      "<desc>"
+    ]
+  },
+  {
+    "q": "Which of the following is the best way to add an accessible description to an image?",
+    "c": "<img src=\"landscape.jpg\" alt=\"A scenic mountain landscape\">",
+    "o": [
+      "Using the 'alt' attribute",
+      "Adding a 'desc' attribute",
+      "Using a 'tooltip' attribute",
+      "Embedding text inside the image"
+    ]
+  },
+  {
+    "q": "Which property allows a background image to maintain its aspect ratio while covering the full container?",
+    "o": [
+      "background-size: cover",
+      "object-fit: contain",
+      "image-scale: stretch",
+      "size-mode: auto"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to embed a YouTube video using HTML?",
+    "c": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/example\" frameborder=\"0\" allowfullscreen></iframe>",
+    "o": [
+      "Using the <iframe> tag",
+      "Using the <video> tag",
+      "Using the <embed> tag",
+      "Using the <source> tag"
+    ]
+  },
+  {
+    "q": "Which <video> attribute ensures that a video plays in the background without controls?",
+    "c": "<video autoplay loop muted>\n  <source src=\"background.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "autoplay loop muted",
+      "controls loop autoplay",
+      "muted hidden controls",
+      "loop pause mute"
+    ]
+  },
+  {
+    "q": "Which attribute is used to prevent users from downloading an audio file?",
+    "c": "<audio controls controlsList=\"nodownload\">\n  <source src=\"music.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "controlsList=\"nodownload\"",
+      "disable=\"download\"",
+      "restrictDownload=\"true\"",
+      "disableDownload=\"true\""
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid video format for the <video> element?",
+    "o": [
+      ".flv",
+      ".mp4",
+      ".ogg",
+      ".webm"
+    ]
+  },
+  {
+    "q": "What will happen if the ‘poster’ attribute is missing in a <video> element?",
+    "c": "<video>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "The first frame of the video will be displayed",
+      "The video will not play",
+      "The browser will display an error",
+      "The video will load instantly"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to embed external media, such as YouTube videos?",
+    "o": [
+      "<iframe>",
+      "<video>",
+      "<embed>",
+      "<object>"
+    ]
+  },
+  {
+    "q": "Which CSS property ensures an image fits within a container without distortion?",
+    "o": [
+      "object-fit: contain",
+      "background-size: cover",
+      "image-fit: auto",
+      "scale: preserve"
+    ]
+  },
+  {
+    "q": "Which attribute of the <video> element allows users to seek the video position?",
+    "c": "<video controls>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "controls",
+      "seek",
+      "position",
+      "scroll"
+    ]
+  },
+  {
+    "q": "Which of the following methods can be used to play an audio file with JavaScript?",
+    "c": "let audio = document.getElementById(\"myAudio\");\naudio.play();",
+    "o": [
+      "audio.play();",
+      "audio.start();",
+      "audio.run();",
+      "audio.resume();"
+    ]
+  },
+  {
+    "q": "Which attribute is used to display alternative text if an image cannot be loaded?",
+    "c": "<img src=\"photo.jpg\" alt=\"A sunset over the mountains\">",
+    "o": [
+      "alt",
+      "title",
+      "desc",
+      "tooltip"
+    ]
+  },
+  {
+    "q": "Which attribute should be used to specify multiple images for different screen resolutions?",
+    "c": "<img src=\"default.jpg\" srcset=\"small.jpg 480w, medium.jpg 1024w, large.jpg 1920w\" sizes=\"(max-width: 600px) 480px, (max-width: 1200px) 1024px, 1920px\">",
+    "o": [
+      "srcset",
+      "alt",
+      "image-fit",
+      "responsive"
+    ]
+  },
+  {
+    "q": "Which element is used to provide captions for a <video>?",
+    "c": "<track kind=\"subtitles\" src=\"captions.vtt\" srclang=\"en\" label=\"English\">",
+    "o": [
+      "<track>",
+      "<caption>",
+      "<subtitle>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "Which attribute is used to start playing an audio file automatically when the page loads?",
+    "c": "<audio autoplay>\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "autoplay",
+      "play",
+      "start",
+      "loop"
+    ]
+  },
+  {
+    "q": "Which video format is NOT widely supported by modern browsers?",
+    "o": [
+      ".avi",
+      ".mp4",
+      ".webm",
+      ".ogg"
+    ]
+  },
+  {
+    "q": "What happens if a browser does not support the video formats provided inside the <video> element?",
+    "c": "<video>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <source src=\"video.ogg\" type=\"video/ogg\">\n  Your browser does not support the video tag.\n</video>",
+    "o": [
+      "The text inside the <video> tag will be displayed",
+      "The browser will attempt to download the video",
+      "The video will play in an external player",
+      "The page will crash"
+    ]
+  },
+  {
+    "q": "Which element should be used to provide descriptions for an image inside a <figure>?",
+    "c": "<figure>\n  <img src=\"image.jpg\" alt=\"Sunset\">\n  <figcaption>Sunset over the ocean</figcaption>\n</figure>",
+    "o": [
+      "<figcaption>",
+      "<caption>",
+      "<desc>",
+      "<label>"
+    ]
+  },
+  {
+    "q": "Which CSS property allows a background image to remain fixed while scrolling?",
+    "o": [
+      "background-attachment: fixed",
+      "background-position: fixed",
+      "image-scroll: none",
+      "scroll-behavior: static"
+    ]
+  },
+  {
+    "q": "Which method is used in JavaScript to pause an audio element?",
+    "c": "let audio = document.getElementById(\"myAudio\");\naudio.pause();",
+    "o": [
+      "audio.pause();",
+      "audio.stop();",
+      "audio.halt();",
+      "audio.freeze();"
+    ]
+  },
+  {
+    "q": "Which attribute of the <video> element mutes the audio by default?",
+    "c": "<video muted>\n  <source src=\"clip.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "muted",
+      "disable-sound",
+      "silence",
+      "autostop"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to embed an SVG image?",
+    "c": "<svg width=\"100\" height=\"100\">\n  <circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"black\" stroke-width=\"3\" fill=\"red\" />\n</svg>",
+    "o": [
+      "<svg>",
+      "<img>",
+      "<vector>",
+      "<graphic>"
+    ]
+  },
+  {
+    "q": "Which attribute ensures that an image is responsive and scales down on smaller screens?",
+    "c": "<img src=\"image.jpg\" style=\"max-width: 100%; height: auto;\">",
+    "o": [
+      "max-width: 100%; height: auto;",
+      "scale: auto;",
+      "image-resize: responsive;",
+      "resize-mode: fit;"
+    ]
+  },
+  {
+    "q": "Which attribute of the <track> element specifies that the text is in subtitle format?",
+    "c": "<track kind=\"subtitles\" src=\"subtitles.vtt\" srclang=\"en\">",
+    "o": [
+      "kind=\"subtitles\"",
+      "type=\"caption\"",
+      "format=\"text\"",
+      "role=\"subtitle\""
+    ]
+  },
+  {
+    "q": "Which attribute of the <video> element allows it to start over after finishing?",
+    "c": "<video loop>\n  <source src=\"clip.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "loop",
+      "restart",
+      "autoplay",
+      "replay"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to specify an alternative text for an image?",
+    "c": "<img src=\"photo.jpg\" alt=\"A beautiful landscape\">",
+    "o": [
+      "alt",
+      "title",
+      "description",
+      "caption"
+    ]
+  },
+  {
+    "q": "Which JavaScript property can be used to change the playback speed of a video?",
+    "c": "document.getElementById(\"myVideo\").playbackRate = 2.0;",
+    "o": [
+      "playbackRate",
+      "speed",
+      "videoSpeed",
+      "rateControl"
+    ]
+  },
+  {
+    "q": "Which element is used to embed a YouTube video on a webpage?",
+    "c": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/video_id\" allowfullscreen></iframe>",
+    "o": [
+      "<iframe>",
+      "<video>",
+      "<embed>",
+      "<object>"
+    ]
+  },
+  {
+    "q": "What will happen if multiple <source> elements are provided inside a <video> tag?",
+    "c": "<video>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <source src=\"video.ogg\" type=\"video/ogg\">\n</video>",
+    "o": [
+      "The browser will use the first compatible source",
+      "All video sources will be played simultaneously",
+      "The browser will show an error",
+      "The last <source> element will be used"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to pause a video using JavaScript?",
+    "c": "document.getElementById(\"myVideo\").pause();",
+    "o": [
+      "video.pause();",
+      "video.stop();",
+      "video.halt();",
+      "video.break();"
+    ]
+  },
+  {
+    "q": "Which attribute is used to make an audio file loop continuously?",
+    "c": "<audio loop>\n  <source src=\"music.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "loop",
+      "repeat",
+      "autoplay",
+      "continuous"
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid MIME type for the <audio> element?",
+    "o": [
+      "audio/x-ms-wma",
+      "audio/mp3",
+      "audio/wav",
+      "audio/ogg"
+    ]
+  },
+  {
+    "q": "Which of the following attributes should be used to make an image responsive?",
+    "c": "<img src=\"image.jpg\" style=\"width: 100%; height: auto;\">",
+    "o": [
+      "width: 100%; height: auto;",
+      "resize: responsive;",
+      "object-fit: fill;",
+      "display: flex;"
+    ]
+  },
+  {
+    "q": "Which attribute allows users to see a preview image before a video plays?",
+    "c": "<video poster=\"preview.jpg\">\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "poster",
+      "thumbnail",
+      "preview",
+      "image"
+    ]
+  },
+  {
+    "q": "Which attribute ensures that the audio file will start playing without requiring user interaction?",
+    "c": "<audio autoplay>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "autoplay",
+      "play",
+      "start",
+      "loop"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define multiple sources for an image?",
+    "c": "<picture>\n  <source srcset=\"image-large.jpg\" media=\"(min-width: 800px)\">\n  <img src=\"image-small.jpg\" alt=\"Example image\">\n</picture>",
+    "o": [
+      "<picture>",
+      "<source>",
+      "<multiimg>",
+      "<responsive>"
+    ]
+  },
+  {
+    "q": "What will happen if the browser does not support the audio format specified in the first <source> tag?",
+    "c": "<audio>\n  <source src=\"audio.ogg\" type=\"audio/ogg\">\n  <source src=\"audio.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "It will try the next <source> tag until a supported format is found",
+      "It will stop loading the audio",
+      "It will display an error message",
+      "The browser will crash"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify an image description for accessibility?",
+    "c": "<img src=\"photo.jpg\" alt=\"A beautiful mountain landscape\">",
+    "o": [
+      "alt",
+      "title",
+      "caption",
+      "desc"
+    ]
+  },
+  {
+    "q": "Which element is used to display subtitles in a video?",
+    "c": "<track kind=\"subtitles\" src=\"subtitles.vtt\" srclang=\"en\">",
+    "o": [
+      "<track>",
+      "<subtitles>",
+      "<caption>",
+      "<text>"
+    ]
+  },
+  {
+    "q": "Which JavaScript property is used to determine the current playback position of a video?",
+    "c": "let position = document.getElementById(\"myVideo\").currentTime;",
+    "o": [
+      "currentTime",
+      "playbackTime",
+      "videoPosition",
+      "seekTime"
+    ]
+  },
+  {
+    "q": "Which attribute should be used in the <audio> tag to provide playback controls to users?",
+    "c": "<audio controls>\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n</audio>",
+    "o": [
+      "controls",
+      "play",
+      "user-control",
+      "enable-buttons"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to specify multiple sources for a <video> element?",
+    "c": "<video>\n  <source src=\"video.mp4\" type=\"video/mp4\">\n  <source src=\"video.webm\" type=\"video/webm\">\n</video>",
+    "o": [
+      "Using multiple <source> elements inside the <video> tag",
+      "Adding multiple URLs in the src attribute",
+      "Using <video> inside <picture>",
+      "Using a <div> wrapper around the video"
+    ]
+  },
+  {
+    "q": "Which attribute of the <video> element ensures that it is muted when loaded?",
+    "c": "<video muted>\n  <source src=\"clip.mp4\" type=\"video/mp4\">\n</video>",
+    "o": [
+      "muted",
+      "silence",
+      "disable-sound",
+      "mute"
+    ]
+  },
+  {
+    "q": "Which JavaScript method is used to play an HTML5 audio element?",
+    "c": "document.getElementById(\"myAudio\").play();",
+    "o": [
+      "play()",
+      "start()",
+      "begin()",
+      "run()"
+    ]
+  }
+]

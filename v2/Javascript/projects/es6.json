@@ -1,0 +1,102 @@
+[
+  {
+    "title": "Using let and const",
+    "ques": "What will be the output of the following JavaScript code?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function testScope() {\n  let x = 10;\n  if (true) {\n    let x = 20;\n    console.log(x); \n  }\n  console.log(x);\n}\ntestScope();"
+    },
+    "explanation": "In the function ***testScope()***:\n\n- The variable ***x*** is declared using ***let*** with a value of ***10***.\n- Inside the ***if*** block, another ***x*** is declared using ***let*** and assigned ***20***.\n- ***console.log(x)*** inside the ***if*** block prints ***20*** because ***let*** creates a block-scoped variable.\n- Outside the ***if*** block, the original ***x*** remains ***10***, so the second ***console.log(x)*** prints ***10***.\n\n**Output:**\n```\n20\n10\n```"
+  },
+  {
+    "title": "Template Literals",
+    "ques": "How do template literals improve string concatenation in JavaScript?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const name = \"Alice\";\nconst age = 25;\nconsole.log(`My name is ${name} and I am ${age} years old.`);"
+    },
+    "explanation": "- Template literals use ***backticks (`)*** instead of quotes for strings.\n- They allow embedding expressions using ***${expression}*** inside the string.\n- This eliminates the need for ***string concatenation (+)*** and makes the code more readable.\n\n**Output:**\n```\nMy name is Alice and I am 25 years old.\n```"
+  },
+  {
+    "title": "Spread Operator",
+    "ques": "How does the spread operator work with arrays?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const arr1 = [1, 2, 3];\nconst arr2 = [4, 5, 6];\nconst mergedArray = [...arr1, ...arr2];\nconsole.log(mergedArray);"
+    },
+    "explanation": "- The ***spread operator (...)*** expands an array's elements individually.\n- ***arr1*** and ***arr2*** are two separate arrays.\n- ***mergedArray*** uses ***...arr1*** and ***...arr2*** to merge both arrays.\n- The resulting array is a new array ***[1, 2, 3, 4, 5, 6]***.\n\n**Output:**\n```\n[1, 2, 3, 4, 5, 6]\n```"
+  },
+  {
+    "title": "Rest Parameters",
+    "ques": "How does the rest parameter work in function arguments?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function sum(...numbers) {\n  return numbers.reduce((acc, num) => acc + num, 0);\n}\nconsole.log(sum(1, 2, 3, 4, 5));"
+    },
+    "explanation": "- The ***rest parameter (...numbers)*** collects all function arguments into an array.\n- The ***reduce()*** method is used to sum up all numbers.\n- The function can accept any number of arguments dynamically.\n\n**Output:**\n```\n15\n```"
+  },
+  {
+    "title": "Modules (Export & Import)",
+    "ques": "How do you export and import a function in ES6 modules?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// math.js\nexport function add(a, b) {\n  return a + b;\n}\n\n// main.js\nimport { add } from \"./math.js\";\nconsole.log(add(2, 3));"
+    },
+    "explanation": "- In ***math.js***, the ***add()*** function is exported using the ***export*** keyword.\n- In ***main.js***, the function is imported using ***import { add } from \"./math.js\"***.\n- The function is then used to calculate ***2 + 3***.\n\n**Output:**\n```\n5\n```"
+  },
+  {
+    "title": "Block Scope with let & const",
+    "ques": "What will be the output of the following JavaScript code?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "let count = 5;\nif (true) {\n  const count = 10;\n  console.log(count);\n}\nconsole.log(count);"
+    },
+    "explanation": "- The ***count*** variable is first declared using ***let*** with a value of ***5***.\n- Inside the ***if*** block, a new ***count*** variable is declared using ***const*** with a value of ***10***.\n- Since ***const*** is block-scoped, the first ***console.log(count)*** prints ***10***.\n- Outside the block, the original ***count*** remains ***5***.\n\n**Output:**\n```\n10\n5\n```"
+  },
+  {
+    "title": "Using Template Literals for Multi-line Strings",
+    "ques": "Rewrite the following code using template literals for better readability:",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const message = `Hello!\nWelcome to JavaScript ES6.\nLet's learn something new.`;\nconsole.log(message);"
+    },
+    "explanation": "- Template literals allow multi-line strings using ***backticks (`)*** instead of concatenating strings with ***\\n***.\n- This makes the code cleaner and more readable.\n- The string prints as written, maintaining line breaks.\n\n**Output:**\n```\nHello!\nWelcome to JavaScript ES6.\nLet's learn something new.\n```"
+  },
+  {
+    "title": "Using Spread Operator to Copy and Modify Arrays",
+    "ques": "What will be the output of the following JavaScript code?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const original = [1, 2, 3];\nconst modified = [...original, 4, 5];\nconsole.log(modified);"
+    },
+    "explanation": "- The ***spread operator (...)*** is used to create a copy of ***original***.\n- The new array ***modified*** includes all elements of ***original*** plus ***4*** and ***5***.\n- This method ensures immutability by avoiding modification of the original array.\n\n**Output:**\n```\n[1, 2, 3, 4, 5]\n```"
+  },
+  {
+    "title": "Rest Parameters in Function Arguments",
+    "ques": "Modify the function below to accept any number of arguments and return the highest value.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function maxNumber(...nums) {\n  return Math.max(...nums);\n}\nconsole.log(maxNumber(3, 7, 2, 9, 5));"
+    },
+    "explanation": "- The ***rest parameter (...nums)*** collects all arguments into an array.\n- The ***Math.max()*** function is used to find the highest value.\n- The spread operator is used inside ***Math.max()*** to pass array elements as arguments.\n\n**Output:**\n```\n9\n```"
+  },
+  {
+    "title": "Default Export in Modules",
+    "ques": "How do you use default export in ES6 modules?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// math.js\nexport default function multiply(a, b) {\n  return a * b;\n}\n\n// main.js\nimport multiply from \"./math.js\";\nconsole.log(multiply(4, 3));"
+    },
+    "explanation": "- The function ***multiply()*** is exported as the ***default export***.\n- In ***main.js***, it is imported without curly braces.\n- The function is then used to calculate ***4 * 3***.\n\n**Output:**\n```\n12\n```"
+  }
+]
