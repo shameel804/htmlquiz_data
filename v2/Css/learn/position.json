@@ -1,0 +1,53 @@
+{
+    "id": "position",
+    "topicId": "position",
+    "topicTitle": "Positioning",
+    "description": "Master layout control with relative, absolute, fixed, and sticky positioning.",
+    "baseKP": 70,
+    "slides": [
+        {
+            "id": "pos_1",
+            "type": "content",
+            "title": "Static and Relative",
+            "content": "# CSS Positioning 📍\n\nThe `position` property specifies the type of positioning method used for an element.\n\n## Static (Default)\nNormal flow. `top`, `bottom`, `left`, `right` have no effect.\n\n## Relative\nPositioned relative to its **normal position**.\n```css\n.box {\n  position: relative;\n  left: 20px; /* Moves 20px from where it SHOULD be */\n  top: 10px;\n}\n```\nLeaves a gap where it used to be."
+        },
+        {
+            "id": "pos_2",
+            "type": "content",
+            "title": "Absolute Position",
+            "content": "# Absolute Positioning 📌\n\nRemoved from normal flow (no gap left behind).\n\nPositioned relative to the nearest **positioned ancestor** (an ancestor with `relative`, `absolute`, or `fixed` - not `static`).\n\n```css\n.container { position: relative; }\n.child {\n  position: absolute;\n  top: 0;\n  right: 0;\n}\n```\nThis places `.child` in the top-right corner of `.container`. If no ancestor is positioned, it relates to the body."
+        },
+        {
+            "id": "pos_quiz_1",
+            "type": "quiz",
+            "title": "Position Quiz",
+            "content": "Which position value makes an element stay in the viewport?",
+            "quizQuestion": "Which position value keeps the element in the same place even when scrolling?",
+            "quizOptions": [
+                "absolute",
+                "relative",
+                "static",
+                "fixed"
+            ],
+            "correctOptionIndex": 3
+        },
+        {
+            "id": "pos_3",
+            "type": "content",
+            "title": "Fixed and Sticky",
+            "content": "# Fixed & Sticky 📌\n\n## Fixed\nPositioned relative to the **viewport** (browser window). It stays there when you scroll!\n```css\n.navbar {\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n}\n```\n\n## Sticky\nToggles between relative and fixed depending on scroll position.\n```css\n.header {\n  position: sticky;\n  top: 0;\n}\n```\nActs normal until you scroll to it, then it \"sticks\" to the top."
+        },
+        {
+            "id": "pos_4",
+            "type": "content",
+            "title": "Z-Index",
+            "content": "# Z-Index (Stack Order) 📚\n\nWhen elements overlap, `z-index` decides which one is on top.\n\n- Must have a `position` (anything but static).\n- Higher number = on top.\n\n```css\n.img { \n  position: absolute;\n  z-index: -1; /* Behind text */\n}\n.text {\n  position: relative;\n  z-index: 1; /* In front */\n}\n```"
+        },
+        {
+            "id": "pos_5",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Positioning Recap 📍\n\n- ✅ **Static**: Default flow\n- ✅ **Relative**: Offset from normal position\n- ✅ **Absolute**: Specific spot inside a parent\n- ✅ **Fixed**: Stuck to screen (viewport)\n- ✅ **Sticky**: Scrolls then sticks\n- ✅ **Z-Index**: Controls vertical stacking\n\n> 🚀 **Next:** The modern layout king: **Flexbox & Grid**!"
+        }
+    ]
+}

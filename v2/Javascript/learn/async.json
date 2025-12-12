@@ -1,0 +1,47 @@
+{
+    "id": "async",
+    "topicId": "async",
+    "topicTitle": "Asynchronous JavaScript",
+    "description": "Handle operations that take time, using Promises and Async/Await.",
+    "baseKP": 85,
+    "slides": [
+        {
+            "id": "async_1",
+            "type": "content",
+            "title": "Synchronous vs Asynchronous",
+            "content": "# Async Programming ⏳\n\n## Synchronous\nCode runs line by line. If one line takes 5 seconds, everything waits.\n\n## Asynchronous\nLong tasks start, and code continues running. The task notifies when done.\n\n```javascript\nconsole.log(\"Start\");\nsetTimeout(() => {\n  console.log(\"Delayed\");\n}, 2000);\nconsole.log(\"End\");\n\n// Output: Start -> End -> Delayed\n```"
+        },
+        {
+            "id": "async_2",
+            "type": "content",
+            "title": "Promises",
+            "content": "# Promises 🤞\n\nAn object representing a future value.\n\n```javascript\nconst fetchData = new Promise((resolve, reject) => {\n  // Simulating network request\n  let success = true;\n  if (success) resolve(\"Data loaded\");\n  else reject(\"Error loading\");\n});\n\nfetchData\n  .then(data => console.log(data))\n  .catch(error => console.error(error));\n```"
+        },
+        {
+            "id": "async_3",
+            "type": "content",
+            "title": "Async/Await",
+            "content": "# Async / Await ⚡\n\nSyntactic sugar for Promises. Makes async code look synchronous!\n\n```javascript\nasync function getData() {\n  try {\n    const response = await fetch(\"https://api.example.com/data\");\n    const data = await response.json();\n    console.log(data);\n  } catch (error) {\n    console.log(\"Something went wrong\");\n  }\n}\n```\n\n- `async`: Helper keyword for functions\n- `await`: Pauses execution until Promise resolves"
+        },
+        {
+            "id": "async_quiz_1",
+            "type": "quiz",
+            "title": "Async Quiz",
+            "content": "What keyword pauses execution inside an async function?",
+            "quizQuestion": "Which keyword pauses execution inside an async function until a Promise resolves?",
+            "quizOptions": [
+                "wait",
+                "pause",
+                "await",
+                "then"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "async_4",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Async Recap ⏳\n\n- ✅ **Callbacks**: Only function passed to another (Old way)\n- ✅ **Promises**: Cleaner handling of success/failure\n- ✅ **Async/Await**: Modern, readable async code\n- ✅ **Try/Catch**: Essential for handling async errors\n\n> 🚀 **Next:** Handle bugs gracefully with **Error Handling**!"
+        }
+    ]
+}

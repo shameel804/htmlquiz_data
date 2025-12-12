@@ -1,0 +1,47 @@
+{
+    "id": "es6",
+    "topicId": "es6",
+    "topicTitle": "ES6+ Features",
+    "description": "Modern JavaScript features: Destructuring, Spread, Template Literals.",
+    "baseKP": 80,
+    "slides": [
+        {
+            "id": "es6_1",
+            "type": "content",
+            "title": "Template Literals",
+            "content": "# Template Literals 📜\n\nBackticks (` `) allow variables in strings.\n\n```javascript\nconst name = \"Alice\";\nconst age = 25;\n\n// Old\nconsole.log(\"User \" + name + \" is \" + age);\n\n// ES6\nconsole.log(`User ${name} is ${age}`);\n```\n\nAlso supports multi-line strings!"
+        },
+        {
+            "id": "es6_2",
+            "type": "content",
+            "title": "Destructuring",
+            "content": "# Destructuring ✂️\n\nUnpack values from arrays or objects easily.\n\n```javascript\n// Object\nconst user = { name: \"Bob\", role: \"Admin\" };\nconst { name, role } = user;\nconsole.log(role); // \"Admin\"\n\n// Array\nconst rgb = [255, 0, 0];\nconst [red, green, blue] = rgb;\n```"
+        },
+        {
+            "id": "es6_3",
+            "type": "content",
+            "title": "Spread and Rest",
+            "content": "# Spread & Rest `...` 🧂\n\n## Spread\nExpands array/object properties.\n```javascript\nconst arr1 = [1, 2];\nconst arr2 = [...arr1, 3, 4]; // [1, 2, 3, 4]\n```\n\n## Rest\nCommences remaining arguments into an array.\n```javascript\nfunction sum(...numbers) {\n  return numbers.reduce((a, b) => a + b);\n}\n```"
+        },
+        {
+            "id": "es6_quiz_1",
+            "type": "quiz",
+            "title": "ES6 Quiz",
+            "content": "What syntax is used for template literals?",
+            "quizQuestion": "Which character allows string interpolation in JS?",
+            "quizOptions": [
+                "' (Single Quote)",
+                "\" (Double Quote)",
+                "` (Backtick)",
+                "$ (Dollar)"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "es6_4",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Modern JS Recap 🌟\n\n- ✅ **Template Literals**: `${expression}` inside backticks\n- ✅ **Destructuring**: Extracting vars `{ x } = obj`\n- ✅ **Spread**: Copying/Expanding `...arr`\n- ✅ **Modules**: `import`/`export` (for organizing code)\n\n> 🚀 **Next:** Handle time with **Asynchronous JavaScript**!"
+        }
+    ]
+}

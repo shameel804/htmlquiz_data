@@ -1,0 +1,47 @@
+{
+    "id": "obj",
+    "topicId": "obj",
+    "topicTitle": "Objects and Arrays",
+    "description": "Master structured data with Objects and Arrays.",
+    "baseKP": 65,
+    "slides": [
+        {
+            "id": "obj_1",
+            "type": "content",
+            "title": "Objects",
+            "content": "# Objects 🗂️\n\nKey-value pairs to represent entities.\n\n```javascript\nconst car = {\n  brand: \"Tesla\",\n  model: \"Model 3\",\n  year: 2023,\n  start: function() {\n    console.log(\"Vroom!\");\n  }\n};\n\nconsole.log(car.brand); // Dot notation\nconsole.log(car[\"model\"]); // Bracket notation\ncar.start();\n```"
+        },
+        {
+            "id": "obj_2",
+            "type": "content",
+            "title": "Arrays",
+            "content": "# Arrays 📚\n\nOrdered lists of data.\n\n```javascript\nconst fruits = [\"Apple\", \"Banana\", \"Cherry\"];\n\nconsole.log(fruits[0]); // \"Apple\"\nconsole.log(fruits.length); // 3\n\nfruits.push(\"Date\"); // Add to end\nfruits.pop(); // Remove from end\n```"
+        },
+        {
+            "id": "obj_3",
+            "type": "content",
+            "title": "Array Methods",
+            "content": "# High-Order Methods 🛠️\n\nModern ways to loop and transform arrays.\n\n```javascript\nconst nums = [1, 2, 3];\n\n// forEach: Loop\nnums.forEach(n => console.log(n));\n\n// map: Transform (creates new array)\nconst doubled = nums.map(n => n * 2); // [2, 4, 6]\n\n// filter: Select subset\nconst big = nums.filter(n => n > 1); // [2, 3]\n```"
+        },
+        {
+            "id": "obj_quiz_1",
+            "type": "quiz",
+            "title": "Array Quiz",
+            "content": "Which method adds an item to the END of an array?",
+            "quizQuestion": "Which method adds an item to the END of an array?",
+            "quizOptions": [
+                "append()",
+                "push()",
+                "add()",
+                "unshift()"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "obj_4",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Data Structs Recap 🏗️\n\n- ✅ **Objects**: Key-Value properties (`{}`) for things\n- ✅ **Arrays**: Ordered lists (`[]`) for collections\n- ✅ **Map/Filter**: Powerful tools for data manipulation\n- ✅ **`this`**: Keyword to access object properties inside methods\n\n> 🚀 **Next:** Level up with modern **ES6+ Features**!"
+        }
+    ]
+}

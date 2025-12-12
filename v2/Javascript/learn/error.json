@@ -1,0 +1,41 @@
+{
+    "id": "error",
+    "topicId": "error",
+    "topicTitle": "Error Handling",
+    "description": "Catch and handle errors gracefully using Try-Catch.",
+    "baseKP": 65,
+    "slides": [
+        {
+            "id": "error_1",
+            "type": "content",
+            "title": "Try Catch",
+            "content": "# Try...Catch 🥅\n\nDon't let your app crash! Catch errors.\n\n```javascript\ntry {\n  // Code that might fail\n  let x = y + 1; // y is not defined\n} catch (error) {\n  // Code that runs if error occurs\n  console.log(\"An error occurred: \" + error.message);\n}\n```\n\n## Finally\nRuns regardless of result (cleanup).\n```javascript\nfinally {\n  console.log(\"Done\");\n}\n```"
+        },
+        {
+            "id": "error_2",
+            "type": "content",
+            "title": "Throwing Errors",
+            "content": "# Throwing Errors ⚾\n\nYou can manually trigger errors.\n\n```javascript\nfunction checkAge(age) {\n  if (age < 18) {\n    throw new Error(\"Access Denied: Too young\");\n  }\n  return \"Access Granted\";\n}\n\ntry {\n  checkAge(15);\n} catch (e) {\n  console.error(e.message);\n}\n```"
+        },
+        {
+            "id": "error_quiz_1",
+            "type": "quiz",
+            "title": "Error Quiz",
+            "content": "Which block runs regardless of success or failure?",
+            "quizQuestion": "Which block ALWAYS runs after try/catch, regardless of whether an error occurred?",
+            "quizOptions": [
+                "always",
+                "finally",
+                "done",
+                "then"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "error_3",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Error Recap ⛑️\n\n- ✅ **`try`**: Wrap risky code\n- ✅ **`catch`**: Handle the error object\n- ✅ **`finally`**: Cleanup code (optional)\n- ✅ **`throw`**: Create custom errors\n\n> 🚀 **Next:** Connect to the world with **APIs**!"
+        }
+    ]
+}

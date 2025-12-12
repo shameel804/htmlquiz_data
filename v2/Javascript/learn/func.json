@@ -1,0 +1,47 @@
+{
+    "id": "func",
+    "topicId": "func",
+    "topicTitle": "Functions",
+    "description": "Learn to define, call, and pass data to functions.",
+    "baseKP": 70,
+    "slides": [
+        {
+            "id": "func_1",
+            "type": "content",
+            "title": "Function Declaration",
+            "content": "# Function Basics 🔧\n\nA function is a block of code designed to perform a particular task.\n\n```javascript\nfunction greet(name) {\n  return \"Hello \" + name;\n}\n\nlet message = greet(\"Alice\");\nconsole.log(message); // \"Hello Alice\"\n```\n\n- `name`: Parameter (input)\n- `return`: Output value\n- Calling the function executes the code inside."
+        },
+        {
+            "id": "func_2",
+            "type": "content",
+            "title": "Arrow Functions",
+            "content": "# Arrow Functions 🏹\n\nModern, shorter syntax (ES6).\n\n```javascript\n// Traditional\nconst add = function(a, b) {\n  return a + b;\n};\n\n// Arrow\nconst add = (a, b) => {\n  return a + b;\n};\n\n// Even shorter (implicit return)\nconst multiply = (a, b) => a * b;\n```\n\nOften used for callbacks and inline functions."
+        },
+        {
+            "id": "func_3",
+            "type": "content",
+            "title": "Scope",
+            "content": "# Scope 🔭\n\nWhere variables are visible.\n\n## Global Scope\nVariables outside any function. Accessible everywhere.\n\n## Function Scope\nVariables inside a function. Not accessible outside.\n\n```javascript\nfunction test() {\n  let secret = 123;\n}\nconsole.log(secret); // Error: secret is not defined\n```\n\n## Block Scope (let/const)\nVariables inside `{}` (like if-statements or loops)."
+        },
+        {
+            "id": "func_quiz_1",
+            "type": "quiz",
+            "title": "Scope Quiz",
+            "content": "Where can a function-scoped variable be accessed?",
+            "quizQuestion": "Where is a variable declared with `let` inside a function accessible?",
+            "quizOptions": [
+                "Anywhere in the file",
+                "Only inside that function",
+                "In other functions",
+                "Nowhere"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "func_4",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Function Recap 🧠\n\n- ✅ **Declaration**: `function name() {}`\n- ✅ **Arrow**: `const name = () => {}`\n- ✅ **Parameters**: Inputs\n- ✅ **Return**: Outputs\n- ✅ **Scope**: Defines visibility of variables\n\n> 🚀 **Next:** Interact with the page using the **DOM**!"
+        }
+    ]
+}

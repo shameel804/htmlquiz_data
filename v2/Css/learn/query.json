@@ -1,0 +1,47 @@
+{
+    "id": "query",
+    "topicId": "query",
+    "topicTitle": "Media Queries",
+    "description": "Create responsive designs that adapt to different screen sizes.",
+    "baseKP": 80,
+    "slides": [
+        {
+            "id": "query_1",
+            "type": "content",
+            "title": "Responsive Design",
+            "content": "# Responsive Design 📱\n\nWeb pages should look good on all devices (desktops, tablets, phones).\n\n## The Viewport Meta Tag\nAlways include this in your HTML `<head>`:\n```html\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n```\nIt tells the browser to set the width of the page to follow the screen-width of the device."
+        },
+        {
+            "id": "query_2",
+            "type": "content",
+            "title": "Media Query Syntax",
+            "content": "# Media Queries 📐\n\nApply CSS only if a certain condition is true.\n\n```css\n@media (max-width: 600px) {\n  body {\n    background-color: lightblue;\n  }\n}\n```\n\n- `max-width: 600px`: Styles apply if screen is 600px or smaller (Mobile).\n- `min-width: 600px`: Styles apply if screen is 600px or wider (Desktop/Tablet)."
+        },
+        {
+            "id": "query_3",
+            "type": "content",
+            "title": "Breakpoints",
+            "content": "# Common Breakpoints 📏\n\nTypical widths to target:\n\n```css\n/* Mobile devices */\n@media (max-width: 480px) { ... }\n\n/* Tablets/iPads */\n@media (min-width: 481px) and (max-width: 768px) { ... }\n\n/* Laptops */\n@media (min-width: 769px) and (max-width: 1024px) { ... }\n\n/* Desktops */\n@media (min-width: 1025px) { ... }\n```"
+        },
+        {
+            "id": "query_quiz_1",
+            "type": "quiz",
+            "title": "Responsive Quiz",
+            "content": "Which rule targets screens SMALLER than 500px?",
+            "quizQuestion": "Which rule targets screens SMALLER than 500px?",
+            "quizOptions": [
+                "@media (min-width: 500px)",
+                "@media (max-width: 500px)",
+                "@media (width: 500px)",
+                "@media (screen: 500px)"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "query_4",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Responsive Recap 📲\n\n- ✅ **Viewport Meta**: Essential for mobile\n- ✅ **`@media`**: The magic keyword\n- ✅ **Breakpoints**: Widths where layout changes\n- ✅ **Mobile-First**: Design for mobile, then add `min-width` queries for larger screens!\n\n> 🚀 **Next:** Add special effects with **Pseudo-classes**!"
+        }
+    ]
+}

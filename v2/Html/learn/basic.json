@@ -1,0 +1,73 @@
+{
+    "id": "basic",
+    "topicId": "basic",
+    "topicTitle": "Basics",
+    "description": "Master the fundamentals of HTML structure, tags, and attributes.",
+    "baseKP": 50,
+    "slides": [
+        {
+            "id": "basic_1",
+            "type": "content",
+            "title": "Welcome to HTML Basics",
+            "content": "# HTML Basics 🌐\n\nWelcome to the world of web development! **HTML** (HyperText Markup Language) is the standard markup language for documents designed to be displayed in a web browser.\n\n## What you'll learn:\n- **Tags & Elements** - The building blocks\n- **Attributes** - Providing extra info\n- **Structure** - The skeleton of a webpage\n\n> 💡 **Fun Fact:** HTML was invented by Tim Berners-Lee in 1991. The first version only had 18 tags!"
+        },
+        {
+            "id": "basic_2",
+            "type": "content",
+            "title": "Tags and Elements",
+            "content": "# Tags & Elements 🧱\n\nHTML uses \"tags\" to label pieces of content.\n\n## Anatomy of an Element\n\nMost elements have an **opening tag**, **content**, and a **closing tag**.\n\n```html\n<p>This is a paragraph.</p>\n```\n\n- `<p>`: Opening tag\n- `This is a paragraph.`: Content\n- `</p>`: Closing tag\n\n## Void Elements\n\nSome elements don't have content or a closing tag. These are called **void elements**.\n\n```html\n<br>  <!-- Line break -->\n<hr>  <!-- Horizontal rule -->\n<img> <!-- Image -->\n```"
+        },
+        {
+            "id": "basic_quiz_1",
+            "type": "quiz",
+            "title": "Tag Quiz",
+            "content": "Check your understanding of tags!",
+            "quizQuestion": "Which of the following is a VOID element (no closing tag)?",
+            "quizOptions": [
+                "<p>",
+                "<h1>",
+                "<br>",
+                "<div>"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "basic_3",
+            "type": "content",
+            "title": "Attributes",
+            "content": "# Attributes 🏷️\n\nAttributes provide additional information about elements. They are always specified in the **opening tag**.\n\n## Syntax\n\n```html\n<tagname attribute=\"value\">Content</tagname>\n```\n\n## Common Attributes\n\n- `id`: Unique identifier for an element\n- `class`: Specifies one or more class names (for CSS/JS)\n- `style`: Inline CSS styles\n- `title`: Extra info (often shown as a tooltip)\n\n```html\n<p class=\"intro\" title=\"Hello!\">Welcome</p>\n<a href=\"https://google.com\">Link</a>\n<img src=\"logo.png\" alt=\"Logo\">\n```"
+        },
+        {
+            "id": "basic_4",
+            "type": "content",
+            "title": "HTML Page Structure",
+            "content": "# Document Structure 💀\n\nEvery HTML document follows a standard structure.\n\n## The Boilerplate\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n    <title>Page Title</title>\n</head>\n<body>\n\n    <h1>My First Heading</h1>\n    <p>My first paragraph.</p>\n\n</body>\n</html>\n```\n\n- `<!DOCTYPE html>`: Declares document type (HTML5)\n- `<html>`: The root element\n- `<head>`: Meta-information (title, encoding)\n- `<body>`: Visible content\n\n> 🎯 **Tip:** The content inside `<head>` is NOT displayed on the page itself (except the title in the tab)."
+        },
+        {
+            "id": "basic_5",
+            "type": "content",
+            "title": "Headings and Paragraphs",
+            "content": "# Headings & Paragraphs 📝\n\n## Headings\n\nHTML has 6 levels of headings, from `<h1>` (most important) to `<h6>` (least important).\n\n```html\n<h1>Main Heading</h1>\n<h2>Subheading</h2>\n<h3>Section Title</h3>\n...\n<h6>Tiny Heading</h6>\n```\n\n## Paragraphs\n\nParagraphs are defined with the `<p>` tag. Browsers automatically add some margin before and after a paragraph.\n\n```html\n<p>This is a paragraph of text.</p>\n<p>Dimensions are not fixed by default.</p>\n```"
+        },
+        {
+            "id": "basic_quiz_2",
+            "type": "quiz",
+            "title": "Structure Quiz",
+            "content": "Test your knowledge on document structure!",
+            "quizQuestion": "Where does the visible content of a webpage go?",
+            "quizOptions": [
+                "<head>",
+                "<footer>",
+                "<body>",
+                "<html attribute='visible'>"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "basic_6",
+            "type": "content",
+            "title": "Summary",
+            "content": "# You did it! 🎉\n\nYou've learned the core of HTML:\n\n- ✅ **Tags** start and end elements (`<tag>...</tag>`)\n- ✅ **Attributes** add info (`src`, `href`, `class`)\n- ✅ **Structure** requires `<html>`, `<head>`, and `<body>`\n- ✅ **Headings** (`h1`-`h6`) structure your content\n\n> 🚀 **Next:** Learn how to create interactive **Forms**!"
+        }
+    ]
+}

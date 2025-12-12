@@ -1,0 +1,47 @@
+{
+    "id": "font",
+    "topicId": "font",
+    "topicTitle": "Typography",
+    "description": "Style text with fonts, sizes, weights, and spacing.",
+    "baseKP": 50,
+    "slides": [
+        {
+            "id": "font_1",
+            "type": "content",
+            "title": "Font Family and Size",
+            "content": "# Typography 📝\n\n## Font Family\nPriority list of fonts.\n```css\nbody {\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n```\nIf the browser doesn't have the first, it tries the second.\n\n## Font Size\n```css\nh1 { font-size: 32px; }\np  { font-size: 1.2rem; } /* Relative to root size */\n```\n\n> 💡 **Tip:** Using `rem` is better for accessibility than `px`."
+        },
+        {
+            "id": "font_2",
+            "type": "content",
+            "title": "Weight and Style",
+            "content": "# Styling Text 🖌️\n\n## Font Weight\nBoldness of the text.\n```css\nfont-weight: normal; /* 400 */\nfont-weight: bold;   /* 700 */\nfont-weight: 100;    /* Thin */\n```\n\n## Font Style\nItalicizing text.\n```css\nfont-style: italic;\n```\n\n## Text Decoration\nLines on text.\n```css\ntext-decoration: underline;\ntext-decoration: line-through;\ntext-decoration: none; /* Removes link underline */\n```"
+        },
+        {
+            "id": "font_quiz_1",
+            "type": "content",
+            "title": "Alignment and Spacing",
+            "content": "# Alignment & Spacing 📏\n\n## Text Align\nHorizontal alignment.\n```css\ntext-align: center;\ntext-align: right;\ntext-align: justify;\n```\n\n## Spacing\n```css\nline-height: 1.5;      /* Space between lines */\nletter-spacing: 2px;   /* Space between chars */\nword-spacing: 5px;     /* Space between words */\n```"
+        },
+        {
+            "id": "font_3",
+            "type": "quiz",
+            "title": "Font Quiz",
+            "content": "How do you remove the underline from a link?",
+            "quizQuestion": "Which property removes the underline from a hyperlink?",
+            "quizOptions": [
+                "text-style: none",
+                "font-decoration: none",
+                "text-decoration: none",
+                "underline: none"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "font_4",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Typo Recap ✍️\n\n- ✅ **`font-family`**: Choose your font stack\n- ✅ **`font-weight`**: Boldness\n- ✅ **`text-align`**: Center, left, right\n- ✅ **`line-height`**: Readability buffer\n\n> 🚀 **Next:** Add some life with **Colors & Backgrounds**!"
+        }
+    ]
+}

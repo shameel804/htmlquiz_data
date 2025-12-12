@@ -1,0 +1,53 @@
+{
+    "id": "basic",
+    "topicId": "basic",
+    "topicTitle": "Basics",
+    "description": "Start your journey with JavaScript variables, data types, and operators.",
+    "baseKP": 50,
+    "slides": [
+        {
+            "id": "js_basic_1",
+            "type": "content",
+            "title": "Hello JavaScript",
+            "content": "# JavaScript Basics ⚡\n\nJavaScript (JS) is the programming language of the web. It makes pages interactive.\n\n## Adding JS\n\n```html\n<script>\n  console.log(\"Hello World!\");\n</script>\n```\n\nOr typically in an external file:\n```html\n<script src=\"script.js\"></script>\n```"
+        },
+        {
+            "id": "js_basic_2",
+            "type": "content",
+            "title": "Variables",
+            "content": "# Variables 📦\n\nContainers for storing data.\n\n## Keywords\n- `let`: Can be reassigned (Modern standard)\n- `const`: Cannot be reassigned (Constant)\n- `var`: Old way (Function scoped, avoid if possible)\n\n```javascript\nlet score = 10;\nconst pi = 3.14;\nvar name = \"Old School\";\n```\n\n> 💡 **Tip:** Default to `const`. Use `let` only if the value needs to change."
+        },
+        {
+            "id": "js_basic_3",
+            "type": "content",
+            "title": "Data Types",
+            "content": "# Data Types 💾\n\nJS is dynamically typed.\n\n- **String**: `\"Hello\"` or `'Hi'`\n- **Number**: `42` or `3.14`\n- **Boolean**: `true` or `false`\n- **Undefined**: Variable declared but not assigned\n- **Null**: Intentional absence of value\n- **Object**: `{ name: \"Alice\" }`\n- **Array**: `[1, 2, 3]`\n\nCheck type with `typeof`: `typeof \"hi\" // \"string\"`"
+        },
+        {
+            "id": "js_basic_quiz_1",
+            "type": "quiz",
+            "title": "Variable Quiz",
+            "content": "Which keyword defines a constant variable?",
+            "quizQuestion": "Which keyword creates a variable that CANNOT be reassigned?",
+            "quizOptions": [
+                "let",
+                "var",
+                "const",
+                "static"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "js_basic_4",
+            "type": "content",
+            "title": "Operators",
+            "content": "# Operators ➕\n\n## Arithmetic\n`+`, `-`, `*`, `/`, `%` (Remainder)\n\n## Assignment\n`=`, `+=`, `-=`\n\n## Comparison\n- `==`: Loose equality (`5 == \"5\"` is true)\n- `===`: Strict equality (`5 === \"5\"` is false) **Use this!**\n- `!=`, `!==`, `>`, `<`\n\n## Logical\n- `&&` (AND)\n- `||` (OR)\n- `!` (NOT)"
+        },
+        {
+            "id": "js_basic_5",
+            "type": "content",
+            "title": "Summary",
+            "content": "# JS Basics Recap 🎓\n\n- ✅ **Variables**: `let` covers most cases, `const` for constants\n- ✅ **Types**: Strings, Numbers, Booleans are core\n- ✅ **Operators**: Use `===` for comparisons\n- ✅ **Console**: Use `console.log()` to debug\n\n> 🚀 **Next:** Control the flow with **Control Structures**!"
+        }
+    ]
+}

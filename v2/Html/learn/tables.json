@@ -1,0 +1,47 @@
+{
+    "id": "tables",
+    "topicId": "tables",
+    "topicTitle": "Tables",
+    "description": "Learn to structure data in rows and columns using HTML tables.",
+    "baseKP": 60,
+    "slides": [
+        {
+            "id": "tables_1",
+            "type": "content",
+            "title": "Table Structure",
+            "content": "# HTML Tables 📊\n\nTables are used to arrange data into rows and columns.\n\n## Basic Tags\n\n- `<table>`: Wraps the entire table\n- `<tr>`: Table Row\n- `<td>`: Table Data (cell)\n- `<th>`: Table Header (bold & centered by default)\n\n```html\n<table>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>24</td>\n  </tr>\n  <tr>\n    <td>Bob</td>\n    <td>30</td>\n  </tr>\n</table>\n```"
+        },
+        {
+            "id": "tables_2",
+            "type": "content",
+            "title": "Colspan and Rowspan",
+            "content": "# Merging Cells 🧩\n\nYou can merge cells horizontally or vertically.\n\n## Colspan (Merge Columns)\n\nSpans a cell across multiple columns.\n\n```html\n<tr>\n  <td colspan=\"2\">Total</td>\n</tr>\n```\n\n## Rowspan (Merge Rows)\n\nSpans a cell across multiple rows.\n\n```html\n<tr>\n  <td rowspan=\"2\">Vertical Header</td>\n  <td>Row 1</td>\n</tr>\n<tr>\n  <td>Row 2</td>\n</tr>\n```"
+        },
+        {
+            "id": "tables_3",
+            "type": "content",
+            "title": "Table Sections and Captions",
+            "content": "# Semantic Table Parts 📑\n\nFor complex tables, use semantic grouping tags.\n\n- `<thead>`: Header content\n- `<tbody>`: Body content\n- `<tfoot>`: Footer content (e.g., totals)\n- `<caption>`: Title of the table\n\n```html\n<table>\n  <caption>Monthly Savings</caption>\n  <thead>\n    <tr><th>Month</th><th>Savings</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>Jan</td><td>$100</td></tr>\n  </tbody>\n  <tfoot>\n    <tr><td>Total</td><td>$100</td></tr>\n  </tfoot>\n</table>\n```"
+        },
+        {
+            "id": "tables_quiz_1",
+            "type": "quiz",
+            "title": "Table Quiz",
+            "content": "Which attribute merges cells horizontally?",
+            "quizQuestion": "To merge two cells side-by-side into one, you use:",
+            "quizOptions": [
+                "rowspan",
+                "merge",
+                "colspan",
+                "span"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "tables_4",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Tables Mastery ✅\n\n- ✅ Use `<table>`, `<tr>`, `<td>`, `<th>` for basics\n- ✅ Use `colspan` and `rowspan` to merge cells\n- ✅ Use `thead`, `tbody`, `tfoot` for structure\n- ✅ Use `caption` for accessibility\n\n> 🚀 **Next:** Learn about organized **Lists**!"
+        }
+    ]
+}

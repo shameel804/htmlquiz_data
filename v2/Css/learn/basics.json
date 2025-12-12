@@ -1,0 +1,53 @@
+{
+    "id": "basics",
+    "topicId": "basics",
+    "topicTitle": "Basics",
+    "description": "Understand CSS syntax, selectors, and how to apply styles.",
+    "baseKP": 50,
+    "slides": [
+        {
+            "id": "css_basic_1",
+            "type": "content",
+            "title": "What is CSS?",
+            "content": "# CSS Basics 🎨\n\n**CSS** (Cascading Style Sheets) is used to style and layout web pages.\n\n## Why CSS?\n- **HTML** = Skeleton (Structure)\n- **CSS** = Skin & Clothes (Presentation)\n\n## Syntax\n\n```css\nselector {\n  property: value;\n}\n```\n\n```css\nh1 {\n  color: blue;\n  font-size: 24px;\n}\n```"
+        },
+        {
+            "id": "css_basic_2",
+            "type": "content",
+            "title": "Three Ways to Insert CSS",
+            "content": "# Applying CSS 🖌️\n\n## 1. External (Recommended)\nLink to a `.css` file in the `<head>`.\n```html\n<link rel=\"stylesheet\" href=\"style.css\">\n```\n\n## 2. Internal\nInside `<style>` tags in HTML.\n```html\n<style>\n  body { background-color: #f0f0f0; }\n</style>\n```\n\n## 3. Inline\nDirectly on the element (Not recommended for big projects).\n```html\n<p style=\"color: red;\">Red Text</p>\n```"
+        },
+        {
+            "id": "css_basic_3",
+            "type": "content",
+            "title": "Basic Selectors",
+            "content": "# Selectors 🎯\n\nHow do we target elements?\n\n## Element Selector\nTargets all instances of a tag.\n```css\np { color: green; }\n```\n\n## Class Selector (.)\nTargets elements with a specific class. Used for multiple elements.\n```css\n.btn { background: blue; }\n/* HTML: <button class=\"btn\">Click</button> */\n```\n\n## ID Selector (#)\nTargets a SINGLE unique element.\n```css\n#header { height: 100px; }\n/* HTML: <div id=\"header\">...</div> */\n```"
+        },
+        {
+            "id": "css_basic_quiz_1",
+            "type": "quiz",
+            "title": "Selector Quiz",
+            "content": "Which character signifies a CLASS selector?",
+            "quizQuestion": "Which character prefixes a CLASS selector in CSS?",
+            "quizOptions": [
+                "# (Hash)",
+                ". (Dot)",
+                ": (Colon)",
+                "@ (At)"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_basic_4",
+            "type": "content",
+            "title": "Universal and Grouping",
+            "content": "# More Selectors 🌟\n\n## Universal Selector (*)\nSelects EVERYTHING.\n```css\n* {\n  margin: 0;\n  padding: 0;\n}\n```\n\n## Grouping Selectors\nApply same style to multiple selectors.\n```css\nh1, h2, p {\n  font-family: Arial;\n}\n```\n\n## Descendant Selector\nSpace separates ancestor and descendant.\n```css\ndiv p { color: red; }\n/* Selects only <p> inside <div> */\n```"
+        },
+        {
+            "id": "css_basic_5",
+            "type": "content",
+            "title": "Summary",
+            "content": "# CSS Basics Recap 🎓\n\n- ✅ **Structure**: `selector { property: value; }`\n- ✅ **Insertion**: External files are best\n- ✅ **Class (.)**: Reusable styles\n- ✅ **ID (#)**: Unique styles\n- ✅ **Cascading**: Last rule wins (usually)!\n\n> 🚀 **Next:** Master the **Box Model**, the core of layout!"
+        }
+    ]
+}

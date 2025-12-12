@@ -1,0 +1,53 @@
+{
+    "id": "media",
+    "topicId": "media",
+    "topicTitle": "Media Elements",
+    "description": "Enrich your pages with images, audio, and video.",
+    "baseKP": 60,
+    "slides": [
+        {
+            "id": "media_1",
+            "type": "content",
+            "title": "Images",
+            "content": "# Images 🖼️\n\nUse the `<img>` tag to embed images. It's a void tag (no closing tag).\n\n```html\n<img src=\"puppy.jpg\" alt=\"A cute puppy\" width=\"300\">\n```\n\n- `src`: Path to the image\n- `alt`: Alternate text (Critical for accessibility & SEO if image fails)\n- `width`/`height`: Dimensions in pixels\n\n> ⚠️ **Warning:** Always provide useful `alt` text!"
+        },
+        {
+            "id": "media_2",
+            "type": "content",
+            "title": "Video",
+            "content": "# Video 📹\n\nUse `<video>` to play clips. Use multiple `<source>` tags for browser compatibility.\n\n```html\n<video controls width=\"400\" poster=\"thumb.jpg\">\n  <source src=\"vid.mp4\" type=\"video/mp4\">\n  <source src=\"vid.webm\" type=\"video/webm\">\n  Your browser doesn't support video.\n</video>\n```\n\n- `poster`: Image shown while video loads\n- `controls`: Shows play/volume buttons"
+        },
+        {
+            "id": "media_3",
+            "type": "content",
+            "title": "Audio",
+            "content": "# Audio 🎵\n\nSimilar to video, use `<audio>` for sound.\n\n```html\n<audio controls loop>\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n  <source src=\"song.ogg\" type=\"audio/ogg\">\n</audio>\n```\n\n- `controls`: Must include this or user can't play it!\n- `loop`: Plays heavily\n- `muted`: Starts muted"
+        },
+        {
+            "id": "media_quiz_1",
+            "type": "quiz",
+            "title": "Media Quiz",
+            "content": "What is the text displayed if an image fails to load?",
+            "quizQuestion": "Which attribute holds the text description if an image cannot be loaded?",
+            "quizOptions": [
+                "title",
+                "description",
+                "alt",
+                "src"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "media_4",
+            "type": "content",
+            "title": "Embedding content",
+            "content": "# Embedding Frames 🖼️\n\nUse `<iframe>` to embed another webpage inside yours (like a YouTube video or Google Map).\n\n```html\n<iframe \n    src=\"https://www.google.com/maps/embed...\" \n    width=\"600\" \n    height=\"450\">\n</iframe>\n```\n\n> 💡 **Fun Fact:** Most YouTube videos you see on other sites are just iframes!"
+        },
+        {
+            "id": "media_5",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Media Recap 📺\n\n- ✅ **`<img>`** for pictures (needs `alt`!)\n- ✅ **`<video>`** for movies (use `controls`, `poster`)\n- ✅ **`<audio>`** for sound\n- ✅ **`<iframe>`** for external web content\n\n> 🎓 **Congratulations:** You've completed the HTML course section! Time to style it with **CSS**!"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "id": "lists",
+    "topicId": "lists",
+    "topicTitle": "Lists",
+    "description": "Organize content with ordered, unordered, and description lists.",
+    "baseKP": 50,
+    "slides": [
+        {
+            "id": "lists_1",
+            "type": "content",
+            "title": "Unordered Lists",
+            "content": "# Unordered Lists 🟣\n\nUse `<ul>` for items where order doesn't matter. They usually appear with bullet points.\n\n```html\n<ul>\n  <li>Apples</li>\n  <li>Bananas</li>\n  <li>Milk</li>\n</ul>\n```\n\n- `<ul>`: Unordered List container\n- `<li>`: List Item\n\n> 💡 **Tip:** You can nest lists inside other lists!"
+        },
+        {
+            "id": "lists_2",
+            "type": "content",
+            "title": "Ordered Lists",
+            "content": "# Ordered Lists 🔢\n\nUse `<ol>` for items that need to follow a sequence. They appear with numbers by default.\n\n```html\n<ol>\n  <li>Preheat oven</li>\n  <li>Mix ingredients</li>\n  <li>Bake for 20 mins</li>\n</ol>\n```\n\n## Type Attribute\n\nYou can change the numbering style:\n\n```html\n<ol type=\"A\"> <!-- A, B, C... -->\n<ol type=\"i\"> <!-- i, ii, iii... -->\n<ol start=\"5\"> <!-- Starts from 5 -->\n```"
+        },
+        {
+            "id": "lists_3",
+            "type": "content",
+            "title": "Description Lists",
+            "content": "# Description Lists 📖\n\nA list of terms, with a description of each term.\n\n- `<dl>`: Description List\n- `<dt>`: Term (Name)\n- `<dd>`: Description (Details)\n\n```html\n<dl>\n  <dt>Coffee</dt>\n  <dd>Black hot drink</dd>\n  <dt>Milk</dt>\n  <dd>White cold drink</dd>\n</dl>\n```"
+        },
+        {
+            "id": "lists_quiz_1",
+            "type": "quiz",
+            "title": "List Quiz",
+            "content": "Which tag creates a numbered list?",
+            "quizQuestion": "Which tag creates a numbered list?",
+            "quizOptions": [
+                "<ul>",
+                "<dl>",
+                "<list>",
+                "<ol>"
+            ],
+            "correctOptionIndex": 3
+        },
+        {
+            "id": "lists_4",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Lists Recap 📝\n\n- ✅ **`<ul>`** for bullet points (Unordered)\n- ✅ **`<ol>`** for numbers (Ordered)\n- ✅ **`<dl>`** for glossary-style terms (Description)\n- ✅ Items are always wrapped in `<li>` (except for `dl`)\n\n> 🚀 **Next:** Connect the web with **Links**!"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "id": "pseudo",
+    "topicId": "pseudo",
+    "topicTitle": "Pseudo-classes & Elements",
+    "description": "Style state changes (hover) and specific parts of elements.",
+    "baseKP": 85,
+    "slides": [
+        {
+            "id": "pseudo_1",
+            "type": "content",
+            "title": "Pseudo-classes",
+            "content": "# Pseudo-classes 👻\n\nKeywords added to selectors that specify a **state**.\n\n## Syntax\n`selector:pseudo-class { ... }`\n\n## Common Examples\n```css\na:link    { color: blue; }     /* Unvisited */\na:visited { color: purple; }   /* Visited */\na:hover   { color: red; }      /* Mouse over */\na:active  { color: yellow; }   /* Clicked */\n\ninput:focus { border: 2px solid blue; } /* Selected input */\n```"
+        },
+        {
+            "id": "pseudo_2",
+            "type": "content",
+            "title": "Structural Pseudo-classes",
+            "content": "# Structural Selectors 🏗️\n\nTarget elements based on their position.\n\n```css\nli:first-child { font-weight: bold; }\nli:last-child { border: none; }\n\n/* Examples: Zebras striping */\ntr:nth-child(even) { background: #f2f2f2; }\ntr:nth-child(odd)  { background: #ffffff; }\n```"
+        },
+        {
+            "id": "pseudo_3",
+            "type": "content",
+            "title": "Pseudo-elements",
+            "content": "# Pseudo-elements 🎭\n\nStyle specified **parts** of an element. Uses double colon `::`.\n\n```css\n::before { ... } /* Inserts content BEFORE element */\n::after  { ... } /* Inserts content AFTER element */\n```\n\n## Example\n```css\nh1::before {\n  content: \"✨ \";\n}\n\np::first-line {\n  font-variant: small-caps;\n}\n```\n\n> ⚠️ **Note:** `::before` and `::after` MUST have a `content` property to work!"
+        },
+        {
+            "id": "pseudo_quiz_1",
+            "type": "quiz",
+            "title": "Pseudo Quiz",
+            "content": "Which selector targets the user hovering over an element?",
+            "quizQuestion": "Which selector applies styles when the user hovers over an element?",
+            "quizOptions": [
+                ":over",
+                ":hover",
+                ":mouse",
+                ":active"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "pseudo_4",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Pseudo Power ⚡\n\n- ✅ **`:hover`**: Interaction feedback\n- ✅ **`:nth-child`**: Selecting by pattern\n- ✅ **`::before/::after`**: Adding cosmetic content\n- ✅ **`::first-letter`**: Drop cap effects\n\n> 🎓 **Congratulations:** You've completed the CSS course! Ready for programming logic with **JavaScript**?"
+        }
+    ]
+}

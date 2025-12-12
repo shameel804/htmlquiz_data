@@ -1,0 +1,47 @@
+{
+    "id": "html5",
+    "topicId": "html5",
+    "topicTitle": "HTML5 New Features",
+    "description": "Discover semantic tags, multimedia support, and advanced APIs in HTML5.",
+    "baseKP": 65,
+    "slides": [
+        {
+            "id": "html5_1",
+            "type": "content",
+            "title": "Semantic Tags",
+            "content": "# Semantic HTML 🏗️\n\nBefore HTML5, we used a lot of `<div>` tags. HTML5 introduced **semantic tags** that clearly describe their meaning to both the browser and the developer.\n\n## Common Semantic Tags\n\n- `<header>`: Introductory content or nav links\n- `<nav>`: Navigation links\n- `<main>`: Dominant content of body\n- `<section>`: Thematic grouping of content\n- `<article>`: Independent, self-contained content\n- `<aside>`: Sidebar/related content\n- `<footer>>`: Footer area\n\n> 💡 **Why?** Improves **SEO** and **Accessibility** (Screen readers understand the layout better)."
+        },
+        {
+            "id": "html5_2",
+            "type": "content",
+            "title": "Audio and Video",
+            "content": "# Multimedia 🎬\n\nHTML5 makes embedding media native and easy.\n\n## The <video> Element\n\n```html\n<video controls width=\"250\">\n    <source src=\"movie.mp4\" type=\"video/mp4\">\n    Your browser does not support the video tag.\n</video>\n```\n\n- `controls`: detailed play/pause buttons\n- `autoplay`: Starts automatically (often muted)\n- `loop`: Repeats forever\n\n## The <audio> Element\n\n```html\n<audio controls>\n    <source src=\"music.mp3\" type=\"audio/mpeg\">\n</audio>\n```"
+        },
+        {
+            "id": "html5_quiz_1",
+            "type": "quiz",
+            "title": "Multimedia Quiz",
+            "content": "Which attribute adds play/pause buttons to video?",
+            "quizQuestion": "Which attribute adds play/pause buttons to video player?",
+            "quizOptions": [
+                "buttons",
+                "ui",
+                "controls",
+                "play"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "html5_3",
+            "type": "content",
+            "title": "Canvas and SVG",
+            "content": "# Graphics: Canvas & SVG 🎨\n\n## <canvas>\n\nUsed to draw graphics on the fly via JavaScript (graphs, game graphics).\n\n```html\n<canvas id=\"myCanvas\" width=\"200\" height=\"100\"></canvas>\n<script>\n  var c = document.getElementById(\"myCanvas\");\n  var ctx = c.getContext(\"2d\");\n  ctx.fillStyle = \"red\";\n  ctx.fillRect(10, 10, 50, 50);\n</script>\n```\n\n## <svg> (Scalable Vector Graphics)\n\nXML-based vector graphics, scalable without losing quality.\n\n```html\n<svg width=\"100\" height=\"100\">\n  <circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"green\" stroke-width=\"4\" fill=\"yellow\" />\n</svg>\n```"
+        },
+        {
+            "id": "html5_4",
+            "type": "content",
+            "title": "Summary",
+            "content": "# HTML5 Recap 🌟\n\n- ✅ **Semantic Tags** (`header`, `nav`, `section`) give meaning to layout\n- ✅ **Native Media** (`video`, `audio`) needs no plugins\n- ✅ **Graphics** (`canvas`, `svg`) allow rich visuals\n\n> 🚀 **Next:** Organize data with **Tables**!"
+        }
+    ]
+}

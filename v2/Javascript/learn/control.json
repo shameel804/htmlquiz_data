@@ -1,0 +1,47 @@
+{
+    "id": "control",
+    "topicId": "control",
+    "topicTitle": "Control Structures",
+    "description": "Make decisions and repeat actions with loops and conditionals.",
+    "baseKP": 60,
+    "slides": [
+        {
+            "id": "control_1",
+            "type": "content",
+            "title": "If-Else",
+            "content": "# Conditionals 🔀\n\nExecute code only if a condition is true.\n\n```javascript\nlet age = 18;\n\nif (age >= 18) {\n  console.log(\"Adult\");\n} else if (age >= 13) {\n  console.log(\"Teenager\");\n} else {\n  console.log(\"Child\");\n}\n```"
+        },
+        {
+            "id": "control_2",
+            "type": "content",
+            "title": "Switch Statement",
+            "content": "# Switch 🔛\n\nCleaner for checking many values of one variable.\n\n```javascript\nlet day = \"Monday\";\n\nswitch (day) {\n  case \"Monday\":\n    console.log(\"Start of week\");\n    break;\n  case \"Friday\":\n    console.log(\"Weekend soon!\");\n    break;\n  default:\n    console.log(\"Mid-week\");\n}\n```\n\n> ⚠️ **Note:** Don't forget `break`, or it will fall through to the next case!"
+        },
+        {
+            "id": "control_3",
+            "type": "content",
+            "title": "Loops",
+            "content": "# Loops 🔁\n\n## For Loop\nRun code a specific number of times.\n```javascript\nfor (let i = 0; i < 5; i++) {\n  console.log(i); // 0, 1, 2, 3, 4\n}\n```\n\n## While Loop\nRun while condition is true.\n```javascript\nlet i = 0;\nwhile (i < 5) {\n  console.log(i);\n  i++;\n}\n```\n\n## Do-While\nRuns at least once.\n```javascript\ndo {\n  console.log(\"Running\");\n} while (false);\n```"
+        },
+        {
+            "id": "control_quiz_1",
+            "type": "quiz",
+            "title": "Loop Quiz",
+            "content": "Which statement stops a loop?",
+            "quizQuestion": "Which keyword immediately terminates a loop?",
+            "quizOptions": [
+                "stop",
+                "return",
+                "break",
+                "exit"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "control_4",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Control Recap 🎮\n\n- ✅ **If/Else**: Basic logic branching\n- ✅ **Switch**: Clean multi-choice logic\n- ✅ **For**: Counting loops\n- ✅ **While**: Conditional loops\n- ✅ **Break/Continue**: Control loop flow\n\n> 🚀 **Next:** Write reusable code with **Functions**!"
+        }
+    ]
+}

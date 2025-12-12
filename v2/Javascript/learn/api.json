@@ -1,0 +1,41 @@
+{
+    "id": "api",
+    "topicId": "api",
+    "topicTitle": "APIs",
+    "description": "Fetch data from servers and use browser APIs.",
+    "baseKP": 90,
+    "slides": [
+        {
+            "id": "api_1",
+            "type": "content",
+            "title": "Fetch API",
+            "content": "# Fetch API 📡\n\nBuilt-in modern way to make HTTP requests.\n\n```javascript\nfetch('https://api.example.com/user/1')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error('Error:', error));\n```\n\n## JSON\n**J**ava**S**cript **O**bject **N**otation. It's the standard format for API data."
+        },
+        {
+            "id": "api_2",
+            "type": "content",
+            "title": "Local Storage",
+            "content": "# Local Storage 💾\n\nSave data in the browser (persists on refresh).\n\n```javascript\n// Save\nlocalStorage.setItem('username', 'Alice');\n\n// Read\nconst name = localStorage.getItem('username');\n\n// Remove\nlocalStorage.removeItem('username');\n\n// Clear All\nlocalStorage.clear();\n```\n\n> ⚠️ **Note:** Only stores strings! Use `JSON.stringify()` for objects."
+        },
+        {
+            "id": "api_quiz_1",
+            "type": "quiz",
+            "title": "Storage Quiz",
+            "content": "Does LocalStorage data expire?",
+            "quizQuestion": "When does data in LocalStorage expire?",
+            "quizOptions": [
+                "When browser closes",
+                "After 24 hours",
+                "Never (unless user/code clears it)",
+                "When computer restarts"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "api_3",
+            "type": "content",
+            "title": "Summary",
+            "content": "# API Mastery 🌍\n\n- ✅ **`fetch`**: Get data from the internet\n- ✅ **JSON**: The language of APIs\n- ✅ **LocalStorage**: Simple browser database\n- ✅ **Other APIs**: Geolocation, Notification, Canvas...\n\n> 🎓 **Congratulations:** You've completed the JavaScript course! You are now a web developer! 🎉"
+        }
+    ]
+}

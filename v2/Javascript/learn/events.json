@@ -1,0 +1,47 @@
+{
+    "id": "events",
+    "topicId": "events",
+    "topicTitle": "Events",
+    "description": "Handle clicks, key presses, and other user interactions.",
+    "baseKP": 75,
+    "slides": [
+        {
+            "id": "events_1",
+            "type": "content",
+            "title": "Event Listeners",
+            "content": "# Event Listeners 👂\n\nThe best way to handle events.\n\n```javascript\nconst btn = document.querySelector('button');\n\nbtn.addEventListener('click', function() {\n  alert(\"Button clicked!\");\n});\n```\n\n## Common Events\n- `click`: Mouse click\n- `mouseover` / `mouseout`: Hover\n- `submit`: Form submission\n- `keydown` / `keyup`: Keyboard input\n- `load`: Page finished loading"
+        },
+        {
+            "id": "events_2",
+            "type": "content",
+            "title": "Event Object",
+            "content": "# The Event Object 📦\n\nThe event handler receives an `event` object with details.\n\n```javascript\ndocument.addEventListener('keydown', (e) => {\n  console.log(e.key); // Which key was pressed\n});\n\nform.addEventListener('submit', (e) => {\n  e.preventDefault(); // STOP page refresh!\n  console.log(\"Form submitted via JS\");\n});\n```"
+        },
+        {
+            "id": "events_3",
+            "type": "content",
+            "title": "Bubbling and Delegation",
+            "content": "# Event Flow 🌊\n\n## Bubbling\nEvents start at the target and bubble UP to parents.\nClicking a `<button>` inside a `<div>` triggers the button's click, then the div's click.\n\n## Event Delegation\nInstead of adding listeners to 100 list items, add ONE to the parent `<ul>`.\n\n```javascript\nlist.addEventListener('click', (e) => {\n  if (e.target.tagName === 'LI') {\n    console.log(\"List item clicked\");\n  }\n});\n```"
+        },
+        {
+            "id": "events_quiz_1",
+            "type": "quiz",
+            "title": "Event Quiz",
+            "content": "How do you stop a form from reloading the page?",
+            "quizQuestion": "Which method prevents the default behavior of an element (like form submission refreshing page)?",
+            "quizOptions": [
+                "stopPropogation()",
+                "preventDefault()",
+                "stopImmediatePropogation()",
+                "return false"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "events_4",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Event Recap 🎫\n\n- ✅ **`addEventListener`**: Attaches logic to events\n- ✅ **Event Object (`e`)**: Contains event data\n- ✅ **`preventDefault()`**: Stops browser defaults\n- ✅ **Delegation**: Efficient handling on parents\n\n> 🚀 **Next:** Store data structure with **Objects and Arrays**!"
+        }
+    ]
+}

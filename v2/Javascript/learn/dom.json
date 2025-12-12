@@ -1,0 +1,47 @@
+{
+    "id": "dom",
+    "topicId": "dom",
+    "topicTitle": "DOM Manipulation",
+    "description": "Manipulate HTML elements and CSS styles dynamically.",
+    "baseKP": 80,
+    "slides": [
+        {
+            "id": "dom_1",
+            "type": "content",
+            "title": "What is the DOM?",
+            "content": "# The DOM 🌳\n\n**D**ocument **O**bject **M**odel. It's the tree structure of your HTML page.\n\nJavaScript can use the DOM to:\n- Change HTML content\n- Change CSS styles\n- React to user events\n- Add/Remove elements"
+        },
+        {
+            "id": "dom_2",
+            "type": "content",
+            "title": "Selecting Elements",
+            "content": "# Selecting Elements 🔍\n\nHow to \"grab\" an element from HTML.\n\n```javascript\n// By ID (Fastest)\nconst title = document.getElementById('main-title');\n\n// By Class\nconst items = document.getElementsByClassName('item');\n\n// Key Selectors (Most modern)\nconst box = document.querySelector('.box'); // Selects FIRST match\nconst allBoxes = document.querySelectorAll('.box'); // Selects ALL matches\n```"
+        },
+        {
+            "id": "dom_3",
+            "type": "content",
+            "title": "Manipulating Content",
+            "content": "# Changing Content ✏️\n\n```javascript\nconst heading = document.querySelector('h1');\n\n// Change Text\nheading.innerText = \"New Title\";\n\n// Change HTML (Be careful with security!)\nheading.innerHTML = \"<span>Styled</span> Title\";\n\n// Change Attributes\nconst img = document.querySelector('img');\nimg.src = \"new-pic.jpg\";\n\n// Change Styles\nheading.style.color = \"blue\";\nheading.style.fontSize = \"50px\";\n```"
+        },
+        {
+            "id": "dom_quiz_1",
+            "type": "quiz",
+            "title": "DOM Quiz",
+            "content": "Which method selects the first element matching a CSS selector?",
+            "quizQuestion": "Which method selects ONLY the first element matching a CSS selector?",
+            "quizOptions": [
+                "getElementById",
+                "querySelectorAll",
+                "querySelector",
+                "getElementsByName"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "dom_4",
+            "type": "content",
+            "title": "Summary",
+            "content": "# DOM Recap 🧱\n\n- ✅ **`document.querySelector()`**: The swiss-army knife of selection\n- ✅ **`innerText`**: Safe text updates\n- ✅ **`style`**: Direct CSS manipulation\n- ✅ **`classList`**: Add/remove classes (better than direct style!)\n\n> 🚀 **Next:** Make it interactive with **Events**!"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "id": "links",
+    "topicId": "links",
+    "topicTitle": "Links & Navigation",
+    "description": "Create hyperlinks and build navigation menus.",
+    "baseKP": 55,
+    "slides": [
+        {
+            "id": "links_1",
+            "type": "content",
+            "title": "Anchor Tags",
+            "content": "# Hyperlinks 🔗\n\nThe `<a>` (anchor) tag defines a hyperlink. It's what makes the \"Web\" a web!\n\n## Syntax\n\n```html\n<a href=\"https://www.example.com\">Visit Example</a>\n```\n\n- `href`: The URL destination (Hypertext Reference)\n- Content: The clickable text or image\n\n## Target Attribute\n\nWhere to open the link?\n\n```html\n<!-- Opens in a new tab -->\n<a href=\"url\" target=\"_blank\">New Tab</a>\n\n<!-- Default (same tab) -->\n<a href=\"url\" target=\"_self\">Same Tab</a>\n```"
+        },
+        {
+            "id": "links_2",
+            "type": "content",
+            "title": "Types of Links",
+            "content": "# Different Link Types 🌐\n\n## Absolute vs Relative\n\n```html\n<!-- Absolute: Full URL -->\n<a href=\"https://google.com\">Google</a>\n\n<!-- Relative: Internal file -->\n<a href=\"/about.html\">About Us</a>\n```\n\n## Image Links\n\n```html\n<a href=\"home.html\">\n  <img src=\"logo.png\" alt=\"Home\">\n</a>\n```\n\n## Email Links\n\n```html\n<a href=\"mailto:me@example.com\">Email Me</a>\n```\n\n## ID Links (Bookmarks)\n\nJump to a specific part of the page.\n\n```html\n<a href=\"#section2\">Jump to Section 2</a>\n...\n<h2 id=\"section2\">Section 2</h2>\n```"
+        },
+        {
+            "id": "links_quiz_1",
+            "type": "quiz",
+            "title": "Link Quiz",
+            "content": "How do you open a link in a new tab?",
+            "quizQuestion": "Which attribute value opens a link in a NEW tab?",
+            "quizOptions": [
+                "target=\"_new\"",
+                "target=\"_blank\"",
+                "window=\"new\"",
+                "href=\"new\""
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "links_3",
+            "type": "content",
+            "title": "Navigation Menus",
+            "content": "# Navigation Bars 🧭\n\nNav bars are typically lists of links wrapped in a `<nav>` tag.\n\n```html\n<nav>\n  <ul>\n    <li><a href=\"home.html\">Home</a></li>\n    <li><a href=\"services.html\">Services</a></li>\n    <li><a href=\"contact.html\">Contact</a></li>\n  </ul>\n</nav>\n```\n\n> 🎯 **Tip:** This structure is accessible and easy to style with CSS to look like a horizontal bar."
+        },
+        {
+            "id": "links_4",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Links Mastery 🔗\n\n- ✅ **`<a>`** tag creates links\n- ✅ **`href`** is the most important attribute\n- ✅ **`target=\"_blank\"`** opens in new tab\n- ✅ Links can be absolute, relative, or internal anchors (`#id`)\n\n> 🚀 **Next:** Add visuals with **Media Elements**!"
+        }
+    ]
+}

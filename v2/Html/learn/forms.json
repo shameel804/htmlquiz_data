@@ -1,0 +1,53 @@
+{
+    "id": "forms",
+    "topicId": "forms",
+    "topicTitle": "Forms",
+    "description": "Learn to capture user input using HTML forms, inputs, and buttons.",
+    "baseKP": 60,
+    "slides": [
+        {
+            "id": "forms_1",
+            "type": "content",
+            "title": "Introduction to Forms",
+            "content": "# HTML Forms 📝\n\nForms are used to collect user input. Whether it's a login screen, a search bar, or a feedback box, it's all HTML forms!\n\n## The <form> Element\n\nThe `<form>` element defines a form to collect user input.\n\n```html\n<form action=\"/submit_data\" method=\"post\">\n  <!-- Inputs go here -->\n</form>\n```\n\n- `action`: Where to send the form data\n- `method`: How to send tags (usually `GET` or `POST`)"
+        },
+        {
+            "id": "forms_2",
+            "type": "content",
+            "title": "Input Types part 1",
+            "content": "# Common Inputs ⌨️\n\nThe `<input>` element is the most used form element. It can verify depending on the `type` attribute.\n\n## Text & Password\n\n```html\n<!-- Single line text -->\n<label>Username: <input type=\"text\"></label>\n\n<!-- Masked characters -->\n<label>Password: <input type=\"password\"></label>\n```\n\n## Radio & Checkbox\n\n```html\n<!-- Radio: Select ONE option -->\n<input type=\"radio\" name=\"gender\" value=\"male\"> Male\n<input type=\"radio\" name=\"gender\" value=\"female\"> Female\n\n<!-- Checkbox: Select MULTIPLE options -->\n<input type=\"checkbox\" name=\"vehicle\" value=\"bike\"> Bike\n<input type=\"checkbox\" name=\"vehicle\" value=\"car\"> Car\n```"
+        },
+        {
+            "id": "forms_quiz_1",
+            "type": "quiz",
+            "title": "Input Quiz",
+            "content": "Which input type allows selecting multiple options?",
+            "quizQuestion": "Which input type is best for selecting multiple items from a list?",
+            "quizOptions": [
+                "text",
+                "radio",
+                "checkbox",
+                "password"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "forms_3",
+            "type": "content",
+            "title": "Buttons and Submission",
+            "content": "# Buttons 🔘\n\nYou can create buttons using `<button>` or `<input type=\"button\">`.\n\n## Button Types\n\n```html\n<!-- Submits the form data -->\n<button type=\"submit\">Register</button>\n\n<!-- Resets form inputs -->\n<button type=\"reset\">Clear</button>\n\n<!-- Generic button (needs JS) -->\n<button type=\"button\">Click Me</button>\n```\n\n## The Label Element\n\nNotice we used `<label>` earlier? It's important for usability and accessibility.\n\n```html\n<!-- Associates text with input -->\n<label for=\"email\">Email:</label>\n<input type=\"email\" id=\"email\" name=\"email\">\n```\n\n> 🎯 **Tip:** Clicking a label automatically focuses its associated input!"
+        },
+        {
+            "id": "forms_4",
+            "type": "content",
+            "title": "Form Validation",
+            "content": "# Basic Validation ✅\n\nHTML5 provides built-in validation without needing JavaScript!\n\n## Required Fields\n\nAdd the `required` attribute to make a field mandatory.\n\n```html\n<input type=\"text\" required>\n```\n\n## Specific Types\n\nBrowser checks for valid formats specifically:\n\n```html\n<input type=\"email\"> <!-- Must contain @ -->\n<input type=\"url\">   <!-- Must start with http:// -->\n<input type=\"number\" min=\"1\" max=\"10\">\n```\n\n## Placeholders\n\ntext displayed inside the input field before typing:\n\n```html\n<input type=\"text\" placeholder=\"Enter your name...\">\n```"
+        },
+        {
+            "id": "forms_5",
+            "type": "content",
+            "title": "Summary",
+            "content": "# Form Mastery 🎓\n\n- ✅ **`<form>`** wraps your input elements\n- ✅ **`<input>`** is versatile (`text`, `password`, `radio`, `checkbox`)\n- ✅ **`<button>`** handles submission\n- ✅ **`<label>`** improves accessibility\n- ✅ **Attributes** like `required` and `placeholder` enhance UX\n\n> 🚀 **Next:** Explore modern **HTML5 Features**!"
+        }
+    ]
+}
