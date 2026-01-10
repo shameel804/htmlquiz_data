@@ -1,47 +1,77 @@
 {
-    "id": "obj",
+    "id": "learn_js_obj",
     "topicId": "obj",
-    "topicTitle": "Objects and Arrays",
-    "description": "Master structured data with Objects and Arrays.",
-    "baseKP": 65,
+    "topicTitle": "JavaScript Objects",
+    "description": "Understand object-oriented concepts in JavaScript: objects, properties, methods, and the 'this' keyword.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "obj_1",
+            "id": "js_obj_1",
             "type": "content",
-            "title": "Objects",
-            "content": "# Objects 🗂️\n\nKey-value pairs to represent entities.\n\n```javascript\nconst car = {\n  brand: \"Tesla\",\n  model: \"Model 3\",\n  year: 2023,\n  start: function() {\n    console.log(\"Vroom!\");\n  }\n};\n\nconsole.log(car.brand); // Dot notation\nconsole.log(car[\"model\"]); // Bracket notation\ncar.start();\n```"
+            "title": "What is an Object?",
+            "content": "# Objects 📦\n\nIn real life, a car is an object.\n- **Properties:** weight, color.\n- **Methods:** start, stop.\n\nIn JS, objects are variables too, but they can contain many values.\n\n```javascript\nconst car = {type:\"Fiat\", model:\"500\", color:\"white\"};\n```"
         },
         {
-            "id": "obj_2",
+            "id": "js_obj_2",
             "type": "content",
-            "title": "Arrays",
-            "content": "# Arrays 📚\n\nOrdered lists of data.\n\n```javascript\nconst fruits = [\"Apple\", \"Banana\", \"Cherry\"];\n\nconsole.log(fruits[0]); // \"Apple\"\nconsole.log(fruits.length); // 3\n\nfruits.push(\"Date\"); // Add to end\nfruits.pop(); // Remove from end\n```"
+            "title": "Properties",
+            "content": "# Accessing Properties 🔑\n\nTwo ways to access properties:\n\n1. **Dot Notation** (Common)\n```javascript\ncar.type;\n```\n\n2. **Bracket Notation**\n```javascript\ncar[\"type\"];\n```\nBracket notation is useful when the property name is stored in a variable."
         },
         {
-            "id": "obj_3",
+            "id": "js_obj_3",
             "type": "content",
-            "title": "Array Methods",
-            "content": "# High-Order Methods 🛠️\n\nModern ways to loop and transform arrays.\n\n```javascript\nconst nums = [1, 2, 3];\n\n// forEach: Loop\nnums.forEach(n => console.log(n));\n\n// map: Transform (creates new array)\nconst doubled = nums.map(n => n * 2); // [2, 4, 6]\n\n// filter: Select subset\nconst big = nums.filter(n => n > 1); // [2, 3]\n```"
+            "title": "Object Methods",
+            "content": "# Methods ⚙️\n\nA method is a function stored as a property.\n\n```javascript\nconst person = {\n  firstName: \"John\",\n  lastName: \"Doe\",\n  fullName: function() {\n    return this.firstName + \" \" + this.lastName;\n  }\n};\n\n// Call it (don't forget parenthesis!)\nconsole.log(person.fullName());\n```"
         },
         {
-            "id": "obj_quiz_1",
+            "id": "js_obj_4",
             "type": "quiz",
-            "title": "Array Quiz",
-            "content": "Which method adds an item to the END of an array?",
-            "quizQuestion": "Which method adds an item to the END of an array?",
+            "title": "Method Quiz",
+            "content": "Invocation syntax.",
+            "quizQuestion": "How do you call the method 'start' of object 'car'?",
             "quizOptions": [
-                "append()",
-                "push()",
-                "add()",
-                "unshift()"
+                "car.start",
+                "car.start()",
+                "car[start]",
+                "start(car)"
             ],
             "correctOptionIndex": 1
         },
         {
-            "id": "obj_4",
+            "id": "js_obj_5",
+            "type": "content",
+            "title": "This Keyword",
+            "content": "# The 'this' Keyword 👈\n\nIn an object method, `this` refers to the **object** itself.\n\nIn the previous example, `this.firstName` means the `firstName` property of **this object** (person).\n\n> ⚠️ **Note:** `this` works differently in arrow functions!"
+        },
+        {
+            "id": "js_obj_6",
+            "type": "content",
+            "title": "Constructors",
+            "content": "# Object Constructors 🏗️\n\nSometimes we need a \"blueprint\" for creating many objects of the same type.\n\n```javascript\nfunction Person(first, last, age) {\n  this.firstName = first;\n  this.lastName = last;\n  this.age = age;\n}\n\nconst myFather = new Person(\"John\", \"Doe\", 50);\nconst myMother = new Person(\"Jane\", \"Doe\", 48);\n```"
+        },
+        {
+            "id": "js_obj_7",
+            "type": "content",
+            "title": "Looping Objects",
+            "content": "# Looping Objects 🔄\n\nUse the `for...in` loop to iterate over properties.\n\n```javascript\nconst person = {fname:\"John\", lname:\"Doe\", age:25};\n\nlet txt = \"\";\nfor (let x in person) {\n  txt += person[x] + \" \";\n}\n```"
+        },
+        {
+            "id": "js_obj_8",
+            "type": "content",
+            "title": "Adding/Deleting Properties",
+            "content": "# Modifying Objects ✏️\n\nObjects are mutable.\n\n## Add Property\n```javascript\nperson.nationality = \"English\";\n```\n\n## Delete Property\n```javascript\ndelete person.age;\n```"
+        },
+        {
+            "id": "js_obj_9",
+            "type": "content",
+            "title": "Object.values/keys",
+            "content": "# Conversion to Array 📋\n\nSometimes you need an array form.\n\n- `Object.keys(obj)`: Returns array of keys.\n- `Object.values(obj)`: Returns array of values.\n- `Object.entries(obj)`: Returns array of [key, value] pairs.\n\n```javascript\nObject.keys(person); // [\"fname\", \"lname\", \"age\"]\n```"
+        },
+        {
+            "id": "js_obj_10",
             "type": "content",
             "title": "Summary",
-            "content": "# Data Structs Recap 🏗️\n\n- ✅ **Objects**: Key-Value properties (`{}`) for things\n- ✅ **Arrays**: Ordered lists (`[]`) for collections\n- ✅ **Map/Filter**: Powerful tools for data manipulation\n- ✅ **`this`**: Keyword to access object properties inside methods\n\n> 🚀 **Next:** Level up with modern **ES6+ Features**!"
+            "content": "# Summary 📦\n\nObjects store related data.\n\n## Key Takeaways\n\n- ✅ **Properties:** `obj.prop` stores values.\n- ✅ **Methods:** Functions inside objects.\n- ✅ **this:** Refers to the owner object.\n- ✅ **Constructor:** Useful for creating instance stamps (`new Person`).\n\nNext, let's look at modern **ES6+ Features**! 🚀"
         }
     ]
 }

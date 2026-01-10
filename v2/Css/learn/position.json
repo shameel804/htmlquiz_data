@@ -1,53 +1,85 @@
 {
-    "id": "position",
+    "id": "learn_css_position",
     "topicId": "position",
-    "topicTitle": "Positioning",
-    "description": "Master layout control with relative, absolute, fixed, and sticky positioning.",
-    "baseKP": 70,
+    "topicTitle": "CSS Positioning",
+    "description": "Control layout with precision using static, relative, absolute, fixed, and sticky positioning.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "pos_1",
+            "id": "css_pos_1",
             "type": "content",
-            "title": "Static and Relative",
-            "content": "# CSS Positioning 📍\n\nThe `position` property specifies the type of positioning method used for an element.\n\n## Static (Default)\nNormal flow. `top`, `bottom`, `left`, `right` have no effect.\n\n## Relative\nPositioned relative to its **normal position**.\n```css\n.box {\n  position: relative;\n  left: 20px; /* Moves 20px from where it SHOULD be */\n  top: 10px;\n}\n```\nLeaves a gap where it used to be."
+            "title": "The position Property",
+            "content": "# CSS Positioning 📍\n\nThe `position` property specifies the type of positioning method used for an element.\n\nThere are five different values:\n1. `static`\n2. `relative`\n3. `fixed`\n4. `absolute`\n5. `sticky`\n\nElements are then positioned using `top`, `bottom`, `left`, and `right` properties."
         },
         {
-            "id": "pos_2",
+            "id": "css_pos_2",
+            "type": "content",
+            "title": "Static Position",
+            "content": "# 1. position: static 🗿\n\nDefault value. Elements render in order, as they appear in the document flow.\n\n`top`, `bottom`, `left`, and `right` properties represent **no effect**.\n\n```css\ndiv.static {\n  position: static;\n  border: 3px solid #73AD21;\n}\n```"
+        },
+        {
+            "id": "css_pos_3",
+            "type": "content",
+            "title": "Relative Position",
+            "content": "# 2. position: relative 👻\n\nPositioned relative to its normal position.\n\nSetting `top: 20px` adds 20px to the element's top position, forcing it down.\n\n```css\ndiv.relative {\n  position: relative;\n  left: 30px;\n  border: 3px solid #73AD21;\n}\n```\n\n> 💡 **Key Use:** A `relative` parent is often used as a container for `absolute` children!"
+        },
+        {
+            "id": "css_pos_4",
             "type": "content",
             "title": "Absolute Position",
-            "content": "# Absolute Positioning 📌\n\nRemoved from normal flow (no gap left behind).\n\nPositioned relative to the nearest **positioned ancestor** (an ancestor with `relative`, `absolute`, or `fixed` - not `static`).\n\n```css\n.container { position: relative; }\n.child {\n  position: absolute;\n  top: 0;\n  right: 0;\n}\n```\nThis places `.child` in the top-right corner of `.container`. If no ancestor is positioned, it relates to the body."
+            "content": "# 3. position: absolute 📌\n\nPositioned relative to the nearest **positioned** ancestor (instead of positioned relative to the viewport, like fixed).\n\nIf no positioned ancestor exists, it uses the document body.\n\n**REMOVED from the normal document flow!**\n\n```css\ndiv.relative {\n  position: relative;\n  width: 400px;\n  height: 200px;\n}\n\ndiv.absolute {\n  position: absolute;\n  top: 80px;\n  right: 0;\n}\n```"
         },
         {
-            "id": "pos_quiz_1",
+            "id": "css_pos_5",
             "type": "quiz",
-            "title": "Position Quiz",
-            "content": "Which position value makes an element stay in the viewport?",
-            "quizQuestion": "Which position value keeps the element in the same place even when scrolling?",
+            "title": "Absolute Quiz",
+            "content": "Check context.",
+            "quizQuestion": "An absolute element is positioned relative to...",
             "quizOptions": [
-                "absolute",
-                "relative",
-                "static",
-                "fixed"
+                "The browser window",
+                "The nearest positioned ancestor",
+                "The previous element",
+                "It's original position"
             ],
-            "correctOptionIndex": 3
+            "correctOptionIndex": 1
         },
         {
-            "id": "pos_3",
+            "id": "css_pos_6",
             "type": "content",
-            "title": "Fixed and Sticky",
-            "content": "# Fixed & Sticky 📌\n\n## Fixed\nPositioned relative to the **viewport** (browser window). It stays there when you scroll!\n```css\n.navbar {\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n}\n```\n\n## Sticky\nToggles between relative and fixed depending on scroll position.\n```css\n.header {\n  position: sticky;\n  top: 0;\n}\n```\nActs normal until you scroll to it, then it \"sticks\" to the top."
+            "title": "Fixed Position",
+            "content": "# 4. position: fixed ⚓\n\nPositioned relative to the **viewport** (browser window).\n\nIt stays in the same place even when the page is scrolled (like a navbar or 'back to top' button).\n\n```css\ndiv.fixed {\n  position: fixed;\n  bottom: 0;\n  right: 0;\n  width: 300px;\n}\n```"
         },
         {
-            "id": "pos_4",
+            "id": "css_pos_7",
+            "type": "content",
+            "title": "Sticky Position",
+            "content": "# 5. position: sticky 🍯\n\nToggles between `relative` and `fixed` depending on the scroll position.\n\nIt behaves like `relative` until it crosses a specified threshold (e.g., `top: 0`), then it becomes `fixed`.\n\n```css\ndiv.sticky {\n  position: -webkit-sticky; /* Safari */\n  position: sticky;\n  top: 0;\n  background-color: green;\n  padding: 50px;\n}\n```\n\nGreat for headers that stick to the top as you scroll!"
+        },
+        {
+            "id": "css_pos_8",
             "type": "content",
             "title": "Z-Index",
-            "content": "# Z-Index (Stack Order) 📚\n\nWhen elements overlap, `z-index` decides which one is on top.\n\n- Must have a `position` (anything but static).\n- Higher number = on top.\n\n```css\n.img { \n  position: absolute;\n  z-index: -1; /* Behind text */\n}\n.text {\n  position: relative;\n  z-index: 1; /* In front */\n}\n```"
+            "content": "# Z-Index (Layers) 🍰\n\nWhen elements overlap, `z-index` specifies the stack order.\n\n- Elements with a higher index appear in front of those with a lower index.\n- Only works on positioned elements (position: absolute, relative, fixed, or sticky).\n\n```css\nimg {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  z-index: -1;\n}\n```\n\n(Negative z-index puts it behind others.)"
         },
         {
-            "id": "pos_5",
+            "id": "css_pos_9",
+            "type": "quiz",
+            "title": "Z-Index Quiz",
+            "content": "Stacking order.",
+            "quizQuestion": "Which z-index is on top?",
+            "quizOptions": [
+                "z-index: 1",
+                "z-index: 10",
+                "z-index: 0",
+                "z-index: -1"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_pos_10",
             "type": "content",
             "title": "Summary",
-            "content": "# Positioning Recap 📍\n\n- ✅ **Static**: Default flow\n- ✅ **Relative**: Offset from normal position\n- ✅ **Absolute**: Specific spot inside a parent\n- ✅ **Fixed**: Stuck to screen (viewport)\n- ✅ **Sticky**: Scrolls then sticks\n- ✅ **Z-Index**: Controls vertical stacking\n\n> 🚀 **Next:** The modern layout king: **Flexbox & Grid**!"
+            "content": "# Summary 📍\n\nPositioning gives you layout control.\n\n## Key Takeaways\n\n- ✅ **static:** Default, normal flow.\n- ✅ **relative:** Normal flow, but nudged. Anchor for absolute children.\n- ✅ **absolute:** Removed from flow, relative to parent.\n- ✅ **fixed:** Relative to viewport (always visible).\n- ✅ **sticky:** Scrolls then sticks.\n- ✅ **z-index:** Controls front/back stacking.\n\nNext, we'll look at the powerful **Flexbox and Grid** layouts! 📐"
         }
     ]
 }

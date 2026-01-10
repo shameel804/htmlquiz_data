@@ -1,47 +1,91 @@
 {
-    "id": "anim",
+    "id": "learn_css_anim",
     "topicId": "anim",
     "topicTitle": "Transitions & Animations",
-    "description": "Add movement using transitions and keyframe animations.",
-    "baseKP": 75,
+    "description": "Bring your website to life with smooth transitions and complex keyframe animations.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "anim_1",
+            "id": "css_anim_1",
             "type": "content",
-            "title": "Transitions",
-            "content": "# Transitions 🎬\n\nSmoothly change property values over a given duration.\n\n```css\n.btn {\n  background: blue;\n  transition: background 0.3s ease-in-out;\n}\n\n.btn:hover {\n  background: red;\n}\n```\n\n- `property`: What to animate (e.g., `all`, `color`)\n- `duration`: How long (e.g., `0.5s`)\n- `timing-function`: Speed curve (`linear`, `ease`, `ease-in`)"
+            "title": "CSS Transitions",
+            "content": "# CSS Transitions 🎬\n\nTransitions allow you to change property values smoothly, over a given duration.\n\n## Syntax\nTo create a transition effect, you must specify two things:\n1. The CSS property you want to add an effect to\n2. The duration of the effect\n\n```css\ndiv {\n  width: 100px;\n  transition: width 2s;\n}\n\ndiv:hover {\n  width: 300px;\n}\n```\n(When you hover, the width grows smoothly over 2 seconds.)"
         },
         {
-            "id": "anim_2",
+            "id": "css_anim_2",
             "type": "content",
-            "title": "Keyframe Animations",
-            "content": "# Keyframes 🎞️\n\nCreate complex animations with steps.\n\n```css\n@keyframes slideIn {\n  from { transform: translateX(-100%); }\n  to { transform: translateX(0); }\n}\n\n.box {\n  animation: slideIn 1s forwards;\n}\n```\n\nYou can use percentages too:\n```css\n@keyframes bounce {\n  0% { top: 0; }\n  50% { top: -20px; }\n  100% { top: 0; }\n}\n```"
+            "title": "Transition Properties",
+            "content": "# Transition Properties ⚙️\n\n- `transition-property`: width, color, all\n- `transition-duration`: 2s, 500ms\n- `transition-timing-function`: ease, linear, ease-in, ease-out\n- `transition-delay`: 1s (Wait before starting)\n\n## Shorthand\n`transition: width 2s ease-in 1s;`\n(property duration timing delay)"
         },
         {
-            "id": "anim_3",
+            "id": "css_anim_3",
             "type": "content",
-            "title": "Animation Properties",
-            "content": "# Controlling Animation 🎛️\n\n- `animation-name`: The `@keyframes` name\n- `animation-duration`: Time to complete one cycle\n- `animation-iteration-count`: `1`, `3`, `infinite`\n- `animation-direction`: `normal`, `reverse`, `alternate`\n- `animation-fill-mode`: `forwards` (keep state at end)\n\n```css\n.loader {\n  animation: spin 2s linear infinite;\n}\n```"
+            "title": "Timing Functions",
+            "content": "# Timing Functions ⏳\n\nSpecifies the speed curve of the transition effect.\n\n- `linear`: Same speed from start to end.\n- `ease` (default): Slow start, then fast, then slow end.\n- `ease-in`: Slow start.\n- `ease-out`: Slow end.\n- `ease-in-out`: Slow start and end.\n\n```css\ntransition-timing-function: ease-in-out;\n```"
         },
         {
-            "id": "anim_quiz_1",
+            "id": "css_anim_4",
+            "type": "quiz",
+            "title": "Transition Quiz",
+            "content": "Check concepts.",
+            "quizQuestion": "Which timing function has a slow start?",
+            "quizOptions": [
+                "linear",
+                "ease-in",
+                "ease-out",
+                "step-start"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_anim_5",
+            "type": "content",
+            "title": "CSS Animations",
+            "content": "# CSS Animations 📽️\n\nAnimations let an element gradually change from one style to another.\n\nYou can change as many CSS properties you want, as many times as you want.\n\n## @keyframes Rule\nTo use CSS animation, you must first specify some keyframes for the animation.\n\n```css\n@keyframes example {\n  from {background-color: red;}\n  to {background-color: yellow;}\n}\n```"
+        },
+        {
+            "id": "css_anim_6",
+            "type": "content",
+            "title": "Applying Animations",
+            "content": "# Applying Animations ▶️\n\nBind the animation to an element.\n\n```css\ndiv {\n  width: 100px;\n  height: 100px;\n  background-color: red;\n  animation-name: example;\n  animation-duration: 4s;\n}\n```\n\nIf `animation-duration` is not specified, no animation will occur (default is 0)."
+        },
+        {
+            "id": "css_anim_7",
+            "type": "content",
+            "title": "Keyframe Percentages",
+            "content": "# Granular Control %\n\nUse percentages for intermediate steps.\n\n```css\n@keyframes example {\n  0%   {background-color: red; left:0px; top:0px;}\n  25%  {background-color: yellow; left:200px; top:0px;}\n  50%  {background-color: blue; left:200px; top:200px;}\n  75%  {background-color: green; left:0px; top:200px;}\n  100% {background-color: red; left:0px; top:0px;}\n}\n```"
+        },
+        {
+            "id": "css_anim_8",
+            "type": "content",
+            "title": "Animation Iteration",
+            "content": "# Looping Animations 🔄\n\n`animation-iteration-count` specifies the number of times an animation should run.\n\n- `animation-iteration-count: 3;` (Runs 3 times)\n- `animation-iteration-count: infinite;` (Runs forever)\n\n## Direction\n`animation-direction: alternate;` (Plays forward then backward)"
+        },
+        {
+            "id": "css_anim_9",
+            "type": "content",
+            "title": "2D/3D Transforms",
+            "content": "# Transforms 🔄\n\nTransforms allow you to translate, rotate, scale, and skew elements.\n\n- `translate(x, y)`: Moves element.\n- `rotate(angle)`: Rotates element.\n- `scale(x, y)`: Resizes element.\n- `skew(x-angle, y-angle)`: Skews element.\n\n```css\ndiv:hover {\n  transform: scale(1.5) rotate(45deg);\n}\n```\nOften combined with transitions for smooth effects!"
+        },
+        {
+            "id": "css_anim_10",
             "type": "quiz",
             "title": "Animation Quiz",
-            "content": "Which acts consistently throughout?",
-            "quizQuestion": "Which timing function means same speed from start to end?",
+            "content": "Verify animation knowledge.",
+            "quizQuestion": "Which rule defines the animation steps?",
             "quizOptions": [
-                "ease",
-                "ease-in",
-                "linear",
-                "cubic-bezier"
+                "@animation",
+                "@keyframes",
+                "@transition",
+                "@steps"
             ],
-            "correctOptionIndex": 2
+            "correctOptionIndex": 1
         },
         {
-            "id": "anim_4",
+            "id": "css_anim_11",
             "type": "content",
             "title": "Summary",
-            "content": "# Motion Magic ✨\n\n- ✅ **Transitions**: Simple A to B changes (great for hovers)\n- ✅ **Keyframes**: Complex, multi-step animations\n- ✅ **Infinite**: Create loaders and pulses\n- ✅ Use `transform` and `opacity` for high-performance animations!\n\n> 🚀 **Next:** Make it work on mobile with **Media Queries**!"
+            "content": "# Summary 🎬\n\nAnimations create engaging interfaces.\n\n## Key Takeaways\n\n- ✅ **Transitions:** Smoothly change distinct values (e.g., hover color).\n- ✅ **@keyframes:** Define complex animation sequences.\n- ✅ **Iteration:** Control how many times it loops (`infinite`).\n- ✅ **Transforms:** Move, rotate, and scale elements without affecting layout flow.\n\nNext, let's make our layouts Mobile-Friendly with **Media Queries**! 📱"
         }
     ]
 }

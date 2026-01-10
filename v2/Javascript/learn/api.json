@@ -1,41 +1,85 @@
 {
-    "id": "api",
+    "id": "learn_js_api",
     "topicId": "api",
-    "topicTitle": "APIs",
-    "description": "Fetch data from servers and use browser APIs.",
-    "baseKP": 90,
+    "topicTitle": "Web APIs & Storage",
+    "description": "Interact with servers using Fetch and JSON, and store data locally in the browser.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "api_1",
+            "id": "js_api_1",
+            "type": "content",
+            "title": "What is an API?",
+            "content": "# Web APIs 🌐\n\n**API** stands for **A**pplication **P**rogramming **I**nterface.\n\nIt's a set of rules that allows your JS code to communicate with other software (like a backend server or browser features).\n\nCommon Browser APIs:\n- **Fetch API:** Server requests.\n- **Geolocation API:** User location.\n- **Storage API:** Save data."
+        },
+        {
+            "id": "js_api_2",
+            "type": "content",
+            "title": "JSON",
+            "content": "# JSON 📋\n\n**J**ava**S**cript **O**bject **N**otation is a lightweight data interchange format.\n\nIt is plain text written with object notation.\n\n```javascript\n// JS Object\nconst obj = { name: \"John\", age: 30 };\n\n// Convert to JSON String\nconst myJSON = JSON.stringify(obj);\n// '{\"name\":\"John\",\"age\":30}'\n\n// Parse JSON String back to Object\nconst newObj = JSON.parse(myJSON);\n```"
+        },
+        {
+            "id": "js_api_3",
             "type": "content",
             "title": "Fetch API",
-            "content": "# Fetch API 📡\n\nBuilt-in modern way to make HTTP requests.\n\n```javascript\nfetch('https://api.example.com/user/1')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error('Error:', error));\n```\n\n## JSON\n**J**ava**S**cript **O**bject **N**otation. It's the standard format for API data."
+            "content": "# The Fetch API 🐕\n\nThe Fetch API provides an interface for fetching resources (across the network).\n\nIt returns a **Promise**.\n\n```javascript\nfetch('https://api.example.com/data')\n  .then(response => response.json()) // Parse JSON\n  .then(data => console.log(data))\n  .catch(error => console.error(error));\n```"
         },
         {
-            "id": "api_2",
+            "id": "js_api_4",
+            "type": "quiz",
+            "title": "Fetch Quiz",
+            "content": "Check fetch understanding.",
+            "quizQuestion": "What does fetch() return?",
+            "quizOptions": [
+                "The data directly",
+                "A Promise",
+                "XML",
+                "A String"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_api_5",
             "type": "content",
             "title": "Local Storage",
-            "content": "# Local Storage 💾\n\nSave data in the browser (persists on refresh).\n\n```javascript\n// Save\nlocalStorage.setItem('username', 'Alice');\n\n// Read\nconst name = localStorage.getItem('username');\n\n// Remove\nlocalStorage.removeItem('username');\n\n// Clear All\nlocalStorage.clear();\n```\n\n> ⚠️ **Note:** Only stores strings! Use `JSON.stringify()` for objects."
+            "content": "# Web Storage API 💾\n\nAllows you to store data locally within the user's browser.\n\n## localStorage\nStores data with no expiration date.\n\n```javascript\n// Save\nlocalStorage.setItem(\"lastname\", \"Smith\");\n\n// Retrieve\nlet name = localStorage.getItem(\"lastname\");\n\n// Remove\nlocalStorage.removeItem(\"lastname\");\n```\n**Note:** Values are always Strings!"
         },
         {
-            "id": "api_quiz_1",
+            "id": "js_api_6",
+            "type": "content",
+            "title": "Session Storage",
+            "content": "# sessionStorage ⏳\n\nSimilar to `localStorage`, but stores data for only one session.\n\nThe data is deleted when the user closes the specific browser tab.\n\n```javascript\nsessionStorage.setItem(\"key\", \"value\");\n```"
+        },
+        {
+            "id": "js_api_7",
+            "type": "content",
+            "title": "Geolocation API",
+            "content": "# Geolocation API 📍\n\nLocate the user's position.\n\n```javascript\nif (navigator.geolocation) {\n  navigator.geolocation.getCurrentPosition(showPosition);\n} else {\n  console.log(\"Geolocation is not supported.\");\n}\n\nfunction showPosition(position) {\n  console.log(\"Lat: \" + position.coords.latitude);\n  console.log(\"Long: \" + position.coords.longitude);\n}\n```\nRequires user permission."
+        },
+        {
+            "id": "js_api_8",
             "type": "quiz",
             "title": "Storage Quiz",
-            "content": "Does LocalStorage data expire?",
-            "quizQuestion": "When does data in LocalStorage expire?",
+            "content": "Check persistence.",
+            "quizQuestion": "Which storage keeps data even after the browser is closed?",
             "quizOptions": [
-                "When browser closes",
-                "After 24 hours",
-                "Never (unless user/code clears it)",
-                "When computer restarts"
+                "sessionStorage",
+                "localStorage",
+                "cookieStorage",
+                "tempStorage"
             ],
-            "correctOptionIndex": 2
+            "correctOptionIndex": 1
         },
         {
-            "id": "api_3",
+            "id": "js_api_9",
+            "type": "content",
+            "title": "Async Fetch",
+            "content": "# Async/Await with Fetch 🤝\n\nThe modern way to call APIs.\n\n```javascript\nasync function getUser() {\n  try {\n    const response = await fetch('https://api.example.com/user');\n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n    }\n    const data = await response.json();\n    console.log(data);\n  } catch (error) {\n    console.error(\"Could not fetch user:\", error);\n  }\n}\n```"
+        },
+        {
+            "id": "js_api_10",
             "type": "content",
             "title": "Summary",
-            "content": "# API Mastery 🌍\n\n- ✅ **`fetch`**: Get data from the internet\n- ✅ **JSON**: The language of APIs\n- ✅ **LocalStorage**: Simple browser database\n- ✅ **Other APIs**: Geolocation, Notification, Canvas...\n\n> 🎓 **Congratulations:** You've completed the JavaScript course! You are now a web developer! 🎉"
+            "content": "# Summary 🌐\n\nConnecting and Storing.\n\n## Key Takeaways\n\n- ✅ **JSON:** The language of data exchange.\n- ✅ **Fetch:** The modern way to make HTTP requests.\n- ✅ **localStorage:** Save user preferences purely in the browser.\n- ✅ **Geolocation:** Get real-world context.\n\nCongratulations! You have completed the **JavaScript** module. You are now a web developer! 🎉"
         }
     ]
 }

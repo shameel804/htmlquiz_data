@@ -1,73 +1,123 @@
 {
-    "id": "basic",
+    "id": "learn_html_basic",
     "topicId": "basic",
-    "topicTitle": "Basics",
-    "description": "Master the fundamentals of HTML structure, tags, and attributes.",
-    "baseKP": 50,
+    "topicTitle": "HTML Basics",
+    "description": "Master the foundation of the web by learning HTML tags, elements, attributes, and document structure.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "basic_1",
+            "id": "html_basic_1",
             "type": "content",
-            "title": "Welcome to HTML Basics",
-            "content": "# HTML Basics 🌐\n\nWelcome to the world of web development! **HTML** (HyperText Markup Language) is the standard markup language for documents designed to be displayed in a web browser.\n\n## What you'll learn:\n- **Tags & Elements** - The building blocks\n- **Attributes** - Providing extra info\n- **Structure** - The skeleton of a webpage\n\n> 💡 **Fun Fact:** HTML was invented by Tim Berners-Lee in 1991. The first version only had 18 tags!"
+            "title": "Welcome to HTML",
+            "content": "# Welcome to HTML 🌐\n\nHTML (**H**yper**T**ext **M**arkup **L**anguage) is the standard markup language for creating web pages. It describes the structure of a web page.\n\n## What you'll learn:\n\n- 🏗️ **HTML Structure** - The skeleton of a webpage\n- 🏷️ **Tags & Elements** - The detailed building blocks\n- ⚙️ **Attributes** - Configuring elements\n- 📝 **Best Practices** - Writing clean HTML\n\n> 💡 **Fun Fact:** HTML was invented by Tim Berners-Lee in 1991.\n\nLet's start building!"
         },
         {
-            "id": "basic_2",
+            "id": "html_basic_2",
             "type": "content",
-            "title": "Tags and Elements",
-            "content": "# Tags & Elements 🧱\n\nHTML uses \"tags\" to label pieces of content.\n\n## Anatomy of an Element\n\nMost elements have an **opening tag**, **content**, and a **closing tag**.\n\n```html\n<p>This is a paragraph.</p>\n```\n\n- `<p>`: Opening tag\n- `This is a paragraph.`: Content\n- `</p>`: Closing tag\n\n## Void Elements\n\nSome elements don't have content or a closing tag. These are called **void elements**.\n\n```html\n<br>  <!-- Line break -->\n<hr>  <!-- Horizontal rule -->\n<img> <!-- Image -->\n```"
+            "title": "What is an HTML Tag?",
+            "content": "# HTML Tags 🏷️\n\nHTML tags are keywords surrounded by angle brackets like `<html>`. They tell the browser how to display content.\n\n## Anatomy of a Tag\n\n- **Start tag:** `<tagname>` (e.g., `<p>`)\n- **Content:** The text or elements between tags.\n- **End tag:** `</tagname>` (e.g., `</p>`)\n\n```html\n<h1>This is a Heading</h1>\n<p>This is a paragraph.</p>\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<body>\n\n<h1>My First Heading</h1>\n<p>My first paragraph.</p>\n\n</body>\n</html>\nFULL_CODE_END -->\n\n> ⚠️ **Note:** Some tags like `<br>` and `<img>` are \"empty tags\" and don't have an end tag!"
         },
         {
-            "id": "basic_quiz_1",
+            "id": "html_basic_3",
             "type": "quiz",
-            "title": "Tag Quiz",
-            "content": "Check your understanding of tags!",
-            "quizQuestion": "Which of the following is a VOID element (no closing tag)?",
+            "title": "Tag Check",
+            "content": "Let's check your understanding of tags.",
+            "quizQuestion": "Which character indicates an end tag?",
             "quizOptions": [
-                "<p>",
-                "<h1>",
-                "<br>",
-                "<div>"
+                "<",
+                "/",
+                "*",
+                "\\"
             ],
-            "correctOptionIndex": 2
+            "correctOptionIndex": 1
         },
         {
-            "id": "basic_3",
+            "id": "html_basic_4",
             "type": "content",
-            "title": "Attributes",
-            "content": "# Attributes 🏷️\n\nAttributes provide additional information about elements. They are always specified in the **opening tag**.\n\n## Syntax\n\n```html\n<tagname attribute=\"value\">Content</tagname>\n```\n\n## Common Attributes\n\n- `id`: Unique identifier for an element\n- `class`: Specifies one or more class names (for CSS/JS)\n- `style`: Inline CSS styles\n- `title`: Extra info (often shown as a tooltip)\n\n```html\n<p class=\"intro\" title=\"Hello!\">Welcome</p>\n<a href=\"https://google.com\">Link</a>\n<img src=\"logo.png\" alt=\"Logo\">\n```"
+            "title": "HTML Elements",
+            "content": "# HTML Elements 🧱\n\nAn HTML **element** is everything from the start tag to the end tag.\n\n`Element = Start Tag + Content + End Tag`\n\n## Examples\n\n| Element | Start Tag | Content | End Tag |\n|---|---|---|---|\n| `<h1>Hello</h1>` | `<h1>` | Hello | `</h1>` |\n| `<p>My text</p>` | `<p>` | My text | `</p>` |\n| `<br>` | `<br>` | *none* | *none* |\n\n## Nested Elements\n\nElements can contain other elements.\n\n```html\n<html>\n  <body>\n    <p>This is <b>bold</b> text.</p>\n  </body>\n</html>\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<body>\n\n<h2>Nested Elements Example</h2>\n\n<p>This paragraph contains <b>bold</b>, <i>italic</i>, and <u>underlined</u> text.</p>\n\n</body>\n</html>\nFULL_CODE_END -->"
         },
         {
-            "id": "basic_4",
+            "id": "html_basic_5",
+            "type": "content",
+            "title": "HTML Attributes",
+            "content": "# HTML Attributes ⚙️\n\nAttributes provide additional information about HTML elements. They are always specified in the **start tag**.\n\n## Syntax\n\n`name=\"value\"`\n\n## Common Attributes\n\n- `href` in `<a>`: Specifies the URL.\n- `src` in `<img>`: Specifies the image path.\n- `width` and `height`: Specify dimensions.\n- `alt`: Alternative text for images.\n- `style`: Adds inline CSS styles.\n- `lang`: Declares the language of the web page.\n\n```html\n<a href=\"https://www.google.com\">Visit Google</a>\n<img src=\"logo.png\" width=\"100\" height=\"100\">\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<body>\n\n<h2>HTML Attributes Demo</h2>\n\n<p>Link with href attribute:</p>\n<a href=\"https://www.w3schools.com\">Visit W3Schools</a>\n\n<p>Image with src, alt, width, and height attributes:</p>\n<img src=\"https://www.w3schools.com/images/w3schools_green.jpg\" alt=\"W3Schools.com\" width=\"104\" height=\"142\">\n\n<p>Input with type and value attributes:</p>\n<input type=\"text\" value=\"John Doe\">\n\n</body>\n</html>\nFULL_CODE_END -->"
+        },
+        {
+            "id": "html_basic_6",
+            "type": "quiz",
+            "title": "Attribute Quiz",
+            "content": "Identify the correct attribute usage.",
+            "quizQuestion": "Where are HTML attributes defined?",
+            "quizOptions": [
+                "In the end tag",
+                "In the start tag",
+                "In the content",
+                "Between tags"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_basic_7",
+            "type": "content",
+            "title": "The 'style' Attribute",
+            "content": "# The 'style' Attribute 🎨\n\nThe `style` attribute allows you to add styling (CSS) directly to an element.\n\n## Syntax\n\n`<tagname style=\"property:value;\">`\n\n## Examples\n\n```html\n<p style=\"color:red;\">This is red text.</p>\n<p style=\"font-size:20px;\">This is big text.</p>\n<body style=\"background-color:powderblue;\">\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<body style=\"background-color:powderblue;\">\n\n<h1 style=\"color:blue;text-align:center;\">This is a heading</h1>\n<p style=\"color:red;\">This is a paragraph.</p>\n<p style=\"font-size:30px;\">This is a big paragraph.</p>\n\n</body>\n</html>\nFULL_CODE_END -->\n\n> 🎯 **Pro Tip:** While inline styles work, it's better to use external CSS files for large projects."
+        },
+        {
+            "id": "html_basic_8",
+            "type": "content",
+            "title": "The 'title' Attribute",
+            "content": "# The 'title' Attribute 💬\n\nThe `title` attribute defines some extra information about an element.\n\n## Tooltip Effect\n\nThe value of the title attribute will be displayed as a tooltip when you mouse over the element.\n\n```html\n<p title=\"I'm a tooltip!\">\n  Hover over this paragraph.\n</p>\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<body>\n\n<h2 title=\"I'm a header\">The title Attribute</h2>\n\n<p title=\"I'm a tooltip\">Mouse over this paragraph, to display the title attribute as a tooltip.</p>\n\n</body>\n</html>\nFULL_CODE_END -->"
+        },
+        {
+            "id": "html_basic_9",
             "type": "content",
             "title": "HTML Page Structure",
-            "content": "# Document Structure 💀\n\nEvery HTML document follows a standard structure.\n\n## The Boilerplate\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n    <title>Page Title</title>\n</head>\n<body>\n\n    <h1>My First Heading</h1>\n    <p>My first paragraph.</p>\n\n</body>\n</html>\n```\n\n- `<!DOCTYPE html>`: Declares document type (HTML5)\n- `<html>`: The root element\n- `<head>`: Meta-information (title, encoding)\n- `<body>`: Visible content\n\n> 🎯 **Tip:** The content inside `<head>` is NOT displayed on the page itself (except the title in the tab)."
+            "content": "# HTML Page Structure 🏗️\n\nEvery standardized HTML page follows a specific structure.\n\n## The Boilerplate\n\n```html\n<!DOCTYPE html>\n<html>\n  <head>\n    <title>Page Title</title>\n  </head>\n  <body>\n    <h1>My First Heading</h1>\n    <p>My first paragraph.</p>\n  </body>\n</html>\n```\n\n- `<!DOCTYPE html>`: Declares the document type (HTML5).\n- `<html>`: The root element.\n- `<head>`: Contains meta-information (not visible on page).\n- `<title>`: Sets the title in the browser tab.\n- `<body>`: Contains the visible content.\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<head>\n<title>Page Title</title>\n</head>\n<body>\n\n<h1>This is a Heading</h1>\n<p>This is a paragraph.</p>\n<p>This is another paragraph.</p>\n\n</body>\n</html>\nFULL_CODE_END -->"
         },
         {
-            "id": "basic_5",
-            "type": "content",
-            "title": "Headings and Paragraphs",
-            "content": "# Headings & Paragraphs 📝\n\n## Headings\n\nHTML has 6 levels of headings, from `<h1>` (most important) to `<h6>` (least important).\n\n```html\n<h1>Main Heading</h1>\n<h2>Subheading</h2>\n<h3>Section Title</h3>\n...\n<h6>Tiny Heading</h6>\n```\n\n## Paragraphs\n\nParagraphs are defined with the `<p>` tag. Browsers automatically add some margin before and after a paragraph.\n\n```html\n<p>This is a paragraph of text.</p>\n<p>Dimensions are not fixed by default.</p>\n```"
-        },
-        {
-            "id": "basic_quiz_2",
+            "id": "html_basic_10",
             "type": "quiz",
             "title": "Structure Quiz",
-            "content": "Test your knowledge on document structure!",
-            "quizQuestion": "Where does the visible content of a webpage go?",
+            "content": "Test your knowledge of page structure.",
+            "quizQuestion": "Which tag contains the visible content of a webpage?",
             "quizOptions": [
                 "<head>",
-                "<footer>",
+                "<meta>",
                 "<body>",
-                "<html attribute='visible'>"
+                "<html>"
             ],
             "correctOptionIndex": 2
         },
         {
-            "id": "basic_6",
+            "id": "html_basic_11",
+            "type": "content",
+            "title": "Head Element",
+            "content": "# The <head> Element 🧠\n\nThe `<head>` element is a container for metadata (data about data).\n\n## Common Head Elements\n\n- `<title>`: Defines the document title.\n- `<meta>`: Define character set, page description, keywords, author, and viewport settings.\n- `<link>`: Links to external resources (like CSS).\n- `<style>`: Defines internal CSS.\n- `<script>`: Defines or links to JavaScript.\n\n```html\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"description\" content=\"Free Web tutorials\">\n  <meta name=\"keywords\" content=\"HTML, CSS, JavaScript\">\n  <meta name=\"author\" content=\"John Doe\">\n</head>\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<head>\n  <title>My Helper Page</title>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <style>\n    body {background-color: lightyellow;}\n    h1 {color: teal;}\n  </style>\n</head>\n<body>\n\n<h1>Look at the Head!</h1>\n<p>The styles above are defined in the head section.</p>\n<p>The title of this page helps SEO and browser tabs.</p>\n\n</body>\n</html>\nFULL_CODE_END -->"
+        },
+        {
+            "id": "html_basic_12",
+            "type": "content",
+            "title": "Doctype Declaration",
+            "content": "# <!DOCTYPE html> 📜\n\nThe `<!DOCTYPE>` declaration represents the document type and helps browsers validly display web pages.\n\n## Key Facts\n- It must only appear once, at the top of the page.\n- It is **not** an HTML tag.\n- The declaration for HTML5 is simple:\n\n```html\n<!DOCTYPE html>\n```\n\n> Without this, browsers might render pages in \"Quirks Mode,\" causing unexpected layout issues."
+        },
+        {
+            "id": "html_basic_13",
+            "type": "content",
+            "title": "HTML Headings",
+            "content": "# HTML Headings 📑\n\nHTML headings are titles or subtitles that you want to display on a webpage.\n\n## Levels h1 to h6\n\nHTML defines six levels of headings.\n- `<h1>` is the most important.\n- `<h6>` is the least important.\n\n```html\n<h1>Heading 1</h1>\n<h2>Heading 2</h2>\n<h3>Heading 3</h3>\n<h4>Heading 4</h4>\n<h5>Heading 5</h5>\n<h6>Heading 6</h6>\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<body>\n\n<h1>Heading 1</h1>\n<h2>Heading 2</h2>\n<h3>Heading 3</h3>\n<h4>Heading 4</h4>\n<h5>Heading 5</h5>\n<h6>Heading 6</h6>\n\n<p>Browsers automatically add some white space (a margin) before and after a heading.</p>\n\n</body>\n</html>\nFULL_CODE_END -->\n\n> 🔍 **SEO Tip:** Search engines use headings to index the structure and content of your web pages."
+        },
+        {
+            "id": "html_basic_14",
+            "type": "content",
+            "title": "HTML Paragraphs",
+            "content": "# HTML Paragraphs 📝\n\nThe `<p>` element defines a paragraph.\n\n## Spacing\n\nBrowsers automatically add a single blank line before and after each `<p>` element.\n\n## Line Breaks\n\nIf you want a line break (a new line) without starting a new paragraph, use the `<br>` tag.\n\n```html\n<p>This is<br>a paragraph<br>with line breaks.</p>\n```\n\n## Preformatted Text\n\nThe `<pre>` tag preserves both spaces and line breaks:\n\n```html\n<pre>\n  My Bonnie lies over the ocean.\n\n  My Bonnie lies over the sea.\n</pre>\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<body>\n\n<p>This is a paragraph.</p>\n<p>This is another paragraph.</p>\n\n<p>This is<br>a paragraph<br>with line breaks.</p>\n\n<pre>\n   This text is\n   inside a pre element.\n   It preserves      spaces and\n   line breaks.\n</pre>\n\n</body>\n</html>\nFULL_CODE_END -->"
+        },
+        {
+            "id": "html_basic_15",
             "type": "content",
             "title": "Summary",
-            "content": "# You did it! 🎉\n\nYou've learned the core of HTML:\n\n- ✅ **Tags** start and end elements (`<tag>...</tag>`)\n- ✅ **Attributes** add info (`src`, `href`, `class`)\n- ✅ **Structure** requires `<html>`, `<head>`, and `<body>`\n- ✅ **Headings** (`h1`-`h6`) structure your content\n\n> 🚀 **Next:** Learn how to create interactive **Forms**!"
+            "content": "# Summary 🌟\n\nYou've taken your first step into Web Development!\n\n## Key Takeaways\n- ✅ **HTML** structure is the skeleton of the web.\n- ✅ **Tags** come in pairs (start/end) or are empty.\n- ✅ **Elements** are the building blocks.\n- ✅ **Attributes** configure elements in the start tag.\n- ✅ **Structure** requires `<html>`, `<head>`, and `<body>`.\n\nNext, we'll look at how to create interactions using **Forms**! 🚀"
         }
     ]
 }

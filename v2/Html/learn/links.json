@@ -1,47 +1,91 @@
 {
-    "id": "links",
+    "id": "learn_html_links",
     "topicId": "links",
-    "topicTitle": "Links & Navigation",
-    "description": "Create hyperlinks and build navigation menus.",
-    "baseKP": 55,
+    "topicTitle": "Links and Navigation",
+    "description": "Understand how to create hyperlinks and navigation menus to connect your web pages.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "links_1",
+            "id": "html_links_1",
             "type": "content",
-            "title": "Anchor Tags",
-            "content": "# Hyperlinks 🔗\n\nThe `<a>` (anchor) tag defines a hyperlink. It's what makes the \"Web\" a web!\n\n## Syntax\n\n```html\n<a href=\"https://www.example.com\">Visit Example</a>\n```\n\n- `href`: The URL destination (Hypertext Reference)\n- Content: The clickable text or image\n\n## Target Attribute\n\nWhere to open the link?\n\n```html\n<!-- Opens in a new tab -->\n<a href=\"url\" target=\"_blank\">New Tab</a>\n\n<!-- Default (same tab) -->\n<a href=\"url\" target=\"_self\">Same Tab</a>\n```"
+            "title": "Hyperlinks Basics",
+            "content": "# Links (Hyperlinks) 🔗\n\nLinks are the essence of the World Wide Web. They allow users to click their way from page to page.\n\n## The <a> Tag\n\nHTML links are defined with the `<a>` tag:\n\n```html\n<a href=\"url\">link text</a>\n```\n\nThe `href` attribute specifies the destination address.\n\n```html\n<a href=\"https://www.google.com\">Visit Google</a>\n```"
         },
         {
-            "id": "links_2",
-            "type": "content",
-            "title": "Types of Links",
-            "content": "# Different Link Types 🌐\n\n## Absolute vs Relative\n\n```html\n<!-- Absolute: Full URL -->\n<a href=\"https://google.com\">Google</a>\n\n<!-- Relative: Internal file -->\n<a href=\"/about.html\">About Us</a>\n```\n\n## Image Links\n\n```html\n<a href=\"home.html\">\n  <img src=\"logo.png\" alt=\"Home\">\n</a>\n```\n\n## Email Links\n\n```html\n<a href=\"mailto:me@example.com\">Email Me</a>\n```\n\n## ID Links (Bookmarks)\n\nJump to a specific part of the page.\n\n```html\n<a href=\"#section2\">Jump to Section 2</a>\n...\n<h2 id=\"section2\">Section 2</h2>\n```"
+            "id": "html_links_2",
+            "type": "quiz",
+            "title": "Href Quiz",
+            "content": "What defines the destination?",
+            "quizQuestion": "Which attribute holds the URL?",
+            "quizOptions": [
+                "src",
+                "link",
+                "href",
+                "url"
+            ],
+            "correctOptionIndex": 2
         },
         {
-            "id": "links_quiz_1",
+            "id": "html_links_3",
+            "type": "content",
+            "title": "The 'target' Attribute",
+            "content": "# The Target Attribute 🎯\n\nThe `target` attribute specifies where to open the linked document.\n\n- `_self`: Default. Opens in the same window/tab.\n- `_blank`: Opens in a new window or tab.\n- `_parent`: Opens in the parent frame.\n- `_top`: Opens in the full body of the window.\n\n```html\n<a href=\"https://www.w3schools.com\" target=\"_blank\">Visit W3Schools!</a>\n```\n\n> 💡 **Tip:** Use `_blank` for external links to keep users on your site."
+        },
+        {
+            "id": "html_links_4",
+            "type": "content",
+            "title": "Absolute vs Relative URLs",
+            "content": "# Absolute vs Relative URLs 📍\n\n## Absolute URLs\nA full web address (e.g., `https://www.google.com`). Used for external links.\n\n```html\n<a href=\"https://www.google.com\">Google</a>\n```\n\n## Relative URLs\nA local path (e.g., `page2.html`). Used for internal links within your website.\n\n```html\n<a href=\"about.html\">About Us</a>\n<a href=\"/images/logo.png\">Logo</a>\n```"
+        },
+        {
+            "id": "html_links_5",
+            "type": "content",
+            "title": "Image Links",
+            "content": "# Image as a Link 🖼️\n\nYou can use an image as a link by nesting the `<img>` tag inside the `<a>` tag.\n\n```html\n<a href=\"default.html\">\n  <img src=\"smiley.gif\" alt=\"HTML tutorial\" style=\"width:42px;height:42px;\">\n</a>\n```\n\nThis makes the image clickable!"
+        },
+        {
+            "id": "html_links_6",
+            "type": "content",
+            "title": "Link to Email",
+            "content": "# Email Links ✉️\n\nUse `mailto:` inside the `href` attribute to open the user's email program.\n\n```html\n<a href=\"mailto:someone@example.com\">Send email</a>\n```\n\nYou can even add a subject:\n\n```html\n<a href=\"mailto:someone@example.com?subject=Hello%20World\">Send email with subject</a>\n```"
+        },
+        {
+            "id": "html_links_7",
+            "type": "content",
+            "title": "Bookmarks",
+            "content": "# Bookmarks (Page Anchors) 🔖\n\nBookmarks allow users to jump to specific parts of a Web page.\n\n**Step 1:** Create an id for the element to jump to.\n```html\n<h2 id=\"C4\">Chapter 4</h2>\n```\n\n**Step 2:** Create a link to that id (use `#`).\n```html\n<a href=\"#C4\">Jump to Chapter 4</a>\n```\n\nThis is useful for long pages or Table of Contents."
+        },
+        {
+            "id": "html_links_8",
+            "type": "content",
+            "title": "Link Colors",
+            "content": "# Link Colors 🎨\n\nBy default, links appear as:\n- **Unvisited link:** Underlined and blue\n- **Visited link:** Underlined and purple\n- **Active link:** Underlined and red\n\nYou can change this with CSS:\n\n```css\na:link { color: green; }\na:visited { color: pink; }\na:hover { color: red; }\na:active { color: yellow; }\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<style>\na:link, a:visited {\n  background-color: #f44336;\n  color: white;\n  padding: 14px 25px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n}\n\na:hover, a:active {\n  background-color: red;\n}\n</style>\n<body>\n\n<h2>Link Button</h2>\n\n<a href=\"default.asp\" target=\"_blank\">This is a link</a>\n\n</body>\n</html>\nFULL_CODE_END -->"
+        },
+        {
+            "id": "html_links_9",
+            "type": "content",
+            "title": "Navigation Menus",
+            "content": "# Navigation Menus 🧭\n\nA navigation bar is essentially a list of links.\n\n```html\n<nav>\n  <ul>\n    <li><a href=\"#home\">Home</a></li>\n    <li><a href=\"#news\">News</a></li>\n    <li><a href=\"#contact\">Contact</a></li>\n    <li><a href=\"#about\">About</a></li>\n  </ul>\n</nav>\n```\n\nCombine this with CSS (as seen in the Lists topic) to create horizontal or vertical menus."
+        },
+        {
+            "id": "html_links_10",
             "type": "quiz",
             "title": "Link Quiz",
-            "content": "How do you open a link in a new tab?",
-            "quizQuestion": "Which attribute value opens a link in a NEW tab?",
+            "content": "Verify your link skills.",
+            "quizQuestion": "How do you open a link in a new tab?",
             "quizOptions": [
-                "target=\"_new\"",
+                "target=\"new\"",
                 "target=\"_blank\"",
-                "window=\"new\"",
-                "href=\"new\""
+                "new=\"tab\"",
+                "window=\"new\""
             ],
             "correctOptionIndex": 1
         },
         {
-            "id": "links_3",
-            "type": "content",
-            "title": "Navigation Menus",
-            "content": "# Navigation Bars 🧭\n\nNav bars are typically lists of links wrapped in a `<nav>` tag.\n\n```html\n<nav>\n  <ul>\n    <li><a href=\"home.html\">Home</a></li>\n    <li><a href=\"services.html\">Services</a></li>\n    <li><a href=\"contact.html\">Contact</a></li>\n  </ul>\n</nav>\n```\n\n> 🎯 **Tip:** This structure is accessible and easy to style with CSS to look like a horizontal bar."
-        },
-        {
-            "id": "links_4",
+            "id": "html_links_11",
             "type": "content",
             "title": "Summary",
-            "content": "# Links Mastery 🔗\n\n- ✅ **`<a>`** tag creates links\n- ✅ **`href`** is the most important attribute\n- ✅ **`target=\"_blank\"`** opens in new tab\n- ✅ Links can be absolute, relative, or internal anchors (`#id`)\n\n> 🚀 **Next:** Add visuals with **Media Elements**!"
+            "content": "# Summary 🔗\n\nLinks connect the web.\n\n## Key Takeaways\n\n- ✅ **<a>** creates a hyperlink.\n- ✅ **href** specifies the destination.\n- ✅ **target=\"_blank\"** opens in a new tab.\n- ✅ **id** and **#** allow internal page jumps (bookmarks).\n- ✅ **mailto:** creates email links.\n- ✅ **<nav>** and lists create navigation menus.\n\nNext, let's explore **Media Elements** to add images and video! 🎬"
         }
     ]
 }

@@ -1,37 +1,31 @@
 {
-    "id": "basic",
+    "id": "learn_js_basic",
     "topicId": "basic",
-    "topicTitle": "Basics",
-    "description": "Start your journey with JavaScript variables, data types, and operators.",
-    "baseKP": 50,
+    "topicTitle": "Javascript Basics",
+    "description": "Start your journey into programming with JavaScript variables, data types, and operators.",
+    "baseKP": 100,
     "slides": [
         {
             "id": "js_basic_1",
             "type": "content",
-            "title": "Hello JavaScript",
-            "content": "# JavaScript Basics ⚡\n\nJavaScript (JS) is the programming language of the web. It makes pages interactive.\n\n## Adding JS\n\n```html\n<script>\n  console.log(\"Hello World!\");\n</script>\n```\n\nOr typically in an external file:\n```html\n<script src=\"script.js\"></script>\n```"
+            "title": "Introduction to JavaScript",
+            "content": "# Hello JavaScript! 👋\n\nJavaScript (JS) is the programming language of the Web.\n\n- **HTML** = Content\n- **CSS** = Style\n- **JS** = Behavior\n\nIt allows you to change HTML content, change attributes, change styles, and much more.\n\n```javascript\n// Simple output\nconsole.log(\"Hello World\");\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<body>\n\n<h2>My First JavaScript</h2>\n\n<button type=\"button\"\nonclick=\"document.getElementById('demo').innerHTML = Date()\">\nClick me to display Date and Time.</button>\n\n<p id=\"demo\"></p>\n\n</body>\n</html>\nFULL_CODE_END -->"
         },
         {
             "id": "js_basic_2",
             "type": "content",
             "title": "Variables",
-            "content": "# Variables 📦\n\nContainers for storing data.\n\n## Keywords\n- `let`: Can be reassigned (Modern standard)\n- `const`: Cannot be reassigned (Constant)\n- `var`: Old way (Function scoped, avoid if possible)\n\n```javascript\nlet score = 10;\nconst pi = 3.14;\nvar name = \"Old School\";\n```\n\n> 💡 **Tip:** Default to `const`. Use `let` only if the value needs to change."
+            "content": "# Variables 📦\n\nVariables are containers for storing data.\n\n## 3 Ways to Declare\n1. `var` (Old, function-scoped)\n2. `let` (Modern, block-scoped, mutable)\n3. `const` (Modern, block-scoped, immutable)\n\n```javascript\nlet name = \"John\";\nconst pi = 3.14;\nvar age = 25;\n\nname = \"Jane\"; // Allowed\n// pi = 3.15; // Error!\n```"
         },
         {
             "id": "js_basic_3",
-            "type": "content",
-            "title": "Data Types",
-            "content": "# Data Types 💾\n\nJS is dynamically typed.\n\n- **String**: `\"Hello\"` or `'Hi'`\n- **Number**: `42` or `3.14`\n- **Boolean**: `true` or `false`\n- **Undefined**: Variable declared but not assigned\n- **Null**: Intentional absence of value\n- **Object**: `{ name: \"Alice\" }`\n- **Array**: `[1, 2, 3]`\n\nCheck type with `typeof`: `typeof \"hi\" // \"string\"`"
-        },
-        {
-            "id": "js_basic_quiz_1",
             "type": "quiz",
-            "title": "Variable Quiz",
-            "content": "Which keyword defines a constant variable?",
-            "quizQuestion": "Which keyword creates a variable that CANNOT be reassigned?",
+            "title": "Variables Quiz",
+            "content": "Check your scope.",
+            "quizQuestion": "Which keyword defines a variable that cannot be reassigned?",
             "quizOptions": [
-                "let",
                 "var",
+                "let",
                 "const",
                 "static"
             ],
@@ -40,14 +34,52 @@
         {
             "id": "js_basic_4",
             "type": "content",
-            "title": "Operators",
-            "content": "# Operators ➕\n\n## Arithmetic\n`+`, `-`, `*`, `/`, `%` (Remainder)\n\n## Assignment\n`=`, `+=`, `-=`\n\n## Comparison\n- `==`: Loose equality (`5 == \"5\"` is true)\n- `===`: Strict equality (`5 === \"5\"` is false) **Use this!**\n- `!=`, `!==`, `>`, `<`\n\n## Logical\n- `&&` (AND)\n- `||` (OR)\n- `!` (NOT)"
+            "title": "Data Types",
+            "content": "# Data Types 💾\n\nJavaScript is dynamically typed (types can change).\n\n## Primitive Types\n- **String:** `\"Hello\"`\n- **Number:** `42` or `3.14`\n- **Boolean:** `true` or `false`\n- **Undefined:** Variable declared but not assigned.\n- **Null:** Intentional absence of value.\n- **Symbol:** Unique identifier.\n\n```javascript\nlet x = 16;       // Number\nx = \"Volvo\";      // String\n```"
         },
         {
             "id": "js_basic_5",
             "type": "content",
+            "title": "Operators",
+            "content": "# Operators ➕\n\n## Arithmetic\n`+`, `-`, `*`, `/`, `%` (Modulus), `**` (Exponent results).\n\n## Assignment\n`=`, `+=`, `-=`.\n\n## Comparison\n- `==` (Equal value)\n- `===` (Equal value AND type) - **Use this!**\n- `!=`, `!==`\n- `>`, `<`, `>=`, `<=`\n\n```javascript\n5 == \"5\"  // true\n5 === \"5\" // false\n```"
+        },
+        {
+            "id": "js_basic_6",
+            "type": "quiz",
+            "title": "Operator Quiz",
+            "content": "Test comparison.",
+            "quizQuestion": "What is the result of 10 === \"10\"?",
+            "quizOptions": [
+                "true",
+                "false",
+                "undefined",
+                "error"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_basic_7",
+            "type": "content",
+            "title": "Logical Operators",
+            "content": "# Logical Operators 🧠\n\nUsed to determine logic between variables.\n\n- `&&` (AND): Returns true if both are true.\n- `||` (OR): Returns true if one is true.\n- `!` (NOT): Returns the opposite boolean.\n\n```javascript\nlet x = 6;\nlet y = 3;\n\n(x < 10 && y > 1) // true\n(x == 5 || y == 5) // false\n!(x == y) // true\n```"
+        },
+        {
+            "id": "js_basic_8",
+            "type": "content",
+            "title": "String Concatenation",
+            "content": "# String Operations 🧶\n\nYou can use `+` to join strings.\n\n```javascript\nlet text1 = \"Hello\";\nlet text2 = \"World\";\nlet text3 = text1 + \" \" + text2;\n```\n\n## Template Literals (Modern)\nUse backticks and `${}`.\n\n```javascript\nlet text3 = `${text1} ${text2}!`;\n```"
+        },
+        {
+            "id": "js_basic_9",
+            "type": "content",
+            "title": "Comments",
+            "content": "# Code Comments 📝\n\nSame as C-style languages.\n\n```javascript\n// This is a single line comment\n\n/*\n This is a\n multi-line comment\n*/\n```"
+        },
+        {
+            "id": "js_basic_10",
+            "type": "content",
             "title": "Summary",
-            "content": "# JS Basics Recap 🎓\n\n- ✅ **Variables**: `let` covers most cases, `const` for constants\n- ✅ **Types**: Strings, Numbers, Booleans are core\n- ✅ **Operators**: Use `===` for comparisons\n- ✅ **Console**: Use `console.log()` to debug\n\n> 🚀 **Next:** Control the flow with **Control Structures**!"
+            "content": "# Summary 🚀\n\nYou've started learning the logic of the web.\n\n## Key Takeaways\n\n- ✅ **Variables:** declare with `let` or `const`.\n- ✅ **Types:** number, string, boolean, object.\n- ✅ **Operators:** math (`+`), comparison (`===`), logical (`&&`).\n- ✅ **Dynamic:** types are not strictly enforced.\n\nNext, we'll control the flow of the program with **Control Structures**! 🔀"
         }
     ]
 }

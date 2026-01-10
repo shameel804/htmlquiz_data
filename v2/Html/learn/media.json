@@ -1,53 +1,97 @@
 {
-    "id": "media",
+    "id": "learn_html_media",
     "topicId": "media",
     "topicTitle": "Media Elements",
-    "description": "Enrich your pages with images, audio, and video.",
-    "baseKP": 60,
+    "description": "Learn how to embed multimedia content like images, audio, and video into your web pages.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "media_1",
+            "id": "html_media_1",
+            "type": "content",
+            "title": "Introduction to Media",
+            "content": "# Multimedia on the Web 🎬\n\nMultimedia comes in many different formats. It can be almost anything you can hear or see:\n\n- Images\n- Music\n- Sound\n- Videos\n- Animations\n\nHTML has dedicated tags for these media types."
+        },
+        {
+            "id": "html_media_2",
             "type": "content",
             "title": "Images",
-            "content": "# Images 🖼️\n\nUse the `<img>` tag to embed images. It's a void tag (no closing tag).\n\n```html\n<img src=\"puppy.jpg\" alt=\"A cute puppy\" width=\"300\">\n```\n\n- `src`: Path to the image\n- `alt`: Alternate text (Critical for accessibility & SEO if image fails)\n- `width`/`height`: Dimensions in pixels\n\n> ⚠️ **Warning:** Always provide useful `alt` text!"
+            "content": "# The <img> Tag 🖼️\n\nAs learned in Basics, `<img>` embeds an image.\n\n## Important Attributes\n\n- `src`: Path to the image.\n- `alt`: Alternate text (crucial for accessibility).\n- `loading`: \"lazy\" (defers loading until scrolling near).\n\n```html\n<img src=\"pic_trulli.jpg\" alt=\"Trulli\" width=\"500\" height=\"333\">\n```\n\n## Responsive Images\n\nUse `style=\"max-width:100%;height:auto;\"` to allow images to scale with the screen.\n\n```html\n<img src=\"nature.jpg\" alt=\"Nature\" style=\"max-width:100%;height:auto;\">\n```"
         },
         {
-            "id": "media_2",
+            "id": "html_media_3",
             "type": "content",
-            "title": "Video",
-            "content": "# Video 📹\n\nUse `<video>` to play clips. Use multiple `<source>` tags for browser compatibility.\n\n```html\n<video controls width=\"400\" poster=\"thumb.jpg\">\n  <source src=\"vid.mp4\" type=\"video/mp4\">\n  <source src=\"vid.webm\" type=\"video/webm\">\n  Your browser doesn't support video.\n</video>\n```\n\n- `poster`: Image shown while video loads\n- `controls`: Shows play/volume buttons"
+            "title": "The <picture> Element",
+            "content": "# The <picture> Element 🖼️\n\nThe `<picture>` element allows you to define different images for different screen sizes (Art Direction).\n\n```html\n<picture>\n  <source media=\"(min-width: 650px)\" srcset=\"img_food.jpg\">\n  <source media=\"(min-width: 465px)\" srcset=\"img_car.jpg\">\n  <img src=\"img_girl.jpg\">\n</picture>\n```\n\nThe browser chooses the first source that matches the media query."
         },
         {
-            "id": "media_3",
-            "type": "content",
-            "title": "Audio",
-            "content": "# Audio 🎵\n\nSimilar to video, use `<audio>` for sound.\n\n```html\n<audio controls loop>\n  <source src=\"song.mp3\" type=\"audio/mpeg\">\n  <source src=\"song.ogg\" type=\"audio/ogg\">\n</audio>\n```\n\n- `controls`: Must include this or user can't play it!\n- `loop`: Plays heavily\n- `muted`: Starts muted"
-        },
-        {
-            "id": "media_quiz_1",
+            "id": "html_media_4",
             "type": "quiz",
-            "title": "Media Quiz",
-            "content": "What is the text displayed if an image fails to load?",
-            "quizQuestion": "Which attribute holds the text description if an image cannot be loaded?",
+            "title": "Image Quiz",
+            "content": "Check your image knowledge.",
+            "quizQuestion": "Which attribute makes an image load only when needed?",
             "quizOptions": [
-                "title",
-                "description",
-                "alt",
-                "src"
+                "defer",
+                "async",
+                "loading=\"lazy\"",
+                "wait"
             ],
             "correctOptionIndex": 2
         },
         {
-            "id": "media_4",
+            "id": "html_media_5",
             "type": "content",
-            "title": "Embedding content",
-            "content": "# Embedding Frames 🖼️\n\nUse `<iframe>` to embed another webpage inside yours (like a YouTube video or Google Map).\n\n```html\n<iframe \n    src=\"https://www.google.com/maps/embed...\" \n    width=\"600\" \n    height=\"450\">\n</iframe>\n```\n\n> 💡 **Fun Fact:** Most YouTube videos you see on other sites are just iframes!"
+            "title": "Video",
+            "content": "# The <video> Element 🎥\n\nEmbed video files (MP4, WebM, Ogg).\n\n```html\n<video width=\"320\" height=\"240\" controls poster=\"thumbnail.jpg\">\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n```\n\n- `controls`: Play/pause buttons.\n- `poster`: An image shown before playing.\n- `muted`: Starts the video muted (often required for autoplay).\n- `loop`: Loops the video."
         },
         {
-            "id": "media_5",
+            "id": "html_media_6",
+            "type": "content",
+            "title": "Audio",
+            "content": "# The <audio> Element 🎵\n\nEmbed sound files (MP3, WAV, Ogg).\n\n```html\n<audio controls app-autoplay>\n  <source src=\"horse.ogg\" type=\"audio/ogg\">\n  <source src=\"horse.mp3\" type=\"audio/mpeg\">\n  Your browser does not support the audio element.\n</audio>\n```\n\nWorks similarly to `<video>`, but without visual dimensions."
+        },
+        {
+            "id": "html_media_7",
+            "type": "content",
+            "title": "Embedding Youtube",
+            "content": "# Embedding YouTube 📺\n\nThe easiest way to play videos is to use YouTube.\n\nUse an `<iframe>` (Inline Frame) to embed external content.\n\n```html\n<iframe width=\"420\" height=\"315\"\nsrc=\"https://www.youtube.com/embed/tgbNymZ7vqY\">\n</iframe>\n```\n\n- `width` and `height` define size.\n- `src` points to the video URL.\n\n> 💡 **Youtube Tip:** You can add parameters like `?autoplay=1` or `?mute=1` to the URL."
+        },
+        {
+            "id": "html_media_8",
+            "type": "content",
+            "title": "IFrames",
+            "content": "# The <iframe> Tag 🖼️\n\nAn IFrame displays a web page within a web page.\n\n```html\n<iframe src=\"https://www.w3schools.com\" title=\"W3Schools Free Online Web Tutorials\">\n</iframe>\n```\n\nIt's often used for maps (Google Maps), videos, or third-party widgets.\n\nTo remove the border:\n```html\n<iframe src=\"demo.html\" style=\"border:none;\"></iframe>\n```"
+        },
+        {
+            "id": "html_media_9",
+            "type": "quiz",
+            "title": "Embedding Quiz",
+            "content": "Verify your embedding skills.",
+            "quizQuestion": "Which tag is used to embed a separate webpage or YouTube video?",
+            "quizOptions": [
+                "<video>",
+                "<embed>",
+                "<iframe>",
+                "<object>"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "html_media_10",
+            "type": "content",
+            "title": "SVG Images",
+            "content": "# SVG (Scalable Vector Graphics) ✏️\n\nSVGs are defined in XML and can be embedded directly into HTML.\n\n```html\n<svg width=\"100\" height=\"100\">\n  <circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"green\" stroke-width=\"4\" fill=\"yellow\" />\n</svg>\n```\n\nAdvantages:\n- Scalable without quality loss.\n- Small file size.\n- Programmable with CSS and JS."
+        },
+        {
+            "id": "html_media_11",
+            "type": "content",
+            "title": "Favicons",
+            "content": "# Favicons 🔖\n\nA favicon is a small image displayed next to the page title in the browser tab.\n\nIt is defined in the `<head>` section:\n\n```html\n<link rel=\"icon\" type=\"image/x-icon\" href=\"/images/favicon.ico\">\n```\n\nCommon formats: .ico, .png, .svg."
+        },
+        {
+            "id": "html_media_12",
             "type": "content",
             "title": "Summary",
-            "content": "# Media Recap 📺\n\n- ✅ **`<img>`** for pictures (needs `alt`!)\n- ✅ **`<video>`** for movies (use `controls`, `poster`)\n- ✅ **`<audio>`** for sound\n- ✅ **`<iframe>`** for external web content\n\n> 🎓 **Congratulations:** You've completed the HTML course section! Time to style it with **CSS**!"
+            "content": "# Summary 🌟\n\nRich media makes the web engaging.\n\n## Key Takeaways\n\n- ✅ **<img>** for static and responsive images.\n- ✅ **<video>** and **<audio>** for native playback.\n- ✅ **<iframe>** for external content like YouTube or Maps.\n- ✅ **SVG** for crisp, scalable vector graphics.\n- ✅ **Favicons** for browser tab branding.\n\nYou have completed the HTML module! Now you can structure any web page. Next step: Making it look good with **CSS**! 🎨"
         }
     ]
 }

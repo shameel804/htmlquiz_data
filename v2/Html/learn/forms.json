@@ -1,53 +1,97 @@
 {
-    "id": "forms",
+    "id": "learn_html_forms",
     "topicId": "forms",
-    "topicTitle": "Forms",
-    "description": "Learn to capture user input using HTML forms, inputs, and buttons.",
-    "baseKP": 60,
+    "topicTitle": "HTML Forms",
+    "description": "Learn how to collect user input using HTML forms, input types, and validation.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "forms_1",
+            "id": "html_forms_1",
             "type": "content",
             "title": "Introduction to Forms",
-            "content": "# HTML Forms 📝\n\nForms are used to collect user input. Whether it's a login screen, a search bar, or a feedback box, it's all HTML forms!\n\n## The <form> Element\n\nThe `<form>` element defines a form to collect user input.\n\n```html\n<form action=\"/submit_data\" method=\"post\">\n  <!-- Inputs go here -->\n</form>\n```\n\n- `action`: Where to send the form data\n- `method`: How to send tags (usually `GET` or `POST`)"
+            "content": "# HTML Forms 📝\n\nForms are the primary way to collect user inputs on a webpage.\n\n## The <form> Element\n\nThe `<form>` element defines an HTML form for user input.\n\n```html\n<form>\n  <!-- Form elements go here -->\n</form>\n```\n\n## Key Attributes\n\n- `action`: Where to send the form data.\n- `method`: The HTTP method (`GET` or `POST`).\n\n```html\n<form action=\"/submit_page\" method=\"POST\">\n```"
         },
         {
-            "id": "forms_2",
+            "id": "html_forms_2",
             "type": "content",
-            "title": "Input Types part 1",
-            "content": "# Common Inputs ⌨️\n\nThe `<input>` element is the most used form element. It can verify depending on the `type` attribute.\n\n## Text & Password\n\n```html\n<!-- Single line text -->\n<label>Username: <input type=\"text\"></label>\n\n<!-- Masked characters -->\n<label>Password: <input type=\"password\"></label>\n```\n\n## Radio & Checkbox\n\n```html\n<!-- Radio: Select ONE option -->\n<input type=\"radio\" name=\"gender\" value=\"male\"> Male\n<input type=\"radio\" name=\"gender\" value=\"female\"> Female\n\n<!-- Checkbox: Select MULTIPLE options -->\n<input type=\"checkbox\" name=\"vehicle\" value=\"bike\"> Bike\n<input type=\"checkbox\" name=\"vehicle\" value=\"car\"> Car\n```"
+            "title": "The <input> Element",
+            "content": "# The <input> Element ⌨️\n\nThe `<input>` element is the most versatile form element.\n\n## The 'type' Attribute\n\nThe `type` attribute determines how the input behaves.\n\n- `text`: Single-line text field.\n- `password`: Masked characters.\n- `radio`: Select one choice.\n- `checkbox`: Select multiple choices.\n- `submit`: A submit button.\n- `button`: A clickable button.\n\n```html\n<input type=\"text\" name=\"user\">\n<input type=\"password\" name=\"pass\">\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<body>\n\n<h2>HTML Forms</h2>\n\n<form action=\"/action_page.php\">\n  <label for=\"fname\">First name:</label><br>\n  <input type=\"text\" id=\"fname\" name=\"fname\" value=\"John\"><br>\n  <label for=\"lname\">Last name:</label><br>\n  <input type=\"text\" id=\"lname\" name=\"lname\" value=\"Doe\"><br><br>\n  <input type=\"submit\" value=\"Submit\">\n</form> \n\n</body>\n</html>\nFULL_CODE_END -->"
         },
         {
-            "id": "forms_quiz_1",
+            "id": "html_forms_3",
             "type": "quiz",
-            "title": "Input Quiz",
-            "content": "Which input type allows selecting multiple options?",
-            "quizQuestion": "Which input type is best for selecting multiple items from a list?",
+            "title": "Input Type Quiz",
+            "content": "Test your knowledge of input types.",
+            "quizQuestion": "Which input type is best for entering a secret code?",
             "quizOptions": [
                 "text",
-                "radio",
-                "checkbox",
-                "password"
+                "hidden",
+                "password",
+                "secret"
             ],
             "correctOptionIndex": 2
         },
         {
-            "id": "forms_3",
+            "id": "html_forms_4",
             "type": "content",
-            "title": "Buttons and Submission",
-            "content": "# Buttons 🔘\n\nYou can create buttons using `<button>` or `<input type=\"button\">`.\n\n## Button Types\n\n```html\n<!-- Submits the form data -->\n<button type=\"submit\">Register</button>\n\n<!-- Resets form inputs -->\n<button type=\"reset\">Clear</button>\n\n<!-- Generic button (needs JS) -->\n<button type=\"button\">Click Me</button>\n```\n\n## The Label Element\n\nNotice we used `<label>` earlier? It's important for usability and accessibility.\n\n```html\n<!-- Associates text with input -->\n<label for=\"email\">Email:</label>\n<input type=\"email\" id=\"email\" name=\"email\">\n```\n\n> 🎯 **Tip:** Clicking a label automatically focuses its associated input!"
+            "title": "Labels",
+            "content": "# The <label> Element 🏷️\n\nThe `<label>` element defines a label for a form element.\n\n## Why use it?\n\n- **Accessibility:** Screen readers assume the label reads out for the input.\n- **Usability:** Clicking the label focuses the input.\n\n## Linking Label and Input\n\nThe `for` attribute of the `<label>` should match the `id` of the `<input>` element.\n\n```html\n<label for=\"email\">Email:</label>\n<input type=\"email\" id=\"email\" name=\"email\">\n```"
         },
         {
-            "id": "forms_4",
+            "id": "html_forms_5",
+            "type": "content",
+            "title": "Checkboxes and Radios",
+            "content": "# Checkboxes & Radios ✅\n\n- **Radio Buttons:** Use when only *one* option can be selected from a group.\n  - Note: All radios in a group must share the same `name`.\n- **Checkboxes:** Use when *zero or more* options can be selected.\n\n```html\n<p>Choose your favorite language:</p>\n<input type=\"radio\" id=\"html\" name=\"lang\" value=\"HTML\">\n<label for=\"html\">HTML</label><br>\n<input type=\"radio\" id=\"css\" name=\"lang\" value=\"CSS\">\n<label for=\"css\">CSS</label>\n\n<p>Select your hobbies:</p>\n<input type=\"checkbox\" id=\"code\" name=\"hobby\" value=\"Coding\">\n<label for=\"code\">Coding</label>\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<body>\n\n<h2>Radio Buttons</h2>\n<p>Choose your favorite Web language:</p>\n\n<form>\n  <input type=\"radio\" id=\"html\" name=\"fav_language\" value=\"HTML\">\n  <label for=\"html\">HTML</label><br>\n  <input type=\"radio\" id=\"css\" name=\"fav_language\" value=\"CSS\">\n  <label for=\"css\">CSS</label><br>\n  <input type=\"radio\" id=\"javascript\" name=\"fav_language\" value=\"JavaScript\">\n  <label for=\"javascript\">JavaScript</label>\n</form> \n\n<h2>Checkboxes</h2>\n<p>The input type=\"checkbox\" defines a checkbox:</p>\n\n<form>\n  <input type=\"checkbox\" id=\"vehicle1\" name=\"vehicle1\" value=\"Bike\">\n  <label for=\"vehicle1\"> I have a bike</label><br>\n  <input type=\"checkbox\" id=\"vehicle2\" name=\"vehicle2\" value=\"Car\">\n  <label for=\"vehicle2\"> I have a car</label><br>\n  <input type=\"checkbox\" id=\"vehicle3\" name=\"vehicle3\" value=\"Boat\">\n  <label for=\"vehicle3\"> I have a boat</label>\n</form> \n\n</body>\n</html>\nFULL_CODE_END -->"
+        },
+        {
+            "id": "html_forms_6",
+            "type": "content",
+            "title": "Select and Textarea",
+            "content": "# Dropdowns & Text Areas 🔽\n\n## The <select> Element\n\nCreates a drop-down list.\n\n```html\n<label for=\"cars\">Choose a car:</label>\n<select id=\"cars\" name=\"cars\">\n  <option value=\"volvo\">Volvo</option>\n  <option value=\"audi\">Audi</option>\n</select>\n```\n\n## The <textarea> Element\n\nDefines a multi-line input field (e.g., for comments).\n\n```html\n<textarea name=\"message\" rows=\"4\" cols=\"50\">\nThe cat was playing in the garden.\n</textarea>\n```"
+        },
+        {
+            "id": "html_forms_7",
+            "type": "content",
+            "title": "Buttons",
+            "content": "# Buttons 🔘\n\nThe `<button>` element defines a clickable button.\n\n```html\n<button type=\"button\" onclick=\"alert('Hello World!')\">Click Me!</button>\n```\n\n- It acts like `<input type=\"submit\">` if inside a form (unless `type=\"button\"` is specified).\n- You can put content like text or images inside `<button>` tags, unlike `<input>`.\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<body>\n\n<h2>The Button Element</h2>\n\n<button type=\"button\" onclick=\"alert('Hello world!')\">Click Me!</button>\n\n<p>Buttons can also submit forms:</p>\n\n<form action=\"/action_page.php\">\n  <label for=\"fname\">First name:</label><br>\n  <input type=\"text\" id=\"fname\" name=\"fname\" value=\"John\"><br>\n  <input type=\"submit\" value=\"Submit Input\">\n  <!-- Or use a button -->\n  <button type=\"submit\">Submit Button</button>\n</form>\n\n</body>\n</html>\nFULL_CODE_END -->"
+        },
+        {
+            "id": "html_forms_8",
+            "type": "content",
+            "title": "HTML5 Input Types",
+            "content": "# New HTML5 Input Types 🆕\n\nHTML5 introduced several new input types for specific data:\n\n- `color`\n- `date`\n- `email`\n- `number`\n- `range`\n- `tel`\n- `url`\n\n```html\n<label for=\"birthday\">Birthday:</label>\n<input type=\"date\" id=\"birthday\" name=\"birthday\">\n\n<label for=\"qty\">Quantity (1-5):</label>\n<input type=\"number\" id=\"qty\" name=\"qty\" min=\"1\" max=\"5\">\n```\n\n> 📱 **Mobile Tip:** These types trigger specialized keyboards on mobile devices!"
+        },
+        {
+            "id": "html_forms_9",
+            "type": "quiz",
+            "title": "HTML5 Input Quiz",
+            "content": "Check your understanding of new input types.",
+            "quizQuestion": "Which input type brings up a calendar picker?",
+            "quizOptions": [
+                "calendar",
+                "date",
+                "datetime",
+                "time"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_forms_10",
             "type": "content",
             "title": "Form Validation",
-            "content": "# Basic Validation ✅\n\nHTML5 provides built-in validation without needing JavaScript!\n\n## Required Fields\n\nAdd the `required` attribute to make a field mandatory.\n\n```html\n<input type=\"text\" required>\n```\n\n## Specific Types\n\nBrowser checks for valid formats specifically:\n\n```html\n<input type=\"email\"> <!-- Must contain @ -->\n<input type=\"url\">   <!-- Must start with http:// -->\n<input type=\"number\" min=\"1\" max=\"10\">\n```\n\n## Placeholders\n\ntext displayed inside the input field before typing:\n\n```html\n<input type=\"text\" placeholder=\"Enter your name...\">\n```"
+            "content": "# Form Validation ✅\n\nHTML5 provides built-in validation attributes.\n\n- `required`: Specifies that an input field must be filled out.\n- `min` and `max`: Specifies the minimum and maximum values (for numbers/dates).\n- `maxlength`: Specifies the maximum number of characters.\n- `pattern`: Specifies a regular expression the value must match.\n\n```html\n<form>\n  <label for=\"username\">Username:</label>\n  <input type=\"text\" id=\"username\" name=\"username\" required>\n  <input type=\"submit\">\n</form>\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<body>\n\n<h2>Form Validation</h2>\n\n<form action=\"/action_page.php\">\n  <label for=\"uname\">Username (required):</label><br>\n  <input type=\"text\" id=\"uname\" name=\"uname\" required><br><br>\n  \n  <label for=\"age\">Age (18-99):</label><br>\n  <input type=\"number\" id=\"age\" name=\"age\" min=\"18\" max=\"99\"><br><br>\n  \n  <input type=\"submit\" value=\"Submit\">\n</form>\n\n<p>Try submitting without a name to see the error message.</p>\n\n</body>\n</html>\nFULL_CODE_END -->"
         },
         {
-            "id": "forms_5",
+            "id": "html_forms_11",
+            "type": "content",
+            "title": "Fieldset and Legend",
+            "content": "# Grouping Form Data 📦\n\n- `<fieldset>`: Groups related data in a form.\n- `<legend>`: Defines a caption for the `<fieldset>`.\n\n```html\n<form>\n  <fieldset>\n    <legend>Personalia:</legend>\n    <label for=\"fname\">First name:</label>\n    <input type=\"text\" id=\"fname\" name=\"fname\"><br>\n    <label for=\"lname\">Last name:</label>\n    <input type=\"text\" id=\"lname\" name=\"lname\">\n  </fieldset>\n</form>\n```\n\nThis creates a visual border around the related elements."
+        },
+        {
+            "id": "html_forms_12",
             "type": "content",
             "title": "Summary",
-            "content": "# Form Mastery 🎓\n\n- ✅ **`<form>`** wraps your input elements\n- ✅ **`<input>`** is versatile (`text`, `password`, `radio`, `checkbox`)\n- ✅ **`<button>`** handles submission\n- ✅ **`<label>`** improves accessibility\n- ✅ **Attributes** like `required` and `placeholder` enhance UX\n\n> 🚀 **Next:** Explore modern **HTML5 Features**!"
+            "content": "# Summary 📝\n\nGreat job! You can now collect user data.\n\n## Key Takeaways\n\n- ✅ **<form>** wraps all form elements.\n- ✅ **<input>** is versatile (text, password, radio, etc.).\n- ✅ **<label>** improves accessibility and usability.\n- ✅ **<select>** and **<textarea>** offer dropdowns and long text.\n- ✅ **HTML5 Types** (date, email) improve user experience.\n- ✅ **Validation** (required, min/max) ensures data integrity.\n\nNext, explore the power of **HTML5 Features**! 🚀"
         }
     ]
 }

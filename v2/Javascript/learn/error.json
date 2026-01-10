@@ -1,41 +1,85 @@
 {
-    "id": "error",
+    "id": "learn_js_error",
     "topicId": "error",
     "topicTitle": "Error Handling",
-    "description": "Catch and handle errors gracefully using Try-Catch.",
-    "baseKP": 65,
+    "description": "Write robust code by handling errors gracefully with try, catch, throw, and finally blocks.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "error_1",
+            "id": "js_error_1",
             "type": "content",
-            "title": "Try Catch",
-            "content": "# Try...Catch 🥅\n\nDon't let your app crash! Catch errors.\n\n```javascript\ntry {\n  // Code that might fail\n  let x = y + 1; // y is not defined\n} catch (error) {\n  // Code that runs if error occurs\n  console.log(\"An error occurred: \" + error.message);\n}\n```\n\n## Finally\nRuns regardless of result (cleanup).\n```javascript\nfinally {\n  console.log(\"Done\");\n}\n```"
+            "title": "Errors Happens",
+            "content": "# Errors Happen 🐛\n\nWhen executing JavaScript code, different errors can occur:\n- Coding errors (syntax)\n- Input errors (wrong type)\n- Unforeseeable things (server down)\n\nIf an error occurs, the script usually **stops** and prints the error to the console. This is called *throwing* an error."
         },
         {
-            "id": "error_2",
+            "id": "js_error_2",
             "type": "content",
-            "title": "Throwing Errors",
-            "content": "# Throwing Errors ⚾\n\nYou can manually trigger errors.\n\n```javascript\nfunction checkAge(age) {\n  if (age < 18) {\n    throw new Error(\"Access Denied: Too young\");\n  }\n  return \"Access Granted\";\n}\n\ntry {\n  checkAge(15);\n} catch (e) {\n  console.error(e.message);\n}\n```"
+            "title": "Try and Catch",
+            "content": "# Try and Catch 🛡️\n\nThe `try` statement lets you test a block of code for errors.\nThe `catch` statement lets you handle the error.\n\n```javascript\ntry {\n  alert(\"Working...\");\n  alert(undefinedVariable); // Error occurs here!\n} catch (err) {\n  console.log(\"An error occurred: \" + err.message);\n}\n```\nWith this, your script **continues** running!"
         },
         {
-            "id": "error_quiz_1",
+            "id": "js_error_3",
             "type": "quiz",
-            "title": "Error Quiz",
-            "content": "Which block runs regardless of success or failure?",
-            "quizQuestion": "Which block ALWAYS runs after try/catch, regardless of whether an error occurred?",
+            "title": "Catch Quiz",
+            "content": "Check flow.",
+            "quizQuestion": "Does the code inside 'catch' run if there are no errors?",
             "quizOptions": [
-                "always",
-                "finally",
-                "done",
-                "then"
+                "Yes, always",
+                "No, never",
+                "Only if specified",
+                "Depends on the error"
             ],
             "correctOptionIndex": 1
         },
         {
-            "id": "error_3",
+            "id": "js_error_4",
+            "type": "content",
+            "title": "The Finally Block",
+            "content": "# Finally 🏁\n\nThe `finally` statement lets you execute code, after try and catch, regardless of the result.\n\n```javascript\ntry {\n  // Code to run\n} catch (err) {\n  // Handle errors\n} finally {\n  // Always runs (clean up)\n  console.log(\"Done trying.\");\n}\n```"
+        },
+        {
+            "id": "js_error_5",
+            "type": "content",
+            "title": "Throwing Errors",
+            "content": "# Throwing Errors ⚾\n\nThe `throw` statement allows you to create a custom error.\n\nTechnically you can throw an exception (err).\nThe exception can be a String, a Number, a Boolean or an Object.\n\n```javascript\nif (x < 0) throw \"Too low\";\nif (x > 10) throw \"Too high\";\n```"
+        },
+        {
+            "id": "js_error_6",
+            "type": "content",
+            "title": "Error Object",
+            "content": "# The Error Object 📜\n\nJavaScript has a built-in error object that provides error information.\n\nProperties:\n- `name`: Sets or returns an error name.\n- `message`: Sets or returns an error message.\n\n```javascript\ntry {\n  decodeURI(\"%%%\");\n} catch (err) {\n  console.log(err.name);    // \"URIError\"\n  console.log(err.message); // \"URI malformed\"\n}\n```"
+        },
+        {
+            "id": "js_error_7",
+            "type": "content",
+            "title": "Strict Mode",
+            "content": "# Strict Mode 👮\n\n`\"use strict\";` defines that JavaScript code should be executed in \"strict mode\".\n\nIt helps easier formatting of \"secure\" JavaScript.\n\nFor example, using a variable without declaring it throws an error in strict mode.\n\n```javascript\n\"use strict\";\nx = 3.14;       // This will cause an error!\n```"
+        },
+        {
+            "id": "js_error_8",
+            "type": "quiz",
+            "title": "Strict Quiz",
+            "content": "Check strictness.",
+            "quizQuestion": "What happens if you use an undeclared variable in strict mode?",
+            "quizOptions": [
+                "It works silently",
+                "It throws a ReferenceError",
+                "It creates a global variable",
+                "It asks for permission"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_error_9",
+            "type": "content",
+            "title": "Debugging",
+            "content": "# Debugging 🕵️\n\nCode not doing what you expect?\n\n1. **Console.log:** The classic way.\n2. **Breakpoints:** Use the browser's developer tools (Sources tab) to set breakpoints and step through code.\n3. **debugger:** The `debugger` keyword stops the execution of JavaScript, and calls the debugging function (if available).\n\n```javascript\nlet x = 15;\ndebugger; // Pauses here if tools are open\n```"
+        },
+        {
+            "id": "js_error_10",
             "type": "content",
             "title": "Summary",
-            "content": "# Error Recap ⛑️\n\n- ✅ **`try`**: Wrap risky code\n- ✅ **`catch`**: Handle the error object\n- ✅ **`finally`**: Cleanup code (optional)\n- ✅ **`throw`**: Create custom errors\n\n> 🚀 **Next:** Connect to the world with **APIs**!"
+            "content": "# Summary 🚨\n\nHandle the unexpected.\n\n## Key Takeaways\n\n- ✅ **try...catch:** gracefully handle runtime errors.\n- ✅ **finally:** cleanup code that always runs.\n- ✅ **throw:** raise your own custom exceptions.\n- ✅ **\"use strict\":** enforce cleaner, safer code.\n\nNext, let's talk to the outside world with **APIs and JSON**! 🌐"
         }
     ]
 }

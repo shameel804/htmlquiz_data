@@ -1,47 +1,85 @@
 {
-    "id": "tables",
+    "id": "learn_html_tables",
     "topicId": "tables",
-    "topicTitle": "Tables",
-    "description": "Learn to structure data in rows and columns using HTML tables.",
-    "baseKP": 60,
+    "topicTitle": "HTML Tables",
+    "description": "Learn to organize data into rows and columns using HTML tables.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "tables_1",
+            "id": "html_tables_1",
             "type": "content",
-            "title": "Table Structure",
-            "content": "# HTML Tables 📊\n\nTables are used to arrange data into rows and columns.\n\n## Basic Tags\n\n- `<table>`: Wraps the entire table\n- `<tr>`: Table Row\n- `<td>`: Table Data (cell)\n- `<th>`: Table Header (bold & centered by default)\n\n```html\n<table>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>Alice</td>\n    <td>24</td>\n  </tr>\n  <tr>\n    <td>Bob</td>\n    <td>30</td>\n  </tr>\n</table>\n```"
+            "title": "Introduction to Tables",
+            "content": "# HTML Tables 📊\n\nTables are used to display data in rows and columns, like a spreadsheet.\n\n## Basic Table Structure\n\n- `<table>`: The container for the table.\n- `<tr>`: Defines a table **row**.\n- `<td>`: Defines a table **data** cell.\n- `<th>`: Defines a table **header**.\n\n```html\n<table>\n  <tr>\n    <td>Row 1, Cell 1</td>\n    <td>Row 1, Cell 2</td>\n  </tr>\n</table>\n```"
         },
         {
-            "id": "tables_2",
+            "id": "html_tables_2",
+            "type": "content",
+            "title": "Table Headers",
+            "content": "# Table Headers 🔝\n\nUse `<th>` elements to define headers. By default, browsers make `<th>` text **bold** and **centered**.\n\n```html\n<table>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>John</td>\n    <td>25</td>\n  </tr>\n</table>\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<style>\ntable, th, td {\n  border:1px solid black;\n  border-collapse: collapse;\n}\ntd, th {\n  padding: 5px;\n  text-align: center;\n}\n</style>\n<body>\n\n<h2>Table Headers</h2>\n\n<table style=\"width:100%\">\n  <tr>\n    <th>Firstname</th>\n    <th>Lastname</th> \n    <th>Age</th>\n  </tr>\n  <tr>\n    <td>Jill</td>\n    <td>Smith</td>\n    <td>50</td>\n  </tr>\n  <tr>\n    <td>Eve</td>\n    <td>Jackson</td>\n    <td>94</td>\n  </tr>\n</table>\n\n</body>\n</html>\nFULL_CODE_END -->"
+        },
+        {
+            "id": "html_tables_3",
+            "type": "quiz",
+            "title": "Header Quiz",
+            "content": "Identify the header tag.",
+            "quizQuestion": "Which tag creates a bold, centered header cell?",
+            "quizOptions": [
+                "<td>",
+                "<th>",
+                "<head>",
+                "<thead>"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_tables_4",
+            "type": "content",
+            "title": "Adding Borders",
+            "content": "# Table Borders 🖼️\n\nBy default, tables have no borders. You add them using CSS.\n\n```html\n<style>\ntable, th, td {\n  border: 1px solid black;\n}\n</style>\n```\n\n## Collapsing Borders\n\nTo make single borders instead of double lines, use `border-collapse`.\n\n```css\ntable {\n  border-collapse: collapse;\n}\n```"
+        },
+        {
+            "id": "html_tables_5",
+            "type": "content",
+            "title": "Table Caption",
+            "content": "# Table Caption 🏷️\n\nThe `<caption>` tag defines a caption (title) for the table. It must be inserted immediately after the `<table>` tag.\n\n```html\n<table>\n  <caption>Monthly Savings</caption>\n  <tr>...</tr>\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<style>\ntable, th, td {\n  border: 1px solid black;\n  border-collapse: collapse;\n}\nth, td {\n  padding: 10px;\n}\n</style>\n<body>\n\n<h2>Table Caption</h2>\n\n<table style=\"width:100%\">\n  <caption>Monthly Savings</caption>\n  <tr>\n    <th>Month</th>\n    <th>Savings</th>\n  </tr>\n  <tr>\n    <td>January</td>\n    <td>$100</td>\n  </tr>\n  <tr>\n    <td>February</td>\n    <td>$50</td>\n  </tr>\n</table>\n\n</body>\n</html>\nFULL_CODE_END -->"
+        },
+        {
+            "id": "html_tables_6",
             "type": "content",
             "title": "Colspan and Rowspan",
-            "content": "# Merging Cells 🧩\n\nYou can merge cells horizontally or vertically.\n\n## Colspan (Merge Columns)\n\nSpans a cell across multiple columns.\n\n```html\n<tr>\n  <td colspan=\"2\">Total</td>\n</tr>\n```\n\n## Rowspan (Merge Rows)\n\nSpans a cell across multiple rows.\n\n```html\n<tr>\n  <td rowspan=\"2\">Vertical Header</td>\n  <td>Row 1</td>\n</tr>\n<tr>\n  <td>Row 2</td>\n</tr>\n```"
+            "content": "# Spanning Cells ↔️\n\nSometimes a cell should span multiple columns or rows.\n\n## Colspan\nSpan multiple columns:\n```html\n<th colspan=\"2\">Name</th>\n```\n\n## Rowspan\nSpan multiple rows:\n```html\n<td rowspan=\"2\">$50</td>\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<style>\ntable, th, td {\n  border: 1px solid black;\n  border-collapse: collapse;\n}\nth, td {\n  padding: 5px;\n  text-align: left;\n}\n</style>\n<body>\n\n<h2>Cell Spanning</h2>\n\n<p>Cell that spans two columns:</p>\n<table style=\"width:100%\">\n  <tr>\n    <th>Name</th>\n    <th colspan=\"2\">Telephone</th>\n  </tr>\n  <tr>\n    <td>Bill Gates</td>\n    <td>555-77854</td>\n    <td>555-77855</td>\n  </tr>\n</table>\n\n<br>\n\n<p>Cell that spans two rows:</p>\n<table style=\"width:100%\">\n  <tr>\n    <th>Name:</th>\n    <td>Bill Gates</td>\n  </tr>\n  <tr>\n    <th rowspan=\"2\">Telephone:</th>\n    <td>555-77854</td>\n  </tr>\n  <tr>\n    <td>555-77855</td>\n  </tr>\n</table>\n\n</body>\n</html>\nFULL_CODE_END -->"
         },
         {
-            "id": "tables_3",
-            "type": "content",
-            "title": "Table Sections and Captions",
-            "content": "# Semantic Table Parts 📑\n\nFor complex tables, use semantic grouping tags.\n\n- `<thead>`: Header content\n- `<tbody>`: Body content\n- `<tfoot>`: Footer content (e.g., totals)\n- `<caption>`: Title of the table\n\n```html\n<table>\n  <caption>Monthly Savings</caption>\n  <thead>\n    <tr><th>Month</th><th>Savings</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>Jan</td><td>$100</td></tr>\n  </tbody>\n  <tfoot>\n    <tr><td>Total</td><td>$100</td></tr>\n  </tfoot>\n</table>\n```"
-        },
-        {
-            "id": "tables_quiz_1",
+            "id": "html_tables_7",
             "type": "quiz",
-            "title": "Table Quiz",
-            "content": "Which attribute merges cells horizontally?",
-            "quizQuestion": "To merge two cells side-by-side into one, you use:",
+            "title": "Spanning Quiz",
+            "content": "Test your layout skills.",
+            "quizQuestion": "Which attribute merges two cells vertically?",
             "quizOptions": [
-                "rowspan",
-                "merge",
                 "colspan",
-                "span"
+                "rowspan",
+                "vertical-merge",
+                "merge"
             ],
-            "correctOptionIndex": 2
+            "correctOptionIndex": 1
         },
         {
-            "id": "tables_4",
+            "id": "html_tables_8",
+            "type": "content",
+            "title": "Grouping Content",
+            "content": "# Grouping (thead, tbody, tfoot) 📦\n\nFor complex tables, group content to structure it better.\n\n- `<thead>`: Groups header content.\n- `<tbody>`: Groups the body content.\n- `<tfoot>`: Groups footer content (often for totals).\n\n```html\n<table>\n  <thead>\n    <tr><th>Item</th><th>Cost</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>Milk</td><td>$2</td></tr>\n    <tr><td>Bread</td><td>$3</td></tr>\n  </tbody>\n  <tfoot>\n    <tr><td>Total</td><td>$5</td></tr>\n  </tfoot>\n</table>\n```"
+        },
+        {
+            "id": "html_tables_9",
+            "type": "content",
+            "title": "Styling Tables",
+            "content": "# Styling Tables 🎨\n\nCSS makes tables look much better.\n\n## Zebra Stripes\n`tr:nth-child(even) {background-color: #f2f2f2;}`\n\n## Hover Effect\n`tr:hover {background-color: #ddd;}`\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<style>\ntable {\n  border-collapse: collapse;\n  width: 100%;\n}\n\nth, td {\n  text-align: left;\n  padding: 8px;\n}\n\ntr:nth-child(even) {background-color: #f2f2f2;}\nth {\n  background-color: #04AA6D;\n  color: white;\n}\n</style>\n<body>\n\n<h2>Styled Table</h2>\n\n<table>\n  <tr>\n    <th>First Name</th>\n    <th>Last Name</th>\n    <th>Points</th>\n  </tr>\n  <tr>\n    <td>Jill</td>\n    <td>Smith</td>\n    <td>50</td>\n  </tr>\n  <tr>\n    <td>Eve</td>\n    <td>Jackson</td>\n    <td>94</td>\n  </tr>\n  <tr>\n    <td>Adam</td>\n    <td>Johnson</td>\n    <td>67</td>\n  </tr>\n</table>\n\n</body>\n</html>\nFULL_CODE_END -->"
+        },
+        {
+            "id": "html_tables_10",
             "type": "content",
             "title": "Summary",
-            "content": "# Tables Mastery ✅\n\n- ✅ Use `<table>`, `<tr>`, `<td>`, `<th>` for basics\n- ✅ Use `colspan` and `rowspan` to merge cells\n- ✅ Use `thead`, `tbody`, `tfoot` for structure\n- ✅ Use `caption` for accessibility\n\n> 🚀 **Next:** Learn about organized **Lists**!"
+            "content": "# Summary 📝\n\nTables are essential for data presentation.\n\n## Key Takeaways\n\n- ✅ `<table>` creates the table.\n- ✅ `<tr>` is a row, `<td>` is a cell.\n- ✅ `<th>` creates header cells.\n- ✅ `colspan` and `rowspan` merge cells.\n- ✅ `<thead>`, `<tbody>`, `<tfoot>` organize structure.\n- ✅ Always use CSS for styling (borders, padding, colors).\n\nUp next: Grouping items with **Lists**! 📋"
         }
     ]
 }

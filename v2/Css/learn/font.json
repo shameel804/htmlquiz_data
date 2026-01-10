@@ -1,47 +1,77 @@
 {
-    "id": "font",
+    "id": "learn_css_font",
     "topicId": "font",
     "topicTitle": "Typography",
-    "description": "Style text with fonts, sizes, weights, and spacing.",
-    "baseKP": 50,
+    "description": "Learn to style text with fonts, alignment, line height, and spacing.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "font_1",
+            "id": "css_font_1",
             "type": "content",
-            "title": "Font Family and Size",
-            "content": "# Typography 📝\n\n## Font Family\nPriority list of fonts.\n```css\nbody {\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n}\n```\nIf the browser doesn't have the first, it tries the second.\n\n## Font Size\n```css\nh1 { font-size: 32px; }\np  { font-size: 1.2rem; } /* Relative to root size */\n```\n\n> 💡 **Tip:** Using `rem` is better for accessibility than `px`."
+            "title": "Font Fundamentals",
+            "content": "# CSS Fonts 🅰️\n\nChoosing the right font is key to readability and design.\n\n## Font Family\nThe `font-family` property specifies the font for an element.\n\nIt should hold several font names as a \"fallback\" system. If the browser does not support the first font, it tries the next font.\n\n```css\np {\n  font-family: \"Times New Roman\", Times, serif;\n}\n```\nStart with the specific font, then a generic family (`serif`, `sans-serif`, `monospace`)."
         },
         {
-            "id": "font_2",
+            "id": "css_font_2",
             "type": "content",
-            "title": "Weight and Style",
-            "content": "# Styling Text 🖌️\n\n## Font Weight\nBoldness of the text.\n```css\nfont-weight: normal; /* 400 */\nfont-weight: bold;   /* 700 */\nfont-weight: 100;    /* Thin */\n```\n\n## Font Style\nItalicizing text.\n```css\nfont-style: italic;\n```\n\n## Text Decoration\nLines on text.\n```css\ntext-decoration: underline;\ntext-decoration: line-through;\ntext-decoration: none; /* Removes link underline */\n```"
+            "title": "Serif vs Sans-Serif",
+            "content": "# Serif vs Sans-Serif ✒️\n\n## Serif\nHave small lines (serifs) at the ends of characters. Considered formal and elegant.\n- *Example:* Times New Roman, Georgia.\n\n## Sans-Serif\n\"Sans\" means without. These fonts do not have small lines. Considered modern and clean.\n- *Example:* Arial, Helvetica, Roboto.\n\n> 📱 **Design Tip:** Sans-serif fonts are generally easier to read on screens."
         },
         {
-            "id": "font_quiz_1",
+            "id": "css_font_3",
             "type": "content",
-            "title": "Alignment and Spacing",
-            "content": "# Alignment & Spacing 📏\n\n## Text Align\nHorizontal alignment.\n```css\ntext-align: center;\ntext-align: right;\ntext-align: justify;\n```\n\n## Spacing\n```css\nline-height: 1.5;      /* Space between lines */\nletter-spacing: 2px;   /* Space between chars */\nword-spacing: 5px;     /* Space between words */\n```"
+            "title": "Google Fonts",
+            "content": "# Web Fonts (Google Fonts) 🌐\n\nTo use a font that isn't standard on all computers, use Google Fonts.\n\n1. Link the font in `<head>`.\n2. Use it in CSS.\n\n```html\n<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Sofia\">\n<style>\nbody {\n  font-family: \"Sofia\", sans-serif;\n}\n</style>\n```"
         },
         {
-            "id": "font_3",
+            "id": "css_font_4",
+            "type": "content",
+            "title": "Text Alignment",
+            "content": "# Text Alignment 📐\n\n`text-align` is used to set the horizontal alignment of text.\n\n- `left` (default)\n- `right`\n- `center`\n- `justify` (stretches text to fill width)\n\n```css\nh1 {\n  text-align: center;\n}\n```\n\n## Vertical Alignment\n`vertical-align` sets vertical alignment of an inline element (like an image next to text)."
+        },
+        {
+            "id": "css_font_5",
             "type": "quiz",
-            "title": "Font Quiz",
-            "content": "How do you remove the underline from a link?",
-            "quizQuestion": "Which property removes the underline from a hyperlink?",
+            "title": "Align Quiz",
+            "content": "Centering text.",
+            "quizQuestion": "Which property centers the text inside an element?",
             "quizOptions": [
-                "text-style: none",
-                "font-decoration: none",
-                "text-decoration: none",
-                "underline: none"
+                "align: center",
+                "text-align: center",
+                "font-style: center",
+                "justify-content: center"
             ],
-            "correctOptionIndex": 2
+            "correctOptionIndex": 1
         },
         {
-            "id": "font_4",
+            "id": "css_font_6",
+            "type": "content",
+            "title": "Text Decoration",
+            "content": "# Text Decoration ✨\n\nPrimarily used to remove underlines from links.\n\n```css\na {\n  text-decoration: none;\n}\n```\n\nOther values:\n- `underline`\n- `overline`\n- `line-through` (strikethrough)"
+        },
+        {
+            "id": "css_font_7",
+            "type": "content",
+            "title": "Font Size and Weight",
+            "content": "# Size and Weight 📏\n\n## Font Size\n`font-size` sets the size. Can use `px`, `em`, `rem`, or `%`.\n\n```css\nh1 { font-size: 40px; }\np { font-size: 1.25rem; } /* relative to root html size */\n```\n\n## Font Weight\n`font-weight` sets the thickness.\n- `normal` (400)\n- `bold` (700)\n\n```css\np.thicker { font-weight: 900; }\n```"
+        },
+        {
+            "id": "css_font_8",
+            "type": "content",
+            "title": "Spacing",
+            "content": "# Text Spacing ↔️\n\n## Letter Spacing\nSpace between characters.\n```css\nh1 { letter-spacing: 3px; }\n```\n\n## Line Height\nSpace between lines of text (Leading).\n```css\np { line-height: 1.6; }\n```\nA unitless number is preferred (e.g., 1.5 times the font size).\n\n## Word Spacing\nSpace between words.\n```css\np { word-spacing: 10px; }\n```"
+        },
+        {
+            "id": "css_font_9",
+            "type": "content",
+            "title": "Text Shadow",
+            "content": "# Text Shadow 🌥️\n\nAdds shadow to text.\n\nSyntax: `horizontal-offset vertical-offset blur-radius color`\n\n```css\nh1 {\n  text-shadow: 2px 2px 5px red;\n}\n```\n\nThis creates a red shadow: 2px right, 2px down, with a 5px blur."
+        },
+        {
+            "id": "css_font_10",
             "type": "content",
             "title": "Summary",
-            "content": "# Typo Recap ✍️\n\n- ✅ **`font-family`**: Choose your font stack\n- ✅ **`font-weight`**: Boldness\n- ✅ **`text-align`**: Center, left, right\n- ✅ **`line-height`**: Readability buffer\n\n> 🚀 **Next:** Add some life with **Colors & Backgrounds**!"
+            "content": "# Summary 🅰️\n\nTypography defines the reading experience.\n\n## Key Takeaways\n\n- ✅ **font-family:** Defines the font stack (fallback system).\n- ✅ **Web Fonts:** Use Google Fonts for custom typography.\n- ✅ **text-align:** Controls left/center/right alignment.\n- ✅ **line-height:** Improves readability of paragraphs.\n- ✅ **font-size/weight:** Controls scale and emphasis.\n\nNext, let's explore **Colors and Backgrounds**! 🎨"
         }
     ]
 }

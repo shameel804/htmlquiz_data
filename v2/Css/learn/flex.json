@@ -1,47 +1,91 @@
 {
-    "id": "flex",
+    "id": "learn_css_flex",
     "topicId": "flex",
     "topicTitle": "Flexbox & Grid",
-    "description": "Build complex, responsive layouts easily with Flexbox and CSS Grid.",
-    "baseKP": 80,
+    "description": "Master modern layout systems: Flexbox for 1D layouts and CSS Grid for 2D layouts.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "flex_1",
+            "id": "css_flex_1",
             "type": "content",
-            "title": "Flexbox Basics",
-            "content": "# Flexbox 💪\n\nDesigned for 1D layouts (rows OR columns). Put items in a container.\n\n```css\n.container {\n  display: flex;\n}\n```\n\n## Flex Direction\n\n```css\nflex-direction: row; /* Default: Left to Right */\nflex-direction: column; /* Top to Bottom */\n```"
+            "title": "Intro to Flexbox",
+            "content": "# CSS Flexbox 💪\n\nThe Flexible Box Layout Module makes it easier to design flexible responsive layout structure without using float or positioning.\n\n## The Container\nTo start, set `display: flex;` on the parent container.\n\n```css\n.flex-container {\n  display: flex;\n}\n```\nDirect children become **flex items**."
         },
         {
-            "id": "flex_2",
+            "id": "css_flex_2",
             "type": "content",
-            "title": "Flex Justify and Align",
-            "content": "# Flex Alignment 📐\n\n## Justify Content (Main Axis)\nSuppose `row` direction:\n```css\njustify-content: center; /* Center horizontally */\njustify-content: space-between; /* Equal space between */\njustify-content: flex-end; /* Right align */\n```\n\n## Align Items (Cross Axis)\n```css\nalign-items: center; /* Center vertically */\nalign-items: stretch; /* Stretch to fill height */\n```\n\n> 🎯 **Tip:** `display: flex; justify-content: center; align-items: center;` is the easiest way to perfectly center something!"
+            "title": "Flex Direction",
+            "content": "# Flex Direction ➡️\n\nDefines the direction flex items are placed.\n\n- `row` (default): Horizontal left-to-right.\n- `row-reverse`: Horizontal right-to-left.\n- `column`: Vertical top-to-bottom.\n- `column-reverse`: Vertical bottom-to-top.\n\n```css\n.flex-container {\n  display: flex;\n  flex-direction: column;\n}\n```"
         },
         {
-            "id": "flex_quiz_1",
+            "id": "css_flex_3",
+            "type": "content",
+            "title": "Justify Content",
+            "content": "# Justify Content (Main Axis) ↔️\n\nAligns items along the main axis (usually horizontal).\n\n- `flex-start` (default): Start of container.\n- `flex-end`: End of container.\n- `center`: Centered.\n- `space-between`: Space between items.\n- `space-around`: Space around items.\n\n```css\n.flex-container {\n  justify-content: center;\n}\n```"
+        },
+        {
+            "id": "css_flex_4",
+            "type": "content",
+            "title": "Align Items",
+            "content": "# Align Items (Cross Axis) ↕️\n\nAligns items along the cross axis (usually vertical).\n\n- `stretch` (default): Stretch to fill container.\n- `flex-start`: Top.\n- `flex-end`: Bottom.\n- `center`: Center.\n- `baseline`: Align baselines.\n\n```css\n.flex-container {\n  height: 200px;\n  align-items: center;\n}\n```"
+        },
+        {
+            "id": "css_flex_5",
             "type": "quiz",
-            "title": "Flex Quiz",
-            "content": "Which property aligns items along the MAIN axis?",
-            "quizQuestion": "Which property aligns items along the MAIN axis (e.g., horizontally in a row)?",
+            "title": "Alignment Quiz",
+            "content": "Center a div.",
+            "quizQuestion": "Which two properties center a single item inside a flex container?",
             "quizOptions": [
-                "align-items",
-                "justify-content",
-                "align-content",
-                "flex-align"
+                "text-align: center & vertical-align: middle",
+                "justify-content: center & align-items: center",
+                "margin: 0 auto",
+                "float: center"
             ],
             "correctOptionIndex": 1
         },
         {
-            "id": "flex_3",
+            "id": "css_flex_6",
             "type": "content",
-            "title": "CSS Grid Basics",
-            "content": "# CSS Grid 🕸️\n\nDesigned for 2D layouts (rows AND columns).\n\n```css\n.grid-container {\n  display: grid;\n  grid-template-columns: 100px 200px auto;\n  gap: 10px;\n}\n```\n\n- `grid-template-columns`: Defines width of columns\n- `fr`: Fractional unit (e.g., `1fr 1fr` = two equal columns)\n\n## Grid Areas\n\n```css\n.header { grid-area: head; }\n.menu { grid-area: menu; }\n.container {\n  grid-template-areas:\n    'head head'\n    'menu main';\n}\n```"
+            "title": "Intro to CSS Grid",
+            "content": "# CSS Grid Layout 🏁\n\nGrid is a **2-dimensional** layout system (rows AND columns).\n\n## The Container\n\n```css\n.grid-container {\n  display: grid;\n  grid-template-columns: auto auto auto;\n  gap: 10px;\n}\n```\n\nThis creates a grid with 3 equal columns."
         },
         {
-            "id": "flex_4",
+            "id": "css_flex_7",
+            "type": "content",
+            "title": "Grid Columns and Rows",
+            "content": "# Defining Columns & Rows 📏\n\nUse `grid-template-columns` and `grid-template-rows` to define size.\n\n## The `fr` Unit\nThe `fr` unit represents a fraction of available space.\n\n```css\n.grid-container {\n  display: grid;\n  grid-template-columns: 1fr 2fr 1fr;\n}\n```\n(Middle column is twice as wide as others.)\n\n## Repeat Function\n`grid-template-columns: repeat(3, 1fr);` (Same as 1fr 1fr 1fr)"
+        },
+        {
+            "id": "css_flex_8",
+            "type": "content",
+            "title": "Grid Gap",
+            "content": "# Grid Gap 🕳️\n\nYou can set the gap (gutter) between rows and columns.\n\n- `column-gap`\n- `row-gap`\n- `gap` (shorthand)\n\n```css\n.grid-container {\n  display: grid;\n  gap: 20px 50px; /* row column */\n}\n```"
+        },
+        {
+            "id": "css_flex_9",
+            "type": "content",
+            "title": "Grid Areas",
+            "content": "# Grid Template Areas 🗺️\n\nNamed grid areas make layout code readable.\n\n**Item:**\n```css\n.item1 { grid-area: header; }\n.item2 { grid-area: menu; }\n.item3 { grid-area: main; }\n.item4 { grid-area: right; }\n.item5 { grid-area: footer; }\n```\n\n**Container:**\n```css\n.grid-container {\n  grid-template-areas:\n    'header header header header header'\n    'menu main main main right'\n    'menu footer footer footer footer';\n}\n```"
+        },
+        {
+            "id": "css_flex_10",
+            "type": "quiz",
+            "title": "Grid Quiz",
+            "content": "Grid vs Flex.",
+            "quizQuestion": "Which layout is best for 1-dimensional layouts (row OR column)?",
+            "quizOptions": [
+                "Grid",
+                "Flexbox",
+                "Table",
+                "Float"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_flex_11",
             "type": "content",
             "title": "Summary",
-            "content": "# Layout Mastery 🏗️\n\n## Flexbox\n- Best for components, navbars, 1D lists.\n- `justify-content` & `align-items` control alignment.\n\n## Grid\n- Best for overall page structure, galleries, 2D layouts.\n- `grid-template-columns` defines the structure.\n\n> 🚀 **Next:** Make it readable with **Typography**!"
+            "content": "# Summary 📐\n\nModern layouts are built with Flexbox and Grid.\n\n## Comparison\n\n| Feature | Flexbox | Grid |\n|---|---|---|\n| Dimension | 1D (Row or Col) | 2D (Row & Col) |\n| Alignment | Content-first | Layout-first |\n| Best for | Components, Navbars | Page layouts |\n\nNext, let's explore **Typography**! 🅰️"
         }
     ]
 }

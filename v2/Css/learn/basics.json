@@ -1,53 +1,85 @@
 {
-    "id": "basics",
+    "id": "learn_css_basics",
     "topicId": "basics",
-    "topicTitle": "Basics",
-    "description": "Understand CSS syntax, selectors, and how to apply styles.",
-    "baseKP": 50,
+    "topicTitle": "CSS Basics",
+    "description": "Learn the syntax, selectors, and properties used to style HTML elements with CSS.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "css_basic_1",
+            "id": "css_basics_1",
             "type": "content",
             "title": "What is CSS?",
-            "content": "# CSS Basics 🎨\n\n**CSS** (Cascading Style Sheets) is used to style and layout web pages.\n\n## Why CSS?\n- **HTML** = Skeleton (Structure)\n- **CSS** = Skin & Clothes (Presentation)\n\n## Syntax\n\n```css\nselector {\n  property: value;\n}\n```\n\n```css\nh1 {\n  color: blue;\n  font-size: 24px;\n}\n```"
+            "content": "# Intro to CSS 🎨\n\n**CSS** stands for **C**ascading **S**tyle **S**heets.\n\nWhile HTML is the *skeleton* (structure), CSS is the *skin* (presentation). It controls:\n- Layout\n- Colors\n- Fonts\n- Responsiveness\n\n```css\nbody {\n  background-color: lightblue;\n}\n\nh1 {\n  color: white;\n  text-align: center;\n}\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<head>\n<style>\nbody {\n  background-color: lightblue;\n}\n\nh1 {\n  color: white;\n  text-align: center;\n}\n\np {\n  font-family: verdana;\n  font-size: 20px;\n}\n</style>\n</head>\n<body>\n\n<h1>My First CSS Example</h1>\n<p>This is a paragraph.</p>\n\n</body>\n</html>\nFULL_CODE_END -->"
         },
         {
-            "id": "css_basic_2",
+            "id": "css_basics_2",
             "type": "content",
-            "title": "Three Ways to Insert CSS",
-            "content": "# Applying CSS 🖌️\n\n## 1. External (Recommended)\nLink to a `.css` file in the `<head>`.\n```html\n<link rel=\"stylesheet\" href=\"style.css\">\n```\n\n## 2. Internal\nInside `<style>` tags in HTML.\n```html\n<style>\n  body { background-color: #f0f0f0; }\n</style>\n```\n\n## 3. Inline\nDirectly on the element (Not recommended for big projects).\n```html\n<p style=\"color: red;\">Red Text</p>\n```"
+            "title": "CSS Syntax",
+            "content": "# CSS Syntax 📝\n\nA CSS rule consists of a **selector** and a **declaration block**.\n\n```css\nh1 { color: blue; font-size: 12px; }\n```\n\n- **Selector (`h1`):** Points to the HTML element you want to style.\n- **Property (`color`):** The style attribute you want to change.\n- **Value (`blue`):** The value for the property.\n- **Declaration:** `property: value;` (separated by semicolons)."
         },
         {
-            "id": "css_basic_3",
+            "id": "css_basics_3",
+            "type": "quiz",
+            "title": "Syntax Quiz",
+            "content": "Check your syntax knowledge.",
+            "quizQuestion": "Which punctuation separates the property from the value?",
+            "quizOptions": [
+                "Colon (:)",
+                "Semicolon (;)",
+                "Comma (,)",
+                "Period (.)"
+            ],
+            "correctOptionIndex": 0
+        },
+        {
+            "id": "css_basics_4",
             "type": "content",
-            "title": "Basic Selectors",
-            "content": "# Selectors 🎯\n\nHow do we target elements?\n\n## Element Selector\nTargets all instances of a tag.\n```css\np { color: green; }\n```\n\n## Class Selector (.)\nTargets elements with a specific class. Used for multiple elements.\n```css\n.btn { background: blue; }\n/* HTML: <button class=\"btn\">Click</button> */\n```\n\n## ID Selector (#)\nTargets a SINGLE unique element.\n```css\n#header { height: 100px; }\n/* HTML: <div id=\"header\">...</div> */\n```"
+            "title": "CSS Selectors",
+            "content": "# CSS Selectors 🎯\n\nSelectors pattern-match elements.\n\n## 1. Element Selector\nSelects all elements of a given type.\n```css\np {\n  text-align: center;\n  color: red;\n}\n```\n\n## 2. ID Selector\nSelects a unique element with a specific `id` attribute using `#`.\n```css\n#para1 {\n  text-align: center;\n  color: red;\n}\n```\n\n## 3. Class Selector\nSelects elements with a specific `class` attribute using `.`.\n```css\n.center {\n  text-align: center;\n  color: red;\n}\n```\n\n> 💡 **Tip:** ID is unique per page, Class can be used on multiple elements."
         },
         {
-            "id": "css_basic_quiz_1",
+            "id": "css_basics_5",
+            "type": "content",
+            "title": "Universal and Grouping Selectors",
+            "content": "# More Selectors 🌟\n\n## Universal Selector (*)\nSelects all elements on the page.\n```css\n* {\n  margin: 0;\n  padding: 0;\n}\n```\n\n## Grouping Selector\nSelects multiple elements with the same style.\n```css\nh1, h2, p {\n  text-align: center;\n  color: red;\n}\n```"
+        },
+        {
+            "id": "css_basics_6",
             "type": "quiz",
             "title": "Selector Quiz",
-            "content": "Which character signifies a CLASS selector?",
-            "quizQuestion": "Which character prefixes a CLASS selector in CSS?",
+            "content": "Verify selector knowledge.",
+            "quizQuestion": "How do you select an element with id=\"demo\"?",
             "quizOptions": [
-                "# (Hash)",
-                ". (Dot)",
-                ": (Colon)",
-                "@ (At)"
+                "demo",
+                ".demo",
+                "#demo",
+                "*demo"
             ],
-            "correctOptionIndex": 1
+            "correctOptionIndex": 2
         },
         {
-            "id": "css_basic_4",
+            "id": "css_basics_7",
             "type": "content",
-            "title": "Universal and Grouping",
-            "content": "# More Selectors 🌟\n\n## Universal Selector (*)\nSelects EVERYTHING.\n```css\n* {\n  margin: 0;\n  padding: 0;\n}\n```\n\n## Grouping Selectors\nApply same style to multiple selectors.\n```css\nh1, h2, p {\n  font-family: Arial;\n}\n```\n\n## Descendant Selector\nSpace separates ancestor and descendant.\n```css\ndiv p { color: red; }\n/* Selects only <p> inside <div> */\n```"
+            "title": "How to Add CSS",
+            "content": "# Three Ways to Insert CSS 📥\n\n## 1. External CSS\nLink to a separate `.css` file (Best Practice).\n```html\n<link rel=\"stylesheet\" href=\"mystyle.css\">\n```\n\n## 2. Internal CSS\nInside the `<style>` element in `<head>`.\n```html\n<style>\n  body {background-color: linen;}\n</style>\n```\n\n## 3. Inline CSS\nInside the `style` attribute (Not recommended for layout).\n```html\n<h1 style=\"color:blue;\">Hello</h1>\n```"
         },
         {
-            "id": "css_basic_5",
+            "id": "css_basics_8",
+            "type": "content",
+            "title": "CSS Comments",
+            "content": "# CSS Comments 💬\n\nComments are used to explain code and are ignored by browsers.\n\nStarts with `/*` and ends with `*/`.\n\n```css\np {\n  color: red; /* Set text color to red */\n}\n\n/* This is\na multi-line\ncomment */\n```"
+        },
+        {
+            "id": "css_basics_9",
+            "type": "content",
+            "title": "Cascading Order",
+            "content": "# What is 'Cascading'? 🌊\n\nWhen multiple styles apply to the same element, which one wins?\n\n**Priority Order (Lowest to Highest):**\n1. Browser default (e.g., standard h1 size)\n2. External and Internal style sheets (in head section)\n3. Inline style (inside an HTML element)\n\n**Inline style** has the highest priority and overrides others!\n\n*(Note: `!important` rule overrides everything, but use with caution.)*"
+        },
+        {
+            "id": "css_basics_10",
             "type": "content",
             "title": "Summary",
-            "content": "# CSS Basics Recap 🎓\n\n- ✅ **Structure**: `selector { property: value; }`\n- ✅ **Insertion**: External files are best\n- ✅ **Class (.)**: Reusable styles\n- ✅ **ID (#)**: Unique styles\n- ✅ **Cascading**: Last rule wins (usually)!\n\n> 🚀 **Next:** Master the **Box Model**, the core of layout!"
+            "content": "# Summary 📝\n\nCSS makes the web beautiful.\n\n## Key Takeaways\n\n- ✅ **Selectors** (Element `p`, ID `#id`, Class `.class`) target elements.\n- ✅ **Declarations** (`property: value;`) define the style.\n- ✅ **External CSS** is the best way to manage styles for a website.\n- ✅ **Cascading** means styles flow down and can be overridden by higher priority rules (Inline > Internal > External).\n\nNext, we'll learn about layout with the **Box Model**! 📦"
         }
     ]
 }

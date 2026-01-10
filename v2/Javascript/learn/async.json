@@ -1,47 +1,85 @@
 {
-    "id": "async",
+    "id": "learn_js_async",
     "topicId": "async",
-    "topicTitle": "Asynchronous JavaScript",
-    "description": "Handle operations that take time, using Promises and Async/Await.",
-    "baseKP": 85,
+    "topicTitle": "Asynchronous JS",
+    "description": "Handle time-consuming tasks without freezing your app using Callbacks, Promises, and Async/Await.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "async_1",
+            "id": "js_async_1",
             "type": "content",
-            "title": "Synchronous vs Asynchronous",
-            "content": "# Async Programming ⏳\n\n## Synchronous\nCode runs line by line. If one line takes 5 seconds, everything waits.\n\n## Asynchronous\nLong tasks start, and code continues running. The task notifies when done.\n\n```javascript\nconsole.log(\"Start\");\nsetTimeout(() => {\n  console.log(\"Delayed\");\n}, 2000);\nconsole.log(\"End\");\n\n// Output: Start -> End -> Delayed\n```"
+            "title": "Sync vs Async",
+            "content": "# Sync vs Async ⏳\n\n**Synchronous:** Code runs line by line. If one line takes a long time (like fetching data), the whole app freezes.\n\n**Asynchronous:** Long tasks start, and the code continues running. The task notifies when it's done.\n\nJS is single-threaded, but uses Async patterns to handle IO operations."
         },
         {
-            "id": "async_2",
+            "id": "js_async_2",
+            "type": "content",
+            "title": "Callbacks",
+            "content": "# Callbacks 📞\n\nA callback is a function passed as an argument to another function, to be executed later.\n\n```javascript\nfunction myCalculator(num1, num2, myCallback) {\n  let sum = num1 + num2;\n  myCallback(sum);\n}\n\nmyCalculator(5, 5, (result) => {\n  console.log(\"Result is: \" + result);\n});\n```\n**Problem:** \"Callback Hell\" (too many nested callbacks)."
+        },
+        {
+            "id": "js_async_3",
             "type": "content",
             "title": "Promises",
-            "content": "# Promises 🤞\n\nAn object representing a future value.\n\n```javascript\nconst fetchData = new Promise((resolve, reject) => {\n  // Simulating network request\n  let success = true;\n  if (success) resolve(\"Data loaded\");\n  else reject(\"Error loading\");\n});\n\nfetchData\n  .then(data => console.log(data))\n  .catch(error => console.error(error));\n```"
+            "content": "# Promises 🤞\n\nA Promise is an object representing the eventual completion (or failure) of an async operation.\n\nIt has 3 states:\n1. **Pending:** Working...\n2. **Fulfilled:** Success! (`resolve`)\n3. **Rejected:** Error! (`reject`)\n\n```javascript\nlet myPromise = new Promise(function(resolve, reject) {\n  // do something async\n  if (success) resolve(\"Done!\");\n  else reject(\"Error!\");\n});\n```"
         },
         {
-            "id": "async_3",
+            "id": "js_async_4",
             "type": "content",
-            "title": "Async/Await",
-            "content": "# Async / Await ⚡\n\nSyntactic sugar for Promises. Makes async code look synchronous!\n\n```javascript\nasync function getData() {\n  try {\n    const response = await fetch(\"https://api.example.com/data\");\n    const data = await response.json();\n    console.log(data);\n  } catch (error) {\n    console.log(\"Something went wrong\");\n  }\n}\n```\n\n- `async`: Helper keyword for functions\n- `await`: Pauses execution until Promise resolves"
+            "title": "Using Promises",
+            "content": "# .then() and .catch() 🎣\n\nConsumers of promises use `.then` for success and `.catch` for errors.\n\n```javascript\nmyPromise\n  .then((value) => {\n    console.log(value); // \"Done!\"\n  })\n  .catch((error) => {\n    console.error(error); // \"Error!\"\n  });\n```"
         },
         {
-            "id": "async_quiz_1",
+            "id": "js_async_5",
             "type": "quiz",
-            "title": "Async Quiz",
-            "content": "What keyword pauses execution inside an async function?",
-            "quizQuestion": "Which keyword pauses execution inside an async function until a Promise resolves?",
+            "title": "Promise Quiz",
+            "content": "Check states.",
+            "quizQuestion": "Which state means the promise completed successfully?",
             "quizOptions": [
-                "wait",
-                "pause",
-                "await",
-                "then"
+                "Pending",
+                "Fulfilled",
+                "Rejected",
+                "Broken"
             ],
-            "correctOptionIndex": 2
+            "correctOptionIndex": 1
         },
         {
-            "id": "async_4",
+            "id": "js_async_6",
+            "type": "content",
+            "title": "Async / Await",
+            "content": "# Async / Await 🛑\n\nIntroduced in ES2017, this makes async code look and behave like synchronous code.\n\n- `async`: Makes a function return a Promise.\n- `await`: Makes the function pause and wait for a Promise to resolve.\n\n```javascript\nasync function getData() {\n  let response = await fetch(\"data.json\");\n  let user = await response.json();\n  console.log(user);\n}\n```"
+        },
+        {
+            "id": "js_async_7",
+            "type": "content",
+            "title": "Try / Catch with Async",
+            "content": "# Error Handling with Async 🛡️\n\nSince `await` pauses execution, we can use standard `try...catch` blocks for errors.\n\n```javascript\nasync function getData() {\n  try {\n    let response = await fetch(\"wrong-url.json\");\n    // ...\n  } catch (err) {\n    console.log(\"Error caught:\", err);\n  }\n}\n```\nThis is much cleaner than `.catch()` chains."
+        },
+        {
+            "id": "js_async_8",
+            "type": "content",
+            "title": "setTimeout",
+            "content": "# setTimeout ⏱️\n\nExecutes a function after waiting a specified number of milliseconds.\n\n```javascript\nsetTimeout(() => {\n  console.log(\"Delayed message\");\n}, 2000); // 2 seconds\n```\n\n`setInterval` repeats the execution."
+        },
+        {
+            "id": "js_async_9",
+            "type": "quiz",
+            "title": "Await Quiz",
+            "content": "Check syntax.",
+            "quizQuestion": "Where can you use the 'await' keyword?",
+            "quizOptions": [
+                "Anywhere",
+                "Only inside an 'async' function",
+                "Only inside a 'class'",
+                "Only in loops"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_async_10",
             "type": "content",
             "title": "Summary",
-            "content": "# Async Recap ⏳\n\n- ✅ **Callbacks**: Only function passed to another (Old way)\n- ✅ **Promises**: Cleaner handling of success/failure\n- ✅ **Async/Await**: Modern, readable async code\n- ✅ **Try/Catch**: Essential for handling async errors\n\n> 🚀 **Next:** Handle bugs gracefully with **Error Handling**!"
+            "content": "# Summary ⏳\n\nAsync is essential for fetching data.\n\n## Key Takeaways\n\n- ✅ **Callbacks:** The old way. Prone to nesting hell.\n- ✅ **Promises:** The standard object for async. 3 states.\n- ✅ **Async/Await:** The modern, clean syntax for handling Promises.\n- ✅ **try/catch:** Always handle your async errors!\n\nNext, let's dive deeper into **Error Handling**! 🚨"
         }
     ]
 }

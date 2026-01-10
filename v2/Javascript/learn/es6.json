@@ -1,47 +1,77 @@
 {
-    "id": "es6",
+    "id": "learn_js_es6",
     "topicId": "es6",
     "topicTitle": "ES6+ Features",
-    "description": "Modern JavaScript features: Destructuring, Spread, Template Literals.",
-    "baseKP": 80,
+    "description": "Upgrade your skills with modern JavaScript features like classes, destructuring, template literals, and modules.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "es6_1",
+            "id": "js_es6_1",
             "type": "content",
-            "title": "Template Literals",
-            "content": "# Template Literals 📜\n\nBackticks (` `) allow variables in strings.\n\n```javascript\nconst name = \"Alice\";\nconst age = 25;\n\n// Old\nconsole.log(\"User \" + name + \" is \" + age);\n\n// ES6\nconsole.log(`User ${name} is ${age}`);\n```\n\nAlso supports multi-line strings!"
+            "title": "What is ES6?",
+            "content": "# ES6 (ECMAScript 2015) 🚀\n\nES6 was a major update to JavaScript. It introduced many features to make coding easier and cleaner.\n\nKey Features:\n- `let` and `const`\n- Arrow Functions\n- Classes\n- Template Literals\n- Destructuring\n- Modules"
         },
         {
-            "id": "es6_2",
+            "id": "js_es6_2",
+            "type": "content",
+            "title": "Let and Const",
+            "content": "# Let and Const 🛡️\n\nAs learned in Basics, replace `var` with `let` and `const`.\n\n- **Block Scope:** Variables are only accessible inside the `{ block }` they are defined in.\n- **No Hoisting:** You cannot use them before declaration.\n\n```javascript\nif (true) {\n  let x = 10;\n}\n// console.log(x); // Error! x is not defined\n```"
+        },
+        {
+            "id": "js_es6_3",
             "type": "content",
             "title": "Destructuring",
-            "content": "# Destructuring ✂️\n\nUnpack values from arrays or objects easily.\n\n```javascript\n// Object\nconst user = { name: \"Bob\", role: \"Admin\" };\nconst { name, role } = user;\nconsole.log(role); // \"Admin\"\n\n// Array\nconst rgb = [255, 0, 0];\nconst [red, green, blue] = rgb;\n```"
+            "content": "# Destructuring 📦\n\nExtract values from arrays or properties from objects into distinct variables.\n\n## Arrays\n```javascript\nconst [a, b] = [10, 20];\nconsole.log(a); // 10\n```\n\n## Objects\n```javascript\nconst person = { name: \"John\", age: 30 };\nconst { name, age } = person;\nconsole.log(name); // \"John\"\n```"
         },
         {
-            "id": "es6_3",
+            "id": "js_es6_4",
             "type": "content",
-            "title": "Spread and Rest",
-            "content": "# Spread & Rest `...` 🧂\n\n## Spread\nExpands array/object properties.\n```javascript\nconst arr1 = [1, 2];\nconst arr2 = [...arr1, 3, 4]; // [1, 2, 3, 4]\n```\n\n## Rest\nCommences remaining arguments into an array.\n```javascript\nfunction sum(...numbers) {\n  return numbers.reduce((a, b) => a + b);\n}\n```"
+            "title": "Spread Operator",
+            "content": "# Spread Operator (...) 🧂\n\nExpands an iterable (like an array) into more elements.\n\n## Combine Arrays\n```javascript\nconst arr1 = [1, 2];\nconst arr2 = [3, 4];\nconst combined = [...arr1, ...arr2]; // [1, 2, 3, 4]\n```\n\n## Object Copy\n```javascript\nconst obj1 = { x: 1, y: 2 };\nconst obj2 = { ...obj1, z: 3 };\n```"
         },
         {
-            "id": "es6_quiz_1",
+            "id": "js_es6_5",
             "type": "quiz",
-            "title": "ES6 Quiz",
-            "content": "What syntax is used for template literals?",
-            "quizQuestion": "Which character allows string interpolation in JS?",
+            "title": "Spread Quiz",
+            "content": "Check syntax.",
+            "quizQuestion": "Which operator expands an array?",
             "quizOptions": [
-                "' (Single Quote)",
-                "\" (Double Quote)",
-                "` (Backtick)",
-                "$ (Dollar)"
+                "...",
+                "&&",
+                "||",
+                "==>"
             ],
-            "correctOptionIndex": 2
+            "correctOptionIndex": 0
         },
         {
-            "id": "es6_4",
+            "id": "js_es6_6",
+            "type": "content",
+            "title": "Classes",
+            "content": "# Classes 🏛️\n\nSyntactic sugar over JavaScript's existing prototype-based inheritance.\n\n```javascript\nclass Car {\n  constructor(brand) {\n    this.carname = brand;\n  }\n  present() {\n    return \"I have a \" + this.carname;\n  }\n}\n\nconst myCar = new Car(\"Ford\");\nmyCar.present();\n```"
+        },
+        {
+            "id": "js_es6_7",
+            "type": "content",
+            "title": "Inheritance",
+            "content": "# Class Inheritance 👨‍👦\n\nUse the `extends` keyword to create a child class.\n\n```javascript\nclass Model extends Car {\n  constructor(brand, mod) {\n    super(brand); // Call parent constructor\n    this.model = mod;\n  }\n  show() {\n    return this.present() + \", it is a \" + this.model;\n  }\n}\n```"
+        },
+        {
+            "id": "js_es6_8",
+            "type": "content",
+            "title": "Modules",
+            "content": "# Modules 📦\n\nModules allow you to break up your code into separate files.\n\n## Export (lib.js)\n```javascript\nexport const pi = 3.14;\nexport function add(x, y) { return x + y; }\n```\n\n## Import (main.js)\n```javascript\nimport { pi, add } from './lib.js';\nconsole.log(add(1, 2));\n```\nNote: Requires `type=\"module\"` in HTML script tag."
+        },
+        {
+            "id": "js_es6_9",
+            "type": "content",
+            "title": "Map and Set",
+            "content": "# Map and Set 🗺️\n\n## Map\nA collection of keyed data items, like an Object. But keys can be of **any** type.\n```javascript\nconst map = new Map();\nmap.set('1', 'str1');\nmap.set(1, 'num1');\n```\n\n## Set\nA collection of **unique** values.\n```javascript\nconst set = new Set([1, 2, 2, 3]);\nconsole.log(set); // {1, 2, 3}\n```"
+        },
+        {
+            "id": "js_es6_10",
             "type": "content",
             "title": "Summary",
-            "content": "# Modern JS Recap 🌟\n\n- ✅ **Template Literals**: `${expression}` inside backticks\n- ✅ **Destructuring**: Extracting vars `{ x } = obj`\n- ✅ **Spread**: Copying/Expanding `...arr`\n- ✅ **Modules**: `import`/`export` (for organizing code)\n\n> 🚀 **Next:** Handle time with **Asynchronous JavaScript**!"
+            "content": "# Summary 🚀\n\nES6 makes JS powerful and clean.\n\n## Key Takeaways\n\n- ✅ **Destructuring:** Unpack values easily.\n- ✅ **Spread:** Copy/Merge arrays and objects.\n- ✅ **Classes:** Clean OOP syntax.\n- ✅ **Modules:** Organize code into files.\n- ✅ **Map/Set:** Better data structures.\n\nNext, let's handle operations that take time with **Async JS**! ⏳"
         }
     ]
 }

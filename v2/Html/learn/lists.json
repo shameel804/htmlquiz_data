@@ -1,47 +1,91 @@
 {
-    "id": "lists",
+    "id": "learn_html_lists",
     "topicId": "lists",
-    "topicTitle": "Lists",
-    "description": "Organize content with ordered, unordered, and description lists.",
-    "baseKP": 50,
+    "topicTitle": "HTML Lists",
+    "description": "Organize your content with unordered, ordered, and description lists.",
+    "baseKP": 100,
     "slides": [
         {
-            "id": "lists_1",
+            "id": "html_lists_1",
+            "type": "content",
+            "title": "Types of Lists",
+            "content": "# HTML Lists 📋\n\nHTML lists allow you to group a set of related items.\n\nThere are three main types:\n1. **Unordered Lists** (bullet points) - `<ul>`\n2. **Ordered Lists** (numbers/letters) - `<ol>`\n3. **Description Lists** (terms and definitions) - `<dl>`\n\nLet's assume you're making a grocery list... unordered is best!"
+        },
+        {
+            "id": "html_lists_2",
             "type": "content",
             "title": "Unordered Lists",
-            "content": "# Unordered Lists 🟣\n\nUse `<ul>` for items where order doesn't matter. They usually appear with bullet points.\n\n```html\n<ul>\n  <li>Apples</li>\n  <li>Bananas</li>\n  <li>Milk</li>\n</ul>\n```\n\n- `<ul>`: Unordered List container\n- `<li>`: List Item\n\n> 💡 **Tip:** You can nest lists inside other lists!"
+            "content": "# Unordered Lists 🥣\n\nUse `<ul>` for items where the order doesn't matter. It creates bullet points.\n\n- The list starts with `<ul>`.\n- Each item starts with `<li>` (List Item).\n\n```html\n<ul>\n  <li>Coffee</li>\n  <li>Tea</li>\n  <li>Milk</li>\n</ul>\n```\n\nResult:\n* Coffee\n* Tea\n* Milk"
         },
         {
-            "id": "lists_2",
+            "id": "html_lists_3",
+            "type": "quiz",
+            "title": "Unordered Quiz",
+            "content": "Check your syntax.",
+            "quizQuestion": "Which tag defines an unordered list?",
+            "quizOptions": [
+                "<ol>",
+                "<ul>",
+                "<li>",
+                "<list>"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_lists_4",
             "type": "content",
             "title": "Ordered Lists",
-            "content": "# Ordered Lists 🔢\n\nUse `<ol>` for items that need to follow a sequence. They appear with numbers by default.\n\n```html\n<ol>\n  <li>Preheat oven</li>\n  <li>Mix ingredients</li>\n  <li>Bake for 20 mins</li>\n</ol>\n```\n\n## Type Attribute\n\nYou can change the numbering style:\n\n```html\n<ol type=\"A\"> <!-- A, B, C... -->\n<ol type=\"i\"> <!-- i, ii, iii... -->\n<ol start=\"5\"> <!-- Starts from 5 -->\n```"
+            "content": "# Ordered Lists 🔢\n\nUse `<ol>` for items where order matters. It creates numbered items.\n\n- The list starts with `<ol>`.\n- Each item starts with `<li>`.\n\n```html\n<ol>\n  <li>Wake up</li>\n  <li>Brush teeth</li>\n  <li>Eat breakfast</li>\n</ol>\n```\n\nResult:\n1. Wake up\n2. Brush teeth\n3. Eat breakfast"
         },
         {
-            "id": "lists_3",
+            "id": "html_lists_5",
+            "type": "content",
+            "title": "List Item Markers",
+            "content": "# Customizing Markers 🎨\n\nYou can change the marker type using the `type` attribute or CSS.\n\n## Ordered List Types\n- `type=\"1\"`: Numbers (default)\n- `type=\"A\"`: Uppercase letters\n- `type=\"a\"`: Lowercase letters\n- `type=\"I\"`: Roman numerals\n\n```html\n<ol type=\"A\">\n  <li>First</li>\n  <li>Second</li>\n</ol>\n```\n\n## Unordered List CSS\n`list-style-type: square;` (disc, circle, square, none)\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<body>\n\n<h2>Ordered List with Letters</h2>\n\n<ol type=\"A\">\n  <li>Coffee</li>\n  <li>Tea</li>\n  <li>Milk</li>\n</ol>\n\n<h2>Unordered List with Squares</h2>\n\n<ul style=\"list-style-type:square;\">\n  <li>Coffee</li>\n  <li>Tea</li>\n  <li>Milk</li>\n</ul>\n\n</body>\n</html>\nFULL_CODE_END -->"
+        },
+        {
+            "id": "html_lists_6",
             "type": "content",
             "title": "Description Lists",
-            "content": "# Description Lists 📖\n\nA list of terms, with a description of each term.\n\n- `<dl>`: Description List\n- `<dt>`: Term (Name)\n- `<dd>`: Description (Details)\n\n```html\n<dl>\n  <dt>Coffee</dt>\n  <dd>Black hot drink</dd>\n  <dt>Milk</dt>\n  <dd>White cold drink</dd>\n</dl>\n```"
+            "content": "# Description Lists 📖\n\nA description list (`<dl>`) groups terms with their descriptions.\n\n- `<dt>`: The **term** (name).\n- `<dd>`: The **description** (details).\n\n```html\n<dl>\n  <dt>HTML</dt>\n  <dd>HyperText Markup Language</dd>\n  <dt>CSS</dt>\n  <dd>Cascading Style Sheets</dd>\n</dl>\n```\n\nResult:\nHTML\n  HyperText Markup Language\nCSS\n  Cascading Style Sheets"
         },
         {
-            "id": "lists_quiz_1",
+            "id": "html_lists_7",
+            "type": "content",
+            "title": "Nested Lists",
+            "content": "# Nested Lists 📦\n\nLists can be nested inside lists.\n\n```html\n<ul>\n  <li>Coffee</li>\n  <li>Tea\n    <ul>\n      <li>Black tea</li>\n      <li>Green tea</li>\n    </ul>\n  </li>\n  <li>Milk</li>\n</ul>\n```\n\n> 💡 **Tip:** Be careful with closing tags! The nested `<ul>` should be *inside* the `<li>` tag of the parent item."
+        },
+        {
+            "id": "html_lists_8",
             "type": "quiz",
-            "title": "List Quiz",
-            "content": "Which tag creates a numbered list?",
-            "quizQuestion": "Which tag creates a numbered list?",
+            "title": "Nesting Quiz",
+            "content": "Verify nesting logic.",
+            "quizQuestion": "Where do you put the nested <ul>?",
             "quizOptions": [
-                "<ul>",
-                "<dl>",
-                "<list>",
-                "<ol>"
+                "Inside the parent <ul>",
+                "Inside the parent <li>",
+                "Outside the parent <ul>",
+                "Anywhere"
             ],
-            "correctOptionIndex": 3
+            "correctOptionIndex": 1
         },
         {
-            "id": "lists_4",
+            "id": "html_lists_9",
+            "type": "content",
+            "title": "Styling Lists",
+            "content": "# Styling Lists 💅\n\nYou can use CSS to make lists look like menus or navigation bars.\n\n- `list-style-type: none;`: Removes bullets/numbers.\n- `display: inline;`: Makes items horizontal.\n- `padding` and `margin`: Adjust spacing.\n\n```css\nul {\n  list-style-type: none;\n  padding: 0;\n  margin: 0;\n}\nli {\n  display: inline;\n  margin-right: 20px;\n}\n```\n\n<!-- FULL_CODE_START\n<!DOCTYPE html>\n<html>\n<style>\nul {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n  overflow: hidden;\n  background-color: #333333;\n}\n\nli {\n  float: left;\n}\n\nli a {\n  display: block;\n  color: white;\n  text-align: center;\n  padding: 16px;\n  text-decoration: none;\n}\n\nli a:hover {\n  background-color: #111111;\n}\n</style>\n<body>\n\n<ul>\n  <li><a href=\"#home\">Home</a></li>\n  <li><a href=\"#news\">News</a></li>\n  <li><a href=\"#contact\">Contact</a></li>\n  <li><a href=\"#about\">About</a></li>\n</ul>\n\n</body>\n</html>\nFULL_CODE_END -->"
+        },
+        {
+            "id": "html_lists_10",
+            "type": "content",
+            "title": "List Attributes",
+            "content": "# List Attributes ⚙️\n\nOrdered lists have useful attributes:\n\n- `start`: Specifies the start value of an ordered list.\n- `reversed`: Reverses the numbering order.\n\n```html\n<ol start=\"50\">\n  <li>Item 50</li>\n  <li>Item 51</li>\n</ol>\n\n<ol reversed>\n  <li>Item 3</li>\n  <li>Item 2</li>\n  <li>Item 1</li>\n</ol>\n```"
+        },
+        {
+            "id": "html_lists_11",
             "type": "content",
             "title": "Summary",
-            "content": "# Lists Recap 📝\n\n- ✅ **`<ul>`** for bullet points (Unordered)\n- ✅ **`<ol>`** for numbers (Ordered)\n- ✅ **`<dl>`** for glossary-style terms (Description)\n- ✅ Items are always wrapped in `<li>` (except for `dl`)\n\n> 🚀 **Next:** Connect the web with **Links**!"
+            "content": "# Summary 📝\n\nLists keep your content organized.\n\n## Key Types\n\n- ✅ **<ul> Unordered Lists:** Bullet points for non-sequential items.\n- ✅ **<ol> Ordered Lists:** Numbers/letters for sequential steps.\n- ✅ **<dl> Description Lists:** Terms and definitions.\n- ✅ **Nested Lists:** Complex hierarchies.\n- ✅ **Styling:** CSS can transform lists into navigation menus!\n\nNext, let's connect pages with **Links**! 🔗"
         }
     ]
 }
