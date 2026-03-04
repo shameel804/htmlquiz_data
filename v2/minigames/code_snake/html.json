@@ -1,0 +1,1465 @@
+[
+    {
+        "tokens": [
+            "<html>",
+            "</html>"
+        ]
+    },
+    {
+        "tokens": [
+            "<head>",
+            "</head>"
+        ]
+    },
+    {
+        "tokens": [
+            "<body>",
+            "</body>"
+        ]
+    },
+    {
+        "tokens": [
+            "<title>",
+            "My Page",
+            "</title>"
+        ]
+    },
+    {
+        "tokens": [
+            "<h1>",
+            "Hello",
+            "</h1>"
+        ]
+    },
+    {
+        "tokens": [
+            "<p>",
+            "Welcome",
+            "</p>"
+        ]
+    },
+    {
+        "tokens": [
+            "<br",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<hr",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<div>",
+            "</div>"
+        ]
+    },
+    {
+        "tokens": [
+            "<span>",
+            "text",
+            "</span>"
+        ]
+    },
+    {
+        "tokens": [
+            "<a",
+            "href=",
+            "\"url\"",
+            ">",
+            "Link",
+            "</a>"
+        ]
+    },
+    {
+        "tokens": [
+            "<img",
+            "src=",
+            "\"pic.png\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<ul>",
+            "<li>",
+            "Item",
+            "</li>",
+            "</ul>"
+        ]
+    },
+    {
+        "tokens": [
+            "<ol>",
+            "<li>",
+            "First",
+            "</li>",
+            "</ol>"
+        ]
+    },
+    {
+        "tokens": [
+            "<h2>",
+            "Subtitle",
+            "</h2>"
+        ]
+    },
+    {
+        "tokens": [
+            "<h3>",
+            "Section",
+            "</h3>"
+        ]
+    },
+    {
+        "tokens": [
+            "<strong>",
+            "Bold",
+            "</strong>"
+        ]
+    },
+    {
+        "tokens": [
+            "<em>",
+            "Italic",
+            "</em>"
+        ]
+    },
+    {
+        "tokens": [
+            "<b>",
+            "Bold Text",
+            "</b>"
+        ]
+    },
+    {
+        "tokens": [
+            "<i>",
+            "Emphasis",
+            "</i>"
+        ]
+    },
+    {
+        "tokens": [
+            "<u>",
+            "Underline",
+            "</u>"
+        ]
+    },
+    {
+        "tokens": [
+            "<small>",
+            "Fine Print",
+            "</small>"
+        ]
+    },
+    {
+        "tokens": [
+            "<mark>",
+            "Highlight",
+            "</mark>"
+        ]
+    },
+    {
+        "tokens": [
+            "<del>",
+            "Removed",
+            "</del>"
+        ]
+    },
+    {
+        "tokens": [
+            "<ins>",
+            "Added",
+            "</ins>"
+        ]
+    },
+    {
+        "tokens": [
+            "<sub>",
+            "H",
+            "<sub>",
+            "2",
+            "</sub>",
+            "O"
+        ]
+    },
+    {
+        "tokens": [
+            "<sup>",
+            "x",
+            "<sup>",
+            "2",
+            "</sup>"
+        ]
+    },
+    {
+        "tokens": [
+            "<blockquote>",
+            "Quote",
+            "</blockquote>"
+        ]
+    },
+    {
+        "tokens": [
+            "<pre>",
+            "Code here",
+            "</pre>"
+        ]
+    },
+    {
+        "tokens": [
+            "<code>",
+            "let x=1;",
+            "</code>"
+        ]
+    },
+    {
+        "tokens": [
+            "<!DOCTYPE",
+            "html>"
+        ]
+    },
+    {
+        "tokens": [
+            "<meta",
+            "charset=",
+            "\"UTF-8\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<meta",
+            "name=",
+            "\"viewport\"",
+            "content=",
+            "\"width\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<link",
+            "rel=",
+            "\"stylesheet\"",
+            "href=",
+            "\"style.css\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<script",
+            "src=",
+            "\"app.js\"",
+            ">",
+            "</script>"
+        ]
+    },
+    {
+        "tokens": [
+            "<style>",
+            "body{}",
+            "</style>"
+        ]
+    },
+    {
+        "tokens": [
+            "<header>",
+            "</header>"
+        ]
+    },
+    {
+        "tokens": [
+            "<footer>",
+            "</footer>"
+        ]
+    },
+    {
+        "tokens": [
+            "<nav>",
+            "</nav>"
+        ]
+    },
+    {
+        "tokens": [
+            "<main>",
+            "</main>"
+        ]
+    },
+    {
+        "tokens": [
+            "<section>",
+            "</section>"
+        ]
+    },
+    {
+        "tokens": [
+            "<article>",
+            "</article>"
+        ]
+    },
+    {
+        "tokens": [
+            "<aside>",
+            "</aside>"
+        ]
+    },
+    {
+        "tokens": [
+            "<figure>",
+            "<img/>",
+            "</figure>"
+        ]
+    },
+    {
+        "tokens": [
+            "<figcaption>",
+            "Caption",
+            "</figcaption>"
+        ]
+    },
+    {
+        "tokens": [
+            "<details>",
+            "<summary>",
+            "More",
+            "</summary>",
+            "</details>"
+        ]
+    },
+    {
+        "tokens": [
+            "<table>",
+            "<tr>",
+            "<td>",
+            "Cell",
+            "</td>",
+            "</tr>",
+            "</table>"
+        ]
+    },
+    {
+        "tokens": [
+            "<thead>",
+            "<tr>",
+            "<th>",
+            "Name",
+            "</th>",
+            "</tr>",
+            "</thead>"
+        ]
+    },
+    {
+        "tokens": [
+            "<tbody>",
+            "</tbody>"
+        ]
+    },
+    {
+        "tokens": [
+            "<tfoot>",
+            "</tfoot>"
+        ]
+    },
+    {
+        "tokens": [
+            "<caption>",
+            "Table",
+            "</caption>"
+        ]
+    },
+    {
+        "tokens": [
+            "<colgroup>",
+            "<col/>",
+            "</colgroup>"
+        ]
+    },
+    {
+        "tokens": [
+            "<form",
+            "action=",
+            "\"/submit\"",
+            ">",
+            "</form>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "type=",
+            "\"text\"",
+            "name=",
+            "\"user\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "type=",
+            "\"password\"",
+            "name=",
+            "\"pass\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "type=",
+            "\"email\"",
+            "name=",
+            "\"mail\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "type=",
+            "\"number\"",
+            "name=",
+            "\"age\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "type=",
+            "\"checkbox\"",
+            "checked",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "type=",
+            "\"radio\"",
+            "name=",
+            "\"opt\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "type=",
+            "\"submit\"",
+            "value=",
+            "\"Send\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "type=",
+            "\"reset\"",
+            "value=",
+            "\"Clear\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "type=",
+            "\"file\"",
+            "accept=",
+            "\".png\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "type=",
+            "\"hidden\"",
+            "value=",
+            "\"123\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "type=",
+            "\"range\"",
+            "min=",
+            "\"0\"",
+            "max=",
+            "\"100\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "type=",
+            "\"color\"",
+            "value=",
+            "\"#ff0000\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "type=",
+            "\"date\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "type=",
+            "\"time\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<textarea",
+            "rows=",
+            "\"4\"",
+            "cols=",
+            "\"30\"",
+            ">",
+            "</textarea>"
+        ]
+    },
+    {
+        "tokens": [
+            "<select>",
+            "<option>",
+            "One",
+            "</option>",
+            "</select>"
+        ]
+    },
+    {
+        "tokens": [
+            "<option",
+            "value=",
+            "\"a\"",
+            ">",
+            "Alpha",
+            "</option>"
+        ]
+    },
+    {
+        "tokens": [
+            "<optgroup",
+            "label=",
+            "\"Group\"",
+            ">",
+            "</optgroup>"
+        ]
+    },
+    {
+        "tokens": [
+            "<button",
+            "type=",
+            "\"button\"",
+            ">",
+            "Click",
+            "</button>"
+        ]
+    },
+    {
+        "tokens": [
+            "<label",
+            "for=",
+            "\"name\"",
+            ">",
+            "Name:",
+            "</label>"
+        ]
+    },
+    {
+        "tokens": [
+            "<fieldset>",
+            "<legend>",
+            "Info",
+            "</legend>",
+            "</fieldset>"
+        ]
+    },
+    {
+        "tokens": [
+            "<datalist",
+            "id=",
+            "\"list\"",
+            ">",
+            "</datalist>"
+        ]
+    },
+    {
+        "tokens": [
+            "<output",
+            "for=",
+            "\"a b\"",
+            ">",
+            "Result",
+            "</output>"
+        ]
+    },
+    {
+        "tokens": [
+            "<progress",
+            "value=",
+            "\"70\"",
+            "max=",
+            "\"100\"",
+            ">",
+            "</progress>"
+        ]
+    },
+    {
+        "tokens": [
+            "<meter",
+            "value=",
+            "\"0.6\"",
+            ">",
+            "60%",
+            "</meter>"
+        ]
+    },
+    {
+        "tokens": [
+            "<video",
+            "src=",
+            "\"vid.mp4\"",
+            "controls",
+            ">",
+            "</video>"
+        ]
+    },
+    {
+        "tokens": [
+            "<audio",
+            "src=",
+            "\"song.mp3\"",
+            "controls",
+            ">",
+            "</audio>"
+        ]
+    },
+    {
+        "tokens": [
+            "<source",
+            "src=",
+            "\"vid.webm\"",
+            "type=",
+            "\"video/webm\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<track",
+            "src=",
+            "\"sub.vtt\"",
+            "kind=",
+            "\"subtitles\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<canvas",
+            "id=",
+            "\"myCanvas\"",
+            "width=",
+            "\"200\"",
+            ">",
+            "</canvas>"
+        ]
+    },
+    {
+        "tokens": [
+            "<svg",
+            "width=",
+            "\"100\"",
+            "height=",
+            "\"100\"",
+            ">",
+            "</svg>"
+        ]
+    },
+    {
+        "tokens": [
+            "<iframe",
+            "src=",
+            "\"page.html\"",
+            "width=",
+            "\"300\"",
+            ">",
+            "</iframe>"
+        ]
+    },
+    {
+        "tokens": [
+            "<embed",
+            "src=",
+            "\"file.pdf\"",
+            "type=",
+            "\"application\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<object",
+            "data=",
+            "\"movie.swf\"",
+            ">",
+            "</object>"
+        ]
+    },
+    {
+        "tokens": [
+            "<map",
+            "name=",
+            "\"imgmap\"",
+            ">",
+            "</map>"
+        ]
+    },
+    {
+        "tokens": [
+            "<area",
+            "shape=",
+            "\"rect\"",
+            "coords=",
+            "\"0,0,50\"",
+            "href=",
+            "\"#\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<picture>",
+            "<source>",
+            "<img/>",
+            "</picture>"
+        ]
+    },
+    {
+        "tokens": [
+            "<abbr",
+            "title=",
+            "\"HyperText\"",
+            ">",
+            "HTML",
+            "</abbr>"
+        ]
+    },
+    {
+        "tokens": [
+            "<address>",
+            "123 Street",
+            "</address>"
+        ]
+    },
+    {
+        "tokens": [
+            "<cite>",
+            "Book Title",
+            "</cite>"
+        ]
+    },
+    {
+        "tokens": [
+            "<bdo",
+            "dir=",
+            "\"rtl\"",
+            ">",
+            "Reversed",
+            "</bdo>"
+        ]
+    },
+    {
+        "tokens": [
+            "<time",
+            "datetime=",
+            "\"2024-01\"",
+            ">",
+            "Jan",
+            "</time>"
+        ]
+    },
+    {
+        "tokens": [
+            "<wbr/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<dialog",
+            "open",
+            ">",
+            "Hello!",
+            "</dialog>"
+        ]
+    },
+    {
+        "tokens": [
+            "<template>",
+            "<p>",
+            "Hidden",
+            "</p>",
+            "</template>"
+        ]
+    },
+    {
+        "tokens": [
+            "<slot",
+            "name=",
+            "\"header\"",
+            ">",
+            "</slot>"
+        ]
+    },
+    {
+        "tokens": [
+            "<noscript>",
+            "Enable JS",
+            "</noscript>"
+        ]
+    },
+    {
+        "tokens": [
+            "<div",
+            "id=",
+            "\"app\"",
+            ">",
+            "</div>"
+        ]
+    },
+    {
+        "tokens": [
+            "<div",
+            "class=",
+            "\"container\"",
+            ">",
+            "</div>"
+        ]
+    },
+    {
+        "tokens": [
+            "<p",
+            "class=",
+            "\"text\"",
+            ">",
+            "Hello",
+            "</p>"
+        ]
+    },
+    {
+        "tokens": [
+            "<span",
+            "style=",
+            "\"color:red\"",
+            ">",
+            "Red",
+            "</span>"
+        ]
+    },
+    {
+        "tokens": [
+            "<a",
+            "href=",
+            "\"#top\"",
+            ">",
+            "Go to Top",
+            "</a>"
+        ]
+    },
+    {
+        "tokens": [
+            "<a",
+            "href=",
+            "\"mailto:\"",
+            ">",
+            "Email Us",
+            "</a>"
+        ]
+    },
+    {
+        "tokens": [
+            "<a",
+            "target=",
+            "\"_blank\"",
+            "href=",
+            "\"url\"",
+            ">",
+            "New Tab",
+            "</a>"
+        ]
+    },
+    {
+        "tokens": [
+            "<a",
+            "download",
+            "href=",
+            "\"file.zip\"",
+            ">",
+            "Download",
+            "</a>"
+        ]
+    },
+    {
+        "tokens": [
+            "<img",
+            "src=",
+            "\"logo.svg\"",
+            "alt=",
+            "\"Logo\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<img",
+            "loading=",
+            "\"lazy\"",
+            "src=",
+            "\"img.jpg\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<img",
+            "width=",
+            "\"200\"",
+            "height=",
+            "\"100\"",
+            "src=",
+            "\"x.png\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<div",
+            "data-id=",
+            "\"42\"",
+            ">",
+            "Custom",
+            "</div>"
+        ]
+    },
+    {
+        "tokens": [
+            "<p",
+            "title=",
+            "\"tooltip\"",
+            ">",
+            "Hover me",
+            "</p>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "placeholder=",
+            "\"Type...\"",
+            "type=",
+            "\"text\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "required",
+            "type=",
+            "\"text\"",
+            "name=",
+            "\"field\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "disabled",
+            "type=",
+            "\"text\"",
+            "value=",
+            "\"locked\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "readonly",
+            "type=",
+            "\"text\"",
+            "value=",
+            "\"fixed\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "autofocus",
+            "type=",
+            "\"text\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "pattern=",
+            "\"[A-Za-z]\"",
+            "type=",
+            "\"text\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<input",
+            "minlength=",
+            "\"3\"",
+            "maxlength=",
+            "\"10\"",
+            "type=",
+            "\"text\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<form",
+            "method=",
+            "\"POST\"",
+            "action=",
+            "\"/api\"",
+            ">",
+            "</form>"
+        ]
+    },
+    {
+        "tokens": [
+            "<form",
+            "enctype=",
+            "\"multipart\"",
+            "method=",
+            "\"POST\"",
+            ">",
+            "</form>"
+        ]
+    },
+    {
+        "tokens": [
+            "<select",
+            "multiple",
+            ">",
+            "<option>",
+            "A",
+            "</option>",
+            "</select>"
+        ]
+    },
+    {
+        "tokens": [
+            "<ol",
+            "type=",
+            "\"A\"",
+            ">",
+            "<li>",
+            "Item",
+            "</li>",
+            "</ol>"
+        ]
+    },
+    {
+        "tokens": [
+            "<ol",
+            "start=",
+            "\"5\"",
+            ">",
+            "<li>",
+            "Fifth",
+            "</li>",
+            "</ol>"
+        ]
+    },
+    {
+        "tokens": [
+            "<ul",
+            "class=",
+            "\"menu\"",
+            ">",
+            "<li>",
+            "Home",
+            "</li>",
+            "</ul>"
+        ]
+    },
+    {
+        "tokens": [
+            "<li",
+            "value=",
+            "\"3\"",
+            ">",
+            "Third",
+            "</li>"
+        ]
+    },
+    {
+        "tokens": [
+            "<dl>",
+            "<dt>",
+            "Term",
+            "</dt>",
+            "<dd>",
+            "Def",
+            "</dd>",
+            "</dl>"
+        ]
+    },
+    {
+        "tokens": [
+            "<table",
+            "border=",
+            "\"1\"",
+            ">",
+            "<tr>",
+            "<td>",
+            "A",
+            "</td>",
+            "</tr>",
+            "</table>"
+        ]
+    },
+    {
+        "tokens": [
+            "<td",
+            "colspan=",
+            "\"2\"",
+            ">",
+            "Wide",
+            "</td>"
+        ]
+    },
+    {
+        "tokens": [
+            "<td",
+            "rowspan=",
+            "\"3\"",
+            ">",
+            "Tall",
+            "</td>"
+        ]
+    },
+    {
+        "tokens": [
+            "<th",
+            "scope=",
+            "\"col\"",
+            ">",
+            "Header",
+            "</th>"
+        ]
+    },
+    {
+        "tokens": [
+            "<div",
+            "hidden",
+            ">",
+            "Secret",
+            "</div>"
+        ]
+    },
+    {
+        "tokens": [
+            "<p",
+            "lang=",
+            "\"en\"",
+            ">",
+            "English",
+            "</p>"
+        ]
+    },
+    {
+        "tokens": [
+            "<div",
+            "tabindex=",
+            "\"0\"",
+            ">",
+            "Focusable",
+            "</div>"
+        ]
+    },
+    {
+        "tokens": [
+            "<div",
+            "role=",
+            "\"alert\"",
+            ">",
+            "Warning!",
+            "</div>"
+        ]
+    },
+    {
+        "tokens": [
+            "<div",
+            "aria-label=",
+            "\"Close\"",
+            ">",
+            "X",
+            "</div>"
+        ]
+    },
+    {
+        "tokens": [
+            "<img",
+            "role=",
+            "\"img\"",
+            "aria-label=",
+            "\"Photo\"",
+            "src=",
+            "\"x\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<nav",
+            "aria-label=",
+            "\"Main\"",
+            ">",
+            "</nav>"
+        ]
+    },
+    {
+        "tokens": [
+            "<div",
+            "contenteditable",
+            ">",
+            "Edit me",
+            "</div>"
+        ]
+    },
+    {
+        "tokens": [
+            "<div",
+            "draggable=",
+            "\"true\"",
+            ">",
+            "Drag me",
+            "</div>"
+        ]
+    },
+    {
+        "tokens": [
+            "<p",
+            "spellcheck=",
+            "\"true\"",
+            ">",
+            "Check",
+            "</p>"
+        ]
+    },
+    {
+        "tokens": [
+            "<div",
+            "translate=",
+            "\"no\"",
+            ">",
+            "Brand™",
+            "</div>"
+        ]
+    },
+    {
+        "tokens": [
+            "<base",
+            "href=",
+            "\"/root/\"",
+            "target=",
+            "\"_blank\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<link",
+            "rel=",
+            "\"icon\"",
+            "href=",
+            "\"icon.png\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<meta",
+            "name=",
+            "\"description\"",
+            "content=",
+            "\"My site\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<meta",
+            "http-equiv=",
+            "\"refresh\"",
+            "content=",
+            "\"30\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<meta",
+            "property=",
+            "\"og:title\"",
+            "content=",
+            "\"Title\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<script",
+            "defer",
+            "src=",
+            "\"app.js\"",
+            ">",
+            "</script>"
+        ]
+    },
+    {
+        "tokens": [
+            "<script",
+            "async",
+            "src=",
+            "\"stats.js\"",
+            ">",
+            "</script>"
+        ]
+    },
+    {
+        "tokens": [
+            "<script",
+            "type=",
+            "\"module\"",
+            "src=",
+            "\"mod.js\"",
+            ">",
+            "</script>"
+        ]
+    },
+    {
+        "tokens": [
+            "<link",
+            "rel=",
+            "\"preload\"",
+            "as=",
+            "\"image\"",
+            "href=",
+            "\"bg.jpg\"",
+            "/>"
+        ]
+    },
+    {
+        "tokens": [
+            "<ruby>",
+            "漢",
+            "<rp>(</rp>",
+            "<rt>",
+            "kan",
+            "</rt>",
+            "<rp>)</rp>",
+            "</ruby>"
+        ]
+    },
+    {
+        "tokens": [
+            "<data",
+            "value=",
+            "\"42\"",
+            ">",
+            "Forty-Two",
+            "</data>"
+        ]
+    },
+    {
+        "tokens": [
+            "<samp>",
+            "Output",
+            "</samp>"
+        ]
+    },
+    {
+        "tokens": [
+            "<kbd>",
+            "Ctrl+C",
+            "</kbd>"
+        ]
+    },
+    {
+        "tokens": [
+            "<var>",
+            "x",
+            "</var>"
+        ]
+    },
+    {
+        "tokens": [
+            "<dfn>",
+            "HTML",
+            "</dfn>"
+        ]
+    },
+    {
+        "tokens": [
+            "<s>",
+            "Old Price",
+            "</s>"
+        ]
+    },
+    {
+        "tokens": [
+            "<q>",
+            "Quote me",
+            "</q>"
+        ]
+    },
+    {
+        "tokens": [
+            "<!--",
+            "comment",
+            "-->"
+        ]
+    },
+    {
+        "tokens": [
+            "<div",
+            "dir=",
+            "\"ltr\"",
+            ">",
+            "Left",
+            "</div>"
+        ]
+    }
+]
