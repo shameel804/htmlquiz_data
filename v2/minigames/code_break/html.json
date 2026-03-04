@@ -1,0 +1,1698 @@
+[
+  {
+    "word": "ABBR",
+    "hint": "Abbreviation tag"
+  },
+  {
+    "word": "ACRONYM",
+    "hint": "Legacy acronym tag"
+  },
+  {
+    "word": "ADDRESS",
+    "hint": "Contact info container"
+  },
+  {
+    "word": "APPLET",
+    "hint": "Legacy Java applet tag"
+  },
+  {
+    "word": "AREA",
+    "hint": "Clickable area in map"
+  },
+  {
+    "word": "ARTICLE",
+    "hint": "Independent content block"
+  },
+  {
+    "word": "ASIDE",
+    "hint": "Sidebar content container"
+  },
+  {
+    "word": "AUDIO",
+    "hint": "Sound content embed"
+  },
+  {
+    "word": "BASE",
+    "hint": "Base URL for links"
+  },
+  {
+    "word": "BASEFONT",
+    "hint": "Legacy default font"
+  },
+  {
+    "word": "BGSOUND",
+    "hint": "Legacy background audio"
+  },
+  {
+    "word": "BLINK",
+    "hint": "Legacy blinking text"
+  },
+  {
+    "word": "BLOCKQUOTE",
+    "hint": "Long quotation block"
+  },
+  {
+    "word": "BODY",
+    "hint": "Main content container"
+  },
+  {
+    "word": "BUTTON",
+    "hint": "Clickable input element"
+  },
+  {
+    "word": "CANVAS",
+    "hint": "Scriptable bitmap graphic"
+  },
+  {
+    "word": "CAPTION",
+    "hint": "Table title container"
+  },
+  {
+    "word": "CENTER",
+    "hint": "Legacy alignment tag"
+  },
+  {
+    "word": "CITE",
+    "hint": "Work title reference"
+  },
+  {
+    "word": "CODE",
+    "hint": "Source code container"
+  },
+  {
+    "word": "COLGROUP",
+    "hint": "Table column group"
+  },
+  {
+    "word": "COMMAND",
+    "hint": "Legacy command tag"
+  },
+  {
+    "word": "CONTENT",
+    "hint": "Legacy shadow DOM tag"
+  },
+  {
+    "word": "DATA",
+    "hint": "Machine-readable value"
+  },
+  {
+    "word": "DATALIST",
+    "hint": "Input autocomplete options"
+  },
+  {
+    "word": "DETAILS",
+    "hint": "Disclosure widget container"
+  },
+  {
+    "word": "DIALOG",
+    "hint": "Interactive modal popup"
+  },
+  {
+    "word": "ELEMENT",
+    "hint": "Custom element slot"
+  },
+  {
+    "word": "EMBED",
+    "hint": "External plugin container"
+  },
+  {
+    "word": "FIELDSET",
+    "hint": "Form control grouping"
+  },
+  {
+    "word": "FIGCAPTION",
+    "hint": "Image caption text"
+  },
+  {
+    "word": "FIGURE",
+    "hint": "Self-contained media"
+  },
+  {
+    "word": "FONT",
+    "hint": "Legacy text styling"
+  },
+  {
+    "word": "FOOTER",
+    "hint": "Bottom section container"
+  },
+  {
+    "word": "FORM",
+    "hint": "Input data container"
+  },
+  {
+    "word": "FRAME",
+    "hint": "Legacy split window"
+  },
+  {
+    "word": "FRAMESET",
+    "hint": "Legacy frame container"
+  },
+  {
+    "word": "HEAD",
+    "hint": "Document metadata container"
+  },
+  {
+    "word": "HEADER",
+    "hint": "Top section container"
+  },
+  {
+    "word": "HGROUP",
+    "hint": "Heading group container"
+  },
+  {
+    "word": "HTML",
+    "hint": "Root document element"
+  },
+  {
+    "word": "IFRAME",
+    "hint": "Inline frame embed"
+  },
+  {
+    "word": "IMAGE",
+    "hint": "Legacy image tag fallback"
+  },
+  {
+    "word": "INPUT",
+    "hint": "Data entry field"
+  },
+  {
+    "word": "ISINDEX",
+    "hint": "Legacy search prompt"
+  },
+  {
+    "word": "KEYGEN",
+    "hint": "Legacy key pair prep"
+  },
+  {
+    "word": "LABEL",
+    "hint": "Form control caption"
+  },
+  {
+    "word": "LEGEND",
+    "hint": "Fieldset title text"
+  },
+  {
+    "word": "LINK",
+    "hint": "External resource relation"
+  },
+  {
+    "word": "LISTING",
+    "hint": "Legacy code block"
+  },
+  {
+    "word": "MAIN",
+    "hint": "Primary document content"
+  },
+  {
+    "word": "MARK",
+    "hint": "Highlighted text tag"
+  },
+  {
+    "word": "MARQUEE",
+    "hint": "Legacy scrolling text"
+  },
+  {
+    "word": "MATH",
+    "hint": "Math formula container"
+  },
+  {
+    "word": "MENU",
+    "hint": "Semantic command list"
+  },
+  {
+    "word": "MENUITEM",
+    "hint": "Command in menu"
+  },
+  {
+    "word": "META",
+    "hint": "Document metadata property"
+  },
+  {
+    "word": "METER",
+    "hint": "Scalar measurement bar"
+  },
+  {
+    "word": "NOBR",
+    "hint": "Legacy non-breaking line"
+  },
+  {
+    "word": "NOEMBED",
+    "hint": "Legacy embed fallback"
+  },
+  {
+    "word": "NOFRAMES",
+    "hint": "Legacy frame fallback"
+  },
+  {
+    "word": "NOSCRIPT",
+    "hint": "Script disabled fallback"
+  },
+  {
+    "word": "OBJECT",
+    "hint": "External resource embed"
+  },
+  {
+    "word": "OPTGROUP",
+    "hint": "Dropdown option group"
+  },
+  {
+    "word": "OPTION",
+    "hint": "Dropdown list choice"
+  },
+  {
+    "word": "OUTPUT",
+    "hint": "Calculation result area"
+  },
+  {
+    "word": "PARAM",
+    "hint": "Object parameter config"
+  },
+  {
+    "word": "PICTURE",
+    "hint": "Responsive image wrapper"
+  },
+  {
+    "word": "PLAINTEXT",
+    "hint": "Legacy raw text tag"
+  },
+  {
+    "word": "PORTAL",
+    "hint": "Page embedding preview"
+  },
+  {
+    "word": "PROGRESS",
+    "hint": "Task completion bar"
+  },
+  {
+    "word": "RUBY",
+    "hint": "Asian typography annotation"
+  },
+  {
+    "word": "SAMP",
+    "hint": "Sample output container"
+  },
+  {
+    "word": "SCRIPT",
+    "hint": "Executable code container"
+  },
+  {
+    "word": "SEARCH",
+    "hint": "Search form container"
+  },
+  {
+    "word": "SECTION",
+    "hint": "Generic document part"
+  },
+  {
+    "word": "SELECT",
+    "hint": "Dropdown list wrapper"
+  },
+  {
+    "word": "SHADOW",
+    "hint": "Shadow DOM insertion"
+  },
+  {
+    "word": "SLOT",
+    "hint": "Component content placeholder"
+  },
+  {
+    "word": "SMALL",
+    "hint": "Side comment text formatting"
+  },
+  {
+    "word": "SOURCE",
+    "hint": "Media resource alternative"
+  },
+  {
+    "word": "SPACER",
+    "hint": "Legacy layout space"
+  },
+  {
+    "word": "SPAN",
+    "hint": "Inline text container"
+  },
+  {
+    "word": "STRIKE",
+    "hint": "Legacy strikethrough text"
+  },
+  {
+    "word": "STRONG",
+    "hint": "Important text formatting"
+  },
+  {
+    "word": "STYLE",
+    "hint": "Inline CSS container"
+  },
+  {
+    "word": "SUMMARY",
+    "hint": "Details widget heading"
+  },
+  {
+    "word": "TABLE",
+    "hint": "Tabular data container"
+  },
+  {
+    "word": "TBODY",
+    "hint": "Table body wrapper"
+  },
+  {
+    "word": "TEMPLATE",
+    "hint": "Inactive DOM fragment"
+  },
+  {
+    "word": "TEXTAREA",
+    "hint": "Multiline text input"
+  },
+  {
+    "word": "TFOOT",
+    "hint": "Table footer wrapper"
+  },
+  {
+    "word": "THEAD",
+    "hint": "Table header wrapper"
+  },
+  {
+    "word": "TIME",
+    "hint": "Date and time container"
+  },
+  {
+    "word": "TITLE",
+    "hint": "Document title text"
+  },
+  {
+    "word": "TRACK",
+    "hint": "Media text track"
+  },
+  {
+    "word": "VIDEO",
+    "hint": "Motion picture embed"
+  },
+  {
+    "word": "ACCEPT",
+    "hint": "File input type filter"
+  },
+  {
+    "word": "ACCESSKEY",
+    "hint": "Keyboard shortcut key"
+  },
+  {
+    "word": "ACTION",
+    "hint": "Form submission URL"
+  },
+  {
+    "word": "ALIGN",
+    "hint": "Legacy visual alignment"
+  },
+  {
+    "word": "ALLOW",
+    "hint": "Feature policy config"
+  },
+  {
+    "word": "ASYNC",
+    "hint": "Non-blocking script load"
+  },
+  {
+    "word": "AUTOFOCUS",
+    "hint": "Initial focus target"
+  },
+  {
+    "word": "AUTOPLAY",
+    "hint": "Auto-start media playback"
+  },
+  {
+    "word": "BACKGROUND",
+    "hint": "Legacy bg image URL"
+  },
+  {
+    "word": "BGCOLOR",
+    "hint": "Legacy background color"
+  },
+  {
+    "word": "BORDER",
+    "hint": "Table border thickness"
+  },
+  {
+    "word": "BUFFERED",
+    "hint": "Media buffered ranges"
+  },
+  {
+    "word": "CAPTURE",
+    "hint": "Media capture source"
+  },
+  {
+    "word": "CHARSET",
+    "hint": "Character encoding type"
+  },
+  {
+    "word": "CHECKED",
+    "hint": "Pre-selected checkbox"
+  },
+  {
+    "word": "CLASS",
+    "hint": "CSS hook identifier"
+  },
+  {
+    "word": "CLASSNAME",
+    "hint": "DOM class property"
+  },
+  {
+    "word": "COLOR",
+    "hint": "Legacy text color"
+  },
+  {
+    "word": "COLS",
+    "hint": "Textarea column count"
+  },
+  {
+    "word": "COLSPAN",
+    "hint": "Table cell span count"
+  },
+  {
+    "word": "CONTEXTMENU",
+    "hint": "Element custom menu"
+  },
+  {
+    "word": "CONTROLS",
+    "hint": "Media player UI"
+  },
+  {
+    "word": "COORDS",
+    "hint": "Image map coordinates"
+  },
+  {
+    "word": "CROSSORIGIN",
+    "hint": "CORS request definition"
+  },
+  {
+    "word": "DATETIME",
+    "hint": "Time element value"
+  },
+  {
+    "word": "DECODING",
+    "hint": "Image decode hint"
+  },
+  {
+    "word": "DEFAULT",
+    "hint": "Default track indicator"
+  },
+  {
+    "word": "DEFER",
+    "hint": "Delayed script execution"
+  },
+  {
+    "word": "DIRNAME",
+    "hint": "Text direction submission"
+  },
+  {
+    "word": "DISABLED",
+    "hint": "Inactive form control"
+  },
+  {
+    "word": "DOWNLOAD",
+    "hint": "Force file save action"
+  },
+  {
+    "word": "DRAGGABLE",
+    "hint": "Drag-and-drop toggle"
+  },
+  {
+    "word": "ENCTYPE",
+    "hint": "Form encoding type"
+  },
+  {
+    "word": "FORMACTION",
+    "hint": "Override form URL"
+  },
+  {
+    "word": "FORMENCTYPE",
+    "hint": "Override data encoding"
+  },
+  {
+    "word": "FORMMETHOD",
+    "hint": "Override HTTP method"
+  },
+  {
+    "word": "FORMTARGET",
+    "hint": "Override target frame"
+  },
+  {
+    "word": "HEADERS",
+    "hint": "Table header relation"
+  },
+  {
+    "word": "HEIGHT",
+    "hint": "Element vertical size"
+  },
+  {
+    "word": "HIDDEN",
+    "hint": "Invisible element flag"
+  },
+  {
+    "word": "HIGH",
+    "hint": "Meter high threshold"
+  },
+  {
+    "word": "HREF",
+    "hint": "Hypertext reference URL"
+  },
+  {
+    "word": "HREFLANG",
+    "hint": "Linked resource language"
+  },
+  {
+    "word": "HTTPEQUIV",
+    "hint": "Pragma directive meta"
+  },
+  {
+    "word": "ICON",
+    "hint": "Command icon URL"
+  },
+  {
+    "word": "IMPORTANCE",
+    "hint": "Resource fetch priority"
+  },
+  {
+    "word": "INTEGRITY",
+    "hint": "Subresource validate hash"
+  },
+  {
+    "word": "ISMAP",
+    "hint": "Server-side image map"
+  },
+  {
+    "word": "ITEMPROP",
+    "hint": "Microdata property name"
+  },
+  {
+    "word": "KEYTYPE",
+    "hint": "Keygen security algorithm"
+  },
+  {
+    "word": "KIND",
+    "hint": "Text track category"
+  },
+  {
+    "word": "LANG",
+    "hint": "Element language code"
+  },
+  {
+    "word": "LANGUAGE",
+    "hint": "Legacy script language"
+  },
+  {
+    "word": "LOADING",
+    "hint": "Lazy load instruction"
+  },
+  {
+    "word": "LIST",
+    "hint": "Datalist relation ID"
+  },
+  {
+    "word": "LOOP",
+    "hint": "Restart media automatically"
+  },
+  {
+    "word": "MAXLENGTH",
+    "hint": "Input char limit"
+  },
+  {
+    "word": "MEDIA",
+    "hint": "Media query condition"
+  },
+  {
+    "word": "METHOD",
+    "hint": "HTTP request type"
+  },
+  {
+    "word": "MINLENGTH",
+    "hint": "Input min char count"
+  },
+  {
+    "word": "MULTIPLE",
+    "hint": "Allow multiple values"
+  },
+  {
+    "word": "MUTED",
+    "hint": "Silence audio track"
+  },
+  {
+    "word": "NAME",
+    "hint": "Form control identifier"
+  },
+  {
+    "word": "NOVALIDATE",
+    "hint": "Skip form validation"
+  },
+  {
+    "word": "OPEN",
+    "hint": "Details expanded state"
+  },
+  {
+    "word": "OPTIMUM",
+    "hint": "Ideal meter value"
+  },
+  {
+    "word": "PATTERN",
+    "hint": "Regex validation rule"
+  },
+  {
+    "word": "PING",
+    "hint": "Tracking URL list"
+  },
+  {
+    "word": "PLACEHOLDER",
+    "hint": "Input empty hint"
+  },
+  {
+    "word": "POSTER",
+    "hint": "Video preview image"
+  },
+  {
+    "word": "PRELOAD",
+    "hint": "Media buffering hint"
+  },
+  {
+    "word": "RADIOGROUP",
+    "hint": "Menu item group"
+  },
+  {
+    "word": "READONLY",
+    "hint": "Uneditable input field"
+  },
+  {
+    "word": "REQUIRED",
+    "hint": "Mandatory form field"
+  },
+  {
+    "word": "REVERSED",
+    "hint": "Descending list order"
+  },
+  {
+    "word": "ROLE",
+    "hint": "ARIA semantic role"
+  },
+  {
+    "word": "ROWS",
+    "hint": "Textarea row count"
+  },
+  {
+    "word": "ROWSPAN",
+    "hint": "Table cell vertical span"
+  },
+  {
+    "word": "SANDBOX",
+    "hint": "Iframe security rules"
+  },
+  {
+    "word": "SCOPE",
+    "hint": "Table header context"
+  },
+  {
+    "word": "SCOPED",
+    "hint": "Locally scoped styles"
+  },
+  {
+    "word": "SELECTED",
+    "hint": "Pre-chosen option"
+  },
+  {
+    "word": "SHAPE",
+    "hint": "Image map area type"
+  },
+  {
+    "word": "SIZE",
+    "hint": "Input field width"
+  },
+  {
+    "word": "SIZES",
+    "hint": "Responsive image sizes"
+  },
+  {
+    "word": "SPELLCHECK",
+    "hint": "Typo highlighting toggle"
+  },
+  {
+    "word": "SRCDOC",
+    "hint": "Iframe inline content"
+  },
+  {
+    "word": "SRCLANG",
+    "hint": "Track language code"
+  },
+  {
+    "word": "SRCSET",
+    "hint": "Responsive image sources"
+  },
+  {
+    "word": "START",
+    "hint": "Ordered list offset"
+  },
+  {
+    "word": "STEP",
+    "hint": "Number input increment"
+  },
+  {
+    "word": "TABINDEX",
+    "hint": "Focus navigation order"
+  },
+  {
+    "word": "TARGET",
+    "hint": "Link opening context"
+  },
+  {
+    "word": "TRANSLATE",
+    "hint": "Translation permission"
+  },
+  {
+    "word": "TYPE",
+    "hint": "Element content type"
+  },
+  {
+    "word": "USEMAP",
+    "hint": "Client image map link"
+  },
+  {
+    "word": "VALUE",
+    "hint": "Input instance data"
+  },
+  {
+    "word": "WIDTH",
+    "hint": "Element horizontal size"
+  },
+  {
+    "word": "WRAP",
+    "hint": "Textarea line wrapping"
+  },
+  {
+    "word": "ONABORT",
+    "hint": "Loading interrupted event"
+  },
+  {
+    "word": "ONBLUR",
+    "hint": "Focus lost event"
+  },
+  {
+    "word": "ONCANPLAY",
+    "hint": "Media ready to play"
+  },
+  {
+    "word": "ONCHANGE",
+    "hint": "Value modified event"
+  },
+  {
+    "word": "ONCLICK",
+    "hint": "Element clicked event"
+  },
+  {
+    "word": "ONCOPY",
+    "hint": "Content copied event"
+  },
+  {
+    "word": "ONDROP",
+    "hint": "Item dropped event"
+  },
+  {
+    "word": "ONENDED",
+    "hint": "Media finished event"
+  },
+  {
+    "word": "ONERROR",
+    "hint": "Loading failed event"
+  },
+  {
+    "word": "ONFOCUS",
+    "hint": "Element focused event"
+  },
+  {
+    "word": "ONINPUT",
+    "hint": "User input event"
+  },
+  {
+    "word": "ONINVALID",
+    "hint": "Failed validation event"
+  },
+  {
+    "word": "ONKEYDOWN",
+    "hint": "Key pressed down"
+  },
+  {
+    "word": "ONKEYPRESS",
+    "hint": "Key typed event"
+  },
+  {
+    "word": "ONKEYUP",
+    "hint": "Key released event"
+  },
+  {
+    "word": "ONLOAD",
+    "hint": "Resource loaded event"
+  },
+  {
+    "word": "ONOFFLINE",
+    "hint": "Network disconnected"
+  },
+  {
+    "word": "ONONLINE",
+    "hint": "Network connected"
+  },
+  {
+    "word": "ONPASTE",
+    "hint": "Content pasted event"
+  },
+  {
+    "word": "ONPAUSE",
+    "hint": "Media paused event"
+  },
+  {
+    "word": "ONPLAY",
+    "hint": "Media started playing"
+  },
+  {
+    "word": "ONPLAYING",
+    "hint": "Media playback active"
+  },
+  {
+    "word": "ONRESET",
+    "hint": "Form cleared event"
+  },
+  {
+    "word": "ONRESIZE",
+    "hint": "Window scaled event"
+  },
+  {
+    "word": "ONSCROLL",
+    "hint": "View scrolled event"
+  },
+  {
+    "word": "ONSEARCH",
+    "hint": "Search input submitted"
+  },
+  {
+    "word": "ONSEEKED",
+    "hint": "Media seeking finished"
+  },
+  {
+    "word": "ONSEEKING",
+    "hint": "Media seek started"
+  },
+  {
+    "word": "ONSELECT",
+    "hint": "Text highlighted event"
+  },
+  {
+    "word": "ONSTALLED",
+    "hint": "Data fetch stalled"
+  },
+  {
+    "word": "ONSTORAGE",
+    "hint": "Storage updated event"
+  },
+  {
+    "word": "ONSUBMIT",
+    "hint": "Form sent event"
+  },
+  {
+    "word": "ONSUSPEND",
+    "hint": "Data fetch suspended"
+  },
+  {
+    "word": "ONTOGGLE",
+    "hint": "Details state changed"
+  },
+  {
+    "word": "ONUNLOAD",
+    "hint": "Page exiting event"
+  },
+  {
+    "word": "ONWAITING",
+    "hint": "Media buffering event"
+  },
+  {
+    "word": "ONWHEEL",
+    "hint": "Mouse wheel scrolled"
+  },
+  {
+    "word": "ONZOOM",
+    "hint": "Legacy zoom event"
+  },
+  {
+    "word": "ONSTART",
+    "hint": "Marquee started event"
+  },
+  {
+    "word": "ONFINISH",
+    "hint": "Marquee ended event"
+  },
+  {
+    "word": "ONBOUNCE",
+    "hint": "Marquee bounce event"
+  },
+  {
+    "word": "DOCTYPE",
+    "hint": "Document type declaration"
+  },
+  {
+    "word": "ENTITY",
+    "hint": "Named character reference"
+  },
+  {
+    "word": "ATTRIBUTE",
+    "hint": "Element property modifier"
+  },
+  {
+    "word": "COMMENT",
+    "hint": "Hidden dev note"
+  },
+  {
+    "word": "MARKUP",
+    "hint": "Document logic tags"
+  },
+  {
+    "word": "HYPERTEXT",
+    "hint": "Linked document system"
+  },
+  {
+    "word": "WEBSOCKET",
+    "hint": "Bi-directional protocol"
+  },
+  {
+    "word": "MICRODATA",
+    "hint": "Inline semantic metadata"
+  },
+  {
+    "word": "WEBWORKER",
+    "hint": "Background script thread"
+  },
+  {
+    "word": "APPCACHE",
+    "hint": "Legacy offline storage"
+  },
+  {
+    "word": "CUSTOMDATA",
+    "hint": "User defined dataset"
+  },
+  {
+    "word": "SEMANTICS",
+    "hint": "Meaningful tag logic"
+  },
+  {
+    "word": "PARSER",
+    "hint": "Browser DOM builder"
+  },
+  {
+    "word": "VALIDATOR",
+    "hint": "Markup syntax checker"
+  },
+  {
+    "word": "CHARREF",
+    "hint": "Numeric char reference"
+  },
+  {
+    "word": "FALLBACK",
+    "hint": "Alternative content text"
+  },
+  {
+    "word": "FRAGMENTS",
+    "hint": "URL hash target part"
+  },
+  {
+    "word": "VIEWPORT",
+    "hint": "Visible screen area"
+  },
+  {
+    "word": "NOQUIRKS",
+    "hint": "Standards mode layout"
+  },
+  {
+    "word": "QUIRKS",
+    "hint": "Legacy compatibility mode"
+  },
+  {
+    "word": "POLYGLOT",
+    "hint": "HTML and XML valid"
+  },
+  {
+    "word": "FRAMES",
+    "hint": "Legacy split windows"
+  },
+  {
+    "word": "VOIDTAG",
+    "hint": "Self-closing element"
+  },
+  {
+    "word": "RAWTEXT",
+    "hint": "Unparsed content block"
+  },
+  {
+    "word": "FOREIGN",
+    "hint": "Math or SVG context"
+  },
+  {
+    "word": "SNIPPET",
+    "hint": "Small code block"
+  },
+  {
+    "word": "ARIABUSY",
+    "hint": "Element loading state"
+  },
+  {
+    "word": "ARIACHECKED",
+    "hint": "Checkbox true/false"
+  },
+  {
+    "word": "ARIACOMBO",
+    "hint": "Combo box flag"
+  },
+  {
+    "word": "ARIACONTROL",
+    "hint": "Controlled element ID"
+  },
+  {
+    "word": "ARIACURRENT",
+    "hint": "Active item indicator"
+  },
+  {
+    "word": "ARIADROP",
+    "hint": "Drop target effect"
+  },
+  {
+    "word": "ARIAHIDDEN",
+    "hint": "Invisible to readers"
+  },
+  {
+    "word": "ARIAINVALID",
+    "hint": "Data error state"
+  },
+  {
+    "word": "ARIALABEL",
+    "hint": "Accessible name text"
+  },
+  {
+    "word": "ARIALEVEL",
+    "hint": "Heading depth ARIA"
+  },
+  {
+    "word": "ARIALIVE",
+    "hint": "Dynamic update priority"
+  },
+  {
+    "word": "ARIAMODAL",
+    "hint": "Modal dialog flag"
+  },
+  {
+    "word": "ARIAMULTI",
+    "hint": "Multiple selection flag"
+  },
+  {
+    "word": "ARIAOWNS",
+    "hint": "Logical children IDs"
+  },
+  {
+    "word": "ARIAPOS",
+    "hint": "List position number"
+  },
+  {
+    "word": "ARIAPRESSED",
+    "hint": "Toggle button state"
+  },
+  {
+    "word": "ARIARELEVANT",
+    "hint": "Live region changes"
+  },
+  {
+    "word": "ARIASORT",
+    "hint": "Table sorting order"
+  },
+  {
+    "word": "ARIATEXT",
+    "hint": "Text equivalent tag"
+  },
+  {
+    "word": "BUTTONTYPE",
+    "hint": "Generic button form"
+  },
+  {
+    "word": "CHECKBOX",
+    "hint": "Multi-choice tick"
+  },
+  {
+    "word": "COLORPICKER",
+    "hint": "Hex code selector"
+  },
+  {
+    "word": "DATETYPE",
+    "hint": "Calendar day input"
+  },
+  {
+    "word": "DATELOCAL",
+    "hint": "Local time input"
+  },
+  {
+    "word": "EMAILTYPE",
+    "hint": "Email address field"
+  },
+  {
+    "word": "FILETYPE",
+    "hint": "File attachment input"
+  },
+  {
+    "word": "HIDDENTYPE",
+    "hint": "Invisible form data"
+  },
+  {
+    "word": "IMAGETYPE",
+    "hint": "Graphical submit button"
+  },
+  {
+    "word": "MONTH",
+    "hint": "Year and month input"
+  },
+  {
+    "word": "PASSWORD",
+    "hint": "Masked text field"
+  },
+  {
+    "word": "RADIO",
+    "hint": "Single-choice tick"
+  },
+  {
+    "word": "RANGE",
+    "hint": "Slider control input"
+  },
+  {
+    "word": "RESET",
+    "hint": "Clear form button"
+  },
+  {
+    "word": "SEARCHTYPE",
+    "hint": "Query input field"
+  },
+  {
+    "word": "SUBMIT",
+    "hint": "Form send button"
+  },
+  {
+    "word": "TELEPHONE",
+    "hint": "Phone number field"
+  },
+  {
+    "word": "TEXTTYPE",
+    "hint": "Single line input"
+  },
+  {
+    "word": "TIMEINPUT",
+    "hint": "Clock format field"
+  },
+  {
+    "word": "WEAK",
+    "hint": "Input state type"
+  },
+  {
+    "word": "WEEK",
+    "hint": "Year and week input"
+  },
+  {
+    "word": "ALTERNATE",
+    "hint": "Alternative doc format"
+  },
+  {
+    "word": "AUTHOR",
+    "hint": "Document creator link"
+  },
+  {
+    "word": "CANONICAL",
+    "hint": "Preferred URL version"
+  },
+  {
+    "word": "BOOKMARK",
+    "hint": "Permanent link indicator"
+  },
+  {
+    "word": "EXTERNAL",
+    "hint": "Outside site link"
+  },
+  {
+    "word": "HELP",
+    "hint": "Contextual help link"
+  },
+  {
+    "word": "LICENSE",
+    "hint": "Copyright terms link"
+  },
+  {
+    "word": "NEXT",
+    "hint": "Following document link"
+  },
+  {
+    "word": "NOFOLLOW",
+    "hint": "Untrusted link relation"
+  },
+  {
+    "word": "NOREFERRER",
+    "hint": "Omit origin header"
+  },
+  {
+    "word": "NOOPENER",
+    "hint": "Prevent window access"
+  },
+  {
+    "word": "PRECONNECT",
+    "hint": "Early connection hint"
+  },
+  {
+    "word": "PREFETCH",
+    "hint": "Resource cache instruct"
+  },
+  {
+    "word": "PRELOADRES",
+    "hint": "High priority load"
+  },
+  {
+    "word": "PRERENDER",
+    "hint": "Background page render"
+  },
+  {
+    "word": "PREVIOUS",
+    "hint": "Preceding document link"
+  },
+  {
+    "word": "SEARCHLINK",
+    "hint": "Site search interface"
+  },
+  {
+    "word": "STYLESHEET",
+    "hint": "CSS inclusion link"
+  },
+  {
+    "word": "ALLOWFULL",
+    "hint": "Allow fullscreen mode"
+  },
+  {
+    "word": "ALLOWPAY",
+    "hint": "Allow payment request"
+  },
+  {
+    "word": "DEFAULTPLAY",
+    "hint": "Default media playback"
+  },
+  {
+    "word": "MARGINWIDTH",
+    "hint": "Frame side spacing"
+  },
+  {
+    "word": "SCROLLING",
+    "hint": "Scrollbar policy"
+  },
+  {
+    "word": "VSPACE",
+    "hint": "Legacy vertical margin"
+  },
+  {
+    "word": "HSPACE",
+    "hint": "Legacy horizon margin"
+  },
+  {
+    "word": "LINKCOLOR",
+    "hint": "Legacy unvisited color"
+  },
+  {
+    "word": "ALINK",
+    "hint": "Legacy active link color"
+  },
+  {
+    "word": "VLINK",
+    "hint": "Legacy visited link color"
+  },
+  {
+    "word": "CLEAR",
+    "hint": "Legacy br float clear"
+  },
+  {
+    "word": "COMPACT",
+    "hint": "Legacy list spacing"
+  },
+  {
+    "word": "NOSHADE",
+    "hint": "Legacy HR flat style"
+  },
+  {
+    "word": "NOWRAP",
+    "hint": "Prevent line break"
+  },
+  {
+    "word": "CELLSPACING",
+    "hint": "Table external spacing"
+  },
+  {
+    "word": "RULES",
+    "hint": "Table internal borders"
+  },
+  {
+    "word": "FRAMEATTR",
+    "hint": "Table external borders"
+  },
+  {
+    "word": "PROFILE",
+    "hint": "Legacy meta dictionary"
+  },
+  {
+    "word": "SCHEME",
+    "hint": "Legacy meta scheme"
+  },
+  {
+    "word": "STANDBY",
+    "hint": "Legacy object loading"
+  },
+  {
+    "word": "CODETYPE",
+    "hint": "Legacy object mime"
+  },
+  {
+    "word": "ARCHIVE",
+    "hint": "Legacy applet archive"
+  },
+  {
+    "word": "CLASSID",
+    "hint": "Legacy object class"
+  },
+  {
+    "word": "CODEBASE",
+    "hint": "Legacy object path"
+  },
+  {
+    "word": "DECLARE",
+    "hint": "Legacy deferred object"
+  },
+  {
+    "word": "NOHREF",
+    "hint": "Legacy unclickable area"
+  },
+  {
+    "word": "NORESIZE",
+    "hint": "Legacy fixed frame"
+  },
+  {
+    "word": "HTMLBODY",
+    "hint": "Core document shell"
+  },
+  {
+    "word": "XMLNS",
+    "hint": "XML namespace URL"
+  },
+  {
+    "word": "CHARSETENC",
+    "hint": "Text encoding rule"
+  },
+  {
+    "word": "CONTENTTYPE",
+    "hint": "Mime type declaration"
+  },
+  {
+    "word": "DOCUMENT",
+    "hint": "DOM root logical node"
+  },
+  {
+    "word": "WINDOW",
+    "hint": "Browser viewing context"
+  },
+  {
+    "word": "HISTORY",
+    "hint": "Session navigation state"
+  },
+  {
+    "word": "LOCATION",
+    "hint": "Current URL interface"
+  },
+  {
+    "word": "NAVIGATOR",
+    "hint": "Browser identity info"
+  },
+  {
+    "word": "SCREEN",
+    "hint": "Monitor display info"
+  },
+  {
+    "word": "AUTOCOMPLETE",
+    "hint": "Browser fill suggestion"
+  },
+  {
+    "word": "ENTERKEYHINT",
+    "hint": "Virtual keyboard action"
+  },
+  {
+    "word": "ARIADISABLED",
+    "hint": "Inactive state flag"
+  },
+  {
+    "word": "ARIAEXPANDED",
+    "hint": "Collapsible open state"
+  },
+  {
+    "word": "ARIAFLOWTO",
+    "hint": "Next focus target"
+  },
+  {
+    "word": "ARIAGRABBED",
+    "hint": "Drag state flag"
+  },
+  {
+    "word": "ARIAHASPOPUP",
+    "hint": "Trigger has popup"
+  },
+  {
+    "word": "ARIAREADONLY",
+    "hint": "Uneditable state flag"
+  },
+  {
+    "word": "ARIAREQUIRED",
+    "hint": "Mandatory field flag"
+  },
+  {
+    "word": "ARIASELECTED",
+    "hint": "Chosen item flag"
+  },
+  {
+    "word": "ARIAROWSPAN",
+    "hint": "Table cell height ARIA"
+  },
+  {
+    "word": "ARIACOLSPAN",
+    "hint": "Table cell width ARIA"
+  },
+  {
+    "word": "ARIAVALUEMAX",
+    "hint": "Maximum allowed value"
+  },
+  {
+    "word": "ARIAVALUEMIN",
+    "hint": "Minimum allowed value"
+  },
+  {
+    "word": "ARIAVALUENOW",
+    "hint": "Current scalar value"
+  },
+  {
+    "word": "CELLPADDING",
+    "hint": "Table internal spacing"
+  },
+  {
+    "word": "TEXTTRACK",
+    "hint": "Media text track node"
+  },
+  {
+    "word": "DATASET",
+    "hint": "Custom data attributes DOM"
+  },
+  {
+    "word": "CLASSLIST",
+    "hint": "DOM token list of classes"
+  },
+  {
+    "word": "INNERHTML",
+    "hint": "Element's HTML content"
+  },
+  {
+    "word": "OUTERHTML",
+    "hint": "Element's HTML including itself"
+  },
+  {
+    "word": "TEXTCONTENT",
+    "hint": "Raw text of the node"
+  },
+  {
+    "word": "CHILDNODES",
+    "hint": "List of child elements"
+  },
+  {
+    "word": "FIRSTCHILD",
+    "hint": "First node within element"
+  },
+  {
+    "word": "LASTCHILD",
+    "hint": "Last node within element"
+  },
+  {
+    "word": "NEXTSIBLING",
+    "hint": "Following adjacent node"
+  },
+  {
+    "word": "NODEVALUE",
+    "hint": "Value of the DOM node"
+  },
+  {
+    "word": "NODENAME",
+    "hint": "Tag name of the node"
+  },
+  {
+    "word": "NODETYPE",
+    "hint": "Integer showing node kind"
+  },
+  {
+    "word": "BASEURI",
+    "hint": "Absolute base URL"
+  },
+  {
+    "word": "LOCALNAME",
+    "hint": "Local part of qualified name"
+  },
+  {
+    "word": "SHADOWROOT",
+    "hint": "Root node of shadow DOM"
+  },
+  {
+    "word": "HTMLCOLLECT",
+    "hint": "Live collection of elements"
+  },
+  {
+    "word": "NODELIST",
+    "hint": "List of document nodes"
+  },
+  {
+    "word": "DOMTOKEN",
+    "hint": "Set of space-separated tokens"
+  },
+  {
+    "word": "ATTR",
+    "hint": "DOM representation of attribute"
+  },
+  {
+    "word": "DOMSTRING",
+    "hint": "String type in DOM API"
+  },
+  {
+    "word": "ELEMENTMETA",
+    "hint": "Metadata logic structure"
+  },
+  {
+    "word": "NAMEDNODE",
+    "hint": "Map of named attributes"
+  },
+  {
+    "word": "FORMCONTROL",
+    "hint": "Input interface element"
+  },
+  {
+    "word": "VALIDITY",
+    "hint": "Constraint validation state"
+  },
+  {
+    "word": "MEDIAERROR",
+    "hint": "Audio/video playback issue"
+  },
+  {
+    "word": "TIMEANGLES",
+    "hint": "Media timestamp mapping"
+  },
+  {
+    "word": "ONLOADSTART",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONRATECHANGE",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONTIMEUPDATE",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONPAGEHIDE",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONPAGESHOW",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONMOUSEOUT",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONMOUSEOVER",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONMOUSEUP",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONMOUSEDOWN",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONMOUSEMOVE",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONMOUSEWHEEL",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONDURATION",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONCUECHANGE",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONBEFOREUN",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONBEFOREPR",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONAFTERPR",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONDRAGEND",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONDRAGENTER",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONDRAGLEAVE",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONDRAGOVER",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONDRAGSTART",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONFOCUSIN",
+    "hint": "Event listener attribute"
+  },
+  {
+    "word": "ONFOCUSOUT",
+    "hint": "Event listener attribute"
+  }
+]
