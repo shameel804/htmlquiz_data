@@ -1,0 +1,1965 @@
+[
+  {
+    "tags": [
+      "<!DOCTYPE html>",
+      "<html>",
+      "<head>",
+      "</head>",
+      "<body>",
+      "</body>",
+      "</html>"
+    ],
+    "description": "HTML5 Boilerplate"
+  },
+  {
+    "tags": [
+      "<html>",
+      "<head>",
+      "<title>",
+      "</title>",
+      "</head>",
+      "<body>",
+      "</body>",
+      "</html>"
+    ],
+    "description": "Basic Document Layout"
+  },
+  {
+    "tags": [
+      "<head>",
+      "<meta charset=\"UTF-8\">",
+      "<meta name=\"viewport\">",
+      "<title>",
+      "</title>",
+      "</head>"
+    ],
+    "description": "Standard Head Tags"
+  },
+  {
+    "tags": [
+      "<head>",
+      "<link rel=\"stylesheet\">",
+      "<style>",
+      "</style>",
+      "</head>"
+    ],
+    "description": "Styling in Head"
+  },
+  {
+    "tags": [
+      "<head>",
+      "<script src=\"app.js\">",
+      "</script>",
+      "</head>"
+    ],
+    "description": "External Script Loading"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"text\">",
+      "</form>"
+    ],
+    "description": "Form with Text Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"text\">",
+      "</form>"
+    ],
+    "description": "Labeled Text Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"text\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Text"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"password\">",
+      "</form>"
+    ],
+    "description": "Form with Password Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"password\">",
+      "</form>"
+    ],
+    "description": "Labeled Password Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"password\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Password"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"email\">",
+      "</form>"
+    ],
+    "description": "Form with Email Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"email\">",
+      "</form>"
+    ],
+    "description": "Labeled Email Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"email\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Email"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"submit\">",
+      "</form>"
+    ],
+    "description": "Form with Submit Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"submit\">",
+      "</form>"
+    ],
+    "description": "Labeled Submit Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"submit\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Submit"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"radio\">",
+      "</form>"
+    ],
+    "description": "Form with Radio Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"radio\">",
+      "</form>"
+    ],
+    "description": "Labeled Radio Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"radio\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Radio"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"checkbox\">",
+      "</form>"
+    ],
+    "description": "Form with Checkbox Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"checkbox\">",
+      "</form>"
+    ],
+    "description": "Labeled Checkbox Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"checkbox\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Checkbox"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"date\">",
+      "</form>"
+    ],
+    "description": "Form with Date Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"date\">",
+      "</form>"
+    ],
+    "description": "Labeled Date Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"date\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Date"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"color\">",
+      "</form>"
+    ],
+    "description": "Form with Color Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"color\">",
+      "</form>"
+    ],
+    "description": "Labeled Color Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"color\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Color"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"range\">",
+      "</form>"
+    ],
+    "description": "Form with Range Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"range\">",
+      "</form>"
+    ],
+    "description": "Labeled Range Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"range\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Range"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"number\">",
+      "</form>"
+    ],
+    "description": "Form with Number Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"number\">",
+      "</form>"
+    ],
+    "description": "Labeled Number Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"number\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Number"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"file\">",
+      "</form>"
+    ],
+    "description": "Form with File Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"file\">",
+      "</form>"
+    ],
+    "description": "Labeled File Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"file\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with File"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"hidden\">",
+      "</form>"
+    ],
+    "description": "Form with Hidden Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"hidden\">",
+      "</form>"
+    ],
+    "description": "Labeled Hidden Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"hidden\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Hidden"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"tel\">",
+      "</form>"
+    ],
+    "description": "Form with Tel Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"tel\">",
+      "</form>"
+    ],
+    "description": "Labeled Tel Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"tel\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Tel"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"url\">",
+      "</form>"
+    ],
+    "description": "Form with Url Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"url\">",
+      "</form>"
+    ],
+    "description": "Labeled Url Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"url\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Url"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"search\">",
+      "</form>"
+    ],
+    "description": "Form with Search Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"search\">",
+      "</form>"
+    ],
+    "description": "Labeled Search Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"search\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Search"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"time\">",
+      "</form>"
+    ],
+    "description": "Form with Time Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"time\">",
+      "</form>"
+    ],
+    "description": "Labeled Time Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"time\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Time"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<input type=\"week\">",
+      "</form>"
+    ],
+    "description": "Form with Week Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<label>",
+      "</label>",
+      "<input type=\"week\">",
+      "</form>"
+    ],
+    "description": "Labeled Week Input"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<fieldset>",
+      "<legend>",
+      "</legend>",
+      "<input type=\"week\">",
+      "</fieldset>",
+      "</form>"
+    ],
+    "description": "Fieldset with Week"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<b>",
+      "</b>",
+      "</p>"
+    ],
+    "description": "Paragraph with Bold Text"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<b>",
+      "</b>",
+      "</div>"
+    ],
+    "description": "Div with Bold Text"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<b>",
+      "</b>",
+      "</span>"
+    ],
+    "description": "Span with Bold Text"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<i>",
+      "</i>",
+      "</p>"
+    ],
+    "description": "Paragraph with Italic Text"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<i>",
+      "</i>",
+      "</div>"
+    ],
+    "description": "Div with Italic Text"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<i>",
+      "</i>",
+      "</span>"
+    ],
+    "description": "Span with Italic Text"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<u>",
+      "</u>",
+      "</p>"
+    ],
+    "description": "Paragraph with Underlined Text"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<u>",
+      "</u>",
+      "</div>"
+    ],
+    "description": "Div with Underlined Text"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<u>",
+      "</u>",
+      "</span>"
+    ],
+    "description": "Span with Underlined Text"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<s>",
+      "</s>",
+      "</p>"
+    ],
+    "description": "Paragraph with Strikethrough"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<s>",
+      "</s>",
+      "</div>"
+    ],
+    "description": "Div with Strikethrough"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<s>",
+      "</s>",
+      "</span>"
+    ],
+    "description": "Span with Strikethrough"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<strong>",
+      "</strong>",
+      "</p>"
+    ],
+    "description": "Paragraph with Strong Emphasis"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<strong>",
+      "</strong>",
+      "</div>"
+    ],
+    "description": "Div with Strong Emphasis"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<strong>",
+      "</strong>",
+      "</span>"
+    ],
+    "description": "Span with Strong Emphasis"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<em>",
+      "</em>",
+      "</p>"
+    ],
+    "description": "Paragraph with Emphasis"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<em>",
+      "</em>",
+      "</div>"
+    ],
+    "description": "Div with Emphasis"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<em>",
+      "</em>",
+      "</span>"
+    ],
+    "description": "Span with Emphasis"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<mark>",
+      "</mark>",
+      "</p>"
+    ],
+    "description": "Paragraph with Highlighted Text"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<mark>",
+      "</mark>",
+      "</div>"
+    ],
+    "description": "Div with Highlighted Text"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<mark>",
+      "</mark>",
+      "</span>"
+    ],
+    "description": "Span with Highlighted Text"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<small>",
+      "</small>",
+      "</p>"
+    ],
+    "description": "Paragraph with Small Text"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<small>",
+      "</small>",
+      "</div>"
+    ],
+    "description": "Div with Small Text"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<small>",
+      "</small>",
+      "</span>"
+    ],
+    "description": "Span with Small Text"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<del>",
+      "</del>",
+      "</p>"
+    ],
+    "description": "Paragraph with Deleted Text"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<del>",
+      "</del>",
+      "</div>"
+    ],
+    "description": "Div with Deleted Text"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<del>",
+      "</del>",
+      "</span>"
+    ],
+    "description": "Span with Deleted Text"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<ins>",
+      "</ins>",
+      "</p>"
+    ],
+    "description": "Paragraph with Inserted Text"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<ins>",
+      "</ins>",
+      "</div>"
+    ],
+    "description": "Div with Inserted Text"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<ins>",
+      "</ins>",
+      "</span>"
+    ],
+    "description": "Span with Inserted Text"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<sub>",
+      "</sub>",
+      "</p>"
+    ],
+    "description": "Paragraph with Subscript Text"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<sub>",
+      "</sub>",
+      "</div>"
+    ],
+    "description": "Div with Subscript Text"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<sub>",
+      "</sub>",
+      "</span>"
+    ],
+    "description": "Span with Subscript Text"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<sup>",
+      "</sup>",
+      "</p>"
+    ],
+    "description": "Paragraph with Superscript Text"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<sup>",
+      "</sup>",
+      "</div>"
+    ],
+    "description": "Div with Superscript Text"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<sup>",
+      "</sup>",
+      "</span>"
+    ],
+    "description": "Span with Superscript Text"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<code>",
+      "</code>",
+      "</p>"
+    ],
+    "description": "Paragraph with Inline Code"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<code>",
+      "</code>",
+      "</div>"
+    ],
+    "description": "Div with Inline Code"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<code>",
+      "</code>",
+      "</span>"
+    ],
+    "description": "Span with Inline Code"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<kbd>",
+      "</kbd>",
+      "</p>"
+    ],
+    "description": "Paragraph with Keyboard Input"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<kbd>",
+      "</kbd>",
+      "</div>"
+    ],
+    "description": "Div with Keyboard Input"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<kbd>",
+      "</kbd>",
+      "</span>"
+    ],
+    "description": "Span with Keyboard Input"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<samp>",
+      "</samp>",
+      "</p>"
+    ],
+    "description": "Paragraph with Sample Output"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<samp>",
+      "</samp>",
+      "</div>"
+    ],
+    "description": "Div with Sample Output"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<samp>",
+      "</samp>",
+      "</span>"
+    ],
+    "description": "Span with Sample Output"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<var>",
+      "</var>",
+      "</p>"
+    ],
+    "description": "Paragraph with Variable"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<var>",
+      "</var>",
+      "</div>"
+    ],
+    "description": "Div with Variable"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<var>",
+      "</var>",
+      "</span>"
+    ],
+    "description": "Span with Variable"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<q>",
+      "</q>",
+      "</p>"
+    ],
+    "description": "Paragraph with Inline Quote"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<q>",
+      "</q>",
+      "</div>"
+    ],
+    "description": "Div with Inline Quote"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<q>",
+      "</q>",
+      "</span>"
+    ],
+    "description": "Span with Inline Quote"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<abbr>",
+      "</abbr>",
+      "</p>"
+    ],
+    "description": "Paragraph with Abbreviation"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<abbr>",
+      "</abbr>",
+      "</div>"
+    ],
+    "description": "Div with Abbreviation"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<abbr>",
+      "</abbr>",
+      "</span>"
+    ],
+    "description": "Span with Abbreviation"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<dfn>",
+      "</dfn>",
+      "</p>"
+    ],
+    "description": "Paragraph with Definition Term"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<dfn>",
+      "</dfn>",
+      "</div>"
+    ],
+    "description": "Div with Definition Term"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<dfn>",
+      "</dfn>",
+      "</span>"
+    ],
+    "description": "Span with Definition Term"
+  },
+  {
+    "tags": [
+      "<p>",
+      "<cite>",
+      "</cite>",
+      "</p>"
+    ],
+    "description": "Paragraph with Citation"
+  },
+  {
+    "tags": [
+      "<div>",
+      "<cite>",
+      "</cite>",
+      "</div>"
+    ],
+    "description": "Div with Citation"
+  },
+  {
+    "tags": [
+      "<span>",
+      "<cite>",
+      "</cite>",
+      "</span>"
+    ],
+    "description": "Span with Citation"
+  },
+  {
+    "tags": [
+      "<ul>",
+      "<li>",
+      "</li>",
+      "</ul>"
+    ],
+    "description": "Single Item Unordered List"
+  },
+  {
+    "tags": [
+      "<ul>",
+      "<li>",
+      "</li>",
+      "<li>",
+      "</li>",
+      "</ul>"
+    ],
+    "description": "Two Item Unordered List"
+  },
+  {
+    "tags": [
+      "<ul>",
+      "<li>",
+      "</li>",
+      "<li>",
+      "</li>",
+      "<li>",
+      "</li>",
+      "</ul>"
+    ],
+    "description": "Three Item Unordered List"
+  },
+  {
+    "tags": [
+      "<ol>",
+      "<li>",
+      "</li>",
+      "</ol>"
+    ],
+    "description": "Single Item Ordered List"
+  },
+  {
+    "tags": [
+      "<ol>",
+      "<li>",
+      "</li>",
+      "<li>",
+      "</li>",
+      "</ol>"
+    ],
+    "description": "Two Item Ordered List"
+  },
+  {
+    "tags": [
+      "<ol>",
+      "<li>",
+      "</li>",
+      "<li>",
+      "</li>",
+      "<li>",
+      "</li>",
+      "</ol>"
+    ],
+    "description": "Three Item Ordered List"
+  },
+  {
+    "tags": [
+      "<ul>",
+      "<li>",
+      "<ol>",
+      "<li>",
+      "</li>",
+      "</ol>",
+      "</li>",
+      "</ul>"
+    ],
+    "description": "Nested Ordered List"
+  },
+  {
+    "tags": [
+      "<ol>",
+      "<li>",
+      "<ul>",
+      "<li>",
+      "</li>",
+      "</ul>",
+      "</li>",
+      "</ol>"
+    ],
+    "description": "Nested Unordered List"
+  },
+  {
+    "tags": [
+      "<dl>",
+      "<dt>",
+      "</dt>",
+      "<dd>",
+      "</dd>",
+      "</dl>"
+    ],
+    "description": "Single Term Description List"
+  },
+  {
+    "tags": [
+      "<dl>",
+      "<dt>",
+      "</dt>",
+      "<dd>",
+      "</dd>",
+      "<dt>",
+      "</dt>",
+      "<dd>",
+      "</dd>",
+      "</dl>"
+    ],
+    "description": "Two Term Description List"
+  },
+  {
+    "tags": [
+      "<h1>",
+      "</h1>"
+    ],
+    "description": "Heading Level 1"
+  },
+  {
+    "tags": [
+      "<header>",
+      "<h1>",
+      "</h1>",
+      "</header>"
+    ],
+    "description": "Header with H1"
+  },
+  {
+    "tags": [
+      "<h2>",
+      "</h2>"
+    ],
+    "description": "Heading Level 2"
+  },
+  {
+    "tags": [
+      "<header>",
+      "<h2>",
+      "</h2>",
+      "</header>"
+    ],
+    "description": "Header with H2"
+  },
+  {
+    "tags": [
+      "<h3>",
+      "</h3>"
+    ],
+    "description": "Heading Level 3"
+  },
+  {
+    "tags": [
+      "<header>",
+      "<h3>",
+      "</h3>",
+      "</header>"
+    ],
+    "description": "Header with H3"
+  },
+  {
+    "tags": [
+      "<h4>",
+      "</h4>"
+    ],
+    "description": "Heading Level 4"
+  },
+  {
+    "tags": [
+      "<header>",
+      "<h4>",
+      "</h4>",
+      "</header>"
+    ],
+    "description": "Header with H4"
+  },
+  {
+    "tags": [
+      "<h5>",
+      "</h5>"
+    ],
+    "description": "Heading Level 5"
+  },
+  {
+    "tags": [
+      "<header>",
+      "<h5>",
+      "</h5>",
+      "</header>"
+    ],
+    "description": "Header with H5"
+  },
+  {
+    "tags": [
+      "<h6>",
+      "</h6>"
+    ],
+    "description": "Heading Level 6"
+  },
+  {
+    "tags": [
+      "<header>",
+      "<h6>",
+      "</h6>",
+      "</header>"
+    ],
+    "description": "Header with H6"
+  },
+  {
+    "tags": [
+      "<picture>",
+      "<source>",
+      "<img>",
+      "</picture>"
+    ],
+    "description": "Responsive Image"
+  },
+  {
+    "tags": [
+      "<figure>",
+      "<img>",
+      "<figcaption>",
+      "</figcaption>",
+      "</figure>"
+    ],
+    "description": "Image with Caption"
+  },
+  {
+    "tags": [
+      "<audio controls>",
+      "<source>",
+      "</audio>"
+    ],
+    "description": "Audio with Controls"
+  },
+  {
+    "tags": [
+      "<video controls>",
+      "<source>",
+      "</video>"
+    ],
+    "description": "Video with Controls"
+  },
+  {
+    "tags": [
+      "<video>",
+      "<source>",
+      "<track>",
+      "</video>"
+    ],
+    "description": "Video with Subtitles"
+  },
+  {
+    "tags": [
+      "<iframe src=\"url\">",
+      "</iframe>"
+    ],
+    "description": "Basic Iframe embedded"
+  },
+  {
+    "tags": [
+      "<object data=\"url\">",
+      "</object>"
+    ],
+    "description": "Embedded Object"
+  },
+  {
+    "tags": [
+      "<article>",
+      "</article>"
+    ],
+    "description": "Empty Article Tag"
+  },
+  {
+    "tags": [
+      "<article>",
+      "<p>",
+      "</p>",
+      "</article>"
+    ],
+    "description": "Article with Paragraph"
+  },
+  {
+    "tags": [
+      "<article>",
+      "<h2>",
+      "</h2>",
+      "<p>",
+      "</p>",
+      "</article>"
+    ],
+    "description": "Article with Heading"
+  },
+  {
+    "tags": [
+      "<section>",
+      "</section>"
+    ],
+    "description": "Empty Section Tag"
+  },
+  {
+    "tags": [
+      "<section>",
+      "<p>",
+      "</p>",
+      "</section>"
+    ],
+    "description": "Section with Paragraph"
+  },
+  {
+    "tags": [
+      "<section>",
+      "<h2>",
+      "</h2>",
+      "<p>",
+      "</p>",
+      "</section>"
+    ],
+    "description": "Section with Heading"
+  },
+  {
+    "tags": [
+      "<nav>",
+      "</nav>"
+    ],
+    "description": "Empty Nav Tag"
+  },
+  {
+    "tags": [
+      "<nav>",
+      "<p>",
+      "</p>",
+      "</nav>"
+    ],
+    "description": "Nav with Paragraph"
+  },
+  {
+    "tags": [
+      "<nav>",
+      "<h2>",
+      "</h2>",
+      "<p>",
+      "</p>",
+      "</nav>"
+    ],
+    "description": "Nav with Heading"
+  },
+  {
+    "tags": [
+      "<aside>",
+      "</aside>"
+    ],
+    "description": "Empty Aside Tag"
+  },
+  {
+    "tags": [
+      "<aside>",
+      "<p>",
+      "</p>",
+      "</aside>"
+    ],
+    "description": "Aside with Paragraph"
+  },
+  {
+    "tags": [
+      "<aside>",
+      "<h2>",
+      "</h2>",
+      "<p>",
+      "</p>",
+      "</aside>"
+    ],
+    "description": "Aside with Heading"
+  },
+  {
+    "tags": [
+      "<main>",
+      "</main>"
+    ],
+    "description": "Empty Main Tag"
+  },
+  {
+    "tags": [
+      "<main>",
+      "<p>",
+      "</p>",
+      "</main>"
+    ],
+    "description": "Main with Paragraph"
+  },
+  {
+    "tags": [
+      "<main>",
+      "<h2>",
+      "</h2>",
+      "<p>",
+      "</p>",
+      "</main>"
+    ],
+    "description": "Main with Heading"
+  },
+  {
+    "tags": [
+      "<footer>",
+      "</footer>"
+    ],
+    "description": "Empty Footer Tag"
+  },
+  {
+    "tags": [
+      "<footer>",
+      "<p>",
+      "</p>",
+      "</footer>"
+    ],
+    "description": "Footer with Paragraph"
+  },
+  {
+    "tags": [
+      "<footer>",
+      "<h2>",
+      "</h2>",
+      "<p>",
+      "</p>",
+      "</footer>"
+    ],
+    "description": "Footer with Heading"
+  },
+  {
+    "tags": [
+      "<dialog>",
+      "</dialog>"
+    ],
+    "description": "Empty Dialog Tag"
+  },
+  {
+    "tags": [
+      "<dialog>",
+      "<p>",
+      "</p>",
+      "</dialog>"
+    ],
+    "description": "Dialog with Paragraph"
+  },
+  {
+    "tags": [
+      "<dialog>",
+      "<h2>",
+      "</h2>",
+      "<p>",
+      "</p>",
+      "</dialog>"
+    ],
+    "description": "Dialog with Heading"
+  },
+  {
+    "tags": [
+      "<details>",
+      "</details>"
+    ],
+    "description": "Empty Details Tag"
+  },
+  {
+    "tags": [
+      "<details>",
+      "<p>",
+      "</p>",
+      "</details>"
+    ],
+    "description": "Details with Paragraph"
+  },
+  {
+    "tags": [
+      "<details>",
+      "<h2>",
+      "</h2>",
+      "<p>",
+      "</p>",
+      "</details>"
+    ],
+    "description": "Details with Heading"
+  },
+  {
+    "tags": [
+      "<summary>",
+      "</summary>"
+    ],
+    "description": "Empty Summary Tag"
+  },
+  {
+    "tags": [
+      "<summary>",
+      "<p>",
+      "</p>",
+      "</summary>"
+    ],
+    "description": "Summary with Paragraph"
+  },
+  {
+    "tags": [
+      "<summary>",
+      "<h2>",
+      "</h2>",
+      "<p>",
+      "</p>",
+      "</summary>"
+    ],
+    "description": "Summary with Heading"
+  },
+  {
+    "tags": [
+      "<address>",
+      "</address>"
+    ],
+    "description": "Empty Address Tag"
+  },
+  {
+    "tags": [
+      "<address>",
+      "<p>",
+      "</p>",
+      "</address>"
+    ],
+    "description": "Address with Paragraph"
+  },
+  {
+    "tags": [
+      "<address>",
+      "<h2>",
+      "</h2>",
+      "<p>",
+      "</p>",
+      "</address>"
+    ],
+    "description": "Address with Heading"
+  },
+  {
+    "tags": [
+      "<nav>",
+      "<ul>",
+      "<li>",
+      "<a>",
+      "</a>",
+      "</li>",
+      "</ul>",
+      "</nav>"
+    ],
+    "description": "List-based Navigation Bar"
+  },
+  {
+    "tags": [
+      "<nav>",
+      "<a>",
+      "</a>",
+      "<a>",
+      "</a>",
+      "</nav>"
+    ],
+    "description": "Simple Link Navigation"
+  },
+  {
+    "tags": [
+      "<select>",
+      "<option>",
+      "</option>",
+      "</select>"
+    ],
+    "description": "Dropdown with Option"
+  },
+  {
+    "tags": [
+      "<select>",
+      "<optgroup>",
+      "<option>",
+      "</option>",
+      "</optgroup>",
+      "</select>"
+    ],
+    "description": "Dropdown with Optgroup"
+  },
+  {
+    "tags": [
+      "<textarea>",
+      "</textarea>"
+    ],
+    "description": "Basic Textarea"
+  },
+  {
+    "tags": [
+      "<form>",
+      "<textarea>",
+      "</textarea>",
+      "<button>",
+      "</button>",
+      "</form>"
+    ],
+    "description": "Feedback Form"
+  },
+  {
+    "tags": [
+      "<button type=\"button\">",
+      "</button>"
+    ],
+    "description": "Standard Button"
+  },
+  {
+    "tags": [
+      "<button type=\"submit\">",
+      "</button>"
+    ],
+    "description": "Submit Button"
+  },
+  {
+    "tags": [
+      "<button type=\"reset\">",
+      "</button>"
+    ],
+    "description": "Reset Button"
+  },
+  {
+    "tags": [
+      "<table>",
+      "<tr>",
+      "<td>",
+      "</td>",
+      "</tr>",
+      "</table>"
+    ],
+    "description": "Single Cell Table"
+  },
+  {
+    "tags": [
+      "<table>",
+      "<tr>",
+      "<th>",
+      "</th>",
+      "<th>",
+      "</th>",
+      "</tr>",
+      "</table>"
+    ],
+    "description": "Two Header Columns"
+  },
+  {
+    "tags": [
+      "<table>",
+      "<thead>",
+      "<tr>",
+      "<th>",
+      "</th>",
+      "</tr>",
+      "</thead>",
+      "<tbody>",
+      "<tr>",
+      "<td>",
+      "</td>",
+      "</tr>",
+      "</tbody>",
+      "</table>"
+    ],
+    "description": "Table with Thead Tbody"
+  },
+  {
+    "tags": [
+      "<table>",
+      "<caption>",
+      "</caption>",
+      "<tr>",
+      "<td>",
+      "</td>",
+      "</tr>",
+      "</table>"
+    ],
+    "description": "Table with Caption"
+  },
+  {
+    "tags": [
+      "<table>",
+      "<colgroup>",
+      "<col>",
+      "</colgroup>",
+      "<tr>",
+      "<td>",
+      "</td>",
+      "</tr>",
+      "</table>"
+    ],
+    "description": "Table Column Group"
+  },
+  {
+    "tags": [
+      "<table>",
+      "<tfoot>",
+      "<tr>",
+      "<td>",
+      "</td>",
+      "</tr>",
+      "</tfoot>",
+      "</table>"
+    ],
+    "description": "Table Footer Layout"
+  },
+  {
+    "tags": [
+      "<a href=\"url\">",
+      "</a>"
+    ],
+    "description": "Basic Hyperlink"
+  },
+  {
+    "tags": [
+      "<a href=\"#id\">",
+      "</a>"
+    ],
+    "description": "Anchor Link"
+  },
+  {
+    "tags": [
+      "<a target=\"_blank\">",
+      "</a>"
+    ],
+    "description": "New Tab Link"
+  },
+  {
+    "tags": [
+      "<a href=\"mailto:\">",
+      "</a>"
+    ],
+    "description": "Email Link"
+  },
+  {
+    "tags": [
+      "<a href=\"url\">",
+      "<img>",
+      "</a>"
+    ],
+    "description": "Image Link"
+  },
+  {
+    "tags": [
+      "<blockquote>",
+      "<p>",
+      "</p>",
+      "</blockquote>"
+    ],
+    "description": "Blockquote with Paragraph"
+  },
+  {
+    "tags": [
+      "<blockquote>",
+      "<cite>",
+      "</cite>",
+      "</blockquote>"
+    ],
+    "description": "Blockquote with Citation"
+  },
+  {
+    "tags": [
+      "<progress value=\"50\" max=\"100\">",
+      "</progress>"
+    ],
+    "description": "Progress Bar"
+  },
+  {
+    "tags": [
+      "<meter value=\"0.6\">",
+      "</meter>"
+    ],
+    "description": "Meter Gauge Element"
+  },
+  {
+    "tags": [
+      "<svg>",
+      "<circle>",
+      "</circle>",
+      "</svg>"
+    ],
+    "description": "SVG Circle Drawing"
+  },
+  {
+    "tags": [
+      "<svg>",
+      "<rect>",
+      "</rect>",
+      "</svg>"
+    ],
+    "description": "SVG Rectangle Drawing"
+  },
+  {
+    "tags": [
+      "<svg>",
+      "<path>",
+      "</path>",
+      "</svg>"
+    ],
+    "description": "SVG Path Sequence"
+  },
+  {
+    "tags": [
+      "<canvas>",
+      "</canvas>"
+    ],
+    "description": "Empty Canvas Element"
+  },
+  {
+    "tags": [
+      "<ruby>",
+      "<rt>",
+      "</rt>",
+      "</ruby>"
+    ],
+    "description": "Ruby Annotation Layout"
+  },
+  {
+    "tags": [
+      "<ruby>",
+      "<rp>",
+      "(",
+      "</rp>",
+      "<rt>",
+      "</rt>",
+      "<rp>",
+      ")",
+      "</rp>",
+      "</ruby>"
+    ],
+    "description": "Ruby Fallback Parentheses"
+  },
+  {
+    "tags": [
+      "<details>",
+      "<summary>",
+      "</summary>",
+      "<p>",
+      "</p>",
+      "</details>"
+    ],
+    "description": "Collapsible Details Paragraph"
+  },
+  {
+    "tags": [
+      "<details open>",
+      "<summary>",
+      "</summary>",
+      "<ul>",
+      "<li>",
+      "</li>",
+      "</ul>",
+      "</details>"
+    ],
+    "description": "Open Status Details List"
+  }
+]
