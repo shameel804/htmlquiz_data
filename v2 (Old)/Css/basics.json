@@ -1,0 +1,4564 @@
+[
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "body {\n    background-color: blue;\n}",
+        "o": [
+            "Sets background to blue",
+            "Sets text color to blue",
+            "None",
+            "Makes body invisible"
+        ]
+    },
+    {
+        "q": "What does CSS stand for?",
+        "o": [
+            "Cascading Style Sheets",
+            "Computer Style Sheets",
+            "Creative Style Sheets",
+            "Colorful Style Sheets"
+        ]
+    },
+    {
+        "q": "What does this CSS select?",
+        "l": "css",
+        "c": "h1 {\n    color: red;\n}",
+        "o": [
+            "All h1 elements",
+            "All headings",
+            "All elements",
+            "None"
+        ]
+    },
+    {
+        "q": "Which of the following is a CSS selector?",
+        "o": [
+            "All of the options",
+            ".class",
+            "#id",
+            "element"
+        ]
+    },
+    {
+        "q": "What does this code output?",
+        "l": "css",
+        "c": "p {\n    font-size: 20px;\n}",
+        "o": [
+            "Sets font size to 20px",
+            "Sets font size to 20%",
+            "None",
+            "Hides paragraph"
+        ]
+    },
+    {
+        "q": "What is the correct syntax to select an element with id 'header'?",
+        "o": [
+            "#header { }",
+            ".header { }",
+            "header { }",
+            "*header { }"
+        ]
+    },
+    {
+        "q": "What effect does this code have?",
+        "l": "css",
+        "c": "a:hover {\n    color: green;\n}",
+        "o": [
+            "Changes link color on hover",
+            "Changes link color on click",
+            "None",
+            "Makes link bold"
+        ]
+    },
+    {
+        "q": "Which property is used to change the background color?",
+        "o": [
+            "background-color",
+            "bg-color",
+            "color",
+            "background"
+        ]
+    },
+    {
+        "q": "What does this snippet define?",
+        "l": "css",
+        "c": ".container {\n    width: 100%;\n}",
+        "o": [
+            "Container width is 100%",
+            "Container height is 100%",
+            "None",
+            "Makes container invisible"
+        ]
+    },
+    {
+        "q": "How do you apply styles to multiple classes?",
+        "o": [
+            ".class1, .class2 { }",
+            ".class1 .class2 { }",
+            ".class1.class2 { }",
+            "#class1, #class2 { }"
+        ]
+    },
+    {
+        "q": "What does this code style?",
+        "l": "css",
+        "c": "ul {\n    list-style-type: square;\n}",
+        "o": [
+            "Sets list style to square",
+            "Hides list bullets",
+            "None",
+            "Makes list vertical"
+        ]
+    },
+    {
+        "q": "What is the default value of the 'position' property?",
+        "o": [
+            "static",
+            "relative",
+            "absolute",
+            "fixed"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": ".btn {\n    padding: 10px;\n}",
+        "o": [
+            "Adds padding to button",
+            "Removes padding from button",
+            "None",
+            "Changes button color"
+        ]
+    },
+    {
+        "q": "Which property controls the text size?",
+        "o": [
+            "font-size",
+            "text-size",
+            "size",
+            "font"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "img {\n    max-width: 100%;\n}",
+        "o": [
+            "Image scales within container",
+            "Image hides if too large",
+            "None",
+            "Image stretches"
+        ]
+    },
+    {
+        "q": "What is the correct way to link a CSS file in HTML?",
+        "o": [
+            "<link rel='stylesheet' href='style.css'>",
+            "<stylesheet>style.css</stylesheet>",
+            "<css>style.css</css>",
+            "<link src='style.css'>"
+        ]
+    },
+    {
+        "q": "What does this CSS apply?",
+        "l": "css",
+        "c": "div > p {\n    color: purple;\n}",
+        "o": [
+            "Purple text for direct child paragraphs",
+            "Purple text for all paragraphs",
+            "None",
+            "Hides paragraphs"
+        ]
+    },
+    {
+        "q": "What is the use of the 'float' property?",
+        "o": [
+            "To position elements",
+            "To change text color",
+            "To create space",
+            "To set margins"
+        ]
+    },
+    {
+        "q": "What is the result of this code?",
+        "l": "css",
+        "c": "footer {\n    position: fixed;\n}",
+        "o": [
+            "Footer stays at the bottom",
+            "Footer scrolls with page",
+            "None",
+            "Hides footer"
+        ]
+    },
+    {
+        "q": "Which selector is used to select elements by attribute?",
+        "o": [
+            "[attribute]",
+            ".class",
+            "#id",
+            "element"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "h2 {\n    text-align: center;\n}",
+        "o": [
+            "Centers the h2 text",
+            "Aligns h2 to the left",
+            "None",
+            "Makes h2 invisible"
+        ]
+    },
+    {
+        "q": "What value is used to center an element?",
+        "o": [
+            "margin: auto;",
+            "center: true;",
+            "align: center;",
+            "margin: 0 auto;"
+        ]
+    },
+    {
+        "q": "What effect does this code have?",
+        "l": "css",
+        "c": ".highlight {\n    background-color: yellow;\n}",
+        "o": [
+            "Highlights text with yellow",
+            "Changes text to yellow",
+            "None",
+            "Makes text bold"
+        ]
+    },
+    {
+        "q": "Which property is used to change the font of an element?",
+        "o": [
+            "font-family",
+            "text-font",
+            "font-type",
+            "typeface"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "table {\n    border-collapse: collapse;\n}",
+        "o": [
+            "Collapses table borders",
+            "Adds space between borders",
+            "None",
+            "Hides table"
+        ]
+    },
+    {
+        "q": "How do you make a list horizontal in CSS?",
+        "o": [
+            "display: inline;",
+            "list-style: inline;",
+            "display: block;",
+            "float: left;"
+        ]
+    },
+    {
+        "q": "What does this style apply?",
+        "l": "css",
+        "c": "h3 {\n    margin: 0;\n}",
+        "o": [
+            "Removes margin from h3",
+            "Adds margin to h3",
+            "None",
+            "Changes h3 color"
+        ]
+    },
+    {
+        "q": "What is the correct way to apply a CSS style to all <p> elements?",
+        "o": [
+            "p { }",
+            "all p { }",
+            "p.all { }",
+            "p:all { }"
+        ]
+    },
+    {
+        "q": "What does this CSS do?",
+        "l": "css",
+        "c": ".card {\n    box-shadow: 2px 2px 5px gray;\n}",
+        "o": [
+            "Adds shadow to card",
+            "Removes shadow from card",
+            "None",
+            "Makes card invisible"
+        ]
+    },
+    {
+        "q": "Which property controls the spacing between lines of text?",
+        "o": [
+            "line-height",
+            "spacing",
+            "text-spacing",
+            "height"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "input[type='text'] {\n    border: 1px solid black;\n}",
+        "o": [
+            "Styles text input border",
+            "Styles all input borders",
+            "None",
+            "Removes input border"
+        ]
+    },
+    {
+        "q": "What is the syntax for adding a comment in CSS?",
+        "o": [
+            "/* comment */",
+            "// comment",
+            "# comment",
+            "<!-- comment -->"
+        ]
+    },
+    {
+        "q": "What effect does this code create?",
+        "l": "css",
+        "c": "p:first-child {\n    font-weight: bold;\n}",
+        "o": [
+            "Makes first paragraph bold",
+            "Makes all paragraphs bold",
+            "None",
+            "Removes paragraph"
+        ]
+    },
+    {
+        "q": "Which property is used to add space around elements?",
+        "o": [
+            "margin",
+            "padding",
+            "space",
+            "border"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": ".hidden {\n    display: none;\n}",
+        "o": [
+            "Hides elements with class 'hidden'",
+            "Shows elements with class 'hidden'",
+            "None",
+            "Changes display to block"
+        ]
+    },
+    {
+        "q": "What value can 'display' property take?",
+        "o": [
+            "block",
+            "inline",
+            "flex",
+            "All of the options"
+        ]
+    },
+    {
+        "q": "What does this CSS selector target?",
+        "l": "css",
+        "c": "div.classname {\n    color: blue;\n}",
+        "o": [
+            "Divs with class 'classname'",
+            "All divs",
+            "None",
+            "All classes"
+        ]
+    },
+    {
+        "q": "How do you select all <h1> elements?",
+        "o": [
+            "h1 { }",
+            "h1.all { }",
+            "*h1 { }",
+            "All h1 { }"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": ".menu li:hover {\n    background-color: orange;\n}",
+        "o": [
+            "Changes background on hover",
+            "Changes text color",
+            "None",
+            "Makes list item invisible"
+        ]
+    },
+    {
+        "q": "Which of the following is not a CSS unit?",
+        "o": [
+            "px",
+            "em",
+            "kg",
+            "%"
+        ]
+    },
+    {
+        "q": "What does this CSS property do?",
+        "l": "css",
+        "c": "h4 {\n    text-transform: uppercase;\n}",
+        "o": [
+            "Makes text uppercase",
+            "Makes text lowercase",
+            "None",
+            "Hides text"
+        ]
+    },
+    {
+        "q": "Which property is used to change the text color?",
+        "o": [
+            "color",
+            "text-color",
+            "font-color",
+            "bg-color"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "span {\n    font-size: 12px;\n}",
+        "o": [
+            "Sets font size to 12px",
+            "Sets font size to 12pt",
+            "None",
+            "Hides span"
+        ]
+    },
+    {
+        "q": "What is the value of 'display' for inline elements?",
+        "o": [
+            "inline",
+            "block",
+            "flex",
+            "grid"
+        ]
+    },
+    {
+        "q": "What effect does this code produce?",
+        "l": "css",
+        "c": "h5 {\n    letter-spacing: 2px;\n}",
+        "o": [
+            "Adds spacing between letters",
+            "Removes spacing",
+            "None",
+            "Makes text invisible"
+        ]
+    },
+    {
+        "q": "Which property controls the visibility of an element?",
+        "o": [
+            "visibility",
+            "display",
+            "opacity",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What does this snippet set?",
+        "l": "css",
+        "c": "input[type='checkbox'] {\n    cursor: pointer;\n}",
+        "o": [
+            "Pointer cursor for checkboxes",
+            "Text cursor for checkboxes",
+            "None",
+            "Removes cursor"
+        ]
+    },
+    {
+        "q": "What is the syntax for setting a border?",
+        "o": [
+            "border: 1px solid black;",
+            "border: black solid 1px;",
+            "border: 1px black solid;",
+            "border: solid 1px black;"
+        ]
+    },
+    {
+        "q": "What does this CSS do?",
+        "l": "css",
+        "c": ".footer {\n    text-align: right;\n}",
+        "o": [
+            "Aligns footer text to right",
+            "Aligns footer text to left",
+            "None",
+            "Makes footer invisible"
+        ]
+    },
+    {
+        "q": "Which of the following is a pseudo-class?",
+        "o": [
+            ":hover",
+            "hover()",
+            "hover{}",
+            "hover[]"
+        ]
+    },
+    {
+        "q": "What does this snippet accomplish?",
+        "l": "css",
+        "c": ".active {\n    color: red;\n}",
+        "o": [
+            "Sets active color to red",
+            "Sets all colors to red",
+            "None",
+            "Hides active elements"
+        ]
+    },
+    {
+        "q": "How do you make a text bold in CSS?",
+        "o": [
+            "font-weight: bold;",
+            "font: bold;",
+            "text-weight: bold;",
+            "weight: bold;"
+        ]
+    },
+    {
+        "q": "What does this code modify?",
+        "l": "css",
+        "c": "blockquote {\n    border-left: 5px solid gray;\n}",
+        "o": [
+            "Adds border to blockquote",
+            "Removes border",
+            "None",
+            "Hides blockquote"
+        ]
+    },
+    {
+        "q": "What does the 'z-index' property do?",
+        "o": [
+            "Controls stack order",
+            "Sets opacity",
+            "Changes font size",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What is the purpose of this code?",
+        "l": "css",
+        "c": "img:hover {\n    opacity: 0.5;\n}",
+        "o": [
+            "Makes image semi-transparent on hover",
+            "Makes image fully transparent",
+            "None",
+            "Hides image"
+        ]
+    },
+    {
+        "q": "Which CSS property sets the spacing between the content and the border?",
+        "o": [
+            "padding",
+            "margin",
+            "border-spacing",
+            "space"
+        ]
+    },
+    {
+        "q": "What does this code control?",
+        "l": "css",
+        "c": "h6 {\n    text-decoration: underline;\n}",
+        "o": [
+            "Underlines the h6 text",
+            "Strikes through h6 text",
+            "None",
+            "Hides h6"
+        ]
+    },
+    {
+        "q": "What does 'em' represent in CSS?",
+        "o": [
+            "Font size",
+            "Length",
+            "Color",
+            "Width"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "ol {\n    counter-reset: item;\n}",
+        "o": [
+            "Resets list item counter",
+            "Adds counter to list",
+            "None",
+            "Hides list"
+        ]
+    },
+    {
+        "q": "What is the purpose of the 'overflow' property?",
+        "o": [
+            "Control content overflow",
+            "Set font style",
+            "Manage layout",
+            "Set background color"
+        ]
+    },
+    {
+        "q": "What does this snippet do?",
+        "l": "css",
+        "c": ".warning {\n    color: yellow;\n}",
+        "o": [
+            "Sets warning text to yellow",
+            "Sets all text to yellow",
+            "None",
+            "Hides warning"
+        ]
+    },
+    {
+        "q": "How can you apply CSS styles to all elements?",
+        "o": [
+            "* { }",
+            "all { }",
+            "universal { }",
+            "every { }"
+        ]
+    },
+    {
+        "q": "What is the effect of this CSS?",
+        "l": "css",
+        "c": "h1 {\n    font-family: Arial, sans-serif;\n}",
+        "o": [
+            "Sets font to Arial",
+            "Sets font to Times New Roman",
+            "None",
+            "Hides h1"
+        ]
+    },
+    {
+        "q": "Which of the following is a CSS framework?",
+        "o": [
+            "Bootstrap",
+            "HTML",
+            "JavaScript",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this snippet achieve?",
+        "l": "css",
+        "c": "input:focus {\n    outline: none;\n}",
+        "o": [
+            "Removes outline from focused input",
+            "Adds outline to input",
+            "None",
+            "Hides input"
+        ]
+    },
+    {
+        "q": "What property is used to control the size of an element?",
+        "o": [
+            "width",
+            "size",
+            "height",
+            "dimension"
+        ]
+    },
+    {
+        "q": "What does this code style?",
+        "l": "css",
+        "c": ".header {\n    position: relative;\n}",
+        "o": [
+            "Sets header position to relative",
+            "Sets header position to absolute",
+            "None",
+            "Hides header"
+        ]
+    },
+    {
+        "q": "Which CSS property is used for text decoration?",
+        "o": [
+            "text-decoration",
+            "text-style",
+            "text-color",
+            "text-effect"
+        ]
+    },
+    {
+        "q": "What does this CSS do?",
+        "l": "css",
+        "c": "p:nth-child(2) {\n    color: blue;\n}",
+        "o": [
+            "Colors second paragraph blue",
+            "Colors all paragraphs blue",
+            "None",
+            "Hides paragraph"
+        ]
+    },
+    {
+        "q": "What does 'rgba' stand for?",
+        "o": [
+            "Red, Green, Blue, Alpha",
+            "Red, Green, Blue, Adjustment",
+            "Red, Green, Brightness, Alpha",
+            "Red, Grey, Blue, Alpha"
+        ]
+    },
+    {
+        "q": "What is the result of this code?",
+        "l": "css",
+        "c": "button {\n    background-color: green;\n}",
+        "o": [
+            "Sets button background to green",
+            "Sets button text to green",
+            "None",
+            "Hides button"
+        ]
+    },
+    {
+        "q": "What is the effect of 'position: absolute'?",
+        "o": [
+            "Position relative to nearest positioned ancestor",
+            "Position fixed",
+            "Position relative to viewport",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this snippet define?",
+        "l": "css",
+        "c": "table tr:hover {\n    background-color: lightgray;\n}",
+        "o": [
+            "Highlights row on hover",
+            "Highlights cell on hover",
+            "None",
+            "Hides row"
+        ]
+    },
+    {
+        "q": "Which CSS property is used to create a shadow effect?",
+        "o": [
+            "box-shadow",
+            "text-shadow",
+            "shadow",
+            "effect"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": ".disabled {\n    pointer-events: none;\n}",
+        "o": [
+            "Disables interaction with element",
+            "Enables interaction",
+            "None",
+            "Hides element"
+        ]
+    },
+    {
+        "q": "What does 'flex' do in CSS?",
+        "o": [
+            "Creates flexible layouts",
+            "Changes text size",
+            "Adds padding",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What does this CSS achieve?",
+        "l": "css",
+        "c": ".flex-container {\n    display: flex;\n}",
+        "o": [
+            "Creates a flex container",
+            "Creates a grid container",
+            "None",
+            "Hides container"
+        ]
+    },
+    {
+        "q": "How do you select elements with a specific class?",
+        "o": [
+            ".classname { }",
+            "#classname { }",
+            "classname { }",
+            "*classname { }"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "blockquote {\n    margin: 20px;\n}",
+        "o": [
+            "Adds margin around blockquote",
+            "Removes margin",
+            "None",
+            "Hides blockquote"
+        ]
+    },
+    {
+        "q": "What is the purpose of the 'display: flex' property?",
+        "o": [
+            "Create flexible box layouts",
+            "Align text",
+            "Add borders",
+            "Set background"
+        ]
+    },
+    {
+        "q": "What does this CSS do?",
+        "l": "css",
+        "c": ".transition {\n    transition: all 0.3s;\n}",
+        "o": [
+            "Applies transition effect",
+            "Removes transition effect",
+            "None",
+            "Hides element"
+        ]
+    },
+    {
+        "q": "Which property is used to create a responsive design?",
+        "o": [
+            "media queries",
+            "flexbox",
+            "grid",
+            "All of the options"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "input[type='submit'] {\n    cursor: pointer;\n}",
+        "o": [
+            "Changes cursor to pointer",
+            "Changes cursor to text",
+            "None",
+            "Hides input"
+        ]
+    },
+    {
+        "q": "Which CSS property is used to control the font style?",
+        "o": [
+            "font-style",
+            "text-style",
+            "font-weight",
+            "font-size"
+        ]
+    },
+    {
+        "q": "What is the effect of this CSS?",
+        "l": "css",
+        "c": "h3 {\n    padding: 15px;\n}",
+        "o": [
+            "Adds padding to h3",
+            "Removes padding",
+            "None",
+            "Hides h3"
+        ]
+    },
+    {
+        "q": "How do you set a maximum width for an element?",
+        "o": [
+            "max-width",
+            "width-max",
+            "maximum-width",
+            "width-limit"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": ".grid {\n    display: grid;\n}",
+        "o": [
+            "Creates a grid layout",
+            "Creates a flex layout",
+            "None",
+            "Hides element"
+        ]
+    },
+    {
+        "q": "Which property sets the space between inline elements?",
+        "o": [
+            "letter-spacing",
+            "word-spacing",
+            "line-height",
+            "text-spacing"
+        ]
+    },
+    {
+        "q": "What does this snippet do?",
+        "l": "css",
+        "c": "footer {\n    font-size: 14px;\n}",
+        "o": [
+            "Sets footer font size",
+            "Sets footer color",
+            "None",
+            "Hides footer"
+        ]
+    },
+    {
+        "q": "How do you change the text alignment?",
+        "o": [
+            "text-align",
+            "align-text",
+            "text-position",
+            "align"
+        ]
+    },
+    {
+        "q": "What does this CSS do?",
+        "l": "css",
+        "c": "h2 {\n    text-align: justify;\n}",
+        "o": [
+            "Justifies h2 text",
+            "Aligns h2 to left",
+            "None",
+            "Hides h2"
+        ]
+    },
+    {
+        "q": "What is the use of 'opacity' property?",
+        "o": [
+            "Set transparency",
+            "Set color",
+            "Set position",
+            "Set size"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": ".card {\n    border: 1px solid black;\n}",
+        "o": [
+            "Adds border to card",
+            "Removes border from card",
+            "None",
+            "Hides card"
+        ]
+    },
+    {
+        "q": "How do you create a CSS grid?",
+        "o": [
+            "display: grid;",
+            "grid: layout;",
+            "layout: grid;",
+            "display: block;"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": ".hidden {\n    visibility: hidden;\n}",
+        "o": [
+            "Hides element",
+            "Shows element",
+            "None",
+            "Makes element transparent"
+        ]
+    },
+    {
+        "q": "Which of the following is a valid CSS comment?",
+        "o": [
+            "/* This is a comment */",
+            "// This is a comment",
+            "# This is a comment",
+            "<!-- This is a comment -->"
+        ]
+    },
+    {
+        "q": "What does this CSS define?",
+        "l": "css",
+        "c": "ul {\n    padding-left: 20px;\n}",
+        "o": [
+            "Adds padding to left of list",
+            "Adds padding to right",
+            "None",
+            "Hides list"
+        ]
+    },
+    {
+        "q": "What does 'margin: 0 auto;' do?",
+        "o": [
+            "Centers the element",
+            "Adds padding",
+            "Adds border",
+            "Sets font size"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "body {\n    margin: 0;\n}",
+        "o": [
+            "Removes body margin",
+            "Adds body margin",
+            "None",
+            "Hides body"
+        ]
+    },
+    {
+        "q": "How do you specify a color using RGB?",
+        "o": [
+            "rgb(255, 0, 0)",
+            "color(255, 0, 0)",
+            "red(255, 0, 0)",
+            "rgba(255, 0, 0)"
+        ]
+    },
+    {
+        "q": "What is the outcome of this snippet?",
+        "l": "css",
+        "c": ".text {\n    color: white;\n}",
+        "o": [
+            "Sets text color to white",
+            "Sets background to white",
+            "None",
+            "Hides text"
+        ]
+    },
+    {
+        "q": "Which property is used to style links?",
+        "o": [
+            "a { }",
+            "link { }",
+            "href { }",
+            "url { }"
+        ]
+    },
+    {
+        "q": "What does this CSS do?",
+        "l": "css",
+        "c": "div:hover {\n    background-color: lightblue;\n}",
+        "o": [
+            "Changes background on hover",
+            "Changes text color",
+            "None",
+            "Hides div"
+        ]
+    },
+    {
+        "q": "What is the function of the 'clear' property?",
+        "o": [
+            "Control floating elements",
+            "Set position",
+            "Set margin",
+            "Set padding"
+        ]
+    },
+    {
+        "q": "What does this code style?",
+        "l": "css",
+        "c": "input {\n    border-radius: 5px;\n}",
+        "o": [
+            "Rounds input corners",
+            "Adds square corners",
+            "None",
+            "Hides input"
+        ]
+    },
+    {
+        "q": "Which value is used for the 'float' property?",
+        "o": [
+            "left",
+            "right",
+            "none",
+            "All of the options"
+        ]
+    },
+    {
+        "q": "What does this CSS accomplish?",
+        "l": "css",
+        "c": ".active {\n    background-color: red;\n}",
+        "o": [
+            "Sets active background to red",
+            "Sets all backgrounds to red",
+            "None",
+            "Hides active elements"
+        ]
+    },
+    {
+        "q": "How can you reset all styles in CSS?",
+        "o": [
+            "* { margin: 0; padding: 0; }",
+            "reset { }",
+            "all { reset: true; }",
+            "universal-reset { }"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "h2 {\n    line-height: 1.5;\n}",
+        "o": [
+            "Sets line height to 1.5",
+            "Sets line height to 15px",
+            "None",
+            "Hides h2"
+        ]
+    },
+    {
+        "q": "Which property is used to control the size of an image?",
+        "o": [
+            "width",
+            "height",
+            "size",
+            "img-size"
+        ]
+    },
+    {
+        "q": "What is the result of this CSS?",
+        "l": "css",
+        "c": "li:last-child {\n    color: gray;\n}",
+        "o": [
+            "Colors last list item gray",
+            "Colors all items gray",
+            "None",
+            "Hides item"
+        ]
+    },
+    {
+        "q": "How do you apply multiple classes to an element?",
+        "o": [
+            "class='class1 class2'",
+            "class='class1,class2'",
+            "class='class1.class2'",
+            "class='class1&class2'"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": ".grid-item {\n    flex: 1;\n}",
+        "o": [
+            "Makes grid item flexible",
+            "Sets fixed size",
+            "None",
+            "Hides item"
+        ]
+    },
+    {
+        "q": "What is a CSS preprocessor?",
+        "o": [
+            "Sass",
+            "HTML",
+            "JavaScript",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this CSS do?",
+        "l": "css",
+        "c": "p:hover {\n    text-decoration: underline;\n}",
+        "o": [
+            "Underlines text on hover",
+            "Strikes through text",
+            "None",
+            "Hides text"
+        ]
+    },
+    {
+        "q": "How do you create a responsive font size?",
+        "o": [
+            "font-size: vw;",
+            "font-size: px;",
+            "font-size: em;",
+            "font-size: rem;"
+        ]
+    },
+    {
+        "q": "What does this snippet achieve?",
+        "l": "css",
+        "c": "button {\n    font-weight: bold;\n}",
+        "o": [
+            "Makes button text bold",
+            "Removes bold from button",
+            "None",
+            "Hides button"
+        ]
+    },
+    {
+        "q": "What is the syntax for a CSS variable?",
+        "o": [
+            "--variable-name: value;",
+            "$variable-name: value;",
+            "@variable-name: value;",
+            "var(variable-name): value;"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "nav {\n    display: flex;\n}",
+        "o": [
+            "Makes navigation a flex container",
+            "Makes navigation a grid",
+            "None",
+            "Hides navigation"
+        ]
+    },
+    {
+        "q": "Which property is used to add a transition effect?",
+        "o": [
+            "transition",
+            "effect",
+            "animation",
+            "change"
+        ]
+    },
+    {
+        "q": "What does this code style?",
+        "l": "css",
+        "c": "table th {\n    background-color: lightgray;\n}",
+        "o": [
+            "Styles table headers",
+            "Styles table cells",
+            "None",
+            "Hides table"
+        ]
+    },
+    {
+        "q": "How do you apply styles on hover?",
+        "o": [
+            "selector:hover { }",
+            "selector:focus { }",
+            "selector:active { }",
+            "selector:focus:hover { }"
+        ]
+    },
+    {
+        "q": "What does this CSS achieve?",
+        "l": "css",
+        "c": ".container {\n    max-width: 1200px;\n}",
+        "o": [
+            "Limits container width",
+            "Sets minimum width",
+            "None",
+            "Hides container"
+        ]
+    },
+    {
+        "q": "What does 'box-sizing: border-box' do?",
+        "o": [
+            "Includes padding and border in width",
+            "Sets border to none",
+            "Changes box color",
+            "Sets box shadow"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "span:hover {\n    color: red;\n}",
+        "o": [
+            "Changes color on hover",
+            "Changes color on click",
+            "None",
+            "Hides span"
+        ]
+    },
+    {
+        "q": "What is the purpose of media queries?",
+        "o": [
+            "Make designs responsive",
+            "Change colors",
+            "Set text styles",
+            "Manage layout"
+        ]
+    },
+    {
+        "q": "What does this CSS accomplish?",
+        "l": "css",
+        "c": ".link {\n    text-decoration: none;\n}",
+        "o": [
+            "Removes underline from links",
+            "Adds underline to links",
+            "None",
+            "Hides link"
+        ]
+    },
+    {
+        "q": "Which property is used for rounded corners?",
+        "o": [
+            "border-radius",
+            "corner-radius",
+            "border-corner",
+            "radius"
+        ]
+    },
+    {
+        "q": "What does this snippet define?",
+        "l": "css",
+        "c": "h1 {\n    font-size: 36px;\n}",
+        "o": [
+            "Sets h1 font size",
+            "Sets h1 color",
+            "None",
+            "Hides h1"
+        ]
+    },
+    {
+        "q": "How do you create a tooltip using CSS?",
+        "o": [
+            "Using 'title' attribute",
+            "Using ':hover'",
+            "Using 'data' attribute",
+            "Using 'info' class"
+        ]
+    },
+    {
+        "q": "What effect does this code produce?",
+        "l": "css",
+        "c": "ul li {\n    display: inline;\n}",
+        "o": [
+            "Displays list items inline",
+            "Displays items as block",
+            "None",
+            "Hides list"
+        ]
+    },
+    {
+        "q": "Which CSS property controls the display of an element?",
+        "o": [
+            "display",
+            "visibility",
+            "opacity",
+            "show"
+        ]
+    },
+    {
+        "q": "What does this CSS do?",
+        "l": "css",
+        "c": ".alert {\n    color: red;\n}",
+        "o": [
+            "Sets alert text color to red",
+            "Sets all text to red",
+            "None",
+            "Hides alert"
+        ]
+    },
+    {
+        "q": "How do you hide an element using CSS?",
+        "o": [
+            "display: none;",
+            "visibility: hidden;",
+            "opacity: 0;",
+            "All of the options"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "h3 {\n    margin: 0;\n}",
+        "o": [
+            "Removes h3 margin",
+            "Adds margin to h3",
+            "None",
+            "Hides h3"
+        ]
+    },
+    {
+        "q": "Which property changes the cursor style?",
+        "o": [
+            "cursor",
+            "pointer",
+            "style",
+            "hover"
+        ]
+    },
+    {
+        "q": "What does this snippet accomplish?",
+        "l": "css",
+        "c": "p {\n    font-style: italic;\n}",
+        "o": [
+            "Makes text italic",
+            "Makes text bold",
+            "None",
+            "Hides paragraph"
+        ]
+    },
+    {
+        "q": "What does 'flex-direction: column' do?",
+        "o": [
+            "Stacks items vertically",
+            "Stacks items horizontally",
+            "Aligns items center",
+            "Justifies content"
+        ]
+    },
+    {
+        "q": "What effect does this CSS have?",
+        "l": "css",
+        "c": "a:visited {\n    color: purple;\n}",
+        "o": [
+            "Colors visited links purple",
+            "Colors all links purple",
+            "None",
+            "Hides links"
+        ]
+    },
+    {
+        "q": "How do you create a CSS animation?",
+        "o": [
+            "@keyframes",
+            "animation()",
+            "transition()",
+            "animate()"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": ".sidebar {\n    width: 300px;\n}",
+        "o": [
+            "Sets sidebar width to 300px",
+            "Sets sidebar height",
+            "None",
+            "Hides sidebar"
+        ]
+    },
+    {
+        "q": "What does the 'transition-duration' property specify?",
+        "o": [
+            "Time for a transition",
+            "Size of transition",
+            "Color change time",
+            "Duration of animation"
+        ]
+    },
+    {
+        "q": "What does this CSS define?",
+        "l": "css",
+        "c": "img {\n    max-width: 100%;\n}",
+        "o": [
+            "Sets image max width to 100%",
+            "Sets image height",
+            "None",
+            "Hides image"
+        ]
+    },
+    {
+        "q": "What is a responsive image?",
+        "o": [
+            "An image that adapts to screen size",
+            "An image with fixed size",
+            "An image with high resolution",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": ".btn {\n    padding: 10px 20px;\n}",
+        "o": [
+            "Adds padding to button",
+            "Removes padding",
+            "None",
+            "Hides button"
+        ]
+    },
+    {
+        "q": "Which property controls the position of a fixed element?",
+        "o": [
+            "top",
+            "bottom",
+            "left",
+            "right"
+        ]
+    },
+    {
+        "q": "What does this CSS do?",
+        "l": "css",
+        "c": ".hidden {\n    display: none;\n}",
+        "o": [
+            "Hides element",
+            "Shows element",
+            "None",
+            "Makes element transparent"
+        ]
+    },
+    {
+        "q": "What is the purpose of the 'opacity' property?",
+        "o": [
+            "Set transparency",
+            "Set color",
+            "Set position",
+            "Set size"
+        ]
+    },
+    {
+        "q": "What does this code accomplish?",
+        "l": "css",
+        "c": "h1 {\n    text-transform: uppercase;\n}",
+        "o": [
+            "Transforms text to uppercase",
+            "Transforms to lowercase",
+            "None",
+            "Hides h1"
+        ]
+    },
+    {
+        "q": "Which of the following is a valid CSS rule?",
+        "o": [
+            "selector { property: value; }",
+            "selector: property value;",
+            "property: value; selector { }",
+            "All of the options"
+        ]
+    },
+    {
+        "q": "What effect does this code have?",
+        "l": "css",
+        "c": "input[type='text'] {\n    width: 100%;\n}",
+        "o": [
+            "Sets text input width to 100%",
+            "Sets text input height",
+            "None",
+            "Hides input"
+        ]
+    },
+    {
+        "q": "Which selector is used for IDs?",
+        "o": [
+            "#",
+            ".",
+            "*",
+            "$"
+        ]
+    },
+    {
+        "q": "What does this snippet define?",
+        "l": "css",
+        "c": "li:hover {\n    background-color: lightyellow;\n}",
+        "o": [
+            "Changes background on hover",
+            "Changes text color",
+            "None",
+            "Hides list item"
+        ]
+    },
+    {
+        "q": "How do you select the second child of an element?",
+        "o": [
+            "element:nth-child(2)",
+            "element:second-child",
+            "element.child(2)",
+            "element:nth(2)"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": ".header {\n    display: block;\n}",
+        "o": [
+            "Makes header a block element",
+            "Makes header inline",
+            "None",
+            "Hides header"
+        ]
+    },
+    {
+        "q": "What is the shorthand for 'padding-top', 'padding-right', 'padding-bottom', and 'padding-left'?",
+        "o": [
+            "padding",
+            "pad",
+            "padding-all",
+            "padding-set"
+        ]
+    },
+    {
+        "q": "What does this CSS do?",
+        "l": "css",
+        "c": "h4 {\n    font-weight: bold;\n}",
+        "o": [
+            "Makes h4 bold",
+            "Makes h4 italic",
+            "None",
+            "Hides h4"
+        ]
+    },
+    {
+        "q": "Which property is used to change the font color?",
+        "o": [
+            "color",
+            "font-color",
+            "text-color",
+            "font"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "form {\n    display: flex;\n}",
+        "o": [
+            "Makes form a flex container",
+            "Makes form grid",
+            "None",
+            "Hides form"
+        ]
+    },
+    {
+        "q": "What does 'white-space: nowrap;' do?",
+        "o": [
+            "Prevents text wrapping",
+            "Wraps text",
+            "Aligns text",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "p:nth-of-type(3) {\n    color: red;\n}",
+        "o": [
+            "Colors third paragraph red",
+            "Colors all paragraphs red",
+            "None",
+            "Hides paragraph"
+        ]
+    },
+    {
+        "q": "How do you create a linear gradient in CSS?",
+        "o": [
+            "background: linear-gradient();",
+            "gradient: linear();",
+            "bg-gradient: linear();",
+            "bg: linear-gradient();"
+        ]
+    },
+    {
+        "q": "What does this CSS accomplish?",
+        "l": "css",
+        "c": "h5 {\n    text-decoration: line-through;\n}",
+        "o": [
+            "Strikes through h5 text",
+            "Underlines h5 text",
+            "None",
+            "Hides h5"
+        ]
+    },
+    {
+        "q": "What does 'position: sticky' do?",
+        "o": [
+            "Keeps an element fixed",
+            "Scrolls with the page",
+            "Sticks to the top when scrolled",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "h2 {\n    border-bottom: 2px solid black;\n}",
+        "o": [
+            "Adds bottom border to h2",
+            "Adds top border",
+            "None",
+            "Hides h2"
+        ]
+    },
+    {
+        "q": "Which property is used to change the opacity of an element?",
+        "o": [
+            "opacity",
+            "transparency",
+            "visible",
+            "display"
+        ]
+    },
+    {
+        "q": "What does this snippet achieve?",
+        "l": "css",
+        "c": ".warning {\n    color: orange;\n}",
+        "o": [
+            "Sets warning color to orange",
+            "Sets all text orange",
+            "None",
+            "Hides warning"
+        ]
+    },
+    {
+        "q": "How do you create a dropdown menu using CSS?",
+        "o": [
+            "Using :hover and visibility",
+            "Using display:block",
+            "Using display:flex",
+            "All of the options"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "button:hover {\n    background-color: blue;\n}",
+        "o": [
+            "Changes button background on hover",
+            "Changes button text color",
+            "None",
+            "Hides button"
+        ]
+    },
+    {
+        "q": "What is the default value of the 'display' property?",
+        "o": [
+            "block",
+            "inline",
+            "none",
+            "flex"
+        ]
+    },
+    {
+        "q": "What does this CSS define?",
+        "l": "css",
+        "c": "p:first-child {\n    font-size: 20px;\n}",
+        "o": [
+            "Sets first paragraph font size",
+            "Sets all paragraphs font size",
+            "None",
+            "Hides paragraph"
+        ]
+    },
+    {
+        "q": "Which CSS property is used for setting the background image?",
+        "o": [
+            "background-image",
+            "bg-image",
+            "image",
+            "background"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "ul {\n    list-style-type: square;\n}",
+        "o": [
+            "Changes list style to square",
+            "Removes list style",
+            "None",
+            "Hides list"
+        ]
+    },
+    {
+        "q": "What does 'align-items: center' do in flexbox?",
+        "o": [
+            "Centers items vertically",
+            "Centers items horizontally",
+            "Aligns items left",
+            "Aligns items right"
+        ]
+    },
+    {
+        "q": "What does this CSS accomplish?",
+        "l": "css",
+        "c": ".overlay {\n    position: absolute;\n}",
+        "o": [
+            "Makes overlay absolute positioned",
+            "Makes overlay relative",
+            "None",
+            "Hides overlay"
+        ]
+    },
+    {
+        "q": "How do you apply a style for a specific state of an element?",
+        "o": [
+            "Using pseudo-classes",
+            "Using classes",
+            "Using IDs",
+            "Using attributes"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "h1 {\n    text-shadow: 2px 2px #000;\n}",
+        "o": [
+            "Adds shadow to h1 text",
+            "Removes shadow",
+            "None",
+            "Hides h1"
+        ]
+    },
+    {
+        "q": "What does 'font-size: 1.5em' mean?",
+        "o": [
+            "1.5 times the parent font size",
+            "1.5 pixels",
+            "1.5 times the screen size",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": ".footer {\n    text-align: center;\n}",
+        "o": [
+            "Centers footer text",
+            "Aligns footer text left",
+            "None",
+            "Hides footer"
+        ]
+    },
+    {
+        "q": "How can you make an element flex?",
+        "o": [
+            "display: flex;",
+            "flex: true;",
+            "make-flex: true;",
+            "display: block;"
+        ]
+    },
+    {
+        "q": "What does this CSS define?",
+        "l": "css",
+        "c": ".visible {\n    opacity: 1;\n}",
+        "o": [
+            "Makes element fully visible",
+            "Makes element invisible",
+            "None",
+            "Hides element"
+        ]
+    },
+    {
+        "q": "Which CSS property sets the text to uppercase?",
+        "o": [
+            "text-transform: uppercase;",
+            "text-case: upper;",
+            "text-style: uppercase;",
+            "font-case: upper;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "img:hover {\n    transform: scale(1.1);\n}",
+        "o": [
+            "Scales image on hover",
+            "Rotates image",
+            "None",
+            "Hides image"
+        ]
+    },
+    {
+        "q": "How do you add space between letters?",
+        "o": [
+            "letter-spacing",
+            "letter-space",
+            "spacing",
+            "text-spacing"
+        ]
+    },
+    {
+        "q": "What does this snippet achieve?",
+        "l": "css",
+        "c": "p:nth-last-of-type(1) {\n    color: green;\n}",
+        "o": [
+            "Colors last paragraph green",
+            "Colors all paragraphs green",
+            "None",
+            "Hides paragraph"
+        ]
+    },
+    {
+        "q": "What does 'z-index' control?",
+        "o": [
+            "Stacking order of elements",
+            "Size of elements",
+            "Position of elements",
+            "Color of elements"
+        ]
+    },
+    {
+        "q": "What does this CSS do?",
+        "l": "css",
+        "c": "a:active {\n    color: blue;\n}",
+        "o": [
+            "Colors active link blue",
+            "Colors all links blue",
+            "None",
+            "Hides link"
+        ]
+    },
+    {
+        "q": "Which property is used to create a CSS grid?",
+        "o": [
+            "display: grid;",
+            "grid: create;",
+            "layout: grid;",
+            "grid: display;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": ".carousel {\n    display: block;\n}",
+        "o": [
+            "Makes carousel a block element",
+            "Makes carousel inline",
+            "None",
+            "Hides carousel"
+        ]
+    },
+    {
+        "q": "What is the default display property for a div?",
+        "o": [
+            "block",
+            "inline",
+            "flex",
+            "none"
+        ]
+    },
+    {
+        "q": "What does this CSS define?",
+        "l": "css",
+        "c": "input[type='checkbox'] {\n    margin: 10px;\n}",
+        "o": [
+            "Adds margin to checkbox",
+            "Adds padding",
+            "None",
+            "Hides checkbox"
+        ]
+    },
+    {
+        "q": "Which CSS property is used to set the width of an element?",
+        "o": [
+            "width",
+            "size",
+            "length",
+            "height"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "textarea {\n    resize: none;\n}",
+        "o": [
+            "Disables textarea resizing",
+            "Enables resizing",
+            "None",
+            "Hides textarea"
+        ]
+    },
+    {
+        "q": "What is a pseudo-class?",
+        "o": [
+            "A special state of an element",
+            "A type of class",
+            "A CSS variable",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this CSS achieve?",
+        "l": "css",
+        "c": "h2 {\n    font-family: 'Arial';\n}",
+        "o": [
+            "Sets font family to Arial",
+            "Sets font size",
+            "None",
+            "Hides h2"
+        ]
+    },
+    {
+        "q": "Which of the following is a CSS selector?",
+        "o": [
+            ".className",
+            "#idName",
+            "element",
+            "All of the options"
+        ]
+    },
+    {
+        "q": "What is the result of this code?",
+        "l": "css",
+        "c": "p:last-child {\n    font-weight: normal;\n}",
+        "o": [
+            "Sets last paragraph font weight",
+            "Sets all paragraphs font weight",
+            "None",
+            "Hides paragraph"
+        ]
+    },
+    {
+        "q": "How do you select all paragraphs in CSS?",
+        "o": [
+            "p { }",
+            "paragraph { }",
+            ".p { }",
+            "#p { }"
+        ]
+    },
+    {
+        "q": "What does this snippet define?",
+        "l": "css",
+        "c": ".scroll {\n    overflow-y: scroll;\n}",
+        "o": [
+            "Adds vertical scroll",
+            "Adds horizontal scroll",
+            "None",
+            "Hides element"
+        ]
+    },
+    {
+        "q": "What does 'flex-wrap: wrap;' do?",
+        "o": [
+            "Allows items to wrap",
+            "Prevents wrapping",
+            "Aligns items center",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "h3 {\n    text-align: right;\n}",
+        "o": [
+            "Aligns h3 text to right",
+            "Aligns text to left",
+            "None",
+            "Hides h3"
+        ]
+    },
+    {
+        "q": "Which property controls the visibility of an element?",
+        "o": [
+            "visibility",
+            "display",
+            "opacity",
+            "all"
+        ]
+    },
+    {
+        "q": "What does this CSS define?",
+        "l": "css",
+        "c": ".bg-light {\n    background-color: lightblue;\n}",
+        "o": [
+            "Sets light blue background",
+            "Sets text color",
+            "None",
+            "Hides background"
+        ]
+    },
+    {
+        "q": "How do you set a background color in CSS?",
+        "o": [
+            "background-color: #000;",
+            "bg-color: #000;",
+            "color: #000;",
+            "background: #000;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "table {\n    border-collapse: collapse;\n}",
+        "o": [
+            "Collapses table borders",
+            "Expands table borders",
+            "None",
+            "Hides table"
+        ]
+    },
+    {
+        "q": "What does 'display: inline-block;' do?",
+        "o": [
+            "Allows block elements in line",
+            "Makes element block",
+            "Makes element inline",
+            "Sets width"
+        ]
+    },
+    {
+        "q": "What does this snippet achieve?",
+        "l": "css",
+        "c": "h1:hover {\n    color: red;\n}",
+        "o": [
+            "Changes h1 color on hover",
+            "Changes h1 size",
+            "None",
+            "Hides h1"
+        ]
+    },
+    {
+        "q": "How do you select the first child of an element?",
+        "o": [
+            "element:first-child",
+            "element.first-child",
+            "element:child(1)",
+            "element:first"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": ".focus {\n    outline: none;\n}",
+        "o": [
+            "Removes outline on focus",
+            "Adds outline",
+            "None",
+            "Hides element"
+        ]
+    },
+    {
+        "q": "Which property is used for text alignment?",
+        "o": [
+            "text-align",
+            "align",
+            "text-position",
+            "align-text"
+        ]
+    },
+    {
+        "q": "What does this CSS define?",
+        "l": "css",
+        "c": "blockquote {\n    border-left: 5px solid gray;\n}",
+        "o": [
+            "Adds left border to blockquote",
+            "Adds right border",
+            "None",
+            "Hides blockquote"
+        ]
+    },
+    {
+        "q": "How do you change the font style?",
+        "o": [
+            "font-style",
+            "font",
+            "style",
+            "text-style"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "li.active {\n    font-weight: bold;\n}",
+        "o": [
+            "Makes active list item bold",
+            "Makes all list items bold",
+            "None",
+            "Hides item"
+        ]
+    },
+    {
+        "q": "What does 'opacity: 0;' do?",
+        "o": [
+            "Makes element invisible",
+            "Hides element",
+            "Sets color to transparent",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this CSS do?",
+        "l": "css",
+        "c": "p:hover {\n    color: green;\n}",
+        "o": [
+            "Changes paragraph color on hover",
+            "Changes paragraph size",
+            "None",
+            "Hides paragraph"
+        ]
+    },
+    {
+        "q": "Which of the following is a block-level element?",
+        "o": [
+            "div",
+            "span",
+            "a",
+            "img"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": ".rounded {\n    border-radius: 5px;\n}",
+        "o": [
+            "Rounds corners of element",
+            "Makes corners square",
+            "None",
+            "Hides element"
+        ]
+    },
+    {
+        "q": "What does 'background-size: cover;' do?",
+        "o": [
+            "Covers the element area",
+            "Sets background size to fixed",
+            "Sets background to none",
+            "Aligns background"
+        ]
+    },
+    {
+        "q": "What does this CSS define?",
+        "l": "css",
+        "c": "footer {\n    background-color: gray;\n}",
+        "o": [
+            "Sets footer background to gray",
+            "Sets footer text color",
+            "None",
+            "Hides footer"
+        ]
+    },
+    {
+        "q": "How do you change the font family?",
+        "o": [
+            "font-family",
+            "font-type",
+            "font-style",
+            "font-name"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "nav {\n    display: flex;\n}",
+        "o": [
+            "Makes nav a flex container",
+            "Makes nav block",
+            "None",
+            "Hides nav"
+        ]
+    },
+    {
+        "q": "Which property is used to control the visibility of an element?",
+        "o": [
+            "visibility",
+            "opacity",
+            "display",
+            "size"
+        ]
+    },
+    {
+        "q": "What does this CSS do?",
+        "l": "css",
+        "c": ".card {\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n}",
+        "o": [
+            "Adds shadow to card",
+            "Removes shadow",
+            "None",
+            "Hides card"
+        ]
+    },
+    {
+        "q": "What does 'position: absolute;' do?",
+        "o": [
+            "Position relative to nearest positioned ancestor",
+            "Position relative to viewport",
+            "Position fixed",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you create a responsive layout?",
+        "o": [
+            "Use media queries",
+            "Use fixed sizes",
+            "Use absolute positioning",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: no-repeat;' do?",
+        "o": [
+            "Prevents background image repetition",
+            "Repeats background",
+            "Sets background to none",
+            "Aligns background"
+        ]
+    },
+    {
+        "q": "How do you select an element with a specific class?",
+        "o": [
+            ".className { }",
+            "#className { }",
+            "className { }",
+            "element.className { }"
+        ]
+    },
+    {
+        "q": "Which CSS property is used to set the height of an element?",
+        "o": [
+            "height",
+            "width",
+            "size",
+            "length"
+        ]
+    },
+    {
+        "q": "How do you create a responsive design?",
+        "o": [
+            "Use media queries",
+            "Use fixed sizes",
+            "Use absolute positioning",
+            "None"
+        ]
+    },
+    {
+        "q": "What is the purpose of 'text-decoration' property?",
+        "o": [
+            "Add decorations to text",
+            "Change font style",
+            "Set text color",
+            "Align text"
+        ]
+    },
+    {
+        "q": "How do you center an element horizontally?",
+        "o": [
+            "margin: 0 auto;",
+            "center: true;",
+            "padding: center;",
+            "align: center;"
+        ]
+    },
+    {
+        "q": "What does 'display: flex;' do?",
+        "o": [
+            "Creates a flex container",
+            "Creates a grid",
+            "Sets block display",
+            "Sets inline display"
+        ]
+    },
+    {
+        "q": "Which property sets the outline of an element?",
+        "o": [
+            "outline",
+            "border",
+            "edge",
+            "line"
+        ]
+    },
+    {
+        "q": "What does 'align-self: flex-end;' do?",
+        "o": [
+            "Aligns item to end",
+            "Centers item",
+            "Aligns item to start",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you change the list style?",
+        "o": [
+            "list-style",
+            "style-list",
+            "list-type",
+            "list"
+        ]
+    },
+    {
+        "q": "Which CSS property is used to set the transition effect?",
+        "o": [
+            "transition",
+            "animation",
+            "effect",
+            "change"
+        ]
+    },
+    {
+        "q": "What does 'flex: 1;' do?",
+        "o": [
+            "Makes item flexible",
+            "Sets fixed size",
+            "Aligns items",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you select all elements of a specific type?",
+        "o": [
+            "element { }",
+            ".element { }",
+            "#element { }",
+            "All { }"
+        ]
+    },
+    {
+        "q": "Which property is used to control the line height?",
+        "o": [
+            "line-height",
+            "height",
+            "spacing",
+            "text-height"
+        ]
+    },
+    {
+        "q": "What does 'cursor: pointer;' do?",
+        "o": [
+            "Changes cursor to pointer",
+            "Changes cursor to text",
+            "None",
+            "Changes cursor to wait"
+        ]
+    },
+    {
+        "q": "How do you create a CSS class?",
+        "o": [
+            ".className { }",
+            "#className { }",
+            "className { }",
+            "element.className { }"
+        ]
+    },
+    {
+        "q": "Which CSS property is used to control the font size?",
+        "o": [
+            "font-size",
+            "text-size",
+            "size",
+            "text"
+        ]
+    },
+    {
+        "q": "What does 'justify-content: center;' do?",
+        "o": [
+            "Centers flex items",
+            "Aligns items left",
+            "Aligns items right",
+            "Sets spacing"
+        ]
+    },
+    {
+        "q": "How do you apply a background color to a class?",
+        "o": [
+            ".className { background-color: #000; }",
+            "#className { background: #000; }",
+            "className { background: #000; }",
+            "element.className { background: #000; }"
+        ]
+    },
+    {
+        "q": "Which property sets the text to bold?",
+        "o": [
+            "font-weight",
+            "text-weight",
+            "font-style",
+            "text-bold"
+        ]
+    },
+    {
+        "q": "How do you set the box shadow?",
+        "o": [
+            "box-shadow",
+            "shadow",
+            "outline",
+            "effect"
+        ]
+    },
+    {
+        "q": "What does 'overflow: hidden;' do?",
+        "o": [
+            "Hides overflowed content",
+            "Shows overflowed content",
+            "Sets visibility",
+            "None"
+        ]
+    },
+    {
+        "q": "Which property is used for the text underline?",
+        "o": [
+            "text-decoration",
+            "underline",
+            "line",
+            "text-style"
+        ]
+    },
+    {
+        "q": "How do you create a CSS id?",
+        "o": [
+            "#idName { }",
+            ".idName { }",
+            "idName { }",
+            "element#idName { }"
+        ]
+    },
+    {
+        "q": "What does 'text-align: right;' do?",
+        "o": [
+            "Aligns text to the right",
+            "Aligns text to the left",
+            "Centers text",
+            "None"
+        ]
+    },
+    {
+        "q": "Which property is used to set the font color?",
+        "o": [
+            "color",
+            "font-color",
+            "text-color",
+            "style"
+        ]
+    },
+    {
+        "q": "What does 'margin: auto;' do?",
+        "o": [
+            "Centers element",
+            "Adds margin",
+            "Sets padding",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you create a CSS variable?",
+        "o": [
+            "--variableName",
+            "$variableName",
+            "variableName",
+            "@variableName"
+        ]
+    },
+    {
+        "q": "Which property is used for the text indent?",
+        "o": [
+            "text-indent",
+            "indent",
+            "text-space",
+            "margin"
+        ]
+    },
+    {
+        "q": "What does 'display: none;' do?",
+        "o": [
+            "Hides the element",
+            "Shows the element",
+            "Sets visibility",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you select the last child of an element?",
+        "o": [
+            "element:last-child",
+            "element.last-child",
+            "element:child(last)",
+            "element:last"
+        ]
+    },
+    {
+        "q": "What does 'flex-direction: column;' do?",
+        "o": [
+            "Arranges items in a column",
+            "Arranges items in a row",
+            "Aligns items center",
+            "None"
+        ]
+    },
+    {
+        "q": "Which property is used for the list style type?",
+        "o": [
+            "list-style-type",
+            "list-type",
+            "style",
+            "list"
+        ]
+    },
+    {
+        "q": "How do you create a border?",
+        "o": [
+            "border",
+            "outline",
+            "line",
+            "edge"
+        ]
+    },
+    {
+        "q": "What does 'padding: 10px;' do?",
+        "o": [
+            "Adds 10px of padding",
+            "Adds 10px margin",
+            "Sets width",
+            "None"
+        ]
+    },
+    {
+        "q": "Which property is used for the transition duration?",
+        "o": [
+            "transition-duration",
+            "duration",
+            "time",
+            "change-time"
+        ]
+    },
+    {
+        "q": "What does 'align-items: center;' do?",
+        "o": [
+            "Centers items in flex container",
+            "Aligns items left",
+            "Aligns items right",
+            "Sets spacing"
+        ]
+    },
+    {
+        "q": "How do you create a CSS comment?",
+        "o": [
+            "/* Comment */",
+            "// Comment",
+            "# Comment",
+            "<!-- Comment -->"
+        ]
+    },
+    {
+        "q": "Which property is used for the vertical alignment?",
+        "o": [
+            "vertical-align",
+            "align",
+            "position",
+            "spacing"
+        ]
+    },
+    {
+        "q": "What does 'display: grid;' do?",
+        "o": [
+            "Creates a grid layout",
+            "Creates a flex layout",
+            "Sets block display",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you set a hover effect?",
+        "o": [
+            "element:hover { }",
+            "element.hover { }",
+            "element.hover-effect { }",
+            "element:hover-effect { }"
+        ]
+    },
+    {
+        "q": "What does 'min-width: 100px;' do?",
+        "o": [
+            "Sets minimum width to 100px",
+            "Sets maximum width to 100px",
+            "Sets width to 100px",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you select elements with multiple classes?",
+        "o": [
+            ".class1.class2 { }",
+            ".class1, .class2 { }",
+            "#class1.class2 { }",
+            ".class1 #class2 { }"
+        ]
+    },
+    {
+        "q": "Which property is used for the cursor style?",
+        "o": [
+            "cursor",
+            "pointer",
+            "style",
+            "effect"
+        ]
+    },
+    {
+        "q": "What does 'border-radius: 10px;' do?",
+        "o": [
+            "Rounds corners of the element",
+            "Sets border width",
+            "Sets border color",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you create a CSS animation?",
+        "o": [
+            "@keyframes",
+            "animation",
+            "transition",
+            "effect"
+        ]
+    },
+    {
+        "q": "What does 'text-transform: uppercase;' do?",
+        "o": [
+            "Makes text uppercase",
+            "Makes text lowercase",
+            "Capitalizes text",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you remove bullet points from a list?",
+        "o": [
+            "list-style: none;",
+            "bullet: none;",
+            "list: none;",
+            "none: bullet;"
+        ]
+    },
+    {
+        "q": "What does 'flex-grow: 1;' do?",
+        "o": [
+            "Allows item to grow",
+            "Prevents item from growing",
+            "Aligns item",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you create a grid item?",
+        "o": [
+            "grid-item { }",
+            "grid { }",
+            "item { }",
+            "element { }"
+        ]
+    },
+    {
+        "q": "What does 'position: relative;' do?",
+        "o": [
+            "Positions relative to normal position",
+            "Positions fixed",
+            "Positions absolute",
+            "None"
+        ]
+    },
+    {
+        "q": "Which property is used for the flex item basis?",
+        "o": [
+            "flex-basis",
+            "flex-grow",
+            "flex-shrink",
+            "size"
+        ]
+    },
+    {
+        "q": "What does 'transition: all 0.3s;' do?",
+        "o": [
+            "Adds transition effect of 0.3 seconds",
+            "Sets duration of animation",
+            "None",
+            "Changes all properties"
+        ]
+    },
+    {
+        "q": "How do you apply a margin to all sides?",
+        "o": [
+            "margin: 10px;",
+            "margin: 10px 10px 10px 10px;",
+            "margin: 10px 10px;",
+            "margin: auto;"
+        ]
+    },
+    {
+        "q": "What does 'align-items: stretch;' do?",
+        "o": [
+            "Stretches items to fill container",
+            "Centers items",
+            "Aligns items left",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you create a CSS hover effect?",
+        "o": [
+            "element:hover { }",
+            "element:hover-effect { }",
+            "element.effect { }",
+            "element.hover { }"
+        ]
+    },
+    {
+        "q": "Which property is used to set the transition property?",
+        "o": [
+            "transition-property",
+            "transition",
+            "effect",
+            "change"
+        ]
+    },
+    {
+        "q": "What does 'padding: 0;' do?",
+        "o": [
+            "Removes padding",
+            "Adds padding",
+            "Sets width",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you create a CSS pseudo-element?",
+        "o": [
+            "element::pseudo-element { }",
+            "element:pseudo-element { }",
+            "element::effect { }",
+            "element:pseudo { }"
+        ]
+    },
+    {
+        "q": "What does 'border: 1px solid #000;' do?",
+        "o": [
+            "Creates a solid border",
+            "Sets background",
+            "Sets padding",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you set the transition timing function?",
+        "o": [
+            "transition-timing-function",
+            "timing-function",
+            "duration",
+            "time"
+        ]
+    },
+    {
+        "q": "What does 'flex-shrink: 0;' do?",
+        "o": [
+            "Prevents item from shrinking",
+            "Allows item to grow",
+            "Aligns item",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you create a CSS outline?",
+        "o": [
+            "outline",
+            "border",
+            "edge",
+            "line"
+        ]
+    },
+    {
+        "q": "What does 'overflow: scroll;' do?",
+        "o": [
+            "Adds scrollbars if needed",
+            "Hides overflowed content",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you set a fixed position?",
+        "o": [
+            "position: fixed;",
+            "position: absolute;",
+            "position: relative;",
+            "position: sticky;"
+        ]
+    },
+    {
+        "q": "Which property sets the display style?",
+        "o": [
+            "display",
+            "visibility",
+            "style",
+            "layout"
+        ]
+    },
+    {
+        "q": "What does 'flex-basis: 50%;' do?",
+        "o": [
+            "Sets initial size of flex item",
+            "Sets size to 50px",
+            "Sets maximum size",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you select an element by id?",
+        "o": [
+            "#idName { }",
+            ".idName { }",
+            "idName { }",
+            "element#idName { }"
+        ]
+    },
+    {
+        "q": "What does 'text-shadow: 2px 2px #000;' do?",
+        "o": [
+            "Adds a shadow to text",
+            "Sets text color",
+            "None",
+            "Aligns text"
+        ]
+    },
+    {
+        "q": "Which property is used for the list item marker?",
+        "o": [
+            "list-style-type",
+            "marker",
+            "list-type",
+            "style"
+        ]
+    },
+    {
+        "q": "What does 'max-width: 100%;' do?",
+        "o": [
+            "Sets maximum width to 100%",
+            "Sets minimum width to 100%",
+            "None",
+            "Sets width to 100%"
+        ]
+    },
+    {
+        "q": "How do you create a CSS transition?",
+        "o": [
+            "transition { }",
+            "@transition",
+            "animation { }",
+            "effect { }"
+        ]
+    },
+    {
+        "q": "What does 'opacity: 0.5;' do?",
+        "o": [
+            "Sets element transparency",
+            "Sets visibility",
+            "None",
+            "Adds color"
+        ]
+    },
+    {
+        "q": "Which property is used for setting the background image?",
+        "o": [
+            "background-image",
+            "image",
+            "background",
+            "img"
+        ]
+    },
+    {
+        "q": "What does 'float: left;' do?",
+        "o": [
+            "Floats element to the left",
+            "Floats element to the right",
+            "None",
+            "Aligns element"
+        ]
+    },
+    {
+        "q": "How do you create a media query?",
+        "o": [
+            "@media",
+            "@query",
+            "@responsive",
+            "@device"
+        ]
+    },
+    {
+        "q": "What does 'flex-wrap: wrap;' do?",
+        "o": [
+            "Wraps flex items",
+            "Aligns items",
+            "Sets visibility",
+            "None"
+        ]
+    },
+    {
+        "q": "Which property is used for the background color?",
+        "o": [
+            "background-color",
+            "color",
+            "bg-color",
+            "style"
+        ]
+    },
+    {
+        "q": "How do you apply styles to all paragraphs?",
+        "o": [
+            "p { }",
+            "paragraph { }",
+            "all { }",
+            "text { }"
+        ]
+    },
+    {
+        "q": "What does 'visibility: hidden;' do?",
+        "o": [
+            "Hides element but reserves space",
+            "Removes element",
+            "Sets opacity",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you create a CSS grid layout?",
+        "o": [
+            "display: grid;",
+            "grid: layout;",
+            "grid: create;",
+            "layout: grid;"
+        ]
+    },
+    {
+        "q": "What does 'content: \"\";' do in pseudo-elements?",
+        "o": [
+            "Inserts content",
+            "Adds style",
+            "None",
+            "Aligns content"
+        ]
+    },
+    {
+        "q": "How do you create a CSS sprite?",
+        "o": [
+            "background-position",
+            "sprite",
+            "image",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'text-align: justify;' do?",
+        "o": [
+            "Justifies text",
+            "Aligns text left",
+            "Aligns text right",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you set the z-index?",
+        "o": [
+            "z-index",
+            "index",
+            "layer",
+            "depth"
+        ]
+    },
+    {
+        "q": "What does 'grid-template-columns: repeat(3, 1fr);' do?",
+        "o": [
+            "Creates 3 equal columns",
+            "Creates 3 fixed columns",
+            "Sets column width",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you apply a CSS class?",
+        "o": [
+            ".className { }",
+            "#className { }",
+            "className { }",
+            "element.className { }"
+        ]
+    },
+    {
+        "q": "What does 'overflow: hidden;' do?",
+        "o": [
+            "Hides overflowed content",
+            "Shows overflowed content",
+            "Sets visibility",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you create a sticky element?",
+        "o": [
+            "position: sticky;",
+            "position: fixed;",
+            "position: relative;",
+            "position: absolute;"
+        ]
+    },
+    {
+        "q": "What does 'grid-template-rows: auto;' do?",
+        "o": [
+            "Sets row height to auto",
+            "Sets fixed row height",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS filter?",
+        "o": [
+            "filter",
+            "effect",
+            "style",
+            "image"
+        ]
+    },
+    {
+        "q": "What does 'text-decoration: underline;' do?",
+        "o": [
+            "Underlines text",
+            "Strikes through text",
+            "None",
+            "Adds color"
+        ]
+    },
+    {
+        "q": "How do you create a CSS variable?",
+        "o": [
+            "--var-name",
+            "$var-name",
+            "var-name",
+            "@var-name"
+        ]
+    },
+    {
+        "q": "What does 'object-fit: cover;' do?",
+        "o": [
+            "Covers element with image",
+            "Sets image size",
+            "None",
+            "Aligns image"
+        ]
+    },
+    {
+        "q": "How do you select all div elements?",
+        "o": [
+            "div { }",
+            "divs { }",
+            "all div { }",
+            "divs() { }"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: no-repeat;' do?",
+        "o": [
+            "Prevents background from repeating",
+            "Repeats background",
+            "None",
+            "Sets position"
+        ]
+    },
+    {
+        "q": "How do you create a box shadow?",
+        "o": [
+            "box-shadow",
+            "shadow",
+            "effect",
+            "style"
+        ]
+    },
+    {
+        "q": "What does 'align-content: center;' do?",
+        "o": [
+            "Aligns items vertically",
+            "Aligns items horizontally",
+            "None",
+            "Sets spacing"
+        ]
+    },
+    {
+        "q": "How do you set the font size?",
+        "o": [
+            "font-size",
+            "size",
+            "text-size",
+            "font"
+        ]
+    },
+    {
+        "q": "What does 'min-height: 50px;' do?",
+        "o": [
+            "Sets minimum height to 50px",
+            "Sets maximum height to 50px",
+            "Sets height to 50px",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you set the CSS display property?",
+        "o": [
+            "display",
+            "visibility",
+            "style",
+            "layout"
+        ]
+    },
+    {
+        "q": "What does 'overflow: auto;' do?",
+        "o": [
+            "Adds scrollbars if needed",
+            "Hides overflowed content",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS class?",
+        "o": [
+            ".class-name { }",
+            "#class-name { }",
+            "class-name { }",
+            "element.class-name { }"
+        ]
+    },
+    {
+        "q": "What does 'grid-area: 1 / 2 / 3 / 4;' do?",
+        "o": [
+            "Defines area in grid",
+            "Sets row and column",
+            "None",
+            "Aligns item"
+        ]
+    },
+    {
+        "q": "How do you center an element horizontally?",
+        "o": [
+            "margin: auto;",
+            "text-align: center;",
+            "align: center;",
+            "center: element;"
+        ]
+    },
+    {
+        "q": "What does 'width: 100%;' do?",
+        "o": [
+            "Sets width to 100%",
+            "Sets height to 100%",
+            "None",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "How do you apply a style to an element when it's hovered?",
+        "o": [
+            "element:hover { }",
+            "element.hover { }",
+            "element:active { }",
+            "element:focus { }"
+        ]
+    },
+    {
+        "q": "What does 'max-height: 100%;' do?",
+        "o": [
+            "Sets maximum height to 100%",
+            "Sets minimum height to 100%",
+            "None",
+            "Sets height to 100%"
+        ]
+    },
+    {
+        "q": "How do you set the background color?",
+        "o": [
+            "background-color",
+            "color",
+            "bg-color",
+            "style"
+        ]
+    },
+    {
+        "q": "What does 'flex-direction: row;' do?",
+        "o": [
+            "Arranges items in a row",
+            "Arranges items in a column",
+            "Aligns items center",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you create a CSS link?",
+        "o": [
+            "a { }",
+            "link { }",
+            "element.link { }",
+            "element { }"
+        ]
+    },
+    {
+        "q": "What does 'opacity: 1;' do?",
+        "o": [
+            "Sets element to fully opaque",
+            "Sets element to fully transparent",
+            "None",
+            "Adds color"
+        ]
+    },
+    {
+        "q": "How do you create a CSS keyframe animation?",
+        "o": [
+            "@keyframes",
+            "animation",
+            "effect",
+            "transition"
+        ]
+    },
+    {
+        "q": "What does 'border-collapse: collapse;' do?",
+        "o": [
+            "Collapses table borders",
+            "Adds spacing to table",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you set a border color?",
+        "o": [
+            "border-color",
+            "color",
+            "style",
+            "border"
+        ]
+    },
+    {
+        "q": "What does 'text-overflow: ellipsis;' do?",
+        "o": [
+            "Shows ellipsis for overflowed text",
+            "Cuts off text",
+            "None",
+            "Aligns text"
+        ]
+    },
+    {
+        "q": "How do you set the CSS cursor property?",
+        "o": [
+            "cursor",
+            "pointer",
+            "style",
+            "effect"
+        ]
+    },
+    {
+        "q": "What does 'min-width: 200px;' do?",
+        "o": [
+            "Sets minimum width to 200px",
+            "Sets maximum width to 200px",
+            "None",
+            "Sets width to 200px"
+        ]
+    },
+    {
+        "q": "How do you create a CSS transition effect?",
+        "o": [
+            "transition: property duration; ",
+            "effect: duration;",
+            "animation: duration;",
+            "transition-effect: duration;"
+        ]
+    },
+    {
+        "q": "What does 'flex-grow: 1;' do?",
+        "o": [
+            "Allows item to grow",
+            "Restricts item growth",
+            "None",
+            "Sets width"
+        ]
+    },
+    {
+        "q": "How do you create a responsive design?",
+        "o": [
+            "Use media queries",
+            "Use fixed widths",
+            "None",
+            "Set overflow"
+        ]
+    },
+    {
+        "q": "What does 'box-sizing: border-box;' do?",
+        "o": [
+            "Includes padding and border in width/height",
+            "Excludes padding and border",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS variable?",
+        "o": [
+            "--variable-name",
+            "$variable-name",
+            "variable-name",
+            "@variable-name"
+        ]
+    },
+    {
+        "q": "What does 'align-items: center;' do?",
+        "o": [
+            "Centers items vertically",
+            "Aligns items horizontally",
+            "None",
+            "Sets spacing"
+        ]
+    },
+    {
+        "q": "How do you select elements with a specific class?",
+        "o": [
+            ".class-name",
+            "#class-name",
+            "element.class-name",
+            "element { }"
+        ]
+    },
+    {
+        "q": "What does 'pointer-events: none;' do?",
+        "o": [
+            "Disables pointer events",
+            "Enables pointer events",
+            "Sets visibility",
+            "None"
+        ]
+    },
+    {
+        "q": "How do you create a CSS pseudo-element?",
+        "o": [
+            "::pseudo-element",
+            ":pseudo-element",
+            "pseudo-element",
+            "element:pseudo"
+        ]
+    },
+    {
+        "q": "What does 'justify-content: space-between;' do?",
+        "o": [
+            "Distributes items evenly",
+            "Aligns items center",
+            "None",
+            "Sets spacing"
+        ]
+    },
+    {
+        "q": "How do you change the cursor on hover?",
+        "o": [
+            "cursor: pointer;",
+            "hover: cursor;",
+            "element: cursor;",
+            "cursor: element;"
+        ]
+    },
+    {
+        "q": "What does 'max-width: 100%;' do?",
+        "o": [
+            "Sets maximum width to 100%",
+            "Sets minimum width to 100%",
+            "None",
+            "Sets width to 100%"
+        ]
+    },
+    {
+        "q": "How do you create a CSS class?",
+        "o": [
+            ".class-name { }",
+            "#class-name { }",
+            "class-name { }",
+            "element.class-name { }"
+        ]
+    },
+    {
+        "q": "What does 'border-radius: 5px;' do?",
+        "o": [
+            "Rounds corners of an element",
+            "Sets border thickness",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you apply a CSS reset?",
+        "o": [
+            "* { margin: 0; padding: 0; }",
+            "reset { }",
+            "none { }",
+            "style { }"
+        ]
+    },
+    {
+        "q": "What does 'background-size: cover;' do?",
+        "o": [
+            "Covers element with background image",
+            "Sets size of background",
+            "None",
+            "Aligns background"
+        ]
+    },
+    {
+        "q": "How do you center an element vertically?",
+        "o": [
+            "margin: auto;",
+            "align: center;",
+            "vertical-align: middle;",
+            "center: element;"
+        ]
+    },
+    {
+        "q": "What does 'display: flex;' do?",
+        "o": [
+            "Enables flexbox layout",
+            "Sets display to block",
+            "None",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "How do you create a CSS comment?",
+        "o": [
+            "/* comment */",
+            "// comment",
+            "<!-- comment -->",
+            "# comment"
+        ]
+    },
+    {
+        "q": "What does 'flex-shrink: 0;' do?",
+        "o": [
+            "Prevents item from shrinking",
+            "Allows item to shrink",
+            "None",
+            "Sets width"
+        ]
+    },
+    {
+        "q": "How do you create a CSS transform?",
+        "o": [
+            "transform: rotate(45deg);",
+            "rotate: 45deg;",
+            "effect: rotate(45deg);",
+            "style: rotate(45deg);"
+        ]
+    },
+    {
+        "q": "What does 'list-style-type: none;' do?",
+        "o": [
+            "Removes bullet points",
+            "Adds bullet points",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you set an element's position?",
+        "o": [
+            "position",
+            "location",
+            "style",
+            "effect"
+        ]
+    },
+    {
+        "q": "What does 'overflow-x: hidden;' do?",
+        "o": [
+            "Hides overflowed content horizontally",
+            "Hides overflowed content vertically",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you apply a style to the first child?",
+        "o": [
+            "element:first-child { }",
+            "element.first-child { }",
+            "element:first { }",
+            "element.first { }"
+        ]
+    },
+    {
+        "q": "What does 'position: relative;' do?",
+        "o": [
+            "Positions element relative to its normal position",
+            "Sets fixed position",
+            "None",
+            "Aligns element"
+        ]
+    },
+    {
+        "q": "How do you set the line height?",
+        "o": [
+            "line-height",
+            "height",
+            "size",
+            "style"
+        ]
+    },
+    {
+        "q": "What does 'grid-column: 1 / 3;' do?",
+        "o": [
+            "Spans columns 1 to 3",
+            "Sets column position",
+            "None",
+            "Aligns item"
+        ]
+    },
+    {
+        "q": "How do you create a CSS outline?",
+        "o": [
+            "outline",
+            "border",
+            "style",
+            "effect"
+        ]
+    },
+    {
+        "q": "What does 'text-indent: 20px;' do?",
+        "o": [
+            "Indents text 20px",
+            "Adds margin",
+            "None",
+            "Aligns text"
+        ]
+    },
+    {
+        "q": "How do you create a CSS loop?",
+        "o": [
+            "@for",
+            "@loop",
+            "repeat",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'max-height: 100vh;' do?",
+        "o": [
+            "Sets maximum height to viewport height",
+            "Sets minimum height to viewport height",
+            "None",
+            "Sets height to viewport height"
+        ]
+    },
+    {
+        "q": "How do you set an element's visibility?",
+        "o": [
+            "visibility",
+            "display",
+            "style",
+            "effect"
+        ]
+    },
+    {
+        "q": "What does 'text-transform: uppercase;' do?",
+        "o": [
+            "Transforms text to uppercase",
+            "Transforms text to lowercase",
+            "None",
+            "Adds color"
+        ]
+    },
+    {
+        "q": "How do you create a CSS transition?",
+        "o": [
+            "transition: property duration;",
+            "effect: duration;",
+            "animation: duration;",
+            "transition-effect: duration;"
+        ]
+    },
+    {
+        "q": "What does 'padding: 10px;' do?",
+        "o": [
+            "Adds 10px padding",
+            "Adds 10px margin",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS variable?",
+        "o": [
+            "--var-name",
+            "$var-name",
+            "var-name",
+            "@var-name"
+        ]
+    },
+    {
+        "q": "What does 'flex-basis: 100px;' do?",
+        "o": [
+            "Sets initial size of flex item",
+            "Sets minimum size of flex item",
+            "None",
+            "Sets maximum size of flex item"
+        ]
+    },
+    {
+        "q": "How do you create a CSS hover effect?",
+        "o": [
+            "element:hover { }",
+            "element.hover { }",
+            "element:active { }",
+            "element:focus { }"
+        ]
+    },
+    {
+        "q": "What does 'overflow-y: scroll;' do?",
+        "o": [
+            "Adds vertical scrollbars",
+            "Adds horizontal scrollbars",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you set the font style?",
+        "o": [
+            "font-style",
+            "style",
+            "font",
+            "text-style"
+        ]
+    },
+    {
+        "q": "What does 'box-shadow: 2px 2px 5px;' do?",
+        "o": [
+            "Adds shadow effect",
+            "Sets border",
+            "None",
+            "Aligns item"
+        ]
+    },
+    {
+        "q": "How do you apply a CSS style to all elements?",
+        "o": [
+            "* { }",
+            "all { }",
+            "element { }",
+            "style { }"
+        ]
+    },
+    {
+        "q": "What does 'float: right;' do?",
+        "o": [
+            "Floats element to the right",
+            "Floats element to the left",
+            "None",
+            "Aligns element"
+        ]
+    },
+    {
+        "q": "How do you set the font size?",
+        "o": [
+            "font-size",
+            "size",
+            "text-size",
+            "font-style"
+        ]
+    },
+    {
+        "q": "What does 'text-align: center;' do?",
+        "o": [
+            "Aligns text to center",
+            "Aligns text to left",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS grid layout?",
+        "o": [
+            "display: grid;",
+            "grid-layout: layout;",
+            "layout: grid;",
+            "grid: layout;"
+        ]
+    },
+    {
+        "q": "What does 'display: block;' do?",
+        "o": [
+            "Sets display to block",
+            "Sets display to inline",
+            "None",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "How do you apply a CSS style to links?",
+        "o": [
+            "a { }",
+            "link { }",
+            "element { }",
+            "style { }"
+        ]
+    },
+    {
+        "q": "What does 'cursor: grab;' do?",
+        "o": [
+            "Changes cursor to grab",
+            "Changes cursor to pointer",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you set a CSS background color?",
+        "o": [
+            "background-color: color;",
+            "bg-color: color;",
+            "color: background;",
+            "style: background;"
+        ]
+    },
+    {
+        "q": "What does 'grid-template-columns: repeat(3, 1fr);' do?",
+        "o": [
+            "Creates 3 equal columns",
+            "Creates 3 unequal columns",
+            "None",
+            "Sets spacing"
+        ]
+    },
+    {
+        "q": "How do you create a CSS transition effect?",
+        "o": [
+            "transition: property duration;",
+            "effect: duration;",
+            "animation: duration;",
+            "transition-effect: duration;"
+        ]
+    },
+    {
+        "q": "What does 'visibility: hidden;' do?",
+        "o": [
+            "Hides element but retains space",
+            "Removes element completely",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you set the background image?",
+        "o": [
+            "background-image: url('image.jpg');",
+            "bg-image: url('image.jpg');",
+            "image: url('image.jpg');",
+            "background: url('image.jpg');"
+        ]
+    },
+    {
+        "q": "What does 'content: \"\";' do in a pseudo-element?",
+        "o": [
+            "Inserts content in pseudo-element",
+            "Sets background",
+            "None",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "How do you set a CSS property to its default value?",
+        "o": [
+            "initial",
+            "default",
+            "reset",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'max-width: 100%;' do?",
+        "o": [
+            "Sets maximum width to 100%",
+            "Sets minimum width to 100%",
+            "None",
+            "Sets width to 100%"
+        ]
+    },
+    {
+        "q": "How do you create a CSS animation?",
+        "o": [
+            "@keyframes animation-name { }",
+            "animation: name;",
+            "animate: name;",
+            "effect: name;"
+        ]
+    },
+    {
+        "q": "What does 'color: red;' do?",
+        "o": [
+            "Sets text color to red",
+            "Sets background to red",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS style for a specific element?",
+        "o": [
+            "element { }",
+            "#element { }",
+            ".element { }",
+            "element.class { }"
+        ]
+    },
+    {
+        "q": "What does 'position: fixed;' do?",
+        "o": [
+            "Fixes element relative to viewport",
+            "Sets position relative to parent",
+            "None",
+            "Aligns item"
+        ]
+    },
+    {
+        "q": "How do you set an element's opacity?",
+        "o": [
+            "opacity: value;",
+            "transparent: value;",
+            "visibility: value;",
+            "display: value;"
+        ]
+    },
+    {
+        "q": "What does 'text-decoration: underline;' do?",
+        "o": [
+            "Underlines text",
+            "Strikes through text",
+            "None",
+            "Changes color"
+        ]
+    },
+    {
+        "q": "How do you create a CSS link style?",
+        "o": [
+            "a { }",
+            "link { }",
+            "element { }",
+            "style { }"
+        ]
+    },
+    {
+        "q": "What does 'background-position: center;' do?",
+        "o": [
+            "Centers background image",
+            "Aligns background",
+            "None",
+            "Sets size"
+        ]
+    },
+    {
+        "q": "How do you create a CSS flexbox layout?",
+        "o": [
+            "display: flex;",
+            "flex-layout: layout;",
+            "layout: flex;",
+            "flex: layout;"
+        ]
+    },
+    {
+        "q": "What does 'border: 1px solid black;' do?",
+        "o": [
+            "Creates a 1px solid black border",
+            "Creates a 1px dashed border",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you set the text color?",
+        "o": [
+            "color: color;",
+            "text-color: color;",
+            "font-color: color;",
+            "style: color;"
+        ]
+    },
+    {
+        "q": "What does 'overflow: hidden;' do?",
+        "o": [
+            "Hides overflowed content",
+            "Shows overflowed content",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS transition effect?",
+        "o": [
+            "transition: property duration;",
+            "effect: duration;",
+            "animation: duration;",
+            "transition-effect: duration;"
+        ]
+    },
+    {
+        "q": "What does 'width: 50%;' do?",
+        "o": [
+            "Sets width to 50%",
+            "Sets maximum width to 50%",
+            "None",
+            "Sets minimum width to 50%"
+        ]
+    },
+    {
+        "q": "How do you create a CSS pseudo-class?",
+        "o": [
+            ":pseudo-class",
+            "::pseudo-class",
+            "pseudo-class",
+            "element:pseudo"
+        ]
+    },
+    {
+        "q": "What does 'padding: 20px 10px;' do?",
+        "o": [
+            "Adds 20px padding vertically and 10px horizontally",
+            "Adds 20px padding horizontally and 10px vertically",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS style for an ID?",
+        "o": [
+            "#id-name { }",
+            ".id-name { }",
+            "id-name { }",
+            "element#id-name { }"
+        ]
+    },
+    {
+        "q": "What does 'height: 100vh;' do?",
+        "o": [
+            "Sets height to 100% of viewport height",
+            "Sets maximum height to viewport height",
+            "None",
+            "Sets minimum height to viewport height"
+        ]
+    },
+    {
+        "q": "How do you create a CSS reset?",
+        "o": [
+            "* { margin: 0; padding: 0; }",
+            "reset { }",
+            "none { }",
+            "style { }"
+        ]
+    },
+    {
+        "q": "What does 'flex-wrap: wrap;' do?",
+        "o": [
+            "Wraps flex items to next line",
+            "Prevents wrapping",
+            "None",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "How do you set the text alignment?",
+        "o": [
+            "text-align",
+            "align",
+            "style",
+            "effect"
+        ]
+    },
+    {
+        "q": "What does 'text-overflow: ellipsis;' do?",
+        "o": [
+            "Displays ellipsis for overflowed text",
+            "Displays text as ellipsis",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you set the background color?",
+        "o": [
+            "background-color: color;",
+            "bg-color: color;",
+            "color: background;",
+            "style: background;"
+        ]
+    },
+    {
+        "q": "What does 'flex-direction: column;' do?",
+        "o": [
+            "Aligns flex items in a column",
+            "Aligns flex items in a row",
+            "None",
+            "Sets spacing"
+        ]
+    },
+    {
+        "q": "How do you create a CSS hover effect?",
+        "o": [
+            "element:hover { }",
+            "element.hover { }",
+            "element:active { }",
+            "element:focus { }"
+        ]
+    },
+    {
+        "q": "What does 'animation: spin 2s infinite;' do?",
+        "o": [
+            "Applies spin animation for 2 seconds infinitely",
+            "Sets animation duration to 2 seconds",
+            "None",
+            "Applies animation effect"
+        ]
+    },
+    {
+        "q": "How do you create a CSS class?",
+        "o": [
+            ".class-name { }",
+            "#class-name { }",
+            "class-name { }",
+            "element.class-name { }"
+        ]
+    },
+    {
+        "q": "What does 'border: none;' do?",
+        "o": [
+            "Removes border",
+            "Sets border to default",
+            "None",
+            "Aligns item"
+        ]
+    },
+    {
+        "q": "How do you create a CSS media query?",
+        "o": [
+            "@media query { }",
+            "media { }",
+            "query: media;",
+            "element { media; }"
+        ]
+    },
+    {
+        "q": "What does 'flex-grow: 1;' do?",
+        "o": [
+            "Allows flex item to grow",
+            "Prevents flex item from growing",
+            "None",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "How do you set the font family?",
+        "o": [
+            "font-family: font;",
+            "family: font;",
+            "font: family;",
+            "text-family: font;"
+        ]
+    },
+    {
+        "q": "What does 'box-shadow: 2px 2px 5px gray;' do?",
+        "o": [
+            "Adds shadow effect to the box",
+            "Removes shadow effect",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you set an element's display property to none?",
+        "o": [
+            "display: none;",
+            "visibility: none;",
+            "hidden: true;",
+            "element: none;"
+        ]
+    },
+    {
+        "q": "What does 'grid-gap: 10px;' do?",
+        "o": [
+            "Sets gap between grid items",
+            "Sets padding for grid",
+            "None",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "How do you create a CSS keyframe animation?",
+        "o": [
+            "@keyframes name { }",
+            "animation: keyframe;",
+            "keyframe: name;",
+            "animation: name;"
+        ]
+    },
+    {
+        "q": "What does 'justify-content: space-between;' do?",
+        "o": [
+            "Distributes space between items",
+            "Aligns items to center",
+            "None",
+            "Sets spacing"
+        ]
+    },
+    {
+        "q": "How do you set the list style type?",
+        "o": [
+            "list-style-type: type;",
+            "list-type: type;",
+            "style: list;",
+            "type: list;"
+        ]
+    },
+    {
+        "q": "What does 'border-radius: 50%;' do?",
+        "o": [
+            "Creates a circular border",
+            "Creates a square border",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you set the font weight?",
+        "o": [
+            "font-weight: weight;",
+            "weight: font;",
+            "font: weight;",
+            "text-weight: weight;"
+        ]
+    },
+    {
+        "q": "What does 'filter: blur(5px);' do?",
+        "o": [
+            "Applies a blur effect",
+            "Removes filter effect",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS grid item?",
+        "o": [
+            "grid-item { }",
+            ".grid-item { }",
+            "item { }",
+            "element.grid-item { }"
+        ]
+    },
+    {
+        "q": "What does 'color: transparent;' do?",
+        "o": [
+            "Makes text transparent",
+            "Hides text",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS style for all elements?",
+        "o": [
+            "* { }",
+            "all { }",
+            "element { }",
+            "style { }"
+        ]
+    },
+    {
+        "q": "What does 'opacity: 0.5;' do?",
+        "o": [
+            "Makes element semi-transparent",
+            "Hides element",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you set the text transformation?",
+        "o": [
+            "text-transform: transformation;",
+            "transform: text;",
+            "style: transformation;",
+            "text: transformation;"
+        ]
+    },
+    {
+        "q": "What does 'overflow-x: hidden;' do?",
+        "o": [
+            "Hides overflowed content horizontally",
+            "Hides overflowed content vertically",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS style for nested elements?",
+        "o": [
+            "parent > child { }",
+            "parent.child { }",
+            "parent:child { }",
+            "parent.child { }"
+        ]
+    },
+    {
+        "q": "What does 'line-height: 1.5;' do?",
+        "o": [
+            "Sets line height to 1.5",
+            "Sets font size to 1.5",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS scrollbar style?",
+        "o": [
+            "::-webkit-scrollbar { }",
+            "scrollbar { }",
+            "element.scrollbar { }",
+            "scrollbar-style { }"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: no-repeat;' do?",
+        "o": [
+            "Prevents background image from repeating",
+            "Repeats background image",
+            "None",
+            "Sets size"
+        ]
+    },
+    {
+        "q": "How do you set the box model properties?",
+        "o": [
+            "box-sizing: border-box;",
+            "box-model: properties;",
+            "model: properties;",
+            "style: box;"
+        ]
+    },
+    {
+        "q": "What does 'z-index: 10;' do?",
+        "o": [
+            "Sets stacking order of elements",
+            "Sets z-coordinate",
+            "None",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "How do you set the CSS variable?",
+        "o": [
+            "--variable-name: value;",
+            "var: variable-name;",
+            "variable: value;",
+            "set: variable-name;"
+        ]
+    },
+    {
+        "q": "What does 'object-fit: cover;' do?",
+        "o": [
+            "Covers container with image",
+            "Fits image inside container",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS class for buttons?",
+        "o": [
+            ".button { }",
+            "#button { }",
+            "button { }",
+            "element.button { }"
+        ]
+    },
+    {
+        "q": "What does 'white-space: nowrap;' do?",
+        "o": [
+            "Prevents line breaks",
+            "Allows line breaks",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS style for a table?",
+        "o": [
+            "table { }",
+            ".table { }",
+            "#table { }",
+            "element.table { }"
+        ]
+    },
+    {
+        "q": "What does 'flex-basis: 100px;' do?",
+        "o": [
+            "Sets base size of flex item",
+            "Sets maximum size of flex item",
+            "None",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "How do you set the CSS text shadow?",
+        "o": [
+            "text-shadow: x y blur color;",
+            "shadow: text;",
+            "text: shadow;",
+            "style: shadow;"
+        ]
+    },
+    {
+        "q": "What does 'pointer-events: none;' do?",
+        "o": [
+            "Disables pointer events",
+            "Enables pointer events",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS style for forms?",
+        "o": [
+            "form { }",
+            ".form { }",
+            "#form { }",
+            "element.form { }"
+        ]
+    },
+    {
+        "q": "What does 'display: none;' do?",
+        "o": [
+            "Hides element completely",
+            "Sets display to block",
+            "None",
+            "Removes element"
+        ]
+    },
+    {
+        "q": "How do you set the CSS text overflow?",
+        "o": [
+            "text-overflow: overflow;",
+            "overflow: text;",
+            "style: overflow;",
+            "text: overflow;"
+        ]
+    },
+    {
+        "q": "What does 'transform: rotate(45deg);' do?",
+        "o": [
+            "Rotates element 45 degrees",
+            "Skews element 45 degrees",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS style for icons?",
+        "o": [
+            ".icon { }",
+            "#icon { }",
+            "icon { }",
+            "element.icon { }"
+        ]
+    },
+    {
+        "q": "What does 'filter: grayscale(100%);' do?",
+        "o": [
+            "Applies grayscale filter",
+            "Removes filter",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you set the CSS font size?",
+        "o": [
+            "font-size: size;",
+            "size: font;",
+            "text-size: size;",
+            "style: font;"
+        ]
+    },
+    {
+        "q": "What does 'transition: all 0.5s ease;' do?",
+        "o": [
+            "Applies transition effect to all properties",
+            "Sets transition duration",
+            "None",
+            "Removes transition effect"
+        ]
+    },
+    {
+        "q": "How do you set the list style type?",
+        "o": [
+            "list-style-type: type;",
+            "list-type: type;",
+            "style: list;",
+            "type: list;"
+        ]
+    },
+    {
+        "q": "What does 'height: auto;' do?",
+        "o": [
+            "Sets height to auto",
+            "Sets height to fixed",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS style for headings?",
+        "o": [
+            "h1 { }",
+            "#heading { }",
+            ".heading { }",
+            "element.heading { }"
+        ]
+    },
+    {
+        "q": "What does 'overflow-y: scroll;' do?",
+        "o": [
+            "Adds vertical scrollbar",
+            "Adds horizontal scrollbar",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you create a CSS style for a link?",
+        "o": [
+            "a { }",
+            ".link { }",
+            "#link { }",
+            "element.link { }"
+        ]
+    },
+    {
+        "q": "What does 'border: 1px solid black;' do?",
+        "o": [
+            "Creates a solid border",
+            "Creates a dashed border",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you set the CSS background color?",
+        "o": [
+            "background-color: color;",
+            "color: background;",
+            "style: background;",
+            "bg: color;"
+        ]
+    },
+    {
+        "q": "What does 'display: flex;' do?",
+        "o": [
+            "Enables flexbox layout",
+            "Enables grid layout",
+            "None",
+            "Sets visibility"
+        ]
+    },
+    {
+        "q": "How do you set the CSS font style?",
+        "o": [
+            "font-style: style;",
+            "style: font;",
+            "text-style: style;",
+            "font: style;"
+        ]
+    },
+    {
+        "q": "What does 'float: left;' do?",
+        "o": [
+            "Floats element to the left",
+            "Floats element to the right",
+            "None",
+            "Aligns items"
+        ]
+    },
+    {
+        "q": "How do you create a CSS style for a footer?",
+        "o": [
+            "footer { }",
+            ".footer { }",
+            "#footer { }",
+            "element.footer { }"
+        ]
+    },
+    {
+        "q": "What does 'align-items: center;' do?",
+        "o": [
+            "Aligns items to the center",
+            "Aligns items to the left",
+            "None",
+            "Sets spacing"
+        ]
+    },
+    {
+        "q": "How do you create a CSS style for a sidebar?",
+        "o": [
+            "sidebar { }",
+            ".sidebar { }",
+            "#sidebar { }",
+            "element.sidebar { }"
+        ]
+    }
+]

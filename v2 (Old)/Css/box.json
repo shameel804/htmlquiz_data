@@ -1,0 +1,2652 @@
+[
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    margin: 10px;\n}",
+        "o": [
+            "Sets margin around the div",
+            "Sets padding around the div",
+            "Sets border around the div",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the margin property do?",
+        "o": [
+            "Space outside the box",
+            "Space inside the box",
+            "Border thickness",
+            "Content padding"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 20px;\n}",
+        "o": [
+            "Adds space inside the div",
+            "Adds space outside the div",
+            "Sets border width",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the purpose of padding?",
+        "o": [
+            "Space inside the box",
+            "Space outside the box",
+            "Border style",
+            "Element visibility"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    border: 1px solid black;\n}",
+        "o": [
+            "Adds a solid black border",
+            "Adds a dashed border",
+            "Sets margin",
+            "Sets padding"
+        ]
+    },
+    {
+        "q": "Which property defines the border width?",
+        "o": [
+            "border-width",
+            "border-size",
+            "border-style",
+            "border"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    margin: 0 auto;\n}",
+        "o": [
+            "Centers the div",
+            "Sets margin to zero",
+            "Adds padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the content area represent?",
+        "o": [
+            "Actual content",
+            "Padding space",
+            "Border area",
+            "Margin space"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 15px 10px;\n}",
+        "o": [
+            "Sets vertical and horizontal padding",
+            "Sets only top padding",
+            "Sets only left padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you reset margin in CSS?",
+        "o": [
+            "margin: 0;",
+            "margin: none;",
+            "margin: auto;",
+            "margin: clear;"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    margin: 10px 5px;\n}",
+        "o": [
+            "Sets vertical and horizontal margins",
+            "Sets only bottom margin",
+            "Sets only top margin",
+            "Removes margin"
+        ]
+    },
+    {
+        "q": "Which value can padding not accept?",
+        "o": [
+            "Percentage",
+            "Length",
+            "Color",
+            "Length unit"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    border: 2px dashed red;\n}",
+        "o": [
+            "Sets a dashed red border",
+            "Sets a solid border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which of the following affects layout?",
+        "o": [
+            "Margin",
+            "Color",
+            "Font",
+            "Background"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    padding: 10px 20px;\n}",
+        "o": [
+            "Sets top/bottom and left/right padding",
+            "Sets only left padding",
+            "Sets equal padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the default value of margin?",
+        "o": [
+            "0",
+            "auto",
+            "10px",
+            "15px"
+        ]
+    },
+    {
+        "q": "What does this code accomplish?",
+        "l": "css",
+        "c": "div {\n    border: 1px solid blue;\n}",
+        "o": [
+            "Adds a solid blue border",
+            "Sets margin",
+            "Sets padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you define a solid border style?",
+        "o": [
+            "border: solid;",
+            "border: style solid;",
+            "border: 1px solid;",
+            "border: 1px;"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    margin-top: 20px;\n}",
+        "o": [
+            "Adds top margin",
+            "Adds bottom margin",
+            "Adds left margin",
+            "Adds right margin"
+        ]
+    },
+    {
+        "q": "Which property is used for setting the border color?",
+        "o": [
+            "border-color",
+            "color",
+            "border-style",
+            "border"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 0;\n}",
+        "o": [
+            "Removes all padding",
+            "Adds padding",
+            "Sets margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How can you set equal padding on all sides?",
+        "o": [
+            "padding: 10px;",
+            "padding: 10px 10px;",
+            "padding: 10px 20px;",
+            "padding: 10%;"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    border-radius: 5px;\n}",
+        "o": [
+            "Rounds the corners",
+            "Adds a border",
+            "Removes padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "What is the box model used for?",
+        "o": [
+            "Layout design",
+            "Text styling",
+            "Image formatting",
+            "Animation effects"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin: 0;\n}",
+        "o": [
+            "Removes all margins",
+            "Adds margins",
+            "Sets padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does 'box-sizing: border-box;' do?",
+        "o": [
+            "Includes padding and border in width",
+            "Excludes padding from width",
+            "Ignores borders",
+            "Increases margin size"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    padding: 10px;\n}",
+        "o": [
+            "Adds padding inside the div",
+            "Adds margin",
+            "Sets border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the effect of 'margin: auto;'?",
+        "o": [
+            "Centering an element",
+            "Removing margin",
+            "Adding padding",
+            "Creating a border"
+        ]
+    },
+    {
+        "q": "What does this code accomplish?",
+        "l": "css",
+        "c": "div {\n    border: none;\n}",
+        "o": [
+            "Removes border",
+            "Adds a border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "Which value will not work with margin?",
+        "o": [
+            "Auto",
+            "Length",
+            "Percent",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    margin-left: 20px;\n}",
+        "o": [
+            "Adds left margin",
+            "Adds right margin",
+            "Adds top margin",
+            "Adds bottom margin"
+        ]
+    },
+    {
+        "q": "What is the initial state of padding in CSS?",
+        "o": [
+            "0",
+            "10px",
+            "auto",
+            "none"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    padding: 5px 15px;\n}",
+        "o": [
+            "Sets top/bottom and left/right padding",
+            "Sets only left padding",
+            "Sets only top padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which is the correct order of box model properties?",
+        "o": [
+            "Content, Padding, Border, Margin",
+            "Margin, Border, Padding, Content",
+            "Border, Content, Margin, Padding",
+            "Padding, Content, Margin, Border"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    margin: 10px 5px 20px;\n}",
+        "o": [
+            "Sets margins for top, sides, and bottom",
+            "Sets only bottom margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you remove the default margin of a body element?",
+        "o": [
+            "body { margin: 0; }",
+            "body { margin: none; }",
+            "body { margin: clear; }",
+            "body { margin: auto; }"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    border: 3px solid green;\n}",
+        "o": [
+            "Sets a solid green border",
+            "Sets a dashed border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What unit can margin be set in?",
+        "o": [
+            "px",
+            "em",
+            "rem",
+            "All of the options"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 20px;\n}",
+        "o": [
+            "Adds space inside the div",
+            "Adds space outside the div",
+            "Sets border width",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you add padding to only the top?",
+        "o": [
+            "padding-top: 10px;",
+            "padding: 10px top;",
+            "padding: 10px 0;",
+            "padding: top 10px;"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    margin: 0 10px;\n}",
+        "o": [
+            "Sets left and right margins",
+            "Sets only top margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How can you set different margins for each side?",
+        "o": [
+            "margin: 5px 10px 15px 20px;",
+            "margin: 5px 10px;",
+            "margin: 5px;",
+            "margin: auto;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    border: 2px dotted black;\n}",
+        "o": [
+            "Sets a dotted black border",
+            "Sets a solid border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What happens if you set negative margin?",
+        "o": [
+            "Pulls the element closer",
+            "Removes margin",
+            "Adds padding",
+            "Increases size"
+        ]
+    },
+    {
+        "q": "What does this code accomplish?",
+        "l": "css",
+        "c": "div {\n    margin-bottom: 15px;\n}",
+        "o": [
+            "Adds bottom margin",
+            "Adds top margin",
+            "Adds left margin",
+            "Adds right margin"
+        ]
+    },
+    {
+        "q": "What is the default value of border-style?",
+        "o": [
+            "none",
+            "solid",
+            "dashed",
+            "double"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    padding: 0 30px;\n}",
+        "o": [
+            "Sets left/right padding",
+            "Sets top/bottom padding",
+            "Removes padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you specify different padding values?",
+        "o": [
+            "padding: 5px 10px 15px 20px;",
+            "padding: 5px; 10px;",
+            "padding: 5px 10px;",
+            "padding: 5px, 10px;"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    border: 1px groove gray;\n}",
+        "o": [
+            "Sets a groove gray border",
+            "Sets a solid border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does padding affect?",
+        "o": [
+            "Inner space of an element",
+            "Outer space of an element",
+            "Border style",
+            "Element position"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 5px 10px 15px;\n}",
+        "o": [
+            "Sets top, left/right, and bottom padding",
+            "Sets only left padding",
+            "Sets only top padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property controls the space between elements?",
+        "o": [
+            "Margin",
+            "Padding",
+            "Border",
+            "Content"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    margin: 0 5%;\n}",
+        "o": [
+            "Sets left/right margins",
+            "Sets only top margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the border property combine?",
+        "o": [
+            "Width, style, color",
+            "Padding, margin, content",
+            "Width, margin, padding",
+            "Color, style, visibility"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    border: 1px inset blue;\n}",
+        "o": [
+            "Sets an inset blue border",
+            "Sets a solid border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property is shorthand for all margins?",
+        "o": [
+            "margin",
+            "margins",
+            "margin-all",
+            "margin-width"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    padding: 10px 5px;\n}",
+        "o": [
+            "Sets vertical and horizontal padding",
+            "Sets only left padding",
+            "Sets equal padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What effect does padding have on an element's size?",
+        "o": [
+            "Increases size",
+            "Decreases size",
+            "No effect",
+            "Removes border"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    margin: auto;\n}",
+        "o": [
+            "Centers the div",
+            "Adds margin",
+            "Sets padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which margin value will center an element?",
+        "o": [
+            "auto",
+            "0",
+            "50px",
+            "20%"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    border: 4px double red;\n}",
+        "o": [
+            "Sets a double red border",
+            "Sets a solid border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to define a dashed border?",
+        "o": [
+            "border: 1px dashed;",
+            "border: dashed 1px;",
+            "border: dash;",
+            "border: 1px; dashed;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    padding: 15px;\n}",
+        "o": [
+            "Adds padding inside the div",
+            "Adds margin",
+            "Sets border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which CSS property is not part of the box model?",
+        "o": [
+            "font-size",
+            "border",
+            "padding",
+            "margin"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    margin-right: 10px;\n}",
+        "o": [
+            "Adds right margin",
+            "Adds left margin",
+            "Adds top margin",
+            "Adds bottom margin"
+        ]
+    },
+    {
+        "q": "What is the margin collapse?",
+        "o": [
+            "Margins combine",
+            "Margins split",
+            "Margins ignore each other",
+            "Margins increase"
+        ]
+    },
+    {
+        "q": "What does this code accomplish?",
+        "l": "css",
+        "c": "div {\n    margin: 5px 10px 15px;\n}",
+        "o": [
+            "Sets margins for top, sides, and bottom",
+            "Sets only bottom margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How can padding be defined in percentages?",
+        "o": [
+            "padding: 10%;",
+            "padding: 10px%;",
+            "padding: %10;",
+            "padding: 10% 20%;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    border: 1px solid purple;\n}",
+        "o": [
+            "Adds a solid purple border",
+            "Sets margin",
+            "Sets padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property adds a shadow effect?",
+        "o": [
+            "box-shadow",
+            "shadow",
+            "border-shadow",
+            "margin-shadow"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    padding: 0;\n}",
+        "o": [
+            "Removes all padding",
+            "Adds padding",
+            "Sets margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does box-shadow require?",
+        "o": [
+            "Offsets, blur, spread",
+            "Color only",
+            "Border properties",
+            "No requirements"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    border: 2px solid orange;\n}",
+        "o": [
+            "Sets a solid orange border",
+            "Sets a dashed border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to specify a double border style?",
+        "o": [
+            "border-style: double;",
+            "border: double;",
+            "border: 2px double;",
+            "border-width: double;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin-top: 10px;\n}",
+        "o": [
+            "Adds top margin",
+            "Adds bottom margin",
+            "Adds left margin",
+            "Adds right margin"
+        ]
+    },
+    {
+        "q": "What is the maximum margin value?",
+        "o": [
+            "Depends on element",
+            "50px",
+            "100px",
+            "No maximum"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 20px 30px;\n}",
+        "o": [
+            "Sets top/bottom and left/right padding",
+            "Sets only left padding",
+            "Sets only top padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you set a margin only on the left side?",
+        "o": [
+            "margin-left: 10px;",
+            "margin: 10px left;",
+            "margin-left: auto;",
+            "margin: left 10px;"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    margin: 5px 0;\n}",
+        "o": [
+            "Sets vertical margins",
+            "Sets only top margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does border-radius do?",
+        "o": [
+            "Rounds corners",
+            "Adds padding",
+            "Creates margin",
+            "Styles text"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    border: 3px solid teal;\n}",
+        "o": [
+            "Sets a solid teal border",
+            "Sets a dashed border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you apply a solid border on all sides?",
+        "o": [
+            "border: 1px solid;",
+            "border: solid 1px;",
+            "border: 1px;",
+            "border: solid;"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    padding: 5px;\n}",
+        "o": [
+            "Adds padding inside the div",
+            "Adds margin",
+            "Sets border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the purpose of the box model?",
+        "o": [
+            "Define element dimensions",
+            "Control text size",
+            "Set colors",
+            "Style images"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    margin: 0;\n}",
+        "o": [
+            "Removes all margins",
+            "Adds margins",
+            "Sets padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How can margin be specified with different units?",
+        "o": [
+            "margin: 1px 2em 3% 4px;",
+            "margin: 1em 2px;",
+            "margin: auto; 10px;",
+            "margin: 10;"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    border: 2px dashed yellow;\n}",
+        "o": [
+            "Sets a dashed yellow border",
+            "Sets a solid border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What property adjusts space around content?",
+        "o": [
+            "Padding",
+            "Margin",
+            "Border",
+            "Size"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    padding: 10px 0;\n}",
+        "o": [
+            "Sets top/bottom padding",
+            "Sets left/right padding",
+            "Removes padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to set a margin of 20 pixels on top and bottom?",
+        "o": [
+            "margin: 20px 0;",
+            "margin: 20px auto;",
+            "margin: auto 20px;",
+            "margin: 20 0;"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    margin-left: auto;\n}",
+        "o": [
+            "Automatically adjusts left margin",
+            "Adds left margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to add margin using shorthand?",
+        "o": [
+            "margin: 10px 20px;",
+            "margin: all 10px;",
+            "margin: auto;",
+            "margin: 10px; 20px;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    border: 1px solid pink;\n}",
+        "o": [
+            "Adds a solid pink border",
+            "Sets margin",
+            "Sets padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property defines the space between border and content?",
+        "o": [
+            "Padding",
+            "Margin",
+            "Border",
+            "Content"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    padding: 15px 5px;\n}",
+        "o": [
+            "Sets vertical and horizontal padding",
+            "Sets only left padding",
+            "Sets only top padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the CSS syntax for setting a 5px border?",
+        "o": [
+            "border: 5px;",
+            "border: 5px solid;",
+            "border: solid 5px;",
+            "border: 5;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin-bottom: 10px;\n}",
+        "o": [
+            "Adds bottom margin",
+            "Adds top margin",
+            "Adds left margin",
+            "Adds right margin"
+        ]
+    },
+    {
+        "q": "How do you specify a top border only?",
+        "o": [
+            "border-top: 2px solid;",
+            "border: top 2px;",
+            "border: solid top 2px;",
+            "border: 2px; top;"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    border: 1px solid gray;\n}",
+        "o": [
+            "Adds a solid gray border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "How to add margin using percentage?",
+        "o": [
+            "margin: 10%;",
+            "margin: 10% 20%;",
+            "margin: 20px %;",
+            "margin: %10;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 0 10px;\n}",
+        "o": [
+            "Sets left/right padding",
+            "Sets top/bottom padding",
+            "Removes padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does padding do in layout?",
+        "o": [
+            "Creates space inside",
+            "Removes space",
+            "Defines border",
+            "Adjusts size"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin: 5%;\n}",
+        "o": [
+            "Sets 5% margin on all sides",
+            "Sets only bottom margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to set different margins for top, right, bottom, left?",
+        "o": [
+            "margin: 10px 5px 15px 20px;",
+            "margin: 10px; 5px;",
+            "margin: 10px, 5px;",
+            "margin: 10 5 15 20;"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    border: 2px outset orange;\n}",
+        "o": [
+            "Sets an outset orange border",
+            "Sets a solid border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is a common use for padding?",
+        "o": [
+            "Add space inside elements",
+            "Center elements",
+            "Set background color",
+            "Style text"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    padding: 25px 10px;\n}",
+        "o": [
+            "Sets top/bottom and left/right padding",
+            "Sets only left padding",
+            "Sets equal padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to remove padding?",
+        "o": [
+            "padding: 0;",
+            "padding: none;",
+            "padding: auto;",
+            "padding: clear;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    margin-right: 15px;\n}",
+        "o": [
+            "Adds right margin",
+            "Adds left margin",
+            "Adds top margin",
+            "Adds bottom margin"
+        ]
+    },
+    {
+        "q": "What is the shorthand for all borders?",
+        "o": [
+            "border",
+            "borders",
+            "border-all",
+            "border-size"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    border: 1px solid brown;\n}",
+        "o": [
+            "Adds a solid brown border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "How to center an element horizontally?",
+        "o": [
+            "margin: auto;",
+            "padding: auto;",
+            "border: auto;",
+            "width: auto;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    padding: 5px 20px;\n}",
+        "o": [
+            "Sets top/bottom and left/right padding",
+            "Sets only left padding",
+            "Sets only top padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What unit is best for responsive padding?",
+        "o": [
+            "em",
+            "px",
+            "cm",
+            "in"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    margin: 10px;\n}",
+        "o": [
+            "Sets margin around the div",
+            "Sets padding around the div",
+            "Sets border around the div",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you set a 10px margin on top?",
+        "o": [
+            "margin-top: 10px;",
+            "margin: 10px top;",
+            "margin: top 10px;",
+            "margin: 10;"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    margin: 0 auto;\n}",
+        "o": [
+            "Centers the div",
+            "Sets margin to zero",
+            "Adds padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What property controls the border style?",
+        "o": [
+            "border-style",
+            "border-color",
+            "border-width",
+            "border"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    border: 2px solid red;\n}",
+        "o": [
+            "Sets a solid red border",
+            "Sets a dashed border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property can set a margin in pixels?",
+        "o": [
+            "margin: 10px;",
+            "margin: 10em;",
+            "margin: 10%;",
+            "margin: 10;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 10px;\n}",
+        "o": [
+            "Adds padding inside the div",
+            "Adds margin",
+            "Sets border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to make all margins equal?",
+        "o": [
+            "margin: 10px;",
+            "margin: 10px 10px;",
+            "margin: 10px auto;",
+            "margin: 10%;"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    margin-left: 20px;\n}",
+        "o": [
+            "Adds left margin",
+            "Adds right margin",
+            "Adds top margin",
+            "Adds bottom margin"
+        ]
+    },
+    {
+        "q": "Which property is used for margin collapsing?",
+        "o": [
+            "margin",
+            "padding",
+            "border",
+            "content"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    padding: 10px 5px;\n}",
+        "o": [
+            "Sets vertical and horizontal padding",
+            "Sets only left padding",
+            "Sets equal padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you remove all borders?",
+        "o": [
+            "border: none;",
+            "border: clear;",
+            "border: 0;",
+            "border: auto;"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    margin: 10px 0;\n}",
+        "o": [
+            "Sets vertical margins",
+            "Sets only top margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How can padding be increased?",
+        "o": [
+            "padding: 20px;",
+            "padding: auto;",
+            "padding: none;",
+            "padding: 0;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    border: 1px solid purple;\n}",
+        "o": [
+            "Adds a solid purple border",
+            "Sets margin",
+            "Sets padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What happens if padding is set to a negative value?",
+        "o": [
+            "Ignored",
+            "Creates overlap",
+            "Removes padding",
+            "Increases space"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 0;\n}",
+        "o": [
+            "Removes all padding",
+            "Adds padding",
+            "Sets margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which of the following is a valid CSS unit?",
+        "o": [
+            "em",
+            "px",
+            "rem",
+            "All of the options"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    border: 3px dashed blue;\n}",
+        "o": [
+            "Sets a dashed blue border",
+            "Sets a solid border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you set a margin of 5%?",
+        "o": [
+            "margin: 5%;",
+            "margin: 5px;",
+            "margin: 5; 10%;",
+            "margin: 5%; 0;"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    margin: 5px 15px;\n}",
+        "o": [
+            "Sets margins for top, sides, and bottom",
+            "Sets only bottom margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What defines the thickness of a border?",
+        "o": [
+            "border-width",
+            "border-thickness",
+            "border-size",
+            "border-amount"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    border: 2px solid teal;\n}",
+        "o": [
+            "Sets a solid teal border",
+            "Sets a dashed border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What can cause elements to overlap?",
+        "o": [
+            "Negative margins",
+            "Padding",
+            "Borders",
+            "Content"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    padding: 15px 10px;\n}",
+        "o": [
+            "Sets top/bottom and left/right padding",
+            "Sets only left padding",
+            "Sets only top padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you change the border color?",
+        "o": [
+            "border-color: red;",
+            "border: red;",
+            "color: border;",
+            "border-style: red;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin-bottom: 15px;\n}",
+        "o": [
+            "Adds bottom margin",
+            "Adds top margin",
+            "Adds left margin",
+            "Adds right margin"
+        ]
+    },
+    {
+        "q": "How can padding be set on all sides equally?",
+        "o": [
+            "padding: 10px;",
+            "padding: 10px 10px;",
+            "padding: 10px; 20px;",
+            "padding: 20px 10px;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    border: 1px solid gray;\n}",
+        "o": [
+            "Adds a solid gray border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "What does the 'padding-top' property do?",
+        "o": [
+            "Sets top padding",
+            "Sets bottom padding",
+            "Sets left padding",
+            "Sets right padding"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    padding: 0 20px;\n}",
+        "o": [
+            "Sets left/right padding",
+            "Sets top/bottom padding",
+            "Removes padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you set different border widths?",
+        "o": [
+            "border-width: 1px 2px 3px 4px;",
+            "border: 1px; 2px;",
+            "border: 1px; 2px 3px;",
+            "border-width: 1px; 2px; 3px;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin: 20px;\n}",
+        "o": [
+            "Sets margin around the div",
+            "Sets padding around the div",
+            "Sets border around the div",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How can you make borders transparent?",
+        "o": [
+            "border-color: transparent;",
+            "border: transparent;",
+            "border-style: transparent;",
+            "border: none;"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    margin: auto;\n}",
+        "o": [
+            "Centers the div",
+            "Sets margin to auto",
+            "Adds padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to specify a border on the right only?",
+        "o": [
+            "border-right: 2px solid;",
+            "border: right 2px;",
+            "border-right: solid 2px;",
+            "border: 2px; right;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    border: 2px dashed orange;\n}",
+        "o": [
+            "Sets a dashed orange border",
+            "Sets a solid border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What happens when padding is applied?",
+        "o": [
+            "Increases the element's total size",
+            "Removes content",
+            "Shrinks the element",
+            "Changes border style"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    padding: 5px;\n}",
+        "o": [
+            "Adds padding inside the div",
+            "Adds margin",
+            "Sets border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to define a margin on the bottom only?",
+        "o": [
+            "margin-bottom: 10px;",
+            "margin: bottom 10px;",
+            "margin: 10px bottom;",
+            "margin: 10;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin: 15px 0;\n}",
+        "o": [
+            "Sets vertical margins",
+            "Sets only top margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does 'margin: 0 auto;' achieve?",
+        "o": [
+            "Centers an element",
+            "Sets margin to zero",
+            "Adds equal padding",
+            "Removes borders"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    border: 2px solid black;\n}",
+        "o": [
+            "Adds a solid black border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "Which is a valid way to add padding on left and right?",
+        "o": [
+            "padding: 0 10px;",
+            "padding: left 10px right 10px;",
+            "padding: 10px;",
+            "padding: 10 0;"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    padding: 30px 15px;\n}",
+        "o": [
+            "Sets top/bottom and left/right padding",
+            "Sets only left padding",
+            "Sets only top padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What value does 'border: 0;' set?",
+        "o": [
+            "Removes border",
+            "Sets border width",
+            "Sets border color",
+            "Sets border style"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin: 5%;\n}",
+        "o": [
+            "Sets 5% margin on all sides",
+            "Sets only bottom margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you make all sides of a border transparent?",
+        "o": [
+            "border-color: transparent;",
+            "border: transparent;",
+            "border: none;",
+            "border-style: transparent;"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    border: 3px solid green;\n}",
+        "o": [
+            "Sets a solid green border",
+            "Sets a dashed border",
+            "Removes border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does 'padding: 10px 20px;' specify?",
+        "o": [
+            "Top/bottom and left/right padding",
+            "Only top padding",
+            "Only bottom padding",
+            "All sides padding"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    padding: 20px 10px;\n}",
+        "o": [
+            "Sets top/bottom and left/right padding",
+            "Sets only left padding",
+            "Sets equal padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How can margin be set to auto in CSS?",
+        "o": [
+            "margin: auto;",
+            "margin: auto 0;",
+            "margin: auto; 10px;",
+            "margin: 10px auto;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    margin-right: 10px;\n}",
+        "o": [
+            "Adds right margin",
+            "Adds left margin",
+            "Adds top margin",
+            "Adds bottom margin"
+        ]
+    },
+    {
+        "q": "What is a common mistake with margin?",
+        "o": [
+            "Using negative values",
+            "Using units",
+            "Setting to zero",
+            "Using percentages"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    border: 1px solid blue;\n}",
+        "o": [
+            "Adds a solid blue border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "How to add padding to a specific element?",
+        "o": [
+            "element { padding: 10px; }",
+            "padding: element 10px;",
+            "element: padding 10px;",
+            "padding 10px: element;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    padding: 10px;\n}",
+        "o": [
+            "Adds padding inside the div",
+            "Adds margin",
+            "Sets border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the maximum number of values for border?",
+        "o": [
+            "Four",
+            "Three",
+            "Two",
+            "One"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    margin: 5px 10px;\n}",
+        "o": [
+            "Sets vertical and horizontal margins",
+            "Sets only left margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property controls element spacing?",
+        "o": [
+            "margin",
+            "padding",
+            "border",
+            "content"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    margin: auto;\n}",
+        "o": [
+            "Centers the div",
+            "Sets margin to auto",
+            "Adds padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to remove margin in CSS?",
+        "o": [
+            "margin: 0;",
+            "margin: none;",
+            "margin: auto;",
+            "margin: clear;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    border: 4px solid crimson;\n}",
+        "o": [
+            "Adds a solid crimson border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "How to apply padding to the left side?",
+        "o": [
+            "padding-left: 10px;",
+            "padding: left 10px;",
+            "padding: 10px left;",
+            "padding: left: 10px;"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    padding: 0 5px;\n}",
+        "o": [
+            "Sets left/right padding",
+            "Sets top/bottom padding",
+            "Removes padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you add a border with a color?",
+        "o": [
+            "border-color: red;",
+            "border: red;",
+            "border-style: red;",
+            "color: border;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin-bottom: 5px;\n}",
+        "o": [
+            "Adds bottom margin",
+            "Adds top margin",
+            "Adds left margin",
+            "Adds right margin"
+        ]
+    },
+    {
+        "q": "What does 'margin: 10px 20px;' achieve?",
+        "o": [
+            "Sets vertical and horizontal margins",
+            "Sets all margins",
+            "Sets only top margin",
+            "Sets only bottom margin"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    border: 1px dashed gray;\n}",
+        "o": [
+            "Adds a dashed gray border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "How can you check if an element has margin?",
+        "o": [
+            "Inspect element",
+            "Check CSS",
+            "Use JS",
+            "All of the options"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    padding: 10px 20px;\n}",
+        "o": [
+            "Sets top/bottom and left/right padding",
+            "Sets only left padding",
+            "Sets only top padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the default value of padding?",
+        "o": [
+            "0",
+            "auto",
+            "none",
+            "10px"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    margin: 0 auto;\n}",
+        "o": [
+            "Centers the div",
+            "Sets margin to zero",
+            "Adds padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to set a border with dashed style?",
+        "o": [
+            "border: 1px dashed;",
+            "border-style: dashed;",
+            "border: dashed 1px;",
+            "border: 1px solid dashed;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    border: 1px solid orange;\n}",
+        "o": [
+            "Adds a solid orange border",
+            "Sets margin",
+            "Sets padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property can define a margin in em?",
+        "o": [
+            "margin: 10em;",
+            "margin: 10px;",
+            "margin: 10%;",
+            "margin: 10;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 20px 0;\n}",
+        "o": [
+            "Sets top/bottom padding",
+            "Sets left/right padding",
+            "Removes padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you specify a border on all sides?",
+        "o": [
+            "border: 1px solid;",
+            "border: solid 1px;",
+            "border-all: 1px solid;",
+            "border: 1px;"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    border: 1px solid teal;\n}",
+        "o": [
+            "Adds a solid teal border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "What does 'margin: 5px;' do?",
+        "o": [
+            "Sets equal margins",
+            "Sets only bottom margin",
+            "Sets only top margin",
+            "Removes margin"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin: 10px 5px;\n}",
+        "o": [
+            "Sets vertical and horizontal margins",
+            "Sets only left margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How can you add spacing between elements?",
+        "o": [
+            "Use margin",
+            "Use padding",
+            "Use border",
+            "Use content"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    margin-top: 10px;\n}",
+        "o": [
+            "Adds top margin",
+            "Adds bottom margin",
+            "Adds left margin",
+            "Adds right margin"
+        ]
+    },
+    {
+        "q": "What happens if padding is set to auto?",
+        "o": [
+            "Ignored",
+            "Set to zero",
+            "Resizes element",
+            "Sets equal space"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    border: 2px solid white;\n}",
+        "o": [
+            "Adds a solid white border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "How do you set a border radius?",
+        "o": [
+            "border-radius: 10px;",
+            "border: radius 10px;",
+            "radius: border 10px;",
+            "border: 10px radius;"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    padding: 5px 10px;\n}",
+        "o": [
+            "Sets top/bottom and left/right padding",
+            "Sets only left padding",
+            "Sets only top padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does 'padding: 5px 10px;' achieve?",
+        "o": [
+            "Sets top/bottom and left/right padding",
+            "Sets only left padding",
+            "Sets only right padding",
+            "Sets equal padding"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin: 10px;\n}",
+        "o": [
+            "Sets margin around the div",
+            "Sets padding around the div",
+            "Sets border around the div",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to set margin on all sides?",
+        "o": [
+            "margin: 10px;",
+            "margin: all 10px;",
+            "margin: 10px 10px;",
+            "margin: 10; 10;"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    border: 1px dashed purple;\n}",
+        "o": [
+            "Adds a dashed purple border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "How do you specify a solid border?",
+        "o": [
+            "border: 1px solid;",
+            "border: solid;",
+            "border: solid 1px;",
+            "border-style: solid;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 15px 0;\n}",
+        "o": [
+            "Sets top/bottom padding",
+            "Sets left/right padding",
+            "Removes padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How can you make margin auto?",
+        "o": [
+            "margin: auto;",
+            "margin: auto 10px;",
+            "margin: auto; 0;",
+            "margin: 10px auto;"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    margin: 10px 20px;\n}",
+        "o": [
+            "Sets vertical and horizontal margins",
+            "Sets only top margin",
+            "Sets only left margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to check border width?",
+        "o": [
+            "border-width: 1px;",
+            "border: width 1px;",
+            "border: 1px;",
+            "border: width;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    border: 3px solid red;\n}",
+        "o": [
+            "Adds a solid red border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "How do you set a border on the left only?",
+        "o": [
+            "border-left: 2px solid;",
+            "border: left 2px;",
+            "border: solid 2px left;",
+            "border: 2px; left;"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    padding: 0;\n}",
+        "o": [
+            "Removes padding",
+            "Adds padding",
+            "Sets margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does 'padding: 0;' achieve?",
+        "o": [
+            "Removes padding",
+            "Adds padding",
+            "Sets border",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin-left: 15px;\n}",
+        "o": [
+            "Adds left margin",
+            "Adds right margin",
+            "Adds top margin",
+            "Adds bottom margin"
+        ]
+    },
+    {
+        "q": "How to set a margin-bottom of 15px?",
+        "o": [
+            "margin-bottom: 15px;",
+            "margin: bottom 15px;",
+            "margin: 15px bottom;",
+            "margin: 15;"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    border: 2px double black;\n}",
+        "o": [
+            "Adds a double black border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "What does 'border: solid red;' set?",
+        "o": [
+            "Sets a solid red border",
+            "Sets a dashed border",
+            "Removes border",
+            "Sets a transparent border"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 25px;\n}",
+        "o": [
+            "Adds padding inside the div",
+            "Adds margin",
+            "Sets border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you set a bottom padding?",
+        "o": [
+            "padding-bottom: 10px;",
+            "padding: bottom 10px;",
+            "padding: 10px bottom;",
+            "padding: 10;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin: 0 5px;\n}",
+        "o": [
+            "Sets left/right margin",
+            "Sets top/bottom margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does 'margin: 20px 10px;' do?",
+        "o": [
+            "Sets vertical and horizontal margins",
+            "Sets all margins",
+            "Sets only top margin",
+            "Sets only bottom margin"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    border: 1px solid transparent;\n}",
+        "o": [
+            "Adds a transparent border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "How to remove a specific margin?",
+        "o": [
+            "margin-top: 0;",
+            "margin: top 0;",
+            "margin: 0 top;",
+            "margin: 0;"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    padding: 5px 10px 15px;\n}",
+        "o": [
+            "Sets padding for top, sides, and bottom",
+            "Sets only left padding",
+            "Sets equal padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does 'padding: auto;' do?",
+        "o": [
+            "Ignored",
+            "Sets equal padding",
+            "Removes padding",
+            "Resizes element"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    margin: 50%;\n}",
+        "o": [
+            "Sets 50% margin on all sides",
+            "Sets only bottom margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to set margin with pixels?",
+        "o": [
+            "margin: 10px;",
+            "margin: 10em;",
+            "margin: 10%;",
+            "margin: 10;"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    margin-top: 20px;\n}",
+        "o": [
+            "Adds top margin",
+            "Adds bottom margin",
+            "Adds left margin",
+            "Adds right margin"
+        ]
+    },
+    {
+        "q": "What does 'border: dashed 5px;' specify?",
+        "o": [
+            "Sets a dashed border",
+            "Sets a solid border",
+            "Removes border",
+            "Sets a transparent border"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    border-radius: 5px;\n}",
+        "o": [
+            "Rounds the corners of the div",
+            "Sets border width",
+            "Sets margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you specify a border on the top only?",
+        "o": [
+            "border-top: 2px solid;",
+            "border: top 2px;",
+            "border-top: solid 2px;",
+            "border: 2px; top;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    margin: 0 auto;\n}",
+        "o": [
+            "Centers the div",
+            "Sets margin to zero",
+            "Adds padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What happens when a margin is negative?",
+        "o": [
+            "Elements overlap",
+            "Margin is ignored",
+            "Margin becomes zero",
+            "Creates additional space"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    padding: 10px 5%;\n}",
+        "o": [
+            "Sets vertical padding and horizontal padding in %",
+            "Sets only top padding",
+            "Sets equal padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to add a border to all sides?",
+        "o": [
+            "border: 1px solid;",
+            "border: all 1px;",
+            "border: solid 1px;",
+            "border: 1px;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin: 2px 4px;\n}",
+        "o": [
+            "Sets vertical and horizontal margins",
+            "Sets only left margin",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you set a border with width?",
+        "o": [
+            "border-width: 5px;",
+            "border: width 5px;",
+            "border: 5px;",
+            "border: 5px solid;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    border: 5px groove yellow;\n}",
+        "o": [
+            "Adds a groove yellow border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "What is the shorthand for setting padding?",
+        "o": [
+            "padding: 10px;",
+            "padding: all 10px;",
+            "padding: 10px 20px;",
+            "padding: 10; 20;"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    padding: 12px;\n}",
+        "o": [
+            "Adds padding inside the div",
+            "Adds margin",
+            "Sets border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to add a margin on right only?",
+        "o": [
+            "margin-right: 10px;",
+            "margin: right 10px;",
+            "margin: 10px right;",
+            "margin: 10;"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    margin-right: auto;\n}",
+        "o": [
+            "Aligns the div to the left",
+            "Sets right margin to auto",
+            "Adds padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to set padding using percentage?",
+        "o": [
+            "padding: 10%;",
+            "padding: 10px 20%;",
+            "padding: 20px %;",
+            "padding: %10;"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    border: 2px inset blue;\n}",
+        "o": [
+            "Adds an inset blue border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "What does 'border: double 2px;' specify?",
+        "o": [
+            "Sets a double border",
+            "Sets a solid border",
+            "Removes border",
+            "Sets a dashed border"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 1em;\n}",
+        "o": [
+            "Sets padding based on the font size",
+            "Sets margin",
+            "Sets border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to set padding for all sides?",
+        "o": [
+            "padding: 10px;",
+            "padding: all 10px;",
+            "padding: 10px 10px;",
+            "padding: 10; 10;"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    border: 1px solid #ccc;\n}",
+        "o": [
+            "Adds a solid gray border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "What does 'margin: 5px 10px;' do?",
+        "o": [
+            "Sets vertical and horizontal margins",
+            "Sets all margins",
+            "Sets only top margin",
+            "Sets only bottom margin"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin: 0;\n}",
+        "o": [
+            "Removes all margins",
+            "Adds margin",
+            "Sets border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to set a border with solid color?",
+        "o": [
+            "border: solid blue;",
+            "border: blue;",
+            "border-color: solid blue;",
+            "color: solid blue;"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 2rem;\n}",
+        "o": [
+            "Sets padding in rem units",
+            "Sets margin",
+            "Sets border",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How to check if padding is applied?",
+        "o": [
+            "Inspect element",
+            "Check CSS",
+            "Use JS",
+            "All of the options"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    margin: 0 0 10px;\n}",
+        "o": [
+            "Adds bottom margin",
+            "Adds top margin",
+            "Adds left margin",
+            "Adds right margin"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    border: 3px solid purple;\n}",
+        "o": [
+            "Adds a solid purple border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    padding: 5px 15px;\n}",
+        "o": [
+            "Sets top/bottom and left/right padding",
+            "Sets only left padding",
+            "Sets only top padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    margin-top: 5%;\n}",
+        "o": [
+            "Adds top margin in percentage",
+            "Adds bottom margin",
+            "Adds left margin",
+            "Adds right margin"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    border: 1px dotted #f00;\n}",
+        "o": [
+            "Adds a dotted red border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n    padding: 10px 20%;\n}",
+        "o": [
+            "Sets top/bottom padding and horizontal padding in %",
+            "Sets only left padding",
+            "Sets only top padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does this code specify?",
+        "l": "css",
+        "c": "div {\n    margin: 0 10px;\n}",
+        "o": [
+            "Sets horizontal margins",
+            "Sets vertical margins",
+            "Removes margin",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    border: 1px solid rgb(255, 0, 0);\n}",
+        "o": [
+            "Adds a solid red border",
+            "Removes border",
+            "Sets padding",
+            "Sets margin"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n    padding: 20px 5px;\n}",
+        "o": [
+            "Sets top/bottom and left/right padding",
+            "Sets only left padding",
+            "Sets only top padding",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n    margin: 0px;\n}",
+        "o": [
+            "Removes all margins",
+            "Adds margin",
+            "Sets border",
+            "No effect"
+        ]
+    }
+]

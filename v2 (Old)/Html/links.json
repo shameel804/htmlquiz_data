@@ -1,0 +1,2873 @@
+[
+  {
+    "q": "Which HTML tag is used to create a hyperlink?", 
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code snippet?",
+    "c": "<a href=\"https://example.com\">Click Here</a>",
+    "o": [
+      "A clickable link with the text 'Click Here' pointing to 'https://example.com'.",
+      "A button linking to 'https://example.com'.",
+      "An image linking to 'https://example.com'.",
+      "A text field to enter a URL."
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify where to open the linked document in an anchor tag?",
+    "o": [
+      "target",
+      "href",
+      "rel",
+      "src"
+    ]
+  },
+  {
+    "q": "What is the correct way to open a link in a new tab?",
+    "c": "<a href=\"https://example.com\" target=\"_blank\">Visit Example</a>",
+    "o": [
+      "It opens 'https://example.com' in a new browser tab.",
+      "It opens 'https://example.com' in the same tab.",
+      "It prevents the link from opening.",
+      "It makes the link inactive."
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a navigation menu?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<ul>",
+      "<div>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"home.html\">Home</a></li>\n    <li><a href=\"about.html\">About</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A navigation menu with 'Home' and 'About' links.",
+      "A dropdown menu with 'Home' and 'About'.",
+      "A paragraph containing 'Home' and 'About'.",
+      "A single 'Home' button."
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify an alternate text for a link?",
+    "o": [
+      "title",
+      "alt",
+      "name",
+      "tooltip"
+    ]
+  },
+  {
+    "q": "What does the following code snippet do?",
+    "c": "<a href=\"#section2\">Jump to Section 2</a>\n\n<h2 id=\"section2\">Section 2</h2>",
+    "o": [
+      "Scrolls to 'Section 2' when clicked.",
+      "Opens a new page for 'Section 2'.",
+      "Creates a new section in the document.",
+      "Displays a popup message."
+    ]
+  },
+  {
+    "q": "Which attribute is required for an anchor tag to function as a hyperlink?",
+    "o": [
+      "href",
+      "src",
+      "target",
+      "alt"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href=\"mailto:example@example.com\">Email Us</a>",
+    "o": [
+      "A clickable email link that opens the user's default email client.",
+      "A form to enter an email.",
+      "A button that sends an email automatically.",
+      "A plain text 'Email Us'."
+    ]
+  },
+  {
+    "q": "Which value of the 'target' attribute opens a link in the same tab?",
+    "o": [
+      "_self",
+      "_blank",
+      "_parent",
+      "_top"
+    ]
+  },
+  {
+    "q": "What does the 'rel' attribute specify in an anchor tag?",
+    "o": [
+      "Relationship between the current document and the linked document.",
+      "The link color.",
+      "The download type of the link.",
+      "The font size of the link text."
+    ]
+  },
+  {
+    "q": "What will be displayed by the following code?",
+    "c": "<a href=\"https://example.com\" title=\"Go to Example\">Visit Example</a>",
+    "o": [
+      "A link that shows a tooltip 'Go to Example' when hovered.",
+      "A button linking to 'https://example.com'.",
+      "A text field to enter a URL.",
+      "A disabled link."
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to make a link downloadable?",
+    "o": [
+      "<a href=\"file.pdf\" download>Download PDF</a>",
+      "<a href=\"file.pdf\" save>Download PDF</a>",
+      "<a href=\"file.pdf\" file>Download PDF</a>",
+      "<a href=\"file.pdf\" attachment>Download PDF</a>"
+    ]
+  },
+  {
+    "q": "What will the following HTML code produce?",
+    "c": "<ul>\n  <li><a href=\"index.html\">Home</a></li>\n  <li><a href=\"services.html\">Services</a></li>\n  <li><a href=\"contact.html\">Contact</a></li>\n</ul>",
+    "o": [
+      "An unordered list with links to 'Home', 'Services', and 'Contact'.",
+      "A dropdown navigation menu.",
+      "A paragraph containing 'Home', 'Services', and 'Contact'.",
+      "A table with navigation links."
+    ]
+  },
+  {
+    "q": "Which HTML tag is used for defining a list-based navigation menu?",
+    "o": [
+      "<ul>",
+      "<nav>",
+      "<menu>",
+      "<ol>"
+    ]
+  },
+  {
+    "q": "What does the following code snippet do?",
+    "c": "<nav>\n  <a href=\"home.html\">Home</a>\n  <a href=\"about.html\">About</a>\n  <a href=\"contact.html\">Contact</a>\n</nav>",
+    "o": [
+      "Displays a horizontal navigation bar with links.",
+      "Creates a dropdown menu.",
+      "Creates a table-based navigation menu.",
+      "Displays a vertical navigation bar by default."
+    ]
+  },
+  {
+    "q": "Which of the following best describes the 'noopener' value in the rel attribute?",
+    "o": [
+      "Prevents the new page from accessing the 'window.opener' property.",
+      "Opens the link in a new tab.",
+      "Disables the hyperlink.",
+      "Makes the link open in the same tab."
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a block of navigation links?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<ul>",
+      "<div>"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet display?",
+    "c": "<a href=\"https://www.example.com\" target=\"_blank\" rel=\"noopener noreferrer\">Visit Example</a>",
+    "o": [
+      "A link to 'https://www.example.com' that opens in a new tab securely.",
+      "A button linking to 'https://www.example.com'.",
+      "A text field where users enter a URL.",
+      "A disabled hyperlink."
+    ]
+  },
+  {
+    "q": "Which attribute in the <a> tag specifies the MIME type of the linked document?",
+    "o": [
+      "type",
+      "href",
+      "rel",
+      "target"
+    ]
+  },
+  {
+    "q": "What does the 'rel=\"nofollow\"' attribute do in an anchor tag?",
+    "o": [
+      "Instructs search engines not to follow the link.",
+      "Opens the link in a new tab.",
+      "Prevents the link from being clicked.",
+      "Changes the link color."
+    ]
+  },
+  {
+    "q": "What will the following HTML code produce?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"#section1\">Section 1</a></li>\n    <li><a href=\"#section2\">Section 2</a></li>\n  </ul>\n</nav>\n<h2 id=\"section1\">Section 1</h2>\n<h2 id=\"section2\">Section 2</h2>",
+    "o": [
+      "A navigation menu that scrolls to 'Section 1' and 'Section 2' within the page.",
+      "A dropdown menu for navigating sections.",
+      "A separate page for each section.",
+      "A broken link structure."
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for linking an external CSS file?",
+    "o": [
+      "<link rel=\"stylesheet\" href=\"styles.css\">",
+      "<style src=\"styles.css\">",
+      "<css link=\"styles.css\">",
+      "<a href=\"styles.css\">CSS File</a>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href=\"javascript:void(0);\">Click Me</a>",
+    "o": [
+      "A clickable link that does nothing when clicked.",
+      "A link that redirects to 'void(0);'.",
+      "A link that opens 'javascript:void(0);' in a new tab.",
+      "A disabled link."
+    ]
+  },
+  {
+    "q": "Which HTML attribute forces a file to be downloaded instead of opened in the browser?",
+    "o": [
+      "download",
+      "href",
+      "target",
+      "rel"
+    ]
+  },
+  {
+    "q": "What will the following HTML code display?",
+    "c": "<a href=\"https://example.com\" target=\"_parent\">Go to Example</a>",
+    "o": [
+      "Opens 'https://example.com' in the parent frame.",
+      "Opens 'https://example.com' in a new tab.",
+      "Prevents 'https://example.com' from opening.",
+      "Makes the link inactive."
+    ]
+  },
+  {
+    "q": "Which HTML element is used to group links for better accessibility?",
+    "o": [
+      "<nav>",
+      "<section>",
+      "<div>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which protocol is used in a hyperlink to send an email?",
+    "o": [
+      "mailto:",
+      "http:",
+      "ftp:",
+      "tel:"
+    ]
+  },
+  {
+    "q": "What does the following HTML snippet do?",
+    "c": "<a href=\"tel:+1234567890\">Call Us</a>",
+    "o": [
+      "Creates a clickable link that initiates a phone call.",
+      "Sends an email to the number.",
+      "Opens a new tab with the number displayed.",
+      "Redirects to a phone contact list."
+    ]
+  },
+  {
+    "q": "Which attribute in the <a> tag is used to specify the language of the linked document?",
+    "o": [
+      "hreflang",
+      "lang",
+      "charset",
+      "dir"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet produce?",
+    "c": "<a href=\"#\" onclick=\"alert('Hello!')\">Click Me</a>",
+    "o": [
+      "A clickable link that shows an alert with 'Hello!'.",
+      "A link that refreshes the page.",
+      "A broken link that does nothing.",
+      "A disabled hyperlink."
+    ]
+  },
+  {
+    "q": "Which of the following is a correct absolute URL?",
+    "o": [
+      "https://www.example.com/page.html",
+      "/page.html",
+      "page.html",
+      "../page.html"
+    ]
+  },
+  {
+    "q": "What will the following HTML code do?",
+    "c": "<a href=\"https://example.com\" target=\"_top\">Go to Example</a>",
+    "o": [
+      "Opens 'https://example.com' in the full body of the window, breaking out of any frames.",
+      "Opens 'https://example.com' in a new tab.",
+      "Opens 'https://example.com' in the same tab.",
+      "Disables the hyperlink."
+    ]
+  },
+  {
+    "q": "Which type of URL does not include a domain name?",
+    "o": [
+      "Relative URL",
+      "Absolute URL",
+      "Canonical URL",
+      "Secure URL"
+    ]
+  },
+  {
+    "q": "What will happen if you click the following link?",
+    "c": "<a href=\"#\">Click Here</a>",
+    "o": [
+      "The page will stay the same and scroll to the top.",
+      "The page will refresh.",
+      "A new tab will open.",
+      "An alert will pop up."
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to link an external JavaScript file?",
+    "o": [
+      "<script>",
+      "<link>",
+      "<a>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "Which of the following best describes a breadcrumb navigation?",
+    "o": [
+      "A navigation system that shows the user's location within a website.",
+      "A list of all pages on a website.",
+      "A navigation menu with dropdowns.",
+      "A set of links that open in a new tab."
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for linking to an external website?",
+    "o": [
+      "<a href=\"https://www.example.com\">Visit Example</a>",
+      "<link href=\"https://www.example.com\">Visit Example</link>",
+      "<a src=\"https://www.example.com\">Visit Example</a>",
+      "<href=\"https://www.example.com\">Visit Example</href>"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet produce?",
+    "c": "<a href=\"https://example.com\" target=\"_self\">Click Here</a>",
+    "o": [
+      "Opens 'https://example.com' in the same tab.",
+      "Opens 'https://example.com' in a new tab.",
+      "Disables the link.",
+      "Downloads the file from 'https://example.com'."
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify a tooltip for a link?",
+    "o": [
+      "title",
+      "alt",
+      "tooltip",
+      "hint"
+    ]
+  },
+  {
+    "q": "What will the following HTML code do?",
+    "c": "<a href=\"page.html\" accesskey=\"p\">Go to Page</a>",
+    "o": [
+      "Allows users to navigate to 'page.html' using an access key ('p').",
+      "Changes the color of the link when hovered.",
+      "Disables the link.",
+      "Makes the link open in a new tab."
+    ]
+  },
+  {
+    "q": "Which attribute makes a link open in a new browser window or tab?",
+    "o": [
+      "target=\"_blank\"",
+      "target=\"_self\"",
+      "open=\"new\"",
+      "rel=\"noopener\""
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<a href=\"download.pdf\" download>Download File</a>",
+    "o": [
+      "Allows the user to download 'download.pdf' instead of opening it in the browser.",
+      "Opens 'download.pdf' in a new tab.",
+      "Displays 'download.pdf' as plain text.",
+      "Creates a disabled link."
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a list-based navigation menu?",
+    "o": [
+      "<ul>",
+      "<nav>",
+      "<menu>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet produce?",
+    "c": "<nav>\n  <a href=\"index.html\">Home</a>\n  <a href=\"about.html\">About</a>\n  <a href=\"contact.html\">Contact</a>\n</nav>",
+    "o": [
+      "A simple navigation bar with 'Home', 'About', and 'Contact' links.",
+      "A dropdown menu with navigation links.",
+      "A table-based navigation structure.",
+      "A list of links inside a sidebar."
+    ]
+  },
+  {
+    "q": "Which of the following describes a relative URL?",
+    "o": [
+      "\"/about.html\"",
+      "\"https://www.example.com/about.html\"",
+      "\"ftp://www.example.com/about.html\"",
+      "\"//www.example.com/about.html\""
+    ]
+  },
+  {
+    "q": "Which attribute in an anchor tag specifies the character encoding of the linked document?",
+    "o": [
+      "charset",
+      "encoding",
+      "lang",
+      "rel"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to create an anchor link to jump to a section within the same page?",
+    "o": [
+      "<a href=\"#section\">Go to Section</a>",
+      "<a href=\".section\">Go to Section</a>",
+      "<a id=\"section\">Go to Section</a>",
+      "<a name=\"section\">Go to Section</a>"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<a href=\"https://example.com\" rel=\"nofollow\">Visit Example</a>",
+    "o": [
+      "Prevents search engines from following the link.",
+      "Opens 'https://example.com' in a new tab.",
+      "Disables the hyperlink.",
+      "Redirects users to a different website automatically."
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify the default page that should be displayed in a frame?",
+    "o": [
+      "src",
+      "href",
+      "target",
+      "rel"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet produce?",
+    "c": "<base href=\"https://example.com/\" target=\"_blank\">",
+    "o": [
+      "Sets the base URL for all relative links and opens them in a new tab.",
+      "Forces all links to use HTTPS.",
+      "Adds a clickable link to 'https://example.com/'.",
+      "Hides all links on the page."
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify that a hyperlink should open in fullscreen mode?",
+    "o": [
+      "There is no such attribute in HTML.",
+      "fullscreen",
+      "open=\"fullscreen\"",
+      "display=\"full\""
+    ]
+  },
+  {
+    "q": "What will happen when you click the following link?",
+    "c": "<a href=\"javascript:alert('Hello!');\">Click Me</a>",
+    "o": [
+      "Displays an alert box with 'Hello!'.",
+      "Opens a new browser tab.",
+      "Redirects to another webpage.",
+      "Downloads a file."
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to open a link in a new tab and ensure security best practices?",
+    "o": [
+      "<a href=\"https://example.com\" target=\"_blank\" rel=\"noopener noreferrer\">Visit Example</a>",
+      "<a href=\"https://example.com\" target=\"_blank\">Visit Example</a>",
+      "<a href=\"https://example.com\" target=\"new\">Visit Example</a>",
+      "<a href=\"https://example.com\" target=\"secure\">Visit Example</a>"
+    ]
+  },
+  {
+    "q": "What does the 'ping' attribute in an anchor tag do?",
+    "o": [
+      "Sends a notification to the specified URL when the link is clicked.",
+      "Prevents search engines from following the link.",
+      "Opens the link in a new tab.",
+      "Adds a delay before opening the link."
+    ]
+  },
+  {
+    "q": "What will happen when you click the following link?",
+    "c": "<a href=\"\" download>Download</a>",
+    "o": [
+      "The page will reload, but no file will be downloaded.",
+      "A file named 'download' will be downloaded.",
+      "The browser will show an error message.",
+      "The user will be redirected to a new page."
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid way to create a hyperlink?",
+    "o": [
+      "<a src=\"page.html\">Click Here</a>",
+      "<a href=\"page.html\">Click Here</a>",
+      "<a href=\"#\">Click Here</a>",
+      "<a href=\"mailto:someone@example.com\">Send Email</a>"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a group of navigation links?",
+    "o": [
+      "<nav>",
+      "<ul>",
+      "<div>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<a href=\"https://example.com\" target=\"_blank\" rel=\"noopener noreferrer\">Click Here</a>",
+    "o": [
+      "Opens 'https://example.com' in a new tab securely.",
+      "Opens 'https://example.com' in the same tab.",
+      "Prevents the link from opening.",
+      "Hides the link from search engines."
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to create a link that opens an email client?",
+    "o": [
+      "<a href=\"mailto:someone@example.com\">Email Me</a>",
+      "<a href=\"email:someone@example.com\">Email Me</a>",
+      "<a href=\"mail:someone@example.com\">Email Me</a>",
+      "<a href=\"sendemail:someone@example.com\">Email Me</a>"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet produce?",
+    "c": "<ul>\n  <li><a href=\"home.html\">Home</a></li>\n  <li><a href=\"about.html\">About</a></li>\n  <li><a href=\"contact.html\">Contact</a></li>\n</ul>",
+    "o": [
+      "An unordered list containing navigation links.",
+      "A dropdown navigation menu.",
+      "A table-based navigation menu.",
+      "A sidebar with navigation items."
+    ]
+  },
+  {
+    "q": "Which attribute is used in an anchor tag to make a link open in the same tab?",
+    "o": [
+      "target=\"_self\"",
+      "target=\"_blank\"",
+      "target=\"_parent\"",
+      "target=\"_top\""
+    ]
+  },
+  {
+    "q": "What does the 'rel' attribute in an anchor tag specify?",
+    "o": [
+      "The relationship between the current page and the linked document.",
+      "The title of the hyperlink.",
+      "The size of the linked document.",
+      "The color of the hyperlink."
+    ]
+  },
+  {
+    "q": "Which of the following best describes a 'breadcrumb' navigation?",
+    "o": [
+      "A hierarchical navigation system showing the user's location on a website.",
+      "A collection of links placed at the bottom of a webpage.",
+      "A sidebar with navigation links.",
+      "A set of buttons for navigating between pages."
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet produce?",
+    "c": "<a href=\"#section2\">Jump to Section 2</a>\n<h2 id=\"section2\">Section 2</h2>",
+    "o": [
+      "A link that scrolls to 'Section 2' on the same page.",
+      "A link that opens 'Section 2' in a new tab.",
+      "A link that redirects to another page.",
+      "A broken link with no effect."
+    ]
+  },
+  {
+    "q": "Which of the following is a valid example of an absolute URL?",
+    "o": [
+      "https://www.example.com/about.html",
+      "/about.html",
+      "about.html",
+      "../about.html"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define a footer navigation menu?",
+    "o": [
+      "<footer>",
+      "<nav>",
+      "<section>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code do?",
+    "c": "<a href=\"https://example.com\" title=\"Go to Example\">Click Here</a>",
+    "o": [
+      "Displays a tooltip with 'Go to Example' when hovered over.",
+      "Opens 'https://example.com' in a new tab.",
+      "Changes the color of the link.",
+      "Makes the link bold."
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax to create a relative link?",
+    "o": [
+      "<a href=\"/about.html\">About Us</a>",
+      "<a href=\"https://www.example.com/about.html\">About Us</a>",
+      "<a link=\"about.html\">About Us</a>",
+      "<a src=\"about.html\">About Us</a>"
+    ]
+  },
+  {
+    "q": "What will happen when you click the following link?",
+    "c": "<a href=\"#top\">Back to Top</a>",
+    "o": [
+      "The page will scroll to the top.",
+      "A new tab will open.",
+      "A file will be downloaded.",
+      "The link will not work."
+    ]
+  },
+  {
+    "q": "Which of the following attributes ensures a hyperlink is not followed by search engines?",
+    "o": [
+      "rel=\"nofollow\"",
+      "rel=\"noopener\"",
+      "rel=\"noreferrer\"",
+      "rel=\"noindex\""
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet produce?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"home.html\">Home</a></li>\n    <li><a href=\"services.html\">Services</a></li>\n    <li><a href=\"contact.html\">Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A navigation menu with 'Home', 'Services', and 'Contact' links.",
+      "A dropdown menu.",
+      "A sidebar menu.",
+      "A single button linking to multiple pages."
+    ]
+  },
+  {
+    "q": "Which of the following values for the 'target' attribute will open a link in a full-screen window?",
+    "o": [
+      "_top",
+      "_blank",
+      "_self",
+      "_parent"
+    ]
+  },
+  {
+    "q": "What will happen if you click the following link?",
+    "c": "<a href=\"https://example.com\" download>Download Example</a>",
+    "o": [
+      "Attempts to download the linked file instead of opening it.",
+      "Opens 'https://example.com' in the same tab.",
+      "Opens 'https://example.com' in a new tab.",
+      "Hides the link from the user."
+    ]
+  },
+  {
+    "q": "Which tag is best suited for structuring a navigation bar in HTML?",
+    "o": [
+      "<nav>",
+      "<div>",
+      "<section>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to open a link in a new tab while ensuring security best practices?",
+    "o": [
+      "<a href=\"https://example.com\" target=\"_blank\" rel=\"noopener noreferrer\">Visit Example</a>",
+      "<a href=\"https://example.com\" target=\"_blank\">Visit Example</a>",
+      "<a href=\"https://example.com\" target=\"new\">Visit Example</a>",
+      "<a href=\"https://example.com\" target=\"secure\">Visit Example</a>"
+    ]
+  },
+  {
+    "q": "Which attribute in the <a> tag specifies the URL of the page the link goes to?",
+    "o": [
+      "href",
+      "src",
+      "link",
+      "url"
+    ]
+  },
+  {
+    "q": "What does the following HTML code do?",
+    "c": "<a href=\"tel:+123456789\">Call Us</a>",
+    "o": [
+      "Creates a clickable phone number link.",
+      "Opens an email client.",
+      "Links to a website.",
+      "Sends an SMS message."
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax to open a link in a new browser tab?",
+    "o": [
+      "<a href=\"page.html\" target=\"_blank\">Click Here</a>",
+      "<a href=\"page.html\" target=\"new\">Click Here</a>",
+      "<a href=\"page.html\" newtab>Click Here</a>",
+      "<a href=\"page.html\" target=\"window\">Click Here</a>"
+    ]
+  },
+  {
+    "q": "What will happen when you click the following link?",
+    "c": "<a href=\"https://example.com\" target=\"_parent\">Go to Example</a>",
+    "o": [
+      "Opens the link in the parent frame.",
+      "Opens the link in a new tab.",
+      "Opens the link in fullscreen mode.",
+      "Downloads the page."
+    ]
+  },
+  {
+    "q": "Which of the following statements about the <base> tag is true?",
+    "o": [
+      "It sets the base URL for all relative links on a webpage.",
+      "It creates a clickable link.",
+      "It is required for all HTML documents.",
+      "It prevents links from being followed."
+    ]
+  },
+  {
+    "q": "What does the following HTML snippet produce?",
+    "c": "<nav>\n  <a href=\"index.html\">Home</a>\n  <a href=\"products.html\">Products</a>\n  <a href=\"contact.html\">Contact</a>\n</nav>",
+    "o": [
+      "A simple horizontal navigation bar.",
+      "A dropdown menu.",
+      "A sidebar navigation.",
+      "A footer menu."
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid way to create a hyperlink?",
+    "o": [
+      "<a src=\"page.html\">Click Here</a>",
+      "<a href=\"page.html\">Click Here</a>",
+      "<a href=\"#\">Click Here</a>",
+      "<a href=\"mailto:someone@example.com\">Send Email</a>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the rel=\"noopener noreferrer\" attribute in an anchor tag?",
+    "o": [
+      "Prevents security vulnerabilities when opening links in new tabs.",
+      "Makes the link open in the same tab.",
+      "Automatically redirects users to a secure page.",
+      "Disables the link."
+    ]
+  },
+  {
+    "q": "Which of the following links will open an email client with a pre-filled subject?",
+    "o": [
+      "<a href=\"mailto:someone@example.com?subject=Hello\">Send Email</a>",
+      "<a href=\"emailto:someone@example.com?subject=Hello\">Send Email</a>",
+      "<a href=\"mailto:someone@example.com#Hello\">Send Email</a>",
+      "<a href=\"mail:someone@example.com?subject=Hello\">Send Email</a>"
+    ]
+  },
+  {
+    "q": "Which attribute can be used to make a hyperlink open a specific section on another page?",
+    "o": [
+      "href=\"page.html#section\"",
+      "id=\"page.html#section\"",
+      "name=\"page.html#section\"",
+      "target=\"page.html#section\""
+    ]
+  },
+  {
+    "q": "Which attribute in the <a> tag specifies that a link should be downloaded instead of opened?",
+    "o": [
+      "download",
+      "href",
+      "target",
+      "rel"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<a href=\"https://example.com\" target=\"_top\">Visit Example</a>",
+    "o": [
+      "Opens the link in the full body of the window, removing frames.",
+      "Opens the link in a new tab.",
+      "Opens the link in the parent frame.",
+      "Prevents the link from opening."
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to create an internal link to a section on the same page?",
+    "o": [
+      "<a href=\"#about\">About Section</a>",
+      "<a href=\"about\">About Section</a>",
+      "<a id=\"#about\">About Section</a>",
+      "<a name=\"about\">About Section</a>"
+    ]
+  },
+  {
+    "q": "What does the 'ping' attribute in an anchor tag do?",
+    "o": [
+      "Sends a notification to the specified URL when the link is clicked.",
+      "Prevents search engines from following the link.",
+      "Opens the link in a new tab.",
+      "Adds a delay before opening the link."
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to structure a breadcrumb navigation?",
+    "o": [
+      "<nav aria-label=\"breadcrumb\">\n  <ul>\n    <li><a href=\"home.html\">Home</a></li>\n    <li><a href=\"category.html\">Category</a></li>\n    <li>Current Page</li>\n  </ul>\n</nav>",
+      "<nav>\n  <ul>\n    <li>Home > Category > Current Page</li>\n  </ul>\n</nav>",
+      "<nav>\n  <div>Home > Category > Current Page</div>\n</nav>",
+      "<div>\n  <a href=\"home.html\">Home</a> > <a href=\"category.html\">Category</a> > Current Page\n</div>"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet produce?",
+    "c": "<a href=\"https://example.com\" rel=\"noopener\">Click Here</a>",
+    "o": [
+      "Prevents the opened page from accessing the referring page.",
+      "Opens the link in a new tab.",
+      "Hides the hyperlink from search engines.",
+      "Redirects users to another page automatically."
+    ]
+  },
+  {
+    "q": "Which of the following values for the 'target' attribute will open a link in the same tab?",
+    "o": [
+      "_self",
+      "_blank",
+      "_parent",
+      "_top"
+    ]
+  },
+  {
+    "q": "Which tag is best suited for creating a navigation menu?",
+    "o": [
+      "<nav>",
+      "<ul>",
+      "<div>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify that a hyperlink should open in fullscreen mode?",
+    "o": [
+      "There is no such attribute in HTML.",
+      "fullscreen",
+      "open=\"fullscreen\"",
+      "display=\"full\""
+    ]
+  },
+  {
+    "q": "What does the 'noopener' value in the 'rel' attribute do?",
+    "o": [
+      "Prevents the new tab from accessing the original page via JavaScript.",
+      "Forces the link to open in a new tab.",
+      "Disables the link.",
+      "Adds a delay before opening the link."
+    ]
+  },
+  {
+    "q": "Which of the following HTML elements is best suited for primary website navigation?",
+    "o": [
+      "<nav>",
+      "<header>",
+      "<section>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code do?",
+    "c": "<a href=\"//example.com\">Visit Example</a>",
+    "o": [
+      "Links to 'example.com' using the same protocol as the current page.",
+      "Links to 'example.com' with an absolute URL.",
+      "Opens the link in a new tab.",
+      "Prevents the link from being followed by search engines."
+    ]
+  },
+  {
+    "q": "Which of the following attributes prevents search engines from following a hyperlink?",
+    "o": [
+      "rel=\"nofollow\"",
+      "rel=\"noopener\"",
+      "target=\"_blank\"",
+      "href=\"#\""
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<a href=\"https://example.com\" target=\"_blank\" rel=\"noopener noreferrer\">Click Here</a>",
+    "o": [
+      "Opens the link in a new tab while preventing security risks.",
+      "Opens the link in the same tab.",
+      "Prevents the link from opening.",
+      "Downloads the linked file instead of opening it."
+    ]
+  },
+  {
+    "q": "Which of the following examples correctly implements an anchor link to an ID named 'contact' on the same page?",
+    "o": [
+      "<a href=\"#contact\">Contact Us</a>",
+      "<a href=\"contact\">Contact Us</a>",
+      "<a id=\"#contact\">Contact Us</a>",
+      "<a link=\"#contact\">Contact Us</a>"
+    ]
+  },
+  {
+    "q": "What does the 'aria-label' attribute in the <nav> element do?",
+    "o": [
+      "Provides an accessible name for screen readers.",
+      "Creates a new navigation menu.",
+      "Changes the color of navigation links.",
+      "Hides the navigation bar from users."
+    ]
+  },
+  {
+    "q": "Which of the following is an example of an absolute URL?",
+    "o": [
+      "https://www.example.com/page.html",
+      "/page.html",
+      "page.html",
+      "../page.html"
+    ]
+  },
+  {
+    "q": "What will happen when you click the following link?",
+    "c": "<a href=\"https://example.com\" target=\"_blank\" rel=\"noopener\">Visit Example</a>",
+    "o": [
+      "The link will open in a new tab and prevent the new page from accessing the opener.",
+      "The link will open in the same tab.",
+      "The link will not work.",
+      "The link will open in a minimized window."
+    ]
+  },
+  {
+    "q": "Which of the following statements about the <base> tag is true?",
+    "o": [
+      "It defines a base URL for all relative links in the document.",
+      "It creates a new hyperlink.",
+      "It is required for all HTML pages.",
+      "It prevents links from opening in new tabs."
+    ]
+  },
+  {
+    "q": "Which attribute is used in a hyperlink to open a downloadable file?",
+    "o": [
+      "download",
+      "target",
+      "rel",
+      "ping"
+    ]
+  },
+  {
+    "q": "Which attribute in the <a> tag is used to specify a tooltip text that appears when the user hovers over the link?",
+    "o": [
+      "title",
+      "alt",
+      "tooltip",
+      "hint"
+    ]
+  },
+  {
+    "q": "What is the default behavior of a hyperlink when clicked?",
+    "o": [
+      "Opens the linked document in the same tab.",
+      "Opens the linked document in a new tab.",
+      "Downloads the linked document.",
+      "Prevents the link from being followed."
+    ]
+  },
+  {
+    "q": "What will happen when you click the following link?",
+    "c": "<a href=\"https://example.com\" target=\"_blank\">Visit Example</a>",
+    "o": [
+      "Opens the link in a new tab.",
+      "Opens the link in the same tab.",
+      "Downloads the link.",
+      "Hides the link from the user."
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to create a mailto link that opens the default email client?",
+    "o": [
+      "<a href=\"mailto:someone@example.com\">Send Email</a>",
+      "<a href=\"email:someone@example.com\">Send Email</a>",
+      "<a href=\"mail:someone@example.com\">Send Email</a>",
+      "<a href=\"sendto:someone@example.com\">Send Email</a>"
+    ]
+  },
+  {
+    "q": "Which of the following is the best practice for creating a navigation menu?",
+    "o": [
+      "Using a <nav> element with an unordered list (<ul>) inside.",
+      "Using a series of <div> elements for each link.",
+      "Using only paragraph (<p>) elements.",
+      "Using inline <span> elements for navigation links."
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'role' attribute in the <nav> element?",
+    "o": [
+      "Helps assistive technologies understand that the section is for navigation.",
+      "Changes the style of the navigation bar.",
+      "Hides the navigation bar from the screen.",
+      "Opens the links in a new tab."
+    ]
+  },
+  {
+    "q": "Which of the following is a relative URL?",
+    "o": [
+      "/about.html",
+      "https://www.example.com/about.html",
+      "www.example.com/about.html",
+      "ftp://example.com/about.html"
+    ]
+  },
+  {
+    "q": "What does the 'tabindex' attribute do in navigation links?",
+    "o": [
+      "Defines the order in which links are focused when using the keyboard.",
+      "Hides the navigation link.",
+      "Prevents the link from being clicked.",
+      "Forces the link to open in a new tab."
+    ]
+  },
+  {
+    "q": "What does the following HTML snippet produce?",
+    "c": "<a href=\"#section1\">Go to Section 1</a>\n<h2 id=\"section1\">Section 1</h2>",
+    "o": [
+      "Creates a link that scrolls to 'Section 1' on the same page.",
+      "Creates an external hyperlink.",
+      "Opens a new tab with 'Section 1'.",
+      "Hides 'Section 1' from view."
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid way to open a link in a new tab?",
+    "o": [
+      "<a href=\"page.html\" target=\"newtab\">Click Here</a>",
+      "<a href=\"page.html\" target=\"_blank\">Click Here</a>",
+      "<a href=\"page.html\" target=\"_top\">Click Here</a>",
+      "<a href=\"page.html\" target=\"_parent\">Click Here</a>"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "Which of the following attributes is required for a hyperlink to function?",
+    "o": [
+      "href",
+      "target",
+      "rel",
+      "download"
+    ]
+  },
+  {
+    "q": "What is the correct way to create an anchor link to the top of a webpage?",
+    "o": [
+      "<a href=\"#top\">Back to Top</a>",
+      "<a href=\"top\">Back to Top</a>",
+      "<a id=\"#top\">Back to Top</a>",
+      "<a link=\"#top\">Back to Top</a>"
+    ]
+  },
+  {
+    "q": "What does the 'rel' attribute in an anchor tag define?",
+    "o": [
+      "The relationship between the current document and the linked document.",
+      "The color of the hyperlink.",
+      "The target window in which the link will open.",
+      "The width of the link text."
+    ]
+  },
+  {
+    "q": "Which of the following is NOT a valid value for the 'target' attribute in an anchor tag?",
+    "o": [
+      "_new",
+      "_self",
+      "_blank",
+      "_parent"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<a href=\"https://example.com\" target=\"_self\">Click Here</a>",
+    "o": [
+      "Opens the link in the same tab.",
+      "Opens the link in a new tab.",
+      "Prevents the link from opening.",
+      "Opens the link in fullscreen mode."
+    ]
+  },
+  {
+    "q": "What does the following HTML snippet do?",
+    "c": "<a href=\"page.html\" class=\"btn\">Click Me</a>",
+    "o": [
+      "Creates a hyperlink with a CSS class named 'btn'.",
+      "Creates a button element.",
+      "Prevents the link from being clicked.",
+      "Adds an ID to the hyperlink."
+    ]
+  },
+  {
+    "q": "Which of the following best describes an external link?",
+    "o": [
+      "A hyperlink that navigates to a different website.",
+      "A hyperlink that points to another section of the same page.",
+      "A hyperlink that uses a relative URL.",
+      "A hyperlink that only opens in a new tab."
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for a hyperlink that links to an email address?",
+    "o": [
+      "<a href=\"mailto:someone@example.com\">Send Email</a>",
+      "<a href=\"email:someone@example.com\">Send Email</a>",
+      "<a href=\"mail:someone@example.com\">Send Email</a>",
+      "<a href=\"sendmail:someone@example.com\">Send Email</a>"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about the <nav> element?",
+    "o": [
+      "It is used to define a section of navigation links.",
+      "It is required for all web pages.",
+      "It automatically creates a dropdown menu.",
+      "It can only contain unordered lists."
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href=\"https://example.com\">Click here</a>",
+    "o": [
+      "A hyperlink with the text 'Click here' leading to 'https://example.com'",
+      "A button leading to 'https://example.com'",
+      "A paragraph with a clickable link",
+      "An image linking to 'https://example.com'"
+    ]
+  },
+  {
+    "q": "Which attribute is required in an anchor tag to specify the destination URL?",
+    "o": [
+      "href",
+      "src",
+      "link",
+      "url"
+    ]
+  },
+  {
+    "q": "What is the correct way to open a link in a new tab?",
+    "c": "<a href=\"https://example.com\" target=\"_blank\">Visit Example</a>",
+    "o": [
+      "Opens 'https://example.com' in a new tab",
+      "Opens 'https://example.com' in the same tab",
+      "Displays 'https://example.com' as plain text",
+      "Throws an error"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct example of an absolute URL?",
+    "o": [
+      "https://www.example.com/page.html",
+      "/page.html",
+      "page.html",
+      "../page.html"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code snippet?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"home.html\">Home</a></li>\n    <li><a href=\"about.html\">About</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A navigation menu with 'Home' and 'About' links",
+      "A single clickable link to 'home.html'",
+      "An unordered list without links",
+      "An ordered list with numbers"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to create a navigation menu?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<div>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<a href=\"#section1\">Go to Section 1</a>\n<h2 id=\"section1\">Section 1</h2>",
+    "o": [
+      "Creates an internal link to 'Section 1' within the same page",
+      "Opens a new webpage named 'Section 1'",
+      "Links to an external website",
+      "Does nothing"
+    ]
+  },
+  {
+    "q": "Which of the following statements about anchor tags is correct?",
+    "o": [
+      "An anchor tag can link to an external website, an internal page, or a section within the same page",
+      "Anchor tags can only link to external websites",
+      "Anchor tags must always contain an image",
+      "Anchor tags cannot contain text"
+    ]
+  },
+  {
+    "q": "What is the correct syntax to create an email link in HTML?",
+    "o": [
+      "<a href=\"mailto:someone@example.com\">Send Email</a>",
+      "<a href=\"email:someone@example.com\">Send Email</a>",
+      "<a mailto=\"someone@example.com\">Send Email</a>",
+      "<email href=\"someone@example.com\">Send Email</email>"
+    ]
+  },
+  {
+    "q": "What will the following HTML code do?",
+    "c": "<a href=\"tel:+1234567890\">Call Us</a>",
+    "o": [
+      "Creates a clickable link to call the phone number '+1234567890'",
+      "Opens a new webpage",
+      "Sends an email to '+1234567890'",
+      "Displays the phone number as plain text"
+    ]
+  },
+  {
+    "q": "Which attribute in an anchor tag specifies where to open the linked document?",
+    "o": [
+      "target",
+      "href",
+      "rel",
+      "open"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'rel' attribute in an anchor tag?",
+    "o": [
+      "Defines the relationship between the current document and the linked document",
+      "Specifies the link color",
+      "Opens the link in a new tab",
+      "Defines an internal link"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"index.html\">Home</a></li>\n    <li><a href=\"services.html\">Services</a></li>\n    <li><a href=\"contact.html\">Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "Creates a navigation menu with 'Home', 'Services', and 'Contact' links",
+      "Displays three links without styling",
+      "Creates a list but without clickable links",
+      "Throws an error due to missing attributes"
+    ]
+  },
+  {
+    "q": "Which HTML element is best suited for defining a navigation section?",
+    "o": [
+      "<nav>",
+      "<header>",
+      "<footer>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?",
+    "c": "<a href=\"#about\">Learn more</a>\n<section id=\"about\">\n  <h2>About Us</h2>\n</section>",
+    "o": [
+      "Creates a link that scrolls to the 'About Us' section on the same page",
+      "Opens a new webpage",
+      "Displays 'Learn more' but does nothing when clicked",
+      "Throws an error because the section ID is incorrect"
+    ]
+  },
+  {
+    "q": "Which of the following links is an example of a relative URL?",
+    "o": [
+      "about.html",
+      "https://example.com/about.html",
+      "www.example.com/about.html",
+      "/about.html"
+    ]
+  },
+  {
+    "q": "What does the 'noopener noreferrer' value in the 'rel' attribute do?",
+    "o": [
+      "Prevents the new page from accessing the referring page",
+      "Opens the link in a new tab",
+      "Prevents the link from working",
+      "Makes the link open in the same tab"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<a href=\"https://example.com\" target=\"_self\">Visit Example</a>",
+    "o": [
+      "Opens 'https://example.com' in the same tab",
+      "Opens 'https://example.com' in a new tab",
+      "Displays 'https://example.com' as plain text",
+      "Throws an error"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<a href=\"#section2\">Go to Section 2</a>\n<h2 id=\"section2\">Section 2</h2>",
+    "o": [
+      "Creates an internal link that scrolls to 'Section 2' on the same page",
+      "Opens a new webpage named 'Section 2'",
+      "Links to an external website",
+      "Does nothing"
+    ]
+  },
+  {
+    "q": "Which of the following best describes the difference between absolute and relative URLs?",
+    "o": [
+      "An absolute URL contains the full web address, while a relative URL is based on the current page's location",
+      "A relative URL contains the full web address, while an absolute URL is based on the current page's location",
+      "Absolute URLs can only be used for external links",
+      "Relative URLs must start with 'https://'"
+    ]
+  },
+  {
+    "q": "What is the default value of the 'target' attribute in an anchor tag?",
+    "o": [
+      "_self",
+      "_blank",
+      "_parent",
+      "_top"
+    ]
+  },
+  {
+    "q": "What will be the result of the following HTML snippet?",
+    "c": "<a href=\"https://example.com\" target=\"_parent\">Open Example</a>",
+    "o": [
+      "Opens 'https://example.com' in the parent frame",
+      "Opens 'https://example.com' in a new tab",
+      "Opens 'https://example.com' in a new window",
+      "Does nothing"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to define a list-based navigation menu?",
+    "o": [
+      "<nav>",
+      "<ul>",
+      "<menu>",
+      "<div>"
+    ]
+  },
+  {
+    "q": "What will happen when the following code is executed?",
+    "c": "<a href=\"https://example.com\" rel=\"nofollow\">Visit Example</a>",
+    "o": [
+      "Search engines will not follow this link",
+      "The link will not work",
+      "The link will open in a new tab",
+      "The link will only work within the same domain"
+    ]
+  },
+  {
+    "q": "Which attribute is used in an anchor tag to specify a tooltip on hover?",
+    "o": [
+      "title",
+      "tooltip",
+      "hover",
+      "hint"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<a href=\"javascript:void(0);\">Click me</a>",
+    "o": [
+      "Creates a link that does nothing when clicked",
+      "Redirects to 'javascript:void(0);'",
+      "Throws an error",
+      "Refreshes the page"
+    ]
+  },
+  {
+    "q": "What is the correct syntax for opening a link in a new tab and preventing it from accessing the referring page?",
+    "o": [
+      "<a href=\"https://example.com\" target=\"_blank\" rel=\"noopener noreferrer\">Example</a>",
+      "<a href=\"https://example.com\" target=\"_blank\">Example</a>",
+      "<a href=\"https://example.com\" rel=\"noopener noreferrer\">Example</a>",
+      "<a href=\"https://example.com\">Example</a>"
+    ]
+  },
+  {
+    "q": "Which HTML tag is typically used to group navigation links together?",
+    "o": [
+      "<nav>",
+      "<section>",
+      "<aside>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct syntax for creating a hyperlink in HTML?",
+    "o": [
+      "<a href=\"https://example.com\">Click Here</a>",
+      "<link href=\"https://example.com\">Click Here</link>",
+      "<a url=\"https://example.com\">Click Here</a>",
+      "<href=\"https://example.com\">Click Here</href>"
+    ]
+  },
+  {
+    "q": "What will happen when the following code is executed?",
+    "c": "<a href=\"https://example.com\" target=\"_top\">Go to Example</a>",
+    "o": [
+      "Opens 'https://example.com' in the full body of the window, breaking out of frames",
+      "Opens 'https://example.com' in a new tab",
+      "Opens 'https://example.com' in the same tab",
+      "Throws an error due to an invalid target value"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'download' attribute in an anchor tag?",
+    "o": [
+      "Forces the browser to download the linked file instead of navigating to it",
+      "Opens the link in a new tab",
+      "Prevents the link from being indexed by search engines",
+      "Ensures the link opens only on mobile devices"
+    ]
+  },
+  {
+    "q": "Which of the following is an example of an absolute URL?",
+    "o": [
+      "https://example.com/about.html",
+      "/about.html",
+      "about.html",
+      "../about.html"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<a href=\"https://example.com\" target=\"_blank\">Visit Example</a>",
+    "o": [
+      "Opens 'https://example.com' in a new tab or window",
+      "Opens 'https://example.com' in the same tab",
+      "Does nothing",
+      "Displays an error"
+    ]
+  },
+  {
+    "q": "Which of the following statements about the <nav> tag is true?",
+    "o": [
+      "The <nav> tag is used to define a section of navigation links",
+      "The <nav> tag is required in all HTML documents",
+      "The <nav> tag automatically styles navigation menus",
+      "The <nav> tag can only contain unordered lists"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid way to create a link that opens a PDF file for download?",
+    "o": [
+      "<a href=\"document.pdf\" download>Download PDF</a>",
+      "<a file=\"document.pdf\">Download PDF</a>",
+      "<a href=\"document.pdf\" save>Download PDF</a>",
+      "<a src=\"document.pdf\" download>Download PDF</a>"
+    ]
+  },
+  {
+    "q": "What is the primary function of the 'href' attribute in an anchor tag?",
+    "o": [
+      "Specifies the URL or location the link points to",
+      "Defines the text of the link",
+      "Opens the link in a new tab",
+      "Prevents the link from being clicked"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"home.html\">Home</a></li>\n    <li><a href=\"about.html\">About</a></li>\n    <li><a href=\"contact.html\">Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A navigation menu with 'Home', 'About', and 'Contact' links",
+      "A list of plain text items",
+      "An error due to missing attributes",
+      "A menu that opens links in new tabs"
+    ]
+  },
+  {
+    "q": "Which of the following values of the 'target' attribute opens the link in a new tab?",
+    "o": [
+      "_blank",
+      "_self",
+      "_parent",
+      "_top"
+    ]
+  },
+  {
+    "q": "What is the correct way to create an email link in HTML?",
+    "o": [
+      "<a href=\"mailto:example@example.com\">Send Email</a>",
+      "<a email=\"example@example.com\">Send Email</a>",
+      "<a href=\"email:example@example.com\">Send Email</a>",
+      "<mail href=\"example@example.com\">Send Email</mail>"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to create a telephone link in HTML?",
+    "o": [
+      "<a href=\"tel:+1234567890\">Call Now</a>",
+      "<a phone=\"+1234567890\">Call Now</a>",
+      "<a href=\"call:+1234567890\">Call Now</a>",
+      "<tel href=\"+1234567890\">Call Now</tel>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following HTML snippet?",
+    "c": "<a href=\"https://example.com\" target=\"_self\">Click Here</a>",
+    "o": [
+      "Opens 'https://example.com' in the same tab",
+      "Opens 'https://example.com' in a new tab",
+      "Throws an error",
+      "Does nothing"
+    ]
+  },
+  {
+    "q": "Which of the following is true about the <nav> element in HTML?",
+    "o": [
+      "It is used to define a section of navigation links",
+      "It is required in every HTML page",
+      "It automatically styles navigation links",
+      "It can only contain unordered lists"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'rel' attribute in an anchor tag?",
+    "o": [
+      "Specifies the relationship between the current document and the linked document",
+      "Defines the text displayed for the link",
+      "Determines whether the link opens in a new tab",
+      "Controls the hover color of the link"
+    ]
+  },
+  {
+    "q": "What will the following code do?",
+    "c": "<a href=\"#section\">Go to Section</a>\n<h2 id=\"section\">Section Header</h2>",
+    "o": [
+      "Scrolls to 'Section Header' when clicked",
+      "Opens 'Section Header' in a new tab",
+      "Displays an error due to an invalid ID",
+      "Does nothing"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to prevent a link from being followed?",
+    "o": [
+      "<a href=\"#\" onclick=\"return false;\">Do Nothing</a>",
+      "<a href=\"\">Do Nothing</a>",
+      "<a preventDefault>Do Nothing</a>",
+      "<a href=\"#\" disabled>Do Nothing</a>"
+    ]
+  },
+  {
+    "q": "What will happen if you click the following link?",
+    "c": "<a href=\"https://example.com\" rel=\"noopener noreferrer\" target=\"_blank\">Visit Example</a>",
+    "o": [
+      "Opens the link in a new tab and prevents the new page from accessing the referring page",
+      "Opens the link in a new tab with full access to the referring page",
+      "Opens the link in the same tab",
+      "Throws an error due to conflicting attributes"
+    ]
+  },
+  {
+    "q": "Which of the following statements about relative and absolute URLs is correct?",
+    "o": [
+      "Relative URLs are based on the location of the current document, while absolute URLs contain the full web address",
+      "Absolute URLs are based on the location of the current document, while relative URLs contain the full web address",
+      "Both relative and absolute URLs must start with 'http://'",
+      "Relative URLs are used only for internal links"
+    ]
+  },
+  {
+    "q": "Which of the following code snippets creates a fixed navigation menu at the top of a webpage?",
+    "c": "<nav style=\"position: fixed; top: 0; width: 100%; background: #333; color: white;\">\n  <ul>\n    <li><a href=\"#home\">Home</a></li>\n    <li><a href=\"#about\">About</a></li>\n    <li><a href=\"#contact\">Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "Creates a fixed navigation bar at the top of the page",
+      "Creates a scrollable menu",
+      "Creates a sidebar menu",
+      "Does nothing due to missing styles"
+    ]
+  },
+  {
+    "q": "Which attribute in the anchor tag is used to open a link in a new tab?",
+    "o": [
+      "target=\"_blank\"",
+      "target=\"_self\"",
+      "target=\"_top\"",
+      "target=\"_parent\""
+    ]
+  },
+  {
+    "q": "What will happen when clicking the following link?",
+    "c": "<a href=\"https://example.com\" target=\"_parent\">Visit Example</a>",
+    "o": [
+      "Opens 'https://example.com' in the parent frame if inside an iframe",
+      "Opens 'https://example.com' in a new tab",
+      "Opens 'https://example.com' in the same frame regardless",
+      "Throws an error due to an invalid target value"
+    ]
+  },
+  {
+    "q": "Which of the following is a semantic HTML element used to define navigation links?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<header>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which of the following code snippets correctly implements a breadcrumb navigation menu?",
+    "c": "<nav aria-label=\"breadcrumb\">\n  <ul>\n    <li><a href=\"home.html\">Home</a></li>\n    <li><a href=\"category.html\">Category</a></li>\n    <li>Current Page</li>\n  </ul>\n</nav>",
+    "o": [
+      "Creates a breadcrumb navigation structure",
+      "Creates a sidebar navigation",
+      "Creates a dropdown menu",
+      "Throws an error due to missing attributes"
+    ]
+  },
+  {
+    "q": "Which attribute of the anchor tag specifies that the link should be downloaded instead of opened?",
+    "o": [
+      "download",
+      "target",
+      "rel",
+      "href"
+    ]
+  },
+  {
+    "q": "What does the following HTML code do?",
+    "c": "<a href=\"https://example.com\" rel=\"nofollow\">External Link</a>",
+    "o": [
+      "Prevents search engines from following the link",
+      "Opens the link in a new tab",
+      "Blocks users from clicking the link",
+      "Adds a tooltip to the link"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to link to an internal section of the same webpage?",
+    "o": [
+      "<a href=\"#section1\">Go to Section 1</a>",
+      "<a id=\"section1\">Go to Section 1</a>",
+      "<a href=\".section1\">Go to Section 1</a>",
+      "<a name=\"section1\">Go to Section 1</a>"
+    ]
+  },
+  {
+    "q": "What is the difference between an ordered list and an unordered list in a navigation menu?",
+    "o": [
+      "Ordered lists use numbers, while unordered lists use bullet points",
+      "Ordered lists use bullet points, while unordered lists use numbers",
+      "Ordered lists cannot be used in navigation menus",
+      "There is no difference; both function the same"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?",
+    "c": "<ul>\n  <li><a href=\"index.html\">Home</a></li>\n  <li><a href=\"services.html\">Services</a></li>\n  <li><a href=\"contact.html\">Contact</a></li>\n</ul>",
+    "o": [
+      "A navigation menu with Home, Services, and Contact links",
+      "A dropdown menu",
+      "A vertical sidebar navigation",
+      "An ordered list of links"
+    ]
+  },
+  {
+    "q": "Which of the following best describes a responsive navigation menu?",
+    "o": [
+      "A menu that adapts to different screen sizes and devices",
+      "A menu that only works on mobile devices",
+      "A menu that is always fixed at the top of the page",
+      "A menu that requires JavaScript to function"
+    ]
+  },
+  {
+    "q": "Which attribute in an anchor tag is used to specify that the linked document should open in a new browser window or tab?",
+    "o": [
+      "target=\"_blank\"",
+      "target=\"_top\"",
+      "rel=\"noopener\"",
+      "window=\"new\""
+    ]
+  },
+  {
+    "q": "What will happen when clicking the following link?",
+    "c": "<a href=\"#about\">About Us</a>\n<section id=\"about\">Welcome to our About Us page.</section>",
+    "o": [
+      "Scrolls to the 'About Us' section on the same page",
+      "Opens a new page",
+      "Throws an error due to missing href attribute",
+      "Does nothing"
+    ]
+  },
+  {
+    "q": "Which HTML element is commonly used to create a navigation menu?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<section>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"index.html\">Home</a></li>\n    <li><a href=\"about.html\">About</a></li>\n    <li><a href=\"contact.html\">Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A basic navigation menu with links to Home, About, and Contact pages",
+      "A dropdown navigation menu",
+      "A vertical navigation sidebar",
+      "An unordered list without links"
+    ]
+  },
+  {
+    "q": "Which of the following correctly implements a dropdown navigation menu?",
+    "c": "<nav>\n  <ul>\n    <li>\n      <a href=\"#\">Services</a>\n      <ul>\n        <li><a href=\"web.html\">Web Development</a></li>\n        <li><a href=\"seo.html\">SEO</a></li>\n      </ul>\n    </li>\n  </ul>\n</nav>",
+    "o": [
+      "Creates a dropdown menu under 'Services'",
+      "Creates a sidebar navigation menu",
+      "Creates a breadcrumb navigation",
+      "Throws an error due to incorrect nesting"
+    ]
+  },
+  {
+    "q": "Which CSS property is commonly used to style navigation links horizontally?",
+    "o": [
+      "display: inline-block;",
+      "position: absolute;",
+      "flex-direction: column;",
+      "text-decoration: none;"
+    ]
+  },
+  {
+    "q": "What does the following code do?",
+    "c": "<a href=\"https://example.com\" rel=\"noopener noreferrer\" target=\"_blank\">Visit Example</a>",
+    "o": [
+      "Opens the link in a new tab and prevents access to the referring page",
+      "Opens the link in the same tab",
+      "Disables the link",
+      "Automatically downloads the linked page"
+    ]
+  },
+  {
+    "q": "Which HTML structure is correct for creating a responsive navigation menu?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"#\">Home</a></li>\n    <li><a href=\"#\">About</a></li>\n    <li><a href=\"#\">Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "Uses an unordered list inside a <nav> element",
+      "Uses an ordered list inside a <menu> element",
+      "Uses an inline list inside a <section> element",
+      "Uses a definition list inside a <header> element"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to create a sticky navigation bar?",
+    "c": "<nav style=\"position: sticky; top: 0; background-color: #333; color: white;\">\n  <ul>\n    <li><a href=\"#home\">Home</a></li>\n    <li><a href=\"#about\">About</a></li>\n    <li><a href=\"#contact\">Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "Creates a navigation bar that remains visible while scrolling",
+      "Creates a navigation bar that disappears when scrolling",
+      "Creates a static navigation menu",
+      "Throws an error due to missing CSS styles"
+    ]
+  },
+  {
+    "q": "What is the main advantage of using the <nav> element instead of a <div> for navigation menus?",
+    "o": [
+      "It provides better semantic meaning and improves accessibility",
+      "It automatically applies styles to navigation links",
+      "It reduces the number of HTML elements required",
+      "It is required for all websites to function correctly"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?",
+    "c": "<a href=\"https://example.com\" title=\"Go to Example\">Click Here</a>",
+    "o": [
+      "A clickable text 'Click Here' that links to 'https://example.com' with a tooltip",
+      "A button that redirects to 'https://example.com'",
+      "An underlined text without a link",
+      "A non-clickable text"
+    ]
+  },
+  {
+    "q": "Which attribute is used in the <a> tag to specify an email link?",
+    "o": [
+      "mailto:",
+      "email=",
+      "sendto=",
+      "contact="
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to open a link in a new browser window?",
+    "c": "<a href=\"https://example.com\" target=\"_blank\">Visit Example</a>",
+    "o": [
+      "Opens 'https://example.com' in a new tab or window",
+      "Opens 'https://example.com' in the same tab",
+      "Opens 'https://example.com' in a new frame",
+      "Throws an error"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'rel' attribute in an anchor tag?",
+    "o": [
+      "Specifies the relationship between the current document and the linked document",
+      "Defines the target where the link should open",
+      "Adds a title to the link",
+      "Applies CSS styles to the link"
+    ]
+  },
+  {
+    "q": "Which of the following correctly implements an internal link in HTML?",
+    "c": "<a href=\"#section1\">Jump to Section 1</a>\n<section id=\"section1\">This is Section 1</section>",
+    "o": [
+      "Creates a link that scrolls to 'Section 1' on the same page",
+      "Creates a new page with 'Section 1'",
+      "Opens a new tab with 'Section 1'",
+      "Displays an error"
+    ]
+  },
+  {
+    "q": "Which tag is commonly used to define a navigation menu?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<div>",
+      "<ul>"
+    ]
+  },
+  {
+    "q": "What will be the output of the following code?",
+    "c": "<ul>\n  <li><a href=\"home.html\">Home</a></li>\n  <li><a href=\"about.html\">About</a></li>\n  <li><a href=\"contact.html\">Contact</a></li>\n</ul>",
+    "o": [
+      "A vertical list of links to Home, About, and Contact pages",
+      "A horizontal navigation bar",
+      "A dropdown menu",
+      "An ordered list of links"
+    ]
+  },
+  {
+    "q": "Which of the following correctly implements a navigation menu using a list?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"index.html\">Home</a></li>\n    <li><a href=\"services.html\">Services</a></li>\n    <li><a href=\"contact.html\">Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A simple navigation menu with three links",
+      "A dropdown navigation menu",
+      "A sidebar navigation",
+      "A definition list of links"
+    ]
+  },
+  {
+    "q": "Which attribute in an anchor tag is used to specify that the linked document should be downloaded instead of opened?",
+    "o": [
+      "download",
+      "target",
+      "rel",
+      "href"
+    ]
+  },
+  {
+    "q": "What does the following HTML code do?",
+    "c": "<a href=\"https://example.com\" rel=\"nofollow\">External Link</a>",
+    "o": [
+      "Prevents search engines from following the link",
+      "Opens the link in a new tab",
+      "Blocks users from clicking the link",
+      "Adds a tooltip to the link"
+    ]
+  },
+  {
+    "q": "Which CSS property is commonly used to style a horizontal navigation menu?",
+    "o": [
+      "display: inline-block;",
+      "position: fixed;",
+      "flex-direction: column;",
+      "list-style: none;"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to create a responsive navigation menu?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"#\">Home</a></li>\n    <li><a href=\"#\">About</a></li>\n    <li><a href=\"#\">Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "Uses an unordered list inside a <nav> element",
+      "Uses an ordered list inside a <menu> element",
+      "Uses an inline list inside a <section> element",
+      "Uses a definition list inside a <header> element"
+    ]
+  },
+  {
+    "q": "Which of the following best describes a sticky navigation bar?",
+    "o": [
+      "A menu that remains visible at the top while scrolling",
+      "A menu that disappears when scrolling",
+      "A menu that only works on mobile devices",
+      "A menu that requires JavaScript to function"
+    ]
+  },
+  {
+    "q": "What is the best HTML structure for a breadcrumb navigation?",
+    "c": "<nav aria-label=\"breadcrumb\">\n  <ul>\n    <li><a href=\"home.html\">Home</a></li>\n    <li><a href=\"category.html\">Category</a></li>\n    <li>Current Page</li>\n  </ul>\n</nav>",
+    "o": [
+      "Defines a breadcrumb trail for easier navigation",
+      "Creates a sidebar navigation",
+      "Creates a dropdown menu",
+      "Throws an error due to missing attributes"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to create an anchor tag that links to an external website?",
+    "o": [
+      "<a href=\"https://example.com\">Visit Example</a>",
+      "<link href=\"https://example.com\">Visit Example</link>",
+      "<a src=\"https://example.com\">Visit Example</a>",
+      "<p href=\"https://example.com\">Visit Example</p>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML code?",
+    "c": "<a href=\"https://example.com\" target=\"_self\">Click Here</a>",
+    "o": [
+      "Opens 'https://example.com' in the same tab",
+      "Opens 'https://example.com' in a new tab",
+      "Shows an alert message",
+      "Throws an error"
+    ]
+  },
+  {
+    "q": "Which attribute is used in the <a> tag to specify where to open the linked document?",
+    "o": [
+      "target",
+      "href",
+      "rel",
+      "title"
+    ]
+  },
+  {
+    "q": "What will the following HTML snippet do?",
+    "c": "<a href=\"#about\">Go to About Section</a>\n<section id=\"about\">This is the About Section</section>",
+    "o": [
+      "Scrolls to the 'About' section on the same page",
+      "Opens a new tab with the About section",
+      "Redirects to an external website",
+      "Displays an error"
+    ]
+  },
+  {
+    "q": "Which HTML tag is best suited for defining navigation links?",
+    "o": [
+      "<nav>",
+      "<div>",
+      "<section>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What will be displayed when the following code is executed?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"index.html\">Home</a></li>\n    <li><a href=\"services.html\">Services</a></li>\n    <li><a href=\"contact.html\">Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A vertical list of navigation links",
+      "A horizontal navigation bar",
+      "A dropdown navigation menu",
+      "An error message"
+    ]
+  },
+  {
+    "q": "Which of the following correctly creates an email link in HTML?",
+    "o": [
+      "<a href=\"mailto:example@example.com\">Send Email</a>",
+      "<a href=\"email:example@example.com\">Send Email</a>",
+      "<a href=\"sendto:example@example.com\">Send Email</a>",
+      "<a email=\"example@example.com\">Send Email</a>"
+    ]
+  },
+  {
+    "q": "Which attribute can be used in an anchor tag to instruct the browser to download the linked file?",
+    "o": [
+      "download",
+      "target",
+      "rel",
+      "href"
+    ]
+  },
+  {
+    "q": "Which HTML code correctly creates a navigation menu?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"#\">Home</a></li>\n    <li><a href=\"#\">About</a></li>\n    <li><a href=\"#\">Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A simple navigation menu with three links",
+      "A list of links with bullet points",
+      "A dropdown navigation menu",
+      "A horizontal navigation bar"
+    ]
+  },
+  {
+    "q": "What does the 'noopener' value in the 'rel' attribute do in the following code?",
+    "c": "<a href=\"https://example.com\" target=\"_blank\" rel=\"noopener\">Visit Example</a>",
+    "o": [
+      "Prevents the new page from accessing the opener's window object",
+      "Prevents search engines from following the link",
+      "Opens the link in the same tab",
+      "Makes the link open in a pop-up window"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to define the relationship between a linked document and the current document?",
+    "o": [
+      "rel",
+      "target",
+      "href",
+      "title"
+    ]
+  },
+  {
+    "q": "Which CSS property is commonly used to remove the default underline from hyperlinks?",
+    "o": [
+      "text-decoration: none;",
+      "text-style: none;",
+      "font-style: normal;",
+      "border: 0;"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to open a PDF file in a new tab using an anchor tag?",
+    "o": [
+      "<a href=\"document.pdf\" target=\"_blank\">Open PDF</a>",
+      "<a target=\"_new\" href=\"document.pdf\">Open PDF</a>",
+      "<a href=\"document.pdf\" target=\"new\">Open PDF</a>",
+      "<a link=\"document.pdf\">Open PDF</a>"
+    ]
+  },
+  {
+    "q": "What is a breadcrumb navigation?",
+    "o": [
+      "A hierarchical navigation structure that shows the user’s current location",
+      "A floating navigation bar at the top of the page",
+      "A sidebar menu with multiple links",
+      "A navigation menu that expands when clicked"
+    ]
+  },
+  {
+    "q": "What will the following code do?",
+    "c": "<a href=\"https://example.com\" rel=\"nofollow\">External Link</a>",
+    "o": [
+      "Prevents search engines from following the link",
+      "Opens the link in a new tab",
+      "Blocks users from clicking the link",
+      "Adds a tooltip to the link"
+    ]
+  },
+  {
+    "q": "Which tag should be used to create a mobile-friendly navigation menu?",
+    "o": [
+      "<nav>",
+      "<aside>",
+      "<section>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "Which of the following HTML code snippets correctly creates an anchor link that jumps to a specific part of the same page?",
+    "c": "<a href=\"#contact\">Go to Contact</a>\n<section id=\"contact\">Contact Us</section>",
+    "o": [
+      "Creates a link that scrolls to the 'Contact Us' section",
+      "Opens a new page with the 'Contact Us' section",
+      "Displays an error message",
+      "Links to an external page"
+    ]
+  },
+  {
+    "q": "Which of the following describes a sticky navigation bar?",
+    "o": [
+      "A menu that remains visible at the top while scrolling",
+      "A menu that disappears when scrolling",
+      "A menu that only works on mobile devices",
+      "A menu that requires JavaScript to function"
+    ]
+  },
+  {
+    "q": "Which CSS property helps create a sticky navigation bar?",
+    "o": [
+      "position: fixed;",
+      "display: block;",
+      "float: left;",
+      "visibility: visible;"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to make a link open in a new tab?",
+    "o": [
+      "<a href=\"https://example.com\" target=\"_blank\">Visit Example</a>",
+      "<a href=\"https://example.com\" target=\"new\">Visit Example</a>",
+      "<a href=\"https://example.com\" target=\"tab\">Visit Example</a>",
+      "<a href=\"https://example.com\" newtab>Visit Example</a>"
+    ]
+  },
+  {
+    "q": "What does the following HTML code do?",
+    "c": "<a href=\"#section\">Jump to Section</a>\n<section id=\"section\">This is the target section.</section>",
+    "o": [
+      "Scrolls to the section with id 'section'",
+      "Opens a new page with the section",
+      "Displays an error",
+      "Loads an external webpage"
+    ]
+  },
+  {
+    "q": "Which HTML element is used for structuring navigation menus?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<div>",
+      "<span>"
+    ]
+  },
+  {
+    "q": "Which of the following correctly creates an image hyperlink?",
+    "o": [
+      "<a href=\"https://example.com\"><img src=\"image.jpg\" alt=\"Example\"></a>",
+      "<img href=\"https://example.com\" src=\"image.jpg\" alt=\"Example\">",
+      "<a src=\"image.jpg\" link=\"https://example.com\"></a>",
+      "<a href=\"https://example.com\" img=\"image.jpg\"></a>"
+    ]
+  },
+  {
+    "q": "What will happen if an anchor tag has an empty 'href' attribute?",
+    "c": "<a href=\"\">Click Here</a>",
+    "o": [
+      "The page will reload",
+      "An error will be displayed",
+      "The link will not work",
+      "It will open an external website"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify a tooltip text for an anchor tag?",
+    "o": [
+      "title",
+      "tooltip",
+      "alt",
+      "info"
+    ]
+  },
+  {
+    "q": "What does the 'noopener noreferrer' value in the 'rel' attribute do?",
+    "c": "<a href=\"https://example.com\" target=\"_blank\" rel=\"noopener noreferrer\">Visit</a>",
+    "o": [
+      "Prevents the new page from accessing the referring page",
+      "Prevents search engines from indexing the link",
+      "Forces the link to open in the same tab",
+      "Disables the link"
+    ]
+  },
+  {
+    "q": "Which of the following correctly represents a relative link?",
+    "o": [
+      "<a href=\"about.html\">About Us</a>",
+      "<a href=\"https://example.com/about.html\">About Us</a>",
+      "<a href=\"/about.html\">About Us</a>",
+      "<a href=\"http://about.html\">About Us</a>"
+    ]
+  },
+  {
+    "q": "Which CSS property is used to create a horizontal navigation bar?",
+    "o": [
+      "display: flex;",
+      "display: inline;",
+      "float: left;",
+      "visibility: visible;"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'aria-label' attribute in navigation links?",
+    "o": [
+      "Provides accessibility for screen readers",
+      "Changes the link color",
+      "Hides the link from users",
+      "Opens the link in a new tab"
+    ]
+  },
+  {
+    "q": "Which of the following is an example of an absolute URL?",
+    "o": [
+      "<a href=\"https://example.com/page.html\">Visit</a>",
+      "<a href=\"page.html\">Visit</a>",
+      "<a href=\"/page.html\">Visit</a>",
+      "<a href=\"../page.html\">Visit</a>"
+    ]
+  },
+  {
+    "q": "Which of the following best describes a responsive navigation menu?",
+    "o": [
+      "A menu that adjusts to different screen sizes",
+      "A menu that only works on mobile devices",
+      "A menu that requires JavaScript to function",
+      "A fixed-size navigation bar"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to make a phone number clickable?",
+    "o": [
+      "<a href=\"tel:+1234567890\">Call Us</a>",
+      "<a phone=\"+1234567890\">Call Us</a>",
+      "<a href=\"call:+1234567890\">Call Us</a>",
+      "<a contact=\"+1234567890\">Call Us</a>"
+    ]
+  },
+  {
+    "q": "What will happen when clicking the following link?",
+    "c": "<a href=\"javascript:void(0);\">Click Me</a>",
+    "o": [
+      "Nothing happens",
+      "An alert box appears",
+      "The browser navigates to another page",
+      "The page refreshes"
+    ]
+  },
+  {
+    "q": "Which of the following statements is true about the 'target' attribute in an anchor tag?",
+    "o": [
+      "It defines where to open the linked document",
+      "It sets the link's color",
+      "It adds a tooltip to the link",
+      "It specifies the link’s file type"
+    ]
+  },
+  {
+    "q": "Which HTML code correctly creates a navigation menu with unordered list items?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"home.html\">Home</a></li>\n    <li><a href=\"services.html\">Services</a></li>\n    <li><a href=\"contact.html\">Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A menu with three navigation links",
+      "A dropdown menu",
+      "A horizontal navigation bar",
+      "A sidebar menu"
+    ]
+  },
+  {
+    "q": "What is the default style of anchor tags if no CSS is applied?",
+    "o": [
+      "Blue with underline",
+      "Red with no underline",
+      "Black with underline",
+      "Green with bold text"
+    ]
+  },
+  {
+    "q": "Which attribute is used to open an anchor link in a modal popup?",
+    "o": [
+      "data-toggle",
+      "target",
+      "popup",
+      "rel"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to create a button that behaves like a link?",
+    "o": [
+      "<button onclick=\"location.href='https://example.com'\">Go</button>",
+      "<button href=\"https://example.com\">Go</button>",
+      "<button src=\"https://example.com\">Go</button>",
+      "<button link=\"https://example.com\">Go</button>"
+    ]
+  },
+  {
+    "q": "Which of the following anchor tag attributes is used to specify the URL of the linked document?",
+    "o": [
+      "href",
+      "src",
+      "link",
+      "target"
+    ]
+  },
+  {
+    "q": "What will happen if an anchor tag does not have an 'href' attribute?",
+    "c": "<a>Click here</a>",
+    "o": [
+      "It will not be clickable",
+      "It will redirect to the homepage",
+      "It will open a blank page",
+      "It will show an error"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to make an email link?",
+    "o": [
+      "<a href=\"mailto:someone@example.com\">Send Email</a>",
+      "<a email=\"someone@example.com\">Send Email</a>",
+      "<a href=\"email:someone@example.com\">Send Email</a>",
+      "<a contact=\"someone@example.com\">Send Email</a>"
+    ]
+  },
+  {
+    "q": "What does the following code do?",
+    "c": "<a href=\"index.html\" title=\"Go to Home\">Home</a>",
+    "o": [
+      "Displays a tooltip with 'Go to Home' when hovered",
+      "Redirects to 'Go to Home' page",
+      "Changes the text color to blue",
+      "Does nothing special"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to create an internal navigation link?",
+    "o": [
+      "<a href=\"#section\">Go to Section</a>",
+      "<a href=\"section\">Go to Section</a>",
+      "<a link=\"#section\">Go to Section</a>",
+      "<a name=\"section\">Go to Section</a>"
+    ]
+  },
+  {
+    "q": "Which tag is used to define a navigation menu in HTML?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<header>",
+      "<aside>"
+    ]
+  },
+  {
+    "q": "Which of the following best describes breadcrumb navigation?",
+    "o": [
+      "A hierarchical navigation that shows the user's location on a website",
+      "A list of links displayed in a sidebar",
+      "A menu with drop-down submenus",
+      "A floating navigation bar"
+    ]
+  },
+  {
+    "q": "Which CSS property is commonly used to remove underlines from links?",
+    "o": [
+      "text-decoration: none;",
+      "text-style: hidden;",
+      "underline: none;",
+      "display: block;"
+    ]
+  },
+  {
+    "q": "What is the primary purpose of the 'rel' attribute in an anchor tag?",
+    "o": [
+      "Defines the relationship between the current document and the linked document",
+      "Changes the link color",
+      "Specifies the font style of the link",
+      "Opens the link in a new tab"
+    ]
+  },
+  {
+    "q": "Which of the following navigation types is typically used for one-page websites?",
+    "o": [
+      "Anchor-based navigation",
+      "Dropdown menu",
+      "Sidebar navigation",
+      "Breadcrumb navigation"
+    ]
+  },
+  {
+    "q": "Which of the following is a valid example of a navigation menu?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"home.html\">Home</a></li>\n    <li><a href=\"about.html\">About</a></li>\n    <li><a href=\"contact.html\">Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A list of links structured using <nav> and <ul>",
+      "A single link without list items",
+      "A JavaScript-based menu",
+      "A search bar inside <nav>"
+    ]
+  },
+  {
+    "q": "Which of the following allows users to navigate back to the previous page?",
+    "o": [
+      "<a href=\"javascript:history.back();\">Go Back</a>",
+      "<a href=\"previous.html\">Go Back</a>",
+      "<a href=\"back\">Go Back</a>",
+      "<a href=\"lastpage\">Go Back</a>"
+    ]
+  },
+  {
+    "q": "Which CSS property is commonly used to create a sticky navigation bar?",
+    "o": [
+      "position: fixed;",
+      "position: absolute;",
+      "position: relative;",
+      "position: static;"
+    ]
+  },
+  {
+    "q": "Which of the following correctly represents a drop-down navigation menu?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"home.html\">Home</a></li>\n    <li>\n      <a href=\"#\">Services</a>\n      <ul>\n        <li><a href=\"web.html\">Web Design</a></li>\n        <li><a href=\"seo.html\">SEO</a></li>\n      </ul>\n    </li>\n  </ul>\n</nav>",
+    "o": [
+      "A menu with nested lists for submenus",
+      "A vertical navigation bar",
+      "A list of links without any dropdown",
+      "A single-page navigation"
+    ]
+  },
+  {
+    "q": "What is the correct way to create a footer navigation menu?",
+    "c": "<footer>\n  <nav>\n    <ul>\n      <li><a href=\"terms.html\">Terms of Service</a></li>\n      <li><a href=\"privacy.html\">Privacy Policy</a></li>\n    </ul>\n  </nav>\n</footer>",
+    "o": [
+      "A navigation menu placed inside a footer",
+      "A menu inside a sidebar",
+      "A navigation bar at the top of the page",
+      "A JavaScript-based footer menu"
+    ]
+  },
+  {
+    "q": "Which of the following is an example of a responsive navigation menu?",
+    "c": "<nav>\n  <button onclick=\"toggleMenu()\">☰</button>\n  <ul id=\"menu\" class=\"hidden\">\n    <li><a href=\"home.html\">Home</a></li>\n    <li><a href=\"about.html\">About</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A menu that toggles on button click",
+      "A menu that only works on desktops",
+      "A fixed menu that does not change on smaller screens",
+      "A sidebar menu that is always visible"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct way to open a link in a new tab and improve security?",
+    "c": "<a href=\"https://example.com\" target=\"_blank\" rel=\"noopener noreferrer\">Visit</a>",
+    "o": [
+      "Uses 'noopener noreferrer' to prevent security risks",
+      "Only 'target=\"_blank\"' is needed",
+      "Uses 'nofollow' to open the link safely",
+      "Requires JavaScript for secure linking"
+    ]
+  },
+  {
+    "q": "What will happen if an anchor tag contains only a '#' in the 'href' attribute?",
+    "c": "<a href=\"#\">Click Here</a>",
+    "o": [
+      "The page will stay at the same position",
+      "It will reload the page",
+      "It will navigate to a new page",
+      "It will show an error"
+    ]
+  },
+  {
+    "q": "Which of the following describes a 'sticky' navigation menu?",
+    "o": [
+      "A menu that remains at the top of the screen while scrolling",
+      "A menu that disappears on scroll",
+      "A menu that only appears on hover",
+      "A menu that is fixed at the bottom"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a hyperlink?",
+    "o": [
+      "<a>",
+      "<link>",
+      "<href>",
+      "<nav>"
+    ]
+  },
+  {
+    "q": "Which attribute in the anchor tag specifies where to open the linked document?",
+    "o": [
+      "target",
+      "href",
+      "rel",
+      "title"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "c": "<a href=\"https://example.com\" target=\"_blank\">Click Here</a>",
+    "o": [
+      "Opens 'https://example.com' in a new tab",
+      "Redirects to 'https://example.com' in the same tab",
+      "Shows an error",
+      "Opens 'https://example.com' in a popup"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to create an anchor tag that opens in the same window?",
+    "o": [
+      "<a href=\"page.html\">Click Here</a>",
+      "<a href=\"page.html\" target=\"_blank\">Click Here</a>",
+      "<a href=\"page.html\" target=\"_new\">Click Here</a>",
+      "<a href=\"page.html\" new=\"true\">Click Here</a>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'rel' attribute in an anchor tag?",
+    "o": [
+      "Defines the relationship between the current and linked document",
+      "Specifies where to open the link",
+      "Changes the link color",
+      "Creates a tooltip for the link"
+    ]
+  },
+  {
+    "q": "Which of the following correctly represents a navigation menu with links?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"home.html\">Home</a></li>\n    <li><a href=\"about.html\">About</a></li>\n    <li><a href=\"contact.html\">Contact</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A list of links wrapped inside a <nav> tag",
+      "A dropdown menu",
+      "A single clickable link",
+      "An unordered list without links"
+    ]
+  },
+  {
+    "q": "Which CSS property removes the underline from anchor tags?",
+    "o": [
+      "text-decoration: none;",
+      "text-style: hidden;",
+      "remove-underline: true;",
+      "display: block;"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to create an anchor tag linking to a section within the same page?",
+    "o": [
+      "<a href=\"#section\">Go to Section</a>",
+      "<a link=\"#section\">Go to Section</a>",
+      "<a name=\"section\">Go to Section</a>",
+      "<a href=\"section\">Go to Section</a>"
+    ]
+  },
+  {
+    "q": "Which of the following best describes a responsive navigation menu?",
+    "c": "<nav>\n  <button onclick=\"toggleMenu()\">☰</button>\n  <ul id=\"menu\" class=\"hidden\">\n    <li><a href=\"home.html\">Home</a></li>\n    <li><a href=\"about.html\">About</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A menu that toggles on button click",
+      "A static menu that does not change on smaller screens",
+      "A menu that disappears when scrolling",
+      "A fixed sidebar menu"
+    ]
+  },
+  {
+    "q": "Which of the following is an example of breadcrumb navigation?",
+    "o": [
+      "A hierarchical navigation showing the user's location on a website",
+      "A sidebar menu",
+      "A dropdown menu",
+      "A search bar navigation"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'noopener noreferrer' value in the 'rel' attribute of an anchor tag?",
+    "c": "<a href=\"https://example.com\" target=\"_blank\" rel=\"noopener noreferrer\">Visit</a>",
+    "o": [
+      "Prevents the linked page from accessing the referring page's window object",
+      "Loads the linked page faster",
+      "Applies CSS styles to the link",
+      "Automatically logs the user out after clicking the link"
+    ]
+  },
+  {
+    "q": "Which HTML element is best suited for wrapping the main navigation menu of a website?",
+    "o": [
+      "<nav>",
+      "<header>",
+      "<aside>",
+      "<footer>"
+    ]
+  },
+  {
+    "q": "What does the following code do?",
+    "c": "<a href=\"javascript:history.back();\">Go Back</a>",
+    "o": [
+      "Takes the user to the previous page in browser history",
+      "Reloads the current page",
+      "Redirects to the homepage",
+      "Shows a JavaScript alert"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to create an anchor tag that links to a phone number?",
+    "o": [
+      "<a href=\"tel:+1234567890\">Call Us</a>",
+      "<a phone=\"+1234567890\">Call Us</a>",
+      "<a href=\"phone:+1234567890\">Call Us</a>",
+      "<a dial=\"+1234567890\">Call Us</a>"
+    ]
+  },
+  {
+    "q": "Which of the following HTML elements is commonly used to create a navigation bar?",
+    "o": [
+      "<nav>",
+      "<section>",
+      "<footer>",
+      "<div>"
+    ]
+  },
+  {
+    "q": "What happens when an anchor tag has an empty 'href' attribute?",
+    "c": "<a href=\"\">Click Me</a>",
+    "o": [
+      "The link reloads the current page",
+      "The link does nothing",
+      "The link redirects to an error page",
+      "The browser crashes"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to open a link in a new tab?",
+    "o": [
+      "<a href=\"https://example.com\" target=\"_blank\">Click Here</a>",
+      "<a href=\"https://example.com\" new=\"true\">Click Here</a>",
+      "<a href=\"https://example.com\" open=\"new\">Click Here</a>",
+      "<a href=\"https://example.com\" target=\"newtab\">Click Here</a>"
+    ]
+  },
+  {
+    "q": "Which of the following is an example of an anchor tag with an absolute URL?",
+    "o": [
+      "<a href=\"https://www.example.com\">Visit Example</a>",
+      "<a href=\"/home\">Go Home</a>",
+      "<a href=\"#section\">Jump to Section</a>",
+      "<a href=\"mailto:someone@example.com\">Email Us</a>"
+    ]
+  },
+  {
+    "q": "Which of the following best describes a sticky navigation menu?",
+    "o": [
+      "A menu that stays at the top of the screen while scrolling",
+      "A menu that disappears when scrolling",
+      "A dropdown menu",
+      "A menu that is always fixed at the bottom"
+    ]
+  },
+  {
+    "q": "What will happen if the 'href' attribute is omitted from an anchor tag?",
+    "c": "<a>Click Here</a>",
+    "o": [
+      "The text will appear, but it won't be a clickable link",
+      "The browser will throw an error",
+      "It will automatically link to the homepage",
+      "The link will open in a new tab"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to create an email link using an anchor tag?",
+    "o": [
+      "<a href=\"mailto:someone@example.com\">Send Email</a>",
+      "<a href=\"email:someone@example.com\">Send Email</a>",
+      "<a email=\"someone@example.com\">Send Email</a>",
+      "<a href=\"mail someone@example.com\">Send Email</a>"
+    ]
+  },
+  {
+    "q": "Which of the following creates a navigation menu with an active link highlighted?",
+    "c": "<nav>\n  <ul>\n    <li><a href=\"index.html\" class=\"active\">Home</a></li>\n    <li><a href=\"about.html\">About</a></li>\n  </ul>\n</nav>",
+    "o": [
+      "A navigation menu with an 'active' class applied to the home link",
+      "A dropdown navigation menu",
+      "A navigation menu that opens in a new tab",
+      "A single-page application navigation"
+    ]
+  },
+  {
+    "q": "Which attribute is used in an anchor tag to define the tooltip text when hovering over a link?",
+    "o": [
+      "title",
+      "alt",
+      "tooltip",
+      "hover"
+    ]
+  },
+  {
+    "q": "Which of the following is a correct example of a relative URL in an anchor tag?",
+    "o": [
+      "<a href=\"/about\">About Us</a>",
+      "<a href=\"https://example.com/about\">About Us</a>",
+      "<a href=\"www.example.com/about\">About Us</a>",
+      "<a href=\"file://about\">About Us</a>"
+    ]
+  },
+  {
+    "q": "What is the purpose of 'aria-label' in a navigation menu?",
+    "c": "<a href=\"#\" aria-label=\"Go to home page\">Home</a>",
+    "o": [
+      "Provides an accessible label for screen readers",
+      "Changes the appearance of the link",
+      "Adds a tooltip on hover",
+      "Opens the link in a new tab"
+    ]
+  },
+  {
+    "q": "What is the correct way to create a button-styled navigation link using HTML and CSS?",
+    "c": "<a href=\"index.html\" class=\"btn\">Home</a>\n\n<style>\n.btn {\n  display: inline-block;\n  padding: 10px 20px;\n  background: blue;\n  color: white;\n  text-decoration: none;\n}\n</style>",
+    "o": [
+      "A styled button that acts as a navigation link",
+      "A standard hyperlink without styling",
+      "A form submission button",
+      "A link that doesn't work"
+    ]
+  },
+  {
+    "q": "Which HTML element is best used for breadcrumb navigation?",
+    "o": [
+      "<nav>",
+      "<aside>",
+      "<section>",
+      "<footer>"
+    ]
+  },
+  {
+    "q": "Which of the following links would open a PDF file in a new tab?",
+    "o": [
+      "<a href=\"document.pdf\" target=\"_blank\">Open PDF</a>",
+      "<a href=\"document.pdf\" new=\"true\">Open PDF</a>",
+      "<a href=\"document.pdf\" open=\"popup\">Open PDF</a>",
+      "<a href=\"document.pdf\" target=\"newtab\">Open PDF</a>"
+    ]
+  },
+  {
+    "q": "What is the function of the 'download' attribute in an anchor tag?",
+    "c": "<a href=\"file.pdf\" download>Download PDF</a>",
+    "o": [
+      "Allows the user to download the linked file instead of opening it",
+      "Opens the file in a new tab",
+      "Prevents users from downloading the file",
+      "Hides the file from users"
+    ]
+  },
+  {
+    "q": "Which CSS property ensures that a navigation menu remains at the top of the page while scrolling?",
+    "o": [
+      "position: fixed;",
+      "position: relative;",
+      "display: block;",
+      "position: absolute;"
+    ]
+  },
+  {
+    "q": "Which of the following creates a dropdown navigation menu?",
+    "c": "<nav>\n  <ul>\n    <li>\n      <a href=\"#\">Menu</a>\n      <ul>\n        <li><a href=\"page1.html\">Page 1</a></li>\n        <li><a href=\"page2.html\">Page 2</a></li>\n      </ul>\n    </li>\n  </ul>\n</nav>",
+    "o": [
+      "A nested list structure for a dropdown menu",
+      "A horizontal navigation menu",
+      "A sticky menu that stays on top",
+      "A sidebar menu"
+    ]
+  },
+  {
+    "q": "Which JavaScript function prevents the default behavior of an anchor tag?",
+    "c": "<a href=\"#\" onclick=\"event.preventDefault();\">Click Me</a>",
+    "o": [
+      "event.preventDefault();",
+      "stopPropagation();",
+      "return false;",
+      "preventClick();"
+    ]
+  },
+  {
+    "q": "What does 'noopener' in the 'rel' attribute do when used with 'target=\"_blank\"'?",
+    "c": "<a href=\"https://example.com\" target=\"_blank\" rel=\"noopener\">Visit</a>",
+    "o": [
+      "Prevents the new page from accessing the referring page's window object",
+      "Increases the speed of opening the link",
+      "Automatically closes the previous tab",
+      "Disables JavaScript on the new page"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to create a sticky navigation bar?",
+    "c": "<style>\nnav {\n  position: sticky;\n  top: 0;\n  background: #333;\n  color: white;\n}\n</style>\n<nav>Sticky Navigation</nav>",
+    "o": [
+      "A navigation bar that stays at the top while scrolling",
+      "A floating menu at the bottom",
+      "A collapsible sidebar menu",
+      "A menu that disappears when scrolling"
+    ]
+  },
+  {
+    "q": "Which attribute is required in an anchor tag to specify the destination URL?",
+    "o": [
+      "href",
+      "src",
+      "link",
+      "url"
+    ]
+  },
+  {
+    "q": "What is the correct way to make a navigation menu responsive?",
+    "c": "<style>\n@media (max-width: 600px) {\n  nav ul {\n    display: none;\n  }\n}\n</style>",
+    "o": [
+      "Using CSS media queries to hide/show elements",
+      "Only using JavaScript",
+      "Using inline styles",
+      "Making the links smaller"
+    ]
+  },
+  {
+    "q": "Which HTML tag is commonly used to wrap a group of navigation links?",
+    "o": [
+      "<nav>",
+      "<menu>",
+      "<section>",
+      "<div>"
+    ]
+  },
+  {
+    "q": "Which of the following describes a 'jump link'?",
+    "c": "<a href=\"#section\">Jump to Section</a>",
+    "o": [
+      "A link that navigates to a specific part of the same page",
+      "A link that opens in a new window",
+      "A link that reloads the page",
+      "A link that jumps between websites"
+    ]
+  }
+]

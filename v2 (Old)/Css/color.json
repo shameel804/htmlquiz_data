@@ -1,0 +1,3743 @@
+[
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n  background: rgb(0, 255, 0);\n}",
+        "o": [
+            "Sets background to green",
+            "Sets text to green",
+            "None",
+            "Sets border to green"
+        ]
+    },
+    {
+        "q": "What is the hexadecimal format for pure red?",
+        "o": [
+            "#FF0000",
+            "#00FF00",
+            "#0000FF",
+            "#FFFFFF"
+        ]
+    },
+    {
+        "q": "What color does this code set for the text?",
+        "l": "css",
+        "c": "p {\n  color: #FF5733;\n}",
+        "o": [
+            "Orange",
+            "Red",
+            "Green",
+            "Blue"
+        ]
+    },
+    {
+        "q": "Which property sets the background color?",
+        "o": [
+            "background-color",
+            "color",
+            "bgcolor",
+            "background"
+        ]
+    },
+    {
+        "q": "What color does this code represent?",
+        "l": "css",
+        "c": "h1 {\n  color: hsl(240, 100%, 50%);\n}",
+        "o": [
+            "Blue",
+            "Red",
+            "Green",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What color does 'rgb(0, 255, 0)' represent?",
+        "o": [
+            "Green",
+            "Blue",
+            "Red",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What effect does this code produce?",
+        "l": "css",
+        "c": "div {\n  opacity: 0.5;\n}",
+        "o": [
+            "Makes div semi-transparent",
+            "Makes div invisible",
+            "No effect",
+            "Makes div opaque"
+        ]
+    },
+    {
+        "q": "Which CSS function creates a linear gradient?",
+        "o": [
+            "linear-gradient()",
+            "gradient()",
+            "color-gradient()",
+            "bg-gradient()"
+        ]
+    },
+    {
+        "q": "What is the background position here?",
+        "l": "css",
+        "c": "div {\n  background: url(image.jpg) no-repeat;\n  background-position: center;\n}",
+        "o": [
+            "Center",
+            "Top left",
+            "Top right",
+            "Bottom left"
+        ]
+    },
+    {
+        "q": "What is the keyword for transparent color?",
+        "o": [
+            "transparent",
+            "clear",
+            "invisible",
+            "none"
+        ]
+    },
+    {
+        "q": "What color does this code set?",
+        "l": "css",
+        "c": "p {\n  color: rgba(255, 0, 0, 0.5);\n}",
+        "o": [
+            "Semi-transparent red",
+            "Opaque red",
+            "Green",
+            "None"
+        ]
+    },
+    {
+        "q": "What property is used to set a background image?",
+        "o": [
+            "background-image",
+            "image",
+            "bg-img",
+            "img"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n  background: linear-gradient(to right, red, blue);\n}",
+        "o": [
+            "Creates a gradient from red to blue",
+            "Sets a solid blue background",
+            "No effect",
+            "Sets a gradient from blue to red"
+        ]
+    },
+    {
+        "q": "Which color format uses rgba()?",
+        "o": [
+            "RGB with Alpha",
+            "Hex",
+            "HSL",
+            "CMYK"
+        ]
+    },
+    {
+        "q": "What color does this set?",
+        "l": "css",
+        "c": "h2 {\n  color: #00FF00;\n}",
+        "o": [
+            "Green",
+            "Red",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'hsl(120, 100%, 50%)' represent?",
+        "o": [
+            "Bright Green",
+            "Bright Red",
+            "Bright Blue",
+            "Bright Yellow"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n  background-color: transparent;\n}",
+        "o": [
+            "Makes background transparent",
+            "Sets background to white",
+            "None",
+            "Sets background to black"
+        ]
+    },
+    {
+        "q": "Which value makes a color fully opaque?",
+        "o": [
+            "1",
+            "0.5",
+            "0",
+            "2"
+        ]
+    },
+    {
+        "q": "What color does this represent?",
+        "l": "css",
+        "c": "p {\n  color: hsl(120, 100%, 50%);\n}",
+        "o": [
+            "Green",
+            "Blue",
+            "Red",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background-size: cover;' do?",
+        "o": [
+            "Covers entire background",
+            "Fits image",
+            "Stretches image",
+            "Centers image"
+        ]
+    },
+    {
+        "q": "What will this code do?",
+        "l": "css",
+        "c": "div {\n  background: repeating-linear-gradient(\n    45deg,\n    red,\n    red 10px,\n    blue 10px,\n    blue 20px\n  );\n}",
+        "o": [
+            "Creates a striped background",
+            "Sets a solid background",
+            "None",
+            "Makes background transparent"
+        ]
+    },
+    {
+        "q": "What is the default background color of a webpage?",
+        "o": [
+            "White",
+            "Black",
+            "Grey",
+            "Transparent"
+        ]
+    },
+    {
+        "q": "What does this code change?",
+        "l": "css",
+        "c": "p {\n  color: #000000;\n}",
+        "o": [
+            "Sets text color to black",
+            "Sets background to black",
+            "None",
+            "Sets border color to black"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: no-repeat;' do?",
+        "o": [
+            "No repetition",
+            "Repeats vertically",
+            "Repeats horizontally",
+            "Both directions"
+        ]
+    },
+    {
+        "q": "What effect does this have?",
+        "l": "css",
+        "c": "div {\n  background: url('image.png') center;\n}",
+        "o": [
+            "Centers the background image",
+            "No repeat",
+            "Stretches the image",
+            "None"
+        ]
+    },
+    {
+        "q": "Which CSS property controls the opacity of an element?",
+        "o": [
+            "opacity",
+            "color",
+            "visibility",
+            "display"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "p {\n  color: rgba(0, 0, 255, 0.3);\n}",
+        "o": [
+            "Semi-transparent blue text",
+            "Opaque blue text",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "Which function creates a radial gradient?",
+        "o": [
+            "radial-gradient()",
+            "circle-gradient()",
+            "bg-radial()",
+            "gradient()"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "body {\n  background: #FF5733;\n}",
+        "o": [
+            "Sets body background to orange",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "Which color model uses the values for hue, saturation, and lightness?",
+        "o": [
+            "HSL",
+            "RGB",
+            "CMYK",
+            "Hex"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "div {\n  background: radial-gradient(circle, yellow, green);\n}",
+        "o": [
+            "Creates a radial gradient",
+            "Sets solid yellow",
+            "No effect",
+            "Sets solid green"
+        ]
+    },
+    {
+        "q": "What is the value of black in hex?",
+        "o": [
+            "#000000",
+            "#FFFFFF",
+            "#FF0000",
+            "#00FF00"
+        ]
+    },
+    {
+        "q": "What does this code accomplish?",
+        "l": "css",
+        "c": "h1 {\n  text-shadow: 2px 2px 4px #000000;\n}",
+        "o": [
+            "Adds shadow to text",
+            "No effect",
+            "Makes text transparent",
+            "None"
+        ]
+    },
+    {
+        "q": "What color does 'rgba(255, 255, 255, 0.5)' represent?",
+        "o": [
+            "White with opacity",
+            "Black with opacity",
+            "Red",
+            "Green"
+        ]
+    },
+    {
+        "q": "What color is represented here?",
+        "l": "css",
+        "c": "p {\n  color: #FFFFFF;\n}",
+        "o": [
+            "White",
+            "Black",
+            "Gray",
+            "Red"
+        ]
+    },
+    {
+        "q": "Which of these is not a color format?",
+        "o": [
+            "CMYK",
+            "RGB",
+            "XYZ",
+            "HSL"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n  background-repeat: no-repeat;\n}",
+        "o": [
+            "Prevents image repeat",
+            "Repeats image vertically",
+            "None",
+            "Repeats image horizontally"
+        ]
+    },
+    {
+        "q": "What is the CSS property for background positioning?",
+        "o": [
+            "background-position",
+            "bg-position",
+            "position",
+            "bg-align"
+        ]
+    },
+    {
+        "q": "What color does this code specify?",
+        "l": "css",
+        "c": "p {\n  color: hsl(300, 100%, 50%);\n}",
+        "o": [
+            "Magenta",
+            "Green",
+            "Yellow",
+            "Blue"
+        ]
+    },
+    {
+        "q": "Which color is 'cyan' in hex?",
+        "o": [
+            "#00FFFF",
+            "#FF00FF",
+            "#FFFF00",
+            "#0000FF"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n  background-image: url('image.jpg');\n  background-size: cover;\n}",
+        "o": [
+            "Covers div with image",
+            "No effect",
+            "Sets image to left",
+            "None"
+        ]
+    },
+    {
+        "q": "Which of the following is a CSS color keyword?",
+        "o": [
+            "Aqua",
+            "Redish",
+            "Bluish",
+            "Greener"
+        ]
+    },
+    {
+        "q": "What color does this code define?",
+        "l": "css",
+        "c": "h3 {\n  color: rgba(255, 255, 0, 0.5);\n}",
+        "o": [
+            "Semi-transparent yellow",
+            "Opaque yellow",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What background-size value keeps the aspect ratio?",
+        "o": [
+            "contain",
+            "cover",
+            "stretch",
+            "fit"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n  background: linear-gradient(red, blue);\n}",
+        "o": [
+            "Creates a gradient from red to blue",
+            "Sets solid blue",
+            "No effect",
+            "Sets gradient from blue to red"
+        ]
+    },
+    {
+        "q": "Which syntax is used for a CSS gradient?",
+        "o": [
+            "background: linear-gradient();",
+            "bg: gradient();",
+            "color: gradient();",
+            "background-gradient:;"
+        ]
+    },
+    {
+        "q": "What color does this code set?",
+        "l": "css",
+        "c": "p {\n  color: #FF00FF;\n}",
+        "o": [
+            "Magenta",
+            "Cyan",
+            "Yellow",
+            "Green"
+        ]
+    },
+    {
+        "q": "What color does 'hsl(240, 100%, 50%)' represent?",
+        "o": [
+            "Blue",
+            "Purple",
+            "Red",
+            "Green"
+        ]
+    },
+    {
+        "q": "What will this code do?",
+        "l": "css",
+        "c": "div {\n  background-color: #0000FF;\n}",
+        "o": [
+            "Sets background to blue",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does the 'background-attachment' property control?",
+        "o": [
+            "Scrolling behavior",
+            "Color",
+            "Image position",
+            "Opacity"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "p {\n  color: hsl(60, 100%, 50%);\n}",
+        "o": [
+            "Sets text color to yellow",
+            "Sets background to yellow",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "Which value does not exist for 'background-repeat'?",
+        "o": [
+            "no-repeat",
+            "repeat-x",
+            "repeat-y",
+            "repeat-all"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n  background: url('image.jpg') no-repeat center;\n}",
+        "o": [
+            "Centers image without repeat",
+            "Centers image with repeat",
+            "No effect",
+            "None"
+        ]
+    },
+    {
+        "q": "Which property defines the color of text?",
+        "o": [
+            "color",
+            "background-color",
+            "font-color",
+            "text-color"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "p {\n  color: rgba(128, 0, 128, 0.5);\n}",
+        "o": [
+            "Semi-transparent purple",
+            "Opaque purple",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: red;' do?",
+        "o": [
+            "Sets background to red",
+            "Sets text color",
+            "Sets border color",
+            "None"
+        ]
+    },
+    {
+        "q": "What effect does this code produce?",
+        "l": "css",
+        "c": "div {\n  background: repeating-linear-gradient(\n    45deg,\n    red,\n    red 10px,\n    blue 10px,\n    blue 20px\n  );\n}",
+        "o": [
+            "Creates stripes",
+            "Sets a solid background",
+            "No effect",
+            "Makes background transparent"
+        ]
+    },
+    {
+        "q": "What does 'transparent' mean in CSS?",
+        "o": [
+            "No color",
+            "White color",
+            "Black color",
+            "Red color"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "p {\n  color: hsl(120, 100%, 50%);\n}",
+        "o": [
+            "Sets text color to green",
+            "Sets background to green",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "Which format can define colors with transparency?",
+        "o": [
+            "rgba",
+            "rgb",
+            "hex",
+            "hsl"
+        ]
+    },
+    {
+        "q": "What color does this code specify?",
+        "l": "css",
+        "c": "h3 {\n  color: #808080;\n}",
+        "o": [
+            "Gray",
+            "Red",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does the 'background-position' property define?",
+        "o": [
+            "Image placement",
+            "Image size",
+            "Image color",
+            "Image opacity"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n  background: url('image.png') top left;\n}",
+        "o": [
+            "Aligns image to top left",
+            "Centers image",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What color is represented by '#FFFFFF'?",
+        "o": [
+            "White",
+            "Black",
+            "Red",
+            "Green"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "p {\n  color: rgba(0, 128, 0, 0.3);\n}",
+        "o": [
+            "Semi-transparent green",
+            "Opaque green",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "Which CSS function is used to combine multiple colors?",
+        "o": [
+            "mix()",
+            "color-mix()",
+            "gradient()",
+            "combine()"
+        ]
+    },
+    {
+        "q": "What color does this code set?",
+        "l": "css",
+        "c": "h1 {\n  color: #FFA500;\n}",
+        "o": [
+            "Orange",
+            "Red",
+            "Green",
+            "Blue"
+        ]
+    },
+    {
+        "q": "What does 'background-color: inherit;' do?",
+        "o": [
+            "Inherits from parent",
+            "Sets to transparent",
+            "Sets to default",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n  background: linear-gradient(to bottom, white, black);\n}",
+        "o": [
+            "Creates a vertical gradient",
+            "Sets solid black",
+            "None",
+            "Sets gradient to red"
+        ]
+    },
+    {
+        "q": "What is the keyword for a color that fades to transparent?",
+        "o": [
+            "transparent",
+            "fade",
+            "opacity",
+            "invisible"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "body {\n  background: url('bg.jpg') repeat;\n}",
+        "o": [
+            "Repeats background image",
+            "No effect",
+            "Sets solid background",
+            "None"
+        ]
+    },
+    {
+        "q": "Which property affects the background of an element?",
+        "o": [
+            "background",
+            "color",
+            "text",
+            "font"
+        ]
+    },
+    {
+        "q": "What color does this code define?",
+        "l": "css",
+        "c": "p {\n  color: hsl(180, 100%, 50%);\n}",
+        "o": [
+            "Cyan",
+            "Red",
+            "Green",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does the 'background-image' property do?",
+        "o": [
+            "Sets an image",
+            "Sets a color",
+            "Sets a gradient",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n  background-color: #FFFF00;\n}",
+        "o": [
+            "Sets background to yellow",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-color: blue;' do?",
+        "o": [
+            "Sets blue background",
+            "Sets blue text",
+            "Sets blue border",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "p {\n  color: rgba(255, 0, 0, 0.75);\n}",
+        "o": [
+            "Semi-transparent red",
+            "Opaque red",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "Which format is used to define color in 8-bit?",
+        "o": [
+            "Hex",
+            "RGB",
+            "HSL",
+            "RGBA"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n  background: radial-gradient(circle, blue, green);\n}",
+        "o": [
+            "Creates a radial gradient",
+            "Sets solid blue",
+            "No effect",
+            "Sets solid green"
+        ]
+    },
+    {
+        "q": "Which property is used for a fallback background color?",
+        "o": [
+            "background-color",
+            "color",
+            "bgcolor",
+            "background"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "h2 {\n  color: #000000;\n}",
+        "o": [
+            "Black",
+            "Red",
+            "Green",
+            "Blue"
+        ]
+    },
+    {
+        "q": "What does 'background: linear-gradient(red, blue);' do?",
+        "o": [
+            "Creates a gradient",
+            "Sets solid color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "p {\n  background: rgba(255, 255, 255, 0.5);\n}",
+        "o": [
+            "Sets background to semi-transparent white",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "Which syntax defines a repeating linear gradient?",
+        "o": [
+            "background: repeating-linear-gradient();",
+            "bg: repeat-gradient();",
+            "color: repeat-gradient();",
+            "gradient: repeat();"
+        ]
+    },
+    {
+        "q": "What does this code define?",
+        "l": "css",
+        "c": "div {\n  background: repeating-linear-gradient(\n    90deg,\n    #000,\n    #000 10px,\n    #FFF 10px,\n    #FFF 20px\n  );\n}",
+        "o": [
+            "Creates a striped background",
+            "Sets solid background",
+            "No effect",
+            "Makes background transparent"
+        ]
+    },
+    {
+        "q": "Which color model is not used in CSS?",
+        "o": [
+            "XYZ",
+            "RGB",
+            "HSL",
+            "HEX"
+        ]
+    },
+    {
+        "q": "What color is set here?",
+        "l": "css",
+        "c": "p {\n  color: #800080;\n}",
+        "o": [
+            "Purple",
+            "Red",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background-clip: content-box;' do?",
+        "o": [
+            "Clips background to content",
+            "Clips to border",
+            "None",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n  background: url('image.jpg') no-repeat center;\n}",
+        "o": [
+            "Centers the image",
+            "No effect",
+            "Repeats the image",
+            "None"
+        ]
+    },
+    {
+        "q": "Which keyword describes a medium blue color in CSS?",
+        "o": [
+            "Blue",
+            "MediumBlue",
+            "DarkBlue",
+            "LightBlue"
+        ]
+    },
+    {
+        "q": "What color does this represent?",
+        "l": "css",
+        "c": "h1 {\n  color: rgba(255, 20, 147, 0.5);\n}",
+        "o": [
+            "Semi-transparent deep pink",
+            "Opaque pink",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-position: center;' do?",
+        "o": [
+            "Centers background",
+            "Left aligns",
+            "Right aligns",
+            "Bottom aligns"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "body {\n  background: linear-gradient(to right, blue, red);\n}",
+        "o": [
+            "Creates a gradient from blue to red",
+            "Sets solid blue",
+            "No effect",
+            "Sets gradient from red to blue"
+        ]
+    },
+    {
+        "q": "Which format can include alpha transparency?",
+        "o": [
+            "rgba()",
+            "hex()",
+            "hsl()",
+            "rgb()"
+        ]
+    },
+    {
+        "q": "What color is defined here?",
+        "l": "css",
+        "c": "h3 {\n  color: #C0C0C0;\n}",
+        "o": [
+            "Silver",
+            "Red",
+            "Green",
+            "Blue"
+        ]
+    },
+    {
+        "q": "What does 'background-size: 100%;' do?",
+        "o": [
+            "Stretches image",
+            "Covers image",
+            "Hides image",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "p {\n  background: #ADD8E6;\n}",
+        "o": [
+            "Sets background to light blue",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'color: #000;' represent?",
+        "o": [
+            "Black",
+            "White",
+            "Red",
+            "Green"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n  background: url('bg.jpg') center center;\n}",
+        "o": [
+            "Centers background image",
+            "No effect",
+            "Sets solid background",
+            "None"
+        ]
+    },
+    {
+        "q": "What is the default value for 'background-repeat'?",
+        "o": [
+            "repeat",
+            "no-repeat",
+            "repeat-x",
+            "repeat-y"
+        ]
+    },
+    {
+        "q": "What color does this code set?",
+        "l": "css",
+        "c": "p {\n  color: hsl(240, 100%, 50%);\n}",
+        "o": [
+            "Blue",
+            "Red",
+            "Green",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background-attachment: fixed;' do?",
+        "o": [
+            "Background stays in place",
+            "Background scrolls",
+            "None",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n  background-color: transparent;\n}",
+        "o": [
+            "Makes background transparent",
+            "Sets background to white",
+            "None",
+            "Sets background to black"
+        ]
+    },
+    {
+        "q": "What does 'background-color: rgba(0, 0, 0, 0.5);' do?",
+        "o": [
+            "Semi-transparent black",
+            "Opaque black",
+            "Opaque white",
+            "Transparent white"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "div {\n  background: radial-gradient(circle, red, blue);\n}",
+        "o": [
+            "Creates a radial gradient",
+            "Sets solid red",
+            "No effect",
+            "Sets gradient from blue to red"
+        ]
+    },
+    {
+        "q": "Which CSS property can take a gradient as a value?",
+        "o": [
+            "background",
+            "color",
+            "border",
+            "font"
+        ]
+    },
+    {
+        "q": "What color is specified here?",
+        "l": "css",
+        "c": "h2 {\n  color: #FF4500;\n}",
+        "o": [
+            "Orange red",
+            "Blue",
+            "Green",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background-size: contain;' do?",
+        "o": [
+            "Fits image to container",
+            "Covers container",
+            "Hides image",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "body {\n  background: #F0E68C;\n}",
+        "o": [
+            "Sets background to khaki",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What color does 'hsl(0, 100%, 50%)' represent?",
+        "o": [
+            "Red",
+            "Green",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "p {\n  color: rgba(0, 255, 255, 0.7);\n}",
+        "o": [
+            "Semi-transparent cyan",
+            "Opaque cyan",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "Which of the following is a valid hex color?",
+        "o": [
+            "#1F1F1F",
+            "#GHIJKL",
+            "#1234567",
+            "#ABCDEF"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "div {\n  background: repeating-linear-gradient(\n    0deg,\n    green,\n    green 20px,\n    yellow 20px,\n    yellow 40px\n  );\n}",
+        "o": [
+            "Creates green and yellow stripes",
+            "Sets solid green",
+            "No effect",
+            "Makes background transparent"
+        ]
+    },
+    {
+        "q": "What does 'background-image: none;' do?",
+        "o": [
+            "Removes image",
+            "Adds image",
+            "Sets color",
+            "None"
+        ]
+    },
+    {
+        "q": "What color does this code represent?",
+        "l": "css",
+        "c": "h1 {\n  color: hsl(180, 100%, 25%);\n}",
+        "o": [
+            "Teal",
+            "Red",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "Which of these is a CSS color property?",
+        "o": [
+            "background-color",
+            "font-color",
+            "text-color",
+            "border-color"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n  background-image: url('pattern.png');\n  background-size: cover;\n}",
+        "o": [
+            "Covers div with image",
+            "Sets image to left",
+            "No effect",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg);' do?",
+        "o": [
+            "Sets background image",
+            "Sets text color",
+            "Sets border color",
+            "None"
+        ]
+    },
+    {
+        "q": "What color does this define?",
+        "l": "css",
+        "c": "p {\n  color: #FFD700;\n}",
+        "o": [
+            "Gold",
+            "Silver",
+            "Bronze",
+            "Red"
+        ]
+    },
+    {
+        "q": "What is the format for a CSS color value?",
+        "o": [
+            "Hex, RGB, HSL",
+            "CMYK",
+            "XYZ",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "body {\n  background: url('bg.jpg') no-repeat;\n}",
+        "o": [
+            "Sets background image without repeat",
+            "Repeats background",
+            "No effect",
+            "None"
+        ]
+    },
+    {
+        "q": "What is the keyword for full transparency?",
+        "o": [
+            "0",
+            "1",
+            "100%",
+            "50%"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "div {\n  background: linear-gradient(to top, green, yellow);\n}",
+        "o": [
+            "Creates a gradient from green to yellow",
+            "Sets solid green",
+            "No effect",
+            "Sets gradient from yellow to green"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: repeat-x;' do?",
+        "o": [
+            "Repeats horizontally",
+            "Repeats vertically",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "p {\n  color: rgba(255, 69, 0, 0.8);\n}",
+        "o": [
+            "Semi-transparent orange red",
+            "Opaque orange",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "Which value for 'background-clip' allows content to show through?",
+        "o": [
+            "content-box",
+            "border-box",
+            "padding-box",
+            "none"
+        ]
+    },
+    {
+        "q": "What color does this represent?",
+        "l": "css",
+        "c": "h2 {\n  color: #7FFF00;\n}",
+        "o": [
+            "Chartreuse",
+            "Red",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "Which property sets the background to multiple colors?",
+        "o": [
+            "background",
+            "color",
+            "font",
+            "border"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n  background: url('bg.png') repeat-x;\n}",
+        "o": [
+            "Repeats background horizontally",
+            "No effect",
+            "Sets solid background",
+            "None"
+        ]
+    },
+    {
+        "q": "What color does '#FF00FF' represent?",
+        "o": [
+            "Magenta",
+            "Yellow",
+            "Cyan",
+            "Red"
+        ]
+    },
+    {
+        "q": "What color is defined here?",
+        "l": "css",
+        "c": "p {\n  color: hsl(330, 100%, 50%);\n}",
+        "o": [
+            "Magenta",
+            "Green",
+            "Yellow",
+            "Blue"
+        ]
+    },
+    {
+        "q": "What does 'background-size: auto;' do?",
+        "o": [
+            "Default size",
+            "Cover image",
+            "Fit image",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "body {\n  background-color: #FAFAD2;\n}",
+        "o": [
+            "Sets background to light goldenrod",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "Which of these is not a valid CSS color?",
+        "o": [
+            "Darkred",
+            "Bluegreen",
+            "Redish",
+            "Lightpink"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "h3 {\n  color: rgba(128, 0, 128, 0.5);\n}",
+        "o": [
+            "Semi-transparent purple",
+            "Opaque purple",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'color: transparent;' do?",
+        "o": [
+            "No text color",
+            "Sets text to white",
+            "Sets text to black",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n  background: radial-gradient(circle at center, white, black);\n}",
+        "o": [
+            "Creates a radial gradient",
+            "Sets solid white",
+            "No effect",
+            "Sets gradient from black to white"
+        ]
+    },
+    {
+        "q": "What does 'background-position: right bottom;' do?",
+        "o": [
+            "Aligns bottom right",
+            "Aligns top left",
+            "Centers image",
+            "Aligns top right"
+        ]
+    },
+    {
+        "q": "What color does this code represent?",
+        "l": "css",
+        "c": "p {\n  color: #00FFFF;\n}",
+        "o": [
+            "Aqua",
+            "Red",
+            "Green",
+            "Blue"
+        ]
+    },
+    {
+        "q": "Which color keyword is closest to black?",
+        "o": [
+            "DarkSlateGray",
+            "LightGray",
+            "White",
+            "Gray"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n  background: repeating-linear-gradient(\n    45deg,\n    red,\n    red 5px,\n    blue 5px,\n    blue 10px\n  );\n}",
+        "o": [
+            "Creates red and blue stripes",
+            "Sets solid red",
+            "No effect",
+            "Makes background transparent"
+        ]
+    },
+    {
+        "q": "What does 'background-attachment: scroll;' do?",
+        "o": [
+            "Background scrolls with content",
+            "Background stays fixed",
+            "None",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "h1 {\n  color: hsl(120, 100%, 50%);\n}",
+        "o": [
+            "Green",
+            "Red",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What color is represented by '#FFFF00'?",
+        "o": [
+            "Yellow",
+            "Blue",
+            "Green",
+            "Red"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "body {\n  background: #FFF;\n}",
+        "o": [
+            "Sets background to white",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: transparent;' do?",
+        "o": [
+            "Sets transparent background",
+            "Sets color",
+            "Removes image",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "p {\n  color: rgba(255, 0, 0, 0.3);\n}",
+        "o": [
+            "Semi-transparent red",
+            "Opaque red",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-position: left top;' do?",
+        "o": [
+            "Aligns to top left",
+            "Aligns to bottom right",
+            "Centers image",
+            "Aligns to top right"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n  background: linear-gradient(135deg, pink, purple);\n}",
+        "o": [
+            "Creates a diagonal gradient",
+            "Sets solid pink",
+            "No effect",
+            "Sets gradient from purple to pink"
+        ]
+    },
+    {
+        "q": "Which of these colors is not part of the primary colors?",
+        "o": [
+            "Yellow",
+            "Red",
+            "Blue",
+            "Green"
+        ]
+    },
+    {
+        "q": "What color is specified here?",
+        "l": "css",
+        "c": "h2 {\n  color: #FF1493;\n}",
+        "o": [
+            "Deep pink",
+            "Blue",
+            "Green",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background: #FF5733;' do?",
+        "o": [
+            "Sets background to orange",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "body {\n  background: rgba(255, 255, 255, 0.9);\n}",
+        "o": [
+            "Sets semi-transparent white",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-size: 50%;' do?",
+        "o": [
+            "Sets half size",
+            "Covers background",
+            "None",
+            "Hides image"
+        ]
+    },
+    {
+        "q": "What color does this code define?",
+        "l": "css",
+        "c": "h3 {\n  color: #7CFC00;\n}",
+        "o": [
+            "Lawn green",
+            "Red",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background: repeating-linear-gradient(red, blue);' create?",
+        "o": [
+            "Repeating gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n  background: url('bg.png') no-repeat;\n}",
+        "o": [
+            "Sets image without repeat",
+            "Repeats image",
+            "No effect",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'hsl(360, 100%, 50%)' represent?",
+        "o": [
+            "Red",
+            "Green",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "p {\n  background: radial-gradient(circle, yellow, blue);\n}",
+        "o": [
+            "Creates a radial gradient",
+            "Sets solid yellow",
+            "No effect",
+            "Sets gradient from blue to yellow"
+        ]
+    },
+    {
+        "q": "Which property defines the color of links?",
+        "o": [
+            "color",
+            "link-color",
+            "text-color",
+            "background-color"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "body {\n  background-color: #FFE4E1;\n}",
+        "o": [
+            "Sets background to misty rose",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-image: linear-gradient(red, blue);' create?",
+        "o": [
+            "Gradient background",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "h1 {\n  color: rgba(0, 255, 0, 0.5);\n}",
+        "o": [
+            "Semi-transparent green",
+            "Opaque green",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "Which of these is a valid RGB color?",
+        "o": [
+            "rgb(255, 255, 255)",
+            "rgb(256, 0, 0)",
+            "rgb(-1, 0, 0)",
+            "rgb(0, 255)"
+        ]
+    },
+    {
+        "q": "What color is defined here?",
+        "l": "css",
+        "c": "h3 {\n  color: #FFFFFF;\n}",
+        "o": [
+            "White",
+            "Red",
+            "Green",
+            "Blue"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: repeat-y;' do?",
+        "o": [
+            "Repeats vertically",
+            "Repeats horizontally",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n  background: linear-gradient(to right, yellow, orange);\n}",
+        "o": [
+            "Creates a gradient from yellow to orange",
+            "Sets solid yellow",
+            "No effect",
+            "Sets gradient from orange to yellow"
+        ]
+    },
+    {
+        "q": "What does 'background-color: inherit;' do?",
+        "o": [
+            "Inherits color from parent",
+            "Sets default color",
+            "None",
+            "Sets to transparent"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "body {\n  background: url('image.jpg');\n}",
+        "o": [
+            "Sets background to image",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'opacity: 0;' do?",
+        "o": [
+            "Makes element invisible",
+            "Makes element visible",
+            "None",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "l": "css",
+        "c": "div {\n  background: repeating-linear-gradient(\n    135deg,\n    blue,\n    blue 10px,\n    green 10px,\n    green 20px\n  );\n}",
+        "o": [
+            "Creates blue and green stripes",
+            "Sets solid blue",
+            "No effect",
+            "Makes background transparent"
+        ]
+    },
+    {
+        "q": "What does 'background-position: 50% 50%;' do?",
+        "o": [
+            "Centers background",
+            "Aligns to top left",
+            "Aligns to bottom right",
+            "Aligns to top right"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "h2 {\n  color: hsl(60, 100%, 50%);\n}",
+        "o": [
+            "Yellow",
+            "Red",
+            "Blue",
+            "Green"
+        ]
+    },
+    {
+        "q": "Which color does 'rgba(0, 0, 0, 0.5)' represent?",
+        "o": [
+            "Black with opacity",
+            "White",
+            "Red",
+            "Green"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "body {\n  background: #FFDAB9;\n}",
+        "o": [
+            "Sets background to peach puff",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.png) no-repeat;' do?",
+        "o": [
+            "Sets image without repeat",
+            "Sets color",
+            "None",
+            "Repeats image"
+        ]
+    },
+    {
+        "q": "What color does this code represent?",
+        "l": "css",
+        "c": "p {\n  color: rgba(0, 0, 255, 0.5);\n}",
+        "o": [
+            "Semi-transparent blue",
+            "Opaque blue",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "Which keyword is used for semi-transparent red?",
+        "o": [
+            "rgba(255, 0, 0, 0.5)",
+            "rgba(255, 0, 0, 1)",
+            "rgb(255, 0, 0)",
+            "hsl(0, 100%, 50%)"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n  background: url('bg.jpg') no-repeat center;\n}",
+        "o": [
+            "Centers background image",
+            "No effect",
+            "Repeats the image",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'background-attachment: local;' do?",
+        "o": [
+            "Background scrolls with element",
+            "Background is fixed",
+            "None",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "h1 {\n  color: #D2691E;\n}",
+        "o": [
+            "Chocolate",
+            "Red",
+            "Green",
+            "Blue"
+        ]
+    },
+    {
+        "q": "What does 'background-size: cover;' do?",
+        "o": [
+            "Covers entire background",
+            "Fits image",
+            "None",
+            "Hides image"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "p {\n  background: hsl(180, 100%, 50%);\n}",
+        "o": [
+            "Sets background to cyan",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What is the default value for 'background-clip'?",
+        "o": [
+            "border-box",
+            "padding-box",
+            "content-box",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "body {\n  background: linear-gradient(to bottom right, red, blue);\n}",
+        "o": [
+            "Creates a diagonal gradient",
+            "Sets solid red",
+            "No effect",
+            "Sets gradient from blue to red"
+        ]
+    },
+    {
+        "q": "What does 'background-color: yellow;' do?",
+        "o": [
+            "Sets yellow background",
+            "Sets text color",
+            "Sets border color",
+            "None"
+        ]
+    },
+    {
+        "q": "What color does this code define?",
+        "l": "css",
+        "c": "div {\n  color: #00FF00;\n}",
+        "o": [
+            "Green",
+            "Red",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'color: hsl(120, 100%, 50%);' represent?",
+        "o": [
+            "Green",
+            "Red",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "h2 {\n  background: rgba(255, 255, 0, 0.3);\n}",
+        "o": [
+            "Sets semi-transparent yellow background",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: inherit;' do?",
+        "o": [
+            "Inherits from parent",
+            "Sets default color",
+            "None",
+            "Sets to transparent"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "p {\n  color: #808080;\n}",
+        "o": [
+            "Gray",
+            "Red",
+            "Green",
+            "Blue"
+        ]
+    },
+    {
+        "q": "Which of these colors is not a valid CSS color keyword?",
+        "o": [
+            "LightCoral",
+            "DeepPink",
+            "DarkOrange",
+            "BrightRed"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n  background: url('bg.jpg') no-repeat;\n}",
+        "o": [
+            "Sets image without repeat",
+            "Repeats image",
+            "No effect",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: repeat;' do?",
+        "o": [
+            "Repeats both ways",
+            "No repeat",
+            "Repeats vertically",
+            "Repeats horizontally"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "body {\n  background: rgba(0, 128, 0, 0.6);\n}",
+        "o": [
+            "Sets semi-transparent green",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-image: radial-gradient(red, blue);' create?",
+        "o": [
+            "Radial gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "h1 {\n  color: #D3D3D3;\n}",
+        "o": [
+            "Light gray",
+            "Red",
+            "Green",
+            "Blue"
+        ]
+    },
+    {
+        "q": "What does 'color: blue;' do?",
+        "o": [
+            "Sets text to blue",
+            "Sets background color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What color does this code represent?",
+        "l": "css",
+        "c": "div {\n  background: linear-gradient(0deg, blue, lightblue);\n}",
+        "o": [
+            "Creates a gradient from blue to light blue",
+            "Sets solid blue",
+            "No effect",
+            "Sets gradient from light blue to blue"
+        ]
+    },
+    {
+        "q": "What does 'background-position: center;' do?",
+        "o": [
+            "Centers image",
+            "Aligns to top left",
+            "Aligns to bottom right",
+            "Aligns to top right"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "p {\n  color: rgba(255, 20, 147, 0.8);\n}",
+        "o": [
+            "Semi-transparent deep pink",
+            "Opaque deep pink",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: linear-gradient(to right, red, blue);' create?",
+        "o": [
+            "Linear gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "body {\n  background: #F0E68C;\n}",
+        "o": [
+            "Sets background to khaki",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "Which of these is a valid CSS color format?",
+        "o": [
+            "rgba(255, 0, 0, 0.5)",
+            "rgb(255, 255)",
+            "hsl(360, 100)",
+            "hex(FFFFFF)"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "h3 {\n  color: hsl(240, 100%, 50%);\n}",
+        "o": [
+            "Blue",
+            "Red",
+            "Green",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background-image: none;' do?",
+        "o": [
+            "Removes background image",
+            "Sets color",
+            "None",
+            "Adds image"
+        ]
+    },
+    {
+        "q": "What color does this code set?",
+        "l": "css",
+        "c": "h1 {\n  background: rgba(0, 0, 0, 0.5);\n}",
+        "o": [
+            "Semi-transparent black",
+            "Opaque black",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'color: inherit;' do?",
+        "o": [
+            "Inherits color",
+            "Sets default color",
+            "None",
+            "Sets to transparent"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "div {\n  background: repeating-linear-gradient(90deg, white, white 5px, gray 5px, gray 10px);\n}",
+        "o": [
+            "Creates white and gray stripes",
+            "Sets solid white",
+            "No effect",
+            "Makes background transparent"
+        ]
+    },
+    {
+        "q": "What does 'opacity: 1;' do?",
+        "o": [
+            "Makes element fully visible",
+            "Makes element invisible",
+            "None",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What does this code set?",
+        "l": "css",
+        "c": "p {\n  color: #0000FF;\n}",
+        "o": [
+            "Blue",
+            "Red",
+            "Green",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "Which value for 'background-position' centers the image?",
+        "o": [
+            "50% 50%",
+            "0 0",
+            "100% 100%",
+            "left top"
+        ]
+    },
+    {
+        "q": "What is the outcome of this code?",
+        "l": "css",
+        "c": "h2 {\n  color: hsl(0, 100%, 50%);\n}",
+        "o": [
+            "Red",
+            "Green",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background: #000000;' represent?",
+        "o": [
+            "Black background",
+            "White background",
+            "Red background",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "body {\n  background: #ADD8E6;\n}",
+        "o": [
+            "Sets background to light blue",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'color: rgba(0, 0, 0, 0.5);' do?",
+        "o": [
+            "Semi-transparent black",
+            "Opaque black",
+            "Opaque white",
+            "Transparent white"
+        ]
+    },
+    {
+        "q": "What color does this code define?",
+        "l": "css",
+        "c": "h3 {\n  color: #FFD700;\n}",
+        "o": [
+            "Gold",
+            "Red",
+            "Green",
+            "Blue"
+        ]
+    },
+    {
+        "q": "Which CSS property can take a gradient as a value?",
+        "o": [
+            "background",
+            "color",
+            "border",
+            "font"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n  background: radial-gradient(circle at top left, blue, white);\n}",
+        "o": [
+            "Creates a radial gradient",
+            "Sets solid blue",
+            "No effect",
+            "Sets gradient from white to blue"
+        ]
+    },
+    {
+        "q": "What does 'background-size: contain;' do?",
+        "o": [
+            "Fits image to container",
+            "Covers container",
+            "Hides image",
+            "None"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "h1 {\n  color: rgba(0, 0, 255, 0.4);\n}",
+        "o": [
+            "Semi-transparent blue",
+            "Opaque blue",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What color does 'hsl(0, 100%, 50%)' represent?",
+        "o": [
+            "Red",
+            "Green",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "Which of the following is a valid hex color?",
+        "o": [
+            "#1F1F1F",
+            "#GHIJKL",
+            "#1234567",
+            "#ABCDEF"
+        ]
+    },
+    {
+        "q": "What does 'background-image: none;' do?",
+        "o": [
+            "Removes image",
+            "Adds image",
+            "Sets color",
+            "None"
+        ]
+    },
+    {
+        "q": "Which of these is a CSS color property?",
+        "o": [
+            "background-color",
+            "font-color",
+            "text-color",
+            "border-color"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg);' do?",
+        "o": [
+            "Sets background image",
+            "Sets text color",
+            "Sets border color",
+            "None"
+        ]
+    },
+    {
+        "q": "What is the format for a CSS color value?",
+        "o": [
+            "Hex, RGB, HSL",
+            "CMYK",
+            "XYZ",
+            "None"
+        ]
+    },
+    {
+        "q": "What is the keyword for full transparency?",
+        "o": [
+            "0",
+            "1",
+            "100%",
+            "50%"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: repeat-x;' do?",
+        "o": [
+            "Repeats horizontally",
+            "Repeats vertically",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "Which value for 'background-clip' allows content to show through?",
+        "o": [
+            "content-box",
+            "border-box",
+            "padding-box",
+            "none"
+        ]
+    },
+    {
+        "q": "Which property sets the background to multiple colors?",
+        "o": [
+            "background",
+            "color",
+            "font",
+            "border"
+        ]
+    },
+    {
+        "q": "What color does '#FF00FF' represent?",
+        "o": [
+            "Magenta",
+            "Yellow",
+            "Cyan",
+            "Red"
+        ]
+    },
+    {
+        "q": "What does 'background-size: auto;' do?",
+        "o": [
+            "Default size",
+            "Cover image",
+            "Fit image",
+            "None"
+        ]
+    },
+    {
+        "q": "Which of these is not a valid CSS color?",
+        "o": [
+            "Darkred",
+            "Bluegreen",
+            "Redish",
+            "Lightpink"
+        ]
+    },
+    {
+        "q": "What does 'color: transparent;' do?",
+        "o": [
+            "No text color",
+            "Sets text to white",
+            "Sets text to black",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'background-position: right bottom;' do?",
+        "o": [
+            "Aligns bottom right",
+            "Aligns top left",
+            "Centers image",
+            "Aligns top right"
+        ]
+    },
+    {
+        "q": "Which color keyword is closest to black?",
+        "o": [
+            "DarkSlateGray",
+            "LightGray",
+            "White",
+            "Gray"
+        ]
+    },
+    {
+        "q": "What does 'background-attachment: scroll;' do?",
+        "o": [
+            "Background scrolls with content",
+            "Background stays fixed",
+            "None",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What color is represented by '#FFFF00'?",
+        "o": [
+            "Yellow",
+            "Blue",
+            "Green",
+            "Red"
+        ]
+    },
+    {
+        "q": "What does 'background: transparent;' do?",
+        "o": [
+            "Sets transparent background",
+            "Sets color",
+            "Removes image",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'background-position: left top;' do?",
+        "o": [
+            "Aligns to top left",
+            "Aligns to bottom right",
+            "Centers image",
+            "Aligns to top right"
+        ]
+    },
+    {
+        "q": "Which of these colors is not part of the primary colors?",
+        "o": [
+            "Yellow",
+            "Red",
+            "Blue",
+            "Green"
+        ]
+    },
+    {
+        "q": "What does 'background: #FF5733;' do?",
+        "o": [
+            "Sets background to orange",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-size: 50%;' do?",
+        "o": [
+            "Sets half size",
+            "Covers background",
+            "None",
+            "Hides image"
+        ]
+    },
+    {
+        "q": "What does 'background: repeating-linear-gradient(red, blue);' create?",
+        "o": [
+            "Repeating gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What does 'hsl(360, 100%, 50%)' represent?",
+        "o": [
+            "Red",
+            "Green",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "Which property defines the color of links?",
+        "o": [
+            "color",
+            "link-color",
+            "text-color",
+            "background-color"
+        ]
+    },
+    {
+        "q": "What does 'background-image: linear-gradient(red, blue);' create?",
+        "o": [
+            "Gradient background",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "Which of these is a valid RGB color?",
+        "o": [
+            "rgb(255, 255, 255)",
+            "rgb(256, 0, 0)",
+            "rgb(-1, 0, 0)",
+            "rgb(0, 255)"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: repeat-y;' do?",
+        "o": [
+            "Repeats vertically",
+            "Repeats horizontally",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'background-color: inherit;' do?",
+        "o": [
+            "Inherits color from parent",
+            "Sets default color",
+            "None",
+            "Sets to transparent"
+        ]
+    },
+    {
+        "q": "What does 'opacity: 0;' do?",
+        "o": [
+            "Makes element invisible",
+            "Makes element visible",
+            "None",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What does 'background-position: 50% 50%;' do?",
+        "o": [
+            "Centers background",
+            "Aligns to top left",
+            "Aligns to bottom right",
+            "Aligns to top right"
+        ]
+    },
+    {
+        "q": "Which color does 'rgba(0, 0, 0, 0.5)' represent?",
+        "o": [
+            "Black with opacity",
+            "White",
+            "Red",
+            "Green"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.png) no-repeat;' do?",
+        "o": [
+            "Sets image without repeat",
+            "Sets color",
+            "None",
+            "Repeats image"
+        ]
+    },
+    {
+        "q": "Which keyword is used for semi-transparent red?",
+        "o": [
+            "rgba(255, 0, 0, 0.5)",
+            "rgba(255, 0, 0, 1)",
+            "rgb(255, 0, 0)",
+            "hsl(0, 100%, 50%)"
+        ]
+    },
+    {
+        "q": "What does 'background-attachment: local;' do?",
+        "o": [
+            "Background scrolls with element",
+            "Background is fixed",
+            "None",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What does 'background-size: cover;' do?",
+        "o": [
+            "Covers the entire area",
+            "Sets specific size",
+            "None",
+            "Hides image"
+        ]
+    },
+    {
+        "q": "Which property sets the color of text?",
+        "o": [
+            "color",
+            "font-color",
+            "text-color",
+            "background-color"
+        ]
+    },
+    {
+        "q": "What does 'background: repeating-radial-gradient(circle, red, blue);' create?",
+        "o": [
+            "Repeating radial gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg) center;' do?",
+        "o": [
+            "Centers the image",
+            "Aligns to top left",
+            "Aligns to bottom right",
+            "Aligns to top right"
+        ]
+    },
+    {
+        "q": "Which property defines the style of the list markers?",
+        "o": [
+            "list-style",
+            "marker-style",
+            "list-color",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'background: linear-gradient(to bottom, red, blue);' create?",
+        "o": [
+            "Vertical gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What color does 'hsl(120, 100%, 50%)' represent?",
+        "o": [
+            "Green",
+            "Red",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background: rgba(255, 0, 0, 0.5);' do?",
+        "o": [
+            "Semi-transparent red",
+            "Opaque red",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "Which of these is not a valid CSS color?",
+        "o": [
+            "Lightgreen",
+            "Violet",
+            "Redish",
+            "Darkblue"
+        ]
+    },
+    {
+        "q": "What does 'background-position: top center;' do?",
+        "o": [
+            "Aligns top center",
+            "Aligns bottom right",
+            "Centers image",
+            "Aligns to top right"
+        ]
+    },
+    {
+        "q": "What does 'background: radial-gradient(circle, red, blue);' create?",
+        "o": [
+            "Radial gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What color does '#00FF00' represent?",
+        "o": [
+            "Green",
+            "Red",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background-color: transparent;' do?",
+        "o": [
+            "Sets transparent background",
+            "Sets color",
+            "Removes image",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'opacity: 0.5;' do?",
+        "o": [
+            "Makes element semi-transparent",
+            "Makes element invisible",
+            "None",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "Which of these colors is not part of the primary colors?",
+        "o": [
+            "Yellow",
+            "Red",
+            "Blue",
+            "Orange"
+        ]
+    },
+    {
+        "q": "What does 'background: linear-gradient(to left, red, blue);' create?",
+        "o": [
+            "Horizontal gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What color does 'rgba(255, 255, 0, 0.5)' represent?",
+        "o": [
+            "Semi-transparent yellow",
+            "Opaque yellow",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: no-repeat;' do?",
+        "o": [
+            "No repeating",
+            "Repeats horizontally",
+            "Repeats vertically",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'color: #FFFFFF;' do?",
+        "o": [
+            "Sets text color to white",
+            "Sets background to white",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: hsl(240, 100%, 50%);' create?",
+        "o": [
+            "Blue background",
+            "Red background",
+            "None",
+            "Green background"
+        ]
+    },
+    {
+        "q": "What does 'background-position: center;' do?",
+        "o": [
+            "Centers image",
+            "Aligns to top left",
+            "Aligns to bottom right",
+            "Aligns to top right"
+        ]
+    },
+    {
+        "q": "What color does 'rgb(255, 255, 0)' represent?",
+        "o": [
+            "Yellow",
+            "Red",
+            "Blue",
+            "Green"
+        ]
+    },
+    {
+        "q": "What does 'background: #CCCCCC;' do?",
+        "o": [
+            "Sets background to light gray",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'color: #000000;' do?",
+        "o": [
+            "Sets text color to black",
+            "Sets background to black",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg) no-repeat center;' do?",
+        "o": [
+            "Centers image without repeat",
+            "Aligns to top left",
+            "Aligns to bottom right",
+            "Aligns to top right"
+        ]
+    },
+    {
+        "q": "What does 'background: linear-gradient(to right, red, blue);' create?",
+        "o": [
+            "Horizontal gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What color does 'rgba(0, 255, 0, 0.5)' represent?",
+        "o": [
+            "Semi-transparent green",
+            "Opaque green",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-clip: padding-box;' do?",
+        "o": [
+            "Sets background to padding area",
+            "Removes image",
+            "None",
+            "Adds color"
+        ]
+    },
+    {
+        "q": "What does 'background-size: 100%;' do?",
+        "o": [
+            "Sets size to full container",
+            "Covers container",
+            "None",
+            "Hides image"
+        ]
+    },
+    {
+        "q": "What does 'background: rgba(0, 0, 255, 0.5);' do?",
+        "o": [
+            "Semi-transparent blue",
+            "Opaque blue",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-image: linear-gradient(to right, red, blue);' create?",
+        "o": [
+            "Gradient background",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: inherit;' do?",
+        "o": [
+            "Inherits repeat value",
+            "No repeat",
+            "None",
+            "Removes image"
+        ]
+    },
+    {
+        "q": "What color does '#0000FF' represent?",
+        "o": [
+            "Blue",
+            "Red",
+            "Green",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background-position: 0 0;' do?",
+        "o": [
+            "Aligns to top left",
+            "Aligns to bottom right",
+            "Centers image",
+            "Aligns to top right"
+        ]
+    },
+    {
+        "q": "What does 'opacity: 0.75;' do?",
+        "o": [
+            "Makes element semi-transparent",
+            "Makes element invisible",
+            "None",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What does 'background: hsl(0, 100%, 50%);' create?",
+        "o": [
+            "Red background",
+            "Green background",
+            "None",
+            "Blue background"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.png) center;' do?",
+        "o": [
+            "Centers image",
+            "Aligns to top left",
+            "Aligns to bottom right",
+            "Aligns to top right"
+        ]
+    },
+    {
+        "q": "What does 'background-color: #FF0000;' do?",
+        "o": [
+            "Sets background to red",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: repeating-linear-gradient(to right, red, blue);' create?",
+        "o": [
+            "Repeating horizontal gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What does 'color: blue;' do?",
+        "o": [
+            "Sets text color to blue",
+            "Sets background to blue",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What color does '#FFFFFF' represent?",
+        "o": [
+            "White",
+            "Black",
+            "Gray",
+            "Red"
+        ]
+    },
+    {
+        "q": "What does 'background: transparent;' do?",
+        "o": [
+            "Sets transparent background",
+            "Sets color",
+            "Removes image",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'background: rgba(255, 255, 255, 0.5);' do?",
+        "o": [
+            "Semi-transparent white",
+            "Opaque white",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-size: 100px 100px;' do?",
+        "o": [
+            "Sets specific size",
+            "Covers background",
+            "None",
+            "Hides image"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg) repeat-y;' do?",
+        "o": [
+            "Repeats image vertically",
+            "Repeats image horizontally",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What color does 'rgba(0, 0, 255, 0.5)' represent?",
+        "o": [
+            "Semi-transparent blue",
+            "Opaque blue",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-attachment: fixed;' do?",
+        "o": [
+            "Fixes background during scrolling",
+            "No repeat",
+            "None",
+            "Removes image"
+        ]
+    },
+    {
+        "q": "What does 'background: rgb(0, 0, 0);' do?",
+        "o": [
+            "Sets background to black",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What color does 'hsl(0, 100%, 50%)' represent?",
+        "o": [
+            "Red",
+            "Green",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background: repeating-linear-gradient(to bottom, red, blue);' create?",
+        "o": [
+            "Repeating vertical gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What does 'color: rgba(255, 0, 0, 0.5);' do?",
+        "o": [
+            "Semi-transparent red",
+            "Opaque red",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: radial-gradient(circle, red, blue);' create?",
+        "o": [
+            "Radial gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What color does 'rgba(255, 255, 255, 0.5)' represent?",
+        "o": [
+            "Semi-transparent white",
+            "Opaque white",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-clip: border-box;' do?",
+        "o": [
+            "Sets background to border area",
+            "Removes image",
+            "None",
+            "Adds color"
+        ]
+    },
+    {
+        "q": "What does 'background: #FF0000;' do?",
+        "o": [
+            "Sets background to red",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What color does 'rgba(255, 0, 0, 1)' represent?",
+        "o": [
+            "Red",
+            "Green",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background-size: cover;' do?",
+        "o": [
+            "Covers background area",
+            "Sets specific size",
+            "None",
+            "Hides image"
+        ]
+    },
+    {
+        "q": "What does 'color: transparent;' do?",
+        "o": [
+            "Sets text color to transparent",
+            "Sets background to transparent",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg) repeat;' do?",
+        "o": [
+            "Repeats image both ways",
+            "Centers image",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'background-attachment: scroll;' do?",
+        "o": [
+            "Scrolls with the page",
+            "No repeat",
+            "None",
+            "Removes image"
+        ]
+    },
+    {
+        "q": "What does 'color: hsl(240, 100%, 50%);' do?",
+        "o": [
+            "Sets text color to blue",
+            "Sets background to blue",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: repeating-radial-gradient(circle, red, blue);' create?",
+        "o": [
+            "Repeating radial gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What does 'opacity: 1;' do?",
+        "o": [
+            "Makes element fully opaque",
+            "Makes element semi-transparent",
+            "None",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What color does 'rgba(255, 0, 255, 0.5)' represent?",
+        "o": [
+            "Semi-transparent magenta",
+            "Opaque magenta",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-position: right top;' do?",
+        "o": [
+            "Aligns to top right",
+            "Aligns to bottom right",
+            "Centers image",
+            "Aligns to top left"
+        ]
+    },
+    {
+        "q": "What color does 'hsl(120, 100%, 50%)' represent?",
+        "o": [
+            "Green",
+            "Red",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background: rgb(255, 255, 0);' do?",
+        "o": [
+            "Sets background to yellow",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg) fixed;' do?",
+        "o": [
+            "Fixes image during scrolling",
+            "No repeat",
+            "None",
+            "Removes image"
+        ]
+    },
+    {
+        "q": "What does 'background-size: contain;' do?",
+        "o": [
+            "Resizes background to fit",
+            "Sets specific size",
+            "None",
+            "Hides image"
+        ]
+    },
+    {
+        "q": "What does 'color: #FF00FF;' do?",
+        "o": [
+            "Sets text color to magenta",
+            "Sets background to magenta",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: repeat-x;' do?",
+        "o": [
+            "Repeats image horizontally",
+            "Repeats image vertically",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'background: repeating-linear-gradient(to left, red, blue);' create?",
+        "o": [
+            "Repeating horizontal gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What does 'background-attachment: local;' do?",
+        "o": [
+            "Scrolls with element",
+            "No repeat",
+            "None",
+            "Removes image"
+        ]
+    },
+    {
+        "q": "What color does 'rgba(128, 128, 128, 0.5)' represent?",
+        "o": [
+            "Semi-transparent gray",
+            "Opaque gray",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: rgb(0, 255, 255);' do?",
+        "o": [
+            "Sets background to cyan",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'color: hsl(120, 100%, 50%);' do?",
+        "o": [
+            "Sets text color to green",
+            "Sets background to green",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: repeating-radial-gradient(circle, blue, red);' create?",
+        "o": [
+            "Repeating radial gradient",
+            "Solid color",
+            "None",
+            "Image background"
+        ]
+    },
+    {
+        "q": "What color does 'hsl(240, 100%, 50%)' represent?",
+        "o": [
+            "Blue",
+            "Red",
+            "Green",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background-size: 50%;' do?",
+        "o": [
+            "Sets size to half container",
+            "Covers container",
+            "None",
+            "Hides image"
+        ]
+    },
+    {
+        "q": "What does 'color: rgba(0, 0, 0, 0.5);' do?",
+        "o": [
+            "Semi-transparent black",
+            "Opaque black",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg) no-repeat top;' do?",
+        "o": [
+            "Aligns to top without repeat",
+            "Aligns to bottom right",
+            "Centers image",
+            "Aligns to top right"
+        ]
+    },
+    {
+        "q": "What color does 'rgba(128, 0, 128, 0.5)' represent?",
+        "o": [
+            "Semi-transparent purple",
+            "Opaque purple",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: hsl(60, 100%, 50%);' create?",
+        "o": [
+            "Yellow background",
+            "Green background",
+            "None",
+            "Blue background"
+        ]
+    },
+    {
+        "q": "What does 'color: white;' do?",
+        "o": [
+            "Sets text color to white",
+            "Sets background to white",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What color does 'rgb(0, 0, 0)' represent?",
+        "o": [
+            "Black",
+            "White",
+            "Gray",
+            "Red"
+        ]
+    },
+    {
+        "q": "What does 'background: rgb(128, 128, 128);' do?",
+        "o": [
+            "Sets background to gray",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg) repeat-x;' do?",
+        "o": [
+            "Repeats image horizontally",
+            "Repeats image vertically",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What color does 'hsl(300, 100%, 50%)' represent?",
+        "o": [
+            "Magenta",
+            "Red",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background: rgba(255, 255, 255, 0.5);' do?",
+        "o": [
+            "Semi-transparent white",
+            "Opaque white",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg) repeat;' do?",
+        "o": [
+            "Repeats image both ways",
+            "Centers image",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'opacity: 0.5;' do?",
+        "o": [
+            "Makes element semi-transparent",
+            "Makes element fully opaque",
+            "None",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: no-repeat;' do?",
+        "o": [
+            "Prevents image repeat",
+            "Repeats image vertically",
+            "Repeats image horizontally",
+            "None"
+        ]
+    },
+    {
+        "q": "What color does 'rgb(255, 0, 0)' represent?",
+        "o": [
+            "Red",
+            "Green",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'color: #000000;' do?",
+        "o": [
+            "Sets text color to black",
+            "Sets background to black",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-position: center;' do?",
+        "o": [
+            "Aligns to center",
+            "Aligns to top left",
+            "Aligns to top right",
+            "Aligns to bottom left"
+        ]
+    },
+    {
+        "q": "What color does 'rgba(0, 255, 0, 0.5)' represent?",
+        "o": [
+            "Semi-transparent green",
+            "Opaque green",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg) top right;' do?",
+        "o": [
+            "Aligns to top right",
+            "Centers image",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'background: hsl(180, 100%, 50%);' do?",
+        "o": [
+            "Sets background to cyan",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What color does 'rgb(0, 255, 255)' represent?",
+        "o": [
+            "Cyan",
+            "Magenta",
+            "Yellow",
+            "Red"
+        ]
+    },
+    {
+        "q": "What does 'background: rgba(0, 0, 255, 0.5);' do?",
+        "o": [
+            "Semi-transparent blue",
+            "Opaque blue",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: repeat-y;' do?",
+        "o": [
+            "Repeats image vertically",
+            "Repeats image horizontally",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What color does 'hsl(60, 100%, 50%)' represent?",
+        "o": [
+            "Yellow",
+            "Green",
+            "Blue",
+            "Red"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg) no-repeat center;' do?",
+        "o": [
+            "Aligns to center without repeat",
+            "Aligns to top left",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'background-attachment: scroll;' do?",
+        "o": [
+            "Scrolls with page",
+            "No repeat",
+            "None",
+            "Removes image"
+        ]
+    },
+    {
+        "q": "What does 'color: #FFFFFF;' do?",
+        "o": [
+            "Sets text color to white",
+            "Sets background to white",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What color does 'rgba(0, 0, 255, 1)' represent?",
+        "o": [
+            "Opaque blue",
+            "Semi-transparent blue",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: transparent;' do?",
+        "o": [
+            "Sets background to transparent",
+            "Sets text color to transparent",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-position: left bottom;' do?",
+        "o": [
+            "Aligns to bottom left",
+            "Aligns to top right",
+            "Aligns to top left",
+            "Aligns to center"
+        ]
+    },
+    {
+        "q": "What color does 'hsl(30, 100%, 50%)' represent?",
+        "o": [
+            "Orange",
+            "Yellow",
+            "Red",
+            "Green"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg) no-repeat;' do?",
+        "o": [
+            "Prevents image repeat",
+            "Centers image",
+            "Repeats image vertically",
+            "Repeats image horizontally"
+        ]
+    },
+    {
+        "q": "What does 'background-attachment: inherit;' do?",
+        "o": [
+            "Inherits attachment from parent",
+            "No repeat",
+            "None",
+            "Removes image"
+        ]
+    },
+    {
+        "q": "What does 'color: transparent;' do?",
+        "o": [
+            "Sets text color to transparent",
+            "Sets background to transparent",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: hsl(0, 100%, 50%);' create?",
+        "o": [
+            "Red background",
+            "Green background",
+            "None",
+            "Blue background"
+        ]
+    },
+    {
+        "q": "What does 'background: rgba(0, 0, 0, 0.5);' do?",
+        "o": [
+            "Semi-transparent black",
+            "Opaque black",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What color does 'rgb(255, 255, 255)' represent?",
+        "o": [
+            "White",
+            "Black",
+            "Gray",
+            "Red"
+        ]
+    },
+    {
+        "q": "What does 'opacity: 0;' do?",
+        "o": [
+            "Makes element fully transparent",
+            "Makes element fully opaque",
+            "None",
+            "Sets color"
+        ]
+    },
+    {
+        "q": "What does 'background: hsl(180, 100%, 50%);' do?",
+        "o": [
+            "Sets background to cyan",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What color does 'rgba(0, 128, 0, 0.5)' represent?",
+        "o": [
+            "Semi-transparent green",
+            "Opaque green",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: repeat;' do?",
+        "o": [
+            "Repeats image both ways",
+            "Centers image",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg) center;' do?",
+        "o": [
+            "Centers image",
+            "Aligns to top left",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What color does 'hsl(360, 100%, 50%)' represent?",
+        "o": [
+            "Red",
+            "Blue",
+            "Green",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background: #0000FF;' do?",
+        "o": [
+            "Sets background to blue",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'color: hsl(300, 100%, 50%);' do?",
+        "o": [
+            "Sets text color to magenta",
+            "Sets background to magenta",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: rgba(128, 0, 128, 0.5);' do?",
+        "o": [
+            "Semi-transparent purple",
+            "Opaque purple",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background-attachment: initial;' do?",
+        "o": [
+            "Sets to default attachment",
+            "No repeat",
+            "None",
+            "Removes image"
+        ]
+    },
+    {
+        "q": "What does 'background: rgb(255, 0, 0);' do?",
+        "o": [
+            "Sets background to red",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What color does 'hsl(240, 100%, 50%)' represent?",
+        "o": [
+            "Blue",
+            "Red",
+            "Green",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'background: rgba(0, 0, 255, 0.5);' do?",
+        "o": [
+            "Semi-transparent blue",
+            "Opaque blue",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: url(image.jpg) center;' do?",
+        "o": [
+            "Centers image",
+            "Aligns to top left",
+            "No repeat",
+            "None"
+        ]
+    },
+    {
+        "q": "What does 'background-repeat: inherit;' do?",
+        "o": [
+            "Inherits repeat from parent",
+            "Repeats image vertically",
+            "Repeats image horizontally",
+            "None"
+        ]
+    },
+    {
+        "q": "What color does 'rgb(255, 0, 0)' represent?",
+        "o": [
+            "Red",
+            "Green",
+            "Blue",
+            "Yellow"
+        ]
+    },
+    {
+        "q": "What does 'color: hsl(60, 100%, 50%);' do?",
+        "o": [
+            "Sets text color to yellow",
+            "Sets background to yellow",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'background: #00FF00;' do?",
+        "o": [
+            "Sets background to green",
+            "Sets text color",
+            "None",
+            "Sets border color"
+        ]
+    },
+    {
+        "q": "What does 'opacity: 0.5;' do?",
+        "o": [
+            "Makes element semi-transparent",
+            "Makes element fully opaque",
+            "None",
+            "Sets color"
+        ]
+    }
+]

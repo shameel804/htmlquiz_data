@@ -1,0 +1,877 @@
+[
+    {
+        "token": "<div>",
+        "isValid": true,
+        "reason": "Valid block-level element"
+    },
+    {
+        "token": "<span>",
+        "isValid": true,
+        "reason": "Valid inline element"
+    },
+    {
+        "token": "<p>",
+        "isValid": true,
+        "reason": "Valid paragraph tag"
+    },
+    {
+        "token": "<h1>",
+        "isValid": true,
+        "reason": "Valid heading tag"
+    },
+    {
+        "token": "<br>",
+        "isValid": true,
+        "reason": "Valid self-closing line break"
+    },
+    {
+        "token": "<img>",
+        "isValid": true,
+        "reason": "Valid image element"
+    },
+    {
+        "token": "<a href=\"\">",
+        "isValid": true,
+        "reason": "Valid anchor with href"
+    },
+    {
+        "token": "<ul>",
+        "isValid": true,
+        "reason": "Valid unordered list"
+    },
+    {
+        "token": "<ol>",
+        "isValid": true,
+        "reason": "Valid ordered list"
+    },
+    {
+        "token": "<li>",
+        "isValid": true,
+        "reason": "Valid list item"
+    },
+    {
+        "token": "<table>",
+        "isValid": true,
+        "reason": "Valid table element"
+    },
+    {
+        "token": "<tr>",
+        "isValid": true,
+        "reason": "Valid table row"
+    },
+    {
+        "token": "<td>",
+        "isValid": true,
+        "reason": "Valid table data cell"
+    },
+    {
+        "token": "<th>",
+        "isValid": true,
+        "reason": "Valid table header cell"
+    },
+    {
+        "token": "<form>",
+        "isValid": true,
+        "reason": "Valid form element"
+    },
+    {
+        "token": "<input>",
+        "isValid": true,
+        "reason": "Valid input element"
+    },
+    {
+        "token": "<button>",
+        "isValid": true,
+        "reason": "Valid button element"
+    },
+    {
+        "token": "<textarea>",
+        "isValid": true,
+        "reason": "Valid textarea element"
+    },
+    {
+        "token": "<select>",
+        "isValid": true,
+        "reason": "Valid select dropdown"
+    },
+    {
+        "token": "<option>",
+        "isValid": true,
+        "reason": "Valid option element"
+    },
+    {
+        "token": "<!DOCTYPE html>",
+        "isValid": true,
+        "reason": "Valid HTML5 doctype"
+    },
+    {
+        "token": "<html>",
+        "isValid": true,
+        "reason": "Valid root element"
+    },
+    {
+        "token": "<head>",
+        "isValid": true,
+        "reason": "Valid head section"
+    },
+    {
+        "token": "<body>",
+        "isValid": true,
+        "reason": "Valid body section"
+    },
+    {
+        "token": "<title>",
+        "isValid": true,
+        "reason": "Valid title element"
+    },
+    {
+        "token": "<meta>",
+        "isValid": true,
+        "reason": "Valid metadata element"
+    },
+    {
+        "token": "<link>",
+        "isValid": true,
+        "reason": "Valid link element"
+    },
+    {
+        "token": "<style>",
+        "isValid": true,
+        "reason": "Valid inline style block"
+    },
+    {
+        "token": "<script>",
+        "isValid": true,
+        "reason": "Valid script element"
+    },
+    {
+        "token": "<nav>",
+        "isValid": true,
+        "reason": "Valid navigation element"
+    },
+    {
+        "token": "<header>",
+        "isValid": true,
+        "reason": "Valid header element"
+    },
+    {
+        "token": "<footer>",
+        "isValid": true,
+        "reason": "Valid footer element"
+    },
+    {
+        "token": "<section>",
+        "isValid": true,
+        "reason": "Valid section element"
+    },
+    {
+        "token": "<article>",
+        "isValid": true,
+        "reason": "Valid article element"
+    },
+    {
+        "token": "<aside>",
+        "isValid": true,
+        "reason": "Valid aside element"
+    },
+    {
+        "token": "<main>",
+        "isValid": true,
+        "reason": "Valid main content element"
+    },
+    {
+        "token": "<figure>",
+        "isValid": true,
+        "reason": "Valid figure element"
+    },
+    {
+        "token": "<figcaption>",
+        "isValid": true,
+        "reason": "Valid figure caption"
+    },
+    {
+        "token": "<details>",
+        "isValid": true,
+        "reason": "Valid disclosure widget"
+    },
+    {
+        "token": "<summary>",
+        "isValid": true,
+        "reason": "Valid summary element"
+    },
+    {
+        "token": "<mark>",
+        "isValid": true,
+        "reason": "Valid highlight element"
+    },
+    {
+        "token": "<time>",
+        "isValid": true,
+        "reason": "Valid time element"
+    },
+    {
+        "token": "<progress>",
+        "isValid": true,
+        "reason": "Valid progress bar"
+    },
+    {
+        "token": "<meter>",
+        "isValid": true,
+        "reason": "Valid meter element"
+    },
+    {
+        "token": "<canvas>",
+        "isValid": true,
+        "reason": "Valid drawing surface"
+    },
+    {
+        "token": "<video>",
+        "isValid": true,
+        "reason": "Valid video element"
+    },
+    {
+        "token": "<audio>",
+        "isValid": true,
+        "reason": "Valid audio element"
+    },
+    {
+        "token": "<source>",
+        "isValid": true,
+        "reason": "Valid media source"
+    },
+    {
+        "token": "<hr>",
+        "isValid": true,
+        "reason": "Valid horizontal rule"
+    },
+    {
+        "token": "<strong>",
+        "isValid": true,
+        "reason": "Valid strong emphasis"
+    },
+    {
+        "token": "<em>",
+        "isValid": true,
+        "reason": "Valid emphasis element"
+    },
+    {
+        "token": "<code>",
+        "isValid": true,
+        "reason": "Valid code element"
+    },
+    {
+        "token": "<pre>",
+        "isValid": true,
+        "reason": "Valid preformatted text"
+    },
+    {
+        "token": "<blockquote>",
+        "isValid": true,
+        "reason": "Valid block quotation"
+    },
+    {
+        "token": "<abbr>",
+        "isValid": true,
+        "reason": "Valid abbreviation tag"
+    },
+    {
+        "token": "<cite>",
+        "isValid": true,
+        "reason": "Valid citation element"
+    },
+    {
+        "token": "<sub>",
+        "isValid": true,
+        "reason": "Valid subscript element"
+    },
+    {
+        "token": "<sup>",
+        "isValid": true,
+        "reason": "Valid superscript element"
+    },
+    {
+        "token": "&amp;",
+        "isValid": true,
+        "reason": "Valid ampersand entity"
+    },
+    {
+        "token": "&lt;",
+        "isValid": true,
+        "reason": "Valid less-than entity"
+    },
+    {
+        "token": "&gt;",
+        "isValid": true,
+        "reason": "Valid greater-than entity"
+    },
+    {
+        "token": "&nbsp;",
+        "isValid": true,
+        "reason": "Valid non-breaking space"
+    },
+    {
+        "token": "id=\"main\"",
+        "isValid": true,
+        "reason": "Valid id attribute"
+    },
+    {
+        "token": "class=\"box\"",
+        "isValid": true,
+        "reason": "Valid class attribute"
+    },
+    {
+        "token": "data-id=\"5\"",
+        "isValid": true,
+        "reason": "Valid custom data attribute"
+    },
+    {
+        "token": "aria-label=\"X\"",
+        "isValid": true,
+        "reason": "Valid ARIA attribute"
+    },
+    {
+        "token": "role=\"banner\"",
+        "isValid": true,
+        "reason": "Valid ARIA role"
+    },
+    {
+        "token": "<dl>",
+        "isValid": true,
+        "reason": "Valid description list"
+    },
+    {
+        "token": "<dt>",
+        "isValid": true,
+        "reason": "Valid description term"
+    },
+    {
+        "token": "<dd>",
+        "isValid": true,
+        "reason": "Valid description detail"
+    },
+    {
+        "token": "<fieldset>",
+        "isValid": true,
+        "reason": "Valid fieldset element"
+    },
+    {
+        "token": "<legend>",
+        "isValid": true,
+        "reason": "Valid legend element"
+    },
+    {
+        "token": "<label>",
+        "isValid": true,
+        "reason": "Valid label element"
+    },
+    {
+        "token": "<output>",
+        "isValid": true,
+        "reason": "Valid output element"
+    },
+    {
+        "token": "<dialog>",
+        "isValid": true,
+        "reason": "Valid dialog element"
+    },
+    {
+        "token": "<dic>",
+        "isValid": false,
+        "reason": "Typo: should be <div>"
+    },
+    {
+        "token": "<dvi>",
+        "isValid": false,
+        "reason": "Typo: should be <div>"
+    },
+    {
+        "token": "<spn>",
+        "isValid": false,
+        "reason": "Typo: should be <span>"
+    },
+    {
+        "token": "<para>",
+        "isValid": false,
+        "reason": "Not valid: use <p> instead"
+    },
+    {
+        "token": "<heading>",
+        "isValid": false,
+        "reason": "Not valid: use <h1>–<h6>"
+    },
+    {
+        "token": "<image>",
+        "isValid": false,
+        "reason": "Not valid: use <img>"
+    },
+    {
+        "token": "<anchor>",
+        "isValid": false,
+        "reason": "Not valid: use <a>"
+    },
+    {
+        "token": "<bold>",
+        "isValid": false,
+        "reason": "Not valid: use <b> or <strong>"
+    },
+    {
+        "token": "<italic>",
+        "isValid": false,
+        "reason": "Not valid: use <i> or <em>"
+    },
+    {
+        "token": "<list>",
+        "isValid": false,
+        "reason": "Not valid: use <ul> or <ol>"
+    },
+    {
+        "token": "<item>",
+        "isValid": false,
+        "reason": "Not valid: use <li>"
+    },
+    {
+        "token": "<text>",
+        "isValid": false,
+        "reason": "Not a valid HTML element"
+    },
+    {
+        "token": "<container>",
+        "isValid": false,
+        "reason": "Not valid: use <div>"
+    },
+    {
+        "token": "<box>",
+        "isValid": false,
+        "reason": "Not a valid HTML element"
+    },
+    {
+        "token": "<center>",
+        "isValid": false,
+        "reason": "Deprecated: use CSS instead"
+    },
+    {
+        "token": "<font>",
+        "isValid": false,
+        "reason": "Deprecated: use CSS instead"
+    },
+    {
+        "token": "<marquee>",
+        "isValid": false,
+        "reason": "Deprecated and non-standard"
+    },
+    {
+        "token": "<blink>",
+        "isValid": false,
+        "reason": "Non-standard and removed"
+    },
+    {
+        "token": "<frame>",
+        "isValid": false,
+        "reason": "Removed in HTML5"
+    },
+    {
+        "token": "<frameset>",
+        "isValid": false,
+        "reason": "Removed in HTML5"
+    },
+    {
+        "token": "<?xml?>",
+        "isValid": false,
+        "reason": "XML declaration, not HTML"
+    },
+    {
+        "token": "<%=%>",
+        "isValid": false,
+        "reason": "Server-side syntax, not HTML"
+    },
+    {
+        "token": "<div/>",
+        "isValid": false,
+        "reason": "div is not self-closing"
+    },
+    {
+        "token": "<p/>",
+        "isValid": false,
+        "reason": "p is not self-closing in HTML"
+    },
+    {
+        "token": "<div></div>",
+        "isValid": true,
+        "reason": "Valid opening and closing"
+    },
+    {
+        "token": "< div>",
+        "isValid": false,
+        "reason": "No space after < allowed"
+    },
+    {
+        "token": "<DIV >",
+        "isValid": false,
+        "reason": "Uppercase tags are bad practice"
+    },
+    {
+        "token": "<div class=>",
+        "isValid": false,
+        "reason": "Missing attribute value"
+    },
+    {
+        "token": "class=box",
+        "isValid": false,
+        "reason": "Missing quotes around value"
+    },
+    {
+        "token": "<img src=\"\">",
+        "isValid": true,
+        "reason": "Valid img with src"
+    },
+    {
+        "token": "<br/>",
+        "isValid": true,
+        "reason": "Valid XHTML-style line break"
+    },
+    {
+        "token": "<input/>",
+        "isValid": true,
+        "reason": "Valid XHTML-style input"
+    },
+    {
+        "token": "<div class\"x\">",
+        "isValid": false,
+        "reason": "Missing = in attribute"
+    },
+    {
+        "token": "<a hrf=\"\">",
+        "isValid": false,
+        "reason": "Typo: should be href"
+    },
+    {
+        "token": "<img scr=\"\">",
+        "isValid": false,
+        "reason": "Typo: should be src"
+    },
+    {
+        "token": "onclick=\"\"",
+        "isValid": true,
+        "reason": "Valid event attribute"
+    },
+    {
+        "token": "onhover=\"\"",
+        "isValid": false,
+        "reason": "Not valid: use onmouseover"
+    },
+    {
+        "token": "onClick=\"\"",
+        "isValid": false,
+        "reason": "HTML attrs are lowercase"
+    },
+    {
+        "token": "className=\"x\"",
+        "isValid": false,
+        "reason": "JSX syntax, not HTML"
+    },
+    {
+        "token": "htmlFor=\"x\"",
+        "isValid": false,
+        "reason": "JSX syntax, not HTML"
+    },
+    {
+        "token": "{style}",
+        "isValid": false,
+        "reason": "JSX expression, not HTML"
+    },
+    {
+        "token": "v-if=\"show\"",
+        "isValid": false,
+        "reason": "Vue.js directive, not HTML"
+    },
+    {
+        "token": "v-for=\"x\"",
+        "isValid": false,
+        "reason": "Vue.js directive, not HTML"
+    },
+    {
+        "token": "*ngIf=\"x\"",
+        "isValid": false,
+        "reason": "Angular directive, not HTML"
+    },
+    {
+        "token": "*ngFor=\"x\"",
+        "isValid": false,
+        "reason": "Angular directive, not HTML"
+    },
+    {
+        "token": "[(ngModel)]",
+        "isValid": false,
+        "reason": "Angular binding, not HTML"
+    },
+    {
+        "token": "{{title}}",
+        "isValid": false,
+        "reason": "Template syntax, not HTML"
+    },
+    {
+        "token": "<Fragment>",
+        "isValid": false,
+        "reason": "React component, not HTML"
+    },
+    {
+        "token": "<></>",
+        "isValid": false,
+        "reason": "JSX fragment, not HTML"
+    },
+    {
+        "token": "dangerouslySet",
+        "isValid": false,
+        "reason": "React prop, not HTML"
+    },
+    {
+        "token": "<router-link>",
+        "isValid": false,
+        "reason": "Vue component, not HTML"
+    },
+    {
+        "token": "<template>",
+        "isValid": true,
+        "reason": "Valid HTML template element"
+    },
+    {
+        "token": "<slot>",
+        "isValid": true,
+        "reason": "Valid Web Components slot"
+    },
+    {
+        "token": "<picture>",
+        "isValid": true,
+        "reason": "Valid responsive image wrapper"
+    },
+    {
+        "token": "hidden",
+        "isValid": true,
+        "reason": "Valid boolean attribute"
+    },
+    {
+        "token": "disabled",
+        "isValid": true,
+        "reason": "Valid boolean attribute"
+    },
+    {
+        "token": "required",
+        "isValid": true,
+        "reason": "Valid form attribute"
+    },
+    {
+        "token": "readonly",
+        "isValid": true,
+        "reason": "Valid input attribute"
+    },
+    {
+        "token": "checked",
+        "isValid": true,
+        "reason": "Valid checkbox attribute"
+    },
+    {
+        "token": "autofocus",
+        "isValid": true,
+        "reason": "Valid focus attribute"
+    },
+    {
+        "token": "placeholder=\"\"",
+        "isValid": true,
+        "reason": "Valid input placeholder"
+    },
+    {
+        "token": "<!-- comment -->",
+        "isValid": true,
+        "reason": "Valid HTML comment"
+    },
+    {
+        "token": "// comment",
+        "isValid": false,
+        "reason": "JS comment, not HTML"
+    },
+    {
+        "token": "# heading",
+        "isValid": false,
+        "reason": "Markdown syntax, not HTML"
+    },
+    {
+        "token": "**bold**",
+        "isValid": false,
+        "reason": "Markdown syntax, not HTML"
+    },
+    {
+        "token": "<? php ?>",
+        "isValid": false,
+        "reason": "PHP syntax, not HTML"
+    },
+    {
+        "token": "def render():",
+        "isValid": false,
+        "reason": "Python syntax, not HTML"
+    },
+    {
+        "token": "System.out",
+        "isValid": false,
+        "reason": "Java syntax, not HTML"
+    },
+    {
+        "token": "console.log()",
+        "isValid": false,
+        "reason": "JavaScript, not HTML"
+    },
+    {
+        "token": "print(\"hi\")",
+        "isValid": false,
+        "reason": "Python syntax, not HTML"
+    },
+    {
+        "token": "<self-closing>",
+        "isValid": false,
+        "reason": "Not a standard HTML tag"
+    },
+    {
+        "token": "<custom-el>",
+        "isValid": true,
+        "reason": "Valid custom element name"
+    },
+    {
+        "token": "<my-widget>",
+        "isValid": true,
+        "reason": "Valid custom element name"
+    },
+    {
+        "token": "<myWidget>",
+        "isValid": false,
+        "reason": "Custom elements need a dash"
+    },
+    {
+        "token": "<123tag>",
+        "isValid": false,
+        "reason": "Tags cannot start with number"
+    },
+    {
+        "token": "<_hidden>",
+        "isValid": false,
+        "reason": "Tags cannot start with _"
+    },
+    {
+        "token": "&copy;",
+        "isValid": true,
+        "reason": "Valid copyright entity"
+    },
+    {
+        "token": "&hearts;",
+        "isValid": true,
+        "reason": "Valid heart symbol entity"
+    },
+    {
+        "token": "&#60;",
+        "isValid": true,
+        "reason": "Valid numeric char reference"
+    },
+    {
+        "token": "&#x3C;",
+        "isValid": true,
+        "reason": "Valid hex char reference"
+    },
+    {
+        "token": "&fake;",
+        "isValid": false,
+        "reason": "Not a valid named entity"
+    },
+    {
+        "token": "&;",
+        "isValid": false,
+        "reason": "Empty entity reference"
+    },
+    {
+        "token": "&no-semi",
+        "isValid": false,
+        "reason": "Missing semicolon in entity"
+    },
+    {
+        "token": "tabindex=\"0\"",
+        "isValid": true,
+        "reason": "Valid tabindex attribute"
+    },
+    {
+        "token": "contenteditable",
+        "isValid": true,
+        "reason": "Valid editable attribute"
+    },
+    {
+        "token": "draggable",
+        "isValid": true,
+        "reason": "Valid drag attribute"
+    },
+    {
+        "token": "spellcheck",
+        "isValid": true,
+        "reason": "Valid spellcheck attribute"
+    },
+    {
+        "token": "translate",
+        "isValid": true,
+        "reason": "Valid translate attribute"
+    },
+    {
+        "token": "<wbr>",
+        "isValid": true,
+        "reason": "Valid word break opportunity"
+    },
+    {
+        "token": "<datalist>",
+        "isValid": true,
+        "reason": "Valid datalist element"
+    },
+    {
+        "token": "colspan=\"2\"",
+        "isValid": true,
+        "reason": "Valid table cell attribute"
+    },
+    {
+        "token": "rowspan=\"3\"",
+        "isValid": true,
+        "reason": "Valid table cell attribute"
+    },
+    {
+        "token": "<!DOCTYPE>",
+        "isValid": false,
+        "reason": "Missing html after DOCTYPE"
+    },
+    {
+        "token": "<DOCTYPE html>",
+        "isValid": false,
+        "reason": "Missing ! in doctype"
+    },
+    {
+        "token": "<head></body>",
+        "isValid": false,
+        "reason": "Mismatched closing tag"
+    },
+    {
+        "token": "<div><span>",
+        "isValid": false,
+        "reason": "Missing closing tags"
+    },
+    {
+        "token": "<ul><div>",
+        "isValid": false,
+        "reason": "div not valid inside ul"
+    },
+    {
+        "token": "<p><p>",
+        "isValid": false,
+        "reason": "p cannot nest inside p"
+    },
+    {
+        "token": "<a><a>",
+        "isValid": false,
+        "reason": "a cannot nest inside a"
+    },
+    {
+        "token": "style=\"color\"",
+        "isValid": false,
+        "reason": "Missing colon and value"
+    }
+]

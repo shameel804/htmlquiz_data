@@ -1,0 +1,3824 @@
+[
+    {
+        "q": "What does this code change on hover?",
+        "l": "css",
+        "c": "a:hover {\n    color: blue;\n}",
+        "o": [
+            "Text color to blue",
+            "Font size",
+            "Background color",
+            "Text decoration"
+        ]
+    },
+    {
+        "q": "What does :hover do?",
+        "o": [
+            "Styles on hover",
+            "Styles on click",
+            "Styles on focus",
+            "Styles on load"
+        ]
+    },
+    {
+        "q": "What element does :first-child select?",
+        "l": "css",
+        "c": "ul > li:first-child {\n    font-weight: bold;\n}",
+        "o": [
+            "First li in ul",
+            "Last li in ul",
+            "All li",
+            "First ul"
+        ]
+    },
+    {
+        "q": "Which pseudo-class selects the first child?",
+        "o": [
+            ":first-child",
+            ":first",
+            ":nth-child(1)",
+            ":nth"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "p::before {\n    content: 'Note: ';\n}",
+        "o": [
+            "Adds 'Note: ' before p",
+            "Removes text from p",
+            "Styles p",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "::before is used for what?",
+        "o": [
+            "Insert content before",
+            "Insert content after",
+            "Remove content",
+            "Style text"
+        ]
+    },
+    {
+        "q": "What does this style apply to?",
+        "l": "css",
+        "c": "li:hover {\n    background-color: yellow;\n}",
+        "o": [
+            "Hovered list items",
+            "All list items",
+            "Active list items",
+            "First list item"
+        ]
+    },
+    {
+        "q": "::after is used for what?",
+        "o": [
+            "Insert content after",
+            "Insert content before",
+            "Remove content",
+            "Style text"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "h1::after {\n    content: ' !';\n}",
+        "o": [
+            "Adds '!' after h1",
+            "Removes content",
+            "Styles h1",
+            "Changes font"
+        ]
+    },
+    {
+        "q": "What pseudo-class changes styles when an element is focused?",
+        "o": [
+            ":focus",
+            ":hover",
+            ":active",
+            ":visited"
+        ]
+    },
+    {
+        "q": "What does :nth-child(2) select?",
+        "l": "css",
+        "c": "p:nth-child(2) {\n    color: red;\n}",
+        "o": [
+            "Second p in parent",
+            "First p",
+            "Last p",
+            "All p"
+        ]
+    },
+    {
+        "q": "Which pseudo-class targets links that have been visited?",
+        "o": [
+            ":visited",
+            ":hover",
+            ":focus",
+            ":active"
+        ]
+    },
+    {
+        "q": "What happens when an element is focused?",
+        "l": "css",
+        "c": "input:focus {\n    border: 2px solid green;\n}",
+        "o": [
+            "Green border",
+            "Red border",
+            "No border",
+            "Background changes"
+        ]
+    },
+    {
+        "q": "What does :active represent?",
+        "o": [
+            "Element being clicked",
+            "Element hovered",
+            "Element focused",
+            "Element visited"
+        ]
+    },
+    {
+        "q": "What does this selector target?",
+        "l": "css",
+        "c": "a:visited {\n    color: purple;\n}",
+        "o": [
+            "Visited links",
+            "Hovered links",
+            "Active links",
+            "All links"
+        ]
+    },
+    {
+        "q": "Which selector is used for the first child of a parent?",
+        "o": [
+            ":first-child",
+            ":first",
+            ":nth-child(1)",
+            ":last-child"
+        ]
+    },
+    {
+        "q": "What does ::first-line style?",
+        "l": "css",
+        "c": "p::first-line {\n    font-weight: bold;\n}",
+        "o": [
+            "First line of p",
+            "Last line",
+            "All lines",
+            "First word"
+        ]
+    },
+    {
+        "q": "Which pseudo-element can style the first line of text?",
+        "o": [
+            "::first-line",
+            "::first",
+            "::line",
+            "::text"
+        ]
+    },
+    {
+        "q": "What effect does this code create?",
+        "l": "css",
+        "c": "button:active {\n    background-color: grey;\n}",
+        "o": [
+            "Grey background when active",
+            "Normal background",
+            "Font change",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property changes on :hover?",
+        "o": [
+            "Background-color",
+            "Font-size",
+            "Margin",
+            "Padding"
+        ]
+    },
+    {
+        "q": "What does this selector do?",
+        "l": "css",
+        "c": "input:disabled {\n    opacity: 0.5;\n}",
+        "o": [
+            "Styles disabled inputs",
+            "Styles enabled inputs",
+            "Styles all inputs",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What can ::before and ::after contain?",
+        "o": [
+            "Content",
+            "Images",
+            "Links",
+            "Styles"
+        ]
+    },
+    {
+        "q": "What does :not(.active) select?",
+        "l": "css",
+        "c": "li:not(.active) {\n    color: grey;\n}",
+        "o": [
+            "Non-active li",
+            "Active li",
+            "All li",
+            "First li"
+        ]
+    },
+    {
+        "q": "Can :hover be applied to non-interactive elements?",
+        "o": [
+            "Yes",
+            "No",
+            "Only to links",
+            "Only to buttons"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div::before {\n    content: 'Start';\n}",
+        "o": [
+            "Adds 'Start' before div",
+            "Removes content",
+            "Styles div",
+            "Adds a class"
+        ]
+    },
+    {
+        "q": "What is the default value for the content property in ::before?",
+        "o": [
+            "None",
+            "Empty",
+            "Initial",
+            "Block"
+        ]
+    },
+    {
+        "q": "What does :last-child select?",
+        "l": "css",
+        "c": "ul > li:last-child {\n    color: blue;\n}",
+        "o": [
+            "Last li in ul",
+            "First li in ul",
+            "All li",
+            "Second li"
+        ]
+    },
+    {
+        "q": "Which pseudo-class applies styles when an element is active?",
+        "o": [
+            ":active",
+            ":hover",
+            ":focus",
+            ":disabled"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "h2:focus {\n    outline: none;\n}",
+        "o": [
+            "No outline on focus",
+            "Red outline",
+            "Green outline",
+            "All h2"
+        ]
+    },
+    {
+        "q": "Which property is often used with :hover?",
+        "o": [
+            "color",
+            "display",
+            "float",
+            "clear"
+        ]
+    },
+    {
+        "q": "What does this style do?",
+        "l": "css",
+        "c": "input::placeholder {\n    color: grey;\n}",
+        "o": [
+            "Styles placeholder text",
+            "Styles input text",
+            "Removes placeholder",
+            "Changes border"
+        ]
+    },
+    {
+        "q": "Which pseudo-class styles the first child element?",
+        "o": [
+            ":first-child",
+            ":last-child",
+            ":nth-child",
+            ":nth-last-child"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "li:nth-of-type(3) {\n    font-size: 20px;\n}",
+        "o": [
+            "Third li in type",
+            "All li",
+            "Second li",
+            "Last li"
+        ]
+    },
+    {
+        "q": "What does ::after add to an element?",
+        "o": [
+            "Content after",
+            "Content before",
+            "Styles",
+            "Attributes"
+        ]
+    },
+    {
+        "q": "What does this selector target?",
+        "l": "css",
+        "c": "p:hover {\n    background-color: lightblue;\n}",
+        "o": [
+            "Hovered p",
+            "All p",
+            "Focused p",
+            "Active p"
+        ]
+    },
+    {
+        "q": "Can :hover be used on a div?",
+        "o": [
+            "Yes",
+            "No",
+            "Only on links",
+            "Only on buttons"
+        ]
+    },
+    {
+        "q": "What is the effect of this code?",
+        "l": "css",
+        "c": "a::before {\n    content: 'Link: ';\n}",
+        "o": [
+            "Adds 'Link: ' before anchor",
+            "Removes text",
+            "Styles anchor",
+            "Changes color"
+        ]
+    },
+    {
+        "q": "Which pseudo-element can style the first letter of a text block?",
+        "o": [
+            "::first-letter",
+            "::first-line",
+            "::letter",
+            "::text"
+        ]
+    },
+    {
+        "q": "What does this style do?",
+        "l": "css",
+        "c": "span:empty {\n    display: none;\n}",
+        "o": [
+            "Hides empty spans",
+            "Hides all spans",
+            "Styles spans",
+            "Adds content"
+        ]
+    },
+    {
+        "q": "What does :nth-child(n) select?",
+        "o": [
+            "Nth child of a parent",
+            "All children",
+            "First child",
+            "Last child"
+        ]
+    },
+    {
+        "q": "What does :nth-last-child(2) select?",
+        "l": "css",
+        "c": "div:nth-last-child(2) {\n    background: yellow;\n}",
+        "o": [
+            "Second last div",
+            "Last div",
+            "All div",
+            "First div"
+        ]
+    },
+    {
+        "q": "What type of content can you insert with ::before?",
+        "o": [
+            "Text",
+            "Images",
+            "Both",
+            "None"
+        ]
+    },
+    {
+        "q": "What happens when this code is applied?",
+        "l": "css",
+        "c": "input:checked {\n    background-color: green;\n}",
+        "o": [
+            "Checked inputs turn green",
+            "All inputs turn green",
+            "No effect",
+            "Unchecked inputs turn red"
+        ]
+    },
+    {
+        "q": "Which pseudo-class represents an element being hovered?",
+        "o": [
+            ":hover",
+            ":active",
+            ":focus",
+            ":visited"
+        ]
+    },
+    {
+        "q": "What does this selector target?",
+        "l": "css",
+        "c": "h3:first-of-type {\n    color: red;\n}",
+        "o": [
+            "First h3 in parent",
+            "Last h3",
+            "All h3",
+            "Second h3"
+        ]
+    },
+    {
+        "q": "Which property changes when hovering over a button?",
+        "o": [
+            "background-color",
+            "position",
+            "visibility",
+            "opacity"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "input:focus-visible {\n    outline: 2px solid blue;\n}",
+        "o": [
+            "Blue outline on keyboard focus",
+            "Normal outline",
+            "No outline",
+            "All input focused"
+        ]
+    },
+    {
+        "q": "Which selector targets only the last child?",
+        "o": [
+            ":last-child",
+            ":nth-last-child",
+            ":first-child",
+            ":nth"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "p:last-of-type {\n    color: orange;\n}",
+        "o": [
+            "Last p in parent",
+            "First p",
+            "All p",
+            "Second p"
+        ]
+    },
+    {
+        "q": "What does :not() do?",
+        "o": [
+            "Negates a selection",
+            "Selects all",
+            "Selects children",
+            "Selects parents"
+        ]
+    },
+    {
+        "q": "What does this selector do?",
+        "l": "css",
+        "c": "button:hover {\n    background: green;\n}",
+        "o": [
+            "Green background on hover",
+            "Red background",
+            "No effect",
+            "Change text color"
+        ]
+    },
+    {
+        "q": "What does the content property do in ::before?",
+        "o": [
+            "Defines inserted content",
+            "Hides content",
+            "Changes color",
+            "Changes size"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "p::after {\n    content: ' - End';\n}",
+        "o": [
+            "Adds ' - End' after p",
+            "Removes content",
+            "Styles p",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "What pseudo-class selects even children?",
+        "o": [
+            ":nth-child(even)",
+            ":nth-child(odd)",
+            ":first-child",
+            ":last-child"
+        ]
+    },
+    {
+        "q": "What does :not(:hover) select?",
+        "l": "css",
+        "c": "a:not(:hover) {\n    color: grey;\n}",
+        "o": [
+            "Non-hovered anchors",
+            "Hovered anchors",
+            "All anchors",
+            "Active anchors"
+        ]
+    },
+    {
+        "q": "What happens on :focus?",
+        "o": [
+            "Element gains focus",
+            "Element is clicked",
+            "Element is hovered",
+            "Element is active"
+        ]
+    },
+    {
+        "q": "What does :nth-of-type(odd) select?",
+        "l": "css",
+        "c": "li:nth-of-type(odd) {\n    background-color: lightgrey;\n}",
+        "o": [
+            "Odd li",
+            "Even li",
+            "All li",
+            "First li"
+        ]
+    },
+    {
+        "q": "Which pseudo-class is used for links that are not visited?",
+        "o": [
+            ":link",
+            ":hover",
+            ":visited",
+            ":focus"
+        ]
+    },
+    {
+        "q": "What does this style apply to?",
+        "l": "css",
+        "c": "div:focus {\n    border: 2px solid red;\n}",
+        "o": [
+            "Focused div",
+            "All div",
+            "Active div",
+            "Last div"
+        ]
+    },
+    {
+        "q": "What type of elements can ::before and ::after be applied to?",
+        "o": [
+            "Block elements",
+            "Inline elements",
+            "Both",
+            "Only block"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "h2:first-child {\n    color: green;\n}",
+        "o": [
+            "First h2 in parent",
+            "Last h2",
+            "All h2",
+            "Second h2"
+        ]
+    },
+    {
+        "q": "What is the default display value of ::before and ::after?",
+        "o": [
+            "Inline",
+            "Block",
+            "Flex",
+            "None"
+        ]
+    },
+    {
+        "q": "What does :not(:active) select?",
+        "l": "css",
+        "c": "button:not(:active) {\n    opacity: 0.5;\n}",
+        "o": [
+            "Non-active buttons",
+            "Active buttons",
+            "All buttons",
+            "Disabled buttons"
+        ]
+    },
+    {
+        "q": "Which pseudo-class affects an element when it is being interacted with?",
+        "o": [
+            ":active",
+            ":focus",
+            ":hover",
+            ":visited"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "p::first-letter {\n    font-size: 2em;\n}",
+        "o": [
+            "Styles first letter of p",
+            "Styles last letter",
+            "Styles all letters",
+            "Adds content"
+        ]
+    },
+    {
+        "q": "What can be styled with :first-child?",
+        "o": [
+            "Only the first child",
+            "All children",
+            "First of type",
+            "Last child"
+        ]
+    },
+    {
+        "q": "What does :nth-last-of-type(odd) select?",
+        "l": "css",
+        "c": "li:nth-last-of-type(odd) {\n    color: red;\n}",
+        "o": [
+            "Odd last li",
+            "Even last li",
+            "All li",
+            "First li"
+        ]
+    },
+    {
+        "q": "What is the syntax for the hover pseudo-class?",
+        "o": [
+            ":hover",
+            "hover:",
+            "hover()",
+            ".hover"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "input:enabled {\n    background-color: white;\n}",
+        "o": [
+            "Enabled inputs",
+            "Disabled inputs",
+            "All inputs",
+            "Checked inputs"
+        ]
+    },
+    {
+        "q": "What does ::first-line style?",
+        "o": [
+            "First line of text",
+            "Last line of text",
+            "All lines",
+            "Paragraph"
+        ]
+    },
+    {
+        "q": "What does this selector do?",
+        "l": "css",
+        "c": "h2:hover {\n    text-decoration: underline;\n}",
+        "o": [
+            "Underlines on hover",
+            "Removes underline",
+            "Changes color",
+            "No effect"
+        ]
+    },
+    {
+        "q": "How do you make an element change color on hover?",
+        "o": [
+            "element:hover { color: red; }",
+            "element.hover { color: red; }",
+            "element:hover: { color: red; }",
+            "element:active { color: red; }"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "p:target {\n    display: block;\n}",
+        "o": [
+            "Shows targeted p",
+            "Hides all p",
+            "Styles p",
+            "Changes color"
+        ]
+    },
+    {
+        "q": "What is an example of a pseudo-element?",
+        "o": [
+            "::before",
+            ":hover",
+            ":first-child",
+            ":active"
+        ]
+    },
+    {
+        "q": "What does ::before do?",
+        "l": "css",
+        "c": "span::before {\n    content: '*';\n}",
+        "o": [
+            "Adds '*' before span",
+            "Removes content",
+            "Styles span",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "Can ::before create a bullet point?",
+        "o": [
+            "Yes",
+            "No",
+            "Only with list items",
+            "Only with images"
+        ]
+    },
+    {
+        "q": "What does :nth-child(3n) select?",
+        "l": "css",
+        "c": "li:nth-child(3n) {\n    color: blue;\n}",
+        "o": [
+            "Every third li",
+            "First li",
+            "Last li",
+            "All li"
+        ]
+    },
+    {
+        "q": "Which pseudo-class applies to links during mouse-over?",
+        "o": [
+            ":hover",
+            ":active",
+            ":focus",
+            ":link"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "div:focus-within {\n    border: 1px solid black;\n}",
+        "o": [
+            "Div with focused child",
+            "All div",
+            "Active div",
+            "Last div"
+        ]
+    },
+    {
+        "q": "What is the purpose of :disabled?",
+        "o": [
+            "Styles disabled elements",
+            "Styles active elements",
+            "Styles hovered elements",
+            "Styles visited links"
+        ]
+    },
+    {
+        "q": "What does :hover select?",
+        "l": "css",
+        "c": "a:hover {\n    color: red;\n}",
+        "o": [
+            "Hovered links",
+            "All links",
+            "Visited links",
+            "Active links"
+        ]
+    },
+    {
+        "q": "Can you use :hover on images?",
+        "o": [
+            "Yes",
+            "No",
+            "Only on links",
+            "Only on buttons"
+        ]
+    },
+    {
+        "q": "What does this selector target?",
+        "l": "css",
+        "c": "h3::first-letter {\n    font-size: 1.5em;\n}",
+        "o": [
+            "First letter of h3",
+            "All letters",
+            "First h3",
+            "Last h3"
+        ]
+    },
+    {
+        "q": "What is the main function of ::after?",
+        "o": [
+            "Append content",
+            "Remove content",
+            "Style text",
+            "Resize element"
+        ]
+    },
+    {
+        "q": "What does this style do?",
+        "l": "css",
+        "c": "input:required {\n    border: 1px solid blue;\n}",
+        "o": [
+            "Required inputs",
+            "Optional inputs",
+            "All inputs",
+            "Disabled inputs"
+        ]
+    },
+    {
+        "q": "What is the syntax for the first-child pseudo-class?",
+        "o": [
+            ":first-child",
+            ":firstChild",
+            ":nth-child(1)",
+            ":last-child"
+        ]
+    },
+    {
+        "q": "What does :last-of-type select?",
+        "l": "css",
+        "c": "div:last-of-type {\n    display: none;\n}",
+        "o": [
+            "Hides last div",
+            "Hides all div",
+            "Styles div",
+            "Changes color"
+        ]
+    },
+    {
+        "q": "Which pseudo-class is for even indexed children?",
+        "o": [
+            ":nth-child(even)",
+            ":nth-child(odd)",
+            ":first-child",
+            ":last-child"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "h1:focus {\n    color: green;\n}",
+        "o": [
+            "Green on focus",
+            "Red on focus",
+            "No effect",
+            "All h1"
+        ]
+    },
+    {
+        "q": "What pseudo-class is applied when an element is active?",
+        "o": [
+            ":active",
+            ":hover",
+            ":focus",
+            ":disabled"
+        ]
+    },
+    {
+        "q": "What does ::marker style?",
+        "l": "css",
+        "c": "li::marker {\n    color: red;\n}",
+        "o": [
+            "Styles list item marker",
+            "Styles list item",
+            "Styles all li",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property is commonly changed with :hover?",
+        "o": [
+            "color",
+            "display",
+            "font-weight",
+            "margin"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "a:active {\n    color: orange;\n}",
+        "o": [
+            "Active links turn orange",
+            "All links turn orange",
+            "No effect",
+            "Visited links"
+        ]
+    },
+    {
+        "q": "Which pseudo-class applies styles when an element is visited?",
+        "o": [
+            ":visited",
+            ":hover",
+            ":focus",
+            ":active"
+        ]
+    },
+    {
+        "q": "What does :not(:first-of-type) select?",
+        "l": "css",
+        "c": "p:not(:first-of-type) {\n    margin-top: 10px;\n}",
+        "o": [
+            "All but first p",
+            "Only first p",
+            "All p",
+            "Only last p"
+        ]
+    },
+    {
+        "q": "What can you use with ::before to insert text?",
+        "o": [
+            "content: 'text';",
+            "text: 'text';",
+            "insert: 'text';",
+            "add: 'text';"
+        ]
+    },
+    {
+        "q": "What does this style apply to?",
+        "l": "css",
+        "c": "button:disabled {\n    opacity: 0.3;\n}",
+        "o": [
+            "Disabled buttons",
+            "Enabled buttons",
+            "All buttons",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Can you use multiple pseudo-classes together?",
+        "o": [
+            "Yes",
+            "No",
+            "Only two",
+            "Only one"
+        ]
+    },
+    {
+        "q": "What does :focus-within select?",
+        "l": "css",
+        "c": "div:focus-within {\n    background-color: lightgrey;\n}",
+        "o": [
+            "Div with focused child",
+            "All div",
+            "Focused div",
+            "Last div"
+        ]
+    },
+    {
+        "q": "What type of elements can :first-child select?",
+        "o": [
+            "Only first child",
+            "Any child",
+            "Last child",
+            "Only blocks"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "h2:last-child {\n    font-style: italic;\n}",
+        "o": [
+            "Italicizes last h2",
+            "All h2",
+            "First h2",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :nth-of-type() select?",
+        "o": [
+            "Nth child of a specific type",
+            "Nth child",
+            "First child",
+            "Last child"
+        ]
+    },
+    {
+        "q": "What does :not(:hover) select?",
+        "l": "css",
+        "c": "a:not(:hover) {\n    color: black;\n}",
+        "o": [
+            "Non-hovered links",
+            "All links",
+            "Hovered links",
+            "Active links"
+        ]
+    },
+    {
+        "q": "Which pseudo-class targets only links?",
+        "o": [
+            ":link",
+            ":hover",
+            ":active",
+            ":visited"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "p:only-of-type {\n    background-color: yellow;\n}",
+        "o": [
+            "Styles p if only one",
+            "Styles all p",
+            "Hides p",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Can :hover be animated?",
+        "o": [
+            "Yes",
+            "No",
+            "Only in JavaScript",
+            "Only in CSS"
+        ]
+    },
+    {
+        "q": "What does :nth-last-child(1) select?",
+        "l": "css",
+        "c": "ul > li:nth-last-child(1) {\n    color: green;\n}",
+        "o": [
+            "Last li in ul",
+            "First li",
+            "All li",
+            "Second li"
+        ]
+    },
+    {
+        "q": "What does the content property do?",
+        "o": [
+            "Sets text in ::before/::after",
+            "Hides content",
+            "Styles elements",
+            "Changes layout"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "p:hover::before {\n    content: '***';\n}",
+        "o": [
+            "Adds '***' on hover",
+            "Removes content",
+            "Styles p",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "Which pseudo-element styles the last letter of text?",
+        "o": [
+            "::last-letter",
+            "::last-line",
+            "::after",
+            "::first-letter"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "h1:first-of-type {\n    color: blue;\n}",
+        "o": [
+            "First h1 in parent",
+            "All h1",
+            "Last h1",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :first-of-type select?",
+        "o": [
+            "First of a specific type",
+            "First child",
+            "All children",
+            "Last child"
+        ]
+    },
+    {
+        "q": "What does :first-of-type select?",
+        "l": "css",
+        "c": "div:first-of-type {\n    color: red;\n}",
+        "o": [
+            "First div in parent",
+            "Last div",
+            "All div",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What pseudo-class is for odd indexed children?",
+        "o": [
+            ":nth-child(odd)",
+            ":nth-child(even)",
+            ":first-child",
+            ":last-child"
+        ]
+    },
+    {
+        "q": "What does this selector target?",
+        "l": "css",
+        "c": "h2::after {\n    content: ' !';\n}",
+        "o": [
+            "Adds '!' after h2",
+            "Removes content",
+            "Styles h2",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "What does :focus apply to?",
+        "o": [
+            "Focused element",
+            "Hovered element",
+            "Active element",
+            "Visited element"
+        ]
+    },
+    {
+        "q": "What does :nth-of-type(4) select?",
+        "l": "css",
+        "c": "p:nth-of-type(4) {\n    color: pink;\n}",
+        "o": [
+            "Fourth p in parent",
+            "All p",
+            "First p",
+            "Last p"
+        ]
+    },
+    {
+        "q": "Which property is often used in hover effects?",
+        "o": [
+            "color",
+            "background",
+            "border",
+            "All of these"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "li:nth-last-of-type(1) {\n    text-decoration: underline;\n}",
+        "o": [
+            "Underlines last li",
+            "First li",
+            "All li",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which pseudo-element can be used for decoration?",
+        "o": [
+            "::before",
+            "::after",
+            "::first-letter",
+            "::first-line"
+        ]
+    },
+    {
+        "q": "What does :nth-of-type(even) select?",
+        "l": "css",
+        "c": "li:nth-of-type(even) {\n    background-color: grey;\n}",
+        "o": [
+            "Even li",
+            "Odd li",
+            "First li",
+            "Last li"
+        ]
+    },
+    {
+        "q": "What does :nth-child(3) select?",
+        "o": [
+            "Third child",
+            "First child",
+            "All children",
+            "Last child"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "h3:focus {\n    color: purple;\n}",
+        "o": [
+            "Purple on focus",
+            "No effect",
+            "All h3",
+            "Last h3"
+        ]
+    },
+    {
+        "q": "Which pseudo-class targets elements that are currently focused?",
+        "o": [
+            ":focus",
+            ":hover",
+            ":active",
+            ":visited"
+        ]
+    },
+    {
+        "q": "What does this selector do?",
+        "l": "css",
+        "c": "button:hover::after {\n    content: ' !';\n}",
+        "o": [
+            "Adds '!' after button on hover",
+            "Removes content",
+            "Styles button",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "What is the difference between :first-child and :nth-child(1)?",
+        "o": [
+            "No difference",
+            "Different selection criteria",
+            "Different specificity",
+            "Different usage context"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "input:read-only {\n    background-color: lightgrey;\n}",
+        "o": [
+            "Styles read-only inputs",
+            "Styles all inputs",
+            "Hides input",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which pseudo-element can add visual content without affecting layout?",
+        "o": [
+            "::before",
+            "::after",
+            "::first-line",
+            "::first-letter"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "a:focus {\n    outline: 2px solid orange;\n}",
+        "o": [
+            "Orange outline on focus",
+            "No outline",
+            "All anchors",
+            "Last anchor"
+        ]
+    },
+    {
+        "q": "What does :active represent?",
+        "o": [
+            "Currently clicked element",
+            "Hovered element",
+            "Focused element",
+            "Visited link"
+        ]
+    },
+    {
+        "q": "What does :empty select?",
+        "l": "css",
+        "c": "div:empty {\n    display: none;\n}",
+        "o": [
+            "Hides empty divs",
+            "Hides all divs",
+            "Styles div",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which pseudo-class can be used for dropdown menus?",
+        "o": [
+            ":hover",
+            ":active",
+            ":focus",
+            ":visited"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "li:first-child {\n    font-size: 14px;\n}",
+        "o": [
+            "First li in parent",
+            "Last li",
+            "All li",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Can you style the first child of any element?",
+        "o": [
+            "Yes",
+            "No",
+            "Only block elements",
+            "Only inline elements"
+        ]
+    },
+    {
+        "q": "What does :first-letter style?",
+        "l": "css",
+        "c": "p::first-letter {\n    font-size: 2em;\n}",
+        "o": [
+            "Styles first letter",
+            "All letters",
+            "First p",
+            "Last p"
+        ]
+    },
+    {
+        "q": "What does ::before do in a button?",
+        "o": [
+            "Add content before text",
+            "Style the button",
+            "Add an icon",
+            "Add background"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "button:focus {\n    background-color: blue;\n}",
+        "o": [
+            "Blue background on focus",
+            "All buttons",
+            "No effect",
+            "Last button"
+        ]
+    },
+    {
+        "q": "What pseudo-class selects links that are currently being hovered over?",
+        "o": [
+            ":hover",
+            ":active",
+            ":focus",
+            ":visited"
+        ]
+    },
+    {
+        "q": "What does this style apply to?",
+        "l": "css",
+        "c": "h4:hover {\n    color: teal;\n}",
+        "o": [
+            "Hovered h4",
+            "All h4",
+            "Last h4",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property is usually altered for hover effects?",
+        "o": [
+            "background-color",
+            "position",
+            "display",
+            "float"
+        ]
+    },
+    {
+        "q": "What does :nth-child(odd) select?",
+        "l": "css",
+        "c": "li:nth-child(odd) {\n    background-color: lightblue;\n}",
+        "o": [
+            "Odd li",
+            "Even li",
+            "First li",
+            "Last li"
+        ]
+    },
+    {
+        "q": "What does ::first-letter style?",
+        "o": [
+            "The first letter",
+            "The last letter",
+            "All letters",
+            "The first word"
+        ]
+    },
+    {
+        "q": "What does this selector target?",
+        "l": "css",
+        "c": "h1::before {\n    content: 'Start';\n}",
+        "o": [
+            "Adds 'Start' before h1",
+            "Removes content",
+            "Styles h1",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "What does the :nth-child() function require?",
+        "o": [
+            "A number or formula",
+            "A color",
+            "An element type",
+            "An ID"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "input:invalid {\n    border: 1px solid red;\n}",
+        "o": [
+            "Invalid inputs",
+            "Valid inputs",
+            "All inputs",
+            "Disabled inputs"
+        ]
+    },
+    {
+        "q": "What is an example of a pseudo-class?",
+        "o": [
+            ":hover",
+            "::before",
+            "::after",
+            "::first-line"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "ul > li:last-child {\n    font-weight: bold;\n}",
+        "o": [
+            "Bold last li",
+            "First li",
+            "All li",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :last-child select?",
+        "o": [
+            "Last child of a parent",
+            "First child",
+            "All children",
+            "Only block children"
+        ]
+    },
+    {
+        "q": "What does :hover::after do?",
+        "l": "css",
+        "c": "a:hover::after {\n    content: ' !';\n}",
+        "o": [
+            "Adds '!' after link on hover",
+            "Removes content",
+            "Styles link",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "What type of pseudo-element is ::first-line?",
+        "o": [
+            "Text styling",
+            "Block styling",
+            "Layout change",
+            "Image insert"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "h2:first-child {\n    color: orange;\n}",
+        "o": [
+            "First h2 in parent",
+            "All h2",
+            "Last h2",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What do you use to add a style before an element?",
+        "o": [
+            "::before",
+            "::after",
+            ":before",
+            ":after"
+        ]
+    },
+    {
+        "q": "What does :nth-last-of-type(2) select?",
+        "l": "css",
+        "c": "div:nth-last-of-type(2) {\n    color: purple;\n}",
+        "o": [
+            "Second last div",
+            "All divs",
+            "First div",
+            "Last div"
+        ]
+    },
+    {
+        "q": "What does ::after allow you to do?",
+        "o": [
+            "Insert content after",
+            "Remove content",
+            "Style text",
+            "Change layout"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "h4:last-child {\n    font-weight: bold;\n}",
+        "o": [
+            "Bold last h4",
+            "All h4",
+            "First h4",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property would you change to highlight a button on hover?",
+        "o": [
+            "background-color",
+            "display",
+            "visibility",
+            "height"
+        ]
+    },
+    {
+        "q": "What does ::before add?",
+        "l": "css",
+        "c": "div::before {\n    content: 'Note: ';\n}",
+        "o": [
+            "Adds 'Note: '",
+            "Removes content",
+            "Styles div",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "What type of pseudo-class targets the currently focused input?",
+        "o": [
+            ":focus",
+            ":hover",
+            ":active",
+            ":disabled"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "p:first-child {\n    color: green;\n}",
+        "o": [
+            "First p in parent",
+            "All p",
+            "Last p",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Can :first-child select text nodes?",
+        "o": [
+            "No",
+            "Yes",
+            "Only in certain browsers",
+            "Only in inline elements"
+        ]
+    },
+    {
+        "q": "What does :hover style?",
+        "l": "css",
+        "c": "button:hover {\n    background-color: yellow;\n}",
+        "o": [
+            "Yellow background on hover",
+            "No effect",
+            "All buttons",
+            "Last button"
+        ]
+    },
+    {
+        "q": "What is the default display value for ::before and ::after?",
+        "o": [
+            "Inline",
+            "Block",
+            "Flex",
+            "Grid"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "li:not(:last-of-type) {\n    margin-bottom: 10px;\n}",
+        "o": [
+            "Margin for non-last li",
+            "Styles last li",
+            "All li",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the :not(selector) do?",
+        "o": [
+            "Excludes elements",
+            "Includes elements",
+            "Selects all",
+            "Targets specific elements"
+        ]
+    },
+    {
+        "q": "What does :first-of-type style?",
+        "l": "css",
+        "c": "h1:first-of-type {\n    color: red;\n}",
+        "o": [
+            "First h1 in parent",
+            "All h1",
+            "Last h1",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which pseudo-element can create a visual cue before a link?",
+        "o": [
+            "::before",
+            "::after",
+            "::first-letter",
+            "::first-line"
+        ]
+    },
+    {
+        "q": "What does this selector target?",
+        "l": "css",
+        "c": "span:hover::after {\n    content: ' !';\n}",
+        "o": [
+            "Adds '!' after span on hover",
+            "Removes content",
+            "Styles span",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "Which CSS rule targets an element on mouse-over?",
+        "o": [
+            "element:hover { }",
+            "element:hover { }",
+            "element:active { }",
+            "element:focus { }"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "h3:visited {\n    color: grey;\n}",
+        "o": [
+            "Visited h3",
+            "All h3",
+            "Last h3",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which property often changes with :hover?",
+        "o": [
+            "color",
+            "display",
+            "margin",
+            "padding"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "h1:first-letter {\n    text-transform: uppercase;\n}",
+        "o": [
+            "Capitalizes first letter",
+            "All letters",
+            "First h1",
+            "Last h1"
+        ]
+    },
+    {
+        "q": "What does :nth-child(n+3) select?",
+        "o": [
+            "All children from third onward",
+            "First two children",
+            "Only third child",
+            "Last child"
+        ]
+    },
+    {
+        "q": "What does :focus select?",
+        "l": "css",
+        "c": "input:focus {\n    outline: none;\n}",
+        "o": [
+            "No outline on focus",
+            "All inputs",
+            "No effect",
+            "Disabled inputs"
+        ]
+    },
+    {
+        "q": "Can you use :hover with pseudo-elements?",
+        "o": [
+            "Yes",
+            "No",
+            "Only on block elements",
+            "Only on inline elements"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "li:nth-of-type(n+2) {\n    display: none;\n}",
+        "o": [
+            "Hides all but first li",
+            "Styles all li",
+            "All li",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :last-of-type select?",
+        "o": [
+            "Last element of a type",
+            "First element",
+            "Nth child",
+            "Last child"
+        ]
+    },
+    {
+        "q": "What does this selector target?",
+        "l": "css",
+        "c": "button::before {\n    content: 'Click';\n}",
+        "o": [
+            "Adds 'Click' before button",
+            "Removes content",
+            "Styles button",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "What is the purpose of ::first-line?",
+        "o": [
+            "Style the first line",
+            "Style all lines",
+            "Style the last line",
+            "Add content"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "p:hover {\n    color: blue;\n}",
+        "o": [
+            "Blue on hover",
+            "All p",
+            "No effect",
+            "Last p"
+        ]
+    },
+    {
+        "q": "What property is common in hover effects?",
+        "o": [
+            "opacity",
+            "display",
+            "float",
+            "visibility"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "a:first-of-type {\n    color: teal;\n}",
+        "o": [
+            "First a in parent",
+            "All a",
+            "Last a",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :nth-last-child(n) do?",
+        "o": [
+            "Selects nth child from end",
+            "Selects nth child from start",
+            "Selects first child",
+            "Selects last child"
+        ]
+    },
+    {
+        "q": "What does this selector do?",
+        "l": "css",
+        "c": "h2:not(:last-child) {\n    font-size: 1.2em;\n}",
+        "o": [
+            "Styles non-last h2",
+            "All h2",
+            "Last h2",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does the :target pseudo-class do?",
+        "o": [
+            "Styles active anchor targets",
+            "Styles links",
+            "Styles active elements",
+            "Styles focused elements"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "button:hover:first-of-type {\n    background-color: pink;\n}",
+        "o": [
+            "Pink for first button on hover",
+            "All buttons",
+            "No effect",
+            "Last button"
+        ]
+    },
+    {
+        "q": "What does ::marker do?",
+        "o": [
+            "Styles list markers",
+            "Adds content",
+            "Removes content",
+            "Changes layout"
+        ]
+    },
+    {
+        "q": "What does this style apply to?",
+        "l": "css",
+        "c": "h3:last-of-type {\n    color: orange;\n}",
+        "o": [
+            "Last h3 in parent",
+            "All h3",
+            "First h3",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which pseudo-class targets items based on their index?",
+        "o": [
+            ":nth-child()",
+            ":first-child",
+            ":last-child",
+            ":hover"
+        ]
+    },
+    {
+        "q": "What does :nth-last-child(3) select?",
+        "l": "css",
+        "c": "li:nth-last-child(3) {\n    color: blue;\n}",
+        "o": [
+            "Third last li",
+            "First li",
+            "All li",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :required target?",
+        "o": [
+            "Required input fields",
+            "All fields",
+            "Focused fields",
+            "Visited fields"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "span:hover::before {\n    content: '>>';\n}",
+        "o": [
+            "Adds '>>' before span on hover",
+            "Removes content",
+            "Styles span",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "Which pseudo-element styles the content of a list?",
+        "o": [
+            "::marker",
+            "::before",
+            "::after",
+            "::first-letter"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "p:not(:empty) {\n    font-weight: bold;\n}",
+        "o": [
+            "Bold non-empty p",
+            "All p",
+            "No effect",
+            "Last p"
+        ]
+    },
+    {
+        "q": "What does :valid target?",
+        "o": [
+            "Valid input fields",
+            "All fields",
+            "Focused fields",
+            "Visited fields"
+        ]
+    },
+    {
+        "q": "What does this selector target?",
+        "l": "css",
+        "c": "h2::before {\n    content: 'Note:';\n}",
+        "o": [
+            "Adds 'Note:' before h2",
+            "Removes content",
+            "Styles h2",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "Which selector applies styles to the last child of a specific type?",
+        "o": [
+            ":last-of-type",
+            ":last-child",
+            ":first-of-type",
+            ":nth-last-child"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "ul > li:nth-child(even) {\n    background-color: lightgray;\n}",
+        "o": [
+            "Styles even li",
+            "Styles odd li",
+            "All li",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which pseudo-class targets visited links?",
+        "o": [
+            ":visited",
+            ":hover",
+            ":focus",
+            ":active"
+        ]
+    },
+    {
+        "q": "What does :focus-within select?",
+        "l": "css",
+        "c": "div:focus-within {\n    border: 2px solid red;\n}",
+        "o": [
+            "Div with focused child",
+            "All div",
+            "Active div",
+            "Last div"
+        ]
+    },
+    {
+        "q": "What does :disabled target?",
+        "o": [
+            "Disabled input fields",
+            "Focused fields",
+            "Visited links",
+            "Active elements"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "p:link {\n    color: blue;\n}",
+        "o": [
+            "Unvisited links",
+            "All links",
+            "Visited links",
+            "Active links"
+        ]
+    },
+    {
+        "q": "What does :checked target?",
+        "o": [
+            "Checked checkboxes",
+            "Focused inputs",
+            "Visited links",
+            "Active elements"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "a:visited {\n    color: purple;\n}",
+        "o": [
+            "Visited links",
+            "All links",
+            "No effect",
+            "Active links"
+        ]
+    },
+    {
+        "q": "What does :empty select?",
+        "o": [
+            "Empty elements",
+            "Filled elements",
+            "All elements",
+            "Specific elements"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "h1:hover {\n    text-decoration: underline;\n}",
+        "o": [
+            "Underlines h1 on hover",
+            "No effect",
+            "Styles all h1",
+            "Adds image"
+        ]
+    },
+    {
+        "q": "What is a common use of :hover?",
+        "o": [
+            "Change button color",
+            "Display hidden text",
+            "Hide elements",
+            "Resize images"
+        ]
+    },
+    {
+        "q": "What does this selector target?",
+        "l": "css",
+        "c": "h2:first-child {\n    font-weight: bold;\n}",
+        "o": [
+            "Bold first h2 in parent",
+            "All h2",
+            "Last h2",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does ::placeholder style?",
+        "o": [
+            "Placeholder text",
+            "Actual text",
+            "Links",
+            "Buttons"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "h4:nth-of-type(2) {\n    color: pink;\n}",
+        "o": [
+            "Second h4",
+            "All h4",
+            "First h4",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :lang() do?",
+        "o": [
+            "Styles elements based on language",
+            "Styles all elements",
+            "Targets inputs",
+            "Targets links"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "li:hover {\n    background-color: yellow;\n}",
+        "o": [
+            "Yellow on hover",
+            "No effect",
+            "All li",
+            "Last li"
+        ]
+    },
+    {
+        "q": "What can :focus-within style?",
+        "o": [
+            "Parent of focused element",
+            "Child of focused element",
+            "All elements",
+            "Only focused element"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "div:nth-of-type(n+3) {\n    display: none;\n}",
+        "o": [
+            "Hides first two divs",
+            "All divs",
+            "No effect",
+            "Last div"
+        ]
+    },
+    {
+        "q": "What does :root target?",
+        "o": [
+            "Document root",
+            "Body",
+            "Head",
+            "HTML elements"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "input:enabled {\n    background-color: lightgreen;\n}",
+        "o": [
+            "Enabled inputs",
+            "Disabled inputs",
+            "All inputs",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :not(:first-child) select?",
+        "o": [
+            "All but first child",
+            "Only first child",
+            "Only last child",
+            "All children"
+        ]
+    },
+    {
+        "q": "What does :nth-of-type(even) select?",
+        "l": "css",
+        "c": "li:nth-of-type(even) {\n    background-color: lightblue;\n}",
+        "o": [
+            "Even li",
+            "Odd li",
+            "First li",
+            "Last li"
+        ]
+    },
+    {
+        "q": "What can be styled with :checked?",
+        "o": [
+            "Checked inputs",
+            "All inputs",
+            "Focused elements",
+            "Visited links"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "h1:active {\n    color: red;\n}",
+        "o": [
+            "Active h1",
+            "All h1",
+            "No effect",
+            "Last h1"
+        ]
+    },
+    {
+        "q": "What does :focus-visible target?",
+        "o": [
+            "Elements focused by keyboard",
+            "All focused elements",
+            "Mouse-focused elements",
+            "All elements"
+        ]
+    },
+    {
+        "q": "What does this style apply to?",
+        "l": "css",
+        "c": "h3:nth-last-of-type(1) {\n    font-weight: bold;\n}",
+        "o": [
+            "Bold last h3",
+            "All h3",
+            "First h3",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :nth-of-type(2) select?",
+        "o": [
+            "Second element of type",
+            "First element",
+            "Last element",
+            "Nth child"
+        ]
+    },
+    {
+        "q": "What does :last-child select?",
+        "l": "css",
+        "c": "p:last-child {\n    color: green;\n}",
+        "o": [
+            "Last p in parent",
+            "All p",
+            "First p",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :link target?",
+        "o": [
+            "Unvisited links",
+            "Visited links",
+            "Active links",
+            "All links"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "span:hover {\n    color: red;\n}",
+        "o": [
+            "Red on hover",
+            "No effect",
+            "Styles all span",
+            "Last span"
+        ]
+    },
+    {
+        "q": "What is a function of ::before?",
+        "o": [
+            "Insert content before an element",
+            "Remove content",
+            "Change layout",
+            "Style text"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "div:not(:first-child) {\n    margin-top: 10px;\n}",
+        "o": [
+            "Margin for non-first divs",
+            "Styles first div",
+            "All divs",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :target select?",
+        "o": [
+            "Active anchor target",
+            "Visited link",
+            "Focused element",
+            "Active element"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "p:hover {\n    text-decoration: underline;\n}",
+        "o": [
+            "Underlines p on hover",
+            "No effect",
+            "All p",
+            "Last p"
+        ]
+    },
+    {
+        "q": "What does ::selection style?",
+        "o": [
+            "Selected text",
+            "Unselected text",
+            "All text",
+            "Only links"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "a:focus {\n    outline: none;\n}",
+        "o": [
+            "No outline on focus",
+            "All links",
+            "Visited links",
+            "Active links"
+        ]
+    },
+    {
+        "q": "What does :nth-last-of-type(n) select?",
+        "o": [
+            "Nth-last element of type",
+            "Nth element",
+            "Last child",
+            "First child"
+        ]
+    },
+    {
+        "q": "What does this selector target?",
+        "l": "css",
+        "c": "div::after {\n    content: 'End';\n}",
+        "o": [
+            "Adds 'End' after div",
+            "Removes content",
+            "Styles div",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "What does :hover apply to?",
+        "o": [
+            "Mouse-over elements",
+            "Active elements",
+            "Focused elements",
+            "Visited links"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "button:disabled {\n    opacity: 0.5;\n}",
+        "o": [
+            "Fades disabled button",
+            "No effect",
+            "All buttons",
+            "Last button"
+        ]
+    },
+    {
+        "q": "Which property is commonly changed on hover?",
+        "o": [
+            "color",
+            "position",
+            "display",
+            "visibility"
+        ]
+    },
+    {
+        "q": "What does :nth-child(3n) select?",
+        "l": "css",
+        "c": "li:nth-child(3n) {\n    background-color: lightgreen;\n}",
+        "o": [
+            "Every third li",
+            "First li",
+            "All li",
+            "Last li"
+        ]
+    },
+    {
+        "q": "What does :not(:last-child) select?",
+        "o": [
+            "All but last child",
+            "Only last child",
+            "All children",
+            "Only first child"
+        ]
+    },
+    {
+        "q": "What does this style apply to?",
+        "l": "css",
+        "c": "h1::after {\n    content: '!!!';\n}",
+        "o": [
+            "Adds '!!!' after h1",
+            "Removes content",
+            "Styles h1",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "Which property is typically adjusted for :hover?",
+        "o": [
+            "background-color",
+            "margin",
+            "padding",
+            "border"
+        ]
+    },
+    {
+        "q": "What does :not(.active) select?",
+        "l": "css",
+        "c": "button:not(.active) {\n    background-color: grey;\n}",
+        "o": [
+            "Inactive buttons",
+            "All buttons",
+            "Active buttons",
+            "Disabled buttons"
+        ]
+    },
+    {
+        "q": "What does :first-of-type select?",
+        "o": [
+            "First element of a type",
+            "First child",
+            "Last element",
+            "Nth child"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "input:required {\n    border: 1px solid blue;\n}",
+        "o": [
+            "Styles required inputs",
+            "All inputs",
+            "Optional inputs",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the difference between ::before and ::after?",
+        "o": [
+            "Content position",
+            "Visual style",
+            "Specificity",
+            "No difference"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "h3:first-of-type {\n    color: brown;\n}",
+        "o": [
+            "First h3 in parent",
+            "All h3",
+            "Last h3",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :not(:disabled) select?",
+        "o": [
+            "Enabled elements",
+            "All elements",
+            "Disabled elements",
+            "Active elements"
+        ]
+    },
+    {
+        "q": "What does :hover::before do?",
+        "l": "css",
+        "c": "a:hover::before {\n    content: '>>';\n}",
+        "o": [
+            "Adds '>>' before link on hover",
+            "Removes content",
+            "Styles link",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "What does :placeholder-shown select?",
+        "o": [
+            "Visible placeholder",
+            "Hidden placeholder",
+            "Empty fields",
+            "Filled fields"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "p:last-of-type {\n    color: red;\n}",
+        "o": [
+            "Last p in parent",
+            "All p",
+            "First p",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does ::after do in an element?",
+        "o": [
+            "Add content after",
+            "Remove content",
+            "Change layout",
+            "Style text"
+        ]
+    },
+    {
+        "q": "What does :nth-child(2n+1) select?",
+        "l": "css",
+        "c": "li:nth-child(2n+1) {\n    color: yellow;\n}",
+        "o": [
+            "Odd li",
+            "Even li",
+            "First li",
+            "Last li"
+        ]
+    },
+    {
+        "q": "What does :nth-of-type() require?",
+        "o": [
+            "Type of element",
+            "Number",
+            "Color",
+            "ID"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "ul li:first-child {\n    font-weight: bold;\n}",
+        "o": [
+            "Bold first li in ul",
+            "All li",
+            "Last li",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :hover often change?",
+        "o": [
+            "Background color",
+            "Font size",
+            "Text alignment",
+            "Display type"
+        ]
+    },
+    {
+        "q": "What does this style apply to?",
+        "l": "css",
+        "c": "h2:last-of-type {\n    text-transform: uppercase;\n}",
+        "o": [
+            "Uppercase last h2",
+            "All h2",
+            "First h2",
+            "No effect"
+        ]
+    },
+    {
+        "q": "Which pseudo-element is for list item markers?",
+        "o": [
+            "::marker",
+            "::before",
+            "::after",
+            "::first-letter"
+        ]
+    },
+    {
+        "q": "What does ::before do in this code?",
+        "l": "css",
+        "c": "div::before {\n    content: 'Start: ';\n}",
+        "o": [
+            "Adds 'Start: ' before div",
+            "Removes content",
+            "Styles div",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "What does :focus-within select?",
+        "o": [
+            "Elements with focused descendants",
+            "Only focused elements",
+            "All elements",
+            "Only parent elements"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "input[type='text']:hover {\n    border-color: green;\n}",
+        "o": [
+            "Green border on hover",
+            "No effect",
+            "All inputs",
+            "Disabled inputs"
+        ]
+    },
+    {
+        "q": "What does :lang(en) target?",
+        "o": [
+            "English elements",
+            "All elements",
+            "Focused elements",
+            "Visited elements"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "button:first-child {\n    background-color: blue;\n}",
+        "o": [
+            "Styles first button",
+            "All buttons",
+            "No effect",
+            "Last button"
+        ]
+    },
+    {
+        "q": "What does :not(:required) select?",
+        "o": [
+            "Optional elements",
+            "All elements",
+            "Required elements",
+            "Focused elements"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "li:nth-of-type(n) {\n    list-style-type: square;\n}",
+        "o": [
+            "All li as squares",
+            "First li",
+            "Last li",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is the difference between :nth-child() and :nth-of-type()?",
+        "o": [
+            "Selection criteria",
+            "Performance",
+            "Usage context",
+            "Specificity"
+        ]
+    },
+    {
+        "q": "What does :checked select?",
+        "l": "css",
+        "c": "input:checked {\n    background-color: yellow;\n}",
+        "o": [
+            "Checked inputs",
+            "All inputs",
+            "Unchecked inputs",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :nth-last-of-type(n) select?",
+        "o": [
+            "Nth last of type",
+            "Nth child",
+            "All elements",
+            "Last child"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "h1:lang(en) {\n    font-size: 2em;\n}",
+        "o": [
+            "English h1",
+            "All h1",
+            "No effect",
+            "Last h1"
+        ]
+    },
+    {
+        "q": "What does ::before allow?",
+        "o": [
+            "Insert content before an element",
+            "Remove content",
+            "Change layout",
+            "Style text"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "h3:hover {\n    text-decoration: line-through;\n}",
+        "o": [
+            "Strikes through h3 on hover",
+            "No effect",
+            "Styles all h3",
+            "Last h3"
+        ]
+    },
+    {
+        "q": "Which pseudo-class applies to focused links?",
+        "o": [
+            ":focus",
+            ":hover",
+            ":active",
+            ":visited"
+        ]
+    },
+    {
+        "q": "What does this selector target?",
+        "l": "css",
+        "c": "div:hover::after {\n    content: ' (hovered)';\n}",
+        "o": [
+            "Adds '(hovered)' after div on hover",
+            "Removes content",
+            "Styles div",
+            "Adds an image"
+        ]
+    },
+    {
+        "q": "What does ::after allow you to do?",
+        "o": [
+            "Add content after an element",
+            "Remove content",
+            "Change layout",
+            "Style text"
+        ]
+    },
+    {
+        "q": "What does :first-child select?",
+        "l": "css",
+        "c": "li:first-child {\n    font-weight: bold;\n}",
+        "o": [
+            "Bold first li",
+            "All li",
+            "Last li",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :first-letter select?",
+        "o": [
+            "First letter of element",
+            "Last letter",
+            "All letters",
+            "First word"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "h4:not(:last-of-type) {\n    margin-bottom: 5px;\n}",
+        "o": [
+            "Margin for non-last h4",
+            "Styles last h4",
+            "All h4",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is a common use for ::after?",
+        "o": [
+            "Add decorative content",
+            "Remove content",
+            "Change layout",
+            "Style text"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "h2:focus {\n    outline: 2px dashed red;\n}",
+        "o": [
+            "Dashed outline on focus",
+            "No effect",
+            "All h2",
+            "Last h2"
+        ]
+    },
+    {
+        "q": "What does :nth-of-type(n) select?",
+        "o": [
+            "Nth child of specific type",
+            "Nth child",
+            "All children",
+            "Last child"
+        ]
+    },
+    {
+        "q": "What does this code apply to?",
+        "l": "css",
+        "c": "p:nth-last-of-type(2) {\n    font-style: italic;\n}",
+        "o": [
+            "Second last p",
+            "First p",
+            "All p",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What does :active select?",
+        "o": [
+            "Currently active element",
+            "Hovered element",
+            "Focused element",
+            "Visited link"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "h1:hover {\n    color: green;\n}",
+        "o": [
+            "Green color on hover",
+            "No effect",
+            "Styles all h1",
+            "Adds image"
+        ]
+    },
+    {
+        "q": "What does :not(:checked) select?",
+        "o": [
+            "Unchecked elements",
+            "All elements",
+            "Checked elements",
+            "Disabled elements"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "a:active {\n    color: red;\n}",
+        "o": [
+            "Red on click",
+            "No effect",
+            "Styles all links",
+            "Visited links"
+        ]
+    },
+    {
+        "q": "What does ::marker style?",
+        "o": [
+            "List item markers",
+            "Links",
+            "Buttons",
+            "Text"
+        ]
+    },
+    {
+        "q": "What does :last-of-type select?",
+        "l": "css",
+        "c": "p:last-of-type {\n    color: blue;\n}",
+        "o": [
+            "Last p in parent",
+            "All p",
+            "First p",
+            "No effect"
+        ]
+    },
+    {
+        "q": "What is a key feature of ::selection?",
+        "o": [
+            "Styles selected text",
+            "Styles unselected text",
+            "Styles all text",
+            "Styles links only"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "span:hover {\n    font-weight: bold;\n}",
+        "o": [
+            "Bold on hover",
+            "No effect",
+            "Styles all span",
+            "Last span"
+        ]
+    },
+    {
+        "q": "What does :empty select?",
+        "o": [
+            "Empty elements",
+            "Filled elements",
+            "All elements",
+            "Specific elements"
+        ]
+    },
+    {
+        "q": "What does this style achieve?",
+        "l": "css",
+        "c": "div:first-of-type {\n    background-color: lightyellow;\n}",
+        "o": [
+            "First div styled",
+            "All divs",
+            "No effect",
+            "Last div"
+        ]
+    },
+    {
+        "q": "What does :visited select?",
+        "o": [
+            "Visited links",
+            "Active links",
+            "All links",
+            "Unvisited links"
+        ]
+    },
+    {
+        "q": "What does this code do?",
+        "l": "css",
+        "c": "li:hover {\n    color: orange;\n}",
+        "o": [
+            "Orange on hover",
+            "No effect",
+            "Styles all li",
+            "Last li"
+        ]
+    },
+    {
+        "q": "What does :active target?",
+        "o": [
+            "Currently active elements",
+            "Hovered elements",
+            "Focused elements",
+            "Visited links"
+        ]
+    },
+    {
+        "q": "What does this style apply to?",
+        "l": "css",
+        "c": "button:focus {\n    box-shadow: 0 0 5px black;\n}",
+        "o": [
+            "Adds shadow on focus",
+            "No effect",
+            "All buttons",
+            "Last button"
+        ]
+    },
+    {
+        "q": "What does :focus-visible apply to?",
+        "o": [
+            "Elements focused by keyboard",
+            "Mouse-focused elements",
+            "All focused elements",
+            "Active elements"
+        ]
+    },
+    {
+        "q": "What does :hover select?",
+        "o": [
+            "Hovered elements",
+            "Focused elements",
+            "Visited links",
+            "Active elements"
+        ]
+    },
+    {
+        "q": "What does ::first-letter allow?",
+        "o": [
+            "Style first letter",
+            "Style last letter",
+            "Style all letters",
+            "Add content"
+        ]
+    },
+    {
+        "q": "What does ::first-line allow?",
+        "o": [
+            "Style first line",
+            "Style last line",
+            "Style all lines",
+            "Add content"
+        ]
+    },
+    {
+        "q": "What does :nth-child() select?",
+        "o": [
+            "Nth child of parent",
+            "Nth child of specific type",
+            "Last child",
+            "First child"
+        ]
+    },
+    {
+        "q": "What is the primary use of :hover?",
+        "o": [
+            "Change styles on mouse-over",
+            "Style text",
+            "Add content",
+            "Remove content"
+        ]
+    },
+    {
+        "q": "What does :required target?",
+        "o": [
+            "Required input fields",
+            "All input fields",
+            "Focused fields",
+            "Visited fields"
+        ]
+    },
+    {
+        "q": "What does :not(:empty) select?",
+        "o": [
+            "Filled elements",
+            "Empty elements",
+            "All elements",
+            "Specific elements"
+        ]
+    },
+    {
+        "q": "What does :checked target?",
+        "o": [
+            "Checked checkboxes",
+            "All inputs",
+            "Focused elements",
+            "Visited links"
+        ]
+    },
+    {
+        "q": "What does :nth-of-type() require?",
+        "o": [
+            "Element type",
+            "Number",
+            "Color",
+            "ID"
+        ]
+    },
+    {
+        "q": "What does :focus-within select?",
+        "o": [
+            "Parent with focused child",
+            "Focused elements",
+            "All elements",
+            "Only parent elements"
+        ]
+    },
+    {
+        "q": "What does :target select?",
+        "o": [
+            "Active anchor target",
+            "Visited link",
+            "Focused element",
+            "Active element"
+        ]
+    },
+    {
+        "q": "What does ::placeholder style?",
+        "o": [
+            "Placeholder text",
+            "Actual text",
+            "Links",
+            "Buttons"
+        ]
+    },
+    {
+        "q": "What does :focus-visible select?",
+        "o": [
+            "Keyboard-focused elements",
+            "Mouse-focused elements",
+            "All focused elements",
+            "Active elements"
+        ]
+    },
+    {
+        "q": "What is the difference between ::before and ::after?",
+        "o": [
+            "Position of content",
+            "Type of content",
+            "Specificity",
+            "No difference"
+        ]
+    },
+    {
+        "q": "What does :nth-last-child(n) select?",
+        "o": [
+            "Nth child from end",
+            "Nth child from start",
+            "Last child",
+            "First child"
+        ]
+    },
+    {
+        "q": "What does :not(:first-child) select?",
+        "o": [
+            "All but first child",
+            "Only first child",
+            "Only last child",
+            "All children"
+        ]
+    },
+    {
+        "q": "What does :nth-last-of-type(n) select?",
+        "o": [
+            "Nth-last element of type",
+            "Nth element",
+            "Last child",
+            "First child"
+        ]
+    },
+    {
+        "q": "What does :hover apply to?",
+        "o": [
+            "Mouse-over elements",
+            "Active elements",
+            "Focused elements",
+            "Visited links"
+        ]
+    },
+    {
+        "q": "What does :link select?",
+        "o": [
+            "Unvisited links",
+            "Visited links",
+            "Active links",
+            "All links"
+        ]
+    },
+    {
+        "q": "What does :focus select?",
+        "o": [
+            "Focused elements",
+            "Hovered elements",
+            "Active elements",
+            "Visited links"
+        ]
+    },
+    {
+        "q": "What does ::marker allow?",
+        "o": [
+            "Style list markers",
+            "Add content",
+            "Change layout",
+            "Style text"
+        ]
+    },
+    {
+        "q": "What does :active select?",
+        "o": [
+            "Currently active element",
+            "Hovered element",
+            "Focused element",
+            "Visited link"
+        ]
+    },
+    {
+        "q": "What does :not(:checked) select?",
+        "o": [
+            "Unchecked elements",
+            "All elements",
+            "Checked elements",
+            "Disabled elements"
+        ]
+    },
+    {
+        "q": "What does :last-child select?",
+        "o": [
+            "Last child of parent",
+            "First child",
+            "All children",
+            "Nth child"
+        ]
+    },
+    {
+        "q": "What does :empty select?",
+        "o": [
+            "Empty elements",
+            "Filled elements",
+            "All elements",
+            "Specific elements"
+        ]
+    },
+    {
+        "q": "What does :first-child select?",
+        "o": [
+            "First child of parent",
+            "Last child",
+            "All children",
+            "Nth child"
+        ]
+    },
+    {
+        "q": "What does :focus-within select?",
+        "o": [
+            "Elements with focused descendants",
+            "Only focused elements",
+            "All elements",
+            "Only parent elements"
+        ]
+    },
+    {
+        "q": "What does :nth-last-child(n) select?",
+        "o": [
+            "Nth last child",
+            "Nth child",
+            "Last child",
+            "First child"
+        ]
+    },
+    {
+        "q": "What does :lang(en) target?",
+        "o": [
+            "Elements in English",
+            "All elements",
+            "Focused elements",
+            "Visited elements"
+        ]
+    },
+    {
+        "q": "What does :visited select?",
+        "o": [
+            "Visited links",
+            "Active links",
+            "All links",
+            "Unvisited links"
+        ]
+    },
+    {
+        "q": "What does ::first-line allow?",
+        "o": [
+            "Style first line",
+            "Style last line",
+            "Style all lines",
+            "Add content"
+        ]
+    },
+    {
+        "q": "What does :checked select?",
+        "o": [
+            "Checked checkboxes",
+            "All inputs",
+            "Focused elements",
+            "Visited links"
+        ]
+    },
+    {
+        "q": "What does :nth-of-type() require?",
+        "o": [
+            "Type of element",
+            "Number",
+            "Color",
+            "ID"
+        ]
+    },
+    {
+        "q": "What does :hover select?",
+        "o": [
+            "Hovered elements",
+            "Focused elements",
+            "Visited links",
+            "Active elements"
+        ]
+    },
+    {
+        "q": "What does ::before allow?",
+        "o": [
+            "Insert content before an element",
+            "Remove content",
+            "Change layout",
+            "Style text"
+        ]
+    },
+    {
+        "q": "What does :first-of-type select?",
+        "o": [
+            "First element of a specific type",
+            "First child",
+            "Last element",
+            "Nth child"
+        ]
+    },
+    {
+        "q": "What is a common use for :hover?",
+        "o": [
+            "Change styles on mouse-over",
+            "Style text",
+            "Add content",
+            "Remove content"
+        ]
+    },
+    {
+        "q": "What does :disabled select?",
+        "o": [
+            "Disabled elements",
+            "Enabled elements",
+            "Active elements",
+            "Visited links"
+        ]
+    },
+    {
+        "q": "What does ::placeholder allow?",
+        "o": [
+            "Style placeholder text",
+            "Style actual text",
+            "Style links",
+            "Style buttons"
+        ]
+    },
+    {
+        "q": "What does :nth-of-type(n) select?",
+        "o": [
+            "Nth child of a specific type",
+            "Nth child",
+            "All children",
+            "Last child"
+        ]
+    },
+    {
+        "q": "What does :link select?",
+        "o": [
+            "Unvisited links",
+            "Visited links",
+            "Active links",
+            "All links"
+        ]
+    },
+    {
+        "q": "What does :first-letter select?",
+        "o": [
+            "First letter of an element",
+            "Last letter",
+            "All letters",
+            "First word"
+        ]
+    },
+    {
+        "q": "What does :active select?",
+        "o": [
+            "Currently active elements",
+            "Hovered elements",
+            "Focused elements",
+            "Visited links"
+        ]
+    },
+    {
+        "q": "What does ::first-letter allow?",
+        "o": [
+            "Style first letter",
+            "Style last letter",
+            "Style all letters",
+            "Add content"
+        ]
+    },
+    {
+        "q": "What does :target select?",
+        "o": [
+            "Active anchor target",
+            "Visited link",
+            "Focused element",
+            "Active element"
+        ]
+    },
+    {
+        "q": "What does ::selection style?",
+        "o": [
+            "Selected text",
+            "Unselected text",
+            "All text",
+            "Only links"
+        ]
+    },
+    {
+        "q": "What does :nth-last-of-type(n) select?",
+        "o": [
+            "Nth-last element of type",
+            "Nth element",
+            "Last child",
+            "First child"
+        ]
+    },
+    {
+        "q": "What does :hover apply to?",
+        "o": [
+            "Mouse-over elements",
+            "Active elements",
+            "Focused elements",
+            "Visited links"
+        ]
+    },
+    {
+        "q": "Which property is commonly changed on hover?",
+        "o": [
+            "color",
+            "position",
+            "display",
+            "visibility"
+        ]
+    },
+    {
+        "q": "What does :not(:last-child) select?",
+        "o": [
+            "All but last child",
+            "Only last child",
+            "All children",
+            "Only first child"
+        ]
+    },
+    {
+        "q": "Which property is typically adjusted for :hover?",
+        "o": [
+            "background-color",
+            "margin",
+            "padding",
+            "border"
+        ]
+    },
+    {
+        "q": "What does :first-of-type select?",
+        "o": [
+            "First element of a type",
+            "First child",
+            "Last element",
+            "Nth child"
+        ]
+    },
+    {
+        "q": "What is the difference between ::before and ::after?",
+        "o": [
+            "Content position",
+            "Visual style",
+            "Specificity",
+            "No difference"
+        ]
+    },
+    {
+        "q": "What does :not(:disabled) select?",
+        "o": [
+            "Enabled elements",
+            "All elements",
+            "Disabled elements",
+            "Active elements"
+        ]
+    },
+    {
+        "q": "What does :placeholder-shown select?",
+        "o": [
+            "Visible placeholder",
+            "Hidden placeholder",
+            "Empty fields",
+            "Filled fields"
+        ]
+    },
+    {
+        "q": "What does ::after do in an element?",
+        "o": [
+            "Add content after",
+            "Remove content",
+            "Change layout",
+            "Style text"
+        ]
+    },
+    {
+        "q": "What does :nth-of-type() require?",
+        "o": [
+            "Type of element",
+            "Number",
+            "Color",
+            "ID"
+        ]
+    },
+    {
+        "q": "What does :hover often change?",
+        "o": [
+            "Background color",
+            "Font size",
+            "Text alignment",
+            "Display type"
+        ]
+    },
+    {
+        "q": "Which pseudo-element is for list item markers?",
+        "o": [
+            "::marker",
+            "::before",
+            "::after",
+            "::first-letter"
+        ]
+    },
+    {
+        "q": "What does :focus-within select?",
+        "o": [
+            "Elements with focused descendants",
+            "Only focused elements",
+            "All elements",
+            "Only parent elements"
+        ]
+    },
+    {
+        "q": "What does :lang(en) target?",
+        "o": [
+            "English elements",
+            "All elements",
+            "Focused elements",
+            "Visited elements"
+        ]
+    },
+    {
+        "q": "What does :not(:required) select?",
+        "o": [
+            "Optional elements",
+            "All elements",
+            "Required elements",
+            "Focused elements"
+        ]
+    },
+    {
+        "q": "What is the difference between :nth-child() and :nth-of-type()?",
+        "o": [
+            "Selection criteria",
+            "Performance",
+            "Usage context",
+            "Specificity"
+        ]
+    },
+    {
+        "q": "What does :nth-last-of-type(n) select?",
+        "o": [
+            "Nth last of type",
+            "Nth element",
+            "Last child",
+            "First child"
+        ]
+    },
+    {
+        "q": "What does ::before allow?",
+        "o": [
+            "Insert content before an element",
+            "Remove content",
+            "Change layout",
+            "Style text"
+        ]
+    },
+    {
+        "q": "Which pseudo-class applies to focused links?",
+        "o": [
+            ":focus",
+            ":hover",
+            ":active",
+            ":visited"
+        ]
+    },
+    {
+        "q": "What does ::after allow you to do?",
+        "o": [
+            "Add content after an element",
+            "Remove content",
+            "Change layout",
+            "Style text"
+        ]
+    },
+    {
+        "q": "What does :first-letter select?",
+        "o": [
+            "First letter of element",
+            "Last letter",
+            "All letters",
+            "First word"
+        ]
+    },
+    {
+        "q": "What is a common use for ::after?",
+        "o": [
+            "Add decorative content",
+            "Remove content",
+            "Change layout",
+            "Style text"
+        ]
+    },
+    {
+        "q": "What does :nth-of-type(n) select?",
+        "o": [
+            "Nth child of specific type",
+            "Nth child",
+            "All children",
+            "Last child"
+        ]
+    },
+    {
+        "q": "What does :active select?",
+        "o": [
+            "Currently active element",
+            "Hovered element",
+            "Focused element",
+            "Visited link"
+        ]
+    },
+    {
+        "q": "What does :not(:checked) select?",
+        "o": [
+            "Unchecked elements",
+            "All elements",
+            "Checked elements",
+            "Disabled elements"
+        ]
+    },
+    {
+        "q": "What does ::marker style?",
+        "o": [
+            "List item markers",
+            "Links",
+            "Buttons",
+            "Text"
+        ]
+    },
+    {
+        "q": "What is a key feature of ::selection?",
+        "o": [
+            "Styles selected text",
+            "Styles unselected text",
+            "Styles all text",
+            "Styles links only"
+        ]
+    },
+    {
+        "q": "What does :empty select?",
+        "o": [
+            "Empty elements",
+            "Filled elements",
+            "All elements",
+            "Specific elements"
+        ]
+    },
+    {
+        "q": "What does :visited select?",
+        "o": [
+            "Visited links",
+            "Active links",
+            "All links",
+            "Unvisited links"
+        ]
+    },
+    {
+        "q": "What does :active target?",
+        "o": [
+            "Currently active elements",
+            "Hovered elements",
+            "Focused elements",
+            "Visited links"
+        ]
+    },
+    {
+        "q": "What does :focus-visible apply to?",
+        "o": [
+            "Elements focused by keyboard",
+            "Mouse-focused elements",
+            "All focused elements",
+            "Active elements"
+        ]
+    },
+    {
+        "q": "What does :hover select?",
+        "o": [
+            "Hovered elements",
+            "Focused elements",
+            "Visited links",
+            "Active elements"
+        ]
+    },
+    {
+        "q": "What does ::first-letter allow?",
+        "o": [
+            "Style first letter",
+            "Style last letter",
+            "Style all letters",
+            "Add content"
+        ]
+    },
+    {
+        "q": "What does ::first-line allow?",
+        "o": [
+            "Style first line",
+            "Style last line",
+            "Style all lines",
+            "Add content"
+        ]
+    },
+    {
+        "q": "What does :nth-child() select?",
+        "o": [
+            "Nth child of parent",
+            "Nth child of specific type",
+            "Last child",
+            "First child"
+        ]
+    },
+    {
+        "q": "What does :last-child select?",
+        "o": [
+            "Last child of parent",
+            "First child",
+            "Nth child",
+            "All children"
+        ]
+    },
+    {
+        "q": "What does :nth-of-type() select?",
+        "o": [
+            "Nth child of a specific type",
+            "Nth child",
+            "All children",
+            "Last child"
+        ]
+    },
+    {
+        "q": "What does :checked select?",
+        "o": [
+            "Checked checkboxes",
+            "All inputs",
+            "Focused elements",
+            "Visited links"
+        ]
+    },
+    {
+        "q": "What does :not(:first-child) select?",
+        "o": [
+            "All but first child",
+            "Only first child",
+            "All children",
+            "Only last child"
+        ]
+    },
+    {
+        "q": "What does :target select?",
+        "o": [
+            "Active anchor target",
+            "Visited link",
+            "Focused element",
+            "Active element"
+        ]
+    },
+    {
+        "q": "What does ::placeholder allow?",
+        "o": [
+            "Style placeholder text",
+            "Style actual text",
+            "Style links",
+            "Style buttons"
+        ]
+    },
+    {
+        "q": "What does :focus select?",
+        "o": [
+            "Focused elements",
+            "Hovered elements",
+            "Visited links",
+            "Active elements"
+        ]
+    },
+    {
+        "q": "What does ::selection style?",
+        "o": [
+            "Selected text",
+            "Unselected text",
+            "All text",
+            "Only links"
+        ]
+    },
+    {
+        "q": "What does :not(:hover) select?",
+        "o": [
+            "Non-hovered elements",
+            "Hovered elements",
+            "Focused elements",
+            "Active elements"
+        ]
+    },
+    {
+        "q": "What does :nth-child(n) select?",
+        "o": [
+            "Nth child of parent",
+            "Nth child of specific type",
+            "Last child",
+            "First child"
+        ]
+    },
+    {
+        "q": "What does :focus-visible select?",
+        "o": [
+            "Elements focused by keyboard",
+            "Mouse-focused elements",
+            "All focused elements",
+            "Active elements"
+        ]
+    },
+    {
+        "q": "What does :target select?",
+        "o": [
+            "Active anchor target",
+            "Visited link",
+            "Focused element",
+            "Active element"
+        ]
+    },
+    {
+        "q": "What does :nth-last-of-type(n) select?",
+        "o": [
+            "Nth-last element of type",
+            "Nth element",
+            "Last child",
+            "First child"
+        ]
+    },
+    {
+        "q": "What does :nth-last-child(n) select?",
+        "o": [
+            "Nth last child",
+            "Nth child",
+            "Last child",
+            "First child"
+        ]
+    },
+    {
+        "q": "What does :last-of-type select?",
+        "o": [
+            "Last element of a specific type",
+            "First child",
+            "Nth child",
+            "All children"
+        ]
+    },
+    {
+        "q": "What does :last-child select?",
+        "o": [
+            "Last child of parent",
+            "First child",
+            "Nth child",
+            "All children"
+        ]
+    }
+]

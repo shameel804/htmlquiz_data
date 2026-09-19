@@ -1,0 +1,6143 @@
+[
+  {
+    "q": "Which HTML tag is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<fieldset>",
+      "<button>"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML snippet?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\">\n  <input type=\"password\" name=\"password\">\n  <input type=\"submit\" value=\"Login\">\n</form>",
+    "o": [
+      "A form with a text input, a password input, and a submit button.",
+      "An empty form.",
+      "A text field only.",
+      "A password field only."
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a single option from multiple choices?",
+    "o": [
+      "radio",
+      "checkbox",
+      "text",
+      "submit"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML snippet?",
+    "c": "<form>\n  <input type=\"checkbox\" name=\"subscribe\" checked>\n  <label>Subscribe to newsletter</label>\n</form>",
+    "o": [
+      "A checkbox that is checked by default with a label.",
+      "An unchecked checkbox with a label.",
+      "A text input with a label.",
+      "An empty form."
+    ]
+  },
+  {
+    "q": "Which attribute is used to ensure a user must fill out an input field?",
+    "o": [
+      "required",
+      "validate",
+      "mandatory",
+      "check"
+    ]
+  },
+  {
+    "q": "What will happen when submitting the following form?",
+    "c": "<form>\n  <input type=\"email\" name=\"user_email\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will not submit if the email field is empty.",
+      "The form will submit regardless of input.",
+      "An error will occur due to missing JavaScript validation.",
+      "The email field will not be visible."
+    ]
+  },
+  {
+    "q": "Which input type is used to allow users to choose multiple options?",
+    "o": [
+      "checkbox",
+      "radio",
+      "text",
+      "password"
+    ]
+  },
+  {
+    "q": "What is the output of the following HTML snippet?",
+    "c": "<form>\n  <input type=\"number\" name=\"age\" min=\"18\" max=\"99\">\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "A number input that only accepts values between 18 and 99.",
+      "A text input where any number can be entered.",
+      "A form without validation.",
+      "A form that accepts only whole numbers."
+    ]
+  },
+  {
+    "q": "Which attribute is used to associate a <label> with an input field?",
+    "o": [
+      "for",
+      "name",
+      "id",
+      "value"
+    ]
+  },
+  {
+    "q": "What does the 'action' attribute in a form specify?",
+    "o": [
+      "The URL where form data should be sent.",
+      "The type of input fields allowed in the form.",
+      "The validation rules for the form.",
+      "The method used to encrypt form data."
+    ]
+  },
+  {
+    "q": "Which HTML element is used to create a dropdown list?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<list>",
+      "<option>"
+    ]
+  },
+  {
+    "q": "What will be displayed when this HTML form is rendered?",
+    "c": "<form>\n  <label for=\"gender\">Select Gender:</label>\n  <select id=\"gender\" name=\"gender\">\n    <option value=\"male\">Male</option>\n    <option value=\"female\">Female</option>\n  </select>\n</form>",
+    "o": [
+      "A dropdown with 'Male' and 'Female' options.",
+      "A text input field.",
+      "A set of radio buttons.",
+      "An empty form."
+    ]
+  },
+  {
+    "q": "Which attribute defines placeholder text in an input field?",
+    "o": [
+      "placeholder",
+      "hint",
+      "text",
+      "default"
+    ]
+  },
+  {
+    "q": "What will happen when a user clicks the submit button in the following form?",
+    "c": "<form>\n  <input type=\"text\" name=\"name\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will not submit if the text field is empty.",
+      "The form will submit even if the text field is empty.",
+      "An alert will pop up.",
+      "The text field will clear."
+    ]
+  },
+  {
+    "q": "Which input type is used to upload files?",
+    "o": [
+      "file",
+      "upload",
+      "document",
+      "data"
+    ]
+  },
+  {
+    "q": "What will the following form element do?",
+    "c": "<form>\n  <input type=\"file\" name=\"upload\">\n</form>",
+    "o": [
+      "Allow users to upload a file.",
+      "Create a text input field.",
+      "Create a hidden input field.",
+      "Create a password input field."
+    ]
+  },
+  {
+    "q": "Which attribute specifies that an input field should be focused when the page loads?",
+    "o": [
+      "autofocus",
+      "focus",
+      "selected",
+      "default"
+    ]
+  },
+  {
+    "q": "What does the following form do?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" maxlength=\"10\">\n</form>",
+    "o": [
+      "Restricts input to a maximum of 10 characters.",
+      "Limits input to only numbers.",
+      "Automatically fills the field with 'username'.",
+      "Creates a password field."
+    ]
+  },
+  {
+    "q": "Which input type is used to accept a numeric value with a slider?",
+    "o": [
+      "range",
+      "slider",
+      "number",
+      "scroll"
+    ]
+  },
+  {
+    "q": "What will be the result of this code?",
+    "c": "<form>\n  <input type=\"range\" min=\"0\" max=\"100\" value=\"50\">\n</form>",
+    "o": [
+      "A slider with a default value of 50.",
+      "A text input with default value 50.",
+      "A number input with values between 0 and 100.",
+      "A dropdown list."
+    ]
+  },
+  {
+    "q": "Which attribute ensures a form input is read-only?",
+    "o": [
+      "readonly",
+      "disabled",
+      "static",
+      "fixed"
+    ]
+  },
+  {
+    "q": "What is the difference between 'readonly' and 'disabled' attributes?",
+    "o": [
+      "'readonly' allows user selection but prevents modification, 'disabled' makes the field unselectable.",
+      "'readonly' hides the input, 'disabled' grays it out.",
+      "'readonly' makes the input required, 'disabled' does not.",
+      "'readonly' removes input validation, 'disabled' enables it."
+    ]
+  },
+  {
+    "q": "Which HTML element is used to group form controls together?",
+    "o": [
+      "<fieldset>",
+      "<group>",
+      "<section>",
+      "<div>"
+    ]
+  },
+  {
+    "q": "What does the following HTML snippet display?",
+    "c": "<form>\n  <fieldset>\n    <legend>Personal Information</legend>\n    <input type=\"text\" name=\"firstname\" placeholder=\"First Name\">\n    <input type=\"text\" name=\"lastname\" placeholder=\"Last Name\">\n  </fieldset>\n</form>",
+    "o": [
+      "A form section with a legend and two input fields.",
+      "A single text input field.",
+      "A submit button.",
+      "A form with only placeholders."
+    ]
+  },
+  {
+    "q": "Which method should be used for submitting form data securely?",
+    "o": [
+      "POST",
+      "GET",
+      "SEND",
+      "SUBMIT"
+    ]
+  },
+  {
+    "q": "What is the main difference between GET and POST methods?",
+    "o": [
+      "GET appends data to the URL, while POST sends data in the request body.",
+      "GET is used for submitting forms, while POST is not.",
+      "POST appends data to the URL, while GET sends data in the request body.",
+      "GET encrypts data, while POST does not."
+    ]
+  },
+  {
+    "q": "Which input type is used to accept an email address?",
+    "o": [
+      "email",
+      "text",
+      "number",
+      "url"
+    ]
+  },
+  {
+    "q": "What will be the result of this form input?",
+    "c": "<form>\n  <input type=\"email\" name=\"user_email\">\n</form>",
+    "o": [
+      "An input field that only accepts email addresses.",
+      "A text field with no restrictions.",
+      "An input that only accepts numbers.",
+      "A dropdown for selecting emails."
+    ]
+  },
+  {
+    "q": "Which attribute is used to link a button to submit a form?",
+    "o": [
+      "type=\"submit\"",
+      "action=\"submit\"",
+      "click=\"submit\"",
+      "onpress=\"submit\""
+    ]
+  },
+  {
+    "q": "What will this button do?",
+    "c": "<form>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "Submit the form data.",
+      "Reset the form fields.",
+      "Navigate to another page.",
+      "Do nothing."
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify a default value in an input field?",
+    "o": [
+      "value",
+      "default",
+      "placeholder",
+      "preload"
+    ]
+  },
+  {
+    "q": "What will be displayed when this form is rendered?",
+    "c": "<form>\n  <input type=\"text\" name=\"user\" value=\"John Doe\">\n</form>",
+    "o": [
+      "A text input field with 'John Doe' pre-filled.",
+      "An empty text input field.",
+      "A password input field.",
+      "A dropdown selection."
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a date?",
+    "o": [
+      "date",
+      "datetime",
+      "calendar",
+      "time"
+    ]
+  },
+  {
+    "q": "What will be displayed when the following form is rendered?",
+    "c": "<form>\n  <label for=\"dob\">Select your birth date:</label>\n  <input type=\"date\" id=\"dob\" name=\"dob\">\n</form>",
+    "o": [
+      "A date picker input field.",
+      "A dropdown with months and years.",
+      "A simple text field.",
+      "A button to open the calendar."
+    ]
+  },
+  {
+    "q": "Which HTML form attribute prevents users from editing an input field but allows selection?",
+    "o": [
+      "readonly",
+      "disabled",
+      "static",
+      "blocked"
+    ]
+  },
+  {
+    "q": "What will happen when a user tries to edit the following input field?",
+    "c": "<form>\n  <input type=\"text\" name=\"country\" value=\"USA\" readonly>\n</form>",
+    "o": [
+      "The user cannot edit the field but can copy the text.",
+      "The user can edit the field.",
+      "The field will be hidden.",
+      "The form will display an error."
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify multiple options in a file input field?",
+    "o": [
+      "multiple",
+      "files",
+      "upload",
+      "array"
+    ]
+  },
+  {
+    "q": "What will be the result of this HTML form?",
+    "c": "<form>\n  <input type=\"file\" name=\"documents\" multiple>\n</form>",
+    "o": [
+      "Allows users to upload multiple files.",
+      "Allows only a single file upload.",
+      "Displays a dropdown for file selection.",
+      "Throws an error in modern browsers."
+    ]
+  },
+  {
+    "q": "Which HTML element is used to provide a brief description for a form control?",
+    "o": [
+      "<label>",
+      "<caption>",
+      "<hint>",
+      "<desc>"
+    ]
+  },
+  {
+    "q": "What will happen when a user clicks the following button?",
+    "c": "<form>\n  <button type=\"reset\">Reset</button>\n</form>",
+    "o": [
+      "It will clear all form inputs.",
+      "It will submit the form.",
+      "It will navigate to a new page.",
+      "It will disable the form."
+    ]
+  },
+  {
+    "q": "Which input type allows users to pick a color?",
+    "o": [
+      "color",
+      "picker",
+      "paint",
+      "hex"
+    ]
+  },
+  {
+    "q": "What will the following HTML code do?",
+    "c": "<form>\n  <input type=\"color\" name=\"favcolor\">\n</form>",
+    "o": [
+      "Displays a color picker input.",
+      "Displays a text input field.",
+      "Displays a dropdown of colors.",
+      "Displays a list of preset colors."
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify a pattern for an input field?",
+    "o": [
+      "pattern",
+      "match",
+      "regex",
+      "validate"
+    ]
+  },
+  {
+    "q": "What will happen when a user enters an incorrect format in this form field?",
+    "c": "<form>\n  <input type=\"text\" name=\"zipcode\" pattern=\"[0-9]{5}\">\n</form>",
+    "o": [
+      "The form will prevent submission if the input is not a 5-digit number.",
+      "The form will accept any input.",
+      "The input field will convert text into numbers.",
+      "An alert box will appear with an error message."
+    ]
+  },
+  {
+    "q": "Which input type is used to create a hidden field?",
+    "o": [
+      "hidden",
+      "invisible",
+      "none",
+      "text-hidden"
+    ]
+  },
+  {
+    "q": "What will be displayed when the following form is rendered?",
+    "c": "<form>\n  <input type=\"hidden\" name=\"userid\" value=\"12345\">\n</form>",
+    "o": [
+      "The input field will not be visible but will be sent with the form data.",
+      "A text field with '12345' pre-filled.",
+      "An empty form.",
+      "A button labeled 'hidden'."
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify that an input field must be filled before submission?",
+    "o": [
+      "required",
+      "validate",
+      "mandatory",
+      "needed"
+    ]
+  },
+  {
+    "q": "What will happen when the submit button is clicked in the following form?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will not submit if the text field is empty.",
+      "The form will submit regardless of input.",
+      "A pop-up message will appear.",
+      "The input field will be disabled."
+    ]
+  },
+  {
+    "q": "Which input type is used for entering a telephone number?",
+    "o": [
+      "tel",
+      "phone",
+      "number",
+      "mobile"
+    ]
+  },
+  {
+    "q": "What is the effect of the 'autocomplete' attribute in a form?",
+    "o": [
+      "It enables automatic suggestions based on previous inputs.",
+      "It disables the input field.",
+      "It converts input into uppercase.",
+      "It hides the form after submission."
+    ]
+  },
+  {
+    "q": "What does the 'novalidate' attribute do in an HTML form?",
+    "o": [
+      "It disables browser-based form validation.",
+      "It hides all form fields.",
+      "It automatically corrects user input.",
+      "It prevents form submission."
+    ]
+  },
+  {
+    "q": "What will happen when this form is submitted?",
+    "c": "<form novalidate>\n  <input type=\"email\" name=\"email\">\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will submit even if the email is invalid.",
+      "The form will not submit without a valid email.",
+      "The form will show a validation message.",
+      "The form will be disabled."
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<fieldset>",
+      "<label>"
+    ]
+  },
+  {
+    "q": "What will happen when this form is rendered?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" placeholder=\"Enter your name\">\n</form>",
+    "o": [
+      "A text input field with a placeholder 'Enter your name'.",
+      "A pre-filled text input with 'Enter your name'.",
+      "A hidden text input field.",
+      "A password input field."
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify that an input field must be filled before submitting a form?",
+    "o": [
+      "required",
+      "validate",
+      "mandatory",
+      "necessary"
+    ]
+  },
+  {
+    "q": "What does the following HTML form do?",
+    "c": "<form>\n  <input type=\"email\" name=\"user_email\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "Prevents form submission if the email is not valid.",
+      "Allows form submission even if the email is invalid.",
+      "Displays an error message immediately on typing.",
+      "Forces uppercase input."
+    ]
+  },
+  {
+    "q": "Which input type is used for entering a password?",
+    "o": [
+      "password",
+      "text",
+      "secure",
+      "hidden"
+    ]
+  },
+  {
+    "q": "What will happen when this form is rendered?",
+    "c": "<form>\n  <input type=\"password\" name=\"user_password\">\n</form>",
+    "o": [
+      "A password input field where input is hidden.",
+      "A visible text input field.",
+      "A disabled input field.",
+      "A numeric input field."
+    ]
+  },
+  {
+    "q": "Which attribute is used to group radio buttons?",
+    "o": [
+      "name",
+      "group",
+      "id",
+      "value"
+    ]
+  },
+  {
+    "q": "What will happen when this form is rendered?",
+    "c": "<form>\n  <input type=\"radio\" name=\"gender\" value=\"male\"> Male\n  <input type=\"radio\" name=\"gender\" value=\"female\"> Female\n</form>",
+    "o": [
+      "Only one radio button can be selected at a time.",
+      "Both radio buttons can be selected simultaneously.",
+      "The form will not render correctly.",
+      "The buttons will be disabled."
+    ]
+  },
+  {
+    "q": "Which input type is used to create a checkbox?",
+    "o": [
+      "checkbox",
+      "radio",
+      "check",
+      "boolean"
+    ]
+  },
+  {
+    "q": "What does the 'checked' attribute do in an input element?",
+    "o": [
+      "Pre-selects a radio button or checkbox.",
+      "Disables the input field.",
+      "Validates the input field.",
+      "Forces the user to select it."
+    ]
+  },
+  {
+    "q": "What is the function of the 'maxlength' attribute in an input field?",
+    "o": [
+      "Limits the number of characters that can be entered.",
+      "Sets the initial length of the input.",
+      "Forces uppercase input.",
+      "Hides input text."
+    ]
+  },
+  {
+    "q": "What will be the behavior of this form?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" maxlength=\"10\">\n</form>",
+    "o": [
+      "Limits input to 10 characters.",
+      "Automatically converts input to uppercase.",
+      "Displays an error after 10 characters.",
+      "Forces numeric input."
+    ]
+  },
+  {
+    "q": "Which input type allows users to select multiple options?",
+    "o": [
+      "checkbox",
+      "radio",
+      "select",
+      "dropdown"
+    ]
+  },
+  {
+    "q": "What will happen when a user submits this form?",
+    "c": "<form>\n  <input type=\"checkbox\" name=\"terms\" required> I agree to the terms\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will not submit unless the checkbox is checked.",
+      "The form will submit regardless of the checkbox.",
+      "The checkbox will be disabled.",
+      "An alert will appear."
+    ]
+  },
+  {
+    "q": "Which attribute is used to associate a label with an input field?",
+    "o": [
+      "for",
+      "id",
+      "name",
+      "bind"
+    ]
+  },
+  {
+    "q": "What will be the effect of this code?",
+    "c": "<form>\n  <label for=\"email\">Email:</label>\n  <input type=\"email\" id=\"email\" name=\"email\">\n</form>",
+    "o": [
+      "Clicking the label focuses the input field.",
+      "The label will be hidden.",
+      "The form will not submit.",
+      "The input will be disabled."
+    ]
+  },
+  {
+    "q": "Which input type is used to create a submit button?",
+    "o": [
+      "submit",
+      "button",
+      "send",
+      "confirm"
+    ]
+  },
+  {
+    "q": "What will happen when a user clicks the submit button in this form?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\">\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form data will be sent to the server.",
+      "The form will reset.",
+      "A confirmation message will appear.",
+      "The input field will be cleared."
+    ]
+  },
+  {
+    "q": "Which input type is used to reset a form?",
+    "o": [
+      "reset",
+      "clear",
+      "delete",
+      "refresh"
+    ]
+  },
+  {
+    "q": "What will be the effect of this form?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\">\n  <input type=\"reset\" value=\"Reset\">\n</form>",
+    "o": [
+      "Clicking the reset button will clear all input fields.",
+      "The form will submit.",
+      "An error message will appear.",
+      "The reset button will be disabled."
+    ]
+  },
+  {
+    "q": "Which attribute is used to automatically focus an input field?",
+    "o": [
+      "autofocus",
+      "focus",
+      "default",
+      "selected"
+    ]
+  },
+  {
+    "q": "What will happen when this form is rendered?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" autofocus>\n</form>",
+    "o": [
+      "The input field will be automatically focused.",
+      "The input field will be hidden.",
+      "An error message will appear.",
+      "The form will submit automatically."
+    ]
+  },
+  {
+    "q": "Which attribute specifies the URL where form data should be sent?",
+    "o": [
+      "action",
+      "method",
+      "href",
+      "target"
+    ]
+  },
+  {
+    "q": "What will happen when this form is submitted?",
+    "c": "<form action=\"/submit-form\" method=\"post\">\n  <input type=\"text\" name=\"username\">\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "Form data will be sent to '/submit-form' using POST.",
+      "Form data will be sent using GET by default.",
+      "Nothing will happen since the method is missing.",
+      "The form will not submit."
+    ]
+  },
+  {
+    "q": "Which input type is used for entering a number?",
+    "o": [
+      "number",
+      "integer",
+      "digits",
+      "text"
+    ]
+  },
+  {
+    "q": "What happens if a user enters text instead of a number in this form?",
+    "c": "<form>\n  <input type=\"number\" name=\"age\">\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will prevent non-numeric input.",
+      "The form will accept any text input.",
+      "An alert message will appear.",
+      "The form will reset automatically."
+    ]
+  },
+  {
+    "q": "Which attribute is used to make a form input field non-editable?",
+    "o": [
+      "readonly",
+      "disabled",
+      "locked",
+      "static"
+    ]
+  },
+  {
+    "q": "What is the effect of adding the 'disabled' attribute to an input field?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" disabled>\n</form>",
+    "o": [
+      "The input field will be visible but not editable.",
+      "The input field will be hidden.",
+      "The form will not submit.",
+      "The input will be cleared on focus."
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a date?",
+    "o": [
+      "date",
+      "datetime",
+      "calendar",
+      "time"
+    ]
+  },
+  {
+    "q": "What does this code do?",
+    "c": "<form>\n  <input type=\"date\" name=\"dob\">\n</form>",
+    "o": [
+      "Displays a date picker for selecting a date.",
+      "Displays a text field for entering a date manually.",
+      "Submits the current date automatically.",
+      "Shows an error if no date is selected."
+    ]
+  },
+  {
+    "q": "Which attribute ensures a user must enter a value before submitting a form?",
+    "o": [
+      "required",
+      "validate",
+      "mandatory",
+      "notempty"
+    ]
+  },
+  {
+    "q": "What will happen if a user tries to submit this form without entering a value?",
+    "c": "<form>\n  <input type=\"text\" name=\"email\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will not submit and show an error.",
+      "The form will submit with an empty value.",
+      "An alert box will appear.",
+      "The page will reload automatically."
+    ]
+  },
+  {
+    "q": "Which attribute limits the minimum value of a number input?",
+    "o": [
+      "min",
+      "max",
+      "limit",
+      "range"
+    ]
+  },
+  {
+    "q": "What will happen when a user enters a value less than 10 in this input field?",
+    "c": "<form>\n  <input type=\"number\" name=\"age\" min=\"10\">\n</form>",
+    "o": [
+      "The form will not accept values below 10.",
+      "The input field will reset automatically.",
+      "The value will be rounded to 10.",
+      "The form will submit with the entered value."
+    ]
+  },
+  {
+    "q": "Which button type is used to submit a form?",
+    "o": [
+      "submit",
+      "button",
+      "send",
+      "confirm"
+    ]
+  },
+  {
+    "q": "What will happen when the button is clicked?",
+    "c": "<form>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "The form will be submitted.",
+      "The form will reset.",
+      "An alert will be displayed.",
+      "The button will be disabled."
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a file?",
+    "o": [
+      "file",
+      "document",
+      "upload",
+      "browse"
+    ]
+  },
+  {
+    "q": "What happens when a user clicks the file input field?",
+    "c": "<form>\n  <input type=\"file\" name=\"profile_picture\">\n</form>",
+    "o": [
+      "A file selection dialog will appear.",
+      "The form will submit immediately.",
+      "A new input field will appear.",
+      "An error message will be shown."
+    ]
+  },
+  {
+    "q": "Which attribute is used to provide a hint inside an input field?",
+    "o": [
+      "placeholder",
+      "hint",
+      "tooltip",
+      "text"
+    ]
+  },
+  {
+    "q": "What does this input field display?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" placeholder=\"Enter your username\">\n</form>",
+    "o": [
+      "A text input field with the placeholder 'Enter your username'.",
+      "A pre-filled text input with 'Enter your username'.",
+      "A disabled text input field.",
+      "A password input field."
+    ]
+  },
+  {
+    "q": "Which element is used to group multiple form fields together?",
+    "o": [
+      "fieldset",
+      "group",
+      "container",
+      "wrapper"
+    ]
+  },
+  {
+    "q": "What is the function of the <legend> tag?",
+    "c": "<form>\n  <fieldset>\n    <legend>Personal Information</legend>\n    <input type=\"text\" name=\"fullname\">\n  </fieldset>\n</form>",
+    "o": [
+      "Provides a title for a fieldset group.",
+      "Hides the form fields inside the fieldset.",
+      "Creates a new section in the form.",
+      "Disables all inputs inside the fieldset."
+    ]
+  },
+  {
+    "q": "Which input type allows users to select a color?",
+    "o": [
+      "color",
+      "palette",
+      "picker",
+      "rgb"
+    ]
+  },
+  {
+    "q": "What will happen when this input field is clicked?",
+    "c": "<form>\n  <input type=\"color\" name=\"fav_color\">\n</form>",
+    "o": [
+      "A color picker dialog will appear.",
+      "A text input field will appear.",
+      "The input field will be hidden.",
+      "A warning message will be displayed."
+    ]
+  },
+  {
+    "q": "Which attribute specifies multiple selectable options in a dropdown list?",
+    "o": [
+      "multiple",
+      "multi-select",
+      "expandable",
+      "dropdown"
+    ]
+  },
+  {
+    "q": "What will be the effect of this select field?",
+    "c": "<form>\n  <select name=\"fruits\" multiple>\n    <option value=\"apple\">Apple</option>\n    <option value=\"banana\">Banana</option>\n    <option value=\"cherry\">Cherry</option>\n  </select>\n</form>",
+    "o": [
+      "Users can select multiple options.",
+      "Only one option can be selected at a time.",
+      "The dropdown will be disabled.",
+      "The form will submit automatically."
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<fieldset>",
+      "<button>"
+    ]
+  },
+  {
+    "q": "What will happen when this form is submitted?",
+    "c": "<form action=\"/submit\" method=\"get\">\n  <input type=\"text\" name=\"username\">\n  <input type=\"submit\" value=\"Send\">\n</form>",
+    "o": [
+      "Form data will be sent to '/submit' using GET.",
+      "Form data will be sent using POST.",
+      "The form will not submit due to missing method.",
+      "An alert will appear before submission."
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify where to send form data after submission?",
+    "o": [
+      "action",
+      "method",
+      "target",
+      "submit"
+    ]
+  },
+  {
+    "q": "What is the default HTTP method for form submission?",
+    "o": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "q": "Which input type is used for entering an email address?",
+    "o": [
+      "email",
+      "text",
+      "url",
+      "password"
+    ]
+  },
+  {
+    "q": "What happens if a user enters an invalid email format in this input field?",
+    "c": "<form>\n  <input type=\"email\" name=\"user_email\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will show a validation error.",
+      "The form will submit successfully.",
+      "The input will be converted into a valid email.",
+      "Nothing will happen."
+    ]
+  },
+  {
+    "q": "Which attribute prevents users from leaving an input field empty?",
+    "o": [
+      "required",
+      "validate",
+      "empty",
+      "notnull"
+    ]
+  },
+  {
+    "q": "What does the 'placeholder' attribute do?",
+    "c": "<form>\n  <input type=\"text\" name=\"user\" placeholder=\"Enter your name\">\n</form>",
+    "o": [
+      "Displays a hint inside the input field.",
+      "Pre-fills the input with default text.",
+      "Makes the input read-only.",
+      "Submits the default value automatically."
+    ]
+  },
+  {
+    "q": "Which button type resets all input fields in a form?",
+    "o": [
+      "reset",
+      "submit",
+      "clear",
+      "cancel"
+    ]
+  },
+  {
+    "q": "What will happen when the reset button is clicked?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\">\n  <input type=\"reset\" value=\"Clear\">\n</form>",
+    "o": [
+      "All input fields will be cleared.",
+      "Form data will be submitted.",
+      "The form will be deleted.",
+      "An alert will be shown."
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a dropdown list?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<option>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "Which attribute allows users to select multiple options from a dropdown list?",
+    "o": [
+      "multiple",
+      "multi-select",
+      "expand",
+      "checkbox"
+    ]
+  },
+  {
+    "q": "What will happen in this form?",
+    "c": "<form>\n  <select name=\"fruits\" multiple>\n    <option value=\"apple\">Apple</option>\n    <option value=\"banana\">Banana</option>\n    <option value=\"cherry\">Cherry</option>\n  </select>\n</form>",
+    "o": [
+      "Users can select multiple options.",
+      "Only one option can be selected.",
+      "The dropdown will be hidden.",
+      "The form will submit automatically."
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a file?",
+    "o": [
+      "file",
+      "upload",
+      "document",
+      "browse"
+    ]
+  },
+  {
+    "q": "What will happen when the file input field is clicked?",
+    "c": "<form>\n  <input type=\"file\" name=\"resume\">\n</form>",
+    "o": [
+      "A file selection dialog will appear.",
+      "The form will submit immediately.",
+      "The input field will be hidden.",
+      "An error message will be shown."
+    ]
+  },
+  {
+    "q": "Which HTML element is used to group form controls together?",
+    "o": [
+      "<fieldset>",
+      "<group>",
+      "<section>",
+      "<wrapper>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the <legend> tag?",
+    "c": "<form>\n  <fieldset>\n    <legend>Personal Info</legend>\n    <input type=\"text\" name=\"name\">\n  </fieldset>\n</form>",
+    "o": [
+      "It provides a title for the fieldset.",
+      "It hides the form fields inside the fieldset.",
+      "It disables the inputs inside the fieldset.",
+      "It submits the form automatically."
+    ]
+  },
+  {
+    "q": "Which attribute specifies the maximum number of characters allowed in an input field?",
+    "o": [
+      "maxlength",
+      "limit",
+      "max",
+      "chars"
+    ]
+  },
+  {
+    "q": "What will happen if a user enters more than 10 characters in this input?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" maxlength=\"10\">\n</form>",
+    "o": [
+      "The input will not accept more than 10 characters.",
+      "The form will display an error message.",
+      "The extra characters will be stored in hidden input.",
+      "The form will reset automatically."
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a date?",
+    "o": [
+      "date",
+      "calendar",
+      "datetime",
+      "time"
+    ]
+  },
+  {
+    "q": "What will happen when this input field is clicked?",
+    "c": "<form>\n  <input type=\"date\" name=\"dob\">\n</form>",
+    "o": [
+      "A date picker will appear.",
+      "A text field will be displayed.",
+      "The input will submit automatically.",
+      "An alert message will be shown."
+    ]
+  },
+  {
+    "q": "Which input type is used to create a password field?",
+    "o": [
+      "password",
+      "secure",
+      "text",
+      "hidden"
+    ]
+  },
+  {
+    "q": "What happens when a user types in a password input field?",
+    "c": "<form>\n  <input type=\"password\" name=\"user_pass\">\n</form>",
+    "o": [
+      "The entered text will be hidden.",
+      "The entered text will be visible.",
+      "The form will submit immediately.",
+      "An alert message will be shown."
+    ]
+  },
+  {
+    "q": "Which attribute sets a default value in an input field?",
+    "o": [
+      "value",
+      "default",
+      "placeholder",
+      "preload"
+    ]
+  },
+  {
+    "q": "What will happen when this form is loaded?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" value=\"JohnDoe\">\n</form>",
+    "o": [
+      "The input field will be pre-filled with 'JohnDoe'.",
+      "The input field will be empty.",
+      "The input field will be disabled.",
+      "The form will submit automatically."
+    ]
+  },
+  {
+    "q": "Which attribute is used to associate a label with an input field?",
+    "o": [
+      "for",
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  {
+    "q": "What will happen when you click on the label in this form?",
+    "c": "<form>\n  <label for=\"email\">Email:</label>\n  <input type=\"email\" id=\"email\" name=\"email\">\n</form>",
+    "o": [
+      "The input field will be focused.",
+      "The form will be submitted.",
+      "The label text will change.",
+      "Nothing will happen."
+    ]
+  },
+  {
+    "q": "Which attribute is used to pre-fill an input field with default text?",
+    "o": [
+      "value",
+      "placeholder",
+      "default",
+      "text"
+    ]
+  },
+  {
+    "q": "What will happen when this form is loaded?",
+    "c": "<form>\n  <input type=\"text\" name=\"user\" value=\"JohnDoe\">\n</form>",
+    "o": [
+      "The input field will be pre-filled with 'JohnDoe'.",
+      "The input field will be empty.",
+      "The input field will be disabled.",
+      "The form will submit automatically."
+    ]
+  },
+  {
+    "q": "Which attribute prevents a user from modifying the input field?",
+    "o": [
+      "readonly",
+      "disabled",
+      "locked",
+      "static"
+    ]
+  },
+  {
+    "q": "What will happen when a user tries to edit this input?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" value=\"Guest\" readonly>\n</form>",
+    "o": [
+      "The user will not be able to modify the input.",
+      "The input field will clear automatically.",
+      "The form will not be submitted.",
+      "An alert will be shown."
+    ]
+  },
+  {
+    "q": "Which attribute disables an input field so users cannot interact with it?",
+    "o": [
+      "disabled",
+      "readonly",
+      "locked",
+      "inactive"
+    ]
+  },
+  {
+    "q": "What happens when a user clicks the submit button in this form?",
+    "c": "<form>\n  <input type=\"text\" name=\"name\">\n  <input type=\"submit\" value=\"Submit\" disabled>\n</form>",
+    "o": [
+      "Nothing happens as the button is disabled.",
+      "The form will be submitted.",
+      "The button will be enabled automatically.",
+      "An alert message will appear."
+    ]
+  },
+  {
+    "q": "Which input type allows a user to select only one option from multiple choices?",
+    "o": [
+      "radio",
+      "checkbox",
+      "select",
+      "button"
+    ]
+  },
+  {
+    "q": "What happens when a user selects a radio button?",
+    "c": "<form>\n  <input type=\"radio\" name=\"gender\" value=\"male\"> Male\n  <input type=\"radio\" name=\"gender\" value=\"female\"> Female\n</form>",
+    "o": [
+      "Only one option can be selected at a time.",
+      "Both options can be selected simultaneously.",
+      "The options will be hidden after selection.",
+      "An alert will be displayed."
+    ]
+  },
+  {
+    "q": "Which input type allows multiple selections at the same time?",
+    "o": [
+      "checkbox",
+      "radio",
+      "button",
+      "text"
+    ]
+  },
+  {
+    "q": "What will happen when multiple checkboxes are selected?",
+    "c": "<form>\n  <input type=\"checkbox\" name=\"hobby\" value=\"reading\"> Reading\n  <input type=\"checkbox\" name=\"hobby\" value=\"sports\"> Sports\n</form>",
+    "o": [
+      "More than one checkbox can be selected.",
+      "Only one checkbox can be selected at a time.",
+      "Checkboxes will reset automatically.",
+      "An error message will appear."
+    ]
+  },
+  {
+    "q": "Which attribute forces a user to fill in an input field before submitting a form?",
+    "o": [
+      "required",
+      "validate",
+      "mandatory",
+      "mustfill"
+    ]
+  },
+  {
+    "q": "What will happen if the user tries to submit this form without filling the required field?",
+    "c": "<form>\n  <input type=\"text\" name=\"name\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "A validation message will be shown.",
+      "The form will submit with an empty field.",
+      "The browser will automatically fill the input.",
+      "An alert box will be displayed."
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify a pattern for input validation?",
+    "o": [
+      "pattern",
+      "validate",
+      "regex",
+      "match"
+    ]
+  },
+  {
+    "q": "What will happen if the user enters an invalid phone number?",
+    "c": "<form>\n  <input type=\"text\" name=\"phone\" pattern=\"\\d{10}\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "A validation error will be shown.",
+      "The form will submit successfully.",
+      "The input will be converted automatically.",
+      "The form will reload."
+    ]
+  },
+  {
+    "q": "Which input type is used to select a color?",
+    "o": [
+      "color",
+      "palette",
+      "picker",
+      "select"
+    ]
+  },
+  {
+    "q": "What will happen when the color input is clicked?",
+    "c": "<form>\n  <input type=\"color\" name=\"favcolor\">\n</form>",
+    "o": [
+      "A color picker will appear.",
+      "The form will be submitted.",
+      "The input will reset automatically.",
+      "An alert message will be shown."
+    ]
+  },
+  {
+    "q": "Which button type submits form data?",
+    "o": [
+      "submit",
+      "reset",
+      "button",
+      "click"
+    ]
+  },
+  {
+    "q": "What happens when a user clicks the submit button?",
+    "c": "<form action=\"/submit\">\n  <input type=\"text\" name=\"user\">\n  <button type=\"submit\">Send</button>\n</form>",
+    "o": [
+      "Form data is sent to '/submit'.",
+      "The form resets all fields.",
+      "The form closes without submitting.",
+      "An alert message appears."
+    ]
+  },
+  {
+    "q": "Which attribute defines where to display the response after form submission?",
+    "o": [
+      "target",
+      "action",
+      "method",
+      "response"
+    ]
+  },
+  {
+    "q": "What will happen when the form is submitted with target='_blank'?",
+    "c": "<form action=\"/submit\" target=\"_blank\">\n  <input type=\"text\" name=\"name\">\n  <input type=\"submit\" value=\"Send\">\n</form>",
+    "o": [
+      "The response will open in a new tab.",
+      "The form will submit in the same tab.",
+      "The form will reset automatically.",
+      "An alert message will be shown."
+    ]
+  },
+  {
+    "q": "Which HTML element is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<button>",
+      "<fieldset>"
+    ]
+  },
+  {
+    "q": "Which input type is used to enter an email address?",
+    "o": [
+      "email",
+      "text",
+      "number",
+      "password"
+    ]
+  },
+  {
+    "q": "What will happen if the user enters an invalid email address?",
+    "c": "<form>\n  <input type=\"email\" name=\"user_email\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "A validation error will be displayed.",
+      "The form will submit successfully.",
+      "The input will be converted automatically.",
+      "The input will clear itself."
+    ]
+  },
+  {
+    "q": "Which attribute is used to provide a hint inside an input field?",
+    "o": [
+      "placeholder",
+      "value",
+      "hint",
+      "label"
+    ]
+  },
+  {
+    "q": "Which attribute is used to make an input field non-editable?",
+    "o": [
+      "readonly",
+      "disabled",
+      "static",
+      "locked"
+    ]
+  },
+  {
+    "q": "What happens when the following form is loaded?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" value=\"JohnDoe\" readonly>\n</form>",
+    "o": [
+      "The input field is pre-filled but cannot be edited.",
+      "The input field is empty and cannot be edited.",
+      "The input field is disabled and cannot be submitted.",
+      "An error message appears."
+    ]
+  },
+  {
+    "q": "Which button type resets all form fields?",
+    "o": [
+      "reset",
+      "submit",
+      "button",
+      "clear"
+    ]
+  },
+  {
+    "q": "What will happen when the reset button is clicked?",
+    "c": "<form>\n  <input type=\"text\" name=\"user\" value=\"John\">\n  <input type=\"reset\" value=\"Reset\">\n</form>",
+    "o": [
+      "All input fields will be cleared.",
+      "The form will be submitted.",
+      "Nothing will happen.",
+      "An alert will be displayed."
+    ]
+  },
+  {
+    "q": "Which attribute specifies that an input field must be filled before submitting a form?",
+    "o": [
+      "required",
+      "validate",
+      "mustfill",
+      "mandatory"
+    ]
+  },
+  {
+    "q": "What will happen if the required field is left empty?",
+    "c": "<form>\n  <input type=\"text\" name=\"name\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "A validation error will be shown.",
+      "The form will submit successfully.",
+      "The form will reload automatically.",
+      "An alert will be displayed."
+    ]
+  },
+  {
+    "q": "Which attribute specifies the minimum number of characters for an input?",
+    "o": [
+      "minlength",
+      "maxlength",
+      "min",
+      "size"
+    ]
+  },
+  {
+    "q": "Which attribute defines the maximum number of characters allowed in an input field?",
+    "o": [
+      "maxlength",
+      "max",
+      "size",
+      "limit"
+    ]
+  },
+  {
+    "q": "What will happen if the user enters a number outside the defined range?",
+    "c": "<form>\n  <input type=\"number\" name=\"age\" min=\"18\" max=\"60\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "A validation error will be displayed.",
+      "The form will submit successfully.",
+      "The input value will be corrected automatically.",
+      "The form will reset."
+    ]
+  },
+  {
+    "q": "Which input type allows the user to pick a date?",
+    "o": [
+      "date",
+      "datetime",
+      "time",
+      "calendar"
+    ]
+  },
+  {
+    "q": "What happens when a user clicks on the date input field?",
+    "c": "<form>\n  <input type=\"date\" name=\"dob\">\n</form>",
+    "o": [
+      "A date picker will appear.",
+      "The form will be submitted.",
+      "The input will reset automatically.",
+      "An alert will be displayed."
+    ]
+  },
+  {
+    "q": "Which attribute defines a pre-selected option in a dropdown?",
+    "o": [
+      "selected",
+      "checked",
+      "default",
+      "value"
+    ]
+  },
+  {
+    "q": "What will happen when this form loads?",
+    "c": "<form>\n  <select name=\"country\">\n    <option value=\"USA\">USA</option>\n    <option value=\"India\" selected>India</option>\n    <option value=\"UK\">UK</option>\n  </select>\n</form>",
+    "o": [
+      "India will be pre-selected.",
+      "USA will be pre-selected.",
+      "No option will be selected.",
+      "The form will submit automatically."
+    ]
+  },
+  {
+    "q": "Which input type is used to upload files?",
+    "o": [
+      "file",
+      "upload",
+      "document",
+      "browse"
+    ]
+  },
+  {
+    "q": "What will happen when the file input field is clicked?",
+    "c": "<form>\n  <input type=\"file\" name=\"resume\">\n</form>",
+    "o": [
+      "A file selection dialog will open.",
+      "The form will be submitted.",
+      "The input will reset automatically.",
+      "An alert will be displayed."
+    ]
+  },
+  {
+    "q": "Which input type is used for password fields?",
+    "o": [
+      "password",
+      "text",
+      "hidden",
+      "secure"
+    ]
+  },
+  {
+    "q": "What happens when a user types in a password field?",
+    "c": "<form>\n  <input type=\"password\" name=\"pass\">\n</form>",
+    "o": [
+      "The input will be hidden as dots or asterisks.",
+      "The input will be visible as plain text.",
+      "The input will be automatically encrypted.",
+      "The form will submit immediately."
+    ]
+  },
+  {
+    "q": "Which attribute is used to group related form elements?",
+    "o": [
+      "fieldset",
+      "group",
+      "section",
+      "div"
+    ]
+  },
+  {
+    "q": "What is the purpose of the legend tag?",
+    "c": "<form>\n  <fieldset>\n    <legend>Personal Information</legend>\n    <input type=\"text\" name=\"name\" placeholder=\"Enter your name\">\n  </fieldset>\n</form>",
+    "o": [
+      "It provides a title for a fieldset.",
+      "It hides form elements.",
+      "It adds a tooltip to form elements.",
+      "It creates a border around input fields."
+    ]
+  },
+  {
+    "q": "Which attribute is used to associate a label with an input field?",
+    "o": [
+      "for",
+      "id",
+      "name",
+      "value"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following code?",
+    "c": "<form>\n  <label for=\"email\">Email:</label>\n  <input type=\"email\" id=\"email\" name=\"email\">\n</form>",
+    "o": [
+      "Clicking the label will focus the input field.",
+      "The label will not be linked to the input field.",
+      "An error will occur due to missing for attribute.",
+      "The label will act as a button."
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting multiple options?",
+    "o": [
+      "checkbox",
+      "radio",
+      "select",
+      "option"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following code?",
+    "c": "<form>\n  <input type=\"checkbox\" name=\"subscribe\" checked>\n</form>",
+    "o": [
+      "The checkbox will be pre-checked when the form loads.",
+      "The checkbox will be disabled.",
+      "The checkbox will not be visible.",
+      "An error will be shown."
+    ]
+  },
+  {
+    "q": "Which attribute is used to prevent a user from selecting multiple radio buttons?",
+    "o": [
+      "name",
+      "id",
+      "checked",
+      "group"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following code?",
+    "c": "<form>\n  <input type=\"radio\" name=\"gender\" value=\"male\"> Male\n  <input type=\"radio\" name=\"gender\" value=\"female\"> Female\n</form>",
+    "o": [
+      "Only one radio button can be selected at a time.",
+      "Both radio buttons can be selected at the same time.",
+      "No radio button can be selected.",
+      "The radio buttons will act as checkboxes."
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify a default value for an input field?",
+    "o": [
+      "value",
+      "default",
+      "placeholder",
+      "text"
+    ]
+  },
+  {
+    "q": "What will happen when the form loads?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" value=\"JohnDoe\">\n</form>",
+    "o": [
+      "The input field will be pre-filled with 'JohnDoe'.",
+      "The input field will be empty.",
+      "The input field will be disabled.",
+      "An error will occur."
+    ]
+  },
+  {
+    "q": "Which attribute prevents a form from being submitted when an input field is empty?",
+    "o": [
+      "required",
+      "validate",
+      "novalidate",
+      "check"
+    ]
+  },
+  {
+    "q": "Which button type is used to submit a form?",
+    "o": [
+      "submit",
+      "button",
+      "reset",
+      "send"
+    ]
+  },
+  {
+    "q": "What will be the effect of the following code?",
+    "c": "<form>\n  <button type=\"submit\">Send</button>\n</form>",
+    "o": [
+      "Clicking the button will submit the form.",
+      "Clicking the button will reset the form.",
+      "Clicking the button will not do anything.",
+      "An error will occur because 'type' is missing."
+    ]
+  },
+  {
+    "q": "Which input type is used for passwords?",
+    "o": [
+      "password",
+      "text",
+      "hidden",
+      "secure"
+    ]
+  },
+  {
+    "q": "Which attribute defines a pattern for input validation?",
+    "o": [
+      "pattern",
+      "regex",
+      "match",
+      "validate"
+    ]
+  },
+  {
+    "q": "What happens if an input does not match the specified pattern?",
+    "c": "<form>\n  <input type=\"text\" name=\"zipcode\" pattern=\"[0-9]{5}\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "A validation error will be displayed.",
+      "The form will submit successfully.",
+      "The input value will be auto-corrected.",
+      "The form will reset automatically."
+    ]
+  },
+  {
+    "q": "Which attribute limits the highest number allowed in a number input field?",
+    "o": [
+      "max",
+      "maxlength",
+      "min",
+      "limit"
+    ]
+  },
+  {
+    "q": "Which attribute ensures an input value does not go below a certain number?",
+    "o": [
+      "min",
+      "minlength",
+      "low",
+      "required"
+    ]
+  },
+  {
+    "q": "What happens when a number input exceeds the max value?",
+    "c": "<form>\n  <input type=\"number\" name=\"age\" min=\"18\" max=\"60\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "A validation error will be displayed.",
+      "The form will submit successfully.",
+      "The input value will be adjusted automatically.",
+      "The form will reset."
+    ]
+  },
+  {
+    "q": "Which attribute allows multiple file selection in a file input?",
+    "o": [
+      "multiple",
+      "many",
+      "files",
+      "select"
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a color?",
+    "o": [
+      "color",
+      "palette",
+      "picker",
+      "rgb"
+    ]
+  },
+  {
+    "q": "What happens when the color input is clicked?",
+    "c": "<form>\n  <input type=\"color\" name=\"favcolor\">\n</form>",
+    "o": [
+      "A color picker will appear.",
+      "The input field will be disabled.",
+      "A random color will be chosen.",
+      "The form will submit automatically."
+    ]
+  },
+  {
+    "q": "Which HTML5 attribute prevents autocomplete suggestions in input fields?",
+    "o": [
+      "autocomplete=\"off\"",
+      "autosuggest=\"false\"",
+      "disable-autofill",
+      "inputmode=\"manual\""
+    ]
+  },
+  {
+    "q": "Which element is used to provide hints when hovering over an input field?",
+    "o": [
+      "title",
+      "tooltip",
+      "placeholder",
+      "hint"
+    ]
+  },
+  {
+    "q": "What happens when a user hovers over the input field?",
+    "c": "<form>\n  <input type=\"text\" name=\"city\" title=\"Enter your city\">\n</form>",
+    "o": [
+      "A tooltip with 'Enter your city' will appear.",
+      "The input field will change color.",
+      "An error message will be displayed.",
+      "The input field will be disabled."
+    ]
+  },
+  {
+    "q": "Which HTML element is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<button>",
+      "<fieldset>"
+    ]
+  },
+  {
+    "q": "Which input type is used for entering an email address?",
+    "o": [
+      "email",
+      "text",
+      "password",
+      "mail"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'action' attribute in a form?",
+    "o": [
+      "Specifies where to send the form data",
+      "Defines the form validation rules",
+      "Specifies how the form should be displayed",
+      "Assigns a unique ID to the form"
+    ]
+  },
+  {
+    "q": "Which attribute is used to make an input field mandatory?",
+    "o": [
+      "required",
+      "validate",
+      "mandatory",
+      "must"
+    ]
+  },
+  {
+    "q": "What happens when the following form is submitted?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will not submit if the input is empty.",
+      "The form will submit even if the input is empty.",
+      "The input will be automatically filled.",
+      "An alert will appear."
+    ]
+  },
+  {
+    "q": "Which attribute specifies that an input field must be filled out before submitting the form?",
+    "o": [
+      "required",
+      "mandatory",
+      "validate",
+      "checked"
+    ]
+  },
+  {
+    "q": "What will happen when the following button is clicked?",
+    "c": "<form>\n  <input type=\"text\" name=\"name\">\n  <button type=\"reset\">Clear</button>\n</form>",
+    "o": [
+      "The input field will be cleared.",
+      "The form will be submitted.",
+      "The page will reload.",
+      "Nothing will happen."
+    ]
+  },
+  {
+    "q": "Which element groups related form controls together?",
+    "o": [
+      "<fieldset>",
+      "<form>",
+      "<legend>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "What does the 'novalidate' attribute do?",
+    "o": [
+      "Disables form validation",
+      "Enables advanced validation",
+      "Prevents input fields from being filled",
+      "Hides the form"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify a placeholder text inside an input field?",
+    "o": [
+      "placeholder",
+      "value",
+      "label",
+      "hint"
+    ]
+  },
+  {
+    "q": "What will happen when the form loads?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" placeholder=\"Enter your name\">\n</form>",
+    "o": [
+      "The input field will show 'Enter your name' as a hint.",
+      "The input field will be pre-filled with 'Enter your name'.",
+      "An error will be displayed.",
+      "The input field will be disabled."
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a date?",
+    "o": [
+      "date",
+      "datetime",
+      "time",
+      "calendar"
+    ]
+  },
+  {
+    "q": "What happens when the following form is submitted?",
+    "c": "<form>\n  <input type=\"number\" name=\"age\" min=\"18\" max=\"60\">\n  <input type=\"submit\">\n</form>",
+    "o": [
+      "The form will not submit if the number is outside 18-60.",
+      "The form will submit regardless of the number.",
+      "An error message will not be displayed.",
+      "The input will be automatically corrected."
+    ]
+  },
+  {
+    "q": "Which attribute prevents the user from modifying an input field?",
+    "o": [
+      "readonly",
+      "disabled",
+      "locked",
+      "static"
+    ]
+  },
+  {
+    "q": "What happens when the following form is submitted?",
+    "c": "<form>\n  <input type=\"text\" name=\"city\" readonly value=\"New York\">\n</form>",
+    "o": [
+      "The input value cannot be changed but will be submitted.",
+      "The input field is disabled.",
+      "The input will be empty in submission.",
+      "An error will be displayed."
+    ]
+  },
+  {
+    "q": "Which input type allows selecting only one option at a time?",
+    "o": [
+      "radio",
+      "checkbox",
+      "select",
+      "button"
+    ]
+  },
+  {
+    "q": "What happens when the following form is submitted?",
+    "c": "<form>\n  <input type=\"radio\" name=\"gender\" value=\"male\"> Male\n  <input type=\"radio\" name=\"gender\" value=\"female\"> Female\n</form>",
+    "o": [
+      "Only one option can be selected at a time.",
+      "Multiple options can be selected.",
+      "No option can be selected.",
+      "The radio buttons will behave like checkboxes."
+    ]
+  },
+  {
+    "q": "Which input type is used for password fields?",
+    "o": [
+      "password",
+      "text",
+      "hidden",
+      "secure"
+    ]
+  },
+  {
+    "q": "Which attribute is used to disable an input field?",
+    "o": [
+      "disabled",
+      "readonly",
+      "lock",
+      "inactive"
+    ]
+  },
+  {
+    "q": "Which attribute specifies the maximum number of characters allowed in an input field?",
+    "o": [
+      "maxlength",
+      "max",
+      "size",
+      "length"
+    ]
+  },
+  {
+    "q": "What happens when the following input field is used?",
+    "c": "<form>\n  <input type=\"text\" name=\"user\" maxlength=\"10\">\n</form>",
+    "o": [
+      "The user cannot enter more than 10 characters.",
+      "The input value will be cleared after 10 characters.",
+      "The form will show an error message after 10 characters.",
+      "The input will auto-submit after 10 characters."
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting multiple files?",
+    "o": [
+      "file",
+      "text",
+      "upload",
+      "document"
+    ]
+  },
+  {
+    "q": "Which input type is used for entering a URL?",
+    "o": [
+      "url",
+      "text",
+      "link",
+      "web"
+    ]
+  },
+  {
+    "q": "What happens when the following form is submitted?",
+    "c": "<form>\n  <input type=\"url\" name=\"website\" required>\n</form>",
+    "o": [
+      "The form will not submit if the input is not a valid URL.",
+      "The form will submit even if the input is invalid.",
+      "An error message will not be shown.",
+      "The form will reset automatically."
+    ]
+  },
+  {
+    "q": "Which button type resets all input fields to their default values?",
+    "o": [
+      "reset",
+      "clear",
+      "delete",
+      "cancel"
+    ]
+  },
+  {
+    "q": "Which attribute is used to group related input fields in a form?",
+    "o": [
+      "<fieldset>",
+      "<group>",
+      "<div>",
+      "<section>"
+    ]
+  },
+  {
+    "q": "What is the correct syntax for creating a form that submits data to 'submit.php' using the POST method?",
+    "c": "<form action=\"submit.php\" method=\"post\">\n  <input type=\"text\" name=\"username\">\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will submit data to 'submit.php' using the POST method.",
+      "The form will submit data using the GET method.",
+      "The form will not submit data.",
+      "The form will display an error."
+    ]
+  },
+  {
+    "q": "Which HTML element defines a label for an input field?",
+    "o": [
+      "<label>",
+      "<input>",
+      "<form>",
+      "<span>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'for' attribute in a <label> tag?",
+    "o": [
+      "Links the label to an input field using its 'id'.",
+      "Defines a placeholder for the input field.",
+      "Makes the label bold.",
+      "Specifies a default value for the input field."
+    ]
+  },
+  {
+    "q": "What happens when the following form is submitted?",
+    "c": "<form>\n  <label for=\"email\">Email:</label>\n  <input type=\"email\" id=\"email\" name=\"email\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will not submit if the email format is incorrect.",
+      "The form will submit even if the email format is incorrect.",
+      "The input field will not be displayed.",
+      "An alert will be shown before submission."
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a range of values?",
+    "o": [
+      "range",
+      "number",
+      "slider",
+      "scale"
+    ]
+  },
+  {
+    "q": "What will be the maximum selectable value in the following input?",
+    "c": "<input type=\"range\" min=\"0\" max=\"100\" step=\"10\">",
+    "o": [
+      "100",
+      "10",
+      "0",
+      "50"
+    ]
+  },
+  {
+    "q": "Which attribute is used to define a default value for an input field?",
+    "o": [
+      "value",
+      "default",
+      "placeholder",
+      "preload"
+    ]
+  },
+  {
+    "q": "What happens when the following input field is displayed?",
+    "c": "<input type=\"text\" name=\"username\" value=\"Guest\">",
+    "o": [
+      "The input field will display 'Guest' as the default value.",
+      "The input field will be empty by default.",
+      "The input field will be disabled.",
+      "The input field will require user input before submission."
+    ]
+  },
+  {
+    "q": "Which HTML element is used to create a dropdown list?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<list>",
+      "<option>"
+    ]
+  },
+  {
+    "q": "What happens when the following form is loaded?",
+    "c": "<form>\n  <select name=\"colors\">\n    <option value=\"red\">Red</option>\n    <option value=\"blue\" selected>Blue</option>\n    <option value=\"green\">Green</option>\n  </select>\n</form>",
+    "o": [
+      "The 'Blue' option will be selected by default.",
+      "No option will be selected by default.",
+      "The 'Red' option will be selected by default.",
+      "An error will be displayed."
+    ]
+  },
+  {
+    "q": "Which attribute is used to allow multiple file uploads?",
+    "o": [
+      "multiple",
+      "files",
+      "multi",
+      "allow-multiple"
+    ]
+  },
+  {
+    "q": "What happens when the following input field is used?",
+    "c": "<input type=\"file\" multiple>",
+    "o": [
+      "The user can select multiple files.",
+      "Only one file can be selected.",
+      "The input will not allow file selection.",
+      "The browser will show an error."
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a color?",
+    "o": [
+      "color",
+      "picker",
+      "paint",
+      "rgb"
+    ]
+  },
+  {
+    "q": "What happens when the following button is clicked?",
+    "c": "<button type=\"submit\">Submit</button>",
+    "o": [
+      "The form will be submitted.",
+      "The page will refresh.",
+      "Nothing will happen.",
+      "An alert will appear."
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify an alternative text for an image input?",
+    "o": [
+      "alt",
+      "title",
+      "placeholder",
+      "description"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'pattern' attribute in an input field?",
+    "o": [
+      "Defines a regular expression for validation.",
+      "Sets the background color of the input field.",
+      "Limits the number of characters allowed.",
+      "Automatically corrects user input."
+    ]
+  },
+  {
+    "q": "Which input type is used for a search field?",
+    "o": [
+      "search",
+      "text",
+      "query",
+      "find"
+    ]
+  },
+  {
+    "q": "What happens when the following input field is displayed?",
+    "c": "<input type=\"search\" name=\"query\">",
+    "o": [
+      "The input field is styled specifically for search queries.",
+      "The input will only accept alphanumeric characters.",
+      "The input will only accept numeric values.",
+      "The input will show a search icon by default."
+    ]
+  },
+  {
+    "q": "Which attribute specifies that an input field should automatically get focus when the page loads?",
+    "o": [
+      "autofocus",
+      "focus",
+      "active",
+      "default"
+    ]
+  },
+  {
+    "q": "What happens when the following form loads?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" autofocus>\n</form>",
+    "o": [
+      "The input field will be automatically focused.",
+      "The input field will be disabled.",
+      "The input field will be filled with a default value.",
+      "The input field will not be visible."
+    ]
+  },
+  {
+    "q": "Which attribute is used to display a tooltip when hovering over an input field?",
+    "o": [
+      "title",
+      "tooltip",
+      "hint",
+      "placeholder"
+    ]
+  },
+  {
+    "q": "What happens when the user hovers over the following input field?",
+    "c": "<input type=\"text\" title=\"Enter your name\">",
+    "o": [
+      "A tooltip with 'Enter your name' will appear.",
+      "The input field will be disabled.",
+      "The input field will be filled automatically.",
+      "The input field will change color."
+    ]
+  },
+  {
+    "q": "Which attribute is used to ensure an input field is not left empty?",
+    "o": [
+      "required",
+      "validate",
+      "mandatory",
+      "check"
+    ]
+  },
+  {
+    "q": "What will happen when the following form is submitted without entering a name?",
+    "c": "<form>\n  <label for=\"name\">Name:</label>\n  <input type=\"text\" id=\"name\" name=\"name\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will not submit and show an error.",
+      "The form will submit with an empty value.",
+      "The form will show a success message.",
+      "The form will reload the page without validation."
+    ]
+  },
+  {
+    "q": "Which HTML input type is used for entering an email address?",
+    "o": [
+      "email",
+      "text",
+      "mail",
+      "address"
+    ]
+  },
+  {
+    "q": "What will happen when a user enters 'hello' in the following email input field?",
+    "c": "<input type=\"email\" name=\"user_email\">",
+    "o": [
+      "The form will show a validation error.",
+      "The form will accept the input without any validation.",
+      "The input will be converted to a valid email format automatically.",
+      "The browser will correct the input."
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a multi-line text input field?",
+    "o": [
+      "<textarea>",
+      "<input type='text'>",
+      "<textbox>",
+      "<multiline>"
+    ]
+  },
+  {
+    "q": "What will be the number of visible rows in the following text area?",
+    "c": "<textarea rows=\"5\" cols=\"30\"></textarea>",
+    "o": [
+      "5",
+      "30",
+      "1",
+      "10"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify a default option in a dropdown list?",
+    "o": [
+      "selected",
+      "default",
+      "checked",
+      "highlighted"
+    ]
+  },
+  {
+    "q": "Which of the following is the correct way to define a password field?",
+    "o": [
+      "<input type=\"password\">",
+      "<input type=\"text\" password>",
+      "<password>",
+      "<input password=\"true\">"
+    ]
+  },
+  {
+    "q": "What will be the behavior of the following button?",
+    "c": "<button type=\"reset\">Reset</button>",
+    "o": [
+      "It will clear all inputs in the form.",
+      "It will submit the form.",
+      "It will close the form.",
+      "It will delete the form."
+    ]
+  },
+  {
+    "q": "Which attribute defines a minimum value for a number input field?",
+    "o": [
+      "min",
+      "minimum",
+      "limit",
+      "low"
+    ]
+  },
+  {
+    "q": "What is the maximum number that can be entered in the following field?",
+    "c": "<input type=\"number\" min=\"1\" max=\"10\">",
+    "o": [
+      "10",
+      "1",
+      "0",
+      "Unlimited"
+    ]
+  },
+  {
+    "q": "Which attribute is used to display a hint inside an input field?",
+    "o": [
+      "placeholder",
+      "hint",
+      "tooltip",
+      "default"
+    ]
+  },
+  {
+    "q": "What will happen when the following input field is displayed?",
+    "c": "<input type=\"text\" placeholder=\"Enter your name\">",
+    "o": [
+      "The input field will show 'Enter your name' as a hint.",
+      "The input field will be filled with 'Enter your name' permanently.",
+      "The input field will be empty.",
+      "The input field will be disabled."
+    ]
+  },
+  {
+    "q": "Which form attribute specifies where to send form data after submission?",
+    "o": [
+      "action",
+      "method",
+      "target",
+      "submit"
+    ]
+  },
+  {
+    "q": "What is the correct syntax for making a radio button checked by default?",
+    "c": "<input type=\"radio\" name=\"gender\" value=\"male\" checked>",
+    "o": [
+      "The 'male' radio button will be selected by default.",
+      "No radio button will be selected.",
+      "All radio buttons will be selected.",
+      "The browser will show an error."
+    ]
+  },
+  {
+    "q": "Which HTML attribute prevents users from changing the input field value?",
+    "o": [
+      "readonly",
+      "disabled",
+      "locked",
+      "static"
+    ]
+  },
+  {
+    "q": "What is the difference between the 'readonly' and 'disabled' attributes?",
+    "o": [
+      "readonly allows focus and selection, but disabled does not.",
+      "There is no difference.",
+      "readonly removes the input field.",
+      "disabled allows editing but prevents submission."
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a date?",
+    "o": [
+      "date",
+      "datetime",
+      "calendar",
+      "picker"
+    ]
+  },
+  {
+    "q": "What will happen when a user clicks the following button?",
+    "c": "<button type=\"button\">Click Me</button>",
+    "o": [
+      "Nothing will happen by default.",
+      "The form will be submitted.",
+      "The button will reset the form.",
+      "The button will close the page."
+    ]
+  },
+  {
+    "q": "Which attribute is used to disable a button?",
+    "o": [
+      "disabled",
+      "readonly",
+      "inactive",
+      "off"
+    ]
+  },
+  {
+    "q": "What happens when the following button is displayed?",
+    "c": "<button disabled>Submit</button>",
+    "o": [
+      "The button will be visible but not clickable.",
+      "The button will be hidden.",
+      "The button will be clickable.",
+      "The form will submit automatically."
+    ]
+  },
+  {
+    "q": "Which attribute forces an input field to accept numeric values only?",
+    "o": [
+      "type=\"number\"",
+      "type=\"text\"",
+      "type=\"digits\"",
+      "type=\"numeric\""
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify the HTTP method used when submitting a form?",
+    "o": [
+      "method",
+      "action",
+      "type",
+      "target"
+    ]
+  },
+  {
+    "q": "What is the default HTTP method for a form if no method is specified?",
+    "o": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "q": "Which attribute is used to group related form elements together?",
+    "o": [
+      "fieldset",
+      "group",
+      "set",
+      "form-group"
+    ]
+  },
+  {
+    "q": "What will be displayed when the following code is rendered?",
+    "c": "<form>\n  <fieldset>\n    <legend>Personal Information</legend>\n    <label for=\"name\">Name:</label>\n    <input type=\"text\" id=\"name\" name=\"name\">\n  </fieldset>\n</form>",
+    "o": [
+      "A labeled text input inside a bordered box with 'Personal Information' as the title.",
+      "Only a text input field.",
+      "A text input field with no label.",
+      "An input field without any visible border."
+    ]
+  },
+  {
+    "q": "Which attribute is used to ensure only numeric input in a text field?",
+    "o": [
+      "type=\"number\"",
+      "type=\"numeric\"",
+      "type=\"integer\"",
+      "type=\"digits\""
+    ]
+  },
+  {
+    "q": "What will happen if a user enters text in the following number input field?",
+    "c": "<input type=\"number\" name=\"age\">",
+    "o": [
+      "The browser will prevent non-numeric input.",
+      "The text will be accepted.",
+      "The input field will clear automatically.",
+      "The text will be converted to a number."
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a color?",
+    "o": [
+      "color",
+      "picker",
+      "palette",
+      "rgb"
+    ]
+  },
+  {
+    "q": "What will be the output when the following button is clicked?",
+    "c": "<button type=\"submit\">Submit</button>",
+    "o": [
+      "The form will be submitted.",
+      "Nothing will happen.",
+      "The form will reset.",
+      "The page will reload without submitting the form."
+    ]
+  },
+  {
+    "q": "Which attribute ensures that a password field masks the input characters?",
+    "o": [
+      "type=\"password\"",
+      "type=\"secure\"",
+      "type=\"hidden\"",
+      "type=\"mask\""
+    ]
+  },
+  {
+    "q": "What will happen when the following form is submitted?",
+    "c": "<form action=\"/submit\" method=\"post\">\n  <input type=\"text\" name=\"username\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will not submit if the text field is empty.",
+      "The form will submit with an empty value.",
+      "The form will reload the page.",
+      "An alert box will pop up."
+    ]
+  },
+  {
+    "q": "Which HTML input type is used to select a date and time?",
+    "o": [
+      "datetime-local",
+      "date",
+      "time",
+      "calendar"
+    ]
+  },
+  {
+    "q": "Which HTML form attribute specifies where to open the response after form submission?",
+    "o": [
+      "target",
+      "action",
+      "method",
+      "location"
+    ]
+  },
+  {
+    "q": "Which button type prevents form submission by default?",
+    "o": [
+      "button",
+      "submit",
+      "reset",
+      "none"
+    ]
+  },
+  {
+    "q": "What happens when a user clicks the following reset button?",
+    "c": "<form>\n  <input type=\"text\" name=\"name\" value=\"John Doe\">\n  <input type=\"reset\" value=\"Reset\">\n</form>",
+    "o": [
+      "The input field value will reset to 'John Doe'.",
+      "The form will be submitted.",
+      "The browser will reload the page.",
+      "Nothing will happen."
+    ]
+  },
+  {
+    "q": "Which form element allows users to select multiple options?",
+    "o": [
+      "checkbox",
+      "radio",
+      "select",
+      "textarea"
+    ]
+  },
+  {
+    "q": "Which HTML attribute specifies a predefined list of valid input values?",
+    "o": [
+      "list",
+      "options",
+      "choices",
+      "suggestions"
+    ]
+  },
+  {
+    "q": "What will be the behavior of the following input field?",
+    "c": "<input type=\"text\" list=\"browsers\">\n<datalist id=\"browsers\">\n  <option value=\"Chrome\">\n  <option value=\"Firefox\">\n  <option value=\"Safari\">\n</datalist>",
+    "o": [
+      "The input field will show a dropdown with predefined options.",
+      "The input field will behave like a normal text input.",
+      "The user can only select options from the list.",
+      "The input field will be disabled."
+    ]
+  },
+  {
+    "q": "Which form attribute helps in autofilling fields based on previously entered values?",
+    "o": [
+      "autocomplete",
+      "autofill",
+      "prefill",
+      "memory"
+    ]
+  },
+  {
+    "q": "What does the 'novalidate' attribute do in a form?",
+    "o": [
+      "It disables form validation.",
+      "It prevents form submission.",
+      "It hides error messages.",
+      "It makes all fields optional."
+    ]
+  },
+  {
+    "q": "What happens when a user submits the following form?",
+    "c": "<form action=\"/submit\" method=\"post\" novalidate>\n  <input type=\"email\" name=\"email\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will be submitted even if the email field is invalid.",
+      "The form will not submit.",
+      "The browser will show a validation error.",
+      "The email input will be checked before submission."
+    ]
+  },
+  {
+    "q": "Which form element allows users to upload files?",
+    "o": [
+      "<input type=\"file\">",
+      "<upload>",
+      "<file>",
+      "<input type=\"upload\">"
+    ]
+  },
+  {
+    "q": "Which attribute specifies the maximum number of characters allowed in an input field?",
+    "o": [
+      "maxlength",
+      "maxchars",
+      "length",
+      "limit"
+    ]
+  },
+  {
+    "q": "What is the default method for form submission if no method is specified?",
+    "o": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "q": "Which form attribute ensures that a field must be completed before submission?",
+    "o": [
+      "required",
+      "validate",
+      "mustfill",
+      "mandatory"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<fieldset>",
+      "<label>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'action' attribute in a form?",
+    "o": [
+      "Specifies where to send the form data.",
+      "Defines the form layout.",
+      "Validates the form inputs.",
+      "Links the form to a database."
+    ]
+  },
+  {
+    "q": "Which HTML input type allows users to select only one option from multiple choices?",
+    "o": [
+      "radio",
+      "checkbox",
+      "select",
+      "option"
+    ]
+  },
+  {
+    "q": "What will be displayed when the following code is rendered?",
+    "c": "<form>\n  <label for=\"email\">Email:</label>\n  <input type=\"email\" id=\"email\" name=\"email\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "A form with an email input field and a submit button.",
+      "A form with a text input field and a submit button.",
+      "A form with only a submit button.",
+      "A form with an email input but no submit button."
+    ]
+  },
+  {
+    "q": "Which input type is used to select a date?",
+    "o": [
+      "date",
+      "datetime",
+      "calendar",
+      "datepicker"
+    ]
+  },
+  {
+    "q": "What will be the result of clicking the following reset button?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" value=\"John\">\n  <input type=\"reset\" value=\"Reset\">\n</form>",
+    "o": [
+      "The input field will reset to 'John'.",
+      "The form will be submitted.",
+      "Nothing will happen.",
+      "The page will refresh."
+    ]
+  },
+  {
+    "q": "Which HTML attribute prevents a user from editing an input field?",
+    "o": [
+      "readonly",
+      "disabled",
+      "locked",
+      "static"
+    ]
+  },
+  {
+    "q": "What happens if a user submits the following form without filling in the input field?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The browser will show a validation error.",
+      "The form will be submitted with an empty value.",
+      "The form will be submitted without validation.",
+      "An alert box will pop up."
+    ]
+  },
+  {
+    "q": "Which button type is used to clear form inputs?",
+    "o": [
+      "reset",
+      "submit",
+      "clear",
+      "button"
+    ]
+  },
+  {
+    "q": "Which attribute allows users to select multiple files in a file input field?",
+    "o": [
+      "multiple",
+      "files",
+      "select",
+      "many"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'placeholder' attribute in an input field?",
+    "o": [
+      "Displays a hint text inside the input field.",
+      "Defines a default value.",
+      "Marks the field as required.",
+      "Specifies the input type."
+    ]
+  },
+  {
+    "q": "What will happen if a user clicks the following submit button?",
+    "c": "<form action=\"/submit\" method=\"get\">\n  <input type=\"text\" name=\"username\">\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form data will be sent using a GET request.",
+      "The form data will be sent using a POST request.",
+      "Nothing will happen.",
+      "The form will reset."
+    ]
+  },
+  {
+    "q": "Which attribute ensures that an input field is focused when the page loads?",
+    "o": [
+      "autofocus",
+      "focus",
+      "selected",
+      "default"
+    ]
+  },
+  {
+    "q": "Which HTML input type is used for creating a password field?",
+    "o": [
+      "password",
+      "secure",
+      "hidden",
+      "masked"
+    ]
+  },
+  {
+    "q": "What will happen if a user tries to submit the following form without checking the checkbox?",
+    "c": "<form>\n  <input type=\"checkbox\" id=\"agree\" name=\"agree\" required>\n  <label for=\"agree\">I agree to the terms</label>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form will not submit.",
+      "The form will submit with an unchecked checkbox.",
+      "An alert box will appear.",
+      "The form will reset."
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a dropdown list?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<option>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "Which attribute in the form tag disables browser validation?",
+    "o": [
+      "novalidate",
+      "disable-validation",
+      "ignore-validation",
+      "no-check"
+    ]
+  },
+  {
+    "q": "Which input type allows users to enter a URL?",
+    "o": [
+      "url",
+      "link",
+      "web",
+      "href"
+    ]
+  },
+  {
+    "q": "What will happen when the following button is clicked?",
+    "c": "<button type=\"button\" onclick=\"alert('Hello!')\">Click Me</button>",
+    "o": [
+      "An alert box with 'Hello!' will appear.",
+      "The form will be submitted.",
+      "The page will reload.",
+      "Nothing will happen."
+    ]
+  },
+  {
+    "q": "Which attribute specifies that an input field should only accept numbers?",
+    "o": [
+      "type=\"number\"",
+      "type=\"integer\"",
+      "type=\"digits\"",
+      "type=\"numeric\""
+    ]
+  },
+  {
+    "q": "Which attribute defines a default value in an input field?",
+    "o": [
+      "value",
+      "default",
+      "placeholder",
+      "preset"
+    ]
+  },
+  {
+    "q": "Which HTML element groups related form controls together?",
+    "o": [
+      "fieldset",
+      "group",
+      "set",
+      "form-group"
+    ]
+  },
+  {
+    "q": "Which attribute limits the number of characters a user can enter?",
+    "o": [
+      "maxlength",
+      "length",
+      "maxchar",
+      "limit"
+    ]
+  },
+  {
+    "q": "Which attribute is used to associate a label with an input field?",
+    "o": [
+      "for",
+      "id",
+      "name",
+      "label"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'method' attribute in a form?",
+    "o": [
+      "Defines how form data is sent (GET or POST).",
+      "Specifies the form layout.",
+      "Validates the form inputs.",
+      "Links the form to JavaScript."
+    ]
+  },
+  {
+    "q": "What is the output of the following code?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" required>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A form with a text input field and a submit button.",
+      "A form with only a submit button.",
+      "An empty form.",
+      "An input field without a submit button."
+    ]
+  },
+  {
+    "q": "Which HTML input type allows users to choose multiple options?",
+    "o": [
+      "checkbox",
+      "radio",
+      "select",
+      "toggle"
+    ]
+  },
+  {
+    "q": "What happens if a user submits the following form without selecting a file?",
+    "c": "<form>\n  <input type=\"file\" name=\"upload\" required>\n  <input type=\"submit\" value=\"Upload\">\n</form>",
+    "o": [
+      "The browser will show a validation error.",
+      "The form will submit with an empty value.",
+      "The form will reset.",
+      "An alert box will pop up."
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a color?",
+    "o": [
+      "color",
+      "palette",
+      "picker",
+      "rgb"
+    ]
+  },
+  {
+    "q": "What is the correct way to define a submit button in a form?",
+    "o": [
+      "<button type=\"submit\">Submit</button>",
+      "<button>Submit</button>",
+      "<input type=\"button\" value=\"Submit\">",
+      "<submit>Submit</submit>"
+    ]
+  },
+  {
+    "q": "Which HTML attribute specifies that an input field should not be editable?",
+    "o": [
+      "readonly",
+      "disabled",
+      "static",
+      "lock"
+    ]
+  },
+  {
+    "q": "What is the output of the following form when submitted?",
+    "c": "<form action=\"/search\" method=\"get\">\n  <input type=\"text\" name=\"query\" value=\"HTML\">\n  <input type=\"submit\" value=\"Search\">\n</form>",
+    "o": [
+      "The URL will contain '?query=HTML'.",
+      "The form data will be sent via a POST request.",
+      "The form will be submitted without data.",
+      "The form will not submit."
+    ]
+  },
+  {
+    "q": "Which attribute makes a form field mandatory?",
+    "o": [
+      "required",
+      "mandatory",
+      "validate",
+      "needed"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to group form controls together?",
+    "o": [
+      "fieldset",
+      "group",
+      "div",
+      "form-group"
+    ]
+  },
+  {
+    "q": "What will happen when the following button is clicked?",
+    "c": "<button type=\"reset\">Reset</button>",
+    "o": [
+      "The form fields will be cleared.",
+      "The form will be submitted.",
+      "Nothing will happen.",
+      "An alert box will appear."
+    ]
+  },
+  {
+    "q": "Which input type is used for entering an email address?",
+    "o": [
+      "email",
+      "text",
+      "mail",
+      "address"
+    ]
+  },
+  {
+    "q": "Which attribute is used to suggest possible input values?",
+    "o": [
+      "list",
+      "datalist",
+      "autocomplete",
+      "options"
+    ]
+  },
+  {
+    "q": "What will happen when a user clicks the following button?",
+    "c": "<button type=\"button\" onclick=\"alert('Hello!')\">Click Me</button>",
+    "o": [
+      "An alert box with 'Hello!' will appear.",
+      "The form will be submitted.",
+      "The page will refresh.",
+      "Nothing will happen."
+    ]
+  },
+  {
+    "q": "Which attribute is used to disable an input field?",
+    "o": [
+      "disabled",
+      "readonly",
+      "hide",
+      "locked"
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a range of values?",
+    "o": [
+      "range",
+      "slider",
+      "scroll",
+      "select"
+    ]
+  },
+  {
+    "q": "Which attribute limits the number of characters in an input field?",
+    "o": [
+      "maxlength",
+      "length",
+      "maxchar",
+      "limit"
+    ]
+  },
+  {
+    "q": "What happens if a user submits the following form with an invalid email?",
+    "c": "<form>\n  <input type=\"email\" name=\"user_email\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The browser will display a validation error.",
+      "The form will be submitted.",
+      "An alert box will pop up.",
+      "The page will refresh."
+    ]
+  },
+  {
+    "q": "Which attribute helps browsers auto-fill input fields?",
+    "o": [
+      "autocomplete",
+      "autofill",
+      "autopredict",
+      "autosuggest"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create a dropdown list?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<option>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "Which input type is used for entering a password?",
+    "o": [
+      "password",
+      "secure",
+      "hidden",
+      "masked"
+    ]
+  },
+  {
+    "q": "Which input type ensures users enter a valid phone number?",
+    "o": [
+      "tel",
+      "number",
+      "phone",
+      "contact"
+    ]
+  },
+  {
+    "q": "Which form attribute disables browser validation?",
+    "o": [
+      "novalidate",
+      "disable-validation",
+      "ignore-validation",
+      "no-check"
+    ]
+  },
+  {
+    "q": "Which HTML element provides a description for an input field?",
+    "o": [
+      "label",
+      "title",
+      "hint",
+      "caption"
+    ]
+  },
+  {
+    "q": "Which input type allows users to select a file?",
+    "o": [
+      "file",
+      "document",
+      "upload",
+      "picker"
+    ]
+  },
+  {
+    "q": "Which attribute is used to focus an input field when the page loads?",
+    "o": [
+      "autofocus",
+      "focus",
+      "selected",
+      "default"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<fieldset>",
+      "<button>"
+    ]
+  },
+  {
+    "q": "Which input type allows users to select only one option from multiple choices?",
+    "o": [
+      "radio",
+      "checkbox",
+      "select",
+      "button"
+    ]
+  },
+  {
+    "q": "What will be displayed by the following form when rendered in a browser?",
+    "c": "<form>\n  <input type=\"text\" placeholder=\"Enter your name\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A text input with a placeholder and a submit button.",
+      "An empty form.",
+      "A form with only a submit button.",
+      "An error message."
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify that an input field must be filled before submitting?",
+    "o": [
+      "required",
+      "validate",
+      "mandatory",
+      "checked"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'action' attribute in a form?",
+    "o": [
+      "Defines where form data is sent.",
+      "Validates form input.",
+      "Specifies form layout.",
+      "Links the form to JavaScript."
+    ]
+  },
+  {
+    "q": "Which form input type hides user input while typing?",
+    "o": [
+      "password",
+      "hidden",
+      "text",
+      "secure"
+    ]
+  },
+  {
+    "q": "What will happen if the following form is submitted without entering any text?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" required>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A validation error will be shown.",
+      "The form will be submitted successfully.",
+      "The form will refresh the page.",
+      "An alert box will appear."
+    ]
+  },
+  {
+    "q": "Which attribute is used to prevent an input field from being edited?",
+    "o": [
+      "readonly",
+      "disabled",
+      "static",
+      "lock"
+    ]
+  },
+  {
+    "q": "What will be the output when clicking the following button?",
+    "c": "<button type=\"button\" onclick=\"alert('Form Submitted!')\">Click Me</button>",
+    "o": [
+      "An alert box saying 'Form Submitted!' will appear.",
+      "The form will be submitted.",
+      "The page will refresh.",
+      "Nothing will happen."
+    ]
+  },
+  {
+    "q": "Which HTML element groups related form controls together?",
+    "o": [
+      "fieldset",
+      "div",
+      "form",
+      "group"
+    ]
+  },
+  {
+    "q": "What will happen when clicking the following button?",
+    "c": "<button type=\"reset\">Reset</button>",
+    "o": [
+      "The form fields will be cleared.",
+      "The form will be submitted.",
+      "Nothing will happen.",
+      "An alert box will appear."
+    ]
+  },
+  {
+    "q": "Which attribute is used to prefill an input field with a default value?",
+    "o": [
+      "value",
+      "placeholder",
+      "default",
+      "prefill"
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a date?",
+    "o": [
+      "date",
+      "datetime",
+      "calendar",
+      "time"
+    ]
+  },
+  {
+    "q": "What will happen when a user submits this form?",
+    "c": "<form>\n  <input type=\"email\" name=\"user_email\" required>\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The browser will show a validation error if an invalid email is entered.",
+      "The form will be submitted regardless of input.",
+      "An alert box will appear.",
+      "The page will refresh."
+    ]
+  },
+  {
+    "q": "Which input type allows users to enter a number only?",
+    "o": [
+      "number",
+      "text",
+      "integer",
+      "range"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to define an option in a dropdown list?",
+    "o": [
+      "<option>",
+      "<select>",
+      "<choice>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to create a dropdown menu?",
+    "o": [
+      "<select>",
+      "<dropdown>",
+      "<option>",
+      "<list>"
+    ]
+  },
+  {
+    "q": "What will be the output of this form when submitted?",
+    "c": "<form action=\"/submit\" method=\"post\">\n  <input type=\"text\" name=\"username\">\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form data will be sent via a POST request.",
+      "The form data will be added to the URL.",
+      "The form will not submit.",
+      "An error will occur."
+    ]
+  },
+  {
+    "q": "Which input type allows users to select multiple files for upload?",
+    "o": [
+      "file with multiple attribute",
+      "file",
+      "upload",
+      "document"
+    ]
+  },
+  {
+    "q": "Which attribute enables an input field to receive focus when the page loads?",
+    "o": [
+      "autofocus",
+      "focus",
+      "selected",
+      "default"
+    ]
+  },
+  {
+    "q": "What happens if a user enters text instead of a number in the following input field?",
+    "c": "<input type=\"number\" name=\"age\">",
+    "o": [
+      "The browser will prevent non-numeric input.",
+      "The input will accept text values.",
+      "An error message will appear.",
+      "The page will reload."
+    ]
+  },
+  {
+    "q": "Which attribute allows users to select multiple options in a dropdown list?",
+    "o": [
+      "multiple",
+      "multiselect",
+      "multi",
+      "selectmany"
+    ]
+  },
+  {
+    "q": "Which HTML element provides a caption for a fieldset?",
+    "o": [
+      "<legend>",
+      "<caption>",
+      "<title>",
+      "<label>"
+    ]
+  },
+  {
+    "q": "Which HTML tag is used to create an input field in a form?",
+    "o": [
+      "<input>",
+      "<form>",
+      "<label>",
+      "<textarea>"
+    ]
+  },
+  {
+    "q": "What type of input field is created using the following code?",
+    "c": "<input type=\"email\" name=\"user_email\" required>",
+    "o": [
+      "An email input field that requires a valid email format.",
+      "A text input field.",
+      "A password input field.",
+      "A numeric input field."
+    ]
+  },
+  {
+    "q": "Which attribute specifies where to send the form data when submitted?",
+    "o": [
+      "action",
+      "method",
+      "target",
+      "href"
+    ]
+  },
+  {
+    "q": "Which input type allows users to select multiple options at once?",
+    "o": [
+      "checkbox",
+      "radio",
+      "select",
+      "button"
+    ]
+  },
+  {
+    "q": "What does the 'required' attribute do in an input field?",
+    "o": [
+      "Prevents form submission if the field is empty.",
+      "Makes the input field readonly.",
+      "Automatically fills the input field with a default value.",
+      "Hides the input field from users."
+    ]
+  },
+  {
+    "q": "Which button type resets all form inputs to their default values?",
+    "o": [
+      "reset",
+      "submit",
+      "button",
+      "clear"
+    ]
+  },
+  {
+    "q": "What will happen when a user clicks the button in the following form?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "The form data will be submitted.",
+      "The input field will be cleared.",
+      "The page will reload without submitting data.",
+      "Nothing will happen."
+    ]
+  },
+  {
+    "q": "Which attribute ensures that an input field contains a minimum number of characters?",
+    "o": [
+      "minlength",
+      "maxlength",
+      "pattern",
+      "size"
+    ]
+  },
+  {
+    "q": "What type of input field is created with this code?",
+    "c": "<input type=\"range\" min=\"0\" max=\"100\">",
+    "o": [
+      "A slider that allows selection between 0 and 100.",
+      "A numeric input field.",
+      "A password input field.",
+      "A dropdown selection field."
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'novalidate' attribute in a form?",
+    "o": [
+      "Disables browser validation of input fields.",
+      "Forces all input fields to be required.",
+      "Enables server-side validation only.",
+      "Automatically submits the form."
+    ]
+  },
+  {
+    "q": "Which form attribute defines how form data should be encoded when submitted?",
+    "o": [
+      "enctype",
+      "method",
+      "action",
+      "target"
+    ]
+  },
+  {
+    "q": "Which attribute in an input field provides a hint to the user?",
+    "o": [
+      "placeholder",
+      "value",
+      "hint",
+      "title"
+    ]
+  },
+  {
+    "q": "What will be the output when the following form is submitted?",
+    "c": "<form>\n  <input type=\"number\" name=\"age\" min=\"18\" max=\"60\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "The form will only accept values between 18 and 60.",
+      "The form will accept any number.",
+      "The input field will be hidden.",
+      "An error will occur."
+    ]
+  },
+  {
+    "q": "Which input type is used to upload a file?",
+    "o": [
+      "file",
+      "upload",
+      "document",
+      "data"
+    ]
+  },
+  {
+    "q": "What will happen if the following form is submitted?",
+    "c": "<form action=\"/submit\" method=\"get\">\n  <input type=\"text\" name=\"username\">\n  <input type=\"submit\" value=\"Submit\">\n</form>",
+    "o": [
+      "The form data will be sent as URL parameters.",
+      "The form data will be sent in the request body.",
+      "The form will not submit.",
+      "The browser will display an error."
+    ]
+  },
+  {
+    "q": "Which form method sends data in the request body instead of the URL?",
+    "o": [
+      "POST",
+      "GET",
+      "PUT",
+      "DELETE"
+    ]
+  },
+  {
+    "q": "What does the 'autocomplete' attribute do in a form?",
+    "o": [
+      "Allows the browser to suggest previously entered values.",
+      "Automatically fills the input field with a default value.",
+      "Forces the user to enter new data.",
+      "Hides the input field."
+    ]
+  },
+  {
+    "q": "Which attribute ensures an input field contains a specific pattern of characters?",
+    "o": [
+      "pattern",
+      "maxlength",
+      "validate",
+      "format"
+    ]
+  },
+  {
+    "q": "Which input type is used for selecting a time?",
+    "o": [
+      "time",
+      "datetime",
+      "clock",
+      "hour"
+    ]
+  },
+  {
+    "q": "What will happen if the following form is submitted without filling in the input field?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" required>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A validation error will be shown.",
+      "The form will submit successfully.",
+      "The page will reload without submitting data.",
+      "An alert box will appear."
+    ]
+  },
+  {
+    "q": "Which HTML element defines a label for an input field?",
+    "o": [
+      "<label>",
+      "<span>",
+      "<legend>",
+      "<caption>"
+    ]
+  },
+  {
+    "q": "Which button type submits a form when clicked?",
+    "o": [
+      "submit",
+      "button",
+      "reset",
+      "click"
+    ]
+  },
+  {
+    "q": "Which form input type provides a list of predefined options?",
+    "o": [
+      "datalist",
+      "select",
+      "radio",
+      "checkbox"
+    ]
+  },
+  {
+    "q": "Which input attribute is used to specify a predefined value?",
+    "o": [
+      "value",
+      "placeholder",
+      "default",
+      "preset"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<fieldset>",
+      "<button>"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'name' attribute in an input field?",
+    "o": [
+      "It identifies the input field when form data is submitted.",
+      "It sets a default value for the input field.",
+      "It specifies a placeholder for the input field.",
+      "It makes the field required."
+    ]
+  },
+  {
+    "q": "Which input type is used to enter a password?",
+    "c": "<input type=\"password\" name=\"user_password\">",
+    "o": [
+      "A password input field where text is masked.",
+      "A text input field.",
+      "A numeric input field.",
+      "An email input field."
+    ]
+  },
+  {
+    "q": "Which attribute prevents users from editing an input field?",
+    "o": [
+      "readonly",
+      "disabled",
+      "locked",
+      "static"
+    ]
+  },
+  {
+    "q": "What is the function of the 'maxlength' attribute?",
+    "o": [
+      "It limits the number of characters a user can enter.",
+      "It sets the minimum number of characters required.",
+      "It makes an input field mandatory.",
+      "It restricts input to only numeric values."
+    ]
+  },
+  {
+    "q": "What does the following code do?",
+    "c": "<input type=\"checkbox\" name=\"subscribe\" checked>",
+    "o": [
+      "Displays a checked checkbox by default.",
+      "Displays an unchecked checkbox by default.",
+      "Creates a radio button.",
+      "Creates a disabled checkbox."
+    ]
+  },
+  {
+    "q": "Which attribute is used to group radio buttons together?",
+    "c": "<input type=\"radio\" name=\"gender\" value=\"male\">\n<input type=\"radio\" name=\"gender\" value=\"female\">",
+    "o": [
+      "The 'name' attribute groups radio buttons.",
+      "The 'group' attribute groups radio buttons.",
+      "The 'type' attribute groups radio buttons.",
+      "The 'checked' attribute groups radio buttons."
+    ]
+  },
+  {
+    "q": "What happens when a user clicks the following button?",
+    "c": "<button type=\"reset\">Reset</button>",
+    "o": [
+      "It resets all form fields to their default values.",
+      "It submits the form.",
+      "It disables the form fields.",
+      "It refreshes the webpage."
+    ]
+  },
+  {
+    "q": "Which input type allows users to select a color?",
+    "o": [
+      "color",
+      "picker",
+      "palette",
+      "select"
+    ]
+  },
+  {
+    "q": "Which attribute is used to associate a label with an input field?",
+    "c": "<label for=\"email\">Email:</label>\n<input type=\"email\" id=\"email\">",
+    "o": [
+      "The 'for' attribute links a label to an input field.",
+      "The 'name' attribute links a label to an input field.",
+      "The 'placeholder' attribute links a label to an input field.",
+      "The 'value' attribute links a label to an input field."
+    ]
+  },
+  {
+    "q": "Which input type is used to select a date?",
+    "c": "<input type=\"date\" name=\"birthdate\">",
+    "o": [
+      "A date picker allowing users to select a date.",
+      "A numeric input field.",
+      "A text input field.",
+      "A dropdown selection field."
+    ]
+  },
+  {
+    "q": "What will happen if the following form is submitted without selecting a file?",
+    "c": "<form>\n  <input type=\"file\" name=\"document\" required>\n  <button type=\"submit\">Upload</button>\n</form>",
+    "o": [
+      "A validation error will occur.",
+      "The form will submit successfully.",
+      "The file input will be ignored.",
+      "The browser will crash."
+    ]
+  },
+  {
+    "q": "Which form attribute specifies the HTTP method used to submit data?",
+    "o": [
+      "method",
+      "action",
+      "enctype",
+      "target"
+    ]
+  },
+  {
+    "q": "What will the following code do?",
+    "c": "<input type=\"text\" name=\"username\" autofocus>",
+    "o": [
+      "Automatically focuses the input field when the page loads.",
+      "Makes the input field required.",
+      "Disables the input field.",
+      "Clears the input field on page load."
+    ]
+  },
+  {
+    "q": "Which input type is best for selecting a number within a defined range?",
+    "c": "<input type=\"number\" name=\"quantity\" min=\"1\" max=\"10\">",
+    "o": [
+      "A numeric input field with a restricted range.",
+      "A text input field.",
+      "A dropdown selection field.",
+      "A slider input field."
+    ]
+  },
+  {
+    "q": "What does the 'pattern' attribute do in an input field?",
+    "o": [
+      "It defines a regular expression for input validation.",
+      "It sets a default value for the input field.",
+      "It limits the number of characters in an input field.",
+      "It makes the input field required."
+    ]
+  },
+  {
+    "q": "What does the following HTML code do?",
+    "c": "<form action=\"submit.php\" target=\"_blank\">\n  <input type=\"text\" name=\"name\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "Opens the form submission result in a new tab or window.",
+      "Submits the form via JavaScript.",
+      "Prevents the form from being submitted.",
+      "Clears the form after submission."
+    ]
+  },
+  {
+    "q": "Which attribute disables an input field so users cannot enter data?",
+    "o": [
+      "disabled",
+      "readonly",
+      "lock",
+      "hidden"
+    ]
+  },
+  {
+    "q": "What does the following code do?",
+    "c": "<input type=\"hidden\" name=\"token\" value=\"12345\">",
+    "o": [
+      "Stores a hidden value that is sent with form submission.",
+      "Hides the input field but makes it visible on focus.",
+      "Disables the input field.",
+      "Displays a password input field."
+    ]
+  },
+  {
+    "q": "Which input type is used for a search field?",
+    "c": "<input type=\"search\" name=\"query\">",
+    "o": [
+      "A search input field.",
+      "A text input field.",
+      "A password input field.",
+      "A dropdown selection field."
+    ]
+  },
+  {
+    "q": "What happens when the following form is submitted?",
+    "c": "<form action=\"/submit\" method=\"post\">\n  <input type=\"text\" name=\"username\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "The form data is sent in the request body.",
+      "The form data is sent in the URL parameters.",
+      "The form submission fails.",
+      "The form data is stored in cookies."
+    ]
+  },
+  {
+    "q": "Which input type allows users to pick multiple files?",
+    "c": "<input type=\"file\" name=\"files\" multiple>",
+    "o": [
+      "Allows users to upload multiple files.",
+      "Allows users to upload only a single file.",
+      "Creates a read-only file input.",
+      "Creates a password input field."
+    ]
+  },
+  {
+    "q": "Which button type does not submit the form by default?",
+    "o": [
+      "button",
+      "submit",
+      "reset",
+      "action"
+    ]
+  },
+  {
+    "q": "What is the correct HTML tag to create a form?",
+    "o": [
+      "<form>",
+      "<input>",
+      "<section>",
+      "<div>"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "c": "<form onsubmit=\"alert('Form submitted!')\">\n  <input type=\"text\" required>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "An alert saying 'Form submitted!' when the form is submitted",
+      "The form will automatically redirect to a new page",
+      "The form cannot be submitted because it lacks an action attribute",
+      "Nothing happens when the form is submitted"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify where to send the form data when a form is submitted?",
+    "o": [
+      "action",
+      "method",
+      "target",
+      "submit"
+    ]
+  },
+  {
+    "q": "What is the correct HTML for creating a checkbox?",
+    "o": [
+      "<input type=\"checkbox\">",
+      "<input type=\"check\">",
+      "<checkbox>",
+      "<input type=\"button\">"
+    ]
+  },
+  {
+    "q": "What does the following code snippet do?",
+    "c": "<form>\n  <input type=\"text\" pattern=\"[A-Za-z]{3}\" title=\"Three letter country code\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "Validates that the input contains exactly 3 letters",
+      "Allows any three characters to be submitted",
+      "Restricts the input to uppercase letters only",
+      "Makes the input field required"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to make a form input field mandatory?",
+    "o": [
+      "required",
+      "mandatory",
+      "important",
+      "validation"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "c": "<form>\n  <select name=\"cars\">\n    <option value=\"volvo\">Volvo</option>\n    <option value=\"saab\">Saab</option>\n    <option value=\"mercedes\">Mercedes</option>\n    <option value=\"audi\">Audi</option>\n  </select>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A dropdown menu with four car options and a submit button",
+      "Four buttons labeled with car names",
+      "A text field that only accepts car names",
+      "A multi-select list of cars"
+    ]
+  },
+  {
+    "q": "Which HTML form element creates a button that clears all form fields?",
+    "o": [
+      "<button type=\"reset\">",
+      "<button type=\"clear\">",
+      "<input type=\"reset\">",
+      "<input type=\"clear\">"
+    ]
+  },
+  {
+    "q": "What is the result of the following code snippet?",
+    "c": "<form>\n  <input type=\"text\" id=\"username\" minlength=\"5\" maxlength=\"10\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "The input will only accept between 5 and 10 characters",
+      "The input will accept exactly 5 characters",
+      "The input will be automatically filled with 5 characters",
+      "The input will be disabled after 10 keystrokes"
+    ]
+  },
+  {
+    "q": "What is the purpose of the <fieldset> element in HTML forms?",
+    "o": [
+      "To group related form elements together",
+      "To create a text input field",
+      "To validate form data",
+      "To submit form data to a server"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "c": "<form>\n  <fieldset>\n    <legend>Personal Information</legend>\n    <label for=\"name\">Name:</label>\n    <input type=\"text\" id=\"name\">\n  </fieldset>\n</form>",
+    "o": [
+      "A grouped form section with a 'Personal Information' heading containing a name input field",
+      "A form with two separate text fields",
+      "A form that cannot be submitted until the name field is filled",
+      "An error because fieldset cannot be used inside forms"
+    ]
+  },
+  {
+    "q": "Which HTML input type is specifically designed for email addresses?",
+    "o": [
+      "email",
+      "text",
+      "address",
+      "mail"
+    ]
+  },
+  {
+    "q": "What will happen when the following form is submitted?",
+    "c": "<form action=\"/submit.php\" method=\"post\" novalidate>\n  <input type=\"email\" required>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "The form will submit regardless of input validation",
+      "The form will validate the email format before submission",
+      "The form will not submit without a valid email",
+      "The form will show an error message"
+    ]
+  },
+  {
+    "q": "Which attribute is used to create a placeholder text in an input field?",
+    "o": [
+      "placeholder",
+      "value",
+      "default",
+      "text"
+    ]
+  },
+  {
+    "q": "What does the following code snippet create?",
+    "c": "<form>\n  <input type=\"range\" min=\"0\" max=\"100\" step=\"10\" value=\"30\">\n</form>",
+    "o": [
+      "A slider control with values from 0 to 100 in steps of 10, defaulting to 30",
+      "A number input field limited to values between 0 and 100",
+      "A progress bar showing 30% completion",
+      "A text field that only accepts numbers between 0 and 100"
+    ]
+  },
+  {
+    "q": "Which HTML element is used to provide a caption or heading for a form?",
+    "o": [
+      "<legend>",
+      "<caption>",
+      "<title>",
+      "<header>"
+    ]
+  },
+  {
+    "q": "What does the following form validation code do?",
+    "c": "<form>\n  <input type=\"number\" min=\"1\" max=\"10\" step=\"0.5\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "Restricts input to numbers between 1 and 10 with increments of 0.5",
+      "Only allows whole numbers between 1 and 10",
+      "Creates a slider with values from 1 to 10",
+      "Displays an error if any number is entered"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'autocomplete' attribute in HTML forms?",
+    "o": [
+      "To enable or disable the browser's autocomplete functionality for form fields",
+      "To automatically submit the form when all fields are completed",
+      "To validate form data automatically",
+      "To clear form fields automatically after submission"
+    ]
+  },
+  {
+    "q": "What will the following code snippet display?",
+    "c": "<form>\n  <label for=\"birthday\">Birthday:</label>\n  <input type=\"date\" id=\"birthday\" name=\"birthday\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A date picker control with a label and submit button",
+      "A text field that accepts any format of date",
+      "A calendar widget without a submit button",
+      "An error because 'date' is not a valid input type"
+    ]
+  },
+  {
+    "q": "Which attribute is used to specify a regular expression that an input field's value must match?",
+    "o": [
+      "pattern",
+      "regex",
+      "validate",
+      "match"
+    ]
+  },
+  {
+    "q": "What is the result of the following code?",
+    "c": "<form>\n  <input type=\"text\" name=\"username\" value=\"defaultUser\" readonly>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A non-editable text field showing 'defaultUser' with a submit button",
+      "A text field that resets to 'defaultUser' when edited",
+      "A hidden field that will submit the value 'defaultUser'",
+      "A username field that cannot be submitted"
+    ]
+  },
+  {
+    "q": "Which HTML input type creates a color picker?",
+    "o": [
+      "color",
+      "palette",
+      "picker",
+      "rgb"
+    ]
+  },
+  {
+    "q": "What will be displayed with this code snippet?",
+    "c": "<form>\n  <textarea rows=\"4\" cols=\"50\">\nDefault text here\n  </textarea>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A multi-line text area with 'Default text here' pre-filled",
+      "A single-line text input with 'Default text here' as placeholder",
+      "A text area that can only be 4 characters wide and 50 lines tall",
+      "A disabled text area with default text"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'formaction' attribute on a submit button?",
+    "o": [
+      "To override the form's action attribute for that specific button",
+      "To validate the form before submission",
+      "To specify JavaScript to run when the button is clicked",
+      "To reset the form to default values"
+    ]
+  },
+  {
+    "q": "What will the following code do?",
+    "c": "<form id=\"myForm\">\n  <input type=\"text\" required>\n</form>\n<button type=\"submit\" form=\"myForm\">Submit Outside</button>",
+    "o": [
+      "Create a button outside the form that submits the form with ID 'myForm'",
+      "Create a button that doesn't work because submit buttons must be inside forms",
+      "Create a form that cannot be submitted",
+      "Generate a JavaScript error"
+    ]
+  },
+  {
+    "q": "Which attribute can be used on the <form> element to perform client-side validation before submission?",
+    "o": [
+      "onsubmit",
+      "validate",
+      "onvalidate",
+      "beforesubmit"
+    ]
+  },
+  {
+    "q": "What does the following code create?",
+    "c": "<form>\n  <input list=\"browsers\" name=\"browser\">\n  <datalist id=\"browsers\">\n    <option value=\"Chrome\">\n    <option value=\"Firefox\">\n    <option value=\"Safari\">\n  </datalist>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A text field with autocomplete suggestions for Chrome, Firefox, and Safari",
+      "A dropdown menu limited to Chrome, Firefox, and Safari",
+      "A set of radio buttons for browser selection",
+      "A group of checkboxes for multiple browser selection"
+    ]
+  },
+  {
+    "q": "What is the function of the 'disabled' attribute in form controls?",
+    "o": [
+      "To make the control non-interactive and exclude its value from form submission",
+      "To hide the control from view",
+      "To make the control read-only",
+      "To prevent form submission if the control is empty"
+    ]
+  },
+  {
+    "q": "What would this code snippet create?",
+    "c": "<form>\n  <label for=\"file\">Select file:</label>\n  <input type=\"file\" id=\"file\" name=\"file\" accept=\".jpg, .jpeg, .png\">\n  <button type=\"submit\">Upload</button>\n</form>",
+    "o": [
+      "A file upload input that accepts only JPG and PNG images",
+      "A file selector that accepts any file type",
+      "A button that opens the file explorer",
+      "A text field that only accepts file paths ending in .jpg, .jpeg, or .png"
+    ]
+  },
+  {
+    "q": "Which HTML attribute specifies an alternate text for an image input button?",
+    "o": [
+      "alt",
+      "title",
+      "label",
+      "description"
+    ]
+  },
+  {
+    "q": "What is the output of the following code snippet?",
+    "c": "<form>\n  <input type=\"password\" pattern=\"^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A password field that requires at least 8 characters including at least one letter and one number",
+      "A password field that automatically masks any input",
+      "A password field that displays strength indicators",
+      "A password field limited to 8 characters maximum"
+    ]
+  },
+  {
+    "q": "What is the purpose of the <output> element in HTML forms?",
+    "o": [
+      "To represent the result of a calculation or user action",
+      "To create an output field that can be submitted with the form",
+      "To specify where form data should be sent",
+      "To display validation errors"
+    ]
+  },
+  {
+    "q": "What does this code do?",
+    "c": "<form>\n  <input type=\"number\" id=\"quantity\" name=\"quantity\" min=\"1\" max=\"5\" step=\"1\" value=\"1\" oninput=\"this.form.amountOutput.value=this.value * 5\">\n  <output name=\"amountOutput\" for=\"quantity\">5</output>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "Creates a number input that dynamically updates an output field with 5 times its value",
+      "Creates a form that calculates the total cost of items",
+      "Creates a number input that can't exceed the value 5",
+      "Creates a form with an automatic calculation that can't be modified"
+    ]
+  },
+  {
+    "q": "Which attribute makes a form input read-only but still submittable with the form?",
+    "o": [
+      "readonly",
+      "disabled",
+      "static",
+      "locked"
+    ]
+  },
+  {
+    "q": "What does this form code create?",
+    "c": "<form>\n  <input type=\"hidden\" name=\"user_id\" value=\"12345\">\n  <input type=\"text\" name=\"comment\">\n  <button type=\"submit\">Post Comment</button>\n</form>",
+    "o": [
+      "A form that submits both a visible comment field and an invisible user ID",
+      "A form where user_id is automatically filled in but can be edited",
+      "A login form requiring a user ID and password",
+      "A form with an error because hidden inputs are not valid HTML"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'form' attribute on an input element?",
+    "o": [
+      "To associate the input with a form outside its ancestor hierarchy",
+      "To create a subform within the main form",
+      "To specify which form template to use",
+      "To define the input's appearance"
+    ]
+  },
+  {
+    "q": "What does this code snippet demonstrate?",
+    "c": "<form>\n  <label for=\"email\">Email:</label>\n  <input type=\"email\" id=\"email\" name=\"email\" required>\n  <span class=\"validity\"></span>\n  <style>\n    input:invalid + span::after {\n      content: '✖';\n      color: red;\n    }\n    input:valid + span::after {\n      content: '✓';\n      color: green;\n    }\n  </style>\n</form>",
+    "o": [
+      "Custom validation feedback with CSS that shows check/cross marks based on email validity",
+      "Server-side validation of an email field",
+      "A form that prevents submission until a valid email is entered",
+      "A JavaScript validation script for email fields"
+    ]
+  },
+  {
+    "q": "Which event is triggered when a form element's value is changed?",
+    "o": [
+      "onchange",
+      "onmodify",
+      "onupdate",
+      "onalter"
+    ]
+  },
+  {
+    "q": "What will the following code create?",
+    "c": "<form>\n  <input type=\"tel\" id=\"phone\" name=\"phone\" pattern=\"[0-9]{3}-[0-9]{3}-[0-9]{4}\" placeholder=\"123-456-7890\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A telephone input field that validates for the format xxx-xxx-xxxx",
+      "A telephone field that automatically formats numbers as you type",
+      "A text field that only accepts numbers",
+      "A telephone field that automatically adds country codes"
+    ]
+  },
+  {
+    "q": "Which HTML5 form validation attribute shows a custom message when validation fails?",
+    "o": [
+      "title",
+      "message",
+      "error",
+      "validation-text"
+    ]
+  },
+  {
+    "q": "What does this code demonstrate?",
+    "c": "<form>\n  <input type=\"checkbox\" id=\"terms\" name=\"terms\" required>\n  <label for=\"terms\">I agree to the Terms and Conditions</label>\n  <button type=\"submit\">Register</button>\n</form>",
+    "o": [
+      "A required checkbox that must be checked before the form can be submitted",
+      "A checkbox that is checked by default",
+      "A checkbox that toggles the visibility of terms and conditions",
+      "A checkbox that cannot be unchecked once selected"
+    ]
+  },
+  {
+    "q": "What is the difference between GET and POST methods in HTML forms?",
+    "o": [
+      "GET appends form data to the URL while POST sends it in the HTTP request body",
+      "GET is for retrieving data while POST is only for submitting new data",
+      "GET is faster than POST for all form submissions",
+      "GET encrypts data while POST does not"
+    ]
+  },
+  {
+    "q": "What does this code create?",
+    "c": "<form enctype=\"multipart/form-data\" method=\"post\">\n  <input type=\"file\" name=\"documents\" multiple>\n  <button type=\"submit\">Upload Files</button>\n</form>",
+    "o": [
+      "A file upload form that allows multiple files to be selected and uploaded",
+      "A form that can only accept one file at a time",
+      "A form that only accepts image files",
+      "A form that automatically compresses uploaded files"
+    ]
+  },
+  {
+    "q": "Which input type is designed specifically for search boxes?",
+    "o": [
+      "search",
+      "text",
+      "find",
+      "query"
+    ]
+  },
+  {
+    "q": "What will this code produce?",
+    "c": "<form>\n  <button type=\"button\" onclick=\"alert('Clicked!')\">\n    <img src=\"icon.png\" alt=\"Info\"> More Info\n  </button>\n</form>",
+    "o": [
+      "A button with an icon and text that shows an alert when clicked without submitting the form",
+      "A submit button that displays an alert before submission",
+      "A button that loads a new page when clicked",
+      "An image that functions as a button within a form"
+    ]
+  },
+  {
+    "q": "What does the 'formnovalidate' attribute do when applied to a submit button?",
+    "o": [
+      "Bypasses form validation when that specific button is used to submit",
+      "Prevents the form from being submitted",
+      "Enables additional validation rules",
+      "Removes all validation error messages"
+    ]
+  },
+  {
+    "q": "What is the purpose of this code?",
+    "c": "<form>\n  <label for=\"quantity\">Quantity (between 1 and 5):</label>\n  <input type=\"number\" id=\"quantity\" name=\"quantity\" min=\"1\" max=\"5\" value=\"1\">\n  <button type=\"submit\">Submit</button>\n  <button type=\"submit\" formnovalidate>Submit without validation</button>\n</form>",
+    "o": [
+      "To provide two submission options: one that enforces the min/max validation and one that bypasses it",
+      "To create a form with a quantity field that must be between 1 and 5",
+      "To demonstrate the difference between validated and unvalidated forms",
+      "To submit the form to two different endpoints"
+    ]
+  },
+  {
+    "q": "Which HTML attribute on an input element is used to provide a short hint about the expected value?",
+    "o": [
+      "placeholder",
+      "hint",
+      "title",
+      "description"
+    ]
+  },
+  {
+    "q": "What does this code create?",
+    "c": "<form>\n  <label for=\"rating\">Rating:</label>\n  <input type=\"range\" id=\"rating\" name=\"rating\" min=\"0\" max=\"10\" step=\"1\" list=\"ticks\">\n  <datalist id=\"ticks\">\n    <option value=\"0\" label=\"0\"></option>\n    <option value=\"5\" label=\"5\"></option>\n    <option value=\"10\" label=\"10\"></option>\n  </datalist>\n</form>",
+    "o": [
+      "A slider control with labeled tick marks at positions 0, 5, and 10",
+      "A range selector that only allows values of 0, 5, or 10",
+      "A numeric input field with a maximum value of 10",
+      "A progress bar showing completion from 0 to 10"
+    ]
+  },
+  {
+    "q": "What is the purpose of the HTML <meter> element?",
+    "o": [
+      "To represent a scalar measurement within a known range",
+      "To create a progress bar",
+      "To display file sizes in appropriate units",
+      "To measure form completion percentage"
+    ]
+  },
+  {
+    "q": "What does this code demonstrate?",
+    "c": "<form>\n  <label for=\"fuel\">Fuel level:</label>\n  <meter id=\"fuel\" name=\"fuel\" min=\"0\" max=\"100\" low=\"33\" high=\"66\" optimum=\"80\" value=\"50\">50 out of 100</meter>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A meter that shows a value of 50 on a scale of 0-100 with low/high thresholds",
+      "A progress bar that is 50% complete",
+      "A form control that can be adjusted by the user",
+      "A loading indicator that automatically updates"
+    ]
+  },
+  {
+    "q": "What does the 'autofocus' attribute do when applied to a form element?",
+    "o": [
+      "Automatically focuses the input when the page loads",
+      "Automatically completes the field with previous entries",
+      "Validates the input as soon as it receives focus",
+      "Prevents the element from losing focus until valid"
+    ]
+  },
+  {
+    "q": "What is the result of this code snippet?",
+    "c": "<form>\n  <label for=\"meeting\">Meeting time:</label>\n  <input type=\"datetime-local\" id=\"meeting\" name=\"meeting\" min=\"2023-06-07T00:00\" max=\"2023-06-14T00:00\">\n  <button type=\"submit\">Schedule</button>\n</form>",
+    "o": [
+      "A date and time picker limited to a specific week in June 2023",
+      "A calendar that only shows June 2023",
+      "A text field that accepts any date and time",
+      "A scheduling form that defaults to June 2023"
+    ]
+  },
+  {
+    "q": "What is the purpose of the <optgroup> element in forms?",
+    "o": [
+      "To create grouped options within a select dropdown",
+      "To style option elements differently",
+      "To make certain options required",
+      "To create a multi-select group"
+    ]
+  },
+  {
+    "q": "What does this code create?",
+    "c": "<form>\n  <select name=\"cars\">\n    <optgroup label=\"Swedish Cars\">\n      <option value=\"volvo\">Volvo</option>\n      <option value=\"saab\">Saab</option>\n    </optgroup>\n    <optgroup label=\"German Cars\">\n      <option value=\"mercedes\">Mercedes</option>\n      <option value=\"audi\">Audi</option>\n    </optgroup>\n  </select>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A dropdown with options organized into labeled groups by country",
+      "A multi-select list allowing selection of car brands by country",
+      "A series of radio buttons organized by country of origin",
+      "A nested menu system for selecting cars"
+    ]
+  },
+  {
+    "q": "Which HTML attribute can be used to disable autocapitalization in text inputs on mobile devices?",
+    "o": [
+      "autocapitalize=\"off\"",
+      "caps=\"off\"",
+      "capitalize=\"none\"",
+      "uppercase=\"false\""
+    ]
+  },
+  {
+    "q": "What does this form code do?",
+    "c": "<form oninput=\"result.value=parseInt(a.value)+parseInt(b.value)\">\n  <input type=\"range\" id=\"a\" name=\"a\" value=\"50\">\n  <input type=\"number\" id=\"b\" name=\"b\" value=\"50\">\n  <output name=\"result\" for=\"a b\">100</output>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "Creates an interactive form that displays the sum of a slider value and number input in real-time",
+      "Submits the sum of two values to the server",
+      "Validates that two inputs sum to 100",
+      "Creates a form with two inputs that must equal the output value"
+    ]
+  },
+  {
+    "q": "What is the purpose of the HTML 'inputmode' attribute?",
+    "o": [
+      "To hint at the type of keyboard layout to display on virtual keyboards",
+      "To specify the input validation mode",
+      "To control how user input is processed",
+      "To define the input's appearance on different devices"
+    ]
+  },
+  {
+    "q": "What will this code do on mobile devices?",
+    "c": "<form>\n  <label for=\"price\">Price:</label>\n  <input type=\"text\" id=\"price\" name=\"price\" inputmode=\"decimal\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "Show a numeric keyboard optimized for decimal input",
+      "Automatically format the input as a decimal currency",
+      "Restrict input to decimal numbers only",
+      "Validate that the input is a valid decimal number"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'dirname' attribute in HTML forms?",
+    "o": [
+      "To submit the text direction of an input along with its value",
+      "To specify the directory where form data should be stored",
+      "To set the default text direction for an input",
+      "To validate directory paths entered in the form"
+    ]
+  },
+  {
+    "q": "What does this code do?",
+    "c": "<form>\n  <input type=\"text\" name=\"comment\" dirname=\"comment.dir\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "Submits both the comment text and its writing direction (LTR or RTL)",
+      "Creates a comment field that can be written in any direction",
+      "Validates that the comment has the correct directory structure",
+      "Creates a text field with a subdirectory for comments"
+    ]
+  },
+  {
+    "q": "Which HTML5 input type would be most appropriate for a credit card number field?",
+    "o": [
+      "tel",
+      "number",
+      "text",
+      "password"
+    ]
+  },
+  {
+    "q": "What does this code create?",
+    "c": "<form>\n  <input type=\"radio\" id=\"credit\" name=\"payment\" value=\"credit\" checked>\n  <label for=\"credit\">Credit Card</label><br>\n  <input type=\"radio\" id=\"debit\" name=\"payment\" value=\"debit\">\n  <label for=\"debit\">Debit Card</label><br>\n  <input type=\"radio\" id=\"paypal\" name=\"payment\" value=\"paypal\">\n  <label for=\"paypal\">PayPal</label>\n  <div id=\"creditFields\" style=\"display:block;\">\n    <label for=\"ccnum\">Card Number:</label>\n    <input type=\"tel\" id=\"ccnum\" name=\"ccnum\" pattern=\"[0-9]{13,19}\" maxlength=\"19\">\n  </div>\n  <button type=\"submit\">Pay Now</button>\n</form>",
+    "o": [
+      "A payment form with radio button options and a credit card number field with numeric validation",
+      "A payment form that automatically validates credit card numbers",
+      "A form that processes payments directly through the browser",
+      "A form with payment options that all show the same credit card field"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'accept' attribute on file input elements?",
+    "o": [
+      "To specify which file types are allowed for upload",
+      "To automatically accept the file upload without confirmation",
+      "To indicate that the server will accept the file submission",
+      "To confirm that the user accepts terms for file sharing"
+    ]
+  },
+  {
+    "q": "What does this code create?",
+    "c": "<form>\n  <label for=\"avatar\">Choose a profile picture:</label>\n  <input type=\"file\" id=\"avatar\" name=\"avatar\" accept=\"image/png, image/jpeg\" capture=\"user\">\n  <button type=\"submit\">Upload</button>\n</form>",
+    "o": [
+      "A file input that opens the device camera for capturing profile pictures in PNG or JPEG format",
+      "A file upload that only accepts existing PNG or JPEG images",
+      "A file selector that automatically resizes images to profile picture dimensions",
+      "A form that validates image dimensions before upload"
+    ]
+  },
+  {
+    "q": "What is the purpose of the 'formtarget' attribute on submit buttons?",
+    "o": [
+      "To specify where to display the response after submitting the form",
+      "To indicate which element should receive focus after submission",
+      "To set the target server for form submission",
+      "To determine which form element should be validated first"
+    ]
+  },
+  {
+    "q": "What will this code do?",
+    "c": "<form action=\"/submit\" target=\"_self\">\n  <input type=\"text\" name=\"query\">\n  <button type=\"submit\">Search in this window</button>\n  <button type=\"submit\" formtarget=\"_blank\">Search in new window</button>\n</form>",
+    "o": [
+      "Creates a form with two submit buttons - one loads results in the current window, the other in a new window",
+      "Creates a form that always opens results in a new window",
+      "Creates a form that gives an option to open multiple search windows",
+      "Creates a form with a button that doesn't work because formtarget is invalid"
+    ]
+  },
+  {
+    "q": "Which HTML form input type provides a spinner control for number entry?",
+    "o": [
+      "number",
+      "spinner",
+      "counter",
+      "numeric"
+    ]
+  },
+  {
+    "q": "What does this code create?",
+    "c": "<form>\n  <label for=\"favcolor\">Select your favorite color:</label>\n  <input type=\"color\" id=\"favcolor\" name=\"favcolor\" value=\"#ff0000\">\n  <output name=\"colorOutput\">#ff0000</output>\n  <script>\n    document.getElementById('favcolor').addEventListener('input', function() {\n      document.getElementsByName('colorOutput')[0].value = this.value;\n    });\n  </script>\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A color picker that displays the selected hex code in an output element",
+      "A color picker that changes the form's background color",
+      "A form that only accepts valid color names as input",
+      "A color selection tool that converts between RGB and hex formats"
+    ]
+  },
+  {
+    "q": "What is the most accessible way to associate a label with its input?",
+    "o": [
+      "Using the 'for' attribute that matches the input's 'id'",
+      "Placing the input inside the label element",
+      "Using the 'aria-labelledby' attribute",
+      "Using placeholder text in the input"
+    ]
+  },
+  {
+    "q": "What does this code demonstrate?",
+    "c": "<form>\n  <div role=\"group\" aria-labelledby=\"shipping\">\n    <h3 id=\"shipping\">Shipping Address</h3>\n    <label for=\"street\">Street:</label>\n    <input type=\"text\" id=\"street\" name=\"shipping_street\" required>\n    <label for=\"city\">City:</label>\n    <input type=\"text\" id=\"city\" name=\"shipping_city\" required>\n  </div>\n  <button type=\"submit\">Continue</button>\n</form>",
+    "o": [
+      "A form with required address fields grouped for accessibility with ARIA attributes",
+      "A form that automatically validates shipping addresses",
+      "A form with hidden shipping information fields",
+      "A form that uses ARIA instead of HTML5 validation"
+    ]
+  },
+  {
+    "q": "What does the HTML form attribute 'autocomplete=\"off\"' do?",
+    "o": [
+      "Suggests that browsers should not automatically complete values for this form",
+      "Prevents the form from being submitted until all fields are manually completed",
+      "Disables form validation until submission",
+      "Turns off automatic form field clearing after submission"
+    ]
+  },
+  {
+    "q": "What does this code create?",
+    "c": "<form>\n  <label for=\"creditcard\">Credit Card Number:</label>\n  <input type=\"text\" id=\"creditcard\" name=\"creditcard\" autocomplete=\"cc-number\" inputmode=\"numeric\" pattern=\"[0-9\\s]{13,19}\" maxlength=\"19\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A credit card input field with appropriate autocomplete hints, numeric keyboard, and validation",
+      "A secure credit card field that encrypts the number",
+      "A credit card field that automatically formats the number as you type",
+      "A payment form that validates the credit card using the Luhn algorithm"
+    ]
+  },
+  {
+    "q": "What is the purpose of the HTML <progress> element?",
+    "o": [
+      "To display the completion progress of a task",
+      "To create a loading animation",
+      "To validate form completion",
+      "To show a percentage input field"
+    ]
+  },
+  {
+    "q": "What does this code create?",
+    "c": "<form>\n  <label for=\"file\">Downloading progress:</label>\n  <progress id=\"file\" value=\"32\" max=\"100\"> 32% </progress>\n  <button type=\"button\" onclick=\"document.getElementById('file').value += 10;\">Download More</button>\n</form>",
+    "o": [
+      "A progress bar showing 32% completion with a button that increases its value",
+      "A download manager that actually downloads files",
+      "A file upload progress indicator",
+      "A form that validates if a file is at least 32% complete"
+    ]
+  },
+  {
+    "q": "What is the purpose of the HTML 'multiple' attribute on form elements?",
+    "o": [
+      "To allow selection of multiple values in inputs like file and select",
+      "To create multiple instances of the same input",
+      "To validate that multiple conditions are met",
+      "To apply multiple styles to an input"
+    ]
+  },
+  {
+    "q": "What does this code create?",
+    "c": "<form>\n  <label for=\"emails\">Enter email addresses:</label>\n  <input type=\"email\" id=\"emails\" name=\"emails\" multiple>\n  <small>Separate multiple email addresses with commas</small>\n  <button type=\"submit\">Invite</button>\n</form>",
+    "o": [
+      "An email input field that accepts and validates multiple comma-separated email addresses",
+      "Multiple email input fields generated dynamically",
+      "An email field that can only be used multiple times",
+      "A field that validates that the email has multiple parts"
+    ]
+  },
+  {
+    "q": "What does the HTML form 'enctype' attribute specify?",
+    "o": [
+      "How form data should be encoded when submitted to the server",
+      "The encryption type used for secure form data",
+      "The character encoding used within the form",
+      "The content type that the form accepts"
+    ]
+  },
+  {
+    "q": "What will this code do?",
+    "c": "<form method=\"post\" enctype=\"application/x-www-form-urlencoded\">\n  <label for=\"name\">Name:</label>\n  <input type=\"text\" id=\"name\" name=\"name\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "Submit form data using the default URL-encoded format",
+      "Encrypt the form data before submission",
+      "Convert all form inputs to a specific character encoding",
+      "Compress the form data to reduce transmission size"
+    ]
+  },
+  {
+    "q": "What is the correct use of the HTML <button> element's 'type' attribute?",
+    "o": [
+      "type=\"button\" prevents form submission, type=\"submit\" submits the form, type=\"reset\" resets form fields",
+      "type=\"action\" performs the button's action, type=\"form\" submits the form",
+      "type=\"primary\" for main actions, type=\"secondary\" for less important actions",
+      "type=\"click\" for clickable buttons, type=\"submit\" for submission buttons"
+    ]
+  },
+  {
+    "q": "What does this code demonstrate?",
+    "c": "<form id=\"myForm\">\n  <input type=\"text\" name=\"username\">\n  <button type=\"button\" onclick=\"validateUsername()\">Check Availability</button>\n  <button type=\"reset\">Clear Form</button>\n  <button type=\"submit\">Register</button>\n</form>",
+    "o": [
+      "Three different button types: one that triggers a JavaScript function without submission, one that clears the form, and one that submits it",
+      "Three buttons that all submit the form in different ways",
+      "A form with one submit button and two decorative buttons",
+      "A registration form with redundant buttons"
+    ]
+  },
+  {
+    "q": "What does the 'size' attribute do on an input element?",
+    "o": [
+      "Specifies the visible width of the input in characters",
+      "Limits the maximum number of characters that can be entered",
+      "Sets the font size of the text inside the input",
+      "Defines the physical size of the input on screen"
+    ]
+  },
+  {
+    "q": "What is demonstrated in this code?",
+    "c": "<form>\n  <label for=\"pin\">PIN Code:</label>\n  <input type=\"text\" id=\"pin\" name=\"pin\" size=\"4\" maxlength=\"4\" pattern=\"[0-9]{4}\" inputmode=\"numeric\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A PIN input field visually sized for 4 characters, with validation ensuring exactly 4 digits",
+      "A PIN field that hides the entered characters for security",
+      "A field that automatically submits after 4 digits are entered",
+      "A numeric field that doesn't allow more than 4 numbers to be displayed"
+    ]
+  },
+  {
+    "q": "Which HTML attribute is used to specify the encoding of a form submission?",
+    "o": [
+      "accept-charset",
+      "charset",
+      "encoding",
+      "form-charset"
+    ]
+  },
+  {
+    "q": "What will this code do?",
+    "c": "<form action=\"/submit\" method=\"post\" accept-charset=\"UTF-8\">\n  <label for=\"message\">Message:</label>\n  <textarea id=\"message\" name=\"message\"></textarea>\n  <button type=\"submit\">Send</button>\n</form>",
+    "o": [
+      "Submit a form ensuring the text is encoded as UTF-8",
+      "Only accept UTF-8 characters in the textarea",
+      "Convert the form data to UTF-8 before displaying it",
+      "Validate that all characters entered are valid UTF-8"
+    ]
+  },
+  {
+    "q": "What is the purpose of the HTML 'max' attribute on date inputs?",
+    "o": [
+      "To specify the latest date that can be selected",
+      "To limit the maximum number of dates that can be selected",
+      "To set the maximum allowed file size for uploads",
+      "To control the maximum number of form submissions"
+    ]
+  },
+  {
+    "q": "What does this code create?",
+    "c": "<form>\n  <label for=\"dob\">Date of birth:</label>\n  <input type=\"date\" id=\"dob\" name=\"dob\" max=\"2010-01-01\" min=\"1950-01-01\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "A date picker that restricts selection to dates between 1950 and 2010",
+      "A date field that calculates if the person is at least 13 years old",
+      "A date input that only accepts birth dates of people currently between 13 and 73 years old",
+      "A form that will reject submissions from people born after 2010"
+    ]
+  },
+  {
+    "q": "What is the purpose of adding 'novalidate' to a form element?",
+    "o": [
+      "To disable browser's native form validation",
+      "To indicate that no validation is needed for this form",
+      "To prevent server-side validation",
+      "To use custom validation instead of built-in validation"
+    ]
+  },
+  {
+    "q": "What does this code demonstrate?",
+    "c": "<form id=\"myForm\" novalidate>\n  <label for=\"email\">Email:</label>\n  <input type=\"email\" id=\"email\" required>\n  <button type=\"submit\" onclick=\"return validateForm();\">Submit</button>\n  <script>\n    function validateForm() {\n      const email = document.getElementById('email');\n      if (!email.value.includes('@')) {\n        alert('Please enter a valid email address');\n        return false;\n      }\n      return true;\n    }\n  </script>\n</form>",
+    "o": [
+      "A form with browser validation disabled in favor of custom JavaScript validation",
+      "A form that can't be validated at all",
+      "A form that doesn't require validation to be submitted",
+      "A form that validates both client-side and server-side"
+    ]
+  },
+  {
+    "q": "What is the purpose of the '<label>' element in HTML forms?",
+    "o": [
+      "To associate a text label with a form control for improved accessibility and usability",
+      "To add a caption to a form section",
+      "To mark input fields as required",
+      "To provide validation instructions"
+    ]
+  },
+  {
+    "q": "What does this code demonstrate about labels?",
+    "c": "<form>\n  <label for=\"cheese\">Do you like cheese?</label>\n  <input type=\"checkbox\" id=\"cheese\" name=\"cheese\">\n  <button type=\"submit\">Submit</button>\n</form>",
+    "o": [
+      "Clicking on the text 'Do you like cheese?' will toggle the checkbox",
+      "The label is only visually associated with the checkbox",
+      "The label acts as a fieldset for the checkbox",
+      "The label has no functional purpose in this code"
+    ]
+  },
+  {
+    "q": "What is the purpose of the HTML 'tabindex' attribute in forms?",
+    "o": [
+      "To specify the order in which elements receive focus when navigating with the Tab key",
+      "To create tabbed navigation within the form",
+      "To specify how many tab spaces should be applied before the element",
+      "To indicate which form tab the element belongs to"
+    ]
+  },
+  {
+    "q": "What does this code demonstrate?",
+    "c": "<form>\n  <input type=\"text\" name=\"lastName\" tabindex=\"2\">\n  <input type=\"text\" name=\"firstName\" tabindex=\"1\">\n  <input type=\"text\" name=\"middleName\" tabindex=\"3\">\n  <button type=\"submit\" tabindex=\"4\">Submit</button>\n</form>",
+    "o": [
+      "The firstName field will receive focus first when tabbing, followed by lastName, middleName, and finally the submit button",
+      "The form fields will tab in the order they appear in the HTML despite the tabindex attributes",
+      "The tabindex attributes have no effect since they are not in sequence",
+      "The submit button will receive focus first since it has the highest action priority"
+    ]
+  },
+  {
+    "q": "What is the purpose of the HTML 'form' attribute on button elements?",
+    "o": [
+      "To associate the button with a specific form by ID, even when the button is outside the form",
+      "To specify which form template to use for the button",
+      "To style the button like other form elements",
+      "To indicate that the button is part of a form"
+    ]
+  },
+  {
+    "q": "What does this code demonstrate?",
+    "c": "<form id=\"userForm\">\n  <input type=\"text\" name=\"username\">\n</form>\n<button type=\"submit\" form=\"userForm\">Submit User Form</button>\n<form id=\"commentForm\">\n  <textarea name=\"comment\"></textarea>\n</form>\n<button type=\"submit\" form=\"commentForm\">Post Comment</button>",
+    "o": [
+      "Buttons placed outside forms that still submit their associated forms through the 'form' attribute",
+      "A single page with two forms that can't be submitted separately",
+      "Buttons that will submit both forms simultaneously",
+      "A form layout that doesn't follow HTML best practices"
+    ]
+  },
+  {
+    "q": "What is the recommended way to group related form controls?",
+    "o": [
+      "Using the <fieldset> element with a <legend>",
+      "Using <div> elements with appropriate class names",
+      "Using the <group> element",
+      "Using <section> elements with headings"
+    ]
+  },
+  {
+    "q": "What does this code create?",
+    "c": "<form>\n  <fieldset>\n    <legend>Contact Information</legend>\n    <label for=\"name\">Name:</label>\n    <input type=\"text\" id=\"name\" name=\"name\">\n    <label for=\"email\">Email:</label>\n    <input type=\"email\" id=\"email\" name=\"email\">\n  </fieldset>\n  <fieldset>\n    <legend>Subscription Options</legend>\n    <input type=\"radio\" id=\"daily\" name=\"frequency\" value=\"daily\">\n    <label for=\"daily\">Daily</label>\n    <input type=\"radio\" id=\"weekly\" name=\"frequency\" value=\"weekly\">\n    <label for=\"weekly\">Weekly</label>\n  </fieldset>\n  <button type=\"submit\">Subscribe</button>\n</form>",
+    "o": [
+      "A form with two distinct fieldsets, each with its own title and related form controls",
+      "A form with two sections that can be individually submitted",
+      "A form with mandatory and optional fields separated",
+      "A nested form structure with subforms"
+    ]
+  },
+    {
+        "q": "What does this code represent?",
+        "c": "<input type='text' name='username' />",
+        "o": [
+            "Text input",
+            "Button",
+            "Checkbox",
+            "Radio button"
+        ]
+    },
+    {
+        "q": "Which element is used to create a form?",
+        "o": [
+            "<form>",
+            "<input>",
+            "<button>",
+            "<label>"
+        ]
+    },
+    {
+        "q": "Which input type is used here?",
+        "c": "<input type='email' name='userEmail' required />",
+        "o": [
+            "Email",
+            "Text",
+            "Password",
+            "Number"
+        ]
+    },
+    {
+        "q": "Which input type is used for entering a password?",
+        "o": [
+            "password",
+            "text",
+            "email",
+            "number"
+        ]
+    },
+    {
+        "q": "What type of input is this?",
+        "c": "<input type='range' min='1' max='10' />",
+        "o": [
+            "Range slider",
+            "Number",
+            "Text",
+            "Checkbox"
+        ]
+    },
+    {
+        "q": "Which attribute specifies where to send the form data?",
+        "o": [
+            "action",
+            "method",
+            "name",
+            "type"
+        ]
+    },
+    {
+        "q": "Which attribute is missing to disable this field?",
+        "c": "<input type='text' name='username' />",
+        "o": [
+            "disabled",
+            "readonly",
+            "required",
+            "autocomplete"
+        ]
+    },
+    {
+        "q": "Which input type allows selection of multiple options?",
+        "o": [
+            "checkbox",
+            "radio",
+            "text",
+            "submit"
+        ]
+    },
+    {
+        "q": "What does the 'action' attribute do?",
+        "c": "<form action='/submit.php' method='post'>",
+        "o": [
+            "Submit URL",
+            "Method type",
+            "Form ID",
+            "Form name"
+        ]
+    },
+    {
+        "q": "What type of button submits a form?",
+        "o": [
+            "submit",
+            "button",
+            "reset",
+            "checkbox"
+        ]
+    },
+    {
+        "q": "What is the function of the 'method' attribute?",
+        "c": "<form action='/submit.php' method='post'>",
+        "o": [
+            "POST data",
+            "URL action",
+            "GET data",
+            "Submit form"
+        ]
+    },
+    {
+        "q": "Which attribute is used to make a field required?",
+        "o": [
+            "required",
+            "pattern",
+            "readonly",
+            "disabled"
+        ]
+    },
+    {
+        "q": "What does this element do?",
+        "c": "<button type='submit'>Submit</button>",
+        "o": [
+            "Submit form",
+            "Reset form",
+            "Cancel form",
+            "Clear inputs"
+        ]
+    },
+    {
+        "q": "Which input type is used for selecting a date?",
+        "o": [
+            "date",
+            "text",
+            "time",
+            "number"
+        ]
+    },
+    {
+        "q": "What type of input does this represent?",
+        "c": "<input type='radio' name='gender' value='male' />",
+        "o": [
+            "Radio button",
+            "Checkbox",
+            "Text input",
+            "Password"
+        ]
+    },
+    {
+        "q": "What is the default HTTP method for form submission?",
+        "o": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "c": "<input type='file' name='uploadFile' />",
+        "o": [
+            "File upload",
+            "Text input",
+            "Email input",
+            "Range input"
+        ]
+    },
+    {
+        "q": "Which input type accepts only numbers?",
+        "o": [
+            "number",
+            "text",
+            "email",
+            "password"
+        ]
+    },
+    {
+        "q": "What does the 'placeholder' attribute do?",
+        "c": "<input type='text' placeholder='Enter name' />",
+        "o": [
+            "Display hint",
+            "Make input required",
+            "Disable field",
+            "Set default value"
+        ]
+    },
+    {
+        "q": "Which attribute is used to group form inputs?",
+        "o": [
+            "fieldset",
+            "label",
+            "legend",
+            "form"
+        ]
+    },
+    {
+        "q": "Which attribute makes this input mandatory?",
+        "c": "<input type='text' name='username' />",
+        "o": [
+            "required",
+            "readonly",
+            "maxlength",
+            "disabled"
+        ]
+    },
+    {
+        "q": "Which element defines a drop-down list?",
+        "o": [
+            "<select>",
+            "<option>",
+            "<input>",
+            "<button>"
+        ]
+    },
+    {
+        "q": "What type of button is this?",
+        "c": "<button type='reset'>Reset</button>",
+        "o": [
+            "Reset button",
+            "Submit button",
+            "Cancel button",
+            "File upload button"
+        ]
+    },
+    {
+        "q": "Which element defines an option in a drop-down?",
+        "o": [
+            "<option>",
+            "<select>",
+            "<input>",
+            "<label>"
+        ]
+    },
+    {
+        "q": "What is the purpose of 'autocomplete'?",
+        "c": "<input type='text' name='username' autocomplete='off' />",
+        "o": [
+            "Disable autofill",
+            "Set input readonly",
+            "Enable validation",
+            "Submit form"
+        ]
+    },
+    {
+        "q": "Which attribute specifies the input field's default value?",
+        "o": [
+            "value",
+            "name",
+            "placeholder",
+            "id"
+        ]
+    },
+    {
+        "q": "What does 'max' specify here?",
+        "c": "<input type='number' name='quantity' max='10' />",
+        "o": [
+            "Maximum value",
+            "Minimum value",
+            "Step size",
+            "Placeholder"
+        ]
+    },
+    {
+        "q": "Which attribute limits the number of characters in an input?",
+        "o": [
+            "maxlength",
+            "minlength",
+            "size",
+            "value"
+        ]
+    },
+    {
+        "q": "What is the use of 'multiple' attribute?",
+        "c": "<input type='file' name='files' multiple />",
+        "o": [
+            "Multiple files upload",
+            "Single file upload",
+            "Reset input",
+            "Text input"
+        ]
+    },
+    {
+        "q": "Which input type is used for email addresses?",
+        "o": [
+            "email",
+            "text",
+            "password",
+            "number"
+        ]
+    },
+    {
+        "q": "What does the 'readonly' attribute do?",
+        "c": "<input type='text' name='username' readonly />",
+        "o": [
+            "Non-editable field",
+            "Disable input",
+            "Mandatory input",
+            "Hide input"
+        ]
+    },
+    {
+        "q": "Which attribute is used to disable an input field?",
+        "o": [
+            "disabled",
+            "readonly",
+            "value",
+            "type"
+        ]
+    },
+    {
+        "q": "What kind of input does this code create?",
+        "c": "<input type='checkbox' name='subscribe' />",
+        "o": [
+            "Checkbox",
+            "Radio button",
+            "Text input",
+            "Submit button"
+        ]
+    },
+    {
+        "q": "Which input type allows selecting only one option?",
+        "o": [
+            "radio",
+            "checkbox",
+            "text",
+            "submit"
+        ]
+    },
+    {
+        "q": "Which type of input field is this?",
+        "c": "<input type='password' name='userpass' />",
+        "o": [
+            "Password input",
+            "Text input",
+            "Email input",
+            "Number input"
+        ]
+    },
+    {
+        "q": "Which element is used to group form controls?",
+        "o": [
+            "<fieldset>",
+            "<label>",
+            "<select>",
+            "<option>"
+        ]
+    },
+    {
+        "q": "What is the purpose of the 'step' attribute?",
+        "c": "<input type='number' name='quantity' step='5' />",
+        "o": [
+            "Increment value",
+            "Set max value",
+            "Set placeholder",
+            "Validate input"
+        ]
+    },
+    {
+        "q": "Which element is used for labels?",
+        "o": [
+            "<label>",
+            "<form>",
+            "<input>",
+            "<fieldset>"
+        ]
+    },
+    {
+        "q": "What does 'minlength' attribute enforce?",
+        "c": "<input type='text' name='username' minlength='5' />",
+        "o": [
+            "Minimum characters",
+            "Max input value",
+            "Range validation",
+            "Text wrapping"
+        ]
+    },
+    {
+        "q": "Which input type is used for a file upload?",
+        "o": [
+            "file",
+            "text",
+            "submit",
+            "password"
+        ]
+    },
+    {
+        "q": "What does the 'maxlength' attribute enforce?",
+        "c": "<input type='text' name='username' maxlength='10' />",
+        "o": [
+            "Maximum characters",
+            "Minimum characters",
+            "Set placeholder",
+            "Text validation"
+        ]
+    },
+    {
+        "q": "Which method sends form data as URL parameters?",
+        "o": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE"
+        ]
+    },
+    {
+        "q": "What does this code represent?",
+        "c": "<input type='submit' value='Submit' />",
+        "o": [
+            "Submit button",
+            "Reset button",
+            "Radio button",
+            "Text input"
+        ]
+    },
+    {
+        "q": "Which method sends form data in the body of the request?",
+        "o": [
+            "POST",
+            "GET",
+            "PUT",
+            "DELETE"
+        ]
+    },
+    {
+        "q": "Which attribute hides this input field?",
+        "c": "<input type='hidden' name='token' value='12345' />",
+        "o": [
+            "hidden",
+            "readonly",
+            "disabled",
+            "maxlength"
+        ]
+    },
+    {
+        "q": "Which attribute connects a label to an input?",
+        "o": [
+            "for",
+            "name",
+            "id",
+            "class"
+        ]
+    },
+    {
+        "q": "What type of input is this?",
+        "c": "<input type='tel' name='phone' />",
+        "o": [
+            "Phone number",
+            "Text input",
+            "Email input",
+            "Number input"
+        ]
+    },
+    {
+        "q": "Which input type provides a range slider?",
+        "o": [
+            "range",
+            "text",
+            "number",
+            "checkbox"
+        ]
+    },
+    {
+        "q": "What does this code create?",
+        "c": "<textarea name='comments' rows='4' cols='50'></textarea>",
+        "o": [
+            "Multiline text box",
+            "Single line text",
+            "Radio button",
+            "File input"
+        ]
+    },
+    {
+        "q": "Which attribute provides a hint to the user in an input?",
+        "o": [
+            "placeholder",
+            "value",
+            "name",
+            "type"
+        ]
+    },
+    {
+        "q": "What type of input is this?",
+        "c": "<input type='color' name='favcolor' />",
+        "o": [
+            "Color picker",
+            "Text input",
+            "Checkbox",
+            "Password input"
+        ]
+    },
+    {
+        "q": "Which attribute sets a minimum value for an input?",
+        "o": [
+            "min",
+            "max",
+            "maxlength",
+            "step"
+        ]
+    },
+    {
+        "q": "Which input type allows for time selection?",
+        "c": "<input type='time' name='meetingtime' />",
+        "o": [
+            "Time input",
+            "Text input",
+            "Date input",
+            "Number input"
+        ]
+    },
+    {
+        "q": "Which attribute sets a maximum value for an input?",
+        "o": [
+            "max",
+            "min",
+            "maxlength",
+            "step"
+        ]
+    },
+    {
+        "q": "What type of input is created here?",
+        "c": "<input type='date' name='birthday' />",
+        "o": [
+            "Date picker",
+            "Text input",
+            "Password input",
+            "Radio button"
+        ]
+    },
+    {
+        "q": "Which input type is used for a telephone number?",
+        "o": [
+            "tel",
+            "text",
+            "number",
+            "email"
+        ]
+    },
+    {
+        "q": "What does the 'value' attribute do?",
+        "c": "<input type='text' name='username' value='John Doe' />",
+        "o": [
+            "Set default value",
+            "Set max length",
+            "Enable validation",
+            "Set input name"
+        ]
+    },
+    {
+        "q": "Which element defines a clickable button?",
+        "o": [
+            "<button>",
+            "<input>",
+            "<form>",
+            "<select>"
+        ]
+    },
+    {
+        "q": "What does this element represent?",
+        "c": "<label for='username'>Username:</label>",
+        "o": [
+            "Label for input",
+            "Button label",
+            "Form ID",
+            "Placeholder"
+        ]
+    },
+    {
+        "q": "Which input type is used to reset the form?",
+        "o": [
+            "reset",
+            "submit",
+            "button",
+            "text"
+        ]
+    },
+    {
+        "q": "What does 'min' specify in this input?",
+        "c": "<input type='number' name='age' min='18' />",
+        "o": [
+            "Minimum value",
+            "Maximum value",
+            "Range slider",
+            "Text validation"
+        ]
+    },
+    {
+        "q": "Which attribute prevents a form from being submitted?",
+        "o": [
+            "novalidate",
+            "action",
+            "method",
+            "target"
+        ]
+    },
+    {
+        "q": "What is the purpose of 'checked' attribute?",
+        "c": "<input type='checkbox' name='subscribe' checked />",
+        "o": [
+            "Checked by default",
+            "Disable checkbox",
+            "Submit form",
+            "Radio button"
+        ]
+    },
+    {
+        "q": "Which input type provides a time selector?",
+        "o": [
+            "time",
+            "date",
+            "text",
+            "number"
+        ]
+    },
+    {
+        "q": "What does 'action' specify?",
+        "c": "<form action='/submit.php'>",
+        "o": [
+            "Submission URL",
+            "HTTP method",
+            "Form ID",
+            "Submit button"
+        ]
+    },
+    {
+        "q": "Which attribute specifies the HTTP method?",
+        "o": [
+            "method",
+            "action",
+            "type",
+            "value"
+        ]
+    },
+    {
+        "q": "Which type of button does this represent?",
+        "c": "<button type='button'>Click me</button>",
+        "o": [
+            "Regular button",
+            "Submit button",
+            "Reset button",
+            "Radio button"
+        ]
+    },
+    {
+        "q": "Which attribute sets a unique identifier for an input?",
+        "o": [
+            "id",
+            "name",
+            "class",
+            "for"
+        ]
+    },
+    {
+        "q": "What does this input field create?",
+        "c": "<input type='number' name='quantity' min='1' max='5' />",
+        "o": [
+            "Number input",
+            "Range input",
+            "Text input",
+            "Password input"
+        ]
+    },
+    {
+        "q": "Which input type allows selecting a color?",
+        "o": [
+            "color",
+            "text",
+            "number",
+            "range"
+        ]
+    },
+    {
+        "q": "Which input type is used here?",
+        "c": "<input type='search' name='query' />",
+        "o": [
+            "Search input",
+            "Text input",
+            "Checkbox",
+            "Radio button"
+        ]
+    },
+    {
+        "q": "Which attribute makes an input field read-only?",
+        "o": [
+            "readonly",
+            "disabled",
+            "value",
+            "maxlength"
+        ]
+    },
+    {
+        "q": "What does the 'required' attribute do?",
+        "c": "<input type='text' name='username' required />",
+        "o": [
+            "Make input mandatory",
+            "Disable input",
+            "Readonly input",
+            "Set max length"
+        ]
+    },
+    {
+        "q": "Which attribute specifies the target window for a form?",
+        "o": [
+            "target",
+            "method",
+            "action",
+            "value"
+        ]
+    },
+    {
+        "q": "What is the purpose of this input?",
+        "c": "<input type='checkbox' name='terms' />",
+        "o": [
+            "Accept terms",
+            "Text input",
+            "Submit form",
+            "Radio button"
+        ]
+    },
+    {
+        "q": "Which input type is used for a hidden value?",
+        "o": [
+            "hidden",
+            "text",
+            "password",
+            "number"
+        ]
+    },
+    {
+        "q": "What does the 'pattern' attribute do?",
+        "c": "<input type='text' name='code' pattern='[A-Za-z]{3}' />",
+        "o": [
+            "Input validation",
+            "Set input readonly",
+            "Enable autocomplete",
+            "Disable input"
+        ]
+    },
+    {
+        "q": "Which attribute sets the form submission URL?",
+        "o": [
+            "action",
+            "method",
+            "type",
+            "target"
+        ]
+    },
+    {
+        "q": "What does 'method' specify?",
+        "c": "<form method='post' action='/submit.php'>",
+        "o": [
+            "Submission method",
+            "Form ID",
+            "Submit button",
+            "Field validation"
+        ]
+    },
+    {
+        "q": "Which element is used to group radio buttons?",
+        "o": [
+            "name",
+            "id",
+            "class",
+            "label"
+        ]
+    },
+    {
+        "q": "Which input type provides a search box?",
+        "o": [
+            "search",
+            "text",
+            "password",
+            "email"
+        ]
+    },
+    {
+        "q": "Which attribute is used to validate input patterns?",
+        "o": [
+            "pattern",
+            "value",
+            "maxlength",
+            "min"
+        ]
+    },
+    {
+        "q": "Which input type is used for a URL?",
+        "o": [
+            "url",
+            "text",
+            "email",
+            "password"
+        ]
+    },
+    {
+        "q": "Which attribute defines multiple file uploads?",
+        "o": [
+            "multiple",
+            "files",
+            "action",
+            "type"
+        ]
+    },
+    {
+        "q": "Which input type allows a range of numbers?",
+        "o": [
+            "range",
+            "number",
+            "text",
+            "checkbox"
+        ]
+    },
+    {
+        "q": "Which attribute defines autocomplete suggestions?",
+        "o": [
+            "autocomplete",
+            "value",
+            "placeholder",
+            "name"
+        ]
+    },
+    {
+        "q": "Which element defines a clickable label?",
+        "o": [
+            "<label>",
+            "<button>",
+            "<form>",
+            "<fieldset>"
+        ]
+    },
+    {
+        "q": "Which input type allows multiple selections?",
+        "o": [
+            "checkbox",
+            "radio",
+            "text",
+            "submit"
+        ]
+    },
+    {
+        "q": "Which attribute enables input stepping?",
+        "o": [
+            "step",
+            "min",
+            "max",
+            "value"
+        ]
+    },
+    {
+        "q": "Which attribute links a label to a form element?",
+        "o": [
+            "for",
+            "name",
+            "id",
+            "type"
+        ]
+    },
+    {
+        "q": "Which element is used for multiline text input?",
+        "o": [
+            "<textarea>",
+            "<input>",
+            "<select>",
+            "<label>"
+        ]
+    },
+    {
+        "q": "Which attribute triggers form validation?",
+        "o": [
+            "required",
+            "placeholder",
+            "value",
+            "min"
+        ]
+    },
+    {
+        "q": "Which attribute specifies input field type?",
+        "o": [
+            "type",
+            "name",
+            "value",
+            "action"
+        ]
+    },
+    {
+        "q": "Which input type is used for selecting a month?",
+        "o": [
+            "month",
+            "date",
+            "time",
+            "number"
+        ]
+    },
+    {
+        "q": "Which input type is used for a week selection?",
+        "o": [
+            "week",
+            "text",
+            "month",
+            "date"
+        ]
+    },
+    {
+        "q": "Which attribute limits the size of a file upload?",
+        "o": [
+            "maxlength",
+            "max",
+            "size",
+            "limit"
+        ]
+    },
+    {
+        "q": "Which input type is for text-only input?",
+        "o": [
+            "text",
+            "password",
+            "number",
+            "email"
+        ]
+    },
+    {
+        "q": "Which attribute prevents automatic form completion?",
+        "o": [
+            "autocomplete",
+            "novalidate",
+            "readonly",
+            "disabled"
+        ]
+    },
+    {
+        "q": "Which input type is used for a submit button?",
+        "o": [
+            "submit",
+            "reset",
+            "button",
+            "checkbox"
+        ]
+    },
+    {
+        "q": "Which attribute sets the input field's size?",
+        "o": [
+            "size",
+            "maxlength",
+            "minlength",
+            "value"
+        ]
+    },
+    {
+        "q": "Which attribute specifies the form's MIME type?",
+        "o": [
+            "enctype",
+            "method",
+            "action",
+            "type"
+        ]
+    },
+    {
+        "q": "Which attribute is used for number input step size?",
+        "o": [
+            "step",
+            "min",
+            "max",
+            "value"
+        ]
+    },
+    {
+        "q": "Which input type is used for range selection?",
+        "o": [
+            "range",
+            "number",
+            "text",
+            "checkbox"
+        ]
+    },
+    {
+        "q": "Which attribute prevents field modification?",
+        "o": [
+            "readonly",
+            "disabled",
+            "placeholder",
+            "value"
+        ]
+    },
+    {
+        "q": "Which attribute defines a unique name for form elements?",
+        "o": [
+            "name",
+            "id",
+            "class",
+            "for"
+        ]
+    },
+    {
+        "q": "Which input type is used to create a submit button?",
+        "o": [
+            "submit",
+            "button",
+            "reset",
+            "checkbox"
+        ]
+    },
+    {
+        "q": "Which attribute makes an input field non-editable?",
+        "o": [
+            "readonly",
+            "disabled",
+            "maxlength",
+            "min"
+        ]
+    },
+    {
+        "q": "Which input type is used for date selection?",
+        "o": [
+            "date",
+            "text",
+            "number",
+            "time"
+        ]
+    },
+    {
+        "q": "Which input type is used for selecting a range of time?",
+        "o": [
+            "range",
+            "time",
+            "date",
+            "week"
+        ]
+    },
+    {
+        "q": "Which attribute helps with user input validation?",
+        "o": [
+            "required",
+            "readonly",
+            "disabled",
+            "value"
+        ]
+    },
+    {
+        "q": "Which element is used to define a form's area for user input?",
+        "o": [
+            "<form>",
+            "<button>",
+            "<label>",
+            "<input>"
+        ]
+    },
+    {
+        "q": "Which attribute sends the form to a new window?",
+        "o": [
+            "target",
+            "action",
+            "method",
+            "value"
+        ]
+    },
+    {
+        "q": "Which input type is used for a numeric value?",
+        "o": [
+            "number",
+            "text",
+            "email",
+            "tel"
+        ]
+    },
+    {
+        "q": "Which attribute specifies multiple options for an input field?",
+        "o": [
+            "multiple",
+            "type",
+            "min",
+            "max"
+        ]
+    },
+    {
+        "q": "Which element groups related form controls?",
+        "o": [
+            "<fieldset>",
+            "<label>",
+            "<form>",
+            "<input>"
+        ]
+    },
+    {
+        "q": "Which input type allows users to select multiple values?",
+        "o": [
+            "checkbox",
+            "radio",
+            "text",
+            "submit"
+        ]
+    },
+    {
+        "q": "Which input type is used for entering URLs?",
+        "o": [
+            "url",
+            "text",
+            "email",
+            "password"
+        ]
+    },
+    {
+        "q": "Which attribute limits the number of characters in a textarea?",
+        "o": [
+            "maxlength",
+            "size",
+            "rows",
+            "cols"
+        ]
+    },
+    {
+        "q": "Which input type is used to create a file upload field?",
+        "o": [
+            "file",
+            "text",
+            "password",
+            "email"
+        ]
+    },
+    {
+        "q": "Which attribute allows setting a specific format for input?",
+        "o": [
+            "pattern",
+            "placeholder",
+            "readonly",
+            "value"
+        ]
+    },
+    {
+        "q": "Which input type allows for a color picker?",
+        "o": [
+            "color",
+            "text",
+            "checkbox",
+            "number"
+        ]
+    },
+    {
+        "q": "Which attribute specifies the initial size of a textarea?",
+        "o": [
+            "rows",
+            "cols",
+            "maxlength",
+            "placeholder"
+        ]
+    },
+    {
+        "q": "Which input type is used for password fields?",
+        "o": [
+            "password",
+            "text",
+            "number",
+            "email"
+        ]
+    },
+    {
+        "q": "Which attribute prevents form inputs from being auto-filled?",
+        "o": [
+            "autocomplete",
+            "readonly",
+            "value",
+            "action"
+        ]
+    },
+    {
+        "q": "Which input type is used for capturing time input?",
+        "o": [
+            "time",
+            "text",
+            "date",
+            "number"
+        ]
+    },
+    {
+        "q": "Which element contains the form's content?",
+        "o": [
+            "<form>",
+            "<input>",
+            "<button>",
+            "<fieldset>"
+        ]
+    },
+    {
+        "q": "Which attribute is used to validate numeric input?",
+        "o": [
+            "min",
+            "maxlength",
+            "readonly",
+            "pattern"
+        ]
+    },
+    {
+        "q": "Which input type is used for entering emails?",
+        "o": [
+            "email",
+            "text",
+            "password",
+            "url"
+        ]
+    },
+    {
+        "q": "Which element is used to represent clickable options?",
+        "o": [
+            "<button>",
+            "<form>",
+            "<input>",
+            "<fieldset>"
+        ]
+    },
+    {
+        "q": "Which input type is used for a dropdown list?",
+        "o": [
+            "select",
+            "input",
+            "textarea",
+            "button"
+        ]
+    },
+    {
+        "q": "Which attribute defines the input field's name?",
+        "o": [
+            "name",
+            "value",
+            "id",
+            "action"
+        ]
+    },
+    {
+        "q": "Which input type is used to reset the form data?",
+        "o": [
+            "reset",
+            "submit",
+            "text",
+            "button"
+        ]
+    },
+    {
+        "q": "Which element defines a group of form controls?",
+        "o": [
+            "<fieldset>",
+            "<form>",
+            "<button>",
+            "<input>"
+        ]
+    },
+    {
+        "q": "Which input type allows users to enter search queries?",
+        "o": [
+            "search",
+            "text",
+            "password",
+            "number"
+        ]
+    },
+    {
+        "q": "Which element creates a submit button?",
+        "o": [
+            "<button>",
+            "<input>",
+            "<form>",
+            "<textarea>"
+        ]
+    },
+    {
+        "q": "Which input type allows the user to upload multiple files?",
+        "o": [
+            "file",
+            "text",
+            "number",
+            "password"
+        ]
+    },
+    {
+        "q": "Which input type allows selection of dates?",
+        "o": [
+            "date",
+            "text",
+            "number",
+            "week"
+        ]
+    },
+    {
+        "q": "Which attribute disables form inputs?",
+        "o": [
+            "disabled",
+            "readonly",
+            "pattern",
+            "required"
+        ]
+    },
+    {
+        "q": "Which input type is used for month selection?",
+        "o": [
+            "month",
+            "week",
+            "text",
+            "password"
+        ]
+    },
+    {
+        "q": "Which attribute defines the type of a form control?",
+        "o": [
+            "type",
+            "name",
+            "id",
+            "value"
+        ]
+    },
+    {
+        "q": "Which attribute specifies the text inside a button?",
+        "o": [
+            "value",
+            "name",
+            "type",
+            "id"
+        ]
+    },
+    {
+        "q": "Which attribute links a label to a form control?",
+        "o": [
+            "for",
+            "name",
+            "id",
+            "value"
+        ]
+    },
+    {
+        "q": "Which input type is used for selecting a week?",
+        "o": [
+            "week",
+            "month",
+            "date",
+            "time"
+        ]
+    },
+    {
+        "q": "Which input type is used for a number range?",
+        "o": [
+            "range",
+            "number",
+            "date",
+            "text"
+        ]
+    },
+    {
+        "q": "Which input type is used to select a checkbox?",
+        "o": [
+            "checkbox",
+            "radio",
+            "text",
+            "submit"
+        ]
+    },
+    {
+        "q": "Which attribute indicates that an input is required?",
+        "o": [
+            "required",
+            "pattern",
+            "min",
+            "readonly"
+        ]
+    },
+    {
+        "q": "Which element is used to create a label for input?",
+        "o": [
+            "<label>",
+            "<button>",
+            "<input>",
+            "<textarea>"
+        ]
+    },
+    {
+        "q": "Which input type is used to select an option?",
+        "o": [
+            "radio",
+            "checkbox",
+            "text",
+            "submit"
+        ]
+    },
+    {
+        "q": "Which attribute allows stepping through numeric input?",
+        "o": [
+            "step",
+            "min",
+            "max",
+            "value"
+        ]
+    },
+    {
+        "q": "Which attribute specifies the HTTP method to use?",
+        "o": [
+            "method",
+            "action",
+            "target",
+            "value"
+        ]
+    },
+    {
+        "q": "Which attribute specifies that an input is disabled?",
+        "o": [
+            "disabled",
+            "readonly",
+            "required",
+            "pattern"
+        ]
+    },
+    {
+        "q": "Which input type allows for time selection?",
+        "o": [
+            "time",
+            "text",
+            "date",
+            "number"
+        ]
+    },
+    {
+        "q": "Which attribute specifies the action for form submission?",
+        "o": [
+            "action",
+            "method",
+            "target",
+            "value"
+        ]
+    }
+]

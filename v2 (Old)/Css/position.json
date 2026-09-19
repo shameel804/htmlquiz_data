@@ -1,0 +1,3264 @@
+[
+    {
+        "q": "What will be the position of the div?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "normal flow",
+            "fixed",
+            "absolute",
+            "relative"
+        ]
+    },
+    {
+        "q": "What is the default position type in CSS?",
+        "o": [
+            "static",
+            "relative",
+            "absolute",
+            "fixed"
+        ]
+    },
+    {
+        "q": "How does this div behave?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    top: 10px;\n}",
+        "o": [
+            "moves down",
+            "moves up",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "Which position type removes an element from the normal flow?",
+        "o": [
+            "absolute",
+            "static",
+            "relative",
+            "sticky"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    left: 0;\n    top: 0;\n}",
+        "o": [
+            "overlaps parent",
+            "normal flow",
+            "stays static",
+            "relative"
+        ]
+    },
+    {
+        "q": "What does 'relative' positioning affect?",
+        "o": [
+            "offset",
+            "size",
+            "visibility",
+            "z-index"
+        ]
+    },
+    {
+        "q": "How will the div be positioned?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    bottom: 0;\n}",
+        "o": [
+            "bottom of viewport",
+            "bottom of parent",
+            "normal flow",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What position keeps an element at a fixed location?",
+        "o": [
+            "fixed",
+            "absolute",
+            "relative",
+            "static"
+        ]
+    },
+    {
+        "q": "What does sticky positioning do?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 0;\n}",
+        "o": [
+            "remains visible",
+            "normal flow",
+            "absolute",
+            "fixed"
+        ]
+    },
+    {
+        "q": "What happens when an element is set to 'absolute'?",
+        "o": [
+            "it positions relative to its nearest positioned ancestor",
+            "it stays in the flow",
+            "it gets ignored",
+            "it behaves like static"
+        ]
+    },
+    {
+        "q": "What happens to static positioned elements?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "follows normal flow",
+            "remains fixed",
+            "overlaps",
+            "not visible"
+        ]
+    },
+    {
+        "q": "Which property is used to specify the position of an element?",
+        "o": [
+            "top",
+            "display",
+            "margin",
+            "padding"
+        ]
+    },
+    {
+        "q": "How does relative positioning affect layout?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    left: 20px;\n}",
+        "o": [
+            "moves right",
+            "moves left",
+            "fixed",
+            "remains in flow"
+        ]
+    },
+    {
+        "q": "Sticky positioning allows an element to be:",
+        "o": [
+            "fixed within its parent",
+            "absolute within its parent",
+            "relative to viewport",
+            "static"
+        ]
+    },
+    {
+        "q": "What does absolute positioning ignore?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    right: 0;\n}",
+        "o": [
+            "document flow",
+            "parent positioning",
+            "fixed layout",
+            "relative"
+        ]
+    },
+    {
+        "q": "What does 'position: sticky' do?",
+        "o": [
+            "acts like relative until a threshold",
+            "acts like absolute",
+            "always fixed",
+            "none"
+        ]
+    },
+    {
+        "q": "What will this code do?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    top: 10px;\n    left: 10px;\n}",
+        "o": [
+            "stays on screen",
+            "normal flow",
+            "overlaps",
+            "absolute"
+        ]
+    },
+    {
+        "q": "Which positioning type does not change layout?",
+        "o": [
+            "static",
+            "fixed",
+            "absolute",
+            "sticky"
+        ]
+    },
+    {
+        "q": "What effect does sticky positioning have?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 10px;\n}",
+        "o": [
+            "remains visible",
+            "normal flow",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "What does 'top: 10px' do in 'relative' position?",
+        "o": [
+            "moves the element down 10px",
+            "moves up 10px",
+            "no effect",
+            "sets top margin"
+        ]
+    },
+    {
+        "q": "How does static positioning behave?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "normal flow",
+            "fixed",
+            "absolute",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What happens to a 'fixed' positioned element on scroll?",
+        "o": [
+            "it remains in place",
+            "it moves with scroll",
+            "it disappears",
+            "it becomes static"
+        ]
+    },
+    {
+        "q": "What happens to a relative element?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    top: -20px;\n}",
+        "o": [
+            "moves up",
+            "moves down",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "Which positioning type creates a new stacking context?",
+        "o": [
+            "absolute",
+            "static",
+            "relative",
+            "sticky"
+        ]
+    },
+    {
+        "q": "What does this absolute positioning do?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    z-index: 10;\n}",
+        "o": [
+            "overlaps elements",
+            "normal flow",
+            "fixed",
+            "relative"
+        ]
+    },
+    {
+        "q": "What does 'left: 0' mean in 'absolute' position?",
+        "o": [
+            "aligns to left of nearest positioned ancestor",
+            "aligns to viewport left",
+            "no effect",
+            "aligns to body left"
+        ]
+    },
+    {
+        "q": "What happens to a fixed positioned element?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    right: 5px;\n}",
+        "o": [
+            "stays on viewport",
+            "overlaps parent",
+            "normal flow",
+            "hidden"
+        ]
+    },
+    {
+        "q": "How does 'absolute' positioning affect other elements?",
+        "o": [
+            "does not affect layout",
+            "pushes them down",
+            "overlaps them",
+            "removes them"
+        ]
+    },
+    {
+        "q": "How does sticky work during scrolling?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 50px;\n}",
+        "o": [
+            "stays visible",
+            "normal flow",
+            "overlaps",
+            "fixed"
+        ]
+    },
+    {
+        "q": "When is 'sticky' position useful?",
+        "o": [
+            "when scrolling",
+            "when hovering",
+            "when printing",
+            "when loading"
+        ]
+    },
+    {
+        "q": "What will be the output of this CSS?",
+        "l": "css",
+        "c": "div {\n    position: static;\n    margin: 10px;\n}",
+        "o": [
+            "normal flow",
+            "fixed",
+            "absolute",
+            "remains hidden"
+        ]
+    },
+    {
+        "q": "What does a 'static' positioned element ignore?",
+        "o": [
+            "top/left/right/bottom",
+            "visibility",
+            "opacity",
+            "z-index"
+        ]
+    },
+    {
+        "q": "How does relative positioning impact siblings?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    z-index: 1;\n}",
+        "o": [
+            "keeps flow",
+            "removes from flow",
+            "hidden",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "What is a key characteristic of 'fixed' position?",
+        "o": [
+            "it is viewport relative",
+            "it is parent relative",
+            "it ignores margin",
+            "it ignores padding"
+        ]
+    },
+    {
+        "q": "What does this code snippet define?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    bottom: 0;\n}",
+        "o": [
+            "floats",
+            "normal flow",
+            "fixed",
+            "stays at bottom"
+        ]
+    },
+    {
+        "q": "Which CSS property is ignored by 'static' positioning?",
+        "o": [
+            "top",
+            "display",
+            "border",
+            "color"
+        ]
+    },
+    {
+        "q": "What effect does fixed positioning have?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    left: 20px;\n}",
+        "o": [
+            "stays visible",
+            "overlaps",
+            "normal flow",
+            "hidden"
+        ]
+    },
+    {
+        "q": "Can 'sticky' positioning be used with 'top: -10px'?",
+        "o": [
+            "no",
+            "yes",
+            "depends on context",
+            "only in print"
+        ]
+    },
+    {
+        "q": "What will happen when this code is applied?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    bottom: 0;\n}",
+        "o": [
+            "stays visible",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What does 'position: relative' create?",
+        "o": [
+            "offset relative to original",
+            "new stacking context",
+            "fixed position",
+            "absolute position"
+        ]
+    },
+    {
+        "q": "How does static positioning work?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "in normal flow",
+            "overlaps",
+            "fixed",
+            "absolute"
+        ]
+    },
+    {
+        "q": "In which position type can 'z-index' be used?",
+        "o": [
+            "relative",
+            "static",
+            "sticky",
+            "all of the above"
+        ]
+    },
+    {
+        "q": "What is the effect of relative positioning?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    top: 30px;\n}",
+        "o": [
+            "moves down",
+            "normal flow",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "Which property defines how an element sticks when scrolling?",
+        "o": [
+            "position",
+            "top",
+            "display",
+            "visibility"
+        ]
+    },
+    {
+        "q": "What will this code do?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    left: 50%;\n}",
+        "o": [
+            "centers element",
+            "normal flow",
+            "fixed",
+            "relative"
+        ]
+    },
+    {
+        "q": "What does 'position: fixed' ignore?",
+        "o": [
+            "scroll",
+            "viewport",
+            "layout",
+            "margin"
+        ]
+    },
+    {
+        "q": "How will a fixed element behave?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    top: 10px;\n    left: 10px;\n}",
+        "o": [
+            "stays on viewport",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "Is 'sticky' position affected by overflow?",
+        "o": [
+            "yes",
+            "no",
+            "only if visible",
+            "depends on context"
+        ]
+    },
+    {
+        "q": "What does sticky positioning require?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 0;\n}",
+        "o": [
+            "scrollable ancestor",
+            "fixed position",
+            "normal flow",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What is the main difference between 'absolute' and 'fixed'?",
+        "o": [
+            "ancestor vs viewport",
+            "layout vs no layout",
+            "visibility",
+            "none"
+        ]
+    },
+    {
+        "q": "How does static positioning affect layout?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "in normal flow",
+            "fixed",
+            "absolute",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "How do you remove an element from normal flow?",
+        "o": [
+            "absolute",
+            "relative",
+            "sticky",
+            "fixed"
+        ]
+    },
+    {
+        "q": "What happens with relative positioning?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    right: 15px;\n}",
+        "o": [
+            "moves left",
+            "moves right",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "What is the effect of 'top: 0' in 'fixed' position?",
+        "o": [
+            "top of viewport",
+            "top of parent",
+            "top of document",
+            "none"
+        ]
+    },
+    {
+        "q": "What does absolute positioning allow?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    top: 10px;\n}",
+        "o": [
+            "overlap",
+            "normal flow",
+            "fixed",
+            "relative"
+        ]
+    },
+    {
+        "q": "Can an element be both 'absolute' and 'fixed'?",
+        "o": [
+            "no",
+            "yes",
+            "only if in another div",
+            "only in flex"
+        ]
+    },
+    {
+        "q": "What will this fixed element do?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    right: 0;\n    bottom: 0;\n}",
+        "o": [
+            "stay in viewport",
+            "normal flow",
+            "overlap",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What defines the stacking order of positioned elements?",
+        "o": [
+            "z-index",
+            "top",
+            "position",
+            "display"
+        ]
+    },
+    {
+        "q": "What happens to sticky elements?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 100px;\n}",
+        "o": [
+            "stays visible",
+            "normal flow",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "Which position allows elements to scroll out of view?",
+        "o": [
+            "static",
+            "fixed",
+            "absolute",
+            "sticky"
+        ]
+    },
+    {
+        "q": "What effect does static positioning have?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "normal flow",
+            "overlap",
+            "fixed",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What positioning allows overlap with 'z-index'?",
+        "o": [
+            "relative",
+            "static",
+            "normal",
+            "hidden"
+        ]
+    },
+    {
+        "q": "How does relative positioning affect siblings?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    left: 10px;\n}",
+        "o": [
+            "keeps them in flow",
+            "removes from flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "How to keep an element always at the top of the viewport?",
+        "o": [
+            "position: fixed",
+            "position: relative",
+            "position: static",
+            "position: absolute"
+        ]
+    },
+    {
+        "q": "What does absolute positioning ignore?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    z-index: 2;\n}",
+        "o": [
+            "normal flow",
+            "fixed layout",
+            "relative",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What happens if 'top' is not specified in 'absolute' position?",
+        "o": [
+            "default to auto",
+            "aligns to top",
+            "overlaps",
+            "none"
+        ]
+    },
+    {
+        "q": "What is a feature of fixed positioning?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    top: 0;\n    left: 0;\n}",
+        "o": [
+            "stays visible",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "How to achieve a sidebar that stays on screen while scrolling?",
+        "o": [
+            "position: fixed",
+            "position: sticky",
+            "position: relative",
+            "position: absolute"
+        ]
+    },
+    {
+        "q": "What does sticky positioning enable?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 50px;\n}",
+        "o": [
+            "scrolls with page",
+            "fixed",
+            "normal flow",
+            "hidden"
+        ]
+    },
+    {
+        "q": "Which property defines positioning in CSS?",
+        "o": [
+            "position",
+            "float",
+            "display",
+            "align"
+        ]
+    },
+    {
+        "q": "What happens to static positioned elements?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "follows normal flow",
+            "remains hidden",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "In 'sticky' position, where does the element move?",
+        "o": [
+            "to viewport",
+            "to parent",
+            "to center",
+            "to edge"
+        ]
+    },
+    {
+        "q": "How does relative positioning modify an element?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    top: 15px;\n}",
+        "o": [
+            "moves down",
+            "fixed",
+            "normal flow",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What type is commonly used for dropdown menus?",
+        "o": [
+            "absolute",
+            "fixed",
+            "sticky",
+            "relative"
+        ]
+    },
+    {
+        "q": "What does this code achieve?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    right: 10px;\n}",
+        "o": [
+            "overlaps parent",
+            "normal flow",
+            "fixed",
+            "hidden"
+        ]
+    },
+    {
+        "q": "How does 'absolute' positioning affect child elements?",
+        "o": [
+            "they are positioned relative to it",
+            "they follow normal flow",
+            "they are ignored",
+            "they are static"
+        ]
+    },
+    {
+        "q": "What will this fixed element do?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    bottom: 10px;\n}",
+        "o": [
+            "stay at bottom",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "When does 'sticky' positioning switch to 'fixed'?",
+        "o": [
+            "when it reaches the scroll threshold",
+            "when scrolled back",
+            "when visible",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the effect of sticky positioning?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 20px;\n}",
+        "o": [
+            "remains visible",
+            "normal flow",
+            "fixed",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What is the behavior of elements with 'fixed' positioning?",
+        "o": [
+            "not affected by scrolling",
+            "follow scrolling",
+            "push other elements",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the output of this CSS?",
+        "l": "css",
+        "c": "div {\n    position: static;\n    padding: 10px;\n}",
+        "o": [
+            "normal flow",
+            "fixed",
+            "absolute",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What layout effect does 'static' have?",
+        "o": [
+            "normal flow",
+            "absolute flow",
+            "fixed flow",
+            "sticky flow"
+        ]
+    },
+    {
+        "q": "What does this relative positioning do?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    bottom: 5px;\n}",
+        "o": [
+            "moves up",
+            "moves down",
+            "normal flow",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "In 'relative' positioning, which direction can you offset?",
+        "o": [
+            "any",
+            "only top",
+            "only left",
+            "none"
+        ]
+    },
+    {
+        "q": "What effect does absolute positioning have?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    top: 5px;\n}",
+        "o": [
+            "ignores flow",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What is an advantage of 'sticky' positioning?",
+        "o": [
+            "it combines relative and fixed",
+            "it is always on top",
+            "it overlaps elements",
+            "none"
+        ]
+    },
+    {
+        "q": "What will this fixed code do?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    left: 0;\n    top: 0;\n}",
+        "o": [
+            "stays on viewport",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "Which type is used for tooltips?",
+        "o": [
+            "absolute",
+            "fixed",
+            "sticky",
+            "static"
+        ]
+    },
+    {
+        "q": "What happens to a sticky element when scrolled?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 0;\n}",
+        "o": [
+            "stays visible",
+            "normal flow",
+            "hidden",
+            "fixed"
+        ]
+    },
+    {
+        "q": "What happens to a sticky element when it reaches the top of the viewport?",
+        "o": [
+            "it sticks",
+            "it scrolls",
+            "it disappears",
+            "it becomes fixed"
+        ]
+    },
+    {
+        "q": "What happens with static positioned elements?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "normal flow",
+            "fixed",
+            "absolute",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What does 'position: relative' do to its element?",
+        "o": [
+            "offsets it",
+            "keeps it static",
+            "removes it",
+            "overlaps it"
+        ]
+    },
+    {
+        "q": "How does relative positioning affect layout?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    left: 10px;\n}",
+        "o": [
+            "moves right",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What value can you not use with 'static' positioning?",
+        "o": [
+            "top",
+            "bottom",
+            "left",
+            "right"
+        ]
+    },
+    {
+        "q": "What will absolute positioning do?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    bottom: 0;\n}",
+        "o": [
+            "moves to bottom",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "Which type can overlap other elements?",
+        "o": [
+            "absolute",
+            "static",
+            "normal",
+            "fixed"
+        ]
+    },
+    {
+        "q": "What happens to a fixed element?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    top: 10px;\n}",
+        "o": [
+            "stays in viewport",
+            "overlaps",
+            "normal flow",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What does a fixed position element ignore?",
+        "o": [
+            "scrolling",
+            "parent dimensions",
+            "layout flow",
+            "none"
+        ]
+    },
+    {
+        "q": "What does sticky positioning allow?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 50px;\n}",
+        "o": [
+            "stays during scroll",
+            "fixed",
+            "normal flow",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What effect does 'position: sticky' have when scrolling past it?",
+        "o": [
+            "remains fixed",
+            "returns to original",
+            "disappears",
+            "none"
+        ]
+    },
+    {
+        "q": "How does static positioning behave?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "in normal flow",
+            "fixed",
+            "absolute",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What does a 'relative' positioned element affect?",
+        "o": [
+            "only itself",
+            "its children",
+            "its parent",
+            "none"
+        ]
+    },
+    {
+        "q": "What does relative positioning cause?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    right: 20px;\n}",
+        "o": [
+            "moves left",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What positioning type is primarily used for layout?",
+        "o": [
+            "static",
+            "fixed",
+            "absolute",
+            "sticky"
+        ]
+    },
+    {
+        "q": "What will absolute positioning ignore?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    left: 0;\n}",
+        "o": [
+            "normal flow",
+            "fixed",
+            "relative",
+            "hidden"
+        ]
+    },
+    {
+        "q": "How do you make an element responsive to scrolling?",
+        "o": [
+            "use sticky",
+            "use static",
+            "use fixed",
+            "use absolute"
+        ]
+    },
+    {
+        "q": "What will fixed position do?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    left: 10px;\n}",
+        "o": [
+            "stays on screen",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What is the main use of 'position: absolute'?",
+        "o": [
+            "create overlays",
+            "maintain layout",
+            "keep static",
+            "none"
+        ]
+    },
+    {
+        "q": "What does sticky allow?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 30px;\n}",
+        "o": [
+            "remains visible",
+            "normal flow",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "When is 'sticky' positioning not effective?",
+        "o": [
+            "in overflow:hidden",
+            "always",
+            "with relative",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the behavior of static positioning?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "in normal flow",
+            "fixed",
+            "absolute",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What is the initial state of a 'sticky' element?",
+        "o": [
+            "relative",
+            "fixed",
+            "absolute",
+            "static"
+        ]
+    },
+    {
+        "q": "How does relative positioning affect siblings?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    top: 10px;\n}",
+        "o": [
+            "remains in flow",
+            "hidden",
+            "overlaps",
+            "normal flow"
+        ]
+    },
+    {
+        "q": "What property sets how far an element is from the edge?",
+        "o": [
+            "top",
+            "bottom",
+            "left",
+            "right"
+        ]
+    },
+    {
+        "q": "What happens with absolute positioning?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    right: 5px;\n}",
+        "o": [
+            "ignores normal flow",
+            "normal flow",
+            "fixed",
+            "hidden"
+        ]
+    },
+    {
+        "q": "Which positioning type has no effect on sibling elements?",
+        "o": [
+            "absolute",
+            "fixed",
+            "static",
+            "sticky"
+        ]
+    },
+    {
+        "q": "What does fixed positioning enable?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    bottom: 0;\n}",
+        "o": [
+            "stays at bottom",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What positioning allows element to scroll but stay in view?",
+        "o": [
+            "sticky",
+            "absolute",
+            "fixed",
+            "relative"
+        ]
+    },
+    {
+        "q": "What is the effect of sticky positioning?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 0;\n}",
+        "o": [
+            "remains during scroll",
+            "normal flow",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "What positioning is often used for modals?",
+        "o": [
+            "fixed",
+            "relative",
+            "sticky",
+            "absolute"
+        ]
+    },
+    {
+        "q": "What happens to static positioned elements?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "follows normal flow",
+            "hidden",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "In CSS, which position type is most commonly used?",
+        "o": [
+            "static",
+            "absolute",
+            "fixed",
+            "sticky"
+        ]
+    },
+    {
+        "q": "How does relative positioning affect layout?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    left: 30px;\n}",
+        "o": [
+            "moves right",
+            "normal flow",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "Which positioning type allows overlapping with lower z-index?",
+        "o": [
+            "absolute",
+            "fixed",
+            "sticky",
+            "none"
+        ]
+    },
+    {
+        "q": "What does absolute positioning do?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    top: 20px;\n}",
+        "o": [
+            "moves down",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "How does the browser treat 'absolute' positioning?",
+        "o": [
+            "ignores normal flow",
+            "always at the top",
+            "acts like static",
+            "none"
+        ]
+    },
+    {
+        "q": "What does fixed positioning achieve?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    left: 10px;\n}",
+        "o": [
+            "stays on screen",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "Which type is not affected by parent elements?",
+        "o": [
+            "fixed",
+            "static",
+            "relative",
+            "absolute"
+        ]
+    },
+    {
+        "q": "What happens to sticky positioned elements?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 10px;\n}",
+        "o": [
+            "remains during scroll",
+            "normal flow",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "What does 'position: fixed' use for positioning?",
+        "o": [
+            "viewport",
+            "parent",
+            "document",
+            "none"
+        ]
+    },
+    {
+        "q": "What does static positioning lead to?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "in normal flow",
+            "hidden",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What happens when a 'sticky' element reaches its container?",
+        "o": [
+            "it stops moving",
+            "it scrolls out",
+            "it overlaps",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the effect of relative positioning?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    top: 5px;\n}",
+        "o": [
+            "moves down",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "Which is the primary property for positioning?",
+        "o": [
+            "position",
+            "top",
+            "margin",
+            "display"
+        ]
+    },
+    {
+        "q": "What will absolute positioning ignore?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    left: 10px;\n}",
+        "o": [
+            "normal flow",
+            "fixed",
+            "relative",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What is a common use case for 'absolute' positioning?",
+        "o": [
+            "tooltips",
+            "layout",
+            "scrolling",
+            "none"
+        ]
+    },
+    {
+        "q": "What will fixed positioning do?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    top: 10px;\n}",
+        "o": [
+            "stay on viewport",
+            "normal flow",
+            "overlap",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What happens if 'top' is negative in 'relative' position?",
+        "o": [
+            "moves up",
+            "moves down",
+            "no effect",
+            "none"
+        ]
+    },
+    {
+        "q": "What does sticky positioning do?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 40px;\n}",
+        "o": [
+            "stays during scroll",
+            "normal flow",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "Which position does not use z-index?",
+        "o": [
+            "static",
+            "fixed",
+            "absolute",
+            "relative"
+        ]
+    },
+    {
+        "q": "What is static positioning?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "normal flow",
+            "fixed",
+            "absolute",
+            "hidden"
+        ]
+    },
+    {
+        "q": "Which position is good for sticky headers?",
+        "o": [
+            "sticky",
+            "fixed",
+            "relative",
+            "absolute"
+        ]
+    },
+    {
+        "q": "How does relative positioning work?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    left: 10px;\n}",
+        "o": [
+            "moves right",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What does 'position: absolute' ignore?",
+        "o": [
+            "margin",
+            "padding",
+            "layout",
+            "none"
+        ]
+    },
+    {
+        "q": "What does absolute positioning allow?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    top: 0;\n}",
+        "o": [
+            "ignores flow",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "Which position is least used in layouts?",
+        "o": [
+            "sticky",
+            "absolute",
+            "fixed",
+            "static"
+        ]
+    },
+    {
+        "q": "What does fixed position do?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    bottom: 5px;\n}",
+        "o": [
+            "stays at bottom",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What positioning type is affected by scroll?",
+        "o": [
+            "static",
+            "sticky",
+            "absolute",
+            "fixed"
+        ]
+    },
+    {
+        "q": "What happens to a sticky element?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 50px;\n}",
+        "o": [
+            "remains during scroll",
+            "normal flow",
+            "fixed",
+            "hidden"
+        ]
+    },
+    {
+        "q": "How do you make a footer fixed?",
+        "o": [
+            "position: fixed",
+            "position: relative",
+            "position: static",
+            "position: sticky"
+        ]
+    },
+    {
+        "q": "What does static positioning entail?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "normal flow",
+            "fixed",
+            "absolute",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What does a 'relative' element position against?",
+        "o": [
+            "its original location",
+            "viewport",
+            "parent",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the outcome of relative positioning?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    top: 15px;\n}",
+        "o": [
+            "moves down",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "When using 'absolute', which parent is the reference?",
+        "o": [
+            "nearest positioned",
+            "body",
+            "none",
+            "static parent"
+        ]
+    },
+    {
+        "q": "What does absolute positioning affect?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    right: 5px;\n}",
+        "o": [
+            "ignores normal flow",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "Can 'absolute' position affect layout?",
+        "o": [
+            "no",
+            "yes",
+            "only if visible",
+            "depends"
+        ]
+    },
+    {
+        "q": "What does fixed position result in?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    top: 0;\n}",
+        "o": [
+            "stays in viewport",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "How does 'position: sticky' behave in a scrollable container?",
+        "o": [
+            "sticks until threshold",
+            "always fixed",
+            "follows scroll",
+            "none"
+        ]
+    },
+    {
+        "q": "What will sticky positioning do?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 20px;\n}",
+        "o": [
+            "remains during scroll",
+            "normal flow",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "What happens if 'top' is greater than height in 'fixed'?",
+        "o": [
+            "ignores it",
+            "moves down",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the effect of static positioning?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "follows normal flow",
+            "hidden",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "Which position type takes element out of document flow?",
+        "o": [
+            "absolute",
+            "relative",
+            "sticky",
+            "fixed"
+        ]
+    },
+    {
+        "q": "How does relative positioning work?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    left: 5px;\n}",
+        "o": [
+            "moves right",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "In 'sticky', which property controls the distance to stick?",
+        "o": [
+            "top",
+            "bottom",
+            "left",
+            "right"
+        ]
+    },
+    {
+        "q": "What happens with absolute positioning?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    bottom: 0;\n}",
+        "o": [
+            "ignores flow",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What is a common mistake with 'sticky'?",
+        "o": [
+            "using it inside overflow",
+            "using negative margins",
+            "none",
+            "always valid"
+        ]
+    },
+    {
+        "q": "What does fixed positioning accomplish?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    left: 0;\n}",
+        "o": [
+            "stays on screen",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "How does 'position: fixed' handle z-index?",
+        "o": [
+            "applies stacking context",
+            "ignores it",
+            "none",
+            "applies to all"
+        ]
+    },
+    {
+        "q": "What does sticky positioning allow?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 10px;\n}",
+        "o": [
+            "remains during scroll",
+            "normal flow",
+            "fixed",
+            "hidden"
+        ]
+    },
+    {
+        "q": "Can 'sticky' positioning work with 'overflow: hidden'?",
+        "o": [
+            "no",
+            "yes",
+            "depends on size",
+            "always works"
+        ]
+    },
+    {
+        "q": "What happens to static positioned elements?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "follows normal flow",
+            "fixed",
+            "absolute",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What does 'position: fixed' ensure?",
+        "o": [
+            "always visible",
+            "scroll with page",
+            "follow layout",
+            "none"
+        ]
+    },
+    {
+        "q": "What does relative positioning do?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    bottom: 10px;\n}",
+        "o": [
+            "moves up",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What happens with 'top' and 'fixed' positioning?",
+        "o": [
+            "remains fixed",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens with absolute positioning?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    top: 5px;\n}",
+        "o": [
+            "ignores flow",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What is the fallback of unsupported sticky positioning?",
+        "o": [
+            "static",
+            "fixed",
+            "relative",
+            "absolute"
+        ]
+    },
+    {
+        "q": "What does fixed positioning achieve?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    right: 0;\n}",
+        "o": [
+            "stays on screen",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What happens to non-positioned siblings of 'absolute'?",
+        "o": [
+            "they are unaffected",
+            "they overlap",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does sticky positioning do?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 25px;\n}",
+        "o": [
+            "remains visible",
+            "normal flow",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "In 'relative', which property has no effect?",
+        "o": [
+            "z-index",
+            "none",
+            "visibility",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens with static positioning?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "follows normal flow",
+            "fixed",
+            "absolute",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What is an advantage of 'absolute' positioning?",
+        "o": [
+            "flexibility",
+            "rigidity",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does relative positioning affect layout?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    top: 5px;\n}",
+        "o": [
+            "moves down",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "When can 'fixed' positioning cause problems?",
+        "o": [
+            "on small screens",
+            "always",
+            "only with z-index",
+            "none"
+        ]
+    },
+    {
+        "q": "What does absolute positioning do?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    left: 10px;\n}",
+        "o": [
+            "ignores normal flow",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "Which property is required for sticky positioning?",
+        "o": [
+            "top",
+            "left",
+            "right",
+            "bottom"
+        ]
+    },
+    {
+        "q": "What does fixed positioning result in?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    bottom: 10px;\n}",
+        "o": [
+            "stays at bottom",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What do you need for sticky positioning?",
+        "o": [
+            "overflow: auto",
+            "absolute position",
+            "none",
+            "static"
+        ]
+    },
+    {
+        "q": "What happens to sticky positioned elements?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 10px;\n}",
+        "o": [
+            "remains during scroll",
+            "normal flow",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "What is the initial state of an element with no positioning?",
+        "o": [
+            "static",
+            "relative",
+            "absolute",
+            "fixed"
+        ]
+    },
+    {
+        "q": "What does static positioning lead to?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "normal flow",
+            "hidden",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What happens to a child of an absolute element?",
+        "o": [
+            "positions relative to it",
+            "ignores it",
+            "no effect",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the outcome of relative positioning?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    right: 5px;\n}",
+        "o": [
+            "moves left",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "How does 'position: sticky' work?",
+        "o": [
+            "it combines relative and fixed",
+            "it acts as absolute",
+            "it depends on size",
+            "none"
+        ]
+    },
+    {
+        "q": "What does absolute positioning affect?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    top: 0;\n}",
+        "o": [
+            "ignores normal flow",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What is true about 'fixed' positioning?",
+        "o": [
+            "never scrolls",
+            "always scrolls",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does fixed positioning do?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    left: 10px;\n}",
+        "o": [
+            "stays on screen",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What does 'position: relative' not do?",
+        "o": [
+            "remove from flow",
+            "affect layout",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to sticky positioned elements?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 30px;\n}",
+        "o": [
+            "remains visible",
+            "normal flow",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "How to create an element that is hidden until scrolled?",
+        "o": [
+            "position: sticky",
+            "position: absolute",
+            "position: fixed",
+            "none"
+        ]
+    },
+    {
+        "q": "What is static positioning?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "normal flow",
+            "fixed",
+            "absolute",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What is the relationship of 'fixed' to the viewport?",
+        "o": [
+            "always visible",
+            "none",
+            "scrolls with",
+            "remains hidden"
+        ]
+    },
+    {
+        "q": "How does relative positioning work?",
+        "l": "css",
+        "c": "div {\n    position: relative;\n    bottom: 5px;\n}",
+        "o": [
+            "moves up",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "Which CSS type keeps items in their original place?",
+        "o": [
+            "static",
+            "absolute",
+            "fixed",
+            "sticky"
+        ]
+    },
+    {
+        "q": "What does absolute positioning allow?",
+        "l": "css",
+        "c": "div {\n    position: absolute;\n    right: 10px;\n}",
+        "o": [
+            "ignores flow",
+            "normal flow",
+            "fixed",
+            "overlapping"
+        ]
+    },
+    {
+        "q": "What happens to an element with 'top: 50px' in 'absolute'?",
+        "o": [
+            "moves 50px down",
+            "moves up",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does fixed position do?",
+        "l": "css",
+        "c": "div {\n    position: fixed;\n    top: 0;\n}",
+        "o": [
+            "stays in viewport",
+            "normal flow",
+            "overlaps",
+            "hidden"
+        ]
+    },
+    {
+        "q": "Which positioning allows for overlapping but maintains flow?",
+        "o": [
+            "sticky",
+            "relative",
+            "absolute",
+            "none"
+        ]
+    },
+    {
+        "q": "What will sticky positioning do?",
+        "l": "css",
+        "c": "div {\n    position: sticky;\n    top: 50px;\n}",
+        "o": [
+            "remains during scroll",
+            "normal flow",
+            "fixed",
+            "overlaps"
+        ]
+    },
+    {
+        "q": "Which type of position is often used for floating elements?",
+        "o": [
+            "absolute",
+            "fixed",
+            "relative",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the effect of static positioning?",
+        "l": "css",
+        "c": "div {\n    position: static;\n}",
+        "o": [
+            "follows normal flow",
+            "fixed",
+            "absolute",
+            "hidden"
+        ]
+    },
+    {
+        "q": "What happens to 'position: absolute' in a flexbox?",
+        "o": [
+            "ignores layout",
+            "pushes elements",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'fixed' position impact the layout?",
+        "o": [
+            "does not affect layout",
+            "overlaps",
+            "pushes elements",
+            "none"
+        ]
+    },
+    {
+        "q": "What defines the top space in 'relative' position?",
+        "o": [
+            "top property",
+            "margin",
+            "padding",
+            "none"
+        ]
+    },
+    {
+        "q": "Which property is ignored by 'absolute' elements?",
+        "o": [
+            "top",
+            "margin",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the result of 'position: sticky' inside overflow?",
+        "o": [
+            "not sticky",
+            "always sticky",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'sticky' depend on to stick?",
+        "o": [
+            "scroll position",
+            "top margin",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How do positioned elements stack?",
+        "o": [
+            "z-index",
+            "position",
+            "size",
+            "none"
+        ]
+    },
+    {
+        "q": "Which is a common mistake with fixed positioning?",
+        "o": [
+            "large offsets",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is 'absolute' relative to?",
+        "o": [
+            "nearest positioned parent",
+            "body",
+            "viewport",
+            "none"
+        ]
+    },
+    {
+        "q": "What is a limitation of 'sticky'?",
+        "o": [
+            "only scrollable",
+            "always overlaps",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'position: relative' behave in a flex container?",
+        "o": [
+            "it follows flow",
+            "overlaps",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'sticky' position do on viewport scroll?",
+        "o": [
+            "it stays in view",
+            "it overlaps",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What can cause 'absolute' to be hidden?",
+        "o": [
+            "overflow:hidden",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'fixed' position handle scroll?",
+        "o": [
+            "remains fixed",
+            "scrolls away",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'position: sticky' require to work?",
+        "o": [
+            "scrolling",
+            "absolute parent",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'position: relative' set in CSS?",
+        "o": [
+            "original position",
+            "fixed position",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the purpose of 'sticky' in layouts?",
+        "o": [
+            "maintain visibility",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How to position elements on top of others?",
+        "o": [
+            "use z-index",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'position: relative' do to siblings?",
+        "o": [
+            "keeps them in flow",
+            "pushes them",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What type of position does not allow overlap?",
+        "o": [
+            "static",
+            "fixed",
+            "relative",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to 'sticky' elements on scroll up?",
+        "o": [
+            "they return",
+            "they remain",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which property does 'absolute' ignore in layout?",
+        "o": [
+            "flex",
+            "grid",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'position: fixed' affect z-index?",
+        "o": [
+            "creates stacking context",
+            "ignores it",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which position type should not be used inside scrollable containers?",
+        "o": [
+            "sticky",
+            "fixed",
+            "relative",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to children of a sticky element?",
+        "o": [
+            "they stay",
+            "they overlap",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is an effect of 'absolute' positioning?",
+        "o": [
+            "removes from flow",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which position is often used for dropdown menus?",
+        "o": [
+            "absolute",
+            "fixed",
+            "sticky",
+            "none"
+        ]
+    },
+    {
+        "q": "What defines the positioning context in CSS?",
+        "o": [
+            "nearest positioned ancestor",
+            "viewport",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'position: relative' do to layout?",
+        "o": [
+            "maintains layout",
+            "overlaps",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which position type is best for modals?",
+        "o": [
+            "fixed",
+            "absolute",
+            "sticky",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to a fixed element during scroll?",
+        "o": [
+            "remains in place",
+            "scrolls away",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'sticky' positioning enable?",
+        "o": [
+            "visibility on scroll",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which type does not require a reference parent?",
+        "o": [
+            "fixed",
+            "absolute",
+            "relative",
+            "none"
+        ]
+    },
+    {
+        "q": "How is 'relative' positioning calculated?",
+        "o": [
+            "based on original position",
+            "based on viewport",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to siblings of a fixed element?",
+        "o": [
+            "remain unaffected",
+            "overlap",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the effect of 'sticky' on viewport?",
+        "o": [
+            "keeps visible",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which is a common use for 'absolute' positioning?",
+        "o": [
+            "floating boxes",
+            "maintaining flow",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'fixed' positioning ignore?",
+        "o": [
+            "scroll position",
+            "margin",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'sticky' behave in a flex layout?",
+        "o": [
+            "follows flow",
+            "overlaps",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which property is important for sticky?",
+        "o": [
+            "top",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is a primary drawback of 'sticky'?",
+        "o": [
+            "limited usage",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is true about 'position: absolute'?",
+        "o": [
+            "overlaps",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What type of positioning is often used for tooltips?",
+        "o": [
+            "absolute",
+            "fixed",
+            "relative",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'fixed' ensure in a layout?",
+        "o": [
+            "stays on screen",
+            "overlaps",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'relative' affect siblings?",
+        "o": [
+            "none",
+            "overlap",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'sticky' require in CSS?",
+        "o": [
+            "position property",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to a 'fixed' element during scrolling?",
+        "o": [
+            "it stays put",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What defines the positioning context for 'absolute'?",
+        "o": [
+            "nearest positioned ancestor",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What positioning type requires a scrolling container?",
+        "o": [
+            "sticky",
+            "fixed",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which positioning method often causes layout shifts?",
+        "o": [
+            "absolute",
+            "fixed",
+            "relative",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the effect of using 'position: static'?",
+        "o": [
+            "normal flow",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'sticky' require to work properly?",
+        "o": [
+            "scrollable ancestor",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'position: relative' behave in layout?",
+        "o": [
+            "keeps in flow",
+            "overlaps",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which type of position prevents overlapping?",
+        "o": [
+            "static",
+            "fixed",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens when 'sticky' reaches its container?",
+        "o": [
+            "it stops",
+            "it continues",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which positioning allows items to overlap?",
+        "o": [
+            "absolute",
+            "static",
+            "fixed",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'position: sticky' do during scroll?",
+        "o": [
+            "sticks to the viewport",
+            "scrolls away",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How to ensure an element stays in the viewport?",
+        "o": [
+            "use fixed",
+            "use absolute",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which positioning type is best for tooltips?",
+        "o": [
+            "absolute",
+            "relative",
+            "fixed",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens when using 'position: fixed'?",
+        "o": [
+            "ignores scroll",
+            "follows scroll",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'absolute' ignore in layout?",
+        "o": [
+            "normal flow",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'sticky' positioning behave?",
+        "o": [
+            "partially fixed",
+            "fully fixed",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to siblings of 'absolute' positioned items?",
+        "o": [
+            "remain unaffected",
+            "overlap",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'sticky' depend on to function?",
+        "o": [
+            "scroll position",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What defines the position for 'fixed' elements?",
+        "o": [
+            "viewport",
+            "container",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'fixed' position behave during scroll?",
+        "o": [
+            "stays in view",
+            "scrolls out",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which is a key characteristic of 'absolute'?",
+        "o": [
+            "positioned relative to nearest ancestor",
+            "fixed to viewport",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to 'relative' elements in flex containers?",
+        "o": [
+            "keeps flow",
+            "overlap",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which positioning type is best for navigation bars?",
+        "o": [
+            "fixed",
+            "absolute",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the purpose of using 'sticky' positioning?",
+        "o": [
+            "to maintain visibility",
+            "to overlap",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is true for 'absolute' positioning?",
+        "o": [
+            "removes element from flow",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'fixed' positioning affect layout?",
+        "o": [
+            "creates stacking context",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the role of 'sticky' positioning?",
+        "o": [
+            "to maintain visibility during scroll",
+            "to create overlap",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which is true about 'relative' positioning?",
+        "o": [
+            "sets position relative to original",
+            "fixed to viewport",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the main purpose of 'absolute' positioning?",
+        "o": [
+            "floating elements",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'sticky' do when you scroll past it?",
+        "o": [
+            "it sticks",
+            "it overlaps",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'fixed' behave in the viewport?",
+        "o": [
+            "it stays",
+            "it scrolls",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'relative' positioning do to siblings?",
+        "o": [
+            "keeps them in flow",
+            "pushes them away",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which position type is often used for alerts?",
+        "o": [
+            "fixed",
+            "absolute",
+            "relative",
+            "none"
+        ]
+    },
+    {
+        "q": "What is a limitation of 'absolute' positioning?",
+        "o": [
+            "depends on parent",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to a 'fixed' element on page scroll?",
+        "o": [
+            "remains in view",
+            "scrolls away",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'sticky' do on viewport scroll?",
+        "o": [
+            "stays in view",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the role of 'relative' in layout?",
+        "o": [
+            "keeps flow",
+            "overlaps",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which positioning type does not use coordinates?",
+        "o": [
+            "static",
+            "fixed",
+            "absolute",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the main drawback of 'sticky' position?",
+        "o": [
+            "browser support",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'position: absolute' affect layout?",
+        "o": [
+            "removes from flow",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the effect of 'fixed' positioning on elements?",
+        "o": [
+            "stays in viewport",
+            "scrolls away",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'sticky' work in a layout?",
+        "o": [
+            "requires scrolling",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to elements with 'absolute' positioning?",
+        "o": [
+            "they float",
+            "they overlap",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the main purpose of 'fixed' positioning?",
+        "o": [
+            "to stay on screen",
+            "to scroll away",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'sticky' require to function correctly?",
+        "o": [
+            "scrollable ancestor",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'absolute' positioning ignore?",
+        "o": [
+            "normal flow",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'fixed' position affect the layout?",
+        "o": [
+            "stays visible",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to 'relative' positioned items?",
+        "o": [
+            "they maintain flow",
+            "they overlap",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which positioning method allows items to overlap?",
+        "o": [
+            "absolute",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'sticky' require in CSS?",
+        "o": [
+            "scrolling parent",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is a limitation of 'fixed' positioning?",
+        "o": [
+            "z-index stacking",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to children of 'absolute' positioned items?",
+        "o": [
+            "float",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What defines the context for 'absolute' elements?",
+        "o": [
+            "nearest positioned ancestor",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'sticky' do on scroll up?",
+        "o": [
+            "returns",
+            "sticks",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'absolute' positioning affect siblings?",
+        "o": [
+            "removes them",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'position: fixed' ignore?",
+        "o": [
+            "scroll",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'position: relative' affect siblings?",
+        "o": [
+            "they stay in flow",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'sticky' allow in scrolling?",
+        "o": [
+            "keeps elements visible",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to fixed elements in scrollable containers?",
+        "o": [
+            "they stay",
+            "they overlap",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'sticky' affect flow?",
+        "o": [
+            "maintains flow",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the behavior of a sticky element on scroll down?",
+        "o": [
+            "it stays",
+            "it returns",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is the role of 'absolute' positioning?",
+        "o": [
+            "removes from flow",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to 'sticky' elements on scroll up?",
+        "o": [
+            "they return",
+            "they stick",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'fixed' ensure in a layout?",
+        "o": [
+            "remains visible",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'absolute' positioning allow?",
+        "o": [
+            "to float",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What is a drawback of 'sticky' positioning?",
+        "o": [
+            "browser compatibility",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'fixed' positioning ignore?",
+        "o": [
+            "page scroll",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to absolute elements?",
+        "o": [
+            "they overlap",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'position: relative' affect in layout?",
+        "o": [
+            "keeps elements in flow",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "Which positioning type is best for sticky notes?",
+        "o": [
+            "fixed",
+            "absolute",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to a sticky element on scroll up?",
+        "o": [
+            "it returns",
+            "it stays",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'absolute' allow in CSS layout?",
+        "o": [
+            "floating elements",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'sticky' do in layouts?",
+        "o": [
+            "maintain visibility",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'fixed' positioning provide?",
+        "o": [
+            "stays on screen",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens when using 'absolute'?",
+        "o": [
+            "overlapping",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'relative' position work in flex?",
+        "o": [
+            "keeps elements in flow",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'sticky' depend on in scrolling?",
+        "o": [
+            "scroll position",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What does 'absolute' positioning do?",
+        "o": [
+            "removes from document flow",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to siblings of a fixed element?",
+        "o": [
+            "remain in flow",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'fixed' behave in relation to scrolling?",
+        "o": [
+            "remains fixed",
+            "scrolls away",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "How does 'position: sticky' work?",
+        "o": [
+            "requires scrolling",
+            "none",
+            "none",
+            "none"
+        ]
+    },
+    {
+        "q": "What happens to children of an absolute item?",
+        "o": [
+            "they float",
+            "none",
+            "none",
+            "none"
+        ]
+    }
+]
