@@ -1,5 +1,5 @@
-// python3 generate_pipeline.py prompts "Javascript" --topic basic
-// python3 generate_pipeline.py process "Javascript"
+// python3 generate_pipeline.py prompts "WebSecurity" --topic basic
+// python3 generate_pipeline.py process "TypeScript"
 // Read the file staging/INSTRUCTIONS.md and follow all instructions. For each task, read the prompt file, generate the quiz JSON following ALL rules, and write the output to the specified output file path.
 
 class Constants {
