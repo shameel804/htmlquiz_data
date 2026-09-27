@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Color Formats in Modern CSS",
+    "ques": "Compare CSS color formats: **Hexadecimal (`#hex`)**, **`rgb()`/`rgba()`**, and modern **`hsl()`**. Write examples of each format representing an identical blue shade.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* All three declarations represent an identical vibrant blue with 80% opacity */\n\n/* 1. Hexadecimal with alpha (#RRGGBBAA) */\n.box-hex {\n  background-color: #2563ebcc;\n}\n\n/* 2. Modern RGB syntax (red green blue / alpha) */\n.box-rgb {\n  background-color: rgb(37 99 235 / 0.8);\n}\n\n/* 3. Modern HSL syntax (hue saturation lightness / alpha) */\n.box-hsl {\n  background-color: hsl(221 83% 53% / 0.8);\n}"
+    },
+    "explanation": "`hex` is compact, `rgb` describes light channels, and `hsl` (hue, saturation, lightness) is intuitive for generating tints, shades, and complementary color schemes."
+  },
+  {
+    "title": "Crafting Linear and Radial Gradients",
+    "ques": "Demonstrate the use of **`linear-gradient()`** and **`radial-gradient()`** for creating smooth background color transitions.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* 1. Linear Gradient angled at 135 degrees with 3 color stops */\n.hero-gradient-linear {\n  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%);\n  min-height: 250px;\n  border-radius: 12px;\n}\n\n/* 2. Radial Gradient emanating from the center */\n.spotlight-radial {\n  background: radial-gradient(circle at center, #38bdf8 0%, #0369a1 70%, #0f172a 100%);\n  min-height: 250px;\n  border-radius: 12px;\n}"
+    },
+    "explanation": "Gradients are generated as CSS `<image>` data types. `linear-gradient` transitions colors along a directional vector, while `radial-gradient` radiates outwards from a focal point."
+  },
+  {
+    "title": "Configuring Background Images",
+    "ques": "Demonstrate the essential properties for responsive background images: `background-image`, **`background-size: cover`**, `background-position: center`, and `background-repeat: no-repeat`.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".hero-banner {\n  /* Image URL and overlay gradient for text contrast */\n  background-image: \n    linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),\n    url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97');\n  \n  /* Scales image to completely cover the container while preserving aspect ratio */\n  background-size: cover;\n  \n  /* Centers the focal point of the image */\n  background-position: center center;\n  \n  /* Prevents tiling/duplication */\n  background-repeat: no-repeat;\n  \n  min-height: 400px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: #ffffff;\n}"
+    },
+    "explanation": "`background-size: cover` ensures the background image fills the entire container without distorting aspect ratio, while pairing with an overlay gradient preserves text readability."
+  }
+]

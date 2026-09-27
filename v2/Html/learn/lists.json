@@ -1,0 +1,159 @@
+{
+    "id": "learn_html_lists",
+    "topicId": "lists",
+    "topicTitle": "HTML Lists",
+    "description": "Learn ordered, unordered, and description lists with nested structures.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "html_lists_1",
+            "type": "content",
+            "title": "Welcome to HTML Lists",
+            "content": "# HTML Lists: Organizing Information 📋\n\nLists group related items into clean, readable structures. HTML provides three distinct types of lists for different semantic purposes.\n\n## What you'll master:\n- 🔘 **Unordered Lists (`<ul>`)** - Bulleted collections of related items\n- 🔢 **Ordered Lists (`<ol>`)** - Sequenced, numbered procedures and rankings\n- 📖 **Description Lists (`<dl>`)** - Key-value pairs, glossaries, and metadata\n- 📂 **Nested Lists** - Multi-level hierarchies and tree structures\n- 🎨 **Styling Lists** - Custom bullets, counters, and building navigation menus"
+        },
+        {
+            "id": "html_lists_2",
+            "type": "content",
+            "title": "Unordered Lists (<ul>)",
+            "content": "# Unordered Lists (`<ul>`) 🔘\n\nAn unordered list is used when the sequence or order of items does not matter. By default, browsers display items with bullet points.\n\n```html_not\n<ul>\n  <li>HTML5 Structure</li>\n  <li>CSS3 Styling</li>\n  <li>JavaScript Logic</li>\n  <li>TypeScript Types</li>\n</ul>\n```\n\n- `<ul>`: Wraps the list collection.\n- `<li>`: **List Item** — each individual entry.\n\n> ⚠️ **Rule:** Only `<li>` elements can be direct children of a `<ul>`! Never place a `<p>` or `<div>` directly inside `<ul>`."
+        },
+        {
+            "id": "html_lists_3",
+            "type": "content",
+            "title": "Ordered Lists (<ol>)",
+            "content": "# Ordered Lists (`<ol>`) 🔢\n\nAn ordered list is used when the sequence of items is critical (e.g. recipes, tutorials, rankings). Browsers number them automatically.\n\n```html_not\n<ol>\n  <li>Write HTML boilerplate</li>\n  <li>Link stylesheet in head</li>\n  <li>Write semantic markup</li>\n  <li>Test accessibility with screen reader</li>\n</ol>\n```\n\nBrowser renders:\n1. Write HTML boilerplate\n2. Link stylesheet in head\n3. Write semantic markup\n4. Test accessibility with screen reader"
+        },
+        {
+            "id": "html_lists_4",
+            "type": "content",
+            "title": "Ordered List Attributes",
+            "content": "# Customizing Ordered Lists ⚙️\n\n`<ol>` supports three useful attributes for controlling numbering:\n\n## 1. `type`: Numbering Style\n- `type=\"1\"`: Decimal numbers (1, 2, 3...) - Default\n- `type=\"A\"`: Uppercase letters (A, B, C...)\n- `type=\"a\"`: Lowercase letters (a, b, c...)\n- `type=\"I\"`: Uppercase Roman numerals (I, II, III...)\n- `type=\"i\"`: Lowercase Roman numerals (i, ii, iii...)\n\n## 2. `start`: Starting Index\n```html_not\n<!-- Starts numbering at 50 -->\n<ol start=\"50\">\n  <li>Item fifty</li>\n  <li>Item fifty-one</li>\n</ol>\n```\n\n## 3. `reversed`: Countdown\n```html_not\n<!-- Counts down: 3, 2, 1 -->\n<ol reversed>\n  <li>Lift off!</li>\n  <li>Ignition</li>\n  <li>Engine start</li>\n</ol>\n```"
+        },
+        {
+            "id": "html_lists_quiz_1",
+            "type": "quiz",
+            "title": "List Basics Quiz",
+            "content": "Test your knowledge of list types.",
+            "quizQuestion": "Which attribute on an <ol> causes the list numbering to count down in descending order?",
+            "quizOptions": [
+                "countdown",
+                "invert",
+                "reversed",
+                "descending"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "html_lists_5",
+            "type": "content",
+            "title": "Description Lists (<dl>)",
+            "content": "# Description Lists (`<dl>`) 📖\n\nDescription lists (formerly called definition lists) represent name-value groups, glossaries, metadata, or FAQ lists.\n\n## Three Component Tags:\n1. `<dl>`: Description List container.\n2. `<dt>`: **Description Term** — the term or label.\n3. `<dd>`: **Description Details** — the explanation or value.\n\n```html_not\n<dl>\n  <dt>HTML</dt>\n  <dd>HyperText Markup Language - defines web structure.</dd>\n\n  <dt>CSS</dt>\n  <dd>Cascading Style Sheets - defines web presentation.</dd>\n\n  <dt>JS</dt>\n  <dd>JavaScript - adds interactive behavior.</dd>\n</dl>\n```"
+        },
+        {
+            "id": "html_lists_6",
+            "type": "content",
+            "title": "Advanced Description Lists",
+            "content": "# Multi-Term & Multi-Description Lists 📚\n\nA description list can have multiple terms for a single description, or multiple descriptions for one term!\n\n```html_not\n<dl>\n  <!-- Single term with multiple descriptions -->\n  <dt>JavaScript</dt>\n  <dd>A high-level, interpreted scripting language.</dd>\n  <dd>Standardized under ECMAScript specifications.</dd>\n\n  <!-- Multiple terms for the same meaning -->\n  <dt>Color</dt>\n  <dt>Colour</dt>\n  <dd>Visual perceptual property derived from the spectrum of light.</dd>\n</dl>\n```"
+        },
+        {
+            "id": "html_lists_7",
+            "type": "content",
+            "title": "Nested Lists",
+            "content": "# Nested Lists (Multi-Level Outlines) 📂\n\nLists can be nested inside other lists to represent folders, outlines, or sub-menus.\n\n```html_not\n<ul>\n  <li>Frontend\n    <ul>\n      <li>HTML</li>\n      <li>CSS</li>\n      <li>JavaScript</li>\n    </ul>\n  </li>\n  <li>Backend\n    <ul>\n      <li>Node.js</li>\n      <li>Python</li>\n    </ul>\n  </li>\n</ul>\n```\n\n> ⚠️ **Syntax Rule:** The child `<ul>` or `<ol>` **must** be placed **inside an `<li>` element**, not directly between `<li>` tags!"
+        },
+        {
+            "id": "html_lists_8",
+            "type": "content",
+            "title": "Mixed Nested Lists",
+            "content": "# Mixed Nested Lists 🔀\n\nYou can nest ordered lists inside unordered lists, and vice-versa:\n\n```html_not\n<ul>\n  <li>Project Setup\n    <ol>\n      <li>Run <code>git init</code></li>\n      <li>Create <code>package.json</code></li>\n      <li>Install dependencies</li>\n    </ol>\n  </li>\n  <li>Deployment\n    <ol>\n      <li>Build production bundle</li>\n      <li>Upload to hosting provider</li>\n    </ol>\n  </li>\n</ul>\n```"
+        },
+        {
+            "id": "html_lists_quiz_2",
+            "type": "quiz",
+            "title": "Nesting Quiz",
+            "content": "Test your knowledge of list nesting.",
+            "quizQuestion": "Where must a child nested <ul> be placed in valid HTML?",
+            "quizOptions": [
+                "Between two <li> tags",
+                "Directly inside an <li> tag",
+                "Inside the <dl> element",
+                "After the closing </ul> tag"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_lists_9",
+            "type": "content",
+            "title": "Styling Bullets with CSS",
+            "content": "# Styling Bullets with CSS 🎨\n\nThe `list-style-type` property controls bullet shapes and markers:\n\n```css_not\nul.square {\n  list-style-type: square;\n}\n\nul.circle {\n  list-style-type: circle;\n}\n\nul.custom-none {\n  list-style-type: none; /* Removes bullets completely */\n  padding-left: 0;\n}\n\nol.roman {\n  list-style-type: upper-roman;\n}\n```"
+        },
+        {
+            "id": "html_lists_10",
+            "type": "content",
+            "title": "Custom Emoji and Icon Bullets",
+            "content": "# Custom Icon & Emoji Bullets ⭐\n\nUsing the modern CSS `::marker` pseudo-element, you can style or replace bullets with custom emojis:\n\n```css_not\nul.emoji-list li::marker {\n  content: \"🚀 \";\n  font-size: 1.2rem;\n}\n\nul.check-list li::marker {\n  content: \"✅ \";\n}\n```\n\n```html_not\n<ul class=\"emoji-list\">\n  <li>Fast performance</li>\n  <li>Global distribution</li>\n</ul>\n```"
+        },
+        {
+            "id": "html_lists_11",
+            "type": "content",
+            "title": "Building Navigation Bars from Lists",
+            "content": "# Building Navigation Bars from Lists 🧭\n\nSemantically, a navigation bar is an unordered list of links!\n\n```html_not\n<nav class=\"navbar\">\n  <ul>\n    <li><a href=\"/\">Home</a></li>\n    <li><a href=\"/courses\">Courses</a></li>\n    <li><a href=\"/about\">About</a></li>\n    <li><a href=\"/contact\">Contact</a></li>\n  </ul>\n</nav>\n```\n\n```css_not\n.navbar ul {\n  list-style: none;\n  display: flex;       /* Horizontal layout */\n  gap: 24px;\n  padding: 0;\n  margin: 0;\n}\n\n.navbar a {\n  text-decoration: none;\n  color: #3b82f6;\n  font-weight: 500;\n}\n```"
+        },
+        {
+            "id": "html_lists_12",
+            "type": "content",
+            "title": "List Spacing & Box Model",
+            "content": "# List Spacing & Box Model 📐\n\nBy default, web browsers apply built-in styling to `<ul>` and `<ol>`:\n- `margin-top: 1em;`\n- `margin-bottom: 1em;`\n- `padding-left: 40px;` (provides room for the bullets/numbers!)\n\n```css_not\n/* Common list reset for custom UIs */\n.clean-list {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n```\n\n> ⚠️ **Gotcha:** If you remove `list-style: none` without resetting `padding-left`, your text will still be pushed 40px to the right!"
+        },
+        {
+            "id": "html_lists_13",
+            "type": "content",
+            "title": "The list-style Shorthand",
+            "content": "# The `list-style` Shorthand 🖌️\n\nThe `list-style` shorthand sets `type`, `position`, and `image` in one declaration:\n\n```css_not\n/* Syntax: list-style: [type] [position] [image] */\nul {\n  list-style: square inside;\n}\n```\n\n## `list-style-position`:\n- `outside` *(Default)*: Bullet sits outside the content flow box.\n- `inside`: Bullet sits inside the content box and wraps along with the text."
+        },
+        {
+            "id": "html_forms_14",
+            "type": "content",
+            "title": "HTML List Accessibility",
+            "content": "# Accessibility & Screen Readers ♿\n\nScreen readers provide special announcement modes for HTML lists:\n- When encountering `<ul>` or `<ol>`, the screen reader announces: *\"List with 5 items\"*.\n- For each item, it announces: *\"Item 1 of 5\"*, giving users clear structural awareness.\n\n> ⚠️ **CSS Reset Warning:** In Safari on iOS, applying `list-style: none` historically caused Safari to remove the list semantic role from the accessibility tree! To fix this in critical lists, add `role=\"list\"`:\n```html_not\n<ul style=\"list-style:none;\" role=\"list\">\n  <li>Preserved semantic list item</li>\n</ul>\n```"
+        },
+        {
+            "id": "html_lists_quiz_3",
+            "type": "quiz",
+            "title": "List Accessibility Quiz",
+            "content": "Test your accessibility knowledge.",
+            "quizQuestion": "What special information do screen readers convey when encountering a valid <ol>?",
+            "quizOptions": [
+                "The font size of the text",
+                "The total number of items and current item index",
+                "The CSS margin values",
+                "The author of the webpage"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_lists_15",
+            "type": "content",
+            "title": "Interactive Task Lists",
+            "content": "# Interactive Task Lists ☑️\n\nCombining unordered lists with checkbox inputs creates clean interactive to-do lists:\n\n```html_not\n<ul class=\"task-list\">\n  <li>\n    <input type=\"checkbox\" id=\"task1\" checked>\n    <label for=\"task1\">Learn HTML basics</label>\n  </li>\n  <li>\n    <input type=\"checkbox\" id=\"task2\">\n    <label for=\"task2\">Build responsive website</label>\n  </li>\n</ul>\n```"
+        },
+        {
+            "id": "html_lists_16",
+            "type": "content",
+            "title": "Metadata Lists with <dl>",
+            "content": "# Practical Use: Metadata & Key-Value Cards 🏷️\n\nDescription lists shine when displaying specifications and user profiles:\n\n```html_not\n<div class=\"user-card\">\n  <h3>User Profile</h3>\n  <dl class=\"profile-meta\">\n    <dt>Username</dt>\n    <dd>@dev_shameel</dd>\n\n    <dt>Membership</dt>\n    <dd><span class=\"badge\">VIP Tier</span></dd>\n\n    <dt>Completed Courses</dt>\n    <dd>8 / 8</dd>\n  </dl>\n</div>\n```"
+        },
+        {
+            "id": "html_lists_17",
+            "type": "content",
+            "title": "Best Practices for HTML Lists",
+            "content": "# Best Practices Checklist ✅\n\n1. ✅ **Use `<ol>` only when sequence matters:** If re-ordering items changes the meaning, use `<ol>`.\n2. ✅ **Always nest directly in `<li>`:** Child lists must always reside inside parent `<li>` elements.\n3. ✅ **Use `<dl>` for key-value pairs:** Stop using `<div>` pairs for product specifications, dictionaries, and definitions.\n4. ✅ **Preserve list semantics in navigation:** Always build site navigation from `<nav><ul><li><a>`."
+        },
+        {
+            "id": "html_lists_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Lists Mastered! 🎉\n\nYou now know how to structure lists with semantic excellence and CSS finesse!\n\n## Key Takeaways:\n- ✅ **Unordered (`<ul>`):** For non-sequential items with bullets.\n- ✅ **Ordered (`<ol>`):** For sequential steps; customizable with `type`, `start`, and `reversed`.\n- ✅ **Description (`<dl>`):** Pairs `<dt>` terms with `<dd>` definitions.\n- ✅ **Nesting:** Always wrap sub-lists inside an `<li>`.\n- ✅ **CSS Polish:** Style bullets with `::marker` and build navigation bars with `display: flex`.\n\n## Up Next:\nIn the next module, explore **HTML Links & Navigation: Anchor tags, targets, and menus**! 🚀"
+        }
+    ]
+}

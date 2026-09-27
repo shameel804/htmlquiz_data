@@ -1,0 +1,159 @@
+{
+    "id": "learn_sass_control",
+    "topicId": "sass_control",
+    "topicTitle": "Control Directives",
+    "description": "Learn Sass control directives: @if, @else if, @else, @each loops for lists/maps, @for loops (through/to), @while, and @error/@warn diagnostics.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "sass_c_1",
+            "type": "content",
+            "title": "Control Directives Overview",
+            "content": "# Sass Control Directives: Logic & Loops 🔁\n\nControl directives turn Sass into a complete Turing-capable programming environment. Instead of manually writing 50 utility classes, you can generate an entire framework with loops and conditions.\n\n## What You'll Learn in this Module:\n- **Conditionals**: `@if`, `@else if`, and `@else`\n- **The `@each` Loop**: Iterating over lists and key-value maps\n- **The `@for` Loop**: Numeric indexing (`through` vs `to`)\n- **The `@while` Loop**: Iterating while conditions remain true\n- **Compiler Diagnostics**: `@debug`, `@warn`, and `@error`\n- **Generating a Mini-Bootstrap Utility System**"
+        },
+        {
+            "id": "sass_c_2",
+            "type": "content",
+            "title": "Conditionals: @if, @else if, and @else",
+            "content": "# Conditionals: `@if`, `@else if`, and `@else` 🔀\n\nConditionally include styles based on configuration flags, themes, or argument values.\n\n```scss_not\n@mixin theme-banner($theme: 'light') {\n  padding: 24px;\n  border-radius: 8px;\n\n  @if $theme == 'light' {\n    background-color: #f8fafc;\n    color: #0f172a;\n    border: 1px solid #e2e8f0;\n  } @else if $theme == 'dark' {\n    background-color: #0f172a;\n    color: #f8fafc;\n    border: 1px solid #334155;\n  } @else if $theme == 'cyberpunk' {\n    background-color: #0d0221;\n    color: #00f0ff;\n    border: 1px solid #ff007f;\n  } @else {\n    @error \"Invalid theme '#{$theme}' passed to theme-banner mixin!\";\n  }\n}\n```"
+        },
+        {
+            "id": "sass_c_3",
+            "type": "content",
+            "title": "The @each Loop with Lists",
+            "content": "# The `@each` Loop with Lists 📋\n\nThe `@each` rule evaluates a block of styles for each item in a list.\n\n```scss_not\n$social-networks: facebook, twitter, linkedin, github, youtube;\n\n@each $network in $social-networks {\n  .icon-#{$network} {\n    background-image: url('/icons/#{$network}.svg');\n    background-size: cover;\n  }\n}\n```\n\n## Compiles To:\n```css_not\n.icon-facebook { background-image: url('/icons/facebook.svg'); background-size: cover; }\n.icon-twitter { background-image: url('/icons/twitter.svg'); background-size: cover; }\n.icon-linkedin { background-image: url('/icons/linkedin.svg'); background-size: cover; }\n.icon-github { background-image: url('/icons/github.svg'); background-size: cover; }\n.icon-youtube { background-image: url('/icons/youtube.svg'); background-size: cover; }\n```"
+        },
+        {
+            "id": "sass_c_4",
+            "type": "content",
+            "title": "The @each Loop with Maps (Key-Value)",
+            "content": "# The `@each` Loop with Maps 🗺️\n\nIterating over key-value maps is how design systems like Bootstrap generate hundreds of color utility classes.\n\n```scss_not\n$theme-colors: (\n  'primary': #4f46e5,\n  'success': #10b981,\n  'warning': #f59e0b,\n  'danger':  #ef4444,\n  'dark':    #0f172a\n);\n\n// Iterate with two variables: $key and $value\n@each $name, $hex in $theme-colors {\n  // Background utilities\n  .bg-#{$name} {\n    background-color: $hex !important;\n  }\n\n  // Text color utilities\n  .text-#{$name} {\n    color: $hex !important;\n  }\n}\n```\n\n> ⚡ **Instant Productivity:** 10 lines of Sass generate 10 complete background and text color utility classes!"
+        },
+        {
+            "id": "sass_c_quiz_1",
+            "type": "quiz",
+            "title": "@each Loop Check",
+            "content": "Test your knowledge of the Sass `@each` loop!",
+            "quizQuestion": "How do you unpack both the key and value when looping over a Sass map using `@each`?",
+            "quizOptions": [
+                "@each ($key in $map) { ... }",
+                "@each $key, $value in $map { ... }",
+                "@loop $key => $value from $map { ... }",
+                "@each $entry in $map.entries() { ... }"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "sass_c_6",
+            "type": "content",
+            "title": "The @for Loop: through vs to",
+            "content": "# The `@for` Loop: `through` vs `to` 🔢\n\nThe `@for` directive loops over a consecutive sequence of numbers.\n\n## 1. `@for $var from <start> through <end>` (Inclusive)\nLoops up to AND including the end value:\n\n```scss_not\n// Loops 1, 2, 3, 4\n@for $i from 1 through 4 {\n  .col-#{$i} {\n    width: $i * 25%;\n  }\n}\n```\n\n## 2. `@for $var from <start> to <end>` (Exclusive)\nLoops up to BUT NOT INCLUDING the end value:\n\n```scss_not\n// Loops 1, 2, 3 (STOPS before 4!)\n@for $i from 1 to 4 {\n  .order-#{$i} { order: $i; }\n}\n```\n\n> ⚠️ **Rule of Thumb:** In 99% of layout tasks, use `through` so the final index is included!"
+        },
+        {
+            "id": "sass_c_7",
+            "type": "content",
+            "title": "Building a 12-Column Grid with @for",
+            "content": "# Building a 12-Column Grid System with `@for` 📐\n\nLet's generate a full 12-column responsive grid layout using `@for` and `math.div`:\n\n```scss_not\n@use 'sass:math';\n\n.row {\n  display: flex;\n  flex-wrap: wrap;\n  margin-left: -12px;\n  margin-right: -12px;\n}\n\n@for $i from 1 through 12 {\n  .col-#{$i} {\n    box-sizing: border-box;\n    flex: 0 0 math.div($i, 12) * 100%;\n    max-width: math.div($i, 12) * 100%;\n    padding-left: 12px;\n    padding-right: 12px;\n  }\n}\n```\n\nThis effortlessly generates `.col-1` (8.333%), `.col-2` (16.666%) up to `.col-12` (100%)."
+        },
+        {
+            "id": "sass_c_8",
+            "type": "content",
+            "title": "The @while Loop",
+            "content": "# The `@while` Loop 🔄\n\nThe `@while` directive repeats its block until its conditional statement evaluates to `false`.\n\n```scss_not\n// Generate exponential spacing utilities (8px, 16px, 32px, 64px, 128px)\n$step: 1;\n$size: 8px;\n\n@while $size <= 128px {\n  .p-#{$step} {\n    padding: $size;\n  }\n  \n  $size: $size * 2; // Double the size\n  $step: $step + 1;\n}\n```\n\n> ⚠️ **Infinite Loop Warning:** Always ensure your `@while` condition increments/mutates towards termination, or the compiler will hang indefinitely!"
+        },
+        {
+            "id": "sass_c_quiz_2",
+            "type": "quiz",
+            "title": "@for Loop Syntax Check",
+            "content": "Test your knowledge of the `@for` loop syntax!",
+            "quizQuestion": "How does `@for $i from 1 through 5` differ from `@for $i from 1 to 5`?",
+            "quizOptions": [
+                "`through` is inclusive of 5 (1,2,3,4,5); `to` is exclusive of 5 (1,2,3,4)",
+                "`to` is inclusive of 5; `through` is exclusive",
+                "`through` only iterates over even numbers",
+                "There is no difference; they are aliases"
+            ],
+            "correctOptionIndex": 0
+        },
+        {
+            "id": "sass_c_10",
+            "type": "content",
+            "title": "Compiler Diagnostics: @error",
+            "content": "# Compiler Diagnostics: The `@error` Directive 🛑\n\nThe `@error` directive stops compilation immediately and prints a fatal error message with a full stack trace.\n\n```scss_not\n@mixin z-index($layer) {\n  $valid-layers: ('base': 1, 'dropdown': 100, 'modal': 500, 'toast': 1000);\n\n  @if map-has-key($valid-layers, $layer) {\n    z-index: map-get($valid-layers, $layer);\n  } @else {\n    @error \"Invalid z-index layer '#{$layer}'! Allowed layers: #{map-keys($valid-layers)}.\";\n  }\n}\n\n.popup {\n  // @include z-index('floating'); // FATAL ERROR: Compilation halts with clear message!\n}\n```"
+        },
+        {
+            "id": "sass_c_11",
+            "type": "content",
+            "title": "Compiler Diagnostics: @warn & @debug",
+            "content": "# Compiler Diagnostics: `@warn` & `@debug` ⚠️🐞\n\n## 1. The `@warn` Directive\nPrints a warning to the console but allows compilation to continue. Essential for deprecation notices:\n\n```scss_not\n@mixin rounded-corners {\n  @warn \"rounded-corners is deprecated. Please use modern border-radius utilities instead.\";\n  border-radius: 8px;\n}\n```\n\n## 2. The `@debug` Directive\nPrints variable values and data structures during development to inspect their types:\n\n```scss_not\n$colors: ('primary': #4f46e5, 'secondary': #64748b);\n@debug $colors; // Prints: DEBUG: (primary: #4f46e5, secondary: #64748b)\n```"
+        },
+        {
+            "id": "sass_c_12",
+            "type": "content",
+            "title": "Multi-List Unpacking with @each",
+            "content": "# Advanced `@each`: Multi-Dimensional Unpacking 🧬\n\nYou can iterate over lists of sublists, unpacking multiple variables in each iteration:\n\n```scss_not\n// Format: (icon-name, glyph, color)\n$icons: (\n  ('check',   '\\2713', #10b981),\n  ('cross',   '\\2717', #ef4444),\n  ('star',    '\\2605', #f59e0b)\n);\n\n@each $name, $glyph, $color in $icons {\n  .icon-#{$name}::before {\n    content: $glyph;\n    color: $color;\n    margin-right: 6px;\n  }\n}\n```"
+        },
+        {
+            "id": "sass_c_13",
+            "type": "content",
+            "title": "Dynamic CSS Custom Properties Generation",
+            "content": "# Generating CSS Variables via Loops 🎨\n\nBridge Sass tokens into dynamic browser CSS variables at runtime:\n\n```scss_not\n$tokens: (\n  'brand': #6366f1,\n  'surface': #0f172a,\n  'text': #f8fafc,\n  'spacing-sm': 8px,\n  'spacing-md': 16px,\n  'spacing-lg': 32px\n);\n\n:root {\n  @each $name, $value in $tokens {\n    --app-#{$name}: #{$value};\n  }\n}\n```\n\nThis outputs clean `:root { --app-brand: #6366f1; ... }` custom properties accessible in client JavaScript!"
+        },
+        {
+            "id": "sass_c_14",
+            "type": "content",
+            "title": "Responsive Utility Generator with Nested Loops",
+            "content": "# Masterwork: Responsive Utility Generator 📱💻\n\nNest `@each` inside `@each` to generate responsive breakpoint utilities like Tailwind or Bootstrap:\n\n```scss_not\n$displays: block, inline-block, flex, inline-flex, none;\n$breakpoints: (\n  'sm': 640px,\n  'md': 768px,\n  'lg': 1024px\n);\n\n// 1. Base display utilities (d-flex, d-none)\n@each $d in $displays {\n  .d-#{$d} { display: $d !important; }\n}\n\n// 2. Responsive display utilities (d-md-flex, d-lg-none)\n@each $bp, $width in $breakpoints {\n  @media (min-width: $width) {\n    @each $d in $displays {\n      .d-#{$bp}-#{$d} { display: $d !important; }\n    }\n  }\n}\n```"
+        },
+        {
+            "id": "sass_c_15",
+            "type": "content",
+            "title": "Generating Z-Index Stacking Contexts",
+            "content": "# Stacking System Automation 📚\n\nEliminate random `z-index: 999999` bugs across your engineering team:\n\n```scss_not\n$z-layers: (base, header, drawer, modal, toast, tooltip);\n\n@for $i from 1 through length($z-layers) {\n  $layer-name: nth($z-layers, $i);\n  .z-#{$layer-name} {\n    z-index: $i * 100;\n  }\n}\n```\n\nProduces `.z-base { z-index: 100; }`, `.z-header { z-index: 200; }`, up to `.z-tooltip { z-index: 600; }`."
+        },
+        {
+            "id": "sass_c_16",
+            "type": "content",
+            "title": "Best Practices for Sass Loops",
+            "content": "# Best Practices for Sass Control Directives 💡\n\n1. **Never generate uncompressed bloat**: Only loop over values you actually need. Avoid 50-step increments.\n2. **Use maps instead of parallel lists**: Maps pair keys and values together safely, avoiding index misalignment.\n3. **Validate inputs with `@error`**: Don't let typos silently corrupt layout output.\n4. **Prefer `@for ... through` over `@while`**: For numerical loops, `@for` is cleaner and immune to infinite loops."
+        },
+        {
+            "id": "sass_c_17",
+            "type": "content",
+            "title": "Real-World Architecture: The Full Utility Engine",
+            "content": "# Production Code: Complete Spacing Engine 📐\n\nHere is how a real framework generates margin and padding utilities:\n\n```scss_not\n$spacing-steps: (\n  0: 0,\n  1: 0.25rem,\n  2: 0.5rem,\n  3: 1rem,\n  4: 1.5rem,\n  5: 3rem\n);\n\n$directions: (\n  't': 'top',\n  'b': 'bottom',\n  'l': 'left',\n  'r': 'right'\n);\n\n@each $prop, $prefix in ('padding': 'p', 'margin': 'm') {\n  @each $step, $val in $spacing-steps {\n    // All sides: .p-3, .m-4\n    .#{$prefix}-#{$step} { #{$prop}: $val !important; }\n\n    // Directional sides: .pt-3, .mb-2\n    @each $dir-code, $dir-name in $directions {\n      .#{$prefix}#{$dir-code}-#{$step} { #{$prop}-#{$dir-name}: $val !important; }\n    }\n  }\n}\n```"
+        },
+        {
+            "id": "sass_c_quiz_3",
+            "type": "quiz",
+            "title": "Compiler Directives Quiz",
+            "content": "Test your knowledge of Sass compiler messages!",
+            "quizQuestion": "Which directive immediately terminates Sass compilation with a fatal error?",
+            "quizOptions": [
+                "@warn",
+                "@error",
+                "@debug",
+                "@fatal"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "sass_c_19",
+            "type": "content",
+            "title": "Debugging Loops with @debug",
+            "content": "# Inspecting Loop Execution with `@debug` 🔍\n\nWhen a loop isn't producing the expected CSS output, insert `@debug` to print state directly in your terminal during `sass --watch`:\n\n```scss_not\n@each $name, $val in $theme-colors {\n  @debug \"Generating utilities for color: #{$name}, value: #{$val}\";\n  .bg-#{$name} { background-color: $val; }\n}\n```"
+        },
+        {
+            "id": "sass_c_20",
+            "type": "content",
+            "title": "Summary of the Sass Course",
+            "content": "# Sass: Complete Course Summary 🎓\n\nCongratulations! You have mastered Sass, from variables and nesting to advanced control directives.\n\n## What You Have Accomplished:\n- **Variables & Nesting**: `$` variables, block scope, parent selector `&`, and BEM.\n- **Partials & Modules**: `_filename.scss`, modern `@use`, `@forward`, and built-in modules (`sass:math`, `sass:color`).\n- **Mixins & Functions**: `@mixin` with arguments, `@content` blocks, and `@function` math.\n- **Inheritance**: `@extend` and `%` placeholders without CSS bloat.\n- **Control Directives**: Automated entire design systems with `@if`, `@each`, `@for`, and `@error`.\n\nYou are now ready to build bulletproof, maintainable CSS architectures! 🚀"
+        },
+        {
+            "id": "sass_c_21",
+            "type": "content",
+            "title": "Next Course: Bootstrap 5",
+            "content": "# Next Up: Bootstrap 5 🅱️\n\nNow that you understand Sass and modern responsive CSS, let's explore **Bootstrap 5**, the world's most popular front-end UI toolkit (built completely with Sass!).\n\n## Topics in Bootstrap 5:\n- **12-Column Grid & Flexbox Containers**\n- **Typography, Tables, and Content Primitives**\n- **Core Components**: Buttons, Cards, Navbars, Alerts\n- **Interactive JavaScript Components**: Modals, Dropdowns, Carousels\n- **Comprehensive Utilities & Helpers**\n\nLet's conquer Bootstrap 5! 🚀"
+        }
+    ]
+}

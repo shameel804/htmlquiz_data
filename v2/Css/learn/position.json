@@ -1,0 +1,159 @@
+{
+    "id": "learn_css_position",
+    "topicId": "position",
+    "topicTitle": "CSS Positioning",
+    "description": "Master static, relative, absolute, fixed, sticky, and z-index stacking.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "css_pos_1",
+            "type": "content",
+            "title": "Welcome to CSS Positioning",
+            "content": "# CSS Positioning: Controlling Layout 📍\n\nCSS positioning allows you to manipulate exactly where an element renders on the screen, override normal document flow, pin elements to the viewport, or create sticky navigation bars.\n\n## What you'll master:\n- 📜 **Normal Document Flow** - How browsers place elements by default\n- 📍 **`static`** - The natural default behavior\n- 🔄 **`relative`** - Offsetting an element relative to its original position\n- 🎯 **`absolute`** - Precision placement relative to positioned ancestors\n- 📌 **`fixed`** - Pinning elements to the browser viewport\n- 🧲 **`sticky`** - Dynamic hybrid scroll behavior\n- 🥞 **Stacking Contexts & `z-index`** - Layering elements in 3D space"
+        },
+        {
+            "id": "css_pos_2",
+            "type": "content",
+            "title": "Normal Document Flow & Static",
+            "content": "# Normal Document Flow & `position: static` 📜\n\nBy default, every HTML element has `position: static`.\n\n```css_not\n.default-box {\n  position: static;\n}\n```\n\n## How Normal Flow Works:\n- Block elements stack vertically from top to bottom.\n- Inline elements sit side-by-side from left to right.\n- Elements do **not** accept coordinate offsets: properties like `top`, `bottom`, `left`, `right`, and `z-index` have **zero effect** on a static element!"
+        },
+        {
+            "id": "css_pos_3",
+            "type": "content",
+            "title": "Relative Positioning",
+            "content": "# Relative Positioning (`position: relative`) 🔄\n\nSetting `position: relative` allows you to offset an element from its original natural position **without** affecting the layout of neighboring elements!\n\n```css_not\n.shifted-box {\n  position: relative;\n  top: 20px;   /* Moves 20px down from original spot */\n  left: 30px;  /* Moves 30px right from original spot */\n}\n```\n\n## Key Characteristics:\n- The space the element originally occupied in the document is **preserved** (leaves a blank ghost gap).\n- The element merely renders visually shifted over nearby content.\n- Crucially: it establishes a **positioning context** for any nested `absolute` children!"
+        },
+        {
+            "id": "css_pos_4",
+            "type": "content",
+            "title": "Absolute Positioning",
+            "content": "# Absolute Positioning (`position: absolute`) 🎯\n\nAn absolute element is completely **removed from the normal document flow**. Other elements act as if it doesn't exist at all!\n\n```css_not\n.badge {\n  position: absolute;\n  top: 10px;\n  right: 10px;\n}\n```\n\n## Where Does It Position Itself?\nIt positions itself relative to its **nearest positioned ancestor** (any parent element that has `position` set to anything *other than* `static`: `relative`, `absolute`, `fixed`, or `sticky`).\n\nIf no ancestor is positioned, it positions itself relative to the initial viewport (`<html>`)!"
+        },
+        {
+            "id": "css_pos_quiz_1",
+            "type": "quiz",
+            "title": "Positioning Basics Quiz",
+            "content": "Test your understanding of position values.",
+            "quizQuestion": "What happens to the space an element originally occupied when it is given position: absolute?",
+            "quizOptions": [
+                "The space remains reserved like a blank gap",
+                "The space collapses as the element is removed from normal flow",
+                "The space doubles in height",
+                "The space turns into a flexbox container"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_pos_5",
+            "type": "content",
+            "title": "The Relative Parent + Absolute Child Pattern",
+            "content": "# The Classic Pattern: Relative Parent, Absolute Child 🏆\n\nThis is the most celebrated pattern in UI layout:\n\n```html_not\n<div class=\"card\">\n  <span class=\"badge\">VIP</span>\n  <h2>Course Title</h2>\n  <p>Learn CSS Positioning in depth.</p>\n</div>\n```\n\n```css_not\n.card {\n  position: relative; /* Acts as the anchor point! */\n  padding: 24px;\n  border-radius: 12px;\n  background-color: #ffffff;\n}\n\n.badge {\n  position: absolute;\n  top: -8px;          /* Sits right on the top edge */\n  right: 16px;\n  background-color: #f59e0b;\n  color: #fff;\n  padding: 4px 8px;\n  border-radius: 4px;\n}\n```"
+        },
+        {
+            "id": "css_pos_6",
+            "type": "content",
+            "title": "Fixed Positioning",
+            "content": "# Fixed Positioning (`position: fixed`) 📌\n\nA fixed element is removed from the normal flow and positioned relative directly to the **browser viewport**. It stays in the exact same place even when the user scrolls!\n\n```css_not\n.sticky-navbar {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 60px;\n  background-color: #ffffff;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n  z-index: 1000;\n}\n\n.floating-action-button {\n  position: fixed;\n  bottom: 24px;\n  right: 24px;\n  border-radius: 50%;\n}\n```\n\n> ⚠️ **Layout Note:** Because fixed headers are removed from flow, the page content behind them will slide underneath! Add `padding-top: 60px;` to your `<body>` to offset the header height."
+        },
+        {
+            "id": "css_pos_7",
+            "type": "content",
+            "title": "Sticky Positioning",
+            "content": "# Sticky Positioning (`position: sticky`) 🧲\n\n`position: sticky` is a hybrid of `relative` and `fixed`.\n\n- Acts like `relative` until the user scrolls past a specified threshold.\n- Then \"sticks\" in place like `fixed` within its parent container!\n\n```css_not\n.table-header {\n  position: sticky;\n  top: 0; /* Sticks to the top of the viewport when scrolled to */\n  background-color: #f8fafc;\n  z-index: 10;\n}\n```\n\n## Why Sticky Might Fail:\n`position: sticky` will not work if any parent container has `overflow: hidden`, `overflow: scroll`, or `overflow: auto`!"
+        },
+        {
+            "id": "css_pos_8",
+            "type": "content",
+            "title": "Coordinate Offsets (top, right, bottom, left)",
+            "content": "# Coordinate Offsets 🧭\n\nPositioned elements are shifted using four offset properties:\n\n- `top`: Distance from the top anchor edge.\n- `bottom`: Distance from the bottom anchor edge.\n- `left`: Distance from the left anchor edge.\n- `right`: Distance from the right anchor edge.\n\n## Stretching with Insets:\nSetting opposing offsets stretches the element across the container:\n```css_not\n.full-overlay {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  /* Shorthand in modern CSS: */\n  /* inset: 0; */\n  background-color: rgba(0, 0, 0, 0.5);\n}\n```"
+        },
+        {
+            "id": "css_pos_quiz_2",
+            "type": "quiz",
+            "title": "Sticky Positioning Quiz",
+            "content": "Test your knowledge of sticky positioning.",
+            "quizQuestion": "What parent property can accidentally prevent position: sticky from working?",
+            "quizOptions": [
+                "background-color: white",
+                "overflow: hidden",
+                "margin: 0 auto",
+                "display: block"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_pos_9",
+            "type": "content",
+            "title": "Centering with Absolute Positioning",
+            "content": "# Precision Centering with Absolute Positioning 🎯\n\nBefore Flexbox and Grid, the universal technique to center an element both horizontally and vertically was:\n\n```css_not\n.modal {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%); /* Pulls element back by half its own width & height */\n}\n```\n\n## How It Works:\n`top: 50%` places the top-left corner at the center of the container. `transform: translate(-50%, -50%)` shifts it backward so the element's true center point aligns perfectly!"
+        },
+        {
+            "id": "css_pos_10",
+            "type": "content",
+            "title": "Layering with z-index",
+            "content": "# Layering with `z-index` 🥞\n\nWhen elements overlap, `z-index` controls which element appears in front on the 3D Z-axis perpendicular to the screen.\n\n```css_not\n.base-layer {\n  position: relative;\n  z-index: 1;\n}\n\n.modal-backdrop {\n  position: fixed;\n  z-index: 100;\n}\n\n.modal-dialog {\n  position: fixed;\n  z-index: 101; /* Appears above the backdrop! */\n}\n```\n\n> ⚠️ **The Golden Rule of z-index:** `z-index` only works on elements that have an explicit `position` (anything other than `static`), or children of Flexbox/Grid containers!"
+        },
+        {
+            "id": "css_pos_11",
+            "type": "content",
+            "title": "Understanding Stacking Contexts",
+            "content": "# Stacking Contexts Demystified 🏢\n\nHave you ever set `z-index: 999999` and an element STILL appeared behind something with `z-index: 2`? You hit a **Stacking Context** boundary!\n\nA Stacking Context is an isolated layer grouping. An element with `z-index: 9999` inside a parent with `z-index: 1` can **never** appear above a sibling container that has `z-index: 2`!\n\n```\nRoot Stacking Context\n├── Container A (z-index: 1)\n│   └── Child (z-index: 999999) <── Still trapped below Container B!\n└── Container B (z-index: 2)\n```\n\n## What Creates a Stacking Context?\n- `position: fixed` or `sticky`\n- `position: relative/absolute` with a numeric `z-index`\n- Elements with `opacity` less than 1\n- Elements with `transform`, `filter`, or `perspective`"
+        },
+        {
+            "id": "css_pos_12",
+            "type": "content",
+            "title": "Positioning Floating Action Buttons (FAB)",
+            "content": "# Practical UI: Floating Action Button (FAB) 🔘\n\n```html_not\n<button class=\"fab\" aria-label=\"Create new message\">\n  <span class=\"icon\">+</span>\n</button>\n```\n\n```css_not\n.fab {\n  position: fixed;\n  bottom: 32px;\n  right: 32px;\n  width: 56px;\n  height: 56px;\n  border-radius: 50%;\n  background-color: #2563eb;\n  color: #fff;\n  border: none;\n  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);\n  cursor: pointer;\n  z-index: 500;\n}\n```"
+        },
+        {
+            "id": "css_pos_13",
+            "type": "content",
+            "title": "Positioning Dropdown Menus",
+            "content": "# Practical UI: Dropdown Menus 🔽\n\n```html_not\n<div class=\"dropdown-wrapper\">\n  <button class=\"dropdown-trigger\">My Account ▾</button>\n  <ul class=\"dropdown-menu\">\n    <li><a href=\"/profile\">Profile</a></li>\n    <li><a href=\"/settings\">Settings</a></li>\n    <li><a href=\"/logout\">Logout</a></li>\n  </ul>\n</div>\n```\n\n```css_not\n.dropdown-wrapper {\n  position: relative; /* Anchor container */\n  display: inline-block;\n}\n\n.dropdown-menu {\n  position: absolute;\n  top: 100%;          /* Directly beneath the trigger button */\n  left: 0;\n  min-width: 180px;\n  background: #fff;\n  border-radius: 8px;\n  box-shadow: 0 10px 15px rgba(0,0,0,0.1);\n  display: none;      /* Hidden by default */\n  z-index: 50;\n}\n\n.dropdown-wrapper:hover .dropdown-menu {\n  display: block;     /* Reveals on hover */\n}\n```"
+        },
+        {
+            "id": "css_pos_14",
+            "type": "content",
+            "title": "Positioning Tooltips",
+            "content": "# Practical UI: Tooltips with Absolute Positioning 💬\n\n```html_not\n<div class=\"tooltip-container\">\n  Hover me\n  <span class=\"tooltip-box\">Helpful hint information</span>\n</div>\n```\n\n```css_not\n.tooltip-container {\n  position: relative;\n  display: inline-block;\n  cursor: pointer;\n}\n\n.tooltip-box {\n  position: absolute;\n  bottom: 125%;       /* Positions above the trigger text */\n  left: 50%;\n  transform: translateX(-50%);\n  background-color: #1e293b;\n  color: #fff;\n  padding: 6px 12px;\n  border-radius: 6px;\n  font-size: 0.875rem;\n  white-space: nowrap;\n  pointer-events: none;\n  opacity: 0;\n  transition: opacity 0.2s ease;\n}\n\n.tooltip-container:hover .tooltip-box {\n  opacity: 1;\n}\n```"
+        },
+        {
+            "id": "css_pos_quiz_3",
+            "type": "quiz",
+            "title": "z-index Quiz",
+            "content": "Test your layering knowledge.",
+            "quizQuestion": "Why might an element with z-index: 9999 appear behind an element with z-index: 10?",
+            "quizOptions": [
+                "The element has negative margins",
+                "It is trapped inside a parent with a lower stacking context",
+                "z-index cannot exceed 1000",
+                "The element is using position: absolute"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_pos_15",
+            "type": "content",
+            "title": "Sticky Table Headers",
+            "content": "# Practical UI: Sticky Table Columns & Headers 📊\n\nKeep column headers visible while users scroll down deep data tables:\n\n```css_not\n.table-scroll-wrapper {\n  height: 400px;\n  overflow-y: auto;\n}\n\ntable th {\n  position: sticky;\n  top: 0;\n  background-color: #0f172a;\n  color: #ffffff;\n  z-index: 2;\n}\n\n/* Also freeze the first column horizontally! */\ntable td:first-child, table th:first-child {\n  position: sticky;\n  left: 0;\n  background-color: #1e293b;\n  z-index: 3;\n}\n```"
+        },
+        {
+            "id": "css_pos_16",
+            "type": "content",
+            "title": "Common Positioning Pitfalls",
+            "content": "# Positioning Pitfalls to Avoid ⚠️\n\n1. ❌ **Forgetting `position: relative` on parent:** If the parent lacks positioning, an `absolute` child flies all the way to the top of the browser window!\n2. ❌ **Using `position: fixed` for whole page layouts:** It removes content from flow and creates overlapping layout bugs on resize.\n3. ❌ **High z-index escalation:** Don't start typing `z-index: 9999999`. Define a structured z-index design token scale:\n   - Base content: `1`\n   - Sticky header: `10`\n   - Dropdown menu: `20`\n   - Modal backdrop: `40`\n   - Modal window: `50`\n   - Toast notifications: `100`"
+        },
+        {
+            "id": "css_pos_17",
+            "type": "content",
+            "title": "Modern Alternative: CSS Inset Shorthand",
+            "content": "# Modern Shorthand: The `inset` Property 📐\n\nInstead of writing all four offsets separately, modern CSS provides `inset`:\n\n```css_not\n/* Old Way */\n.overlay {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n}\n\n/* Modern Way */\n.overlay {\n  position: absolute;\n  inset: 0; /* Stretches to fill parent completely! */\n}\n\n/* 2-value syntax: Vertical  Horizontal */\n.dialog {\n  position: fixed;\n  inset: 10% 20%;\n}\n```"
+        },
+        {
+            "id": "css_pos_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# CSS Positioning Mastered! 📍\n\nYou now have complete control over coordinate placement and visual layering!\n\n## Key Takeaways:\n- ✅ **`static`:** Default normal document flow.\n- ✅ **`relative`:** Shifted offset; acts as anchor container for children.\n- ✅ **`absolute`:** Removed from flow; positioned relative to nearest positioned ancestor.\n- ✅ **`fixed`:** Pinned directly to the browser viewport.\n- ✅ **`sticky`:** Relative scroll until reaching threshold, then pinned.\n- ✅ **`z-index` & Stacking:** Requires positioning; governed by parent stacking contexts.\n\n## Up Next:\nIn the next module, explore the most transformative layout engines in modern web design: **CSS Flexbox & CSS Grid**! 🚀"
+        }
+    ]
+}

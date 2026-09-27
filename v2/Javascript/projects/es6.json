@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Block Scoping with let and const",
+    "ques": "Explain the **Temporal Dead Zone (TDZ)** when declaring variables with `let` and `const`. Write a code snippet contrasting how `var` and `let` behave in a `for` loop containing asynchronous `setTimeout` callbacks.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// 1. The classic 'var' loop problem (shared function-scoped variable)\nfor (var i = 0; i < 3; i++) {\n  setTimeout(() => console.log(\"var i:\", i), 10); // Prints: 3, 3, 3 !\n}\n\n// 2. The ES6 'let' solution (fresh lexical block-scoped binding per iteration)\nfor (let j = 0; j < 3; j++) {\n  setTimeout(() => console.log(\"let j:\", j), 10); // Prints: 0, 1, 2 !\n}\n\n// 3. Temporal Dead Zone (TDZ):\n// Accessing a 'let' or 'const' variable before its declaration line throws ReferenceError\n// console.log(tdzVar); // ReferenceError: Cannot access 'tdzVar' before initialization\nlet tdzVar = \"active\";"
+    },
+    "explanation": "`let` creates a distinct variable binding for each loop iteration, ensuring asynchronous callbacks capture the correct loop index. Accessing variables in their TDZ throws a `ReferenceError`."
+  },
+  {
+    "title": "Template Literals and Tagged Templates",
+    "ques": "Demonstrate the capabilities of ES6 **Template Literals** (string interpolation, multi-line strings, and Tagged Template literals for custom string sanitization).",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const username = \"Alice\";\nconst cartTotal = 89.95;\n\n// Standard template literal with interpolation and multi-line formatting\nconst receipt = `\n  Receipt For: ${username.toUpperCase()}\n  Items Total: $${cartTotal.toFixed(2)}\n  Status: ${cartTotal > 50 ? \"Free Shipping Qualified\" : \"Standard Shipping\"}\n`;\nconsole.log(receipt);\n\n// Tagged template function (useful for custom formatting or SQL/HTML escaping)\nfunction highlight(strings, ...values) {\n  return strings.reduce((acc, str, i) => {\n    const val = values[i] !== undefined ? `<mark>${values[i]}</mark>` : \"\";\n    return `${acc}${str}${val}`;\n  }, \"\");\n}\n\nconst formatted = highlight`Hello ${username}, you have ${3} new messages.`;\nconsole.log(formatted); // Hello <mark>Alice</mark>, you have <mark>3</mark> new messages."
+    },
+    "explanation": "Template literals (enclosed by backticks) allow expression interpolation (`${}`), native multi-line strings, and tagged templates for custom parsing."
+  },
+  {
+    "title": "Spread and Rest Operators (...)",
+    "ques": "Contrast the **Spread Operator** with the **Rest Parameter**. Show how spread merges objects and arrays immutably, and how rest gathers function arguments.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// 1. Rest Parameter: Gathers remaining elements into an array\nfunction calculateAverage(category, ...scores) {\n  const total = scores.reduce((sum, s) => sum + s, 0);\n  return `${category} Average: ${(total / scores.length).toFixed(1)}`;\n}\nconsole.log(calculateAverage(\"Math Exams\", 88, 92, 79, 95));\n\n// 2. Spread Operator on Arrays (non-mutating clone and merge)\nconst fruits = [\"apple\", \"banana\"];\nconst veggies = [\"carrot\", \"broccoli\"];\nconst foodBasket = [...fruits, \"orange\", ...veggies];\n\n// 3. Spread Operator on Objects (shallow clone with overrides)\nconst baseSettings = { theme: \"light\", notifications: true, volume: 50 };\nconst userCustomized = { ...baseSettings, theme: \"dark\", volume: 75 };\n\nconsole.log(userCustomized); // { theme: 'dark', notifications: true, volume: 75 }"
+    },
+    "explanation": "The rest syntax gathers elements into a collection. The spread operator unpacks elements from an iterable or object into new structures, essential for immutable state updates."
+  },
+  {
+    "title": "ES6 Modules: Export and Import",
+    "ques": "Explain the difference between **Named Exports** and **Default Exports** in ES6 modules. Write examples showing both export styles and how to import them.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// File: mathUtilities.js\n// 1. Named exports: multiple per file, imported with exact names in curly braces\nexport const PI_VALUE = 3.14159;\nexport function add(a, b) {\n  return a + b;\n}\n\n// 2. Default export: single primary export per module\nexport default function multiply(a, b) {\n  return a * b;\n}\n\n// File: app.js\n// Importing default export (no braces, can be renamed) and named exports (in braces)\n// import multiply, { PI_VALUE, add as sum } from './mathUtilities.js';"
+    },
+    "explanation": "ES6 modules (`import`/`export`) provide standardized module separation with static analysis and tree-shaking support. Modules can have one default export and multiple named exports."
+  }
+]

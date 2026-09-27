@@ -1,0 +1,159 @@
+{
+    "id": "learn_bs_components1",
+    "topicId": "bs_components1",
+    "topicTitle": "Core Components",
+    "description": "Learn Bootstrap 5 core components: buttons, button groups, badges, cards, dismissible alerts, list groups, spinners, and progress bars.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "bs_comp1_1",
+            "type": "content",
+            "title": "Basic Components Overview",
+            "content": "# Bootstrap 5 Core Components 🧱\n\nBootstrap is famous for its battle-tested, accessible component primitives. In this module, you will master the foundational UI components that appear in virtually every web app:\n\n- **Buttons & Button Groups** (`.btn`, `.btn-primary`, `.btn-group`)\n- **Badges & Pills** (`.badge`, `.rounded-pill`)\n- **Cards** (`.card`, `.card-body`, `.card-img-top`)\n- **Alerts** (`.alert`, `.alert-dismissible`)\n- **List Groups** (`.list-group`, `.list-group-item`)\n- **Spinners & Loaders** (`.spinner-border`, `.spinner-grow`)\n- **Progress Bars** (`.progress`, `.progress-bar`)\n- **Breadcrumbs** (`.breadcrumb`)"
+        },
+        {
+            "id": "bs_comp1_2",
+            "type": "content",
+            "title": "Buttons: Variants & Styles",
+            "content": "# Buttons: Core Classes & Color Variants 🔘\n\nEvery button starts with the base `.btn` class, followed by a color theme variant.\n\n```html_not\n<button type=\"button\" class=\"btn btn-primary\">Primary</button>\n<button type=\"button\" class=\"btn btn-secondary\">Secondary</button>\n<button type=\"button\" class=\"btn btn-success\">Success</button>\n<button type=\"button\" class=\"btn btn-danger\">Danger</button>\n<button type=\"button\" class=\"btn btn-warning\">Warning</button>\n<button type=\"button\" class=\"btn btn-info text-white\">Info</button>\n<button type=\"button\" class=\"btn btn-dark\">Dark</button>\n<button type=\"button\" class=\"btn btn-link\">Link Style</button>\n```\n\n## Outline Buttons (`.btn-outline-*`)\n\nWhen you want a lighter secondary button that fills on hover:\n\n```html_not\n<button type=\"button\" class=\"btn btn-outline-primary\">Outline Primary</button>\n<button type=\"button\" class=\"btn btn-outline-danger\">Delete</button>\n```"
+        },
+        {
+            "id": "bs_comp1_3",
+            "type": "content",
+            "title": "Button Sizes & States",
+            "content": "# Button Sizing & States 📏\n\n## Sizing Classes\n\n- `.btn-lg`: Large, prominent call-to-action button\n- Standard size: (default)\n- `.btn-sm`: Compact button for table rows and toolbars\n\n## Block / Full-Width Buttons\n\nIn Bootstrap 5, `.btn-block` was replaced by the `.d-grid` flex wrapper:\n\n```html_not\n<div class=\"d-grid gap-2\">\n  <button class=\"btn btn-primary btn-lg\" type=\"button\">Full Width CTA</button>\n</div>\n```\n\n## Disabled State\n\nAdd the `disabled` attribute to `<button>`, or `.disabled` class to `<a>` links."
+        },
+        {
+            "id": "bs_comp1_4",
+            "type": "content",
+            "title": "Button Groups",
+            "content": "# Button Groups: `.btn-group` 🎛️\n\nGroup a series of buttons together on a single line with attached borders:\n\n```html_not\n<div class=\"btn-group\" role=\"group\" aria-label=\"View toggles\">\n  <button type=\"button\" class=\"btn btn-outline-primary active\">Grid</button>\n  <button type=\"button\" class=\"btn btn-outline-primary\">List</button>\n  <button type=\"button\" class=\"btn btn-outline-primary\">Map</button>\n</div>\n```\n\n## Vertical Button Groups\n\nUse `.btn-group-vertical` to stack buttons with connected top/bottom borders."
+        },
+        {
+            "id": "bs_comp1_quiz_1",
+            "type": "quiz",
+            "title": "Button Classes Check",
+            "content": "Test your knowledge of Bootstrap 5 button classes!",
+            "quizQuestion": "How do you create a full-width block button in Bootstrap 5 (replacing the deprecated .btn-block)?",
+            "quizOptions": [
+                "Add `.btn-full` to the button",
+                "Wrap the button in `<div class=\"d-grid\">`",
+                "Add `.btn-block` to the button",
+                "Apply `.w-100-button` to the button"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "bs_comp1_6",
+            "type": "content",
+            "title": "Badges & Pill Badges",
+            "content": "# Badges: Notification Counters & Status 🏷️\n\nBadges scale to match the size of their immediate parent element using relative font sizing (`em`).\n\n```html_not\n<!-- Notification badge inside button -->\n<button type=\"button\" class=\"btn btn-primary position-relative\">\n  Inbox\n  <span class=\"position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger\">\n    99+\n    <span class=\"visually-hidden\">unread messages</span>\n  </span>\n</button>\n\n<!-- Status pill -->\n<span class=\"badge rounded-pill bg-success-subtle text-success-emphasis border border-success-subtle\">\n  Active Account\n</span>\n```"
+        },
+        {
+            "id": "bs_comp1_7",
+            "type": "content",
+            "title": "Cards: The Modern Container",
+            "content": "# Cards: The Swiss Army Knife Container 🃏\n\nBootstrap Cards replace panels, wells, and thumbnails from older versions.\n\n## Card Anatomical Parts\n\n- `.card`: The main bordered wrapper with rounded corners\n- `.card-body`: Padded content area\n- `.card-title`: Heading title inside body\n- `.card-subtitle`: Subtitle with muted color\n- `.card-text`: Body paragraph text\n- `.card-header` & `.card-footer`: Optional framing bands\n- `.card-img-top` / `.card-img-bottom`: Images that conform to the card's top/bottom rounded radius"
+        },
+        {
+            "id": "bs_comp1_8",
+            "type": "content",
+            "title": "Card Implementation Example",
+            "content": "# Card Code Example 🖼️\n\n```html_not\n<div class=\"card shadow-sm border-0\" style=\"max-width: 22rem;\">\n  <img src=\"/img/preview.jpg\" class=\"card-img-top\" alt=\"Article preview\">\n  <div class=\"card-body\">\n    <span class=\"badge bg-primary mb-2\">Tutorial</span>\n    <h5 class=\"card-title fw-bold\">Mastering Bootstrap 5</h5>\n    <p class=\"card-text text-muted\">\n      Learn how to assemble production layouts using grid and utility classes.\n    </p>\n    <a href=\"#\" class=\"btn btn-outline-primary w-100\">Read Article →</a>\n  </div>\n  <div class=\"card-footer bg-transparent text-muted small text-end\">\n    Updated 2 hours ago\n  </div>\n</div>\n```"
+        },
+        {
+            "id": "bs_comp1_quiz_2",
+            "type": "quiz",
+            "title": "Card Anatomy Check",
+            "content": "Test your understanding of Bootstrap Cards!",
+            "quizQuestion": "Which class ensures that an image placed at the top of a card respects the card's top rounded corners?",
+            "quizOptions": [
+                ".card-img-header",
+                ".card-img-top",
+                ".img-card-fluid",
+                ".card-media"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "bs_comp1_10",
+            "type": "content",
+            "title": "Alerts & Dismissible Alerts",
+            "content": "# Alerts & Dismissible Banners 🚨\n\nProvide contextual feedback messages for typical user actions.\n\n```html_not\n<!-- Basic Alert -->\n<div class=\"alert alert-success\" role=\"alert\">\n  <strong>Payment successful!</strong> Your receipt was sent to your email.\n</div>\n\n<!-- Dismissible Alert with close button -->\n<div class=\"alert alert-warning alert-dismissible fade show\" role=\"alert\">\n  <strong>Warning!</strong> Your subscription expires in 3 days.\n  <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button>\n</div>\n```\n\n> ⚡ **JavaScript Integration:** Adding `data-bs-dismiss=\"alert\"` and `.btn-close` wires up dismiss animation automatically with zero custom JS code!"
+        },
+        {
+            "id": "bs_comp1_11",
+            "type": "content",
+            "title": "List Groups",
+            "content": "# List Groups: Flexible Content Lists 📜\n\nList groups are versatile components for displaying series of content, navigational lists, or task items.\n\n```html_not\n<ul class=\"list-group shadow-sm\">\n  <li class=\"list-group-item d-flex justify-content-between align-items-center active\">\n    Inbox Messages\n    <span class=\"badge bg-light text-primary rounded-pill\">14</span>\n  </li>\n  <li class=\"list-group-item d-flex justify-content-between align-items-center\">\n    Draft Items\n    <span class=\"badge bg-secondary rounded-pill\">2</span>\n  </li>\n  <li class=\"list-group-item d-flex justify-content-between align-items-center disabled\">\n    Archived Records\n    <span class=\"badge bg-secondary rounded-pill\">0</span>\n  </li>\n</ul>\n```\n\nUse `.list-group-flush` to remove outer borders and rounded corners for clean embedding inside cards."
+        },
+        {
+            "id": "bs_comp1_12",
+            "type": "content",
+            "title": "Spinners & Loading Indicators",
+            "content": "# Spinners: Built with Pure CSS 🌀\n\nBootstrap spinners indicate loading state without external GIFs or SVGs.\n\n## 1. Border Spinner (`.spinner-border`)\n\n```html_not\n<div class=\"spinner-border text-primary\" role=\"status\">\n  <span class=\"visually-hidden\">Loading...</span>\n</div>\n```\n\n## 2. Growing Pulse Spinner (`.spinner-grow`)\n\n```html_not\n<div class=\"spinner-grow text-success\" role=\"status\">\n  <span class=\"visually-hidden\">Loading...</span>\n</div>\n```\n\n## Inside Buttons\n\n```html_not\n<button class=\"btn btn-primary\" type=\"button\" disabled>\n  <span class=\"spinner-border spinner-border-sm me-2\" aria-hidden=\"true\"></span>\n  Processing...\n</button>\n```"
+        },
+        {
+            "id": "bs_comp1_13",
+            "type": "content",
+            "title": "Progress Bars",
+            "content": "# Progress Bars 📊\n\nDisplay completion progress for uploads, workflows, or quotas.\n\n```html_not\n<div class=\"progress\" role=\"progressbar\" aria-label=\"Storage quota\" aria-valuenow=\"65\" aria-valuemin=\"0\" aria-valuemax=\"100\">\n  <div class=\"progress-bar bg-indigo progress-bar-striped progress-bar-animated\" style=\"width: 65%;\">\n    65%\n  </div>\n</div>\n```\n\n## Modifiers\n\n- `.progress-bar-striped`: Adds diagonal candy stripes via CSS gradients\n- `.progress-bar-animated`: Animates the stripes from right to left"
+        },
+        {
+            "id": "bs_comp1_14",
+            "type": "content",
+            "title": "Breadcrumbs",
+            "content": "# Breadcrumbs: Navigation Path 🍞\n\nIndicate the current page's location within a navigational hierarchy.\n\n```html_not\n<nav aria-label=\"breadcrumb\">\n  <ol class=\"breadcrumb py-2\">\n    <li class=\"breadcrumb-item\"><a href=\"#\">Home</a></li>\n    <li class=\"breadcrumb-item\"><a href=\"#\">Products</a></li>\n    <li class=\"breadcrumb-item\"><a href=\"#\">Electronics</a></li>\n    <li class=\"breadcrumb-item active\" aria-current=\"page\">Smartphones</li>\n  </ol>\n</nav>\n```\n\nSeparators (`/`) are added automatically via CSS `::before` pseudo-elements."
+        },
+        {
+            "id": "bs_comp1_15",
+            "type": "content",
+            "title": "Card Groups & Card Grids",
+            "content": "# Card Layouts: Groups vs Grids 🗂️\n\n## Card Groups (`.card-group`)\n\nRenders cards as a single, attached horizontal block with equal height:\n\n```html_not\n<div class=\"card-group shadow-sm\">\n  <div class=\"card\"><div class=\"card-body\">Card 1</div></div>\n  <div class=\"card\"><div class=\"card-body\">Card 2</div></div>\n  <div class=\"card\"><div class=\"card-body\">Card 3</div></div>\n</div>\n```\n\n## Recommended Modern Approach: Card Grid (`row-cols-*`)\n\nPair cards with `.h-100` inside a `.row-cols-*` grid so cards in the same row always share identical heights!"
+        },
+        {
+            "id": "bs_comp1_16",
+            "type": "content",
+            "title": "Close Button Component",
+            "content": "# The Generic Close Button (`.btn-close`) ✖️\n\nBootstrap 5 provides a standalone `.btn-close` component for closing modals, alerts, and offcanvas drawers.\n\n```html_not\n<!-- Standard dark close button -->\n<button type=\"button\" class=\"btn-close\" aria-label=\"Close\"></button>\n\n<!-- White close button for dark headers -->\n<div class=\"bg-dark p-3 text-white d-flex justify-content-between\">\n  <span>Dark Header</span>\n  <button type=\"button\" class=\"btn-close btn-close-white\" aria-label=\"Close\"></button>\n</div>\n```\n\nUses an embedded SVG background icon that scales crisply across all resolutions."
+        },
+        {
+            "id": "bs_comp1_17",
+            "type": "content",
+            "title": "Real-World Component: User Profile Widget",
+            "content": "# Real-World Component: User Profile Card 👤\n\nCombining cards, badges, buttons, and progress bars:\n\n```html_not\n<div class=\"card shadow-sm border-0 rounded-4 overflow-hidden\" style=\"max-width: 380px;\">\n  <div class=\"bg-primary p-4 text-center text-white position-relative\">\n    <img src=\"/img/avatar.jpg\" class=\"rounded-circle border border-4 border-white shadow mb-2\" width=\"80\" height=\"80\" alt=\"Profile\">\n    <h5 class=\"mb-0 fw-bold\">Alex Morgan</h5>\n    <span class=\"badge bg-light text-primary rounded-pill mt-1\">Senior Engineer</span>\n  </div>\n  \n  <div class=\"card-body p-4\">\n    <div class=\"d-flex justify-content-between small text-muted mb-1\">\n      <span>Profile Completion</span>\n      <span class=\"fw-bold text-dark\">85%</span>\n    </div>\n    <div class=\"progress mb-4\" style=\"height: 6px;\">\n      <div class=\"progress-bar bg-success\" style=\"width: 85%;\"></div>\n    </div>\n    \n    <div class=\"d-grid gap-2\">\n      <button class=\"btn btn-primary rounded-pill\">Send Message</button>\n      <button class=\"btn btn-outline-secondary rounded-pill\">View Portfolio</button>\n    </div>\n  </div>\n</div>\n```"
+        },
+        {
+            "id": "bs_comp1_quiz_3",
+            "type": "quiz",
+            "title": "Dismissible Alert Quiz",
+            "content": "Test your knowledge of Bootstrap interactive attributes!",
+            "quizQuestion": "What HTML data attribute is required on a close button to automatically dismiss a Bootstrap alert without writing custom JavaScript?",
+            "quizOptions": [
+                "`data-dismiss=\"alert\"`",
+                "`data-bs-dismiss=\"alert\"`",
+                "`data-toggle=\"close\"`",
+                "`data-bs-close=\"alert\"`"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "bs_comp1_19",
+            "type": "content",
+            "title": "Common Pitfalls with Components",
+            "content": "# Common Component Gotchas ⚠️\n\n1. **Old Bootstrap 4 data attributes**: BS5 uses `data-bs-*` prefixes (e.g. `data-bs-dismiss=\"alert\"`, NOT `data-dismiss=\"alert\"`).\n2. **Missing `.btn` base class**: Writing `<button class=\"btn-primary\">` without `.btn` breaks padding, borders, and animations.\n3. **Missing `.visually-hidden` for screen readers**: Notification badges like `99+` must include screen reader descriptions."
+        },
+        {
+            "id": "bs_comp1_20",
+            "type": "content",
+            "title": "Summary: Basic Components",
+            "content": "# Basic Components: Summary 📋\n\n## Key Takeaways\n- **Buttons**: Base `.btn` + color variant (`.btn-primary`, `.btn-outline-*`) + `.btn-lg`/`.btn-sm`.\n- **Badges**: Label with `.badge` and shape with `.rounded-pill`.\n- **Cards**: Flexible box model with `.card-header`, `.card-body`, and `.card-footer`.\n- **Alerts**: Contextual messages dismissible with `data-bs-dismiss=\"alert\"`.\n- **Spinners & Progress**: CSS-only indicators with `.spinner-border` and `.progress-bar`.\n\nNext: Master interactive JavaScript components: Modals, Navbars, Carousels, and Accordions! 📱"
+        },
+        {
+            "id": "bs_comp1_21",
+            "type": "content",
+            "title": "Next Steps: Interactive Components",
+            "content": "# Ahead: Advanced Interactive Components 📱🚀\n\nNow let's explore Bootstrap's full interactive component suite powered by JavaScript data attributes.\n\n## Topics Ahead:\n- **Responsive Navbars**: Hamburgers, togglers, and brand locks\n- **Modals**: Dialog popups with focus trapping\n- **Carousels**: Slide carousels with crossfades and indicators\n- **Accordions & Collapse**: Expandable FAQ disclosures\n- **Dropdowns, Tooltips, Popovers, and Offcanvas**\n\nLet's bring your pages to life! 🚀"
+        }
+    ]
+}

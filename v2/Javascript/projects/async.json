@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Asynchronous Callbacks and Callback Hell",
+    "ques": "Explain how asynchronous **Callbacks** work with JavaScript's single-threaded Event Loop. What is **Callback Hell**, and how does it make error handling difficult?",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// Simulation of nested asynchronous callback hell\nfunction getUser(userId, callback) {\n  setTimeout(() => {\n    console.log(\"1. Fetched user profile\");\n    callback(null, { id: userId, username: \"alex\" });\n  }, 500);\n}\n\nfunction getOrders(username, callback) {\n  setTimeout(() => {\n    console.log(\"2. Fetched user orders\");\n    callback(null, [\"Order-101\", \"Order-102\"]);\n  }, 500);\n}\n\n// Deep nesting / pyramid of doom makes error handling fragile\ngetUser(42, (err, user) => {\n  if (err) return console.error(err);\n  \n  getOrders(user.username, (err, orders) => {\n    if (err) return console.error(err);\n    console.log(`User ${user.username} has orders:`, orders);\n  });\n});"
+    },
+    "explanation": "Callbacks pass functions as arguments to execute upon task completion. Deeply nested callbacks create unmaintainable 'pyramids of doom' with repetitive, fragile error-handling logic."
+  },
+  {
+    "title": "Working with JavaScript Promises",
+    "ques": "Explain the three states of a **Promise** (`pending`, `fulfilled`, `rejected`). Write a function `fetchUserData` returning a Promise that resolves with data or rejects with an Error.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function fetchUserData(userId) {\n  return new Promise((resolve, reject) => {\n    setTimeout(() => {\n      if (userId > 0) {\n        // Transition from 'pending' to 'fulfilled'\n        resolve({ id: userId, name: \"Diana\", plan: \"Pro\" });\n      } else {\n        // Transition from 'pending' to 'rejected'\n        reject(new Error(\"Invalid User ID: ID must be positive\"));\n      }\n    }, 600);\n  });\n}\n\n// Consuming promise using .then(), .catch(), and .finally()\nfetchUserData(105)\n  .then((data) => {\n    console.log(\"User data retrieved:\", data);\n    return data.plan;\n  })\n  .then((plan) => console.log(\"Current plan:\", plan))\n  .catch((error) => console.error(\"Encountered error:\", error.message))\n  .finally(() => console.log(\"Operation completed.\"));"
+    },
+    "explanation": "Promises represent values available now, in the future, or never. They flatten asynchronous callback chains into clean `.then()` pipelines with centralized `.catch()` error handling."
+  },
+  {
+    "title": "Modern Asynchronous Code with Async/Await",
+    "ques": "Explain the relationship between **`async/await`** and Promises. Rewrite a multi-step asynchronous workflow using `async/await` wrapped in a `try...catch` block.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));\n\nasync function performOrderCheckout(cartId) {\n  try {\n    console.log(\"Initiating checkout for cart:\", cartId);\n    \n    // 'await' pauses function execution until promise resolves\n    await delay(400);\n    const inventoryAvailable = true;\n    \n    if (!inventoryAvailable) {\n      throw new Error(\"Items are currently out of stock\");\n    }\n    \n    await delay(300);\n    const paymentConfirmation = { confirmationCode: \"CONF-8823\", status: \"Paid\" };\n    \n    return paymentConfirmation;\n  } catch (error) {\n    console.error(\"Checkout failed:\", error.message);\n    throw error; // Re-throw or handle gracefully\n  } finally {\n    console.log(\"Checkout cleanup finished.\");\n  }\n}\n\n// Calling async function\nperformOrderCheckout(\"cart_991\").then(res => console.log(\"Result:\", res));"
+    },
+    "explanation": "`async/await` is syntactic sugar built over Promises. It enables developers to write asynchronous code that reads sequentially like synchronous code, using standard `try/catch` for error handling."
+  }
+]

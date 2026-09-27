@@ -1,0 +1,159 @@
+{
+    "id": "learn_tw_basics",
+    "topicId": "tw_basics",
+    "topicTitle": "Core Concepts",
+    "description": "Master Tailwind CSS core concepts including utility-first design, mobile-first responsiveness, pseudo-classes, dark mode, and configuration.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "tw_basics_1",
+            "type": "content",
+            "title": "Introduction to Tailwind CSS",
+            "content": "# Welcome to Tailwind CSS 💨\n\n**Tailwind CSS** is a utility-first CSS framework packed with classes like `flex`, `pt-4`, `text-center`, and `rotate-90` that can be composed to build any design, directly in your markup.\n\n## What Makes Tailwind Different?\n- **No pre-designed components** — Unlike Bootstrap or MUI, Tailwind provides raw utility building blocks.\n- **Work inside HTML** — No need to switch between HTML and CSS files constantly.\n- **Zero unused CSS** — The Just-In-Time (JIT) compiler scans template files and generates only the exact CSS you use.\n- **Consistent constraints** — Spacing scales, color palettes, and typography presets eliminate arbitrary pixel guesswork.\n\n> 💡 **Key Mindset Shift:** Instead of naming CSS classes like `.user-profile-header-card`, you assemble visual primitives like `flex p-6 bg-white rounded-xl shadow-md`."
+        },
+        {
+            "id": "tw_basics_2",
+            "type": "content",
+            "title": "The Utility-First Concept",
+            "content": "# The Utility-First Architecture 🧱\n\nIn traditional CSS, you write custom semantic classes and associate styling rules in a stylesheet. In utility-first CSS, classes have single, focused responsibilities.\n\n## Traditional CSS vs Utility-First\n\n| Aspect | Traditional CSS | Tailwind Utility-First |\n|---|---|---|\n| **Location** | Separate `.css` file | Directly in template markup |\n| **Class Naming** | Inventing names (`.author-bio-wrap`) | Standardized utilities (`flex`, `p-4`) |\n| **File Size** | Grows with every new feature | Hits a plateau (around 10-15kB gzipped) |\n| **Safety** | Changes risk breaking other elements | Modifying a component has zero side effects |\n\n## Basic Component Example\n\n```html_not\n<div class=\"p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4\">\n  <div class=\"shrink-0\">\n    <img class=\"h-12 w-12\" src=\"/img/logo.svg\" alt=\"ChitChat Logo\">\n  </div>\n  <div>\n    <div class=\"text-xl font-medium text-black\">ChitChat</div>\n    <p class=\"text-slate-500\">You have a new message!</p>\n  </div>\n</div>\n```\n\n> ⚡ **Advantage:** You never spend time coming up with meaningless class names like `wrapper`, `inner-container`, or `card-body-bottom`."
+        },
+        {
+            "id": "tw_basics_3",
+            "type": "content",
+            "title": "Preflight: Tailwind's Base Styles",
+            "content": "# Preflight (Base Styles) 🛠️\n\nBuilt on top of **modern-normalize**, Preflight is a set of base styles designed to smooth out cross-browser inconsistencies.\n\n## Key Resets Applied by Preflight\n1. **Margin Resets**: All margins (`body`, `h1`-`h6`, `p`, `ul`, etc.) are removed (`margin: 0`).\n2. **Unstyled Headings**: `h1` through `h6` are unstyled by default, matching standard text size and font weight.\n3. **Lists are Unstyled**: `<ul>` and `<ol>` have no list-style markers or padding.\n4. **Images are Block-Level**: `img`, `svg`, `video`, and `canvas` are `display: block` and `max-width: 100%`.\n5. **Borders Reset**: Default border styles are `border: 0 solid #e5e7eb`.\n\n## Adding Custom Base Styles\nYou can augment Preflight using the `@layer base` directive:\n\n```css_not\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n@layer base {\n  h1 {\n    @apply text-2xl font-bold text-gray-900;\n  }\n  a {\n    @apply text-blue-600 hover:underline;\n  }\n}\n```"
+        },
+        {
+            "id": "tw_basics_quiz_1",
+            "type": "quiz",
+            "title": "Preflight Check",
+            "content": "Test your knowledge on Tailwind's Preflight defaults!",
+            "quizQuestion": "What is the default appearance of an <h1> tag in Tailwind CSS when Preflight is active?",
+            "quizOptions": [
+                "It has browser default 2em font size and bold weight",
+                "It is completely unstyled with regular font size and weight",
+                "It has text-4xl and font-extrabold applied automatically",
+                "It is hidden until a utility class is applied"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "tw_basics_5",
+            "type": "content",
+            "title": "Responsive Design & Mobile-First",
+            "content": "# Responsive Design 📱💻\n\nTailwind uses an intuitive **mobile-first** breakpoint system. An un-prefixed utility applies to all screen sizes, while breakpoint-prefixed utilities apply at that breakpoint and above.\n\n## Default Breakpoints\n\n| Prefix | Min-width | Typical Device Target |\n|---|---|---|\n| `sm:` | `640px` | Small tablets, landscape phones |\n| `md:` | `768px` | Tablets portrait/landscape |\n| `lg:` | `1024px` | Laptops and desktop displays |\n| `xl:` | `1280px` | Large desktop screens |\n| `2xl:` | `1536px` | Ultra-wide monitors |\n\n## Mobile-First Example\n\n```html_not\n<!-- Stack on mobile, 2 columns on tablet, 4 columns on desktop -->\n<div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6\">\n  <div class=\"p-4 bg-white rounded shadow\">Card 1</div>\n  <div class=\"p-4 bg-white rounded shadow\">Card 2</div>\n  <div class=\"p-4 bg-white rounded shadow\">Card 3</div>\n  <div class=\"p-4 bg-white rounded shadow\">Card 4</div>\n</div>\n```\n\n> ⚠️ **Crucial Rule:** Never write `sm:text-sm text-base` expecting `text-base` to apply on desktop! Write `text-sm md:text-base`."
+        },
+        {
+            "id": "tw_basics_6",
+            "type": "content",
+            "title": "Targeting Ranges & Max Breakpoints",
+            "content": "# Advanced Responsive Targeting 🎯\n\nIn modern Tailwind, you can also target max-width breakpoints or specific ranges using `max-*` modifiers.\n\n## Max-Width Modifiers\nWhen you only want a style applied *below* a specific viewport size:\n\n```html_not\n<!-- Visible only on mobile screens below md (768px) -->\n<div class=\"max-md:block hidden\">\n  <button id=\"mobile-menu-btn\">☰ Menu</button>\n</div>\n\n<!-- Visible only on screens between md (768px) and xl (1280px) -->\n<aside class=\"hidden md:max-xl:block\">\n  <p>Medium screen sidebar</p>\n</aside>\n```\n\n## Custom Breakpoints in Config\n\n```javascript_not\n// tailwind.config.js\nmodule.exports = {\n  theme: {\n    screens: {\n      'tablet': '640px',\n      'laptop': '1024px',\n      'desktop': '1280px',\n    },\n  },\n};\n```"
+        },
+        {
+            "id": "tw_basics_7",
+            "type": "content",
+            "title": "Pseudo-Classes: Hover, Focus & Active",
+            "content": "# Interactive States: Hover, Focus & Active 🖱️\n\nEvery Tailwind utility class can be conditionally applied on interactive states using state prefixes.\n\n## Common Pseudo-Class Modifiers\n\n| Modifier | Pseudo-Class | Common Use Cases |\n|---|---|---|\n| `hover:` | `:hover` | Button highlights, link underlines, card elevations |\n| `focus:` | `:focus` | Input outlines, accessible keyboard rings |\n| `active:` | `:active` | Button press effect (scale, color shift) |\n| `focus-visible:` | `:focus-visible` | Keyboard-only accessibility outline |\n| `disabled:` | `:disabled` | Dimmed opacity, `cursor-not-allowed` |\n\n## Interactive Button Example\n\n```html_not\n<button class=\"bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg\n               hover:bg-indigo-700 active:scale-95\n               focus:outline-none focus:ring-4 focus:ring-indigo-300\n               disabled:opacity-50 disabled:cursor-not-allowed\n               transition-all duration-200\">\n  Submit Form\n</button>\n```"
+        },
+        {
+            "id": "tw_basics_8",
+            "type": "content",
+            "title": "Group and Peer Modifiers",
+            "content": "# Styling Based on Parent & Sibling State 👨‍👩‍👧\n\nTailwind provides `group` and `peer` modifiers to trigger styles when a parent or sibling changes state.\n\n## 1. Group Modifier (`group-{modifier}`)\nMark a parent with `group`, then style children based on parent hover or focus:\n\n```html_not\n<div class=\"group p-6 bg-white rounded-lg shadow hover:bg-indigo-600 transition-colors\">\n  <h3 class=\"text-gray-900 group-hover:text-white font-bold\">Card Title</h3>\n  <p class=\"text-gray-500 group-hover:text-indigo-100\">Subtitle changes text color on card hover!</p>\n  <span class=\"text-indigo-600 group-hover:translate-x-2 transition-transform inline-block\">→</span>\n</div>\n```\n\n## 2. Peer Modifier (`peer-{modifier}`)\nMark a previous sibling with `peer`, then style the following sibling:\n\n```html_not\n<input type=\"email\" class=\"peer border rounded px-3 py-2 invalid:border-pink-500\" required />\n<p class=\"mt-2 hidden peer-invalid:block text-pink-600 text-sm\">\n  Please provide a valid email address.\n</p>\n```\n\n> 📌 **Note:** `peer` only works with following siblings in the DOM tree."
+        },
+        {
+            "id": "tw_basics_quiz_2",
+            "type": "quiz",
+            "title": "Modifiers Quiz",
+            "content": "Verify your understanding of Tailwind state modifiers!",
+            "quizQuestion": "Which Tailwind feature lets you style a child element when its parent element is hovered?",
+            "quizOptions": [
+                "The sibling selector (+)",
+                "The `group` class on parent and `group-hover:` on child",
+                "The `peer` class on parent and `peer-hover:` on child",
+                "The `@apply hover:all` directive"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "tw_basics_10",
+            "type": "content",
+            "title": "Dark Mode Configuration",
+            "content": "# Dark Mode in Tailwind CSS 🌙\n\nTailwind provides a first-class `dark:` variant that makes it effortless to style your site differently when dark mode is enabled.\n\n## Two Strategies for Dark Mode\n\n### Strategy 1: Media Query (`media` - default)\nAutomatically respects the user's operating system preference (`prefers-color-scheme: dark`).\n\n```javascript_not\n// tailwind.config.js\nmodule.exports = {\n  darkMode: 'media', // default\n};\n```\n\n### Strategy 2: Class Strategy (`class` / `selector`)\nAllows manual toggling via JavaScript by adding or removing the `dark` class on the `<html>` or `<body>` element:\n\n```javascript_not\n// tailwind.config.js\nmodule.exports = {\n  darkMode: 'class', // or 'selector' in Tailwind v3.4+\n};\n```"
+        },
+        {
+            "id": "tw_basics_11",
+            "type": "content",
+            "title": "Implementing Dark Mode UI",
+            "content": "# Dark Mode Implementation & JS Toggle 🌓\n\nHere is how you apply dark variants in markup and wire up a persistent theme switcher.\n\n## Applying `dark:` Classes\n\n```html_not\n<div class=\"bg-white text-slate-900 dark:bg-slate-900 dark:text-white p-8 rounded-2xl shadow-xl transition-colors\">\n  <h2 class=\"text-2xl font-bold\">Dark Mode Ready</h2>\n  <p class=\"text-slate-600 dark:text-slate-400 mt-2\">\n    This card seamlessly shifts between light and dark modes.\n  </p>\n  <button id=\"theme-toggle\" class=\"mt-4 px-4 py-2 bg-indigo-600 dark:bg-indigo-500 text-white rounded-lg\">\n    Toggle Theme\n  </button>\n</div>\n```\n\n## JavaScript Toggle Logic\n\n```javascript_not\nconst toggleBtn = document.getElementById('theme-toggle');\ntoggleBtn.addEventListener('click', () => {\n  if (document.documentElement.classList.contains('dark')) {\n    document.documentElement.classList.remove('dark');\n    localStorage.theme = 'light';\n  } else {\n    document.documentElement.classList.add('dark');\n    localStorage.theme = 'dark';\n  }\n});\n```"
+        },
+        {
+            "id": "tw_basics_12",
+            "type": "content",
+            "title": "Installation: CLI vs CDN",
+            "content": "# Installation: Tailwind CLI vs Play CDN 📦\n\nDepending on development vs production needs, Tailwind offers multiple setup routes.\n\n## 1. Tailwind CLI (Recommended for Production)\nFull performance with JIT compiling and minification:\n\n```bash_not\n# Install Tailwind CSS\nnpm install -D tailwindcss\nnpx tailwindcss init\n\n# Start watch process\nnpx tailwindcss -i ./src/input.css -o ./dist/output.css --watch\n```\n\n## 2. Play CDN (For Prototyping Only)\nFastest setup with zero build tools, but downloads the whole JIT compiler in the browser:\n\n```html_not\n<script src=\"https://cdn.tailwindcss.com\"></script>\n<script>\n  tailwind.config = {\n    theme: {\n      extend: {\n        colors: { brand: '#da373d' }\n      }\n    }\n  }\n</script>\n```\n\n> ⚠️ **Warning:** Never use the Play CDN in production! It creates massive runtime overhead and lacks PostCSS optimizations."
+        },
+        {
+            "id": "tw_basics_13",
+            "type": "content",
+            "title": "The Tailwind Configuration File",
+            "content": "# Understanding tailwind.config.js ⚙️\n\nThe `tailwind.config.js` file is the central command center for customizing your design system.\n\n```javascript_not\n/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  content: [\n    './src/**/*.{html,js,jsx,ts,tsx}',\n    './public/index.html'\n  ],\n  darkMode: 'class',\n  theme: {\n    extend: {\n      colors: {\n        primary: '#3b82f6',\n      },\n      fontFamily: {\n        heading: ['Inter', 'sans-serif'],\n      },\n    },\n  },\n  plugins: [],\n};\n```\n\n## The `content` Array\nThe `content` array defines which files Tailwind scans for class names. If a file is omitted, its Tailwind classes will **not** be included in your generated CSS!"
+        },
+        {
+            "id": "tw_basics_14",
+            "type": "content",
+            "title": "PostCSS Integration",
+            "content": "# PostCSS Integration & Autoprefixer 🔌\n\nIn modern web build tools (Vite, Next.js, Webpack), Tailwind is typically integrated as a **PostCSS plugin**.\n\n## `postcss.config.js` Setup\n\n```javascript_not\nmodule.exports = {\n  plugins: {\n    tailwindcss: {},\n    autoprefixer: {},\n  }\n}\n```\n\n## Why PostCSS & Autoprefixer?\n- **Automatic Vendor Prefixes**: PostCSS with Autoprefixer automatically adds browser prefixes like `-webkit-` and `-moz-` where necessary.\n- **Seamless Bundler Integration**: Works natively with Vite, Astro, Webpack, Nuxt, and Remix.\n- **Hot Module Replacement (HMR)**: Changes in classes instantly update the browser without full page reloads."
+        },
+        {
+            "id": "tw_basics_15",
+            "type": "content",
+            "title": "The @tailwind Directives",
+            "content": "# Core CSS Directives: @tailwind 📜\n\nTo inject Tailwind's generated styles into your CSS bundle, include the three main directives in your entry CSS file (`src/input.css`):\n\n```css_not\n/* 1. Base Preflight styles & element defaults */\n@tailwind base;\n\n/* 2. Component classes registered via plugins or @layer */\n@tailwind components;\n\n/* 3. All utility classes and variants (hover, responsive, dark) */\n@tailwind utilities;\n```\n\n## Why Order Matters\n- `base` comes first so utilities can override base element styles.\n- `components` comes second so utilities can override component presets.\n- `utilities` comes last ensuring utilities always win specificity conflicts."
+        },
+        {
+            "id": "tw_basics_16",
+            "type": "content",
+            "title": "The @layer Directive",
+            "content": "# Organizing Code with @layer 📂\n\nWhen you need custom CSS rules, wrap them in `@layer` so Tailwind injects them into the correct specificity bucket:\n\n```css_not\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n@layer components {\n  .btn-primary {\n    padding: 0.5rem 1rem;\n    border-radius: 0.375rem;\n    background-color: #4f46e5;\n    color: #ffffff;\n    font-weight: 600;\n  }\n}\n\n@layer utilities {\n  .content-auto {\n    content-visibility: auto;\n  }\n}\n```\n\n## Benefit of `@layer`\nAny custom CSS inside `@layer` will automatically support state variants like `hover:btn-primary` and responsive prefixes like `md:btn-primary`!"
+        },
+        {
+            "id": "tw_basics_17",
+            "type": "content",
+            "title": "The @apply Directive & Best Practices",
+            "content": "# The @apply Directive: Power & Pitfalls ⚠️\n\nThe `@apply` directive lets you inline existing utility classes into custom CSS rules.\n\n```css_not\n@layer components {\n  .badge {\n    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800;\n  }\n}\n```\n\n## When to Use `@apply`\n- ✅ Small, highly repetitive third-party widget overrides.\n- ✅ When you cannot use component templates (e.g., pure Markdown content).\n\n## When to Avoid `@apply`\n- ❌ Recreating traditional monolithic stylesheets.\n- ❌ Component reuse in React/Vue/Svelte (use framework components instead).\n- ❌ Causes CSS bundle bloat if overused."
+        },
+        {
+            "id": "tw_basics_quiz_3",
+            "type": "quiz",
+            "title": "Config & Directives Quiz",
+            "content": "Test your knowledge of Tailwind CSS setup & directives!",
+            "quizQuestion": "Why is it essential to correctly configure the `content` array in `tailwind.config.js`?",
+            "quizOptions": [
+                "It specifies the external fonts to download from Google Fonts",
+                "It tells Tailwind which files to scan so unused CSS is purged and required utilities are generated",
+                "It sets the default language of your website for accessibility",
+                "It lists the JavaScript frameworks bundled into the application"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "tw_basics_19",
+            "type": "content",
+            "title": "Common Pitfalls & JIT Dynamic Classes",
+            "content": "# Crucial Gotcha: Dynamic Class Names 💥\n\nTailwind's JIT scanner uses **raw string extraction** (regular expressions). It does NOT execute JavaScript!\n\n## The Broken Pattern ❌\n\n```javascript_not\n// BROKEN: Tailwind will NEVER see 'bg-red-500' or 'bg-blue-500'!\nconst color = 'red';\nconst badge = `<div class=\"bg-${color}-500\">Badge</div>`;\n```\n\n## The Correct Pattern ✅\n\nAlways map complete, unbroken class names:\n\n```javascript_not\n// CORRECT: Full strings are visible to the scanner\nconst colorMap = {\n  red: 'bg-red-500 text-red-100',\n  blue: 'bg-blue-500 text-blue-100',\n  green: 'bg-green-500 text-green-100',\n};\n\nconst badge = `<div class=\"${colorMap[color]}\">Badge</div>`;\n```"
+        },
+        {
+            "id": "tw_basics_20",
+            "type": "content",
+            "title": "Summary & Best Practices Checklist",
+            "content": "# Tailwind Basics: Summary Checklist 📋\n\nHere is your roadmap for writing clean, efficient Tailwind CSS:\n\n## Best Practices Checklist\n- [x] **Embrace utility composition** — Build UI with utilities first; abstract to framework components (React/Vue) when repeating.\n- [x] **Design mobile-first** — Un-prefixed classes for mobile, `sm:` / `md:` / `lg:` for wider viewports.\n- [x] **Use complete strings** — Never interpolate dynamic substrings like `text-${size}`.\n- [x] **Leverage state modifiers** — Use `hover:`, `focus:`, `group-hover:`, and `peer-invalid:` for rich interactions.\n- [x] **Configure dark mode** — Choose `class` mode for user toggles and pair with `dark:` variants.\n- [x] **Rely on Preflight** — Build on the standardized modern base reset.\n\nNext up: Master layout, flexbox, and CSS grid in Tailwind CSS! 🚀"
+        },
+        {
+            "id": "tw_basics_21",
+            "type": "content",
+            "title": "Next Steps: Layout & Spacing",
+            "content": "# What's Next in Your Journey? 🗺️\n\nNow that you understand the core mechanics of Tailwind CSS, you are ready to construct complex, responsive page layouts.\n\n## Coming Up in Layout & Spacing:\n- **Flexbox & Grid Utilities** — Rapid multi-column responsive arrangements.\n- **The Spacing Scale** — Master padding, margin, width, and height.\n- **Positioning & Z-Index** — Floating modals, badges, tooltips, and sticky headers.\n- **Alignment & Distribution** — `justify-between`, `items-center`, `gap-x`, and `gap-y`.\n\nLet's move on to building real-world application layouts! 💪"
+        }
+    ]
+}

@@ -1,0 +1,159 @@
+{
+    "id": "learn_html_html5",
+    "topicId": "html5",
+    "topicTitle": "HTML5 Features",
+    "description": "Explore semantic elements, audio/video multimedia, and the Canvas API.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "html_html5_1",
+            "type": "content",
+            "title": "Welcome to HTML5",
+            "content": "# HTML5 New Features 🚀\n\nHTML5 represents the largest evolution of the web platform, bringing semantic structural elements, native multimedia playback, graphics APIs, and web storage.\n\n## What you'll master:\n- 🏛️ **Semantic Structural Tags** - `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<footer>`\n- 🎯 **Interactive Content Semantics** - `<details>`, `<summary>`, `<figure>`, `<time>`, `<dialog>`\n- 🎵 **Native Audio & Video** - Embedding media without external plugins\n- 🎨 **HTML5 Canvas 2D API** - Dynamic scriptable graphics and game rendering\n- ⚡ **Modern Web Standards** - SVG vs Canvas comparison and modern browser APIs"
+        },
+        {
+            "id": "html_html5_2",
+            "type": "content",
+            "title": "Why Semantic HTML Matters",
+            "content": "# Why Semantic HTML Matters 🧠\n\nBefore HTML5, developers had to rely on non-semantic generic tags like `<div class=\"header\">` or `<div id=\"footer\">`.\n\n## Benefits of Semantic Elements:\n1. **Search Engine Optimization (SEO):** Search crawlers (like Google) prioritize content inside `<article>` and `<main>` over sidebars.\n2. **Accessibility (a11y):** Screen readers use semantic landmarks to let visually impaired users jump directly to navigation (`<nav>`) or the main article (`<main>`).\n3. **Code Readability:** Clean, intuitive architecture for developer teams.\n\n```html_not\n<!-- Old Non-Semantic Way (Bad) -->\n<div class=\"header\">\n  <div class=\"nav\">...</div>\n</div>\n\n<!-- Modern Semantic Way (Good) -->\n<header>\n  <nav>...</nav>\n</header>\n```"
+        },
+        {
+            "id": "html_html5_3",
+            "type": "content",
+            "title": "Core Structural Elements",
+            "content": "# Core Structural Landmarks 🏛️\n\n```html_not\n<body>\n  <header>\n    <h1>TechDaily</h1>\n    <nav>\n      <a href=\"/\">Home</a>\n      <a href=\"/news\">News</a>\n    </nav>\n  </header>\n\n  <main>\n    <article>\n      <h2>HTML5 Revolution</h2>\n      <p>Content goes here...</p>\n    </article>\n  </main>\n\n  <aside>\n    <h3>Related Links</h3>\n  </aside>\n\n  <footer>\n    <p>&copy; 2026 TechDaily</p>\n  </footer>\n</body>\n```\n\n- `<header>`: Introductory content or site branding.\n- `<nav>`: Major navigation links.\n- `<main>`: Unique dominant content of the document (only one per page).\n- `<footer>`: Copyright, author info, and legal links."
+        },
+        {
+            "id": "html_html5_4",
+            "type": "content",
+            "title": "Article vs Section",
+            "content": "# `<article>` vs `<section>` 📄\n\nUnderstanding the difference between `<article>` and `<section>` is one of the most common developer interviews questions!\n\n## `<article>`:\nAn **independent, self-contained** piece of content that could be syndicated or republished on its own (e.g. blog post, news article, user review, product card).\n\n```html_not\n<article>\n  <h2>How to Learn HTML</h2>\n  <p>Step-by-step roadmap...</p>\n</article>\n```\n\n## `<section>`:\nA **thematic grouping** of content, typically with its own heading, representing a chapter or section of a larger whole.\n\n```html_not\n<section>\n  <h2>Customer Testimonials</h2>\n  <p>What our clients say...</p>\n</section>\n```"
+        },
+        {
+            "id": "html_html5_quiz_1",
+            "type": "quiz",
+            "title": "Semantics Quiz",
+            "content": "Check your semantic tag knowledge.",
+            "quizQuestion": "Which HTML5 element represents an independent, self-contained piece of content suitable for syndication?",
+            "quizOptions": [
+                "<section>",
+                "<div>",
+                "<article>",
+                "<aside>"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "html_html5_5",
+            "type": "content",
+            "title": "The <aside> Element",
+            "content": "# The `<aside>` Element 📌\n\nThe `<aside>` element represents content tangentially related to the content around it.\n\n```html_not\n<main>\n  <article>\n    <h2>Deep Space Exploration</h2>\n    <p>Humanity is reaching further into the cosmos...</p>\n  </article>\n\n  <aside>\n    <h3>Quick Fact</h3>\n    <p>The Voyager 1 probe is currently over 15 billion miles away from Earth.</p>\n  </aside>\n</main>\n```\n\n## Typical Use Cases:\n- Sidebars\n- Callout boxes and quotes\n- Advertising blocks\n- Related article lists"
+        },
+        {
+            "id": "html_html5_6",
+            "type": "content",
+            "title": "Figure and Figcaption",
+            "content": "# `<figure>` and `<figcaption>` 🖼️\n\nThe `<figure>` element encapsulates media (images, diagrams, code listings) along with an optional caption defined by `<figcaption>`.\n\n```html_not\n<figure>\n  <img src=\"chart.png\" alt=\"Revenue growth chart for 2025\" width=\"400\">\n  <figcaption>Figure 1.1: Annual company revenue growth by quarter.</figcaption>\n</figure>\n```\n\n- Associates the descriptive text with the image for screen readers.\n- Can be placed anywhere in the document without disrupting flow."
+        },
+        {
+            "id": "html_html5_7",
+            "type": "content",
+            "title": "Interactive Elements: Details & Summary",
+            "content": "# Native Accordions: `<details>` & `<summary>` 📂\n\nHTML5 allows creating collapsible disclosure widgets with zero JavaScript!\n\n```html_not\n<details>\n  <summary>Frequently Asked Question: How do I upgrade to VIP?</summary>\n  <p>You can upgrade directly from the settings screen to unlock all premium courses and exercises!</p>\n</details>\n\n<!-- Open by default -->\n<details open>\n  <summary>System Requirements</summary>\n  <p>Any modern browser with JavaScript enabled.</p>\n</details>\n```\n\n- Clicking `<summary>` toggles the visibility of the inner content.\n- Fully accessible with keyboard navigation (Space/Enter keys toggle it)."
+        },
+        {
+            "id": "html_html5_8",
+            "type": "content",
+            "title": "Native Dialog Element",
+            "content": "# The Native `<dialog>` Element 💬\n\nThe `<dialog>` tag represents a native modal or popup window.\n\n```html_not\n<dialog id=\"fav-dialog\">\n  <form method=\"dialog\">\n    <h2>Confirm Action</h2>\n    <p>Are you sure you want to proceed?</p>\n    <button value=\"cancel\">Cancel</button>\n    <button value=\"confirm\">Confirm</button>\n  </form>\n</dialog>\n```\n\n```javascript_not\n// Opening via JavaScript\nconst dialog = document.getElementById('fav-dialog');\ndialog.showModal(); // Opens modal with backdrop\n```\n\n## Features:\n- Built-in backdrop (`::backdrop` pseudo-element can be styled in CSS).\n- Traps focus inside the dialog while active.\n- Pressing `Escape` automatically closes it!"
+        },
+        {
+            "id": "html_html5_9",
+            "type": "content",
+            "title": "HTML5 Audio Embedding",
+            "content": "# Native Audio with `<audio>` 🎵\n\nBefore HTML5, playing audio required third-party plugins like Adobe Flash. HTML5 provides standard native playback.\n\n```html_not\n<audio controls preload=\"metadata\">\n  <source src=\"podcast.mp3\" type=\"audio/mpeg\">\n  <source src=\"podcast.ogg\" type=\"audio/ogg\">\n  Your browser does not support the audio element.\n</audio>\n```\n\n## Essential Attributes:\n- `controls`: Displays play/pause, volume, and progress bar controls.\n- `autoplay`: Starts playback automatically (usually blocked by browsers unless muted).\n- `loop`: Loops the audio continuously.\n- `muted`: Starts audio in a muted state.\n- `preload`: Advises browser on loading strategy (`none`, `metadata`, `auto`)."
+        },
+        {
+            "id": "html_html5_10",
+            "type": "content",
+            "title": "HTML5 Video Embedding",
+            "content": "# Native Video with `<video>` 🎬\n\nEmbedding responsive video directly into the webpage:\n\n```html_not\n<video width=\"640\" height=\"360\" controls poster=\"cover.jpg\">\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n  <source src=\"movie.webm\" type=\"video/webm\">\n  <track src=\"subtitles_en.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\">\n  Your browser does not support the video tag.\n</video>\n```\n\n## Key Attributes:\n- `poster`: Image displayed while the video downloads or until user presses play.\n- `<track>`: Adds timed text subtitles or captions in `.vtt` (WebVTT) format.\n- `playsinline`: Plays inside page instead of forcing fullscreen on mobile iOS devices."
+        },
+        {
+            "id": "html_html5_quiz_2",
+            "type": "quiz",
+            "title": "Media Embedding Quiz",
+            "content": "Test your knowledge of media tags.",
+            "quizQuestion": "Which child element of <video> is used to include timed text captions and subtitles?",
+            "quizOptions": [
+                "<captionTag>",
+                "<track>",
+                "<subtitles>",
+                "<vtt>"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_html5_11",
+            "type": "content",
+            "title": "Introduction to HTML5 Canvas",
+            "content": "# Introduction to HTML5 Canvas 🎨\n\nThe `<canvas>` element provides a resolution-dependent bitmap canvas that can be drawn on dynamically using JavaScript.\n\n```html_not\n<canvas id=\"myCanvas\" width=\"400\" height=\"200\" style=\"border:1px solid #ccc;\">\n  Fallback text for browsers without canvas support.\n</canvas>\n```\n\n## How Canvas Works:\n1. `<canvas>` itself is purely a blank graphic container.\n2. JavaScript must be used to get the rendering context and execute drawing commands.\n3. Perfect for charts, photo manipulation, data visualizations, and 2D games!"
+        },
+        {
+            "id": "html_html5_12",
+            "type": "content",
+            "title": "Canvas 2D Context & Rectangles",
+            "content": "# Drawing Rectangles on Canvas 🖌️\n\nTo draw on a canvas, grab its 2D rendering context with `.getContext('2d')`:\n\n```html_not\n<canvas id=\"rectCanvas\" width=\"300\" height=\"150\"></canvas>\n\n<script>\n  const canvas = document.getElementById('rectCanvas');\n  const ctx = canvas.getContext('2d');\n\n  // Set fill color\n  ctx.fillStyle = '#3b82f6';\n  // fillRect(x, y, width, height)\n  ctx.fillRect(20, 20, 150, 80);\n\n  // Stroked outline rectangle\n  ctx.strokeStyle = '#ef4444';\n  ctx.lineWidth = 4;\n  ctx.strokeRect(100, 50, 150, 80);\n</script>\n```"
+        },
+        {
+            "id": "html_html5_13",
+            "type": "content",
+            "title": "Canvas Paths and Lines",
+            "content": "# Canvas Paths, Lines, and Circles ⭕\n\nFor custom shapes, lines, and arcs, use path methods:\n\n```html_not\n<canvas id=\"pathCanvas\" width=\"300\" height=\"200\"></canvas>\n\n<script>\n  const ctx = document.getElementById('pathCanvas').getContext('2d');\n\n  // 1. Draw a Line\n  ctx.beginPath();\n  ctx.moveTo(30, 30);   // Starting coordinate\n  ctx.lineTo(200, 30);  // Ending coordinate\n  ctx.strokeStyle = '#10b981';\n  ctx.lineWidth = 3;\n  ctx.stroke();\n\n  // 2. Draw a Circle: arc(x, y, radius, startAngle, endAngle)\n  ctx.beginPath();\n  ctx.arc(150, 120, 40, 0, 2 * Math.PI);\n  ctx.fillStyle = '#f59e0b';\n  ctx.fill();\n  ctx.stroke();\n</script>\n```"
+        },
+        {
+            "id": "html_html5_14",
+            "type": "content",
+            "title": "Canvas Text and Typography",
+            "content": "# Drawing Text on Canvas ✍️\n\nYou can render formatted typography directly onto the canvas bitmap:\n\n```html_not\n<canvas id=\"textCanvas\" width=\"400\" height=\"100\"></canvas>\n\n<script>\n  const ctx = document.getElementById('textCanvas').getContext('2d');\n\n  ctx.font = '24px Inter, sans-serif';\n  ctx.fillStyle = '#1e293b';\n  ctx.fillText('Canvas 2D Typography', 20, 50);\n\n  // Outlined text\n  ctx.font = 'bold 30px Arial';\n  ctx.strokeStyle = '#6366f1';\n  ctx.strokeText('Outlined Text', 20, 90);\n</script>\n```\n\nText drawn on canvas is rasterized pixels—it cannot be highlighted or selected with a cursor like standard HTML text!"
+        },
+        {
+            "id": "html_html5_15",
+            "type": "content",
+            "title": "SVG vs Canvas: When to Use Which",
+            "content": "# SVG vs Canvas: Architectural Comparison ⚖️\n\nBoth technologies create graphics in HTML5, but their architectures differ completely:\n\n| Feature | HTML5 Canvas | Scalable Vector Graphics (SVG) |\n| :--- | :--- | :--- |\n| **Technology** | Raster (Pixel-based bitmap) | Vector (XML DOM nodes) |\n| **Scalability** | Pixelates when zoomed | Infinitely scalable without quality loss |\n| **Event Handling** | No DOM nodes (manual collision) | Full DOM events (clicks on shapes) |\n| **CSS Styling** | Cannot be styled with CSS | Fully stylable with CSS |\n| **Performance** | High performance for 1000s of objects | Performance drops with high object count |\n| **Best For** | 2D Games, charts, image processing | Icons, logos, UI illustrations |"
+        },
+        {
+            "id": "html_html5_quiz_3",
+            "type": "quiz",
+            "title": "Canvas vs SVG Quiz",
+            "content": "Evaluate your vector vs raster understanding.",
+            "quizQuestion": "Which technology retains infinite crispness when scaled and allows direct CSS styling on individual shapes?",
+            "quizOptions": [
+                "HTML5 Canvas",
+                "SVG",
+                "WebGL",
+                "GIF"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_html5_16",
+            "type": "content",
+            "title": "Semantic Content Helpers: Time & Mark",
+            "content": "# Content Helpers: `<time>` & `<mark>` ⏱️\n\nHTML5 added granular tags for date-time and highlighted text.\n\n## The `<time>` Element:\nProvides machine-readable dates for search engines and calendars via the `datetime` attribute:\n\n```html_not\n<p>Conference Date: <time datetime=\"2026-10-15T09:00\">October 15, 2026 at 9:00 AM</time></p>\n```\n\n## The `<mark>` Element:\nHighlights text for reference or search result relevance:\n\n```html_not\n<p>Search results for \"HTML\": Mastering <mark>HTML</mark>5 modern features.</p>\n```"
+        },
+        {
+            "id": "html_html5_17",
+            "type": "content",
+            "title": "Modern Web Storage APIs",
+            "content": "# Web Storage & Browser APIs 💾\n\nHTML5 introduced client-side storage mechanisms far superior to legacy cookies:\n\n1. **`localStorage`**: Stores key-value data with no expiration time (persists after browser restarts).\n2. **`sessionStorage`**: Stores data for the duration of the browser tab session (cleared on tab close).\n3. **Geolocation API**: Allows web apps to access geographical coordinates with user permission.\n4. **Drag and Drop API**: Native dragging of elements with `draggable=\"true\"`.\n\n```html_not\n<div draggable=\"true\" ondragstart=\"event.dataTransfer.setData('text', event.target.id)\">\n  Drag me!\n</div>\n```"
+        },
+        {
+            "id": "html_html5_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# HTML5 Mastery Achieved! 🏆\n\nYou have conquered HTML5's most powerful capabilities!\n\n## Key Takeaways:\n- ✅ **Semantics:** `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<footer>` replace generic divs.\n- ✅ **Self-Contained Content:** Use `<article>` for independent entities, `<section>` for chapters.\n- ✅ **Native Media:** `<audio>` and `<video>` with `<track>` subtitles.\n- ✅ **Canvas 2D:** High-performance pixel rendering via JavaScript context.\n- ✅ **SVG vs Canvas:** Vector DOM shapes (SVG) vs high-speed raster pixels (Canvas).\n\n## Up Next:\nIn the next module, dive into **HTML Tables: Structure, Headers, Captions, and Colspan/Rowspan**! 🚀"
+        }
+    ]
+}

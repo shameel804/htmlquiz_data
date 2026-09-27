@@ -1,0 +1,60 @@
+[
+  {
+    "title": "Creating SCSS Partials",
+    "ques": "Explain the purpose of **Partials** in Sass and the role of the leading underscore (`_filename.scss`).",
+    "answer": {
+      "type": "text",
+      "content": "### What Partials Are:\nPartials are modular Sass files that contain snippets of CSS (variables, mixins, resets, components) intended to be loaded into other stylesheets rather than compiled into standalone CSS output files.\n\n### The Role of the Leading Underscore (`_`):\n* The underscore naming convention (e.g., `_variables.scss`, `_buttons.scss`) signals the Sass compiler to **skip compiling this file into its own standalone `.css` file**.\n* When imported or used via `@use 'variables'`, the leading underscore and `.scss` extension can be omitted."
+    },
+    "explanation": "Partials keep codebases organized into small, maintainable modules without cluttering the output directory with unnecessary individual CSS files."
+  },
+  {
+    "title": "Modern Module System with @use",
+    "ques": "Explain why Sass introduced the modern **`@use`** rule to replace the legacy `@import` directive. Show how `@use` loads a partial with automatic namespacing.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "// File: _colors.scss\n$brand-primary: #6366f1;\n$brand-secondary: #ec4899;\n\n// File: style.scss\n@use 'colors'; // Loads _colors.scss with namespace 'colors'\n\n.header-banner {\n  // Access variables through their namespace\n  background-color: colors.$brand-primary;\n  border-bottom: 2px solid colors.$brand-secondary;\n}"
+    },
+    "explanation": "`@use` prevents global namespace pollution, eliminates duplicate CSS compilation from multiple imports, and clarifies exactly where each variable, function, or mixin originates."
+  },
+  {
+    "title": "Deprecation of the Legacy @import Rule",
+    "ques": "Detail the architectural flaws that led to the **deprecation of `@import`** in modern Dart Sass.",
+    "answer": {
+      "type": "text",
+      "content": "### Three Primary Flaws of `@import`:\n1. **Global Namespace Pollution:** Every variable, mixin, and function became global. If two imported files declared `$primary`, the second silently overwrote the first without warning.\n2. **Duplicate CSS Output:** If multiple stylesheets `@import 'components'`, the compiled CSS generated duplicate copies of the same CSS rules, bloating bundle size.\n3. **Ambiguity and Unclear Origins:** Developers reading code could not determine which file defined a given `$variable` or mixin without searching the entire project tree."
+    },
+    "explanation": "The Sass team officially deprecated `@import` in favor of `@use` and `@forward` to provide explicit namespaces, private members, and modular scoping."
+  },
+  {
+    "title": "Namespaces and Aliasing with as",
+    "ques": "Demonstrate how to customize or remove namespaces when importing a partial using the **`as`** keyword.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "// 1. Custom short alias namespace\n@use 'theme-variables' as theme;\n\n// 2. Wildcard namespace '*' (loads members directly without namespace prefix)\n@use 'mixins' as *;\n\n.card {\n  // Using custom alias 'theme'\n  background-color: theme.$surface-color;\n  \n  // Using mixin loaded globally via '*'\n  @include center-flex;\n}"
+    },
+    "explanation": "`as <name>` assigns a custom, concise namespace alias to an imported module. Using `as *` pulls members into the local file scope directly."
+  },
+  {
+    "title": "Forwarding Modules with @forward",
+    "ques": "Explain the role of the **`@forward`** rule in building a centralized index module for a design system. Write an example showing `_index.scss` forwarding components with prefixes.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "// File: components/_index.scss (Entrypoint barrel file)\n// Forwards all members from partials so consumers only need to import one file\n@forward 'buttons';\n@forward 'cards';\n@forward 'alerts' as alert-*;\n\n// File: main.scss (Consumer file)\n@use 'components';\n\n.dashboard-alert {\n  // alert-* prefix was added via the @forward rule\n  @include components.alert-warning;\n}"
+    },
+    "explanation": "`@forward` re-exports members from multiple partials through a single entry point (such as `_index.scss`), allowing consumers to load an entire suite with a single `@use`."
+  },
+  {
+    "title": "Using Built-in Sass Modules",
+    "ques": "Demonstrate the use of Sass built-in modules (**`sass:math`**, **`sass:color`**, and **`sass:string`**) using `@use`.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "@use 'sass:math';\n@use 'sass:color';\n@use 'sass:string';\n\n$base-color: #3b82f6;\n\n.badge {\n  // Built-in color adjustment replacing legacy lighten/darken\n  background-color: color.adjust($base-color, $lightness: 20%);\n  border: 1px solid color.adjust($base-color, $lightness: -10%);\n\n  // Built-in math calculation\n  padding: math.div(12px, 2) math.clamp(8px, 16px, 24px);\n\n  // Built-in string manipulation\n  &::before {\n    content: string.to-upper-case('new');\n  }\n}"
+    },
+    "explanation": "Built-in modules like `sass:math` and `sass:color` provide modern mathematical functions (`math.div`, `math.clamp`) and color manipulation without relying on deprecated global functions."
+  }
+]

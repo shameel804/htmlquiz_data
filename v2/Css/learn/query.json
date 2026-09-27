@@ -1,0 +1,159 @@
+{
+    "id": "learn_css_query",
+    "topicId": "query",
+    "topicTitle": "CSS Media Queries",
+    "description": "Master responsive design, breakpoints, mobile-first, dark mode, and container queries.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "css_query_1",
+            "type": "content",
+            "title": "Welcome to Media Queries",
+            "content": "# Media Queries & Responsive Design 📱💻\n\nWebsites today are viewed on everything from tiny smartwatches and mobile phones to 4K widescreen monitors. **Responsive Web Design (RWD)** ensures your layout adapts seamlessly to any screen size.\n\n## What you'll master:\n- 📱 **The Viewport Meta Tag** - Enabling mobile responsive rendering\n- 📏 **Media Query Syntax** - Min-width, max-width, and modern range syntax\n- 🎯 **Standard Breakpoints** - Mobile, tablet, desktop, and ultra-wide\n- 🥇 **Mobile-First Philosophy** - Progressive enhancement vs desktop-down\n- 🌗 **User Preference Queries** - Dark mode (`prefers-color-scheme`)\n- 📦 **Container Queries (@container)** - Next-gen component-based responsiveness"
+        },
+        {
+            "id": "css_query_2",
+            "type": "content",
+            "title": "The Mandatory Viewport Meta Tag",
+            "content": "# The Viewport Meta Tag 📱\n\nWithout this single tag in your `<head>`, mobile browsers assume your website was built in 2002 for desktops, shrinking the entire page to fit a 980px virtual window!\n\n```html_not\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n```\n\n## Attribute Breakdown:\n- `width=device-width`: Sets the width of the screen in CSS pixels matching the physical device width.\n- `initial-scale=1.0`: Sets the initial 1:1 zoom ratio when page loads."
+        },
+        {
+            "id": "css_query_3",
+            "type": "content",
+            "title": "Media Query Syntax",
+            "content": "# Media Query Syntax 📝\n\nA media query consists of a media type and one or more conditions (media features):\n\n```css_not\n@media screen and (min-width: 768px) {\n  /* CSS rules here only apply if viewport is 768px or wider! */\n  .sidebar {\n    display: block;\n  }\n}\n```\n\n## Media Types:\n- `all`: Suitable for all devices (default).\n- `screen`: Computer screens, tablets, smartphones.\n- `print`: Print preview mode and printer output."
+        },
+        {
+            "id": "css_query_4",
+            "type": "content",
+            "title": "Modern Range Syntax",
+            "content": "# Modern Media Query Range Syntax 🚀\n\nModern CSS supports mathematical comparison operators (`>=`, `<=`, `<`, `>`), which are far more intuitive than legacy `min-width`/`max-width`:\n\n```css_not\n/* Traditional Syntax */\n@media (min-width: 768px) and (max-width: 1024px) {\n  .nav { padding: 12px; }\n}\n\n/* Modern Range Syntax (Clean & Intuitive!) */\n@media (768px <= width <= 1024px) {\n  .nav { padding: 12px; }\n}\n\n@media (width >= 1200px) {\n  .container { max-width: 1140px; }\n}\n```"
+        },
+        {
+            "id": "css_query_quiz_1",
+            "type": "quiz",
+            "title": "Media Query Basics Quiz",
+            "content": "Test your media query knowledge.",
+            "quizQuestion": "What happens if the viewport meta tag is missing on mobile devices?",
+            "quizOptions": [
+                "Mobile browsers display an error popup",
+                "Mobile browsers shrink the desktop layout into a 980px virtual window",
+                "All CSS stylesheets are ignored",
+                "Fonts scale up to 48px automatically"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_query_5",
+            "type": "content",
+            "title": "Mobile-First vs Desktop-First",
+            "content": "# Mobile-First vs Desktop-First 🥇\n\n## 1. Mobile-First (Industry Best Practice):\nWrite base styles for small mobile screens first. Use `min-width` queries to progressively add complexity as screens grow wider:\n\n```css_not\n/* Base: Single column mobile layout */\n.grid {\n  display: grid;\n  grid-template-columns: 1fr;\n}\n\n/* Tablet (768px+) */\n@media (min-width: 768px) {\n  .grid { grid-template-columns: 1fr 1fr; }\n}\n\n/* Desktop (1024px+) */\n@media (min-width: 1024px) {\n  .grid { grid-template-columns: repeat(4, 1fr); }\n}\n```\n\nMobile devices have less CPU power; mobile-first ensures they don't have to evaluate and override heavy desktop CSS rules!"
+        },
+        {
+            "id": "css_query_6",
+            "type": "content",
+            "title": "Standard Industry Breakpoints",
+            "content": "# Standard Industry Breakpoints 📐\n\nWhile you should ideally let your content dictate breakpoints, these standard device ranges are universal across Tailwind, Bootstrap, and major design systems:\n\n| Breakpoint | Minimum Width | Device Category |\n| :--- | :--- | :--- |\n| `sm` | `640px` (or `576px`) | Large phones, landscape mobile |\n| `md` | `768px` | Tablets (iPad portrait) |\n| `lg` | `1024px` (or `992px`) | Laptops & tablet landscape |\n| `xl` | `1280px` (or `1200px`) | Standard Desktop monitors |\n| `2xl` | `1536px` (or `1400px`) | Large Widescreen monitors |"
+        },
+        {
+            "id": "css_query_7",
+            "type": "content",
+            "title": "Responsive Navigation Pattern",
+            "content": "# Responsive Navigation: Hamburger to Desktop Bar 🍔\n\n```html_not\n<nav class=\"navbar\">\n  <button class=\"hamburger-btn\">☰</button>\n  <ul class=\"nav-links\">\n    <li><a href=\"/\">Home</a></li>\n    <li><a href=\"/courses\">Courses</a></li>\n    <li><a href=\"/about\">About</a></li>\n  </ul>\n</nav>\n```\n\n```css_not\n/* Mobile default: Hide desktop links, show hamburger */\n.hamburger-btn { display: block; }\n.nav-links { display: none; }\n\n/* Desktop screen (768px+) */\n@media (min-width: 768px) {\n  .hamburger-btn { display: none; }\n  .nav-links {\n    display: flex;\n    gap: 24px;\n    list-style: none;\n  }\n}\n```"
+        },
+        {
+            "id": "css_query_8",
+            "type": "content",
+            "title": "Dark Mode with prefers-color-scheme",
+            "content": "# Dark Mode with `prefers-color-scheme` 🌗\n\nDetect whether the user has Dark Mode enabled in their operating system settings:\n\n```css_not\n:root {\n  --bg-color: #ffffff;\n  --text-color: #0f172a;\n  --card-bg: #f8fafc;\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n    --bg-color: #0f172a;\n    --text-color: #f8fafc;\n    --card-bg: #1e293b;\n  }\n}\n\nbody {\n  background-color: var(--bg-color);\n  color: var(--text-color);\n}\n```"
+        },
+        {
+            "id": "css_query_quiz_2",
+            "type": "quiz",
+            "title": "Dark Mode Quiz",
+            "content": "Test your knowledge of system queries.",
+            "quizQuestion": "Which media query detects if the user has Dark Mode enabled on their device?",
+            "quizOptions": [
+                "@media (theme: dark)",
+                "@media (prefers-color-scheme: dark)",
+                "@media (dark-mode: on)",
+                "@media (color-mode: night)"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_query_9",
+            "type": "content",
+            "title": "Device Orientation: Portrait vs Landscape",
+            "content": "# Orientation: Portrait vs Landscape 🔄\n\nDetect whether device viewport height exceeds its width:\n\n```css_not\n@media (orientation: landscape) {\n  /* Applies when phone is turned sideways or on wide desktop */\n  .hero-banner {\n    min-height: 50vh;\n  }\n}\n\n@media (orientation: portrait) {\n  .hero-banner {\n    min-height: 100vh;\n  }\n}\n```"
+        },
+        {
+            "id": "css_query_10",
+            "type": "content",
+            "title": "Print Stylesheets (@media print)",
+            "content": "# Print Stylesheets (`@media print`) 🖨️\n\nFormat web pages for physical printing or PDF exports:\n\n```css_not\n@media print {\n  /* Hide interactive elements not needed on paper */\n  nav, footer, .sidebar, .ads, button {\n    display: none !important;\n  }\n\n  body {\n    color: #000000;\n    background: #ffffff;\n    font-size: 12pt;\n  }\n\n  /* Display URL next to links so readers know where links point */\n  a[href]::after {\n    content: \" (\" attr(href) \")\";\n  }\n}\n```"
+        },
+        {
+            "id": "css_query_11",
+            "type": "content",
+            "title": "Container Queries: The RWD Revolution",
+            "content": "# The Revolution: Container Queries (`@container`) 📦\n\nTraditional media queries check the **browser viewport**. But what if a component sits in a narrow sidebar on desktop? Viewport queries fail because the screen is wide, but the component's parent container is narrow!\n\n**Container Queries** allow a component to style itself based on the width of its **parent container**:\n\n```css_not\n/* 1. Define container context on the parent */\n.sidebar-wrapper, .main-wrapper {\n  container-type: inline-size;\n  container-name: card-container;\n}\n\n/* 2. Style the card based on container width! */\n@container card-container (min-width: 400px) {\n  .card {\n    display: flex; /* Horizontal layout when container has room! */\n  }\n}\n```"
+        },
+        {
+            "id": "css_query_12",
+            "type": "content",
+            "title": "Container Query Units (cqw, cqh)",
+            "content": "# Container Query Units (`cqw`, `cqh`) 📏\n\nJust like `vw` represents 1% of the viewport width, Container Query units represent percentages of the parent container:\n\n- `1cqw`: 1% of container's inline width.\n- `1cqh`: 1% of container's height.\n\n```css_not\n.widget-title {\n  /* Scales typography based on parent widget width, not full screen! */\n  font-size: clamp(1rem, 5cqw, 2rem);\n}\n```"
+        },
+        {
+            "id": "css_query_quiz_3",
+            "type": "quiz",
+            "title": "Container Queries Quiz",
+            "content": "Test your next-gen CSS knowledge.",
+            "quizQuestion": "What is the key advantage of Container Queries (@container) over Viewport Media Queries (@media)?",
+            "quizOptions": [
+                "They run on the GPU",
+                "They adapt components based on their parent container's width instead of full screen width",
+                "They only work on mobile devices",
+                "They replace HTML tags"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_query_13",
+            "type": "content",
+            "title": "Testing Responsiveness in DevTools",
+            "content": "# Testing Responsiveness in Chrome/Edge DevTools 🛠️\n\nNever resize your browser window manually to test mobile screens!\n1. Press `F12` (or `Cmd + Option + I` on Mac) to open DevTools.\n2. Click the **Device Toolbar icon** (`Cmd + Shift + M`).\n3. Select presets (iPhone 14, iPad, Galaxy S20) or choose \"Responsive\" to drag dimensions.\n4. Toggle network throttling to \"Fast 3G\" to test mobile loading speeds!"
+        },
+        {
+            "id": "css_query_14",
+            "type": "content",
+            "title": "Responsive Images and Videos",
+            "content": "# Responsive Images & Aspect Ratio 📐\n\nPrevent images and videos from ever breaking page boundaries:\n\n```css_not\nimg, video {\n  max-width: 100%;\n  height: auto;\n  display: block;\n}\n\n/* Maintain modern 16:9 aspect ratio containers */\n.video-wrapper {\n  aspect-ratio: 16 / 9;\n  width: 100%;\n}\n```"
+        },
+        {
+            "id": "css_query_15",
+            "type": "content",
+            "title": "Feature Queries with @supports",
+            "content": "# Feature Queries with `@supports` 🕵️\n\nDetect if a user's browser supports modern CSS features before applying them:\n\n```css_not\n/* Fallback for older browsers */\n.gallery {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n/* Progressive enhancement for modern browsers */\n@supports (display: grid) {\n  .gallery {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n  }\n}\n```"
+        },
+        {
+            "id": "css_query_16",
+            "type": "content",
+            "title": "Common Responsive Design Pitfalls",
+            "content": "# Responsive Design Pitfalls to Avoid ⚠️\n\n1. ❌ **Fixed pixel widths (`width: 1200px`):** Guarantees horizontal scrollbars on phones. Use `max-width: 1200px; width: 100%;`.\n2. ❌ **Hiding critical content on mobile:** Mobile users expect the exact same functionality as desktop users. Reorganize with accordions or tabs instead of deleting features.\n3. ❌ **Tiny touch targets:** Buttons and interactive links must be at least `44px by 44px` on mobile for comfortable tapping."
+        },
+        {
+            "id": "css_query_17",
+            "type": "content",
+            "title": "Real-World Project: Responsive Hero Section",
+            "content": "# Real-World: Full Responsive Hero Section 📱💻\n\n```html_not\n<section class=\"hero\">\n  <div class=\"hero-content\">\n    <h1>Supercharge Your Code</h1>\n    <p>The interactive platform for web developers.</p>\n    <div class=\"actions\">\n      <button class=\"btn primary\">Start Free</button>\n      <button class=\"btn secondary\">View Demo</button>\n    </div>\n  </div>\n</section>\n```\n\n```css_not\n.hero {\n  padding: 40px 20px;\n  text-align: center;\n}\n\n.actions {\n  display: flex;\n  flex-direction: column; /* Stacked buttons on mobile */\n  gap: 12px;\n  margin-top: 24px;\n}\n\n/* Tablet & Desktop */\n@media (min-width: 768px) {\n  .hero {\n    padding: 100px 40px;\n  }\n  .hero h1 {\n    font-size: 3.5rem;\n  }\n  .actions {\n    flex-direction: row; /* Side-by-side buttons on desktop */\n    justify-content: center;\n  }\n}\n```"
+        },
+        {
+            "id": "css_query_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Media Queries Mastered! 🌟\n\nYou now possess the architectural skills to build fluid, adaptive experiences across all hardware!\n\n## Key Takeaways:\n- ✅ **Viewport Meta:** Mandatory tag for mobile responsive rendering.\n- ✅ **Mobile-First:** Write clean mobile styles, scale up with `min-width`.\n- ✅ **Range Syntax:** Use modern `@media (768px <= width <= 1024px)`.\n- ✅ **User Preferences:** `prefers-color-scheme: dark` and `prefers-reduced-motion`.\n- ✅ **Container Queries:** `@container` adapts components based on parent container width.\n\n## Up Next:\nIn the next module, explore **CSS Pseudo-Classes & Pseudo-Elements (:hover, :first-child, ::before, ::after)**! 🚀"
+        }
+    ]
+}

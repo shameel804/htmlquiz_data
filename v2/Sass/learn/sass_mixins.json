@@ -1,0 +1,159 @@
+{
+    "id": "learn_sass_mixins",
+    "topicId": "sass_mixins",
+    "topicTitle": "Mixins & Functions",
+    "description": "Master Sass mixins and functions: @mixin, @include, arguments, defaults, @content blocks, and custom functions with @return.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "sass_m_1",
+            "type": "content",
+            "title": "Mixins & Functions Overview",
+            "content": "# Mixins & Functions in Sass ⚙️🧪\n\nMixins and functions allow you to write reusable chunks of code, preventing repetition and keeping your styling DRY (Don't Repeat Yourself).\n\n## Key Difference Between Mixin & Function\n\n| Feature | Mixin (`@mixin`) | Function (`@function`) |\n|---|---|---|\n| **Output** | Emits CSS rules and properties | Calculates and **returns a single value** |\n| **Invocation** | `@include mixin-name;` | Used anywhere a CSS value is expected: `func()` |\n| **Content Blocks**| Supports `@content` blocks | Does not support `@content` |\n| **Primary Role** | Reusable style templates & vendors | Math, color calculations, unit conversions |"
+        },
+        {
+            "id": "sass_m_2",
+            "type": "content",
+            "title": "Defining & Including Mixins",
+            "content": "# Defining & Including Mixins 🧱\n\nDefine a mixin with the `@mixin` directive, and include it anywhere with `@include`.\n\n```scss_not\n// 1. Define the mixin\n@mixin flex-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n// 2. Include the mixin\n.hero-banner {\n  @include flex-center;\n  height: 400px;\n  background-color: #1e1b4b;\n}\n\n.icon-wrapper {\n  @include flex-center;\n  width: 48px;\n  height: 48px;\n  border-radius: 50%;\n}\n```\n\n## Compiles To:\n```css_not\n.hero-banner { display: flex; justify-content: center; align-items: center; height: 400px; background-color: #1e1b4b; }\n.icon-wrapper { display: flex; justify-content: center; align-items: center; width: 48px; height: 48px; border-radius: 50%; }\n```"
+        },
+        {
+            "id": "sass_m_3",
+            "type": "content",
+            "title": "Passing Arguments to Mixins",
+            "content": "# Passing Arguments to Mixins 🎛️\n\nMixins become truly powerful when parameterized with arguments.\n\n```scss_not\n@mixin square($size) {\n  width: $size;\n  height: $size;\n}\n\n@mixin box-border($color, $width) {\n  border: $width solid $color;\n}\n\n.avatar {\n  @include square(64px);\n  @include box-border(#6366f1, 2px);\n  border-radius: 50%;\n}\n```\n\nArguments can be numbers, colors, strings, or any valid Sass data type."
+        },
+        {
+            "id": "sass_m_4",
+            "type": "content",
+            "title": "Default & Keyword Arguments",
+            "content": "# Default Values & Keyword Arguments 🎯\n\nYou can provide fallback default values for arguments. If the caller omits an argument, the default is used.\n\n## 1. Setting Defaults\n\n```scss_not\n@mixin button-style($bg-color: #3b82f6, $radius: 6px, $padding: 10px 20px) {\n  background-color: $bg-color;\n  border-radius: $radius;\n  padding: $padding;\n  color: white;\n  border: none;\n}\n\n// Uses all defaults\n.btn-default {\n  @include button-style;\n}\n\n// 2. Keyword Arguments: override only $radius without changing $bg-color\n.btn-pill {\n  @include button-style($radius: 9999px);\n}\n```\n\n> ⚡ **Advantage:** Keyword arguments eliminate the need to pass dummy `null` placeholders for intermediate parameters!"
+        },
+        {
+            "id": "sass_m_quiz_1",
+            "type": "quiz",
+            "title": "Mixin Arguments Check",
+            "content": "Test your knowledge of Sass mixin arguments!",
+            "quizQuestion": "What is the primary benefit of using keyword arguments when calling a mixin?",
+            "quizOptions": [
+                "It makes the compiled CSS run faster",
+                "It allows you to specify arguments in any order and skip ones with default values",
+                "It automatically converts pixel values to rem",
+                "It makes the mixin globally scoped"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "sass_m_6",
+            "type": "content",
+            "title": "Variable Arguments (Rest Arguments)",
+            "content": "# Variable Arguments: `...` (Rest Parameters) 📦\n\nSometimes you don't know how many arguments a mixin might receive (e.g. multiple `box-shadow` or `transition` values).\n\n```scss_not\n@mixin box-shadow($shadows...) {\n  -webkit-box-shadow: $shadows;\n  box-shadow: $shadows;\n}\n\n.card {\n  // Pass multiple comma-separated shadows\n  @include box-shadow(\n    0 1px 3px rgba(0, 0, 0, 0.12),\n    0 1px 2px rgba(0, 0, 0, 0.24)\n  );\n}\n\n.complex-button {\n  @include box-shadow(0 0 10px #6366f1, 0 0 20px #a855f7, inset 0 0 5px white);\n}\n```"
+        },
+        {
+            "id": "sass_m_7",
+            "type": "content",
+            "title": "Passing Content Blocks with @content",
+            "content": "# Passing Content Blocks with `@content` 📦\n\nThe `@content` directive lets you pass an entire block of arbitrary CSS styles into a mixin.\n\n```scss_not\n@mixin hover-focus {\n  &:hover,\n  &:focus-visible {\n    @content;\n  }\n}\n\n.nav-link {\n  color: #64748b;\n  text-decoration: none;\n\n  // Pass custom styling into @content\n  @include hover-focus {\n    color: #4f46e5;\n    text-decoration: underline;\n  }\n}\n```\n\n## Compiles To:\n```css_not\n.nav-link { color: #64748b; text-decoration: none; }\n.nav-link:hover, .nav-link:focus-visible { color: #4f46e5; text-decoration: underline; }\n```"
+        },
+        {
+            "id": "sass_m_8",
+            "type": "content",
+            "title": "Responsive Media Query Mixins",
+            "content": "# Killer Mixin Pattern: Responsive Breakpoints 📱💻\n\nCombine `@content` with maps to create an intuitive, bulletproof media query manager:\n\n```scss_not\n$breakpoints: (\n  'sm': 576px,\n  'md': 768px,\n  'lg': 992px,\n  'xl': 1200px\n);\n\n@mixin respond-to($breakpoint) {\n  $raw-size: map-get($breakpoints, $breakpoint);\n  @if $raw-size {\n    @media (min-width: $raw-size) {\n      @content;\n    }\n  } @else {\n    @error \"Unknown breakpoint: #{$breakpoint}!\";\n  }\n}\n\n// Usage in components\n.sidebar {\n  display: none;\n\n  @include respond-to('md') {\n    display: block;\n    width: 250px;\n  }\n}\n```"
+        },
+        {
+            "id": "sass_m_quiz_2",
+            "type": "quiz",
+            "title": "@content Directive Check",
+            "content": "Test your understanding of the `@content` directive!",
+            "quizQuestion": "What does the `@content` directive inside a mixin do?",
+            "quizOptions": [
+                "It imports external HTML content from an API",
+                "It acts as a placeholder where a block of styles passed into `@include` will be injected",
+                "It sets the CSS `content` property for pseudo-elements",
+                "It renders the text of an element in uppercase"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "sass_m_10",
+            "type": "content",
+            "title": "Custom Functions with @function & @return",
+            "content": "# Custom Functions in Sass 🧪\n\nFunctions are defined with `@function` and must return a value using `@return`.\n\n```scss_not\n@use 'sass:math';\n\n// Convert pixels to rem units based on 16px root\n@function rem($pixels, $base: 16px) {\n  @return math.div($pixels, $base) * 1rem;\n}\n\nh1 {\n  font-size: rem(32px); // Returns 2rem\n  margin-bottom: rem(16px); // Returns 1rem\n}\n\n.card {\n  padding: rem(24px); // Returns 1.5rem\n}\n```\n\n> ⚡ **Power of Functions:** If you ever change `$base: 14px`, your entire typography and spacing scale recalculates instantly!"
+        },
+        {
+            "id": "sass_m_11",
+            "type": "content",
+            "title": "Color Contrast & Accessibility Function",
+            "content": "# Advanced Function: Dynamic Text Contrast 🎨\n\nAutomatically choose black or white text depending on background luminance:\n\n```scss_not\n@use 'sass:color';\n\n@function contrast-color($bg-color) {\n  // If lightness is greater than 55%, use dark text; otherwise white\n  @if color.channel($bg-color, 'lightness', $space: hsl) > 55% {\n    @return #0f172a;\n  } @else {\n    @return #ffffff;\n  }\n}\n\n.btn-sunshine {\n  $bg: #facc15; // Bright yellow\n  background-color: $bg;\n  color: contrast-color($bg); // Automatically selects #0f172a!\n}\n\n.btn-midnight {\n  $bg: #1e1b4b; // Deep purple\n  background-color: $bg;\n  color: contrast-color($bg); // Automatically selects #ffffff!\n}\n```"
+        },
+        {
+            "id": "sass_m_12",
+            "type": "content",
+            "title": "Type Checking & Guards in Functions",
+            "content": "# Defensive Functions with Type Checking 🛡️\n\nUse `type-of()` and `@error` to validate inputs before performing calculations:\n\n```scss_not\n@use 'sass:math';\n\n@function em($pixels, $base: 16px) {\n  @if type-of($pixels) != 'number' {\n    @error \"The argument $pixels must be a number! Got #{type-of($pixels)}.\";\n  }\n  \n  // Strip units if needed\n  @if not math.is-unitless($pixels) {\n    $pixels: math.div($pixels, ($pixels * 0 + 1));\n  }\n  \n  @return math.div($pixels, 16) * 1em;\n}\n```"
+        },
+        {
+            "id": "sass_m_13",
+            "type": "content",
+            "title": "Mixin vs Function: Architectural Guidelines",
+            "content": "# Best Practice: When to Use Mixin vs Function ⚖️\n\nFollow these architectural guidelines when designing stylesheets:\n\n## Choose `@mixin` When:\n\n- You need to output multiple CSS properties (e.g. `flex-center`, `card-reset`).\n- You want to wrap selectors in media queries or pseudo-classes (`@content`).\n- You need vendor prefixes (`-webkit-`, `-moz-`).\n\n## Choose `@function` When:\n\n- You need to compute a single value (dimensions, colors, percentages, strings).\n- You are doing mathematical unit conversions (`rem()`, `em()`, `strip-unit()`).\n- You need dynamic color logic (`contrast-color()`, `tint()`)."
+        },
+        {
+            "id": "sass_m_14",
+            "type": "content",
+            "title": "Popular Mixin: Text Truncation",
+            "content": "# Practical Mixin: Single & Multi-Line Truncate ✂️\n\nA staple mixin for every front-end developer toolkit:\n\n```scss_not\n// Single-line ellipsis truncate\n@mixin truncate {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\n// Multi-line line-clamp mixin\n@mixin line-clamp($lines: 2) {\n  display: -webkit-box;\n  -webkit-line-clamp: $lines;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}\n\n.card-title {\n  @include truncate;\n}\n\n.card-summary {\n  @include line-clamp(3);\n}\n```"
+        },
+        {
+            "id": "sass_m_15",
+            "type": "content",
+            "title": "Popular Mixin: Aspect Ratio & Absolute Overlay",
+            "content": "# Practical Mixins: Positioning & Overlays 📐\n\nPositioning absolute backdrops and floating overlays:\n\n```scss_not\n// Full cover absolute overlay\n@mixin absolute-cover {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n}\n\n// Centering with absolute transform\n@mixin absolute-center {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n\n.modal-backdrop {\n  @include absolute-cover;\n  background-color: rgba(0, 0, 0, 0.5);\n  backdrop-filter: blur(4px);\n}\n\n.modal-dialog {\n  @include absolute-center;\n  width: 90%;\n  max-width: 500px;\n}\n```"
+        },
+        {
+            "id": "sass_m_16",
+            "type": "content",
+            "title": "Popular Mixin: Custom Scrollbars",
+            "content": "# Practical Mixin: Cross-Browser Scrollbars 📜\n\nStyle modern WebKit and Firefox scrollbars consistently:\n\n```scss_not\n@mixin custom-scrollbar($width: 8px, $thumb-color: #6366f1, $track-color: #f1f5f9) {\n  // Firefox\n  scrollbar-width: thin;\n  scrollbar-color: $thumb-color $track-color;\n\n  // WebKit (Chrome, Safari, Edge)\n  &::-webkit-scrollbar {\n    width: $width;\n    height: $width;\n  }\n\n  &::-webkit-scrollbar-track {\n    background: $track-color;\n  }\n\n  &::-webkit-scrollbar-thumb {\n    background-color: $thumb-color;\n    border-radius: 9999px;\n    border: 2px solid $track-color;\n  }\n}\n\n.chat-history {\n  @include custom-scrollbar(6px, #94a3b8, #0f172a);\n  overflow-y: auto;\n  max-height: 400px;\n}\n```"
+        },
+        {
+            "id": "sass_m_17",
+            "type": "content",
+            "title": "Real-World Component: Interactive Button System",
+            "content": "# Production UI: The Complete Button Mixin Suite 🔘\n\n```scss_not\n@use 'sass:color';\n\n@mixin button-variant($bg-color, $text-color: #ffffff) {\n  background-color: $bg-color;\n  color: $text-color;\n  border: 1px solid transparent;\n  padding: 0.625rem 1.25rem;\n  font-weight: 600;\n  border-radius: 0.5rem;\n  cursor: pointer;\n  transition: all 0.2s ease-in-out;\n\n  &:hover {\n    background-color: color.adjust($bg-color, $lightness: -8%);\n    box-shadow: 0 4px 12px color.change($bg-color, $alpha: 0.35);\n  }\n\n  &:active {\n    transform: scale(0.98);\n  }\n\n  &:focus-visible {\n    outline: none;\n    box-shadow: 0 0 0 3px color.change($bg-color, $alpha: 0.4);\n  }\n}\n\n.btn-primary { @include button-variant(#4f46e5); }\n.btn-success { @include button-variant(#10b981); }\n.btn-danger  { @include button-variant(#ef4444); }\n```"
+        },
+        {
+            "id": "sass_m_quiz_3",
+            "type": "quiz",
+            "title": "Function vs Mixin Quiz",
+            "content": "Test your architectural knowledge of Sass mixins vs functions!",
+            "quizQuestion": "What must a Sass `@function` ALWAYS include to be valid?",
+            "quizOptions": [
+                "An `@include` statement",
+                "A `@return` directive",
+                "A `@content` block",
+                "A media query definition"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "sass_m_19",
+            "type": "content",
+            "title": "Mixin Performance & CSS Bloat Gotcha",
+            "content": "# Mixin Performance: The Code Bloat Trap ⚠️\n\nEvery time you `@include` a mixin without arguments, Sass **duplicates the entire CSS block** in the output!\n\n## The Bloat Problem\n\n```scss_not\n@mixin center-styles { display: flex; align-items: center; justify-content: center; }\n\n// If 100 classes do this:\n.item-1 { @include center-styles; }\n.item-2 { @include center-styles; }\n// ... item-100\n```\n\nThe compiler repeats those 3 lines **100 times** in the CSS bundle! In the next module, you'll learn how `@extend` and `%` placeholders solve this by grouping selectors together."
+        },
+        {
+            "id": "sass_m_20",
+            "type": "content",
+            "title": "Summary: Mixins & Functions",
+            "content": "# Mixins & Functions: Summary 📋\n\n## Key Takeaways\n- **Mixins (`@mixin` / `@include`)**: Emit blocks of CSS properties; parameterized with arguments, defaults, and rest parameters (`...`).\n- **`@content` Directive**: Accepts custom nested style blocks from the caller (ideal for media queries and pseudo-state wrappers).\n- **Functions (`@function` / `@return`)**: Perform math and computations, returning a single CSS value (e.g. `rem(24px)`).\n- **Keyword Arguments**: Call parameters by name (`$radius: 12px`) to skip defaults cleanly.\n\nNext: Discover `@extend`, placeholder selectors `%`, and operators! 🧬"
+        },
+        {
+            "id": "sass_m_21",
+            "type": "content",
+            "title": "Next Steps: Extend & Inheritance",
+            "content": "# Ahead: Extend, Inheritance & Math Operators 🧬\n\nNow let's explore how Sass eliminates code duplication across selectors.\n\n## Topics Ahead:\n- **The `@extend` Directive**: Sharing styles by grouping selectors\n- **Placeholder Selectors (`%`)**: Invisible template classes\n- **Extend vs Mixin**: Performance and bundle size trade-offs\n- **Sass Operators**: Math, equality, and logical operators\n\nLet's master style inheritance! 🚀"
+        }
+    ]
+}

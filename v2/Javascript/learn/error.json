@@ -1,0 +1,159 @@
+{
+    "id": "learn_js_error",
+    "topicId": "error",
+    "topicTitle": "Error Handling & Debugging",
+    "description": "Master try-catch-finally, custom errors, console tools, breakpoints, and debugging.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "js_err_1",
+            "type": "content",
+            "title": "Welcome to Error Handling & Debugging",
+            "content": "# Error Handling & Debugging in JavaScript 🛡️\n\nErrors are an inevitable part of software engineering. Professional developers don't write bug-free code by magic; they write defensive code that anticipates failures, catches errors gracefully, and diagnoses issues using modern debugging tools.\n\n## What you'll master:\n- 💥 **Types of JavaScript Errors** - `TypeError`, `ReferenceError`, `SyntaxError`, and `RangeError`\n- 🛡️ **`try...catch...finally`** - Graceful error recovery and cleanup\n- 🎯 **Throwing Errors** - The `throw` keyword and custom Error classes\n- 🔍 **Console Tools** - `console.table`, `console.time`, `console.warn`, and `console.trace`\n- 🐞 **Browser DevTools Debugging** - Breakpoints, call stacks, and the `debugger` statement"
+        },
+        {
+            "id": "js_err_2",
+            "type": "content",
+            "title": "Standard JavaScript Error Types",
+            "content": "# Standard JavaScript Error Types 💥\n\nJavaScript has built-in error classes that tell you exactly what went wrong:\n\n| Error Type | Cause | Example |\n| :--- | :--- | :--- |\n| `ReferenceError` | Accessing an undeclared variable | `console.log(unknownVar)` |\n| `TypeError` | Performing an invalid operation on a type | `null.toUpperCase()` or `5()` |\n| `SyntaxError` | Code violates JavaScript grammar | `let x = ;` |\n| `RangeError` | Numeric value is out of allowable range | `new Array(-1)` |\n| `URIError` | Malformed URI in `decodeURI()` | `decodeURI('%')` |\n\n<!-- FULL_CODE_START\ntry {\n  null.toUpperCase();\n} catch (e) {\n  console.log(\"Caught expected error type:\", e.name, \"-\", e.message);\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_err_3",
+            "type": "content",
+            "title": "The try...catch Statement",
+            "content": "# The `try...catch` Statement 🛡️\n\nEnclose risky code inside a `try` block. If an error occurs, JavaScript halts execution inside `try` and immediately jumps to `catch`:\n\n```javascript\ntry {\n  const parsedData = JSON.parse(\"Invalid JSON string!\");\n  console.log(\"Parsed:\", parsedData); // Never runs!\n} catch (error) {\n  console.error(\"Failed to parse JSON:\", error.message);\n}\n\nconsole.log(\"Application continues running smoothly without crashing!\");\n```\n\n<!-- FULL_CODE_START\ntry {\n  const parsedData = JSON.parse(\"Invalid JSON string!\");\n  console.log(\"Parsed:\", parsedData);\n} catch (error) {\n  console.log(\"Gracefully caught parsing error:\", error.name, \":\", error.message);\n}\n\nconsole.log(\"App kept running without crashing!\");\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_err_4",
+            "type": "content",
+            "title": "The finally Block",
+            "content": "# The `finally` Block 🧹\n\nThe `finally` block **always executes**, regardless of whether an error was thrown or not! Perfect for closing file handles, stopping loaders, or freeing memory:\n\n```javascript\nlet isLoading = true;\n\ntry {\n  console.log(\"Performing operation...\");\n  throw new Error(\"Disk full\");\n} catch (err) {\n  console.log(\"Handled error:\", err.message);\n} finally {\n  isLoading = false; // Guaranteed to run!\n  console.log(\"Loader stopped. isLoading =\", isLoading);\n}\n```\n\n<!-- FULL_CODE_START\nlet isLoading = true;\n\ntry {\n  console.log(\"Performing operation...\");\n  throw new Error(\"Disk full\");\n} catch (err) {\n  console.log(\"Handled error:\", err.message);\n} finally {\n  isLoading = false;\n  console.log(\"Loader stopped. isLoading =\", isLoading);\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_err_quiz_1",
+            "type": "quiz",
+            "title": "Try Catch Quiz",
+            "content": "Test your error handling basics.",
+            "quizQuestion": "Which block in a try-catch-finally statement is guaranteed to execute regardless of whether an error occurred?",
+            "quizOptions": [
+                "try",
+                "catch",
+                "finally",
+                "recover"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "js_err_5",
+            "type": "content",
+            "title": "Throwing Custom Errors",
+            "content": "# Throwing Errors (`throw`) 🚨\n\nUse the `throw` statement to signal an exceptional condition:\n\n```javascript\nfunction withdrawMoney(accountBalance, amount) {\n  if (typeof amount !== \"number\" || amount <= 0) {\n    throw new TypeError(\"Withdrawal amount must be a positive number.\");\n  }\n  if (amount > accountBalance) {\n    throw new RangeError(\"Insufficient funds for this withdrawal.\");\n  }\n  return accountBalance - amount;\n}\n\ntry {\n  withdrawMoney(100, 150);\n} catch (err) {\n  console.error(`[${err.name}]: ${err.message}`);\n}\n```\n\n<!-- FULL_CODE_START\nfunction withdrawMoney(accountBalance, amount) {\n  if (typeof amount !== \"number\" || amount <= 0) {\n    throw new TypeError(\"Withdrawal amount must be a positive number.\");\n  }\n  if (amount > accountBalance) {\n    throw new RangeError(\"Insufficient funds for this withdrawal.\");\n  }\n  return accountBalance - amount;\n}\n\ntry {\n  withdrawMoney(100, 150);\n} catch (err) {\n  console.log(`Caught [${err.name}]: ${err.message}`);\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_err_6",
+            "type": "content",
+            "title": "Creating Custom Error Classes",
+            "content": "# Creating Custom Error Classes 🏷️\n\nCreate application-specific error types by extending the built-in `Error` class:\n\n```javascript\nclass ValidationError extends Error {\n  constructor(message, field) {\n    super(message);\n    this.name = \"ValidationError\";\n    this.field = field;\n  }\n}\n\ntry {\n  throw new ValidationError(\"Email format is invalid\", \"userEmail\");\n} catch (err) {\n  if (err instanceof ValidationError) {\n    console.log(`Validation failed on field '${err.field}': ${err.message}`);\n  }\n}\n```\n\n<!-- FULL_CODE_START\nclass ValidationError extends Error {\n  constructor(message, field) {\n    super(message);\n    this.name = \"ValidationError\";\n    this.field = field;\n  }\n}\n\ntry {\n  throw new ValidationError(\"Email format is invalid\", \"userEmail\");\n} catch (err) {\n  if (err instanceof ValidationError) {\n    console.log(`Field '${err.field}' error: ${err.message}`);\n  }\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_err_7",
+            "type": "content",
+            "title": "Re-throwing Errors",
+            "content": "# Re-throwing Unhandled Errors 🤾\n\nOnly catch errors you know how to handle. If you encounter an unexpected error, re-throw it so higher-level handlers can manage it:\n\n```javascript\nfunction readConfig(jsonString) {\n  try {\n    return JSON.parse(jsonString);\n  } catch (err) {\n    if (err instanceof SyntaxError) {\n      console.warn(\"Invalid config syntax, returning default config.\");\n      return { theme: \"default\" };\n    }\n    // Re-throw unknown errors!\n    throw err;\n  }\n}\n\nconsole.log(readConfig(\"{ bad json }\"));\n```\n\n<!-- FULL_CODE_START\nfunction readConfig(jsonString) {\n  try {\n    return JSON.parse(jsonString);\n  } catch (err) {\n    if (err instanceof SyntaxError) {\n      console.log(\"SyntaxError caught! Using default config.\");\n      return { theme: \"default\" };\n    }\n    throw err;\n  }\n}\n\nconsole.log(\"Result:\", readConfig(\"{ bad json }\"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_err_8",
+            "type": "content",
+            "title": "Error Causation & Chaining (cause)",
+            "content": "# Error Causation & Chaining (`Error.cause`) 🔗\n\nModern JavaScript allows attaching a `cause` property to preserve the original root error while providing a user-friendly wrapper:\n\n```javascript\ntry {\n  try {\n    JSON.parse(\"invalid\");\n  } catch (lowLevelError) {\n    throw new Error(\"Failed to load user configuration\", { cause: lowLevelError });\n  }\n} catch (wrappedError) {\n  console.log(\"High-level message:\", wrappedError.message);\n  console.log(\"Original root cause:\", wrappedError.cause.message);\n}\n```\n\n<!-- FULL_CODE_START\ntry {\n  try {\n    JSON.parse(\"invalid json string\");\n  } catch (lowLevelError) {\n    throw new Error(\"Failed to load user configuration\", { cause: lowLevelError });\n  }\n} catch (wrappedError) {\n  console.log(\"High-level message:\", wrappedError.message);\n  console.log(\"Original root cause:\", wrappedError.cause.message);\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_err_quiz_2",
+            "type": "quiz",
+            "title": "Error Types Quiz",
+            "content": "Test your error classification knowledge.",
+            "quizQuestion": "What error type is thrown when attempting to call null as a function (e.g. null())?",
+            "quizOptions": [
+                "ReferenceError",
+                "TypeError",
+                "SyntaxError",
+                "RangeError"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_err_9",
+            "type": "content",
+            "title": "Advanced Console Debugging Tools",
+            "content": "# Advanced Console Debugging Tools 🧰\n\nBeyond `console.log`, the `console` object provides powerful inspection methods:\n\n```javascript\n// 1. console.table: Formats arrays of objects into a table!\nconst users = [\n  { id: 1, name: \"Alice\", role: \"Admin\" },\n  { id: 2, name: \"Bob\", role: \"Editor\" }\n];\nconsole.table(users);\n\n// 2. console.time & console.timeEnd: Measures execution time!\nconsole.time(\"Array Operation\");\nlet arr = Array.from({ length: 10000 }, (_, i) => i * 2);\nconsole.timeEnd(\"Array Operation\");\n```\n\n<!-- FULL_CODE_START\nconst users = [\n  { id: 1, name: \"Alice\", role: \"Admin\" },\n  { id: 2, name: \"Bob\", role: \"Editor\" }\n];\nconsole.table(users);\n\nconsole.time(\"Loop 10000\");\nlet sum = 0;\nfor (let i = 0; i < 10000; i++) sum += i;\nconsole.timeEnd(\"Loop 10000\");\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_err_10",
+            "type": "content",
+            "title": "console.assert and console.trace",
+            "content": "# `console.assert` & `console.trace` 🕵️\n\n## 1. `console.assert(condition, message)`:\nLogs an error message **only if the condition is false**:\n```javascript\nconst userAge = 15;\nconsole.assert(userAge >= 18, \"Validation Warning: User is underage!\");\n```\n\n## 2. `console.trace()`:\nPrints a full stack trace showing the exact execution path and function calls that led to that moment:\n```javascript\nfunction stepA() { stepB(); }\nfunction stepB() { console.trace(\"Trace stack history\"); }\nstepA();\n```\n\n<!-- FULL_CODE_START\nfunction stepA() { stepB(); }\nfunction stepB() { console.trace(\"Trace stack history\"); }\nstepA();\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_err_11",
+            "type": "content",
+            "title": "The debugger Statement",
+            "content": "# The `debugger` Statement 🐞\n\nPlacing the `debugger;` keyword inside your code acts as a programmatic breakpoint.\n\n```javascript\nfunction calculateInvoice(items) {\n  let subtotal = 0;\n  for (const item of items) {\n    // If DevTools is open, the browser will FREEZE execution here!\n    debugger;\n    subtotal += item.price;\n  }\n  return subtotal;\n}\n```\n\nWhen DevTools is open:\n1. Browser execution freezes on the line.\n2. You can inspect all in-scope variables in real time.\n3. Step over (`F10`) or step into (`F11`) line by line!"
+        },
+        {
+            "id": "js_err_12",
+            "type": "content",
+            "title": "Browser DevTools Breakpoints",
+            "content": "# Modern DevTools Breakpoints 🛠️\n\nIn Chrome, Edge, Safari, and Firefox DevTools:\n\n1. **Line-of-code Breakpoint:** Click any line number in the Sources/Debugger tab.\n2. **Conditional Breakpoint:** Right-click a line number and add an expression (e.g. `userId === 42`). Execution only pauses when the condition is met!\n3. **DOM Breakpoints:** Right-click any DOM node in Elements -> \"Break on Subtree Modifications\".\n4. **XHR/Fetch Breakpoints:** Pause execution whenever a specific API URL is requested!"
+        },
+        {
+            "id": "js_err_quiz_3",
+            "type": "quiz",
+            "title": "Console Tools Quiz",
+            "content": "Test your debugging tools knowledge.",
+            "quizQuestion": "Which console method prints a message ONLY if a specified test condition evaluates to false?",
+            "quizOptions": [
+                "console.warn()",
+                "console.assert()",
+                "console.error()",
+                "console.trace()"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_err_13",
+            "type": "content",
+            "title": "Global Error Handling in Browsers",
+            "content": "# Global Error Catching in Browsers 🌐\n\nCatch unhandled errors across your entire application to report them to monitoring services (like Sentry or Datadog):\n\n```javascript\n// Catch uncaught runtime exceptions\nwindow.onerror = function(message, source, lineno, colno, error) {\n  console.log(`Global error caught: ${message} at ${source}:${lineno}`);\n  return true; // Prevents default browser error logging\n};\n\n// Catch unhandled Promise rejections\nwindow.addEventListener(\"unhandledrejection\", (event) => {\n  console.warn(\"Unhandled Promise Rejection:\", event.reason);\n});\n```"
+        },
+        {
+            "id": "js_err_14",
+            "type": "content",
+            "title": "Defensive Programming Techniques",
+            "content": "# Defensive Programming Techniques 🛡️\n\nPrevent errors before they occur:\n\n1. **Type Checking:** Verify inputs (`typeof`, `Array.isArray`).\n2. **Optional Chaining:** Use `user?.address?.city` instead of crashing on null.\n3. **Default Values:** Use `??` to supply fallbacks.\n4. **Boundary Checks:** Validate array indices and string lengths.\n\n```javascript\nfunction safeGetFirstItem(arr) {\n  if (!Array.isArray(arr) || arr.length === 0) {\n    return null;\n  }\n  return arr[0];\n}\n```\n\n<!-- FULL_CODE_START\nfunction safeGetFirstItem(arr) {\n  if (!Array.isArray(arr) || arr.length === 0) {\n    return null;\n  }\n  return arr[0];\n}\n\nconsole.log(\"Valid array:\", safeGetFirstItem([10, 20]));\nconsole.log(\"Empty array:\", safeGetFirstItem([]));\nconsole.log(\"Invalid input:\", safeGetFirstItem(null));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_err_15",
+            "type": "content",
+            "title": "Strict Mode ('use strict')",
+            "content": "# Strict Mode (`'use strict'`) 🔒\n\nPlacing `'use strict';` at the top of a file or function enables JavaScript's Strict Mode:\n\n- Eliminates silent errors by converting them into thrown exceptions.\n- Prevents accidental global variables (e.g. `x = 10;` without `let/const` throws an error).\n- Prohibits deleting variables or functions (`delete x` throws error).\n- Disallows duplicate parameter names in functions.\n\n```javascript\n'use strict';\n// typoVar = 10; // ReferenceError: typoVar is not defined!\n```\n\n> 💡 **Notice:** ES6 modules and classes automatically run in Strict Mode by default!"
+        },
+        {
+            "id": "js_err_16",
+            "type": "content",
+            "title": "Memory Leaks and Prevention",
+            "content": "# Avoiding Memory Leaks 🧠\n\nCommon causes of JavaScript memory leaks:\n\n1. **Forgotten Timers:** `setInterval` continuing to run after component unmounts. Always call `clearInterval()`.\n2. **Unremoved Event Listeners:** Always call `removeEventListener()`.\n3. **Detached DOM Nodes:** Storing references to removed DOM elements in JavaScript variables prevents the Garbage Collector from freeing their memory!"
+        },
+        {
+            "id": "js_err_17",
+            "type": "content",
+            "title": "Real-World Component: Safe API Fetcher",
+            "content": "# Real-World: Safe Data Fetcher with Retry 🔄\n\n```javascript\nasync function fetchWithRetry(fn, maxRetries = 3) {\n  for (let attempt = 1; attempt <= maxRetries; attempt++) {\n    try {\n      return await fn();\n    } catch (err) {\n      console.warn(`Attempt ${attempt} failed: ${err.message}`);\n      if (attempt === maxRetries) {\n        throw new Error(`Failed after ${maxRetries} attempts`, { cause: err });\n      }\n    }\n  }\n}\n\n// Demo with simulated unreliable service\nlet tries = 0;\nconst unreliableService = () => new Promise((resolve, reject) => {\n  tries++;\n  tries < 3 ? reject(new Error(\"Network glitch\")) : resolve(\"Connected successfully!\");\n});\n\nfetchWithRetry(unreliableService).then(console.log);\n```\n\n<!-- FULL_CODE_START\nlet tries = 0;\nconst unreliableService = () => new Promise((resolve, reject) => {\n  tries++;\n  tries < 3 ? reject(new Error(\"Network glitch\")) : resolve(\"Connected successfully!\");\n});\n\nasync function fetchWithRetry(fn, maxRetries = 3) {\n  for (let attempt = 1; attempt <= maxRetries; attempt++) {\n    try {\n      return await fn();\n    } catch (err) {\n      console.log(`Attempt ${attempt} failed: ${err.message}`);\n      if (attempt === maxRetries) {\n        throw new Error(`Failed after ${maxRetries} attempts`, { cause: err });\n      }\n    }\n  }\n}\n\nfetchWithRetry(unreliableService).then(res => console.log(\"Final Result:\", res));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_err_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Error Handling Mastered! 🌟\n\nYou now have the skills to build fault-tolerant, resilient, and easily debuggable JavaScript applications!\n\n## Key Takeaways:\n- ✅ **Error Types:** `TypeError`, `ReferenceError`, `SyntaxError`, and `RangeError`.\n- ✅ **`try...catch...finally`:** Handle errors gracefully; `finally` always runs.\n- ✅ **Custom Errors:** Create meaningful errors extending `Error`.\n- ✅ **DevTools:** Use conditional breakpoints and the `debugger` keyword.\n- ✅ **Console Utilities:** `console.table`, `console.time`, and `console.assert`.\n\n## Up Next:\nIn the next module, connect to external services: **JavaScript APIs (Fetch API, Local Storage, and Geolocation)**! 🚀"
+        }
+    ]
+}

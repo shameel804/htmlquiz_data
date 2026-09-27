@@ -1,0 +1,159 @@
+{
+    "id": "learn_html_forms",
+    "topicId": "forms",
+    "topicTitle": "HTML Forms",
+    "description": "Learn form elements, inputs, buttons, and client-side validation.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "html_forms_1",
+            "type": "content",
+            "title": "Introduction to HTML Forms",
+            "content": "# HTML Forms & User Input 📝\n\nForms are the backbone of interactivity on the web. They collect data from users—such as credentials, search terms, payments, and feedback—and transmit it to servers.\n\n## What you'll master:\n- 📋 **The `<form>` Element** - Action, method, and encoding types\n- ⌨️ **Input Controls** - Text, password, email, numbers, dates, and checkboxes\n- 🔘 **Buttons & Submission** - Submit, reset, and custom buttons\n- 🏷️ **Accessible Labelling** - Form accessibility with `<label>` and `<fieldset>`\n- 🛡️ **HTML5 Validation** - Client-side validation without writing complex code"
+        },
+        {
+            "id": "html_forms_2",
+            "type": "content",
+            "title": "The <form> Element Attributes",
+            "content": "# The `<form>` Element Attributes ⚙️\n\nThe `<form>` element acts as a container for all interactive input controls.\n\n```html_not\n<form action=\"/api/register\" method=\"POST\" autocomplete=\"on\">\n  <!-- Input controls go here -->\n</form>\n```\n\n## Critical Attributes:\n1. **`action`**: The destination URL where form data is sent upon submission.\n2. **`method`**: The HTTP method used (`GET` or `POST`).\n   - `GET`: Appends data to the URL as query parameters (`?query=code`). Good for searches.\n   - `POST`: Sends data in the HTTP request body. Mandatory for passwords and sensitive data.\n3. **`enctype`**: Specifies encoding type. Use `multipart/form-data` when uploading files!"
+        },
+        {
+            "id": "html_forms_3",
+            "type": "content",
+            "title": "Labels and Accessibility",
+            "content": "# Form Labels (`<label>`) 🏷️\n\nEvery input field must have an associated `<label>` for accessibility and usability.\n\n## Two Ways to Associate Labels:\n\n### 1. Explicit Association with `for` (Recommended):\n```html_not\n<label for=\"user-email\">Email Address:</label>\n<input type=\"email\" id=\"user-email\" name=\"email\">\n```\n*(The `for` attribute on the label must match the `id` of the input).*\n\n### 2. Implicit Nesting:\n```html_not\n<label>\n  Username:\n  <input type=\"text\" name=\"username\">\n</label>\n```\n\n> 💡 **User Experience Perk:** Clicking the label automatically focuses or toggles the associated input control!"
+        },
+        {
+            "id": "html_forms_4",
+            "type": "content",
+            "title": "Text and Password Inputs",
+            "content": "# Text & Password Inputs 🔑\n\nThe `<input>` tag is the most versatile form element. Its behavior changes based on the `type` attribute.\n\n```html_not\n<label for=\"fname\">First Name:</label>\n<input type=\"text\" id=\"fname\" name=\"firstname\" placeholder=\"Jane\" maxlength=\"30\">\n\n<label for=\"pwd\">Password:</label>\n<input type=\"password\" id=\"pwd\" name=\"password\" placeholder=\"••••••••\">\n```\n\n## Common Attributes:\n- `name`: The parameter key sent in the HTTP request payload.\n- `placeholder`: Temporary hint text visible before user enters input.\n- `value`: Initial or current value of the field.\n- `readonly`: Prevents editing while still submitting the field.\n- `disabled`: Disables input and prevents it from submitting."
+        },
+        {
+            "id": "html_forms_quiz_1",
+            "type": "quiz",
+            "title": "Form Basics Check",
+            "content": "Test your knowledge of form elements.",
+            "quizQuestion": "Which input type hides typed characters for confidential data?",
+            "quizOptions": [
+                "text",
+                "secret",
+                "password",
+                "hidden"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "html_forms_5",
+            "type": "content",
+            "title": "Modern HTML5 Input Types",
+            "content": "# Modern HTML5 Input Types 📱\n\nHTML5 introduced specialized input types that provide native validation and customized mobile keyboards.\n\n```html_not\n<!-- Triggers mobile numeric keypad -->\n<input type=\"tel\" name=\"phone\" placeholder=\"+1 (555) 000-0000\">\n\n<!-- Validates email structure & shows @ on mobile keyboard -->\n<input type=\"email\" name=\"user_email\" required>\n\n<!-- Validates numeric range -->\n<input type=\"number\" name=\"quantity\" min=\"1\" max=\"100\" step=\"1\">\n\n<!-- Native URL formatting check -->\n<input type=\"url\" name=\"portfolio\" placeholder=\"https://example.com\">\n```\n\n> 📱 **Mobile Keyboards:** On smartphones, `<input type=\"email\">` automatically shows the `@` and `.com` keys, while `<input type=\"number\">` brings up the numeric pad!"
+        },
+        {
+            "id": "html_forms_6",
+            "type": "content",
+            "title": "Date, Time, and Color Pickers",
+            "content": "# Pickers: Date, Time & Color 📅\n\nModern browsers render built-in interactive widgets for dates, times, and colors.\n\n```html_not\n<!-- Date picker calendar -->\n<label for=\"bday\">Birthday:</label>\n<input type=\"date\" id=\"bday\" name=\"birthday\" min=\"1900-01-01\" max=\"2026-12-31\">\n\n<!-- Time picker -->\n<label for=\"meeting\">Meeting Time:</label>\n<input type=\"time\" id=\"meeting\" name=\"meeting_time\">\n\n<!-- Color picker widget -->\n<label for=\"theme\">Choose Brand Color:</label>\n<input type=\"color\" id=\"theme\" name=\"theme_color\" value=\"#3b82f6\">\n```"
+        },
+        {
+            "id": "html_forms_7",
+            "type": "content",
+            "title": "Checkboxes and Radio Buttons",
+            "content": "# Checkboxes & Radio Buttons ☑️\n\nUse checkboxes for independent choices, and radio buttons for mutually exclusive options.\n\n## Radio Buttons (Single Selection):\nTo group radio buttons together so only one can be selected, give them the **identical `name` attribute**!\n\n```html_not\n<p>Choose Plan:</p>\n<input type=\"radio\" id=\"free\" name=\"plan\" value=\"free\" checked>\n<label for=\"free\">Free</label>\n\n<input type=\"radio\" id=\"vip\" name=\"plan\" value=\"vip\">\n<label for=\"vip\">VIP</label>\n```\n\n## Checkboxes (Multiple Selections):\n```html_not\n<input type=\"checkbox\" id=\"terms\" name=\"accept_terms\" value=\"yes\" required>\n<label for=\"terms\">I agree to the terms and conditions</label>\n```"
+        },
+        {
+            "id": "html_forms_8",
+            "type": "content",
+            "title": "Dropdowns with <select>",
+            "content": "# Dropdown Menus with `<select>` 🔽\n\nThe `<select>` element creates a dropdown list of options.\n\n```html_not\n<label for=\"country\">Country:</label>\n<select id=\"country\" name=\"country\">\n  <optgroup label=\"North America\">\n    <option value=\"us\">United States</option>\n    <option value=\"ca\">Canada</option>\n  </optgroup>\n  <optgroup label=\"Europe\">\n    <option value=\"uk\" selected>United Kingdom</option>\n    <option value=\"de\">Germany</option>\n  </optgroup>\n</select>\n```\n\n- `<option>`: Defines each selectable item (`value` is sent to server).\n- `<optgroup>`: Groups related options with a category label.\n- `selected`: Attribute to set the default active choice."
+        },
+        {
+            "id": "html_forms_9",
+            "type": "content",
+            "title": "Autocomplete with <datalist>",
+            "content": "# Suggestions with `<datalist>` 💡\n\nThe `<datalist>` element provides an auto-complete suggestion list while still allowing users to enter custom text.\n\n```html_not\n<label for=\"browser-choice\">Choose a Browser:</label>\n<input list=\"browsers\" id=\"browser-choice\" name=\"browser\">\n\n<datalist id=\"browsers\">\n  <option value=\"Chrome\">\n  <option value=\"Firefox\">\n  <option value=\"Safari\">\n  <option value=\"Edge\">\n  <option value=\"Brave\">\n</datalist>\n```\n\n## How It Works:\nThe `list` attribute on the `<input>` must match the `id` of the `<datalist>`. As the user types, matching suggestions appear!"
+        },
+        {
+            "id": "html_forms_quiz_2",
+            "type": "quiz",
+            "title": "Selection Controls Quiz",
+            "content": "Test your understanding of dropdowns and options.",
+            "quizQuestion": "How do you link an <input> element to a <datalist> suggestion element?",
+            "quizOptions": [
+                "Set input's id to match datalist's name",
+                "Set input's list attribute to match datalist's id",
+                "Nest datalist directly inside input",
+                "Use class='datalist' on the input"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_forms_10",
+            "type": "content",
+            "title": "Multi-Line Text with <textarea>",
+            "content": "# Multi-Line Text with `<textarea>` 📄\n\nFor multi-line inputs such as comments, feedback, or messages, use the `<textarea>` element.\n\n```html_not\n<label for=\"bio\">Biography:</label>\n<textarea id=\"bio\" name=\"user_bio\" rows=\"4\" cols=\"50\" placeholder=\"Tell us about yourself...\"></textarea>\n```\n\n## Crucial `<textarea>` Details:\n- Unlike `<input>`, `<textarea>` has both an opening and closing tag!\n- Default content is placed **between** tags: `<textarea>Default text</textarea>`.\n- Attributes `rows` and `cols` define initial visible dimensions in text characters (though CSS is usually preferred for sizing)."
+        },
+        {
+            "id": "html_forms_11",
+            "type": "content",
+            "title": "Buttons and Submission",
+            "content": "# Buttons and Submission 🔘\n\nButtons allow users to trigger actions within forms.\n\n```html_not\n<!-- 1. Submit Button (default type inside a form) -->\n<button type=\"submit\">Submit Registration</button>\n\n<!-- 2. Reset Button (restores form fields to defaults) -->\n<button type=\"reset\">Clear Form</button>\n\n<!-- 3. Standard Action Button (controlled by JavaScript) -->\n<button type=\"button\" onclick=\"calculateTotal()\">Calculate</button>\n```\n\n> ⚠️ **Default Button Warning:** Any `<button>` inside a `<form>` without an explicit `type` attribute defaults to `type=\"submit\"`, which will unexpectedly submit the form when clicked! Always specify `type=\"button\"` for JS buttons."
+        },
+        {
+            "id": "html_forms_12",
+            "type": "content",
+            "title": "Grouping with <fieldset> and <legend>",
+            "content": "# Grouping with `<fieldset>` & `<legend>` 📦\n\nThe `<fieldset>` element visually and semantically groups related controls, and `<legend>` provides a caption.\n\n```html_not\n<fieldset>\n  <legend>Shipping Address</legend>\n  \n  <label for=\"street\">Street:</label>\n  <input type=\"text\" id=\"street\" name=\"street\"><br>\n  \n  <label for=\"zip\">Zip Code:</label>\n  <input type=\"text\" id=\"zip\" name=\"zip\">\n</fieldset>\n```\n\n## Accessibility Impact:\nScreen readers announce the `<legend>` whenever a user navigates to any input control inside the `<fieldset>`, giving full contextual clarity!"
+        },
+        {
+            "id": "html_forms_13",
+            "type": "content",
+            "title": "File Uploads with <input type='file'>",
+            "content": "# File Uploads with `<input type=\"file\">` 📁\n\nAllow users to upload images, documents, or files.\n\n```html_not\n<form action=\"/upload\" method=\"POST\" enctype=\"multipart/form-data\">\n  <label for=\"avatar\">Upload Profile Picture:</label>\n  <input type=\"file\" id=\"avatar\" name=\"avatar\" accept=\"image/png, image/jpeg\" multiple>\n  <button type=\"submit\">Upload</button>\n</form>\n```\n\n## Critical File Upload Rules:\n1. `method` **must** be `POST`.\n2. `enctype` **must** be set to `multipart/form-data`.\n3. `accept` restricts file types (e.g. `image/*`, `.pdf`).\n4. `multiple` allows selecting more than one file."
+        },
+        {
+            "id": "html_forms_14",
+            "type": "content",
+            "title": "HTML5 Native Form Validation",
+            "content": "# Native HTML5 Form Validation 🛡️\n\nHTML5 provides automatic client-side validation without needing JavaScript.\n\n```html_not\n<form>\n  <!-- Required field -->\n  <input type=\"text\" name=\"username\" required>\n  \n  <!-- Min and Max length -->\n  <input type=\"password\" name=\"pwd\" minlength=\"8\" maxlength=\"20\" required>\n  \n  <!-- Number bounds -->\n  <input type=\"number\" name=\"age\" min=\"18\" max=\"99\">\n  \n  <!-- Regex Pattern matching (e.g., 5-digit zip code) -->\n  <input type=\"text\" name=\"zipcode\" pattern=\"[0-9]{5}\" title=\"Enter a 5-digit ZIP code\">\n  \n  <button type=\"submit\">Sign Up</button>\n</form>\n```\n\nWhen a user submits with invalid data, the browser prevents submission and displays a localized validation tooltip!"
+        },
+        {
+            "id": "html_forms_quiz_3",
+            "type": "quiz",
+            "title": "Form Validation Quiz",
+            "content": "Test your validation knowledge.",
+            "quizQuestion": "Which attribute enforces a regular expression format check on text inputs?",
+            "quizOptions": [
+                "regex",
+                "validate",
+                "pattern",
+                "rule"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "html_forms_15",
+            "type": "content",
+            "title": "Styling Validation with CSS",
+            "content": "# Styling Validation with CSS 🎨\n\nCSS provides pseudo-classes to style form elements according to their validation state:\n\n```css_not\n/* Highlights fields when they are valid or invalid */\ninput:valid {\n  border: 2px solid green;\n}\n\ninput:invalid {\n  border: 2px solid red;\n}\n\n/* Highlights required fields */\ninput:required {\n  background-color: #fffbeb;\n}\n\n/* Styles button when disabled */\nbutton:disabled {\n  opacity: 0.5;\n  cursor: not-allowed;\n}\n```"
+        },
+        {
+            "id": "html_forms_16",
+            "type": "content",
+            "title": "Hidden Inputs for State",
+            "content": "# Hidden Inputs (`type=\"hidden\"`) 🕵️\n\nHidden inputs store data that users do not need to see or edit, but must be submitted along with the form.\n\n```html_not\n<form action=\"/checkout\" method=\"POST\">\n  <!-- Hidden metadata -->\n  <input type=\"hidden\" name=\"user_id\" value=\"4821\">\n  <input type=\"hidden\" name=\"session_token\" value=\"abc123xyz\">\n  \n  <button type=\"submit\">Complete Purchase</button>\n</form>\n```\n\n## Typical Use Cases:\n- Security tokens (Anti-CSRF tokens)\n- Database record IDs\n- Analytics tracking parameters\n- Multi-step form step counters"
+        },
+        {
+            "id": "html_forms_17",
+            "type": "content",
+            "title": "Form Security Best Practices",
+            "content": "# Form Security Best Practices 🔒\n\nAlways adhere to these security principles when implementing forms:\n\n1. **Never Trust Client Validation:** HTML5 validation can be bypassed by anyone using DevTools or curl. Always validate thoroughly on the backend server!\n2. **Use HTTPS:** Sensitive information (credentials, credit cards) submitted over plaintext HTTP can be intercepted.\n3. **Use POST for Modifications:** Never send passwords or create/update resources via `GET` requests.\n4. **Implement CSRF Protection:** Use unique anti-CSRF tokens for all state-modifying requests.\n5. **Set `autocomplete=\"off\"` for Sensitive Data:** Protect one-time passwords and credit card security codes."
+        },
+        {
+            "id": "html_forms_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Forms Mastered! 🌟\n\nYou now have complete mastery over user input collection and validation in HTML!\n\n## Key Takeaways:\n- ✅ **Form Anatomy:** `<form>` uses `action`, `method=\"POST\"`, and `enctype` for uploads.\n- ✅ **Accessibility:** Always link `<label for=\"id\">` to its input.\n- ✅ **Input Types:** Utilize `email`, `tel`, `date`, `color`, and `checkbox`.\n- ✅ **Radios:** Group radio buttons using identical `name` values.\n- ✅ **Validation:** Built-in `required`, `pattern`, `minlength`, and `min`/`max`.\n\n## Up Next:\nIn the next module, explore **HTML5 New Features: Semantic tags, multimedia, and the Canvas API**! 🚀"
+        }
+    ]
+}

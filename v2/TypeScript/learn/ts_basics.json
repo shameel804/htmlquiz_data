@@ -1,0 +1,159 @@
+{
+    "id": "learn_ts_basics",
+    "topicId": "ts_basics",
+    "topicTitle": "TypeScript Basics",
+    "description": "Master basic types, type inference, any vs unknown, tuples, and type assertions.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "ts_b_1",
+            "type": "content",
+            "title": "Welcome to TypeScript Basics",
+            "content": "# TypeScript Basics & Primitive Types 🔷\n\nTypeScript is a strongly typed superset of JavaScript that compiles down to plain JavaScript. Developed by Microsoft, it brings compile-time type safety, intelligent autocompletion, and robust refactoring tools to web engineering.\n\n## What you'll master:\n- 🏷️ **Basic Types** - `string`, `number`, `boolean`, `bigint`, `symbol`\n- 🧠 **Type Inference** - How the compiler deduces types automatically\n- 🦺 **`any` vs `unknown`** - The dangers of `any` and the safety of `unknown`\n- 📦 **Arrays & Tuples** - Typed collections and fixed-length pairs\n- ❓ **`null` & `undefined`** - Safe handling with `strictNullChecks`\n- 🔀 **Type Assertions** - The `as` keyword and type casting"
+        },
+        {
+            "id": "ts_b_2",
+            "type": "content",
+            "title": "Why TypeScript? The JavaScript Problem",
+            "content": "# Why TypeScript? 🛡️\n\nIn plain JavaScript, variables can silently change types, leading to catastrophic runtime errors:\n\n```javascript_not\n// Plain JavaScript: No error until user runs code!\nlet user = { name: \"Alice\" };\nuser.toUppercase(); // TypeError: user.toUppercase is not a function (Typo in 'C'!)\n```\n\n## The TypeScript Solution:\nIn TypeScript, errors are caught **immediately at compile time** before your code ever runs in production:\n\n```typescript\nlet username: string = \"Alice\";\nlet age: number = 28;\nlet isSubscribed: boolean = true;\n\nconsole.log(`User: ${username}, Age: ${age}, Active: ${isSubscribed}`);\n```\n\n<!-- FULL_CODE_START\nlet username: string = \"Alice\";\nlet age: number = 28;\nlet isSubscribed: boolean = true;\n\nconsole.log(`User: ${username}, Age: ${age}, Active: ${isSubscribed}`);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_b_3",
+            "type": "content",
+            "title": "Basic Primitive Types",
+            "content": "# The Core Primitive Types 🏷️\n\nTypeScript provides explicit annotations for all JavaScript primitives:\n\n```typescript\n// Explicit type annotations\nconst siteName: string = \"CodeCerebrum\";\nconst rating: number = 4.9;\nconst isVip: boolean = true;\nconst bigId: bigint = 9007199254740991n;\nconst uniqueKey: symbol = Symbol(\"apiKey\");\n\nconsole.log(siteName, rating, isVip);\n```\n\n<!-- FULL_CODE_START\nconst siteName: string = \"CodeCerebrum\";\nconst rating: number = 4.9;\nconst isVip: boolean = true;\n\nconsole.log(\"Site:\", siteName);\nconsole.log(\"Rating:\", rating);\nconsole.log(\"Is VIP:\", isVip);\nFULL_CODE_END -->\n\n> 💡 **Notice:** `number` covers both integers and floating-point numbers."
+        },
+        {
+            "id": "ts_b_4",
+            "type": "content",
+            "title": "Type Inference in Action",
+            "content": "# Type Inference: Less Code, Same Safety 🧠\n\nYou don't need to manually type everything. If you assign a value upon declaration, TypeScript **infers** the type automatically!\n\n```typescript\n// TypeScript infers 'count' is a number\nlet count = 42;\n\n// count = \"forty-two\"; // Error: Type 'string' is not assignable to type 'number'!\ncount += 8;\nconsole.log(\"Count:\", count);\n```\n\n<!-- FULL_CODE_START\nlet count = 42;\ncount += 8;\nconsole.log(\"Inferred number count:\", count);\n\nlet message = \"TypeScript is awesome\";\nconsole.log(\"Inferred string uppercase:\", message.toUpperCase());\nFULL_CODE_END -->\n\n> 🎯 **Best Practice:** Let TypeScript infer simple primitive variables. Add explicit annotations when variables are initialized later or when defining function signatures!"
+        },
+        {
+            "id": "ts_b_quiz_1",
+            "type": "quiz",
+            "title": "Type Inference Quiz",
+            "content": "Test your knowledge of type inference.",
+            "quizQuestion": "What type does TypeScript automatically infer for 'let score = 100;'?",
+            "quizOptions": [
+                "any",
+                "number",
+                "integer",
+                "unknown"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_b_5",
+            "type": "content",
+            "title": "The any Type (Use with Caution!)",
+            "content": "# The `any` Type: Disabling Safety ⚠️\n\n`any` disables all type checking for a variable, effectively turning TypeScript back into plain JavaScript:\n\n```typescript\nlet wildcard: any = \"Hello\";\nwildcard = 100;      // Allowed\nwildcard = [1, 2];   // Allowed\n// wildcard.nonExistentMethod(); // No compile error, but will CRASH at runtime!\nconsole.log(\"Wildcard value:\", wildcard);\n```\n\n<!-- FULL_CODE_START\nlet wildcard: any = \"Hello\";\nwildcard = 100;\nwildcard = { score: 99 };\nconsole.log(\"Wildcard score:\", wildcard.score);\nFULL_CODE_END -->\n\n> 🚨 **Warning:** Avoid `any`! Overusing `any` undermines the entire reason for using TypeScript. Enable `\"noImplicitAny\": true` in your `tsconfig.json`."
+        },
+        {
+            "id": "ts_b_6",
+            "type": "content",
+            "title": "The unknown Type: Type-Safe Any",
+            "content": "# The `unknown` Type: Type-Safe Alternative 🦺\n\n`unknown` represents any value, but unlike `any`, TypeScript **will not let you perform operations on it** until you narrow its type first!\n\n```typescript\nlet userInput: unknown;\nuserInput = \"San Francisco\";\n\n// ❌ Error: Property 'toUpperCase' does not exist on type 'unknown'\n// console.log(userInput.toUpperCase());\n\n// ✅ Safe: Type check (Type Narrowing) first!\nif (typeof userInput === \"string\") {\n  console.log(\"Uppercased:\", userInput.toUpperCase());\n}\n```\n\n<!-- FULL_CODE_START\nlet userInput: unknown = \"San Francisco\";\n\nif (typeof userInput === \"string\") {\n  console.log(\"Narrowed unknown to string:\", userInput.toUpperCase());\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_b_7",
+            "type": "content",
+            "title": "Typed Arrays",
+            "content": "# Typed Arrays 📚\n\nDeclare arrays that strictly enforce the types of their elements:\n\n```typescript\n// Two equivalent syntaxes:\nconst scores: number[] = [95, 82, 88];\nconst cities: Array<string> = [\"Tokyo\", \"London\", \"Paris\"];\n\nscores.push(91); // Valid\n// scores.push(\"invalid\"); // Compile Error: Argument of type 'string' is not assignable to 'number'\n\nconsole.log(\"Scores:\", scores);\nconsole.log(\"Cities:\", cities);\n```\n\n<!-- FULL_CODE_START\nconst scores: number[] = [95, 82, 88];\nconst cities: Array<string> = [\"Tokyo\", \"London\", \"Paris\"];\n\nscores.push(91);\nconsole.log(\"Scores array:\", scores);\nconsole.log(\"Cities array:\", cities);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_b_8",
+            "type": "content",
+            "title": "Tuples: Fixed-Length & Typed Pairs",
+            "content": "# Tuples: Fixed Length & Ordered Types 📦\n\nA **Tuple** is an array with a fixed number of elements where each position has a specific type:\n\n```typescript\n// A tuple of [string, number] representing a key-value pair\nlet httpResponse: [string, number];\n\nhttpResponse = [\"OK\", 200]; // Valid!\n// httpResponse = [200, \"OK\"]; // Error: Types must match exact position!\n\nconsole.log(`Status: ${httpResponse[0]} (Code: ${httpResponse[1]})`);\n```\n\n<!-- FULL_CODE_START\nlet httpResponse: [string, number] = [\"OK\", 200];\nconsole.log(`Status: ${httpResponse[0]} (Code: ${httpResponse[1]})`);\n\n// Destructuring tuples\nconst [statusText, statusCode] = httpResponse;\nconsole.log(`Destructured -> Text: ${statusText}, Code: ${statusCode}`);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_b_quiz_2",
+            "type": "quiz",
+            "title": "Unknown vs Any Quiz",
+            "content": "Test your knowledge of unknown and any.",
+            "quizQuestion": "What is the key difference between 'any' and 'unknown' in TypeScript?",
+            "quizOptions": [
+                "'any' cannot hold numbers",
+                "'unknown' requires type checking/narrowing before performing operations",
+                "'unknown' is deprecated in modern TypeScript",
+                "'any' has block scope whereas 'unknown' is global"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_b_9",
+            "type": "content",
+            "title": "Null and Undefined with strictNullChecks",
+            "content": "# `null` & `undefined` with `strictNullChecks` ❓\n\nIn modern TypeScript projects, `\"strictNullChecks\": true` is enabled by default. This prevents variables from holding `null` or `undefined` unless explicitly declared as a union!\n\n```typescript\nlet activeUser: string | null = \"Alice\";\n\nactiveUser = null; // Valid because of union type!\n\nfunction printLength(text: string | null) {\n  if (text !== null) {\n    console.log(\"Length:\", text.length); // Safe!\n  } else {\n    console.log(\"Text is null\");\n  }\n}\n\nprintLength(\"Hello\");\nprintLength(null);\n```\n\n<!-- FULL_CODE_START\nlet activeUser: string | null = \"Alice\";\nactiveUser = null;\n\nfunction printLength(text: string | null) {\n  if (text !== null) {\n    console.log(\"Length:\", text.length);\n  } else {\n    console.log(\"Text is null\");\n  }\n}\n\nprintLength(\"Hello\");\nprintLength(null);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_b_10",
+            "type": "content",
+            "title": "Type Assertions (as Type)",
+            "content": "# Type Assertions (`as Type`) 🔀\n\nWhen you know more specific information about a value's type than TypeScript does, use a **type assertion**:\n\n```typescript\nconst rawValue: unknown = \"Hello TypeScript\";\n\n// Assert that rawValue is a string\nconst strLength = (rawValue as string).length;\nconsole.log(\"Asserted string length:\", strLength);\n```\n\n<!-- FULL_CODE_START\nconst rawValue: unknown = \"Hello TypeScript\";\nconst strLength = (rawValue as string).length;\nconsole.log(\"Asserted string length:\", strLength);\n\n// Angle-bracket syntax (alternative)\nconst strLength2 = (<string>rawValue).length;\nconsole.log(\"Angle-bracket length:\", strLength2);\nFULL_CODE_END -->\n\n> ⚠️ **Assertion Rule:** Type assertions do **not** perform runtime casting or data conversion. They are purely compile-time hints for the TypeScript type checker!"
+        },
+        {
+            "id": "ts_b_11",
+            "type": "content",
+            "title": "The Non-Null Assertion Operator (!)",
+            "content": "# The Non-Null Assertion Operator (`!`) ❗\n\nPlacing an exclamation mark `!` after an expression asserts that the value is definitely **neither `null` nor `undefined`**:\n\n```typescript\nfunction findElement(id: string): string | null {\n  return id === \"main\" ? \"Container Element\" : null;\n}\n\n// Without !, TypeScript warns that element might be null\nconst element = findElement(\"main\")!; // We assert it's not null!\nconsole.log(\"Element length:\", element.length);\n```\n\n<!-- FULL_CODE_START\nfunction findElement(id: string): string | null {\n  return id === \"main\" ? \"Container Element\" : null;\n}\n\nconst element = findElement(\"main\")!;\nconsole.log(\"Element length:\", element.length);\nFULL_CODE_END -->\n\n> ⚠️ **Caution:** Use `!` only when you are 100% certain the value cannot be null at runtime!"
+        },
+        {
+            "id": "ts_b_12",
+            "type": "content",
+            "title": "Readonly Arrays",
+            "content": "# Readonly Arrays (`ReadonlyArray<T>`) 🔒\n\nPrevent any mutation of an array after creation:\n\n```typescript\nconst constantNumbers: readonly number[] = [1, 2, 3, 4];\n\n// constantNumbers.push(5); // Error: Property 'push' does not exist on type 'readonly number[]'\n// constantNumbers[0] = 99; // Error: Index signature in type 'readonly number[]' only permits reading\n\nconsole.log(\"Readonly array:\", constantNumbers);\n```\n\n<!-- FULL_CODE_START\nconst constantNumbers: readonly number[] = [1, 2, 3, 4];\nconsole.log(\"Readonly array elements:\", constantNumbers.join(\", \"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_b_13",
+            "type": "content",
+            "title": "Literal Types",
+            "content": "# Literal Types 🎯\n\nA literal type represents an exact, specific value rather than any general string or number:\n\n```typescript\n// Only these 3 exact strings are allowed!\nlet direction: \"NORTH\" | \"SOUTH\" | \"EAST\" | \"WEST\";\n\ndirection = \"NORTH\"; // Valid\n// direction = \"UP\"; // Error: Type '\"UP\"' is not assignable to type '\"NORTH\" | \"SOUTH\" | \"EAST\" | \"WEST\"'\n\nconsole.log(\"Valid direction:\", direction);\n```\n\n<!-- FULL_CODE_START\nlet direction: \"NORTH\" | \"SOUTH\" | \"EAST\" | \"WEST\" = \"NORTH\";\nconsole.log(\"Current direction:\", direction);\n\nlet statusCode: 200 | 404 | 500 = 200;\nconsole.log(\"Current HTTP code:\", statusCode);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_b_quiz_3",
+            "type": "quiz",
+            "title": "Type Assertions Quiz",
+            "content": "Test your assertion skills.",
+            "quizQuestion": "Does the type assertion '(val as string)' convert a number to a string at runtime?",
+            "quizOptions": [
+                "Yes, it converts it to string",
+                "No, assertions are purely compile-time hints and do not transform runtime data",
+                "Yes, but only in strict mode",
+                "No, it throws a runtime exception"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_b_14",
+            "type": "content",
+            "title": "Union Types with Primitives",
+            "content": "# Union Types (`|`) 🔀\n\nAllow a variable to accept one of several types using the pipe operator `|`:\n\n```typescript\nlet id: string | number;\n\nid = 101;     // Valid!\nconsole.log(\"Numeric ID:\", id);\n\nid = \"USR-204\"; // Valid!\nconsole.log(\"String ID:\", id);\n```\n\n<!-- FULL_CODE_START\nlet id: string | number;\nid = 101;\nconsole.log(\"Numeric ID:\", id);\n\nid = \"USR-204\";\nconsole.log(\"String ID:\", id);\n\nfunction formatId(identifier: string | number): string {\n  return `ID_${identifier}`;\n}\nconsole.log(\"Formatted:\", formatId(55));\nconsole.log(\"Formatted:\", formatId(\"custom\"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_b_15",
+            "type": "content",
+            "title": "Type Narrowing with typeof",
+            "content": "# Type Narrowing with `typeof` 🔍\n\nWhen a variable is a union (e.g. `string | number`), use `typeof` checks to narrow it down so TypeScript knows which methods are safe to call:\n\n```typescript\nfunction processValue(val: string | number) {\n  if (typeof val === \"string\") {\n    // Inside this block, TypeScript KNOWS val is a string!\n    console.log(\"Uppercase string:\", val.toUpperCase());\n  } else {\n    // Inside this block, TypeScript KNOWS val is a number!\n    console.log(\"Fixed number:\", val.toFixed(2));\n  }\n}\n\nprocessValue(\"developer\");\nprocessValue(42.5678);\n```\n\n<!-- FULL_CODE_START\nfunction processValue(val: string | number) {\n  if (typeof val === \"string\") {\n    console.log(\"Uppercase string:\", val.toUpperCase());\n  } else {\n    console.log(\"Fixed number:\", val.toFixed(2));\n  }\n}\n\nprocessValue(\"developer\");\nprocessValue(42.5678);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_b_16",
+            "type": "content",
+            "title": "The tsconfig.json Overview",
+            "content": "# Understanding `tsconfig.json` ⚙️\n\nThe configuration file for the TypeScript compiler (`tsc`):\n\n```json\n{\n  \"compilerOptions\": {\n    \"target\": \"ES2022\",           /* Target ECMAScript version */\n    \"module\": \"NodeNext\",         /* Module system */\n    \"strict\": true,               /* Enables all strict type-checking options */\n    \"noImplicitAny\": true,        /* Disallow implicit any types */\n    \"strictNullChecks\": true,     /* Strict null handling */\n    \"outDir\": \"./dist\"            /* Output folder for compiled JS */\n  },\n  \"include\": [\"src/**/*\"]\n}\n```"
+        },
+        {
+            "id": "ts_b_17",
+            "type": "content",
+            "title": "Real-World Example: User Registration Model",
+            "content": "# Real-World: Type-Safe User Model 👤\n\n```typescript\ntype UserId = string | number;\n\nfunction createAccount(id: UserId, email: string, isVerified: boolean = false): [UserId, string, boolean] {\n  return [id, email.toLowerCase().trim(), isVerified];\n}\n\nconst newAccount = createAccount(\"USR-891\", \"  ALICE@EXAMPLE.COM \", true);\nconsole.log(\"Created Account Tuple:\", newAccount);\n```\n\n<!-- FULL_CODE_START\ntype UserId = string | number;\n\nfunction createAccount(id: UserId, email: string, isVerified: boolean = false): [UserId, string, boolean] {\n  return [id, email.toLowerCase().trim(), isVerified];\n}\n\nconst newAccount = createAccount(\"USR-891\", \"  ALICE@EXAMPLE.COM \", true);\nconsole.log(\"Account Tuple:\", newAccount);\nconsole.log(\"ID:\", newAccount[0]);\nconsole.log(\"Clean Email:\", newAccount[1]);\nconsole.log(\"Verified:\", newAccount[2]);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_b_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# TypeScript Basics Mastered! 🔷\n\nYou now understand TypeScript's core primitive types, type inference, tuples, and assertions!\n\n## Key Takeaways:\n- ✅ **Primitives:** `string`, `number`, `boolean`, `bigint`, `symbol`.\n- ✅ **Inference:** TypeScript automatically deduces types when variables are initialized.\n- ✅ **Safety:** Prefer `unknown` over `any`; `unknown` requires type checking first.\n- ✅ **Tuples:** Ordered, fixed-length arrays (e.g. `[string, number]`).\n- ✅ **Strict Nulls:** With `strictNullChecks`, explicitly union `string | null`.\n\n## Up Next:\nIn the next module, explore **TypeScript Functions & Object Types (Parameter typing, return values, void, and never)**! 🚀"
+        }
+    ]
+}

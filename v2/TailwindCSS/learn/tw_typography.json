@@ -1,0 +1,159 @@
+{
+    "id": "learn_tw_typography",
+    "topicId": "tw_typography",
+    "topicTitle": "Typography & Colors",
+    "description": "Explore typography and colors in Tailwind CSS, including font families, text sizing, weights, line heights, color palettes, and gradients.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "tw_typography_1",
+            "type": "content",
+            "title": "Typography & Colors Overview",
+            "content": "# Typography & Colors in Tailwind CSS ✍️🎨\n\nTypography and color palettes form the emotional backbone of modern user interfaces. Tailwind CSS ships with an expertly calibrated design system right out of the box.\n\n## What You'll Learn:\n- **Font Families**: `font-sans`, `font-serif`, `font-mono`\n- **Type Scale**: Sizing from `text-xs` up to `text-9xl`\n- **Font Weights**: `font-thin` (100) to `font-black` (900)\n- **Vertical Rhythm & Tracking**: `leading-*` (line-height) and `tracking-*` (letter-spacing)\n- **Text Alignment & Formatting**: `text-left`, `uppercase`, `truncate`\n- **Tailwind Color Palette**: Shades 50 through 950\n- **Color Opacity Modifiers**: `text-blue-500/75` syntax"
+        },
+        {
+            "id": "tw_typography_2",
+            "type": "content",
+            "title": "Font Families in Tailwind",
+            "content": "# Font Families: Sans, Serif & Mono 🔤\n\nTailwind provides three core font family utilities with modern, multi-tier system font fallbacks.\n\n## Core Font Family Utilities\n\n| Class | Font Stack | Best Use Case |\n|---|---|---|\n| `font-sans` | `ui-sans-serif, system-ui, sans-serif, Apple Color Emoji...` | General app interfaces, buttons, titles |\n| `font-serif` | `ui-serif, Georgia, Cambria, 'Times New Roman'...` | Editorial articles, books, classical design |\n| `font-mono` | `ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas...` | Code snippets, terminal logs, tabular numbers |\n\n## Customizing Fonts in Config\n\n```javascript_not\n// tailwind.config.js\nmodule.exports = {\n  theme: {\n    extend: {\n      fontFamily: {\n        inter: ['Inter', 'sans-serif'],\n        code: ['Fira Code', 'monospace'],\n      },\n    },\n  },\n};\n```"
+        },
+        {
+            "id": "tw_typography_3",
+            "type": "content",
+            "title": "The Text Sizing Scale",
+            "content": "# The Type Scale: Sizing Text 📐\n\nTailwind pairs font sizes with proportional default line-heights to maintain harmonious vertical rhythm.\n\n## Sizing Scale Reference\n\n| Class | Font Size | Default Line Height | Pixels (base 16px) |\n|---|---|---|---|\n| `text-xs` | `0.75rem` | `1rem` | 12px / 16px |\n| `text-sm` | `0.875rem` | `1.25rem` | 14px / 20px |\n| `text-base`| `1rem` | `1.5rem` | 16px / 24px |\n| `text-lg` | `1.125rem` | `1.75rem` | 18px / 28px |\n| `text-xl` | `1.25rem` | `1.75rem` | 20px / 28px |\n| `text-2xl`| `1.5rem` | `2rem` | 24px / 32px |\n| `text-3xl`| `1.875rem` | `2.25rem` | 30px / 36px |\n| `text-4xl`| `2.25rem` | `2.5rem` | 36px / 40px |\n| `text-6xl`| `3.75rem` | `1` | 60px / 60px |\n\n> 💡 **Key Insight:** `text-sm` automatically pairs with `leading-5`, so you don't have to manually set line-height unless desired!"
+        },
+        {
+            "id": "tw_typography_quiz_1",
+            "type": "quiz",
+            "title": "Font Scale Check",
+            "content": "Test your knowledge of Tailwind's text scale!",
+            "quizQuestion": "What is the pixel equivalent of `text-base` under standard browser settings?",
+            "quizOptions": [
+                "12px",
+                "14px",
+                "16px",
+                "18px"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "tw_typography_5",
+            "type": "content",
+            "title": "Font Weights & Styles",
+            "content": "# Font Weights & Italic Styles 🏋️\n\nControl visual emphasis using Tailwind's 9 font weight utilities.\n\n## Font Weights\n\n| Class | CSS Value | Numeric Weight |\n|---|---|---|\n| `font-thin` | `100` | Thin / Hairline |\n| `font-light` | `300` | Light |\n| `font-normal`| `400` | Regular (default) |\n| `font-medium`| `500` | Medium |\n| `font-semibold`| `600` | Semi-Bold |\n| `font-bold`  | `700` | Bold |\n| `font-extrabold` | `800` | Extra Bold |\n| `font-black` | `900` | Black / Heavy |\n\n## Font Styles\n- `italic` (`font-style: italic;`)\n- `not-italic` (`font-style: normal;`)"
+        },
+        {
+            "id": "tw_typography_6",
+            "type": "content",
+            "title": "Line Height & Letter Spacing",
+            "content": "# Line Height (Leading) & Tracking 📏\n\nTailwind decouples line height and letter spacing using `leading-*` and `tracking-*`.\n\n## Line Height (`leading-*`)\n\n- `leading-none` — `line-height: 1;` (great for massive display titles)\n- `leading-tight` — `line-height: 1.25;` (ideal for headings)\n- `leading-snug` — `line-height: 1.375;`\n- `leading-normal` — `line-height: 1.5;` (body text standard)\n- `leading-relaxed` — `line-height: 1.625;` (spacious blog reading)\n- `leading-loose` — `line-height: 2;`\n\n## Letter Spacing (`tracking-*`)\n\n- `tracking-tighter` (`-0.05em`), `tracking-tight` (`-0.025em`) — Tighter headline tracking\n- `tracking-normal` (`0em`)\n- `tracking-wide` (`0.025em`), `tracking-wider` (`0.05em`), `tracking-widest` (`0.1em`) — Elegant uppercase badges"
+        },
+        {
+            "id": "tw_typography_7",
+            "type": "content",
+            "title": "Text Alignment & Text Transform",
+            "content": "# Alignment, Transformation & Decoration 🔠\n\nEasily format sentence capitalization, alignment, and underlines.\n\n## Text Alignment\n\n- `text-left`, `text-center`, `text-right`, `text-justify`\n\n## Text Transform\n\n- `uppercase` — ALL CAPS (`text-transform: uppercase;`)\n- `lowercase` — all lowercase\n- `capitalize` — Capitalize First Letter Of Each Word\n- `normal-case` — Preserve source case\n\n## Text Decoration & Color\n\n```html_not\n<a href=\"#\" class=\"text-indigo-600 underline decoration-indigo-400 decoration-2 underline-offset-4 hover:decoration-indigo-600\">\n  Custom styled underline with offset\n</a>\n```"
+        },
+        {
+            "id": "tw_typography_8",
+            "type": "content",
+            "title": "Text Truncation & Line Clamping",
+            "content": "# Text Truncation & Line Clamping ✂️\n\nDealing with dynamic user text that might overflow its card boundary.\n\n## Single-Line Truncation with `truncate`\n\n`truncate` applies `overflow: hidden; text-overflow: ellipsis; white-space: nowrap;`:\n\n```html_not\n<p class=\"w-48 truncate text-gray-700\">\n  This very long username will cut off with an ellipsis...\n</p>\n```\n\n## Multi-Line Clamping with `line-clamp-{n}`\n\nLimit text to a specific number of lines before truncating with an ellipsis:\n\n```html_not\n<p class=\"line-clamp-2 text-sm text-gray-500\">\n  This article preview description will render exactly two lines of text\n  on all devices and gracefully append an ellipsis at the end of line two.\n</p>\n```"
+        },
+        {
+            "id": "tw_typography_quiz_2",
+            "type": "quiz",
+            "title": "Line Clamp Check",
+            "content": "Test your knowledge on text truncation utilities!",
+            "quizQuestion": "Which Tailwind class limits a paragraph to exactly 3 lines of text followed by an ellipsis?",
+            "quizOptions": [
+                "truncate-3",
+                "max-lines-3",
+                "line-clamp-3",
+                "text-limit-3"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "tw_typography_10",
+            "type": "content",
+            "title": "The Tailwind Color Palette",
+            "content": "# The Curated Color Palette 🎨\n\nTailwind includes 22 color families, each calibrated from 50 (lightest tint) to 950 (deepest dark shade).\n\n## Core Color Families\n\n- **Neutrals**: `slate`, `gray`, `zinc`, `neutral`, `stone`\n- **Vibrant Primaries**: `red`, `orange`, `amber`, `yellow`, `lime`\n- **Cool Hues**: `green`, `emerald`, `teal`, `cyan`, `sky`, `blue`\n- **Accents**: `indigo`, `violet`, `purple`, `fuchsia`, `pink`, `rose`\n\n## Shade Ladder Structure\n\n```\n50   - Faint card backgrounds, hovered table rows\n100  - Badge backgrounds, alert box backgrounds\n200  - Subtle border outlines\n500  - Primary brand color, toggle switches, icons\n600  - Standard button background, active tabs\n700  - Button hover state\n900  - High-contrast body text\n950  - Ultra-dark backgrounds in dark mode\n```"
+        },
+        {
+            "id": "tw_typography_11",
+            "type": "content",
+            "title": "Color Utilities: Text, Background & Border",
+            "content": "# Applying Colors Across CSS Properties 🖌️\n\nThe same color family and shade scale applies across all color-related utilities:\n\n## Utility Prefix Mapping\n\n| Prefix | CSS Property | Example |\n|---|---|---|\n| `text-*` | `color` | `text-slate-900`, `text-indigo-600` |\n| `bg-*` | `background-color` | `bg-white`, `bg-emerald-500` |\n| `border-*` | `border-color` | `border-gray-200`, `border-red-500` |\n| `ring-*` | `outline box-shadow` | `ring-blue-400` |\n| `accent-*` | `accent-color` (checkboxes) | `accent-indigo-600` |\n| `caret-*` | `caret-color` (text cursor) | `caret-pink-500` |\n\n```html_not\n<div class=\"bg-indigo-50 border border-indigo-200 text-indigo-900 p-4 rounded-xl\">\n  Harmonious monochromatic styling in 3 simple classes!\n</div>\n```"
+        },
+        {
+            "id": "tw_typography_12",
+            "type": "content",
+            "title": "Color Opacity Modifiers",
+            "content": "# Alpha Channel & Color Opacity Modifiers 💧\n\nRather than defining separate semi-transparent colors, Tailwind lets you append an opacity percentage using a slash `/` syntax.\n\n## The Slash `/` Opacity Syntax\n\n```html_not\n<!-- 50% opacity background -->\n<div class=\"bg-black/50 backdrop-blur-sm fixed inset-0\">\n  <!-- Modal dialog box -->\n  <div class=\"bg-white text-gray-900 border border-black/10 shadow-2xl p-6 rounded-2xl\">\n    <h3 class=\"text-lg font-bold\">Subtle Semi-Transparent Border</h3>\n    <p class=\"text-gray-600/80\">80% opacity text color</p>\n  </div>\n</div>\n```\n\n## Arbitrary Opacities\nYou can even use arbitrary opacity values: `bg-indigo-600/[0.12]`!"
+        },
+        {
+            "id": "tw_typography_13",
+            "type": "content",
+            "title": "Gradient Backgrounds",
+            "content": "# Linear Gradients Made Easy 🌈\n\nCreate multi-stop gradients without writing complex `linear-gradient()` CSS.\n\n## Gradient Utilities\n\n- Direction: `bg-gradient-to-r` (right), `bg-gradient-to-br` (bottom-right), `bg-gradient-to-t` (top)\n- Starting Color: `from-{color}-{shade}`\n- Middle Stop (optional): `via-{color}-{shade}`\n- Ending Color: `to-{color}-{shade}`\n\n```html_not\n<!-- Radiant hero card gradient -->\n<div class=\"bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 p-8 rounded-2xl text-white shadow-xl\">\n  <h2 class=\"text-3xl font-extrabold\">Vibrant Gradients</h2>\n  <p class=\"text-pink-100 mt-2\">Smooth multi-color transitions with zero custom CSS.</p>\n</div>\n```"
+        },
+        {
+            "id": "tw_typography_14",
+            "type": "content",
+            "title": "Gradient Text Effect",
+            "content": "# Gradient Text with Background Clip 🌟\n\nApply rich multi-color gradients directly to typography:\n\n```html_not\n<h1 class=\"text-5xl font-black tracking-tight\">\n  Build products \n  <span class=\"bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent\">\n    10x faster\n  </span>\n</h1>\n```\n\n## How It Works:\n1. `bg-gradient-to-r ...` generates the linear color spectrum.\n2. `bg-clip-text` sets `background-clip: text;` clipping the background to the glyph shapes.\n3. `text-transparent` sets `color: transparent;` so the background gradient shows through the letters."
+        },
+        {
+            "id": "tw_typography_15",
+            "type": "content",
+            "title": "The @tailwindcss/typography Plugin",
+            "content": "# The Official Typography Plugin (`prose`) 📰\n\nWhen rendering HTML from Markdown, CMS blogs, or comments, individual elements lack Tailwind classes.\n\n## Enter the `prose` Class\n\n```bash_not\nnpm install -D @tailwindcss/typography\n```\n\n```javascript_not\n// tailwind.config.js\nmodule.exports = {\n  plugins: [require('@tailwindcss/typography')],\n};\n```\n\n```html_not\n<article class=\"prose lg:prose-xl dark:prose-invert mx-auto\">\n  <h1>HTML from CMS or Markdown</h1>\n  <p>All nested headings, lists, quotes, and tables are styled automatically!</p>\n</article>\n```\n\n> ⚡ **Instant Beauty:** One class gives you typographic hierarchy, responsive sizes (`prose-lg`), and dark mode (`prose-invert`)."
+        },
+        {
+            "id": "tw_typography_16",
+            "type": "content",
+            "title": "Customizing Brand Colors in Config",
+            "content": "# Extending Colors in tailwind.config.js 🎨\n\nAdd your brand guidelines to Tailwind while keeping all default palette colors intact:\n\n```javascript_not\n// tailwind.config.js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        brand: {\n          50: '#f0fdf4',\n          100: '#dcfce7',\n          500: '#22c55e',\n          600: '#16a34a',\n          900: '#14532d',\n        },\n        cyberpunk: '#f700ff',\n      },\n    },\n  },\n};\n```\n\nUse them immediately: `bg-brand-500`, `text-cyberpunk`, `border-brand-100`."
+        },
+        {
+            "id": "tw_typography_17",
+            "type": "content",
+            "title": "Real-World Component: Testimonial Card",
+            "content": "# Real-World Component: Testimonial Card 💬\n\nLet's put typography, font weights, colors, and opacity modifiers together:\n\n```html_not\n<div class=\"max-w-md p-8 bg-slate-900 text-white rounded-3xl shadow-2xl border border-slate-800\">\n  <div class=\"flex items-center space-x-1 text-amber-400 mb-4\">\n    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>\n  </div>\n  \n  <p class=\"text-lg font-medium leading-relaxed text-slate-200\">\n    \"Tailwind CSS revolutionized how our product team builds web apps. Our velocity increased threefold with zero CSS bloat.\"\n  </p>\n  \n  <div class=\"mt-6 flex items-center space-x-4 pt-6 border-t border-slate-800\">\n    <div class=\"h-12 w-12 rounded-full bg-indigo-500 flex items-center justify-center font-bold text-white\">\n      SA\n    </div>\n    <div>\n      <h4 class=\"font-semibold text-white tracking-tight\">Sarah Adams</h4>\n      <p class=\"text-xs font-normal text-slate-400 uppercase tracking-wider\">VP of Engineering</p>\n    </div>\n  </div>\n</div>\n```"
+        },
+        {
+            "id": "tw_typography_quiz_3",
+            "type": "quiz",
+            "title": "Color Opacity Quiz",
+            "content": "Test your knowledge on color opacity modifiers!",
+            "quizQuestion": "How do you apply a 75% opacity emerald green background using Tailwind CSS?",
+            "quizOptions": [
+                "bg-emerald-500 opacity-75",
+                "bg-emerald-500/75",
+                "bg-emerald-500-alpha-75",
+                "background-opacity(emerald, 75%)"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "tw_typography_19",
+            "type": "content",
+            "title": "Accessibility & Color Contrast",
+            "content": "# Accessibility & Color Contrast (WCAG) ♿\n\nAlways ensure text has sufficient contrast against its background:\n\n## WCAG 2.1 Contrast Standards\n\n- **Normal Text**: Minimum contrast ratio of **4.5:1** (AA standard)\n- **Large Text (18px+ bold or 24px+)**: Minimum contrast ratio of **3:1**\n\n## Tailwind Contrast Best Practices\n\n| Background | Accessible Text Class | Non-Accessible (Avoid) |\n|---|---|---|\n| `bg-white` | `text-slate-800`, `text-slate-900` | `text-slate-300`, `text-gray-400` |\n| `bg-slate-900` | `text-white`, `text-slate-100` | `text-slate-600`, `text-slate-700` |\n| `bg-indigo-600` | `text-white` | `text-indigo-300` |\n\n> 🎯 **Tip:** Use light shades (50-100) or dark shades (800-950) for text to comfortably pass WCAG audits."
+        },
+        {
+            "id": "tw_typography_20",
+            "type": "content",
+            "title": "Summary: Typography & Colors",
+            "content": "# Typography & Colors: Summary 📋\n\n## Quick Review\n- **Font Families**: Set default stacks with `font-sans`, `font-serif`, `font-mono`.\n- **Type Hierarchy**: Combine `text-*`, `font-*`, `leading-*`, and `tracking-*`.\n- **Truncation**: Use `truncate` for 1 line or `line-clamp-{n}` for multi-line clamping.\n- **Color System**: Leverage 22 calibrated color families from 50 to 950.\n- **Opacity**: Use modern `/` notation (e.g. `bg-slate-900/80`).\n- **Gradients**: Combine `bg-gradient-to-*`, `from-*`, and `to-*`.\n\nNext: Master borders, box shadows, rings, and divide utilities! 🛡️"
+        },
+        {
+            "id": "tw_typography_21",
+            "type": "content",
+            "title": "Next Steps: Borders & Effects",
+            "content": "# Ahead: Borders, Rings & Visual Effects 🛡️\n\nNow that your layout and typography are polished, let's explore decorative borders and elevation.\n\n## Coming Up:\n- **Border Radius**: Subtle rounded corners up to circular avatars (`rounded-*`)\n- **Border Width & Colors**: `border`, `border-t-2`, `border-indigo-500`\n- **Ring Utilities**: Accessible focus rings and avatar borders without layout shift\n- **Divide Utilities**: Automatic borders between flex and grid children\n- **Box Shadows & Elevation**: `shadow-sm` up to `shadow-2xl`\n\nLet's add depth to your interfaces! 🚀"
+        }
+    ]
+}

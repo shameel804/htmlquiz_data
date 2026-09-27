@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Communicating with the Fetch API",
+    "ques": "Explain the modern **Fetch API**. Write an asynchronous function that sends an HTTP POST request with a JSON payload, checks `response.ok`, and parses the JSON response.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "async function createPost(postData) {\n  const apiUrl = \"https://jsonplaceholder.typicode.com/posts\";\n\n  try {\n    const response = await fetch(apiUrl, {\n      method: \"POST\",\n      headers: {\n        \"Content-Type\": \"application/json\",\n        \"Accept\": \"application/json\"\n      },\n      body: JSON.stringify(postData)\n    });\n\n    // CRITICAL: Fetch does NOT reject on HTTP 404 or 500 status codes!\n    // Must check response.ok (status in the range 200-299)\n    if (!response.ok) {\n      throw new Error(`HTTP network error! Status: ${response.status}`);\n    }\n\n    const responseData = await response.json();\n    console.log(\"Post created successfully:\", responseData);\n    return responseData;\n  } catch (error) {\n    console.error(\"Fetch operation failed:\", error.message);\n    throw error;\n  }\n}\n\ncreatePost({ title: \"Learning Web APIs\", body: \"Fetch makes HTTP simple.\", userId: 1 });"
+    },
+    "explanation": "`fetch()` returns a Promise resolving to a `Response` object. Because fetch only rejects on catastrophic network failures (DNS/offline), developers must check `response.ok` to catch HTTP errors."
+  },
+  {
+    "title": "Client-Side Persistence with LocalStorage",
+    "ques": "Explain how **LocalStorage** stores key-value string data persistently. Write helper functions `setStoredData(key, value)` and `getStoredData(key)` that handle JSON serialization automatically.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const storageHelper = {\n  // Automatically serializes objects to JSON strings\n  set(key, value) {\n    try {\n      const serialized = JSON.stringify(value);\n      localStorage.setItem(key, serialized);\n    } catch (e) {\n      console.error(\"Error saving to localStorage:\", e);\n    }\n  },\n\n  // Automatically deserializes JSON strings back into objects\n  get(key, fallback = null) {\n    try {\n      const item = localStorage.getItem(key);\n      return item ? JSON.parse(item) : fallback;\n    } catch (e) {\n      console.warn(\"Error parsing localStorage item:\", e);\n      return fallback;\n    }\n  },\n\n  remove(key) {\n    localStorage.removeItem(key);\n  }\n};\n\n// Usage example:\nstorageHelper.set(\"userPreferences\", { theme: \"dark\", fontSize: 16 });\nconst prefs = storageHelper.get(\"userPreferences\");\nconsole.log(\"Loaded preferences:\", prefs);"
+    },
+    "explanation": "`localStorage` stores data synchronously across browser sessions with roughly 5MB storage per origin. Keys and values must be strings, making `JSON.stringify` and `JSON.parse` standard practice."
+  },
+  {
+    "title": "Accessing Device Coordinates via the Geolocation API",
+    "ques": "Explain the **Geolocation API** (`navigator.geolocation.getCurrentPosition`). Write a function that requests the user's GPS coordinates, handles permission denials, and prints latitude and longitude.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function requestUserLocation() {\n  if (!(\"geolocation\" in navigator)) {\n    console.warn(\"Geolocation is not supported by this browser.\");\n    return;\n  }\n\n  const options = {\n    enableHighAccuracy: true,\n    timeout: 5000,    // 5 seconds max wait\n    maximumAge: 0     // Do not use cached position\n  };\n\n  function onSuccess(position) {\n    const { latitude, longitude, accuracy } = position.coords;\n    console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);\n    console.log(`Accuracy: within ${accuracy} meters.`);\n  }\n\n  function onError(error) {\n    switch (error.code) {\n      case error.PERMISSION_DENIED:\n        console.error(\"User denied the request for Geolocation.\");\n        break;\n      case error.POSITION_UNAVAILABLE:\n        console.error(\"Location information is unavailable.\");\n        break;\n      case error.TIMEOUT:\n        console.error(\"The request to get user location timed out.\");\n        break;\n    }\n  }\n\n  navigator.geolocation.getCurrentPosition(onSuccess, onError, options);\n}\n\nrequestUserLocation();"
+    },
+    "explanation": "The Geolocation API allows web applications to access device coordinates after explicit user consent. `getCurrentPosition` takes success and error callbacks along with accuracy options."
+  }
+]

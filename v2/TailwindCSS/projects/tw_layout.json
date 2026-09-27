@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Mastering Flexbox Utilities",
+    "ques": "Create a responsive horizontal navigation bar using Tailwind's **Flexbox utilities** (`flex`, `justify-between`, `items-center`, and `flex-wrap`).",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<nav class=\"flex flex-wrap items-center justify-between px-6 py-4 bg-gray-900 text-white shadow-md\">\n  <div class=\"flex items-center space-x-3\">\n    <span class=\"text-2xl font-extrabold tracking-tight text-indigo-400\">DevPulse</span>\n  </div>\n  <div class=\"flex items-center space-x-6 text-sm font-medium\">\n    <a href=\"#\" class=\"hover:text-indigo-400 transition-colors\">Home</a>\n    <a href=\"#\" class=\"hover:text-indigo-400 transition-colors\">Features</a>\n    <a href=\"#\" class=\"hover:text-indigo-400 transition-colors\">Pricing</a>\n    <button class=\"px-4 py-2 bg-indigo-600 rounded-md hover:bg-indigo-500\">Sign In</button>\n  </div>\n</nav>"
+    },
+    "explanation": "`flex` creates a flex container, `justify-between` distributes space between brand and links, `items-center` aligns elements along the cross-axis, and `flex-wrap` prevents overflow on narrow viewports."
+  },
+  {
+    "title": "CSS Grid System and Gap Utilities",
+    "ques": "Build a responsive dashboard metrics grid using Tailwind's **Grid utilities** (`grid`, `grid-cols-*`, `gap-*`, and `col-span-*`). The primary stat card should span 2 columns on wide screens.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"grid grid-cols-1 md:grid-cols-3 gap-6 p-6 bg-gray-50\">\n  <!-- Highlighted stat spanning 2 columns on desktop -->\n  <div class=\"md:col-span-2 p-6 bg-white rounded-xl shadow-sm border border-gray-200\">\n    <h4 class=\"text-sm font-medium text-gray-500\">Total Revenue</h4>\n    <p class=\"mt-2 text-3xl font-extrabold text-gray-900\">$124,592</p>\n    <span class=\"text-xs font-semibold text-emerald-600\">+18.4% from last month</span>\n  </div>\n  \n  <!-- Regular stat card -->\n  <div class=\"p-6 bg-white rounded-xl shadow-sm border border-gray-200\">\n    <h4 class=\"text-sm font-medium text-gray-500\">Active Users</h4>\n    <p class=\"mt-2 text-3xl font-extrabold text-gray-900\">8,420</p>\n    <span class=\"text-xs font-semibold text-emerald-600\">+5.2% this week</span>\n  </div>\n</div>"
+    },
+    "explanation": "`grid` activates CSS grid, `grid-cols-3` sets up 3 fractional columns, `gap-6` controls spacing between row and column tracks, and `col-span-2` causes an element to span two column tracks."
+  },
+  {
+    "title": "Padding and Margin Spacing Scale",
+    "ques": "Explain the numeric spacing scale used in Tailwind's padding (`p-*`) and margin (`m-*`) utilities. Demonstrate directional padding and auto margins in a centered card layout.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Spacing scale: 1 unit equals 0.25rem (4px). Thus, p-6 = 1.5rem (24px), mx-auto = margin: 0 auto -->\n<div class=\"max-w-md mx-auto my-12 pt-8 pb-6 px-6 bg-white rounded-lg shadow-lg border border-gray-100\">\n  <h2 class=\"text-2xl font-bold mb-4 text-gray-800\">Spacing Demonstration</h2>\n  <p class=\"text-gray-600 mb-6\">\n    Tailwind uses consistent spacing units: 'pt' sets padding-top, 'px' sets horizontal padding, and 'mx-auto' centers the block horizontally.\n  </p>\n  <button class=\"w-full py-3 px-4 bg-emerald-600 text-white rounded-md font-medium hover:bg-emerald-700\">\n    Confirm Action\n  </button>\n</div>"
+    },
+    "explanation": "Tailwind's spacing scale maps integers to multiples of `0.25rem` (4px). Modifiers like `x` (horizontal), `y` (vertical), `t` (top), `b` (bottom), `l` (left), and `r` (right) allow precise directional control."
+  },
+  {
+    "title": "Sizing Elements with Width and Height",
+    "ques": "Demonstrate the use of Tailwind sizing utilities: fractional widths (`w-1/2`, `w-full`), fixed dimensions (`w-16 h-16`), viewport heights (`h-screen`), and max-width containers (`max-w-xl`).",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"min-h-screen flex items-center justify-center bg-gray-100 p-4\">\n  <div class=\"w-full max-w-xl bg-white p-8 rounded-2xl shadow-xl flex items-center space-x-6\">\n    <!-- Fixed square avatar: 4rem x 4rem -->\n    <div class=\"w-16 h-16 rounded-full bg-indigo-500 flex items-center justify-center text-white text-xl font-bold flex-shrink-0\">\n      JD\n    </div>\n    <div class=\"w-full\">\n      <h3 class=\"text-lg font-bold text-gray-900\">Jane Doe</h3>\n      <p class=\"text-gray-500 text-sm\">Full Stack Engineer</p>\n      <!-- Progress bar with 75% fractional width -->\n      <div class=\"w-full bg-gray-200 h-2.5 rounded-full mt-3 overflow-hidden\">\n        <div class=\"bg-indigo-600 h-full w-3/4 rounded-full\"></div>\n      </div>\n    </div>\n  </div>\n</div>"
+    },
+    "explanation": "Tailwind provides fixed rem sizes (`w-16`), percentage/fractional widths (`w-3/4`), viewport units (`min-h-screen`), and responsive container constraints (`max-w-xl`)."
+  },
+  {
+    "title": "Positioning Elements (Relative, Absolute, Sticky)",
+    "ques": "Create a notification badge overlaid on an icon using **`relative`** and **`absolute`** positioning utilities, and include a **`sticky`** header in the layout.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Sticky Header pinned to the top of the viewport on scroll -->\n<header class=\"sticky top-0 z-50 flex justify-between items-center px-6 py-3 bg-white/80 backdrop-blur-md border-b border-gray-200\">\n  <h1 class=\"text-lg font-bold text-gray-800\">Application Feed</h1>\n  \n  <!-- Relative container anchor for the absolute badge -->\n  <div class=\"relative inline-block\">\n    <button class=\"p-2 text-gray-600 hover:text-gray-900 focus:outline-none\">\n      <svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n        <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9\"></path>\n      </svg>\n    </button>\n    <!-- Absolute notification badge positioned at the top-right corner -->\n    <span class=\"absolute top-1 right-1 flex h-3 w-3\">\n      <span class=\"animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75\"></span>\n      <span class=\"relative inline-flex rounded-full h-3 w-3 bg-red-500\"></span>\n    </span>\n  </div>\n</header>"
+    },
+    "explanation": "`relative` establishes a local coordinate boundary for child elements using `absolute`. `sticky top-0` pins the header to the viewport upon scrolling."
+  },
+  {
+    "title": "Layer Stacking with Z-Index Utilities",
+    "ques": "Explain how Tailwind manages stacking contexts using **`z-index`** utilities (`z-0`, `z-10`, `z-20`, `z-30`, `z-40`, `z-50`). Write a modal backdrop overlay demonstrating proper z-index ordering.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Base content beneath backdrop -->\n<div class=\"relative z-0 p-8\">\n  <p>Underlying page content and interactive elements.</p>\n</div>\n\n<!-- Modal Backdrop: dim overlay with high stacking priority -->\n<div class=\"fixed inset-0 bg-black/50 z-40 backdrop-blur-sm\"></div>\n\n<!-- Modal Dialog: highest stacking priority -->\n<div class=\"fixed inset-0 z-50 flex items-center justify-center p-4\">\n  <div class=\"bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl\">\n    <h3 class=\"text-lg font-bold text-gray-900\">Confirm Deletion</h3>\n    <p class=\"mt-2 text-sm text-gray-600\">Are you sure you want to permanently delete this item?</p>\n    <div class=\"mt-6 flex justify-end space-x-3\">\n      <button class=\"px-4 py-2 text-sm text-gray-600 hover:text-gray-800\">Cancel</button>\n      <button class=\"px-4 py-2 text-sm text-white bg-red-600 rounded-md hover:bg-red-700\">Delete</button>\n    </div>\n  </div>\n</div>"
+    },
+    "explanation": "Tailwind provides standard z-index steps (from `z-0` up to `z-50`). Proper layering ensures backdrops (`z-40`) blur underlying elements (`z-0`) while dialog modals (`z-50`) receive pointer events and focus."
+  }
+]

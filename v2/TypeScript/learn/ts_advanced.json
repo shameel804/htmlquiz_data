@@ -1,0 +1,159 @@
+{
+    "id": "learn_ts_advanced",
+    "topicId": "ts_advanced",
+    "topicTitle": "TS Advanced Types",
+    "description": "Master generics, generic constraints, type narrowing, and discriminated unions.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "ts_adv_1",
+            "type": "content",
+            "title": "Welcome to Advanced Types",
+            "content": "# TypeScript Advanced Types 🧬\n\nAdvanced types elevate your TypeScript programming from basic type annotations to sophisticated, dynamic, and bulletproof type systems.\n\n## What you'll master:\n- 🧬 **Generics Fundamentals** - Reusable functions, classes, and interfaces\n- ⛓️ **Generic Constraints (`extends`)** - Restricting generic parameters\n- 🔀 **Union & Intersection Types** - Combining and branching data models\n- 🎯 **Type Narrowing** - `typeof`, `instanceof`, and custom type predicates (`is`)\n- 🏷️ **Discriminated Unions** - Tagged unions for flawless state modeling\n- 🪞 **Conditional Types** - Type logic that adapts based on conditions"
+        },
+        {
+            "id": "ts_adv_2",
+            "type": "content",
+            "title": "Generics: Creating Reusable Code",
+            "content": "# Generics Basics 🧬\n\nGenerics allow you to write functions, classes, or interfaces that work over a variety of types rather than a single one, while **preserving exact type information**:\n\n```typescript\n// <T> captures the exact input type!\nfunction getFirstElement<T>(arr: T[]): T | undefined {\n  return arr[0];\n}\n\nconst num = getFirstElement([10, 20, 30]);      // Inferred as number!\nconst str = getFirstElement([\"A\", \"B\", \"C\"]);    // Inferred as string!\n\nconsole.log(\"First number:\", num);\nconsole.log(\"First string:\", str);\n```\n\n<!-- FULL_CODE_START\nfunction getFirstElement<T>(arr: T[]): T | undefined {\n  return arr[0];\n}\n\nconst num = getFirstElement([10, 20, 30]);\nconst str = getFirstElement([\"A\", \"B\", \"C\"]);\n\nconsole.log(\"First number:\", num);\nconsole.log(\"First string:\", str);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_3",
+            "type": "content",
+            "title": "Multiple Generic Type Parameters",
+            "content": "# Multiple Generic Parameters 🔀\n\nFunctions can accept multiple generic type arguments:\n\n```typescript\nfunction createPair<K, V>(key: K, value: V): [K, V] {\n  return [key, value];\n}\n\nconst pair1 = createPair(\"userID\", 1004); // [string, number]\nconst pair2 = createPair(true, [\"Admin\", \"Root\"]); // [boolean, string[]]\n\nconsole.log(\"Pair 1:\", pair1);\nconsole.log(\"Pair 2:\", pair2);\n```\n\n<!-- FULL_CODE_START\nfunction createPair<K, V>(key: K, value: V): [K, V] {\n  return [key, value];\n}\n\nconst pair1 = createPair(\"userID\", 1004);\nconst pair2 = createPair(true, [\"Admin\", \"Root\"]);\n\nconsole.log(\"Pair 1:\", pair1);\nconsole.log(\"Pair 2:\", pair2);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_4",
+            "type": "content",
+            "title": "Generic Constraints (T extends Interface)",
+            "content": "# Generic Constraints (`extends`) ⛓️\n\nSometimes you want a generic function, but you need to guarantee that the type has specific properties (like a `.length` property):\n\n```typescript\ninterface HasLength {\n  length: number;\n}\n\n// T MUST have a length property!\nfunction logLength<T extends HasLength>(item: T): void {\n  console.log(`Item length: ${item.length}`);\n}\n\nlogLength(\"Hello World\"); // Valid (strings have length)\nlogLength([1, 2, 3, 4]);  // Valid (arrays have length)\nlogLength({ length: 10, name: \"Box\" }); // Valid!\n// logLength(123); // Compile Error: Argument of type 'number' is not assignable to 'HasLength'\n```\n\n<!-- FULL_CODE_START\ninterface HasLength {\n  length: number;\n}\n\nfunction logLength<T extends HasLength>(item: T): void {\n  console.log(`Item length: ${item.length}`);\n}\n\nlogLength(\"Hello World\");\nlogLength([1, 2, 3, 4]);\nlogLength({ length: 10, name: \"Custom Object\" });\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_quiz_1",
+            "type": "quiz",
+            "title": "Generics Constraints Quiz",
+            "content": "Test your generics constraints knowledge.",
+            "quizQuestion": "What keyword is used inside a generic declaration <T extends ...> to constrain the generic type?",
+            "quizOptions": [
+                "implements",
+                "extends",
+                "constrains",
+                "requires"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_adv_5",
+            "type": "content",
+            "title": "Keyof Operator & Constraints",
+            "content": "# The `keyof` Operator 🔑\n\nThe `keyof` operator takes an object type and produces a string or numeric literal union of its keys:\n\n```typescript\ntype User = {\n  id: number;\n  name: string;\n  email: string;\n};\n\n// UserKeys is \"id\" | \"name\" | \"email\"\ntype UserKeys = keyof User;\n\n// Safe property getter!\nfunction getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {\n  return obj[key];\n}\n\nconst user: User = { id: 1, name: \"Sarah\", email: \"sarah@test.com\" };\nconsole.log(\"Name:\", getProperty(user, \"name\"));\n// getProperty(user, \"password\"); // Compile Error: Argument '\"password\"' is not assignable to \"id\" | \"name\" | \"email\"!\n```\n\n<!-- FULL_CODE_START\ntype User = {\n  id: number;\n  name: string;\n  email: string;\n};\n\nfunction getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {\n  return obj[key];\n}\n\nconst user: User = { id: 1, name: \"Sarah\", email: \"sarah@test.com\" };\nconsole.log(\"Extracted Name:\", getProperty(user, \"name\"));\nconsole.log(\"Extracted ID:\", getProperty(user, \"id\"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_6",
+            "type": "content",
+            "title": "Type Narrowing with typeof",
+            "content": "# Type Narrowing with `typeof` 🔍\n\nType Narrowing is the process of moving from a broad type (like `string | number`) to a more specific type:\n\n```typescript\nfunction padLeft(padding: number | string, input: string): string {\n  if (typeof padding === \"number\") {\n    // Narrowed to number\n    return \" \".repeat(padding) + input;\n  }\n  // Narrowed to string\n  return padding + input;\n}\n\nconsole.log(padLeft(4, \"Hello\"));\nconsole.log(padLeft(\">>> \", \"Hello\"));\n```\n\n<!-- FULL_CODE_START\nfunction padLeft(padding: number | string, input: string): string {\n  if (typeof padding === \"number\") {\n    return \" \".repeat(padding) + input;\n  }\n  return padding + input;\n}\n\nconsole.log(\"Padded with number 4:\", padLeft(4, \"Hello\"));\nconsole.log(\"Padded with string prefix:\", padLeft(\">>> \", \"Hello\"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_7",
+            "type": "content",
+            "title": "Type Narrowing with instanceof",
+            "content": "# Type Narrowing with `instanceof` 🏛️\n\nNarrow instances of classes:\n\n```typescript\nclass Dog {\n  bark() { console.log(\"Woof!\"); }\n}\n\nclass Cat {\n  meow() { console.log(\"Meow!\"); }\n}\n\nfunction speak(pet: Dog | Cat) {\n  if (pet instanceof Dog) {\n    pet.bark(); // TypeScript knows pet is a Dog!\n  } else {\n    pet.meow(); // TypeScript knows pet is a Cat!\n  }\n}\n\nspeak(new Dog());\nspeak(new Cat());\n```\n\n<!-- FULL_CODE_START\nclass Dog {\n  bark() { console.log(\"Woof!\"); }\n}\n\nclass Cat {\n  meow() { console.log(\"Meow!\"); }\n}\n\nfunction speak(pet: Dog | Cat) {\n  if (pet instanceof Dog) {\n    pet.bark();\n  } else {\n    pet.meow();\n  }\n}\n\nspeak(new Dog());\nspeak(new Cat());\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_8",
+            "type": "content",
+            "title": "Type Narrowing with the 'in' Operator",
+            "content": "# Type Narrowing with the `in` Operator 🚪\n\nCheck if a specific property exists on an object union:\n\n```typescript\ntype Fish = { swim: () => void };\ntype Bird = { fly: () => void };\n\nfunction move(animal: Fish | Bird) {\n  if (\"swim\" in animal) {\n    animal.swim(); // Narrowed to Fish!\n  } else {\n    animal.fly();  // Narrowed to Bird!\n  }\n}\n\nmove({ swim: () => console.log(\"Swimming...\") });\nmove({ fly: () => console.log(\"Flying...\") });\n```\n\n<!-- FULL_CODE_START\ntype Fish = { swim: () => void };\ntype Bird = { fly: () => void };\n\nfunction move(animal: Fish | Bird) {\n  if (\"swim\" in animal) {\n    animal.swim();\n  } else {\n    animal.fly();\n  }\n}\n\nmove({ swim: () => console.log(\"Swimming...\") });\nmove({ fly: () => console.log(\"Flying...\") });\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_quiz_2",
+            "type": "quiz",
+            "title": "Narrowing Quiz",
+            "content": "Test your knowledge of type narrowing.",
+            "quizQuestion": "Which operator checks whether a specific property key exists in an object to narrow its type?",
+            "quizOptions": [
+                "instanceof",
+                "in",
+                "typeof",
+                "has"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_adv_9",
+            "type": "content",
+            "title": "Custom Type Guards (is Type)",
+            "content": "# Custom Type Guards with Type Predicates (`is`) 🛡️\n\nCreate custom functions that narrow types using the `arg is Type` return syntax:\n\n```typescript\ninterface AdminUser {\n  name: string;\n  adminPrivileges: string[];\n}\n\nfunction isAdmin(user: any): user is AdminUser {\n  return typeof user === \"object\" && user !== null && \"adminPrivileges\" in user;\n}\n\nconst candidate: unknown = { name: \"Alice\", adminPrivileges: [\"root\"] };\n\nif (isAdmin(candidate)) {\n  // candidate is narrowed to AdminUser!\n  console.log(\"Admin privileges:\", candidate.adminPrivileges);\n}\n```\n\n<!-- FULL_CODE_START\ninterface AdminUser {\n  name: string;\n  adminPrivileges: string[];\n}\n\nfunction isAdmin(user: any): user is AdminUser {\n  return typeof user === \"object\" && user !== null && \"adminPrivileges\" in user;\n}\n\nconst candidate: unknown = { name: \"Alice\", adminPrivileges: [\"root\", \"write\"] };\n\nif (isAdmin(candidate)) {\n  console.log(\"Admin confirmed! Privileges:\", candidate.adminPrivileges.join(\", \"));\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_10",
+            "type": "content",
+            "title": "Discriminated Unions (Tagged Unions)",
+            "content": "# Discriminated Unions (The Ultimate Pattern) 🏆\n\nA **Discriminated Union** is a union of object types where each type shares a common literal property (the **discriminant**):\n\n```typescript\ninterface LoadingState {\n  status: \"loading\"; // Discriminant literal!\n}\n\ninterface SuccessState {\n  status: \"success\"; // Discriminant literal!\n  data: string[];\n}\n\ninterface ErrorState {\n  status: \"error\";   // Discriminant literal!\n  error: string;\n}\n\ntype NetworkState = LoadingState | SuccessState | ErrorState;\n```"
+        },
+        {
+            "id": "ts_adv_11",
+            "type": "content",
+            "title": "Exhaustive Switch on Discriminated Unions",
+            "content": "# Handling Discriminated Unions with Switch 🎯\n\nWhen switching on the discriminant property, TypeScript automatically narrows the object inside each case block:\n\n```typescript\nfunction renderState(state: NetworkState) {\n  switch (state.status) {\n    case \"loading\":\n      console.log(\"⏳ Loading data...\");\n      break;\n    case \"success\":\n      console.log(`✅ Loaded ${state.data.length} items`);\n      break;\n    case \"error\":\n      console.log(`❌ Failed: ${state.error}`);\n      break;\n  }\n}\n\nrenderState({ status: \"loading\" });\nrenderState({ status: \"success\", data: [\"Article 1\", \"Article 2\"] });\n```\n\n<!-- FULL_CODE_START\ninterface LoadingState { status: \"loading\"; }\ninterface SuccessState { status: \"success\"; data: string[]; }\ninterface ErrorState { status: \"error\"; error: string; }\ntype NetworkState = LoadingState | SuccessState | ErrorState;\n\nfunction renderState(state: NetworkState) {\n  switch (state.status) {\n    case \"loading\":\n      console.log(\"⏳ Loading data...\");\n      break;\n    case \"success\":\n      console.log(`✅ Loaded ${state.data.length} items:`, state.data.join(\", \"));\n      break;\n    case \"error\":\n      console.log(`❌ Failed: ${state.error}`);\n      break;\n  }\n}\n\nrenderState({ status: \"loading\" });\nrenderState({ status: \"success\", data: [\"Article 1\", \"Article 2\"] });\nrenderState({ status: \"error\", error: \"504 Gateway Timeout\" });\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_12",
+            "type": "content",
+            "title": "Intersection Types Deep Dive",
+            "content": "# Intersection Types (`&`) 🔀\n\nCombine multiple existing types into one comprehensive type:\n\n```typescript\ntype Auditable = {\n  createdAt: Date;\n  updatedAt: Date;\n  version: number;\n};\n\ntype Post = {\n  id: string;\n  title: string;\n  content: string;\n};\n\ntype AuditablePost = Post & Auditable;\n\nconst myPost: AuditablePost = {\n  id: \"P1\",\n  title: \"TypeScript Deep Dive\",\n  content: \"Advanced Types...\",\n  createdAt: new Date(),\n  updatedAt: new Date(),\n  version: 1\n};\n\nconsole.log(\"Auditable Post:\", myPost.title, \"v\" + myPost.version);\n```\n\n<!-- FULL_CODE_START\ntype Auditable = {\n  createdAt: Date;\n  updatedAt: Date;\n  version: number;\n};\n\ntype Post = {\n  id: string;\n  title: string;\n  content: string;\n};\n\ntype AuditablePost = Post & Auditable;\n\nconst myPost: AuditablePost = {\n  id: \"P1\",\n  title: \"TypeScript Deep Dive\",\n  content: \"Advanced Types...\",\n  createdAt: new Date(),\n  updatedAt: new Date(),\n  version: 1\n};\n\nconsole.log(\"Auditable Post:\", myPost.title, \"v\" + myPost.version);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_quiz_3",
+            "type": "quiz",
+            "title": "Discriminated Unions Quiz",
+            "content": "Test your knowledge of tagged unions.",
+            "quizQuestion": "What makes a Discriminated Union work in TypeScript?",
+            "quizOptions": [
+                "All types share a common literal discriminant property with unique values",
+                "All types inherit from the same class",
+                "All types have identical fields",
+                "All types are generic"
+            ],
+            "correctOptionIndex": 0
+        },
+        {
+            "id": "ts_adv_13",
+            "type": "content",
+            "title": "Conditional Types (T extends U ? X : Y)",
+            "content": "# Conditional Types 🔀\n\nTypes that choose one of two possible types based on a condition:\n\n```typescript\n// Syntax: T extends U ? X : Y\ntype IsString<T> = T extends string ? \"yes\" : \"no\";\n\ntype A = IsString<string>; // \"yes\"\ntype B = IsString<number>; // \"no\"\n\nconsole.log(\"Conditional types compiled successfully!\");\n```\n\n<!-- FULL_CODE_START\ntype IsString<T> = T extends string ? \"yes\" : \"no\";\n\ntype A = IsString<string>;\ntype B = IsString<number>;\n\nfunction checkType<T>(val: T): IsString<T> {\n  return (typeof val === \"string\" ? \"yes\" : \"no\") as IsString<T>;\n}\n\nconsole.log(\"Check 'hello':\", checkType(\"hello\"));\nconsole.log(\"Check 123:\", checkType(123));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_14",
+            "type": "content",
+            "title": "The infer Keyword in Conditional Types",
+            "content": "# Type Extraction with `infer` 🕵️\n\nThe `infer` keyword allows you to extract and deduce a type from inside another type:\n\n```typescript\n// Unpacks the item type T from an array T[]\ntype Flatten<T> = T extends Array<infer ItemType> ? ItemType : T;\n\ntype StrArray = Flatten<string[]>; // Inferred as string!\ntype PlainNumber = Flatten<number>; // Inferred as number!\n\nconsole.log(\"Inferred array item extraction demonstrated.\");\n```\n\n<!-- FULL_CODE_START\ntype Flatten<T> = T extends Array<infer ItemType> ? ItemType : T;\n\ntype StrArray = Flatten<string[]>;\ntype PlainNumber = Flatten<number>;\n\nconsole.log(\"Type inference with 'infer' verified.\");\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_15",
+            "type": "content",
+            "title": "Template Literal Types",
+            "content": "# Template Literal Types 💬\n\nConstruct new string types using template literal syntax:\n\n```typescript\ntype EventType = \"click\" | \"hover\" | \"focus\";\ntype ElementType = \"button\" | \"input\";\n\n// Produces \"button_click\" | \"button_hover\" | \"input_click\" ...\ntype InteractionEvent = `${ElementType}_${EventType}`;\n\nconst eventA: InteractionEvent = \"button_click\"; // Valid!\n// const eventB: InteractionEvent = \"div_click\"; // Error!\n\nconsole.log(\"Interaction Event:\", eventA);\n```\n\n<!-- FULL_CODE_START\ntype EventType = \"click\" | \"hover\" | \"focus\";\ntype ElementType = \"button\" | \"input\";\ntype InteractionEvent = `${ElementType}_${EventType}`;\n\nconst eventA: InteractionEvent = \"button_click\";\nconst eventB: InteractionEvent = \"input_focus\";\n\nconsole.log(\"Valid interaction 1:\", eventA);\nconsole.log(\"Valid interaction 2:\", eventB);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_16",
+            "type": "content",
+            "title": "Mapped Types",
+            "content": "# Mapped Types 🗺️\n\nBuild new types by transforming each property in an existing type:\n\n```typescript\ntype FeatureFlags = {\n  darkMode: boolean;\n  betaAccess: boolean;\n  twoFactorAuth: boolean;\n};\n\n// Make all properties readonly using a mapped type:\ntype ReadonlyFlags<T> = {\n  readonly [K in keyof T]: T[K];\n};\n\nconst flags: ReadonlyFlags<FeatureFlags> = {\n  darkMode: true,\n  betaAccess: false,\n  twoFactorAuth: true\n};\n\n// flags.darkMode = false; // Error: Cannot assign to 'darkMode'\nconsole.log(\"Flags:\", flags);\n```\n\n<!-- FULL_CODE_START\ntype FeatureFlags = {\n  darkMode: boolean;\n  betaAccess: boolean;\n  twoFactorAuth: boolean;\n};\n\ntype ReadonlyFlags<T> = {\n  readonly [K in keyof T]: T[K];\n};\n\nconst flags: ReadonlyFlags<FeatureFlags> = {\n  darkMode: true,\n  betaAccess: false,\n  twoFactorAuth: true\n};\n\nconsole.log(\"Configured flags:\", flags);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_17",
+            "type": "content",
+            "title": "Real-World Architecture: State Machine",
+            "content": "# Real-World: Type-Safe State Machine 🚦\n\n```typescript\ntype Action =\n  | { type: \"FETCH_START\" }\n  | { type: \"FETCH_SUCCESS\"; payload: string[] }\n  | { type: \"FETCH_ERROR\"; error: string };\n\ntype State = {\n  loading: boolean;\n  data: string[];\n  error: string | null;\n};\n\nfunction stateReducer(state: State, action: Action): State {\n  switch (action.type) {\n    case \"FETCH_START\":\n      return { ...state, loading: true, error: null };\n    case \"FETCH_SUCCESS\":\n      return { loading: false, data: action.payload, error: null };\n    case \"FETCH_ERROR\":\n      return { loading: false, data: [], error: action.error };\n  }\n}\n\nlet state: State = { loading: false, data: [], error: null };\nstate = stateReducer(state, { type: \"FETCH_START\" });\nstate = stateReducer(state, { type: \"FETCH_SUCCESS\", payload: [\"Item A\", \"Item B\"] });\nconsole.log(\"Final State:\", state);\n```\n\n<!-- FULL_CODE_START\ntype Action =\n  | { type: \"FETCH_START\" }\n  | { type: \"FETCH_SUCCESS\"; payload: string[] }\n  | { type: \"FETCH_ERROR\"; error: string };\n\ntype State = {\n  loading: boolean;\n  data: string[];\n  error: string | null;\n};\n\nfunction stateReducer(state: State, action: Action): State {\n  switch (action.type) {\n    case \"FETCH_START\":\n      return { ...state, loading: true, error: null };\n    case \"FETCH_SUCCESS\":\n      return { loading: false, data: action.payload, error: null };\n    case \"FETCH_ERROR\":\n      return { loading: false, data: [], error: action.error };\n  }\n}\n\nlet state: State = { loading: false, data: [], error: null };\nstate = stateReducer(state, { type: \"FETCH_START\" });\nconsole.log(\"Loading state:\", state.loading);\n\nstate = stateReducer(state, { type: \"FETCH_SUCCESS\", payload: [\"Item A\", \"Item B\"] });\nconsole.log(\"Success state items:\", state.data.join(\", \"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_adv_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Advanced Types Mastered! 🌟\n\nYou now command the full expressive range of TypeScript's advanced type system!\n\n## Key Takeaways:\n- ✅ **Generics:** Reusable code with type parameters (`<T>`).\n- ✅ **Constraints:** Restrict generics with `T extends Interface` and `keyof T`.\n- ✅ **Type Narrowing:** Use `typeof`, `instanceof`, and `in` operator.\n- ✅ **Custom Type Guards:** Functions returning `arg is Type`.\n- ✅ **Discriminated Unions:** Tagged unions for bulletproof state management.\n\n## Up Next:\nIn the next module, explore Object-Oriented Architecture: **TypeScript Classes & OOP (Access modifiers, Abstract classes, and Getters/Setters)**! 🚀"
+        }
+    ]
+}

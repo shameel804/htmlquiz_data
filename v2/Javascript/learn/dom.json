@@ -1,0 +1,159 @@
+{
+    "id": "learn_js_dom",
+    "topicId": "dom",
+    "topicTitle": "DOM Manipulation",
+    "description": "Learn to select elements, modify content, toggle classList, and traverse the DOM.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "js_dom_1",
+            "type": "content",
+            "title": "Welcome to DOM Manipulation",
+            "content": "# DOM Manipulation 🌐\n\nThe **DOM** (**Document Object Model**) is the programming interface for HTML. When a web browser loads a page, it constructs an in-memory tree of objects representing every HTML tag.\n\n## What you'll master:\n- 🌳 **The DOM Tree** - Nodes, elements, parents, and children\n- 🎯 **Selecting Elements** - `querySelector`, `querySelectorAll`, and `getElementById`\n- ✏️ **Modifying Content** - `textContent`, `innerHTML`, and security considerations\n- 🎨 **Modifying Styles & Classes** - `style` object and `classList` API\n- 🏗️ **Creating & Removing Nodes** - `createElement`, `append`, and `remove`"
+        },
+        {
+            "id": "js_dom_2",
+            "type": "content",
+            "title": "The DOM Tree Representation",
+            "content": "# The DOM Tree Representation 🌳\n\nThe browser turns HTML markup into a tree structure of JavaScript objects:\n\n```\n                  document\n                     │\n                  <html>\n             ┌───────┴───────┐\n          <head>           <body>\n             │               │\n          <title>       ┌────┴────┐\n                     <header>   <main>\n                        │         │\n                       <h1>      <p>\n```\n\nThrough JavaScript, every single node in this tree can be queried, styled, moved, animated, or deleted!"
+        },
+        {
+            "id": "js_dom_3",
+            "type": "content",
+            "title": "Selecting Single Elements",
+            "content": "# Selecting Single Elements 🎯\n\n## 1. `document.getElementById('id')`:\nFastest way to select an element by its unique ID:\n```javascript_not\nconst header = document.getElementById('main-header');\n```\n\n## 2. `document.querySelector('cssSelector')` (Preferred):\nSelects the **first** element that matches any valid CSS selector:\n```javascript_not\n// By tag name\nconst firstParagraph = document.querySelector('p');\n\n// By class name\nconst submitBtn = document.querySelector('.btn-primary');\n\n// By complex CSS selector\nconst activeLink = document.querySelector('nav ul li.active a');\n```"
+        },
+        {
+            "id": "js_dom_4",
+            "type": "content",
+            "title": "Selecting Multiple Elements",
+            "content": "# Selecting Multiple Elements 📚\n\n## `document.querySelectorAll('cssSelector')`:\nReturns a static `NodeList` containing **all** matching elements on the page:\n\n```javascript_not\nconst cards = document.querySelectorAll('.card');\n\nconsole.log(`Found ${cards.length} cards`);\n\n// Iterate through the NodeList using forEach\ncards.forEach((card, index) => {\n  console.log(`Card ${index + 1}:`, card);\n});\n```\n\n> ⚠️ **NodeList vs HTMLCollection:** `querySelectorAll` returns a `NodeList` which has built-in `.forEach()`. Older methods like `getElementsByClassName` return an `HTMLCollection` which lacks array methods!"
+        },
+        {
+            "id": "js_dom_quiz_1",
+            "type": "quiz",
+            "title": "DOM Selection Quiz",
+            "content": "Test your element selection knowledge.",
+            "quizQuestion": "Which method allows selecting the first matching element using any standard CSS selector string?",
+            "quizOptions": [
+                "document.getElement()",
+                "document.querySelector()",
+                "document.findFirst()",
+                "document.searchCSS()"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_dom_5",
+            "type": "content",
+            "title": "Modifying Content: textContent vs innerHTML",
+            "content": "# Modifying Content: `textContent` vs `innerHTML` ✏️\n\n## 1. `textContent` (Safe & Fast):\nSets or retrieves pure plain text without parsing HTML tags:\n```javascript_not\nconst title = document.querySelector('h1');\ntitle.textContent = \"Welcome to Our Platform!\";\n```\n\n## 2. `innerHTML` (Parses HTML tags):\nParses the string as real HTML markup:\n```javascript_not\nconst container = document.querySelector('#feed');\ncontainer.innerHTML = \"<p>User <strong>Alice</strong> posted an update.</p>\";\n```\n\n> 🚨 **Critical Security Alert:** Never pass un-sanitized user input into `innerHTML`! Doing so creates Cross-Site Scripting (XSS) vulnerabilities where hackers can inject malicious `<script>` tags! Use `textContent` for plain text."
+        },
+        {
+            "id": "js_dom_6",
+            "type": "content",
+            "title": "Modifying Attributes",
+            "content": "# Modifying HTML Attributes ⚙️\n\nInteract directly with element attributes:\n\n```javascript_not\nconst link = document.querySelector('a');\n\n// 1. Get an attribute\nconst currentUrl = link.getAttribute('href');\n\n// 2. Set an attribute\nlink.setAttribute('href', 'https://github.com');\nlink.setAttribute('target', '_blank');\n\n// 3. Remove an attribute\nlink.removeAttribute('title');\n\n// 4. Check if attribute exists\nif (link.hasAttribute('href')) {\n  console.log(\"Link is valid\");\n}\n```"
+        },
+        {
+            "id": "js_dom_7",
+            "type": "content",
+            "title": "Custom Data Attributes (dataset)",
+            "content": "# Custom Data Attributes (`dataset`) 🏷️\n\nHTML5 `data-*` attributes are accessible through the `.dataset` property in JavaScript:\n\n```html_not\n<button id=\"buy-btn\" data-product-id=\"1054\" data-price=\"49.99\">Buy Now</button>\n```\n\n```javascript_not\nconst btn = document.getElementById('buy-btn');\n\n// Read data attributes (converted automatically to camelCase!)\nconsole.log(btn.dataset.productId); // \"1054\"\nconsole.log(btn.dataset.price);     // \"49.99\"\n\n// Write/update data attributes\nbtn.dataset.inStock = \"true\"; // Adds data-in-stock=\"true\"\n```"
+        },
+        {
+            "id": "js_dom_8",
+            "type": "content",
+            "title": "Modifying Inline Styles",
+            "content": "# Modifying Styles with `.style` 🎨\n\nModify inline CSS properties directly:\n\n```javascript_not\nconst card = document.querySelector('.card');\n\ncard.style.backgroundColor = '#f8fafc'; // CamelCase for hyphenated CSS properties!\ncard.style.padding = '24px';\ncard.style.display = 'flex';\ncard.style.borderRadius = '12px';\n```\n\n> 💡 **Notice:** CSS properties with hyphens (like `background-color` and `border-radius`) become **camelCase** in JavaScript (`backgroundColor` and `borderRadius`)."
+        },
+        {
+            "id": "js_dom_quiz_2",
+            "type": "quiz",
+            "title": "DOM Style Quiz",
+            "content": "Test your knowledge of DOM styling.",
+            "quizQuestion": "How is the CSS property 'background-color' written when setting it via JavaScript element.style?",
+            "quizOptions": [
+                "element.style['background-color'] only",
+                "element.style.backgroundColor",
+                "element.style.background_color",
+                "element.style.BgColor"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_dom_9",
+            "type": "content",
+            "title": "The classList API",
+            "content": "# The `classList` API (Best Practice) 🏆\n\nDirectly writing inline styles with `.style` mixes presentation into JavaScript. The industry best practice is toggling predefined CSS classes with `classList`!\n\n```javascript_not\nconst banner = document.querySelector('.banner');\n\n// Add classes\nbanner.classList.add('active', 'shadow');\n\n// Remove class\nbanner.classList.remove('hidden');\n\n// Toggle class (adds if absent, removes if present!)\nbanner.classList.toggle('dark-mode');\n\n// Check if class exists\nif (banner.classList.contains('active')) {\n  console.log(\"Banner is currently active\");\n}\n```"
+        },
+        {
+            "id": "js_dom_10",
+            "type": "content",
+            "title": "Creating Elements: createElement",
+            "content": "# Creating Elements with `createElement` 🏗️\n\nCreate new DOM elements dynamically in memory:\n\n```javascript_not\n// 1. Create a new <div> element\nconst newCard = document.createElement('div');\n\n// 2. Configure its classes and content\nnewCard.classList.add('product-card');\nnewCard.textContent = \"Wireless Bluetooth Headphones\";\n\n// 3. The element exists in memory, but is NOT on screen yet!\n```"
+        },
+        {
+            "id": "js_dom_11",
+            "type": "content",
+            "title": "Inserting Elements into the DOM",
+            "content": "# Inserting Elements into the Document 📌\n\nAttach your in-memory elements to the live DOM tree:\n\n```javascript_not\nconst container = document.getElementById('card-container');\n\n// append(): Adds element to the end of the container\ncontainer.append(newCard);\n\n// prepend(): Adds element to the very beginning of the container\ncontainer.prepend(newCard);\n\n// before() / after(): Inserts as sibling before or after container\ncontainer.after(newCard);\n```\n\n> 💡 **`append` vs `appendChild`:** Modern `.append()` allows appending multiple elements and strings at once; legacy `.appendChild()` only accepts a single Node."
+        },
+        {
+            "id": "js_dom_12",
+            "type": "content",
+            "title": "Removing Elements from the DOM",
+            "content": "# Removing Elements (`remove`) 🗑️\n\nDelete an element directly with `.remove()`:\n\n```javascript_not\nconst alertMessage = document.querySelector('.alert');\n\n// Removes the element from the DOM completely!\nalertMessage.remove();\n```\n\nOr remove child from parent:\n```javascript_not\nconst parentList = document.querySelector('ul');\nconst firstItem = parentList.firstElementChild;\nparentList.removeChild(firstItem);\n```"
+        },
+        {
+            "id": "js_dom_13",
+            "type": "content",
+            "title": "DOM Traversal",
+            "content": "# DOM Traversal: Navigating the Tree 🧭\n\nNavigate between related elements without querying again:\n\n```javascript_not\nconst currentItem = document.querySelector('.active-item');\n\n// 1. Parent\nconst parent = currentItem.parentElement;\n\n// 2. Siblings\nconst nextSibling = currentItem.nextElementSibling;\nconst prevSibling = currentItem.previousElementSibling;\n\n// 3. Children\nconst allChildren = parent.children; // HTMLCollection of child elements\nconst firstChild = parent.firstElementChild;\nconst lastChild = parent.lastElementChild;\n```"
+        },
+        {
+            "id": "js_dom_quiz_3",
+            "type": "quiz",
+            "title": "DOM Modification Quiz",
+            "content": "Test your knowledge of DOM manipulation.",
+            "quizQuestion": "Which classList method adds a CSS class if it is missing, or removes it if it is already present?",
+            "quizOptions": [
+                "classList.switch()",
+                "classList.toggle()",
+                "classList.replace()",
+                "classList.flip()"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_dom_14",
+            "type": "content",
+            "title": "The closest() Method",
+            "content": "# The `.closest()` Method 🎯\n\nThe `closest()` method traverses upwards through ancestors until it finds the closest element matching a CSS selector:\n\n```javascript_not\n// When user clicks a button deep inside a table row:\nbutton.addEventListener('click', (event) => {\n  // Finds the parent table row holding this button!\n  const row = event.target.closest('tr');\n  row.remove();\n});\n```\n\nExtremely powerful for event handling and component architectures!"
+        },
+        {
+            "id": "js_dom_15",
+            "type": "content",
+            "title": "DocumentFragment: High-Performance Batching",
+            "content": "# Performance: `DocumentFragment` ⚡\n\nAdding elements to the DOM in a loop causes repeated browser layout recalculations:\n\n```javascript_not\n// ❌ SLOW: 100 separate DOM reflows!\nfor (let i = 0; i < 100; i++) {\n  const p = document.createElement('p');\n  document.body.append(p);\n}\n\n// ✅ FAST: 1 single DOM reflow using DocumentFragment!\nconst fragment = document.createDocumentFragment();\n\nfor (let i = 0; i < 100; i++) {\n  const p = document.createElement('p');\n  p.textContent = `Item ${i}`;\n  fragment.append(p); // In memory!\n}\n\ndocument.body.append(fragment); // Single DOM touch!\n```"
+        },
+        {
+            "id": "js_dom_16",
+            "type": "content",
+            "title": "Real-World Component: Dynamic To-Do List",
+            "content": "# Real-World: Dynamic Task Creator 📝\n\n```javascript_not\nfunction addTask(taskText) {\n  const list = document.getElementById('task-list');\n\n  // Create list item\n  const li = document.createElement('li');\n  li.classList.add('task-item');\n\n  // Create text span\n  const span = document.createElement('span');\n  span.textContent = taskText;\n\n  // Create delete button\n  const delBtn = document.createElement('button');\n  delBtn.textContent = \"✕\";\n  delBtn.addEventListener('click', () => li.remove());\n\n  li.append(span, delBtn);\n  list.append(li);\n}\n```"
+        },
+        {
+            "id": "js_dom_17",
+            "type": "content",
+            "title": "DOM Performance Best Practices",
+            "content": "# DOM Performance Checklist 🏎️\n\n1. **Batch DOM Updates:** Use `DocumentFragment` when creating lists of elements.\n2. **Prefer `classList` over inline styles:** Keeps CSS and JS separated cleanly.\n3. **Use `textContent` over `innerHTML`:** Immune to XSS vulnerabilities.\n4. **Cache Selectors:** Don't run `document.querySelector('.card')` 100 times in a loop; store it in a `const`!"
+        },
+        {
+            "id": "js_dom_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# DOM Manipulation Mastered! 🌟\n\nYou can now dynamically query, style, generate, and animate any webpage element!\n\n## Key Takeaways:\n- ✅ **Selecting:** Use `querySelector` (single) and `querySelectorAll` (multiple).\n- ✅ **Content:** Use `textContent` for safety; avoid un-sanitized `innerHTML`.\n- ✅ **Attributes:** Use `getAttribute`, `setAttribute`, and `dataset` for `data-*`.\n- ✅ **Classes:** Manipulate styling with `classList.add()`, `.remove()`, and `.toggle()`.\n- ✅ **Performance:** Batch insertions with `DocumentFragment`.\n\n## Up Next:\nIn the next module, listen and respond to user actions: **JavaScript Events (Listeners, Bubbling, and Delegation)**! 🚀"
+        }
+    ]
+}

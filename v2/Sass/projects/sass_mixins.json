@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Defining Basic Mixins with @mixin",
+    "ques": "Explain the role of **mixins** in Sass. Write a basic mixin named `flex-center` that centers content along both axes and include it in a container.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "// 1. Define mixin\n@mixin flex-center {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n// 2. Include mixin\n.modal-backdrop {\n  position: fixed;\n  inset: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  \n  @include flex-center;\n}"
+    },
+    "explanation": "Mixins encapsulate reusable blocks of CSS declarations. The `@mixin` directive defines the bundle, and the `@include` directive injects it into selectors."
+  },
+  {
+    "title": "Passing Arguments to Mixins",
+    "ques": "Write a mixin named `square` that accepts a `size` parameter and sets both `width` and `height` properties.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "@mixin square($size) {\n  width: $size;\n  height: $size;\n}\n\n.avatar-icon {\n  @include square(48px);\n  border-radius: 50%;\n}\n\n.thumbnail-box {\n  @include square(120px);\n}"
+    },
+    "explanation": "Parameters allow mixins to dynamically calculate or assign property values for different use cases."
+  },
+  {
+    "title": "Configuring Default Arguments",
+    "ques": "Write a `box-shadow-custom` mixin with **default argument values** for horizontal offset, vertical offset, blur radius, spread, and color.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "@mixin custom-shadow($x: 0, $y: 4px, $blur: 10px, $spread: 0, $color: rgba(0, 0, 0, 0.1)) {\n  box-shadow: $x $y $blur $spread $color;\n}\n\n// Using default arguments\n.card-standard {\n  @include custom-shadow;\n}\n\n// Overriding specific arguments\n.card-elevated {\n  @include custom-shadow(0, 10px, 25px, -5px, rgba(0, 0, 0, 0.2));\n}"
+    },
+    "explanation": "Default arguments (`$param: defaultValue`) provide standard fallback values so callers only need to supply arguments when overriding defaults."
+  },
+  {
+    "title": "Using Keyword Arguments",
+    "ques": "Demonstrate the use of **Keyword Arguments** when invoking a mixin to skip intermediate default parameters.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "@mixin button-theme($bg-color: #f3f4f6, $text-color: #111827, $border-color: #d1d5db) {\n  background-color: $bg-color;\n  color: $text-color;\n  border: 1px solid $border-color;\n}\n\n.btn-outline {\n  // Pass ONLY the border-color by explicitly naming the argument\n  @include button-theme($border-color: #3b82f6);\n}"
+    },
+    "explanation": "Keyword arguments (`@include mixin($paramName: value)`) make code self-documenting and let developers pass parameters out of order or skip defaults."
+  },
+  {
+    "title": "Passing Content Blocks with @content",
+    "ques": "Explain the **`@content`** directive. Write a responsive breakpoint mixin `for-tablet` that wraps passed style blocks within a `@media` query.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "@mixin for-tablet {\n  @media (min-width: 768px) {\n    @content; // Injects the block passed into the @include\n  }\n}\n\n.sidebar {\n  width: 100%;\n\n  @include for-tablet {\n    width: 280px;\n    display: block;\n  }\n}"
+    },
+    "explanation": "The `@content` directive acts as a slot inside a mixin where entire nested rulesets or property blocks passed by callers are injected."
+  },
+  {
+    "title": "Custom Sass Functions with @function and @return",
+    "ques": "Explain how a **Sass function** differs from a mixin. Write a custom function `rem-calc($px-value)` that converts pixel values into `rem` units based on a 16px root size.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "@use 'sass:math';\n\n// Custom function computes and returns a calculated value\n@function rem-calc($px-value, $base-size: 16px) {\n  @if not math.is-unitless($px-value) and math.unit($px-value) != 'px' {\n    @error \"Argument must be in pixels, received #{$px-value}\";\n  }\n  \n  @return math.div($px-value, $base-size) * 1rem;\n}\n\n.hero-headline {\n  font-size: rem-calc(32px); // Compiles to 2rem\n  margin-bottom: rem-calc(16px); // Compiles to 1rem\n}"
+    },
+    "explanation": "Mixins output CSS property blocks and selectors, whereas `@function` computations take inputs and return a single scalar value using `@return`."
+  }
+]

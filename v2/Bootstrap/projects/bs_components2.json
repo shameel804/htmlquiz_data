@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Responsive Navbars with Collapsible Togglers",
+    "ques": "Create a responsive Bootstrap **Navbar** with brand identity, nav links, and a mobile hamburger toggler (`.navbar-toggler`) configured for the `lg` breakpoint.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark px-3 shadow-sm\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand fw-bold text-primary\" href=\"#\">CloudStack</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#mainNavbar\" aria-controls=\"mainNavbar\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"mainNavbar\">\n      <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n        <li class=\"nav-item\"><a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Overview</a></li>\n        <li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">Deployments</a></li>\n        <li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">Settings</a></li>\n      </ul>\n      <button class=\"btn btn-outline-primary btn-sm\">Sign Out</button>\n    </div>\n  </div>\n</nav>"
+    },
+    "explanation": "The `.navbar-expand-lg` class collapses nav links into a toggler button on screens narrower than 992px and expands horizontally on larger viewports."
+  },
+  {
+    "title": "Interactive Navs and Tabs",
+    "ques": "Build an interactive **Navs and Tabs (`.nav-tabs`)** component with three tab panes using Bootstrap data attributes.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"p-4\">\n  <ul class=\"nav nav-tabs\" id=\"profileTabs\" role=\"tablist\">\n    <li class=\"nav-item\" role=\"presentation\">\n      <button class=\"nav-link active\" id=\"general-tab\" data-bs-toggle=\"tab\" data-bs-target=\"#general-pane\" type=\"button\" role=\"tab\">General</button>\n    </li>\n    <li class=\"nav-item\" role=\"presentation\">\n      <button class=\"nav-link\" id=\"security-tab\" data-bs-toggle=\"tab\" data-bs-target=\"#security-pane\" type=\"button\" role=\"tab\">Security</button>\n    </li>\n  </ul>\n  <div class=\"tab-content border border-top-0 p-3 rounded-bottom bg-white\" id=\"profileTabsContent\">\n    <div class=\"tab-pane fade show active\" id=\"general-pane\" role=\"tabpanel\">General account settings content.</div>\n    <div class=\"tab-pane fade\" id=\"security-pane\" role=\"tabpanel\">Two-factor authentication and passwords.</div>\n  </div>\n</div>"
+    },
+    "explanation": "Tabs pair `.nav-tabs` button triggers with matching `.tab-pane` containers via `data-bs-target` and matching IDs."
+  },
+  {
+    "title": "Configuring Interactive Modals",
+    "ques": "Create a Bootstrap **Modal Dialog** component complete with trigger button, header, body, footer, and dismiss actions.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Button trigger -->\n<button type=\"button\" class=\"btn btn-danger\" data-bs-toggle=\"modal\" data-bs-target=\"#confirmDeleteModal\">\n  Delete Server Instance\n</button>\n\n<!-- Modal Structure -->\n<div class=\"modal fade\" id=\"confirmDeleteModal\" tabindex=\"-1\" aria-labelledby=\"modalTitle\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-dialog-centered\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title fw-bold\" id=\"modalTitle\">Confirm Action</h5>\n        <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\n      </div>\n      <div class=\"modal-body\">\n        Are you sure you want to permanently terminate this cloud instance? This cannot be undone.\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-danger\">Terminate</button>\n      </div>\n    </div>\n  </div>\n</div>"
+    },
+    "explanation": "Modals provide focused dialog windows. `.modal-dialog-centered` vertically centers the dialog within the viewport."
+  },
+  {
+    "title": "Image Carousels with Captions",
+    "ques": "Build a Bootstrap **Carousel** featuring navigation controls, indicator dots, and slide captions.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div id=\"heroCarousel\" class=\"carousel slide shadow-sm rounded overflow-hidden\" data-bs-ride=\"carousel\">\n  <div class=\"carousel-indicators\">\n    <button type=\"button\" data-bs-target=\"#heroCarousel\" data-bs-slide-to=\"0\" class=\"active\" aria-current=\"true\"></button>\n    <button type=\"button\" data-bs-target=\"#heroCarousel\" data-bs-slide-to=\"1\"></button>\n  </div>\n  <div class=\"carousel-inner\">\n    <div class=\"carousel-item active\">\n      <img src=\"https://via.placeholder.com/800x350\" class=\"d-block w-100\" alt=\"Slide 1\">\n      <div class=\"carousel-caption d-none d-md-block\">\n        <h5>Seamless Deployments</h5>\n        <p>Automate pipeline delivery with enterprise tooling.</p>\n      </div>\n    </div>\n    <div class=\"carousel-item\">\n      <img src=\"https://via.placeholder.com/800x350\" class=\"d-block w-100\" alt=\"Slide 2\">\n      <div class=\"carousel-caption d-none d-md-block\">\n        <h5>Global Edge Network</h5>\n        <p>Ultra-low latency across 200+ regions.</p>\n      </div>\n    </div>\n  </div>\n  <button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#heroCarousel\" data-bs-slide=\"prev\">\n    <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n  </button>\n  <button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#heroCarousel\" data-bs-slide=\"next\">\n    <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n  </button>\n</div>"
+    },
+    "explanation": "`.carousel slide` automatically transitions slides with `data-bs-ride=\"carousel\"`, with previous/next controls and indicator dots."
+  },
+  {
+    "title": "Collapsible Accordions",
+    "ques": "Create an accessible **Accordion** FAQ component using `.accordion`, `.accordion-item`, and `.accordion-collapse`.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"accordion shadow-sm\" id=\"faqAccordion\">\n  <div class=\"accordion-item\">\n    <h2 class=\"accordion-header\" id=\"headingOne\">\n      <button class=\"accordion-button\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapseOne\" aria-expanded=\"true\" aria-controls=\"collapseOne\">\n        How does billing work?\n      </button>\n    </h2>\n    <div id=\"collapseOne\" class=\"accordion-collapse collapse show\" aria-labelledby=\"headingOne\" data-bs-parent=\"#faqAccordion\">\n      <div class=\"accordion-body\">\n        Subscriptions are billed on a monthly recurring schedule starting the day you enroll.\n      </div>\n    </div>\n  </div>\n</div>"
+    },
+    "explanation": "Accordions toggle expandable content panels. Setting `data-bs-parent` ensures that opening one panel collapses others in the same group."
+  },
+  {
+    "title": "Interactive Dropdown Menus",
+    "ques": "Demonstrate the construction of a Bootstrap **Dropdown (`.dropdown`)** with action links and a divider.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"dropdown p-4\">\n  <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" id=\"accountDropdown\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n    Account Options\n  </button>\n  <ul class=\"dropdown-menu shadow-sm\" aria-labelledby=\"accountDropdown\">\n    <li><a class=\"dropdown-item\" href=\"#\">Profile Overview</a></li>\n    <li><a class=\"dropdown-item\" href=\"#\">Billing & Invoices</a></li>\n    <li><hr class=\"dropdown-divider\"></li>\n    <li><a class=\"dropdown-item text-danger\" href=\"#\">Log Out</a></li>\n  </ul>\n</div>"
+    },
+    "explanation": "The `.dropdown-toggle` button triggers `.dropdown-menu`. Item elements are styled with `.dropdown-item`, separated by `.dropdown-divider`."
+  },
+  {
+    "title": "Initializing Tooltips",
+    "ques": "Explain how Bootstrap **Tooltips** function and provide both the HTML trigger and the JavaScript initialization snippet required to activate them.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "<!-- HTML Trigger Element -->\n<button type=\"button\" class=\"btn btn-secondary\" data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" data-bs-title=\"Export data as CSV\">\n  Export\n</button>\n\n<script>\n// Tooltips are opt-in for performance; they must be initialized via JavaScript!\ndocument.addEventListener('DOMContentLoaded', () => {\n  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle=\"tooltip\"]');\n  const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));\n});\n</script>"
+    },
+    "explanation": "Bootstrap tooltips are powered by Popper.js and must be initialized via JavaScript by querying all elements matching `[data-bs-toggle=\"tooltip\"]`."
+  },
+  {
+    "title": "Configuring Popovers",
+    "ques": "Demonstrate how to configure a Bootstrap **Popover** with title and dismissible behavior on next click.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- HTML Trigger with data-bs-trigger=\"focus\" for auto-dismissal on blur -->\n<button type=\"button\" class=\"btn btn-lg btn-danger\" data-bs-toggle=\"popover\" data-bs-trigger=\"focus\" title=\"Security Notice\" data-bs-content=\"Your password must contain at least 12 characters including uppercase and numbers.\">\n  Dismissible Popover\n</button>\n\n<script>\n// Initialize popovers via JS\nconst popoverTriggerList = document.querySelectorAll('[data-bs-toggle=\"popover\"]');\nconst popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el));\n</script>"
+    },
+    "explanation": "Popovers offer richer content than tooltips. `data-bs-trigger=\"focus\"` enables auto-dismissal when users click outside the trigger button."
+  },
+  {
+    "title": "Offcanvas Slide-Over Panels",
+    "ques": "Build an **Offcanvas (`.offcanvas-start`)** slide-over drawer component for a mobile side navigation menu.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Trigger Button -->\n<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"offcanvas\" data-bs-target=\"#sideDrawer\" aria-controls=\"sideDrawer\">\n  Open Sidebar\n</button>\n\n<!-- Offcanvas Component -->\n<div class=\"offcanvas offcanvas-start\" tabindex=\"-1\" id=\"sideDrawer\" aria-labelledby=\"sideDrawerLabel\">\n  <div class=\"offcanvas-header border-bottom\">\n    <h5 class=\"offcanvas-title fw-bold\" id=\"sideDrawerLabel\">Navigation Drawer</h5>\n    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"offcanvas\" aria-label=\"Close\"></button>\n  </div>\n  <div class=\"offcanvas-body p-4\">\n    <ul class=\"list-unstyled d-grid gap-2\">\n      <li><a href=\"#\" class=\"text-decoration-none text-dark fw-medium\">Dashboard Home</a></li>\n      <li><a href=\"#\" class=\"text-decoration-none text-dark fw-medium\">Team Members</a></li>\n      <li><a href=\"#\" class=\"text-decoration-none text-dark fw-medium\">Billing</a></li>\n    </ul>\n  </div>\n</div>"
+    },
+    "explanation": "`.offcanvas` creates hidden sidebars that slide in from viewport edges (`offcanvas-start`, `end`, `top`, `bottom`) with an interactive backdrop."
+  }
+]

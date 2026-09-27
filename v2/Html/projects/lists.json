@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Ordered Lists (<ol>)",
+    "ques": "Explain the purpose of the **`<ol>`** element. Demonstrate custom list numbering using the `type` attribute ('1', 'A', 'a', 'I', 'i'), `start`, and `reversed` attributes.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Standard numbered sequence starting at 1 -->\n<ol>\n  <li>Preheat the oven to 375 degrees</li>\n  <li>Mix dry ingredients in a large bowl</li>\n  <li>Bake for 25 minutes</li>\n</ol>\n\n<!-- Roman numerals starting at III (3) in reverse order -->\n<ol type=\"I\" start=\"3\" reversed>\n  <li>Stage Three: Final Validation</li>\n  <li>Stage Two: Integration Testing</li>\n  <li>Stage One: Unit Prototyping</li>\n</ol>"
+    },
+    "explanation": "`<ol>` displays items in sequential order. Attributes like `type=\"I\"`, `start=\"5\"`, and `reversed` modify the numbering system and sequence."
+  },
+  {
+    "title": "Unordered Lists (<ul>)",
+    "ques": "Demonstrate the use of **`<ul>`** and nested list structures to create a multi-level product category directory.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<ul>\n  <li>Consumer Electronics\n    <ul>\n      <li>Smartphones</li>\n      <li>Laptops\n        <ul>\n          <li>Gaming Ultrabooks</li>\n          <li>Workstation Laptops</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <li>Home Appliances</li>\n</ul>"
+    },
+    "explanation": "`<ul>` represents an unordered list where sequence is non-hierarchical. Nesting an inner `<ul>` inside an `<li>` creates multi-level trees."
+  },
+  {
+    "title": "Glossaries with Description Lists (<dl>)",
+    "ques": "Explain the semantic role of the **Description List (`<dl>`)**, **`<dt>`**, and **`<dd>`** elements. Construct a technical glossary defining three web development terms.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<dl>\n  <dt>HTML</dt>\n  <dd>HyperText Markup Language: the standard markup language used to structure web documents.</dd>\n\n  <dt>CSS</dt>\n  <dd>Cascading Style Sheets: a stylesheet language used to describe the visual presentation of a document.</dd>\n\n  <dt>API</dt>\n  <dd>Application Programming Interface: a set of rules and protocols for building and integrating application software.</dd>\n</dl>"
+    },
+    "explanation": "`<dl>` pairs description terms (`<dt>`) with description details (`<dd>`), perfect for glossaries, metadata key-value pairs, and dictionaries."
+  }
+]

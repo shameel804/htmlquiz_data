@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Numeric and String Enums",
+    "ques": "Compare **Numeric Enums** and **String Enums** in TypeScript. Write examples of both and explain why string enums are generally preferred in production codebases.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "// 1. Numeric Enum (auto-increments from 0)\nenum Direction {\n  Up,    // 0\n  Down,  // 1\n  Left,  // 2\n  Right  // 3\n}\n\n// 2. String Enum (explicit string mapping)\nenum LogLevel {\n  Info = \"INFO\",\n  Warn = \"WARN\",\n  Error = \"ERROR\",\n  Debug = \"DEBUG\"\n}\n\nfunction writeLog(level: LogLevel, msg: string): void {\n  console.log(`[${level}]: ${msg}`);\n}\n\nwriteLog(LogLevel.Info, \"System initialized\");\n// Output: [INFO]: System initialized"
+    },
+    "explanation": "String enums produce readable, meaningful serialization values in network logs and JSON payloads, whereas numeric enums serialize to opaque numbers and allow reverse-mapping quirks."
+  },
+  {
+    "title": "Partial and Required Utility Types",
+    "ques": "Explain the functions of the built-in **`Partial<T>`** and **`Required<T>`** utility types. Write a code sample showing how `Partial` enables safe user profile update patches.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "interface UserProfile {\n  id: string;\n  name: string;\n  email: string;\n  bio?: string;\n}\n\n// Partial<T> marks all properties in T as optional (?)\nfunction updateUserProfile(id: string, patch: Partial<UserProfile>): void {\n  console.log(`Updating profile ${id} with:`, patch);\n}\n\n// Caller can pass any subset of properties\nupdateUserProfile(\"u_101\", { bio: \"Software Engineer & Open Source Enthusiast\" });\n\n// Required<T> does the exact opposite: removes optionality from all properties\ntype CompleteUserProfile = Required<UserProfile>;"
+    },
+    "explanation": "`Partial<T>` transforms every property in type `T` into an optional property, ideal for PATCH endpoints. `Required<T>` strips the `?` modifier, making every field mandatory."
+  },
+  {
+    "title": "Enforcing Immutability with Readonly Utility",
+    "ques": "Demonstrate the use of the **`Readonly<T>`** utility type to create an immutable object configuration in TypeScript.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "interface AppSettings {\n  theme: string;\n  version: string;\n}\n\n// Readonly<T> marks every property as readonly\nconst productionSettings: Readonly<AppSettings> = {\n  theme: \"dark\",\n  version: \"2.4.0\"\n};\n\n// Reading is permitted\nconsole.log(productionSettings.theme);\n\n// INVALID: Compile-time error\n// productionSettings.theme = \"light\";\n// Error: Cannot assign to 'theme' because it is a read-only property."
+    },
+    "explanation": "`Readonly<T>` maps over all keys of type `T` and prepends the `readonly` modifier, preventing accidental mutations at compile time."
+  },
+  {
+    "title": "Mapping Dictionaries with Record",
+    "ques": "Explain how the **`Record<K, T>`** utility type creates structured object maps. Write a type definition that maps application roles (`admin`, `editor`, `viewer`) to permission lists.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "type Role = \"admin\" | \"editor\" | \"viewer\";\n\n// Record<Keys, ValueType> maps each key in K to type T\nconst rolePermissions: Record<Role, string[]> = {\n  admin: [\"create\", \"read\", \"update\", \"delete\"],\n  editor: [\"create\", \"read\", \"update\"],\n  viewer: [\"read\"]\n};\n\nconsole.log(\"Admin permissions:\", rolePermissions[\"admin\"]);"
+    },
+    "explanation": "`Record<K, T>` constructs an object type whose keys are taken from union `K` and whose values are of type `T`, ensuring exhaustive coverage of all designated keys."
+  },
+  {
+    "title": "Shaping Data with Pick and Omit",
+    "ques": "Contrast **`Pick<T, K>`** and **`Omit<T, K>`**. Create a base `UserAccount` interface with sensitive fields and generate a public preview type using both utilities.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "interface UserAccount {\n  id: string;\n  username: string;\n  email: string;\n  passwordHash: string;\n  mfaSecret: string;\n}\n\n// 1. Pick<T, K>: Selects ONLY the designated keys from T\ntype PublicUserPreview = Pick<UserAccount, \"id\" | \"username\">;\n\n// 2. Omit<T, K>: Removes the designated keys from T\ntype SafeUserRecord = Omit<UserAccount, \"passwordHash\" | \"mfaSecret\">;\n\nconst publicProfile: PublicUserPreview = {\n  id: \"usr_55\",\n  username: \"charlie\"\n};\n\nconsole.log(publicProfile);"
+    },
+    "explanation": "`Pick<T, K>` constructs a type by picking a specified set of keys from `T`. `Omit<T, K>` constructs a type by removing designated keys from `T`."
+  },
+  {
+    "title": "Union Filtering with Exclude and Extract",
+    "ques": "Explain the conditional utility types **`Exclude<T, U>`** and **`Extract<T, U>`**. Provide code samples showing how each utility operates on union types.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "type AllFileTypes = \"pdf\" | \"docx\" | \"png\" | \"jpg\" | \"exe\" | \"sh\";\n\n// Exclude<T, U>: Excludes from T all union members that are assignable to U\ntype SafeDocTypes = Exclude<AllFileTypes, \"exe\" | \"sh\">;\n// SafeDocTypes is \"pdf\" | \"docx\" | \"png\" | \"jpg\"\n\n// Extract<T, U>: Extracts from T all union members that ARE assignable to U\ntype ImageTypes = Extract<AllFileTypes, \"png\" | \"jpg\" | \"svg\">;\n// ImageTypes is \"png\" | \"jpg\"\n\nconst upload: ImageTypes = \"png\";\nconsole.log(\"Uploaded format:\", upload);"
+    },
+    "explanation": "`Exclude<T, U>` filters out assignable union members from `T`, while `Extract<T, U>` retains only those members of `T` that match `U`."
+  }
+]

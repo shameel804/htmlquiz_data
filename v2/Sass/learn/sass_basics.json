@@ -1,0 +1,159 @@
+{
+    "id": "learn_sass_basics",
+    "topicId": "sass_basics",
+    "topicTitle": "Variables & Nesting",
+    "description": "Learn Sass basics including SCSS syntax, declaring variables, scope rules, nesting selectors, parent selector &, and interpolation.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "sass_b_1",
+            "type": "content",
+            "title": "Introduction to Sass & SCSS",
+            "content": "# Welcome to Sass & SCSS 💅\n\n**Sass** (Syntactically Awesome Style Sheets) is a preprocessor scripting language that compiles into standard CSS. It extends standard CSS with superpowers like variables, nesting, mixins, functions, and inheritance.\n\n## Why Preprocess CSS?\n- **Eliminates repetition (DRY)**: Define color palettes, font stacks, and breakpoints once.\n- **Hierarchy & Organization**: Nest selectors visually matching your HTML DOM structure.\n- **Maintainability**: Modularize your styling across dedicated partial files.\n- **Logic & Computations**: Utilize functions, loops, and conditions inside stylesheets.\n\n## Two Syntaxes: SCSS vs Indented Sass\n\n| Syntax | Extension | Brackets & Semicolons | Relationship to CSS |\n|---|---|---|---|\n| **SCSS** (Sassy CSS) | `.scss` | Yes (`{}` and `;`) | Strict superset of valid CSS (standard today) |\n| **Sass** (Indented) | `.sass` | No (indentation sensitive) | Older, concise, Ruby-style syntax |\n\n> 💡 **Standard Practice:** Almost all modern teams and libraries (including Bootstrap) write `.scss` because every valid CSS file is automatically valid SCSS!"
+        },
+        {
+            "id": "sass_b_2",
+            "type": "content",
+            "title": "Declaring Variables with $",
+            "content": "# Declaring Variables with `$` 💵\n\nVariables in Sass start with a dollar sign `$` followed by the variable name and a colon.\n\n## Syntax and Basic Types\n\n```scss_not\n// Colors\n$primary-color: #6366f1;\n$secondary-color: #64748b;\n$bg-dark: #0f172a;\n\n// Numbers & Dimensions\n$base-font-size: 16px;\n$base-line-height: 1.5;\n$border-radius-pill: 9999px;\n\n// Strings\n$font-family-sans: 'Inter', system-ui, sans-serif;\n\n// Booleans\n$enable-rounded: true;\n\nbody {\n  font-family: $font-family-sans;\n  font-size: $base-font-size;\n  background-color: $bg-dark;\n  color: #ffffff;\n}\n```\n\n> ⚡ **Compilation:** During build time, Sass replaces every `$variable` with its literal value. The compiled CSS contains zero variable overhead in legacy browsers."
+        },
+        {
+            "id": "sass_b_3",
+            "type": "content",
+            "title": "Variable Scope: Local vs Global",
+            "content": "# Variable Scope: Local vs Global 🌐\n\nLike programming languages, Sass variables have scope rules based on code blocks.\n\n## Local Scope\nVariables declared inside a selector or mixin rule are only accessible within that block and its children:\n\n```scss_not\n.card {\n  $card-padding: 24px; // Local variable\n  padding: $card-padding;\n  \n  .card-body {\n    margin-top: $card-padding / 2; // Valid: child block\n  }\n}\n\n.banner {\n  // padding: $card-padding; // ERROR: $card-padding is undefined here!\n}\n```\n\n## The `!global` Flag\nTo promote or mutate a variable in the global scope from within a local block, use `!global`:\n\n```scss_not\n$theme: light;\n\n.dark-mode {\n  $theme: dark !global; // Updates global $theme\n}\n```"
+        },
+        {
+            "id": "sass_b_4",
+            "type": "content",
+            "title": "Default Variables with !default",
+            "content": "# Configurable Variables with `!default` ⚙️\n\nThe `!default` flag tells Sass: *\"Only assign this value if the variable hasn't already been set or is null.\"*\n\n## Why `!default` Matters for Libraries\nDesign system libraries (like Bootstrap) declare all variables with `!default` so consumers can override them beforehand without editing vendor files.\n\n```scss_not\n// _theme-library.scss\n$brand-color: #3b82f6 !default;\n$border-radius: 8px !default;\n\n.btn {\n  background-color: $brand-color;\n  border-radius: $border-radius;\n}\n```\n\n```scss_not\n// main.scss (Consumer file)\n$brand-color: #ec4899; // Consumer override!\n@use 'theme-library'; // The library's !default won't overwrite #ec4899!\n```"
+        },
+        {
+            "id": "sass_b_quiz_1",
+            "type": "quiz",
+            "title": "Variable Scope Check",
+            "content": "Test your knowledge of Sass variables!",
+            "quizQuestion": "What does the `!default` flag do when assigning a Sass variable?",
+            "quizOptions": [
+                "It makes the variable immutable like a constant",
+                "It only sets the value if the variable has not already been assigned or is null",
+                "It exports the variable to JavaScript runtime",
+                "It forces the variable to be global across all partials"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "sass_b_6",
+            "type": "content",
+            "title": "Nesting Selectors",
+            "content": "# Nesting Selectors 🪆\n\nSass allows you to nest your CSS selectors in a way that follows the same visual hierarchy of your HTML.\n\n## Cleaner, More Organized Code\n\n```scss_not\n// SCSS Source\nnav.navbar {\n  background-color: #1e293b;\n  padding: 1rem;\n\n  ul.nav-list {\n    display: flex;\n    list-style: none;\n\n    li.nav-item {\n      margin-right: 1.5rem;\n\n      a.nav-link {\n        color: #e2e8f0;\n        text-decoration: none;\n      }\n    }\n  }\n}\n```\n\n## Compiles To:\n```css_not\nnav.navbar { background-color: #1e293b; padding: 1rem; }\nnav.navbar ul.nav-list { display: flex; list-style: none; }\nnav.navbar ul.nav-list li.nav-item { margin-right: 1.5rem; }\nnav.navbar ul.nav-list li.nav-item a.nav-link { color: #e2e8f0; text-decoration: none; }\n```"
+        },
+        {
+            "id": "sass_b_7",
+            "type": "content",
+            "title": "The Parent Selector &",
+            "content": "# The Parent Selector: `&` 🔗\n\nThe ampersand `&` references the current outer parent selector. It is indispensable for pseudo-classes, pseudo-elements, and state modifications.\n\n## Pseudo-Classes & Pseudo-Elements\n\n```scss_not\n.btn {\n  display: inline-block;\n  padding: 10px 20px;\n  background-color: #6366f1;\n  color: white;\n\n  &:hover {\n    background-color: #4f46e5;\n  }\n\n  &:active {\n    transform: translateY(1px);\n  }\n\n  &::after {\n    content: ' →';\n  }\n}\n```"
+        },
+        {
+            "id": "sass_b_8",
+            "type": "content",
+            "title": "BEM Methodology with &",
+            "content": "# BEM Naming with the Parent Selector 🏗️\n\nThe `&` operator can append suffixes directly to the parent selector name, making Block-Element-Modifier (BEM) architectures incredibly clean.\n\n```scss_not\n// BEM SCSS with &\n.card {\n  background: #ffffff;\n  border-radius: 8px;\n\n  // Element: .card__header\n  &__header {\n    padding: 16px;\n    font-weight: bold;\n  }\n\n  // Element: .card__body\n  &__body {\n    padding: 16px;\n  }\n\n  // Modifier: .card--featured\n  &--featured {\n    border: 2px solid gold;\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);\n  }\n}\n```\n\n> ⚡ **Compilation:** Compiles cleanly to `.card__header`, `.card__body`, and `.card--featured` with zero redundant typing!"
+        },
+        {
+            "id": "sass_b_quiz_2",
+            "type": "quiz",
+            "title": "Parent Selector Check",
+            "content": "Test your knowledge of the Sass ampersand `&` operator!",
+            "quizQuestion": "In SCSS, what does the `&` symbol represent when used inside a selector block?",
+            "quizOptions": [
+                "A bitwise AND operation on colors",
+                "The current parent selector string",
+                "A global variable reference",
+                "The HTML <body> tag"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "sass_b_10",
+            "type": "content",
+            "title": "Contextual Nesting & Ancestor Qualification",
+            "content": "# Contextual Nesting with Parent Selector 🔀\n\nYou can place `&` on the right side of a selector to style an element based on its ancestor context.\n\n```scss_not\n.btn {\n  background: #2563eb;\n  color: white;\n\n  // When .btn is inside a .dark-theme container:\n  .dark-theme & {\n    background: #60a5fa;\n    color: #0f172a;\n  }\n\n  // When .btn has the .is-loading class:\n  &.is-loading {\n    opacity: 0.6;\n    pointer-events: none;\n  }\n}\n```\n\n## Compiles To:\n```css_not\n.btn { background: #2563eb; color: white; }\n.dark-theme .btn { background: #60a5fa; color: #0f172a; }\n.btn.is-loading { opacity: 0.6; pointer-events: none; }\n```"
+        },
+        {
+            "id": "sass_b_11",
+            "type": "content",
+            "title": "Nesting Properties",
+            "content": "# Nested CSS Properties 📂\n\nMany CSS properties share the same prefix as a namespace, like `font-`, `margin-`, or `background-`. Sass lets you nest them directly!\n\n```scss_not\n.article-text {\n  // Nested font properties\n  font: {\n    family: 'Inter', sans-serif;\n    size: 1.125rem;\n    weight: 500;\n    style: italic;\n  }\n\n  // Nested margin properties\n  margin: {\n    top: 20px;\n    bottom: 40px;\n  }\n}\n```\n\n## Compiles To:\n```css_not\n.article-text {\n  font-family: 'Inter', sans-serif;\n  font-size: 1.125rem;\n  font-weight: 500;\n  font-style: italic;\n  margin-top: 20px;\n  margin-bottom: 40px;\n}\n```"
+        },
+        {
+            "id": "sass_b_12",
+            "type": "content",
+            "title": "Interpolation with #{}",
+            "content": "# String Interpolation with `#{}` 🧵\n\nInterpolation lets you inject variables anywhere Sass expressions normally wouldn't be evaluated, including **selector names**, **property names**, and **media queries**.\n\n## 1. Dynamic Selectors\n\n```scss_not\n$theme-name: 'cyberpunk';\n\n.theme-#{$theme-name} {\n  background-color: #0d0221;\n  color: #00f0ff;\n}\n```\n\n## 2. Dynamic Property Names\n\n```scss_not\n$side: 'left';\n\n.callout {\n  border-#{$side}: 4px solid #ef4444;\n}\n```\n\n## 3. Media Queries\n\n```scss_not\n$tablet-min: 768px;\n\n@media (min-width: #{$tablet-min}) {\n  .container { max-width: 720px; }\n}\n```"
+        },
+        {
+            "id": "sass_b_13",
+            "type": "content",
+            "title": "Sass Data Types",
+            "content": "# Sass Data Types Under the Hood 🔬\n\nSass supports 8 distinct first-class data types:\n\n1. **Numbers**: `12px`, `1.5`, `100%`, `2rem` (supports units)\n2. **Strings**: Quoted (`\"Helvetica\"`) or unquoted (`sans-serif`)\n3. **Colors**: `#6366f1`, `rgb(99, 102, 241)`, `hsl(240, 80%, 65%)`\n4. **Booleans**: `true`, `false`\n5. **Null**: `null` (representing an empty value; properties evaluated to `null` are omitted from compiled CSS)\n6. **Lists**: Space- or comma-separated values (`10px 20px 30px`, `apple, banana, cherry`)\n7. **Maps**: Key-value pairs (`(\"sm\": 640px, \"md\": 768px)`)\n8. **Function References**: Returned by `get-function()`"
+        },
+        {
+            "id": "sass_b_14",
+            "type": "content",
+            "title": "Lists and Maps in Sass",
+            "content": "# Working with Lists & Maps 🗺️\n\nLists and maps form the backbone of design tokens in Sass.\n\n## Lists (Arrays)\n\n```scss_not\n$sizes: 12px, 14px, 16px, 18px, 24px;\n$first-size: nth($sizes, 1); // Note: Sass lists are 1-INDEXED (returns 12px)\n$total-sizes: length($sizes); // 5\n```\n\n## Maps (Key-Value Objects)\n\n```scss_not\n$theme-colors: (\n  'primary': #4f46e5,\n  'success': #10b981,\n  'warning': #f59e0b,\n  'danger':  #ef4444\n);\n\n$btn-color: map-get($theme-colors, 'primary'); // #4f46e5\n```\n\n> ⚠️ **Gotcha:** Sass collections are **1-indexed**, meaning the first item is at index `1`, not `0`!"
+        },
+        {
+            "id": "sass_b_15",
+            "type": "content",
+            "title": "Over-Nesting: The Inception Rule",
+            "content": "# The Danger of Over-Nesting (The Inception Rule) ⚠️\n\nWhile nesting is convenient, nesting too deeply ruins stylesheet maintainability and inflates specificity.\n\n## The Inception Anti-Pattern ❌\n\n```scss_not\n// BAD: 5 levels deep!\nbody {\n  .site-header {\n    .main-nav {\n      ul {\n        li {\n          a {\n            color: red; // Specificity: body .site-header .main-nav ul li a (0-0-6!)\n          }\n        }\n      }\n    }\n  }\n}\n```\n\n## The 3-Level Golden Rule ✅\n\nNever nest more than **3 levels deep**. Use modular BEM classes (`.main-nav__link`) instead of deeply nested descendant selectors."
+        },
+        {
+            "id": "sass_b_16",
+            "type": "content",
+            "title": "Comments in Sass: Silent vs Loud",
+            "content": "# Sass Comments: Silent vs Preserved 💬\n\nSass supports two distinct comment formats with differing compilation behavior.\n\n## 1. Single-Line Silent Comments (`//`)\nThese comments are **completely stripped out** during compilation. They will never appear in the compiled `.css` file:\n\n```scss_not\n// This is a private developer note.\n// It will NOT be included in the compiled CSS!\n$accent: #ec4899;\n```\n\n## 2. Multi-Line Loud Comments (`/* ... */`)\nStandard CSS comments are preserved in unminified CSS output:\n\n```scss_not\n/*!\n * Copyright (c) 2026 Acme Corp. All rights reserved.\n * The exclamation mark (!) forces preservation even in compressed/minified CSS!\n */\n```"
+        },
+        {
+            "id": "sass_b_17",
+            "type": "content",
+            "title": "Real-World Component: Modern Card in SCSS",
+            "content": "# Real-World Example: BEM Card Component 🃏\n\nHere is how variables, nesting, `&`, and pseudo-classes combine in production:\n\n```scss_not\n$card-bg: #ffffff;\n$card-radius: 12px;\n$card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);\n$card-border: 1px solid #e2e8f0;\n\n.product-card {\n  background-color: $card-bg;\n  border-radius: $card-radius;\n  border: $card-border;\n  box-shadow: $card-shadow;\n  overflow: hidden;\n  transition: transform 0.2s ease, box-shadow 0.2s ease;\n\n  &:hover {\n    transform: translateY(-4px);\n    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);\n  }\n\n  &__media {\n    width: 100%;\n    height: 200px;\n    object-fit: cover;\n  }\n\n  &__content {\n    padding: 20px;\n  }\n\n  &__title {\n    font-size: 1.25rem;\n    font-weight: 700;\n    margin-bottom: 8px;\n  }\n}\n```"
+        },
+        {
+            "id": "sass_b_quiz_3",
+            "type": "quiz",
+            "title": "Sass Indexing & Comments Quiz",
+            "content": "Test your knowledge of Sass nuances!",
+            "quizQuestion": "What is the first index position in a Sass list `('red', 'green', 'blue')`?",
+            "quizOptions": [
+                "0",
+                "1",
+                "-1",
+                "None; lists do not support indexing"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "sass_b_19",
+            "type": "content",
+            "title": "Compilation Tools: Dart Sass vs Legacy Node-Sass",
+            "content": "# The Compiler: Dart Sass 🎯\n\nHistorically, LibSass and `node-sass` were popular C++ wrappers. Today, **Dart Sass** is the sole official, actively maintained implementation of Sass.\n\n## Running Dart Sass via CLI\n\n```bash_not\n# Install modern Dart Sass\nnpm install -D sass\n\n# Compile input.scss to output.css with source maps\nnpx sass src/main.scss dist/style.css --watch --style=compressed\n```\n\n> ⚠️ **Important:** `node-sass` and `LibSass` are officially deprecated. They do not support `@use`, `@forward`, or modern Sass math features!"
+        },
+        {
+            "id": "sass_b_20",
+            "type": "content",
+            "title": "Summary: Variables & Nesting",
+            "content": "# Summary: Variables & Nesting 📋\n\n## Key Takeaways\n- **Variables**: Prefix with `$` for colors, typography, and numbers. Scope is block-level unless `!global` is specified.\n- **`!default`**: Allows consumers and theme switchers to override library tokens.\n- **Nesting**: Mimics HTML DOM hierarchy. Keep nesting below 3 levels deep.\n- **Parent Selector `&`**: Indispensable for `:hover`, `&__element` (BEM), and ancestor styling (`.dark &`).\n- **Interpolation `#{}`**: Injects variables into selectors, media queries, and property names.\n- **Lists are 1-indexed**: First element is accessed via `nth($list, 1)`.\n\nNext: Learn how to modularize large projects using Partials, `@use`, and `@forward`! 📂"
+        },
+        {
+            "id": "sass_b_21",
+            "type": "content",
+            "title": "Next Steps: Partials & Modules",
+            "content": "# Ahead: Partials & The Modern Module System 📂\n\nNow that you know variables and nesting, you will learn how to structure large-scale production stylesheets.\n\n## Topics in the Next Module:\n- **Partials**: The `_filename.scss` naming convention\n- **The Death of `@import`**: Why `@import` was deprecated\n- **The `@use` Rule**: Encapsulated namespaces (`theme.$color`)\n- **The `@forward` Rule**: Barrel files and public API facades\n- **Built-in Modules**: `sass:math`, `sass:color`, `sass:string`\n\nLet's master modular Sass architectures! 🚀"
+        }
+    ]
+}

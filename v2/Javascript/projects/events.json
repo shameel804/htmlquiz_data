@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Registering and Removing Event Listeners",
+    "ques": "Explain the three arguments of `addEventListener(type, listener, options)`. Demonstrate how to register and cleanly remove a named event listener to prevent memory leaks.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const downloadButton = document.getElementById(\"download-btn\");\n\n// Named event handler function\nfunction onDownloadClick(event) {\n  console.log(\"Download initiated...\");\n  \n  // Remove listener after first successful download\n  downloadButton.removeEventListener(\"click\", onDownloadClick);\n  downloadButton.textContent = \"Download Complete\";\n}\n\n// Attach listener with { once: true } option (alternative to manual removal)\ndownloadButton.addEventListener(\"click\", onDownloadClick, { once: true });"
+    },
+    "explanation": "`removeEventListener` requires an identical reference to the function originally registered with `addEventListener`. Anonymous arrow functions cannot be removed individually."
+  },
+  {
+    "title": "Event Propagation: Capturing and Bubbling",
+    "ques": "Explain the three phases of the **DOM Event Flow**: **Capturing Phase**, **Target Phase**, and **Bubbling Phase**. Show how `event.stopPropagation()` stops event bubbling.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const outerCard = document.getElementById(\"card-container\");\nconst innerButton = document.getElementById(\"favorite-star\");\n\n// Outer card click handler\nouterCard.addEventListener(\"click\", () => {\n  console.log(\"Card clicked -> Navigating to product details page...\");\n});\n\n// Inner star icon button handler\ninnerButton.addEventListener(\"click\", (event) => {\n  // STOP BUBBLING: Prevents the click from bubbling up to the outer card\n  event.stopPropagation();\n  \n  console.log(\"Item added to favorites without navigating away!\");\n});"
+    },
+    "explanation": "Events travel down from `window` through the DOM hierarchy during the capture phase, reach the target, and bubble back up through parent ancestors. `stopPropagation()` stops upward bubbling."
+  },
+  {
+    "title": "Event Delegation Pattern",
+    "ques": "What is the **Event Delegation** pattern, and why is it essential for performance when managing dynamic lists? Write a code sample handling clicks on thousands of dynamically added list items using a single parent listener.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const listContainer = document.getElementById(\"todo-list\");\n\n// Attach ONLY ONE event listener on the parent container\nlistContainer.addEventListener(\"click\", (event) => {\n  // Check if the clicked target (or closest ancestor) is a delete button\n  const deleteBtn = event.target.closest(\".delete-item-btn\");\n  \n  if (deleteBtn && listContainer.contains(deleteBtn)) {\n    const listItem = deleteBtn.closest(\"li\");\n    const itemId = listItem.dataset.id;\n    console.log(`Deleting item with ID: ${itemId}`);\n    listItem.remove();\n  }\n});"
+    },
+    "explanation": "Event delegation takes advantage of event bubbling by placing a single handler on a common parent. This eliminates memory overhead and automatically supports dynamically added child items."
+  },
+  {
+    "title": "Preventing Default Actions with preventDefault()",
+    "ques": "Explain the purpose of **`event.preventDefault()`**. Write a form submission listener that validates inputs with JavaScript before allowing network transmission.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const registrationForm = document.getElementById(\"signup-form\");\n\nregistrationForm.addEventListener(\"submit\", (event) => {\n  // PREVENT DEFAULT: Stops the browser from executing its native form reload/POST navigation\n  event.preventDefault();\n\n  const emailInput = document.getElementById(\"user-email\");\n  \n  if (!emailInput.value.includes(\"@\")) {\n    alert(\"Please provide a valid email address.\");\n    return;\n  }\n\n  // Perform asynchronous fetch API request without refreshing the page\n  console.log(\"Submitting form data asynchronously via AJAX...\");\n});"
+    },
+    "explanation": "`event.preventDefault()` cancels the browser's default action associated with an event (such as following links, submitting forms, or opening context menus)."
+  }
+]

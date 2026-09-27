@@ -1,0 +1,159 @@
+{
+    "id": "learn_html_basic",
+    "topicId": "basic",
+    "topicTitle": "HTML Basics",
+    "description": "Master the foundation of the web: tags, elements, attributes, and document structure.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "html_basic_1",
+            "type": "content",
+            "title": "Welcome to HTML Basics",
+            "content": "# Welcome to HTML Basics 🌐\n\nHyperText Markup Language (**HTML**) is the foundational building block of the World Wide Web. It defines the structure and meaning of web content.\n\n## What you'll master in this module:\n- 🏷️ **Tags & Elements** - Opening tags, closing tags, self-closing elements, and void tags\n- ⚙️ **Attributes** - Modifying and providing essential metadata for elements\n- 🏗️ **Document Structure** - Standard HTML5 boilerplate, doctype, and rendering modes\n- 📝 **Core Text Formatting** - Headings, paragraphs, semantic emphasis, and text helpers\n- 📋 **HTML Entities & Comments** - Handling reserved characters and writing maintainable code\n\n> 💡 **Fun Fact:** HTML was originally created by Tim Berners-Lee at CERN in 1991 to help researchers share academic papers across networks!"
+        },
+        {
+            "id": "html_basic_2",
+            "type": "content",
+            "title": "HTML Tags Anatomy",
+            "content": "# Anatomy of an HTML Tag 🏷️\n\nAn HTML tag is a syntactic keyword enclosed in angle brackets (`<` and `>`).\n\n```html_not\n<p>Hello, World!</p>\n```\n\n## Tag Components:\n1. **Opening Tag (`<p>`)**: Marks the beginning of the element.\n2. **Element Content (`Hello, World!`)**: The actual text, media, or nested tags.\n3. **Closing Tag (`</p>`)**: Marks the end of the element with a forward slash `/`.\n\n> ⚠️ **Common Gotcha:** HTML tag names are case-insensitive, but modern web standards and style guides strictly enforce lowercase tags (e.g. `<p>` instead of `<P>`)."
+        },
+        {
+            "id": "html_basic_3",
+            "type": "content",
+            "title": "Elements vs Tags",
+            "content": "# Elements vs Tags: The Key Difference 🧱\n\nWhile developers often use the terms interchangeably, they have distinct technical definitions:\n\n- **Tag:** Just the markup itself (`<p>` or `</p>`).\n- **Element:** The complete unit consisting of the start tag, attributes, child content, and closing tag.\n\n```\n       <p class=\"intro\">Welcome to coding!</p>\n       └───┬───────────┘└─────────┬──────────┘\n           │                      │\n     Opening Tag               Content\n  (with attribute)\n```\n\n## Nested Elements\nElements can be placed inside other elements, creating a parent-child hierarchy:\n\n```html_not\n<div>\n  <h1>Article Title</h1>\n  <p>This is a paragraph with <strong>bold</strong> text.</p>\n</div>\n```"
+        },
+        {
+            "id": "html_basic_4",
+            "type": "content",
+            "title": "Void Elements (Self-Closing)",
+            "content": "# Void Elements (Self-Closing Tags) ⚡\n\nCertain HTML elements cannot contain any text or child elements. These are known as **void elements** (or empty elements).\n\n## Common Void Elements:\n- `<br>`: Line break\n- `<hr>`: Thematic break (horizontal rule)\n- `<img>`: Embeds an image\n- `<input>`: Form input field\n- `<meta>`: Document metadata\n- `<link>`: Links external resources like CSS\n\n```html_not\n<!-- Both syntaxes are valid in HTML5 -->\n<br>\n<br />\n```\n\n> 💡 **HTML5 Standard:** In HTML5, the trailing slash (`<br />`) is optional. Writing `<br>` or `<img src=\"pic.jpg\">` is completely valid and standard."
+        },
+        {
+            "id": "html_basic_quiz_1",
+            "type": "quiz",
+            "title": "Tag Fundamentals Check",
+            "content": "Test your understanding of tag syntax.",
+            "quizQuestion": "Which of the following is an example of a void (self-closing) element?",
+            "quizOptions": [
+                "<p>",
+                "<div>",
+                "<img>",
+                "<span>"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "html_basic_5",
+            "type": "content",
+            "title": "HTML Attributes Explained",
+            "content": "# HTML Attributes ⚙️\n\nAttributes provide additional information, configuration, or behavior for an HTML element.\n\n## Syntax Rules:\n- Attributes are **always** placed inside the **opening tag**.\n- Written as `name=\"value\"` pairs.\n- Values should always be wrapped in quotes (double quotes are industry standard).\n\n```html_not\n<a href=\"https://example.com\" target=\"_blank\" rel=\"noopener\">Visit Example</a>\n```\n\n### Breakdown:\n- `href`: Defines the hyperlink destination.\n- `target`: Specifies where to open the linked document (`_blank` opens a new tab).\n- `rel`: Sets security attributes (`noopener` prevents tab hijacking)."
+        },
+        {
+            "id": "html_basic_6",
+            "type": "content",
+            "title": "Global Attributes",
+            "content": "# Global Attributes 🌍\n\nGlobal attributes are universal properties that can be applied to **any** HTML element.\n\n| Attribute | Purpose | Example |\n| :--- | :--- | :--- |\n| `id` | Unique identifier on the page | `<div id=\"hero-banner\">` |\n| `class` | Reusable styling & selector hook | `<p class=\"text-bold active\">` |\n| `title` | Displays a hover tooltip | `<span title=\"Important info\">` |\n| `hidden` | Hides the element from display | `<div hidden>` |\n| `data-*` | Custom private data storage | `<button data-user-id=\"101\">` |\n| `tabindex`| Controls keyboard tab order | `<div tabindex=\"0\">` |\n\n> 🎯 **Best Practice:** An `id` must be strictly **unique** per page. If multiple elements need the same classification, always use `class`!"
+        },
+        {
+            "id": "html_basic_7",
+            "type": "content",
+            "title": "Boolean Attributes",
+            "content": "# Boolean Attributes 🔘\n\nBoolean attributes represent true/false states. If the attribute is present on an element, its value is considered **true**; if absent, it is **false**.\n\n```html_not\n<!-- Checked and disabled inputs -->\n<input type=\"checkbox\" checked>\n<button disabled>Cannot Click Me</button>\n<video autoplay loop muted></video>\n```\n\n## Explicit vs Implicit Syntax\nAll of these evaluate to true in modern browsers:\n- `<input required>` *(Preferred standard)*\n- `<input required=\"required\">`\n- `<input required=\"\">`\n\n> ⚠️ **Gotcha:** Writing `<button disabled=\"false\">` STILL disables the button because the attribute name `disabled` is present! To make it false, omit the attribute entirely."
+        },
+        {
+            "id": "html_basic_8",
+            "type": "content",
+            "title": "HTML5 Document Structure",
+            "content": "# HTML5 Document Structure 🏗️\n\nEvery valid HTML5 web page follows a standard hierarchical boilerplate.\n\n```html_not\n<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Document Title</title>\n  </head>\n  <body>\n    <h1>Hello World</h1>\n    <p>Page content goes here.</p>\n  </body>\n</html>\n```\n\n## Structure Hierarchy:\n- `<!DOCTYPE html>`: Declares document type to ensure standard mode rendering.\n- `<html>`: The root container element.\n- `<head>`: Container for document metadata (invisible to users).\n- `<body>`: Contains all visible user-facing content."
+        },
+        {
+            "id": "html_basic_9",
+            "type": "content",
+            "title": "The DOCTYPE & Quirks Mode",
+            "content": "# The DOCTYPE Declaration 📜\n\nThe `<!DOCTYPE html>` declaration tells web browsers which specification of HTML is being used.\n\n```html_not\n<!DOCTYPE html>\n```\n\n## Why is DOCTYPE Critical?\n- **Standards Mode:** When `<!DOCTYPE html>` is present at the very top (line 1), browsers render following modern W3C standards.\n- **Quirks Mode:** If the DOCTYPE is omitted or corrupted, the browser drops into \"Quirks Mode\" to emulate 1990s Netscape/IE bugs, breaking CSS box model layouts and font sizes!\n\n> 💡 **Notice:** `<!DOCTYPE html>` is not an HTML tag; it is an instruction to the web browser engine."
+        },
+        {
+            "id": "html_basic_quiz_2",
+            "type": "quiz",
+            "title": "Document Structure Check",
+            "content": "Validate your boilerplate knowledge.",
+            "quizQuestion": "What happens if <!DOCTYPE html> is omitted from an HTML document?",
+            "quizOptions": [
+                "The browser throws a fatal crash",
+                "The browser renders in Quirks Mode",
+                "All CSS stylesheets are ignored",
+                "JavaScript execution is permanently blocked"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_basic_10",
+            "type": "content",
+            "title": "The Head & Metadata",
+            "content": "# The <head> and Metadata 🧠\n\nThe `<head>` element holds meta-information about the webpage that browsers and search engines read.\n\n```html_not\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta name=\"description\" content=\"Free comprehensive HTML tutorial\">\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <link rel=\"icon\" href=\"favicon.ico\">\n  <title>Mastering HTML Basics</title>\n</head>\n```\n\n## Key Head Tags:\n- `<meta charset=\"UTF-8\">`: Specifies character encoding to support all international characters and emojis.\n- `<meta name=\"viewport\" ...>`: Essential for responsive web design on mobile devices.\n- `<title>`: Shown in the browser tab and search engine search results (SERP)."
+        },
+        {
+            "id": "html_basic_11",
+            "type": "content",
+            "title": "Headings Hierarchy (h1 - h6)",
+            "content": "# Headings Hierarchy (h1 - h6) 📑\n\nHTML provides 6 levels of section headings, from `<h1>` (highest importance) down to `<h6>` (lowest).\n\n```html_not\n<h1>Main Page Topic (Use once per page)</h1>\n<h2>Major Section</h2>\n<h3>Sub-section</h3>\n<h4>Detailed topic</h4>\n<h5>Minor detail</h5>\n<h6>Deep footnote topic</h6>\n```\n\n## Best Practices for SEO & Accessibility:\n- ✅ Use exactly **one** `<h1>` per page representing the page title.\n- ✅ Never skip heading levels (e.g., jump from `<h2>` directly to `<h4>`).\n- ❌ Do **not** use headings simply to make text bigger; use CSS font sizing instead."
+        },
+        {
+            "id": "html_basic_12",
+            "type": "content",
+            "title": "Paragraphs & Text Flow",
+            "content": "# Paragraphs & Text Flow 📝\n\nThe `<p>` element defines a block-level paragraph of text.\n\n```html_not\n<p>\n  HTML ignores multiple consecutive spaces and line breaks.\n  All whitespace is collapsed into a single space by default!\n</p>\n```\n\n## Controlling Breaks:\n- `<br>`: Forces a line break within a paragraph without starting a new block margin.\n- `<hr>`: Creates a thematic horizontal rule separating sections.\n\n```html_not\n<p>First Line<br>Second Line after a manual break.</p>\n<hr>\n<p>New topic begins below the horizontal line.</p>\n```"
+        },
+        {
+            "id": "html_basic_13",
+            "type": "content",
+            "title": "Preformatted Text & Code",
+            "content": "# Preformatted Text & Code Blocks 💻\n\nWhen you need to preserve exact whitespace, tabs, and indentation, use the `<pre>` tag.\n\n```html_not\n<pre>\n  Item       Qty     Price\n  ------------------------\n  Keyboard     1     $49.99\n  Mouse        2     $19.99\n</pre>\n```\n\n## Inline Code with `<code>`\nFor code snippets inside text, use `<code>`:\n\n```html_not\n<p>To check the Git status, run <code>git status</code> in your terminal.</p>\n```\n\nWhen displaying multi-line code blocks, combine them:\n```html_not\n<pre><code>function greet() {\n  console.log(\"Hello!\");\n}</code></pre>\n```"
+        },
+        {
+            "id": "html_basic_14",
+            "type": "content",
+            "title": "Semantic Text Formatting",
+            "content": "# Semantic Text Formatting ✍️\n\nHTML provides tags that convey semantic importance rather than just visual styling.\n\n| Semantic Tag | Visual Style | Semantic Meaning |\n| :--- | :--- | :--- |\n| `<strong>` | **Bold** | High importance or seriousness |\n| `<em>` | *Italic* | Stress emphasis (spoken inflection) |\n| `<mark>` | Highlighted | Marked or highlighted for relevance |\n| `<del>` | ~~Strikethrough~~ | Deleted or retracted text |\n| `<ins>` | Underlined | Newly inserted text |\n| `<sub>` | H₂O (subscript)| Subscript baseline offset |\n| `<sup>` | E=mc² (superscript)| Superscript exponent offset |\n\n> 🎯 **Accessibility Tip:** Screen readers announce `<strong>` and `<em>` with vocal inflection, whereas `<b>` and `<i>` are purely stylistic tags without semantic meaning."
+        },
+        {
+            "id": "html_basic_quiz_3",
+            "type": "quiz",
+            "title": "Text Semantics Check",
+            "content": "Verify your semantic HTML understanding.",
+            "quizQuestion": "Which tag should be used to indicate strong importance with assistive technology support?",
+            "quizOptions": [
+                "<b>",
+                "<strong>",
+                "<mark>",
+                "<em>"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_basic_15",
+            "type": "content",
+            "title": "HTML Entities & Special Characters",
+            "content": "# HTML Entities & Characters 🔣\n\nBecause characters like `<` and `>` are reserved for HTML syntax, you must use **HTML entities** to display them as regular text.\n\n## Common HTML Entities:\n| Character | Entity Name | Entity Number | Meaning |\n| :--- | :--- | :--- | :--- |\n| `<` | `&lt;` | `&#60;` | Less than |\n| `>` | `&gt;` | `&#62;` | Greater than |\n| `&` | `&amp;` | `&#38;` | Ampersand |\n| `\"` | `&quot;` | `&#34;` | Double quote |\n| `'` | `&apos;` | `&#39;` | Single quote / apostrophe |\n| ` ` | `&nbsp;` | `&#160;` | Non-breaking space |\n| `©` | `&copy;` | `&#169;` | Copyright symbol |\n\n```html_not\n<p>To write an opening tag, type &lt;div&gt; &amp; close with &lt;/div&gt;.</p>\n<p>Copyright &copy; 2026 CodeCerebrum. All rights reserved.</p>\n```"
+        },
+        {
+            "id": "html_basic_16",
+            "type": "content",
+            "title": "HTML Comments & Documentation",
+            "content": "# HTML Comments 💬\n\nComments allow developers to document code, explain complex layouts, or temporarily disable elements without deleting them.\n\n```html_not\n<!-- This is a single-line HTML comment -->\n\n<!--\n  =========================================\n  HEADER NAVIGATION SECTION\n  Created: September 2026\n  =========================================\n-->\n<header>\n  <!-- <button>Old Login Button</button> -->\n  <a href=\"/login\" class=\"btn\">Sign In</a>\n</header>\n```\n\n## Rules for Comments:\n- Browser rendering engines completely ignore everything between `<!--` and `-->`.\n- Comments are **visible** in the client-side page source (never put API keys or passwords inside comments!)."
+        },
+        {
+            "id": "html_basic_17",
+            "type": "content",
+            "title": "Block vs Inline Elements",
+            "content": "# Block vs Inline Elements 📦\n\nTraditional HTML elements fall into two primary display categories:\n\n## Block-Level Elements:\n- Always start on a **new line**.\n- Take up the full available width of their parent container.\n- Examples: `<div>`, `<p>`, `<h1>`-`<h6>`, `<header>`, `<section>`, `<ul>`.\n\n## Inline Elements:\n- Do **not** start on a new line; flow along with text.\n- Only occupy as much width as necessary for their content.\n- Examples: `<span>`, `<a>`, `<strong>`, `<em>`, `<img>`, `<code>`.\n\n```html_not\n<!-- Block element holding inline elements -->\n<p>This is a block element with an <a href=\"#\">inline link</a> inside it.</p>\n```"
+        },
+        {
+            "id": "html_basic_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Congratulations! Module Complete 🎉\n\nYou now possess a solid, standardized foundation in HTML core fundamentals!\n\n## Key Takeaways:\n- ✅ **Tags vs Elements:** Tags delimit markup; elements represent the whole unit.\n- ✅ **Attributes:** Added to opening tags to provide config, IDs, and metadata.\n- ✅ **Standard Structure:** `<!DOCTYPE html>`, `<html>`, `<head>`, and `<body>`.\n- ✅ **Text Semantics:** Use `<h1>`-`<h6>`, `<p>`, `<strong>`, and `<em>` appropriately.\n- ✅ **Entities:** Escape reserved symbols with `&lt;`, `&gt;`, and `&amp;`.\n\n## Up Next:\nIn the next module, you will learn how to build interactive user interfaces with **HTML Forms, Inputs, Buttons, and Validation**! 🚀"
+        }
+    ]
+}

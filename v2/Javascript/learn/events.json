@@ -1,0 +1,159 @@
+{
+    "id": "learn_js_events",
+    "topicId": "events",
+    "topicTitle": "JavaScript Events",
+    "description": "Master event listeners, target, bubbling, delegation, and preventDefault.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "js_ev_1",
+            "type": "content",
+            "title": "Welcome to JavaScript Events",
+            "content": "# JavaScript Events ⚡\n\nEvents are notifications emitted by the browser whenever something of interest occurs—a user clicking a button, pressing a keyboard key, scrolling, submitting a form, or resizing the browser window.\n\n## What you'll master:\n- 👂 **Event Listeners** - `addEventListener` and `removeEventListener`\n- 🎯 **The Event Object** - `event.target`, `event.currentTarget`, and properties\n- 🌊 **Event Propagation** - Capturing, Target, and Bubbling phases\n- 🛑 **Preventing Default Actions** - `event.preventDefault()` and `stopPropagation()`\n- 🚀 **Event Delegation** - High-performance pattern for dynamic interfaces"
+        },
+        {
+            "id": "js_ev_2",
+            "type": "content",
+            "title": "Adding Event Listeners",
+            "content": "# Adding Event Listeners (`addEventListener`) 👂\n\nThe modern standard way to attach an event handler to a DOM node:\n\n```javascript_not\nconst btn = document.querySelector('#submit-btn');\n\nbtn.addEventListener('click', function(event) {\n  console.log(\"Button clicked!\");\n});\n```\n\n## Why `addEventListener` is Superior to `onclick`:\n1. Allows attaching **multiple independent listeners** to the exact same event.\n2. Supports fine-grained controls (options like `{ once: true }` and capturing).\n3. Works cleanly with `removeEventListener` for memory management."
+        },
+        {
+            "id": "js_ev_3",
+            "type": "content",
+            "title": "Common Event Types",
+            "content": "# Common Event Types 📋\n\n| Category | Event Name | When it Triggers |\n| :--- | :--- | :--- |\n| **Mouse** | `click`, `dblclick`, `mouseenter`, `mouseleave` | User clicks or moves mouse |\n| **Keyboard** | `keydown`, `keyup` | User presses or releases a key |\n| **Form** | `submit`, `input`, `change`, `focus`, `blur` | Form actions, text changes, focus |\n| **Window** | `load`, `DOMContentLoaded`, `resize`, `scroll` | Page ready, viewport resize, scrolling |\n\n```javascript_not\n// Triggered on every keystroke in a search input\nsearchInput.addEventListener('input', (e) => {\n  console.log(\"User typed:\", e.target.value);\n});\n```"
+        },
+        {
+            "id": "js_ev_4",
+            "type": "content",
+            "title": "The Event Object (event)",
+            "content": "# The Event Object (`e`) 🎯\n\nWhen an event fires, the browser automatically passes an **Event Object** as the first argument to your handler callback:\n\n```javascript_not\nbtn.addEventListener('click', (event) => {\n  console.log(\"Event type:\", event.type);          // \"click\"\n  console.log(\"Target element:\", event.target);     // The clicked button\n  console.log(\"Mouse X coordinate:\", event.clientX);\n  console.log(\"Mouse Y coordinate:\", event.clientY);\n});\n```\n\nFor keyboard events:\n```javascript_not\nwindow.addEventListener('keydown', (e) => {\n  console.log(\"Key pressed:\", e.key); // e.g. \"Enter\", \"Escape\"\n});\n```"
+        },
+        {
+            "id": "js_ev_quiz_1",
+            "type": "quiz",
+            "title": "Event Basics Quiz",
+            "content": "Test your knowledge of event listeners.",
+            "quizQuestion": "Which property on the event object identifies the exact element that triggered the event?",
+            "quizOptions": [
+                "event.origin",
+                "event.target",
+                "event.source",
+                "event.element"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_ev_5",
+            "type": "content",
+            "title": "target vs currentTarget",
+            "content": "# `event.target` vs `event.currentTarget` ⚖️\n\nThis distinction is crucial for event delegation:\n\n- **`event.target`**: The actual **originating element** that was clicked (could be an inner `<span>` or icon inside the button).\n- **`event.currentTarget`**: The element to which the **event listener was attached**!\n\n```html_not\n<button id=\"save-btn\">\n  <span class=\"icon\">💾</span> Save\n</button>\n```\n\n```javascript_not\ndocument.getElementById('save-btn').addEventListener('click', (e) => {\n  console.log(\"Clicked:\", e.target);        // Could be <span class=\"icon\">\n  console.log(\"Listener on:\", e.currentTarget); // Always <button id=\"save-btn\">\n});\n```"
+        },
+        {
+            "id": "js_ev_6",
+            "type": "content",
+            "title": "Preventing Default Actions",
+            "content": "# Preventing Default Actions (`preventDefault`) 🛑\n\nMany HTML elements have built-in default browser behaviors:\n- Submitting a form reloads the page.\n- Clicking an `<a>` link navigates to a new URL.\n- Right-clicking opens the browser context menu.\n\nCall `event.preventDefault()` to stop the browser's default behavior:\n\n```javascript_not\nconst form = document.querySelector('#login-form');\n\nform.addEventListener('submit', (e) => {\n  e.preventDefault(); // Prevents page reload!\n  \n  // Now submit form data asynchronously via fetch API!\n  console.log(\"Form validated and ready for async AJAX submit!\");\n});\n```"
+        },
+        {
+            "id": "js_ev_7",
+            "type": "content",
+            "title": "The 3 Phases of Event Propagation",
+            "content": "# The 3 Phases of Event Propagation 🌊\n\nWhen you click an element nested deep in the page, the event travels in 3 distinct phases:\n\n```\n1. CAPTURING PHASE (Window down to Target)\n   Window ──► Document ──► <body> ──► <div> ──► [ Button ]\n                                                     │\n2. TARGET PHASE (Fires on the actual button) ◄───────┘\n                                                     │\n3. BUBBLING PHASE (Target bubbles back up to Window) ◄── (Default!)\n   Window ◄── Document ◄── <body> ◄── <div> ◄── [ Button ]\n```\n\nBy default, all `addEventListener` callbacks listen during the **Bubbling Phase** (traveling upwards)."
+        },
+        {
+            "id": "js_ev_8",
+            "type": "content",
+            "title": "Stopping Propagation",
+            "content": "# Stopping Propagation (`stopPropagation`) ✋\n\nSometimes you want to handle an event on a child element without allowing it to bubble up to parent containers:\n\n```javascript_not\nchildBtn.addEventListener('click', (e) => {\n  e.stopPropagation(); // Stops the event from bubbling up to parent cards!\n  console.log(\"Child button handled.\");\n});\n\nparentCard.addEventListener('click', () => {\n  console.log(\"Parent card clicked!\"); // Will NOT fire when childBtn is clicked!\n});\n```"
+        },
+        {
+            "id": "js_ev_quiz_2",
+            "type": "quiz",
+            "title": "Propagation Quiz",
+            "content": "Test your propagation knowledge.",
+            "quizQuestion": "Which method stops an event from bubbling up the DOM tree to parent listeners?",
+            "quizOptions": [
+                "event.preventDefault()",
+                "event.stopPropagation()",
+                "event.halt()",
+                "event.cancelBubble()"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_ev_9",
+            "type": "content",
+            "title": "Event Delegation: The Power Pattern",
+            "content": "# Event Delegation: High-Performance Architecture 🚀\n\nImagine you have a list of 1,000 items. Attaching 1,000 separate event listeners wastes huge amounts of device memory!\n\n**Event Delegation** attaches a **single listener** to the parent container and leverages event bubbling:\n\n```html_not\n<ul id=\"todo-list\">\n  <li>Buy Groceries <button class=\"delete\">✕</button></li>\n  <li>Walk Dog <button class=\"delete\">✕</button></li>\n</ul>\n```\n\n```javascript_not\nconst todoList = document.getElementById('todo-list');\n\ntodoList.addEventListener('click', (e) => {\n  // Check if the clicked target was a delete button\n  if (e.target.classList.contains('delete')) {\n    const item = e.target.closest('li');\n    item.remove();\n  }\n});\n```"
+        },
+        {
+            "id": "js_ev_10",
+            "type": "content",
+            "title": "Why Delegation Solves Dynamic Elements",
+            "content": "# Dynamic Elements with Event Delegation 🪄\n\nIf you add new `<li>` items to the list later via JavaScript, event delegation **automatically works on the new items** without needing to attach new listeners!\n\n```javascript_not\n// Add a new item dynamically\nconst newItem = document.createElement('li');\nnewItem.innerHTML = 'Write Code <button class=\"delete\">✕</button>';\ntodoList.append(newItem);\n\n// The delete button on newItem works IMMEDIATELY because the parent listener catches its bubble!\n```"
+        },
+        {
+            "id": "js_ev_11",
+            "type": "content",
+            "title": "Removing Event Listeners",
+            "content": "# Removing Event Listeners (`removeEventListener`) 🧹\n\nTo prevent memory leaks when components unmount, remove event listeners:\n\n```javascript_not\nfunction handleWindowResize() {\n  console.log(\"Resized to:\", window.innerWidth);\n}\n\n// 1. Add listener\nwindow.addEventListener('resize', handleWindowResize);\n\n// 2. Remove listener (must reference the exact same named function!)\nwindow.removeEventListener('resize', handleWindowResize);\n```\n\n> ⚠️ **Anonymous Function Warning:** You **cannot** remove an anonymous arrow function (`() => {}`) because its reference is lost! Always use a named function if you intend to remove it later."
+        },
+        {
+            "id": "js_ev_12",
+            "type": "content",
+            "title": "Event Listener Options",
+            "content": "# Advanced Listener Options ⚙️\n\n`addEventListener` accepts a third options object parameter:\n\n```javascript_not\nbtn.addEventListener('click', handleClick, {\n  once: true,    // Listener fires exactly ONCE and automatically unbinds itself!\n  passive: true, // Guarantees handler will never call preventDefault() (Boosts scroll performance!)\n  capture: true  // Fires during the Capturing phase instead of Bubbling phase\n});\n```\n\n`passive: true` is crucial for `touchstart` and `scroll` events on mobile to eliminate touch lag!"
+        },
+        {
+            "id": "js_ev_13",
+            "type": "content",
+            "title": "Keyboard Events & Shortcuts",
+            "content": "# Keyboard Shortcuts & Keyboard Navigation ⌨️\n\nCreate keyboard shortcuts with `keydown`:\n\n```javascript_not\nwindow.addEventListener('keydown', (e) => {\n  // Check for Escape key to close modals\n  if (e.key === \"Escape\") {\n    closeModal();\n  }\n\n  // Check for Cmd + K or Ctrl + K (Search shortcut)\n  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === \"k\") {\n    e.preventDefault(); // Stop default browser search bar\n    openQuickSearch();\n  }\n});\n```"
+        },
+        {
+            "id": "js_ev_quiz_3",
+            "type": "quiz",
+            "title": "Delegation Quiz",
+            "content": "Test your knowledge of event delegation.",
+            "quizQuestion": "What browser mechanism makes Event Delegation possible?",
+            "quizOptions": [
+                "Event Hoisting",
+                "Event Bubbling",
+                "The Microtask Queue",
+                "Garbage Collection"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_ev_14",
+            "type": "content",
+            "title": "DOMContentLoaded vs Window Load",
+            "content": "# DOMContentLoaded vs Window Load ⏱️\n\n- **`DOMContentLoaded`**: Fires when HTML markup is completely parsed into the DOM tree. External images, stylesheets, and subframes may still be downloading. **(Best time to run UI scripts!)**\n- **`window.load`**: Fires only after the HTML, all external images, fonts, and stylesheets are **100% downloaded**.\n\n```javascript_not\ndocument.addEventListener('DOMContentLoaded', () => {\n  console.log(\"DOM is fully parsed and ready for manipulation!\");\n});\n```"
+        },
+        {
+            "id": "js_ev_15",
+            "type": "content",
+            "title": "Debouncing User Input Events",
+            "content": "# Performance: Debouncing Input Events ⏱️\n\nTyping fast in a search input can fire 20 events per second. **Debouncing** delays execution until the user stops typing for a set duration:\n\n```javascript_not\nfunction debounce(func, delay = 300) {\n  let timer;\n  return (...args) => {\n    clearTimeout(timer);\n    timer = setTimeout(() => func(...args), delay);\n  };\n}\n\nconst handleSearch = (e) => {\n  console.log(\"Searching API for:\", e.target.value);\n};\n\nsearchInput.addEventListener('input', debounce(handleSearch, 300));\n```"
+        },
+        {
+            "id": "js_ev_16",
+            "type": "content",
+            "title": "Custom Events (dispatching events)",
+            "content": "# Custom Events (`CustomEvent`) 📢\n\nComponents can emit custom application events:\n\n```javascript_not\nconst userCart = document.querySelector('#cart');\n\n// 1. Create a custom event with custom payload data\nconst cartUpdateEvent = new CustomEvent('cartUpdated', {\n  detail: { itemCount: 3, total: 89.99 }\n});\n\n// 2. Dispatch the event\nuserCart.dispatchEvent(cartUpdateEvent);\n\n// 3. Listen for the custom event elsewhere\ndocument.addEventListener('cartUpdated', (e) => {\n  console.log(`Cart now has ${e.detail.itemCount} items!`);\n});\n```"
+        },
+        {
+            "id": "js_ev_17",
+            "type": "content",
+            "title": "Event Security & Accessibility",
+            "content": "# Event Accessibility Best Practices ♿\n\n1. **Always pair Mouse events with Keyboard events:**\n   - If you listen for `click`, make sure keyboard users can activate it with Enter/Space.\n   - If you listen for `mouseenter`, also listen for `focus`.\n2. **Never break standard browser navigation:** Don't prevent default on standard links without good reason.\n3. **Clean up listeners:** Avoid memory leaks by unbinding unneeded listeners."
+        },
+        {
+            "id": "js_ev_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# JavaScript Events Mastered! 🌟\n\nYou now command the complete browser event system, propagation phases, and delegation patterns!\n\n## Key Takeaways:\n- ✅ **Listeners:** `addEventListener('event', handler, options)`.\n- ✅ **Event Object:** `e.target` is the clicked origin; `e.currentTarget` is the listener host.\n- ✅ **Prevent Defaults:** `e.preventDefault()` halts native actions (form reload, navigation).\n- ✅ **Bubbling:** Events bubble up through parent nodes towards the window.\n- ✅ **Event Delegation:** Attach a single listener to a parent to manage hundreds of dynamic children.\n\n## Up Next:\nIn the next module, master data structures: **JavaScript Objects and Arrays (Creation, Methods, and Destructuring)**! 🚀"
+        }
+    ]
+}

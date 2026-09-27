@@ -1,0 +1,41 @@
+[
+  {
+    "title": "HTML Tags and Syntax",
+    "ques": "Explain what **HTML tags** are, distinguish between opening, closing, and self-closing tags, and write a minimal HTML snippet containing a heading and an image tag.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Opening and closing tags wrap content -->\n<h1>Welcome to Web Development</h1>\n<p>This is a standard paragraph element.</p>\n\n<!-- Self-closing (void) tag without a separate closing tag -->\n<img src=\"banner.png\" alt=\"Application Banner\" />\n<hr />"
+    },
+    "explanation": "HTML tags define elements using angle brackets (`<tag>`). Standard elements require an opening tag and closing tag (`</tag>`), while void elements (like `<img>`, `<hr>`, `<br>`) do not hold child content and close immediately."
+  },
+  {
+    "title": "Understanding HTML Elements",
+    "ques": "Explain the difference between an **HTML Tag** and an **HTML Element**. Provide a diagram or snippet decomposing an element into its component parts.",
+    "answer": {
+      "type": "text",
+      "content": "### Deconstructing an HTML Element:\nAn **HTML Element** represents the complete node in the Document Object Model, comprising:\n1. **Opening Tag:** `<p class=\"highlight\">` (defines element type and attributes)\n2. **Content:** `Hello World!` (text or nested child elements)\n3. **Closing Tag:** `</p>` (terminates the element boundary)\n\n```html\n<p class=\"intro\">Learning Web Design</p>\n|--------------|-------------------|----|\n  Opening Tag         Content        Closing Tag\n|---------------------------------------|\n             Complete Element\n```\n* A **tag** is merely the markup notation (`<p>` or `</p>`).\n* An **element** is the complete entity from opening tag through closing tag."
+    },
+    "explanation": "Tags are the syntactic delimiters written in source code, whereas elements are the parsed DOM objects rendered in the browser tree."
+  },
+  {
+    "title": "HTML Attributes and Values",
+    "ques": "Explain what **HTML attributes** are and how they modify element behavior. Provide an anchor link element with `href`, `target`, `rel`, and `title` attributes.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Attributes provide metadata, behavior, and configurations to elements -->\n<a \n  href=\"https://developer.mozilla.org\" \n  target=\"_blank\" \n  rel=\"noopener noreferrer\" \n  title=\"Visit MDN Web Docs\"\n>\n  Explore Documentation\n</a>"
+    },
+    "explanation": "Attributes appear inside opening tags as `name=\"value\"` pairs. `href` specifies the destination URL, `target=\"_blank\"` opens a new tab, and `rel=\"noopener noreferrer\"` prevents tab-nabbing vulnerabilities."
+  },
+  {
+    "title": "Document Structure and the HTML5 Skeleton",
+    "ques": "Write a complete **HTML5 document skeleton**. Explain the role of `<!DOCTYPE html>`, the root `<html>` tag, `<head>`, metadata tags, and the `<body>` element.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Essential HTML Structure</title>\n</head>\n<body>\n  <header>\n    <h1>My First Website</h1>\n  </header>\n  <main>\n    <p>All visible page content is nested inside the body element.</p>\n  </main>\n  <footer>\n    <p>&copy; 2026 Educational App</p>\n  </footer>\n</body>\n</html>"
+    },
+    "explanation": "`<!DOCTYPE html>` informs the browser to render in standard mode. `<head>` contains machine-readable metadata and viewport settings, while `<body>` contains all visible rendered content."
+  }
+]

@@ -1,0 +1,159 @@
+{
+    "id": "learn_bs_components2",
+    "topicId": "bs_components2",
+    "topicTitle": "Interactive Components",
+    "description": "Learn Bootstrap 5 interactive components: responsive navbars, navs & tabs, modals, carousels, accordions, dropdowns, and offcanvas drawers.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "bs_comp2_1",
+            "type": "content",
+            "title": "Interactive Components Overview",
+            "content": "# Advanced & Interactive Components 📱🚀\n\nBootstrap 5 provides a powerful suite of JavaScript-driven interactive components. They can be initialized entirely via **HTML5 `data-bs-*` attributes** or programmatically via the **Bootstrap JavaScript API**.\n\n## Components in this Module:\n- **Navbars & Navs**: Responsive mobile drawer menus and tabbed interfaces\n- **Modals**: Accessible dialog boxes and lightbox overlays\n- **Carousels**: Slideshow banners with controls, indicators, and touch swiping\n- **Accordions**: Accessible expanding/collapsing FAQ panels\n- **Dropdowns**: Popover action menus\n- **Tooltips & Popovers**: Contextual information balloons\n- **Offcanvas**: Sliding sidebar drawers for mobile navigation"
+        },
+        {
+            "id": "bs_comp2_2",
+            "type": "content",
+            "title": "The Responsive Navbar",
+            "content": "# The Responsive Navbar 🧭\n\nThe Bootstrap Navbar is a responsive navigation wrapper that collapses into a hamburger menu on smaller screens.\n\n```html_not\n<nav class=\"navbar navbar-expand-lg bg-dark navbar-dark\">\n  <div class=\"container\">\n    <a class=\"navbar-brand fw-bold\" href=\"#\">DevSphere</a>\n    \n    <!-- Mobile Hamburger Toggle Button -->\n    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#mainNavbar\" aria-controls=\"mainNavbar\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    \n    <!-- Collapsible Content -->\n    <div class=\"collapse navbar-collapse\" id=\"mainNavbar\">\n      <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n        <li class=\"nav-item\"><a class=\"nav-link active\" href=\"#\">Home</a></li>\n        <li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">Docs</a></li>\n        <li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">Pricing</a></li>\n      </ul>\n      <button class=\"btn btn-primary btn-sm\">Sign In</button>\n    </div>\n  </div>\n</nav>\n```"
+        },
+        {
+            "id": "bs_comp2_3",
+            "type": "content",
+            "title": "Navbar Anatomy: Toggler & Expand",
+            "content": "# Navbar Breakpoints & Anatomy ⚙️\n\n## The `.navbar-expand-{breakpoint}` Rule\n\n- `.navbar-expand-lg`: Expands horizontally on `lg` (>= 992px); collapses into hamburger menu below `992px`.\n- `.navbar-expand-md`: Collapses below `768px`.\n- `.navbar-expand`: Never collapses (always desktop horizontal).\n\n## Color Schemes\n\n- `.navbar-light`: For light backgrounds (dark text/icon)\n- `.navbar-dark`: For dark backgrounds (light text/icon)"
+        },
+        {
+            "id": "bs_comp2_4",
+            "type": "content",
+            "title": "Navs & Tabs Component",
+            "content": "# Navs & Dynamic Tabs 📑\n\nSwitch between panels of content without full page reloads.\n\n```html_not\n<!-- Tab Navigation Header -->\n<ul class=\"nav nav-tabs\" id=\"myTab\" role=\"tablist\">\n  <li class=\"nav-item\" role=\"presentation\">\n    <button class=\"nav-link active\" id=\"home-tab\" data-bs-toggle=\"tab\" data-bs-target=\"#home\" type=\"button\" role=\"tab\">Home</button>\n  </li>\n  <li class=\"nav-item\" role=\"presentation\">\n    <button class=\"nav-link\" id=\"profile-tab\" data-bs-toggle=\"tab\" data-bs-target=\"#profile\" type=\"button\" role=\"tab\">Profile</button>\n  </li>\n</ul>\n\n<!-- Tab Content Panels -->\n<div class=\"tab-content p-3 border border-top-0 rounded-bottom\" id=\"myTabContent\">\n  <div class=\"tab-pane fade show active\" id=\"home\" role=\"tabpanel\">Home Tab Content</div>\n  <div class=\"tab-pane fade\" id=\"profile\" role=\"tabpanel\">Profile Tab Content</div>\n</div>\n```"
+        },
+        {
+            "id": "bs_comp2_quiz_1",
+            "type": "quiz",
+            "title": "Navbar Expansion Check",
+            "content": "Test your knowledge of Bootstrap Navbars!",
+            "quizQuestion": "What happens if you apply `.navbar-expand-lg` to a Bootstrap navbar?",
+            "quizOptions": [
+                "The navbar is hidden on desktop screens",
+                "The navbar renders horizontally on >= 992px screens and collapses into a hamburger toggle on smaller screens",
+                "The navbar takes 100% viewport height",
+                "The navbar expands only when clicked"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "bs_comp2_6",
+            "type": "content",
+            "title": "Modals: Structure & Triggering",
+            "content": "# Modals: Dialog Windows 💬\n\nModals are streamlined dialog prompts with built-in backdrop blurring and keyboard accessibility (`Escape` key close).\n\n```html_not\n<!-- Trigger Button -->\n<button type=\"button\" class=\"btn btn-primary\" data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\">\n  Launch Modal\n</button>\n\n<!-- Modal Structure -->\n<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-dialog-centered\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\" id=\"exampleModalLabel\">Confirmation</h5>\n        <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\n      </div>\n      <div class=\"modal-body\">\n        Are you sure you want to delete this repository? This action is permanent.\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Cancel</button>\n        <button type=\"button\" class=\"btn btn-danger\">Delete Now</button>\n      </div>\n    </div>\n  </div>\n</div>\n```"
+        },
+        {
+            "id": "bs_comp2_7",
+            "type": "content",
+            "title": "Modal Modifiers: Sizing & Static Backdrop",
+            "content": "# Modal Modifiers & Options ⚙️\n\n## Sizing Modifiers (on `.modal-dialog`)\n\n- `.modal-sm`: Compact alert modal (max-width: 300px)\n- Standard: (max-width: 500px)\n- `.modal-lg`: Large dialog (max-width: 800px)\n- `.modal-xl`: Extra large dialog (max-width: 1140px)\n- `.modal-fullscreen`: Takes over full viewport window\n\n## Static Backdrop\n\nPrevent closing when clicking outside the modal box with `data-bs-backdrop=\"static\"` and `data-bs-keyboard=\"false\"`:\n\n```html_not\n<div class=\"modal fade\" data-bs-backdrop=\"static\" data-bs-keyboard=\"false\">...</div>\n```"
+        },
+        {
+            "id": "bs_comp2_8",
+            "type": "content",
+            "title": "Carousels: Image Slideshows",
+            "content": "# Carousels: Slideshows with Controls 🎠\n\nA slideshow component for cycling through images or text slides.\n\n```html_not\n<div id=\"heroCarousel\" class=\"carousel slide carousel-fade\" data-bs-ride=\"carousel\">\n  <!-- Slide Indicators -->\n  <div class=\"carousel-indicators\">\n    <button type=\"button\" data-bs-target=\"#heroCarousel\" data-bs-slide-to=\"0\" class=\"active\"></button>\n    <button type=\"button\" data-bs-target=\"#heroCarousel\" data-bs-slide-to=\"1\"></button>\n  </div>\n  \n  <!-- Slides -->\n  <div class=\"carousel-inner rounded-4 shadow\">\n    <div class=\"carousel-item active\" data-bs-interval=\"5000\">\n      <img src=\"/img/slide1.jpg\" class=\"d-block w-100\" alt=\"Slide 1\">\n      <div class=\"carousel-caption d-none d-md-block\">\n        <h5>First Slide Headline</h5>\n      </div>\n    </div>\n    <div class=\"carousel-item\" data-bs-interval=\"5000\">\n      <img src=\"/img/slide2.jpg\" class=\"d-block w-100\" alt=\"Slide 2\">\n    </div>\n  </div>\n  \n  <!-- Controls -->\n  <button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#heroCarousel\" data-bs-slide=\"prev\">\n    <span class=\"carousel-control-prev-icon\"></span>\n  </button>\n  <button class=\"carousel-control-next\" type=\"button\" data-bs-target=\"#heroCarousel\" data-bs-slide=\"next\">\n    <span class=\"carousel-control-next-icon\"></span>\n  </button>\n</div>\n```"
+        },
+        {
+            "id": "bs_comp2_quiz_2",
+            "type": "quiz",
+            "title": "Modal Dismiss Check",
+            "content": "Test your understanding of Bootstrap modal dismiss attributes!",
+            "quizQuestion": "How do you configure a modal so it CANNOT be closed by clicking on the dark backdrop overlay?",
+            "quizOptions": [
+                "`data-bs-backdrop=\"false\"`",
+                "`data-bs-backdrop=\"static\"`",
+                "`data-bs-dismiss=\"disabled\"`",
+                "`data-modal-lock=\"true\"`"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "bs_comp2_10",
+            "type": "content",
+            "title": "Accordions: Expandable Panels",
+            "content": "# Accordions: Expandable FAQs 🪗\n\nAccordions build on the Collapse plugin to display collapsible disclosure items.\n\n```html_not\n<div class=\"accordion\" id=\"faqAccordion\">\n  <!-- Item 1 -->\n  <div class=\"accordion-item\">\n    <h2 class=\"accordion-header\" id=\"headingOne\">\n      <button class=\"accordion-button\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#collapseOne\" aria-expanded=\"true\" aria-controls=\"collapseOne\">\n        How does pricing work?\n      </button>\n    </h2>\n    <div id=\"collapseOne\" class=\"accordion-collapse collapse show\" data-bs-parent=\"#faqAccordion\">\n      <div class=\"accordion-body\">\n        Our plans start at $9/mo with a 14-day free trial.\n      </div>\n    </div>\n  </div>\n</div>\n```\n\n> 💡 **Exclusive Opening:** The `data-bs-parent=\"#faqAccordion\"` attribute ensures that opening one accordion panel automatically collapses the others!"
+        },
+        {
+            "id": "bs_comp2_11",
+            "type": "content",
+            "title": "Dropdowns",
+            "content": "# Dropdowns: Popover Action Menus 🔽\n\nDropdowns are toggleable menus for displaying links and actions, powered by Popper.js.\n\n```html_not\n<div class=\"dropdown\">\n  <button class=\"btn btn-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n    Account Actions\n  </button>\n  <ul class=\"dropdown-menu shadow\">\n    <li><a class=\"dropdown-item\" href=\"#\">Profile Settings</a></li>\n    <li><a class=\"dropdown-item\" href=\"#\">Billing & Invoices</a></li>\n    <li><hr class=\"dropdown-divider\"></li>\n    <li><a class=\"dropdown-item text-danger\" href=\"#\">Sign Out</a></li>\n  </ul>\n</div>\n```\n\nSupport `.dropdown-menu-dark`, `.dropup`, `.dropend`, and auto-close behaviors."
+        },
+        {
+            "id": "bs_comp2_12",
+            "type": "content",
+            "title": "Offcanvas: Drawer Navigation",
+            "content": "# Offcanvas: Modern Sidebar Drawers 📱\n\nOffcanvas components build hidden sidebars for navigation or shopping carts that slide into view.\n\n```html_not\n<!-- Trigger -->\n<button class=\"btn btn-primary\" type=\"button\" data-bs-toggle=\"offcanvas\" data-bs-target=\"#cartDrawer\">\n  View Cart (3)\n</button>\n\n<!-- Offcanvas Container -->\n<div class=\"offcanvas offcanvas-end\" tabindex=\"-1\" id=\"cartDrawer\" aria-labelledby=\"cartDrawerLabel\">\n  <div class=\"offcanvas-header border-bottom\">\n    <h5 class=\"offcanvas-title\" id=\"cartDrawerLabel\">Your Shopping Cart</h5>\n    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"offcanvas\" aria-label=\"Close\"></button>\n  </div>\n  <div class=\"offcanvas-body p-4\">\n    <p>Shopping cart items appear here...</p>\n    <button class=\"btn btn-success w-100 mt-auto\">Checkout Now</button>\n  </div>\n</div>\n```\n\nPlacement modifiers: `.offcanvas-start` (left), `.offcanvas-end` (right), `.offcanvas-top`, `.offcanvas-bottom`."
+        },
+        {
+            "id": "bs_comp2_13",
+            "type": "content",
+            "title": "Tooltips & Popovers (Popper.js)",
+            "content": "# Tooltips & Popovers 🎈\n\nFor performance reasons, Tooltips and Popovers are **opt-in** and must be initialized via JavaScript!\n\n## HTML Markup\n\n```html_not\n<button type=\"button\" class=\"btn btn-secondary\" data-bs-toggle=\"tooltip\" data-bs-placement=\"top\" title=\"Tooltip text\">\n  Hover Me\n</button>\n```\n\n## JavaScript Initialization Script\n\n```javascript_not\n// Initialize all tooltips on page\nconst tooltipTriggerList = document.querySelectorAll('[data-bs-toggle=\"tooltip\"]');\nconst tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));\n```"
+        },
+        {
+            "id": "bs_comp2_14",
+            "type": "content",
+            "title": "Programmatic JavaScript API in BS5",
+            "content": "# The Bootstrap 5 JavaScript API 💻\n\nEvery Bootstrap component can be instantiated, opened, and closed programmatically with pure JavaScript.\n\n```javascript_not\n// 1. Get or create Modal instance\nconst modalElement = document.getElementById('myModal');\nconst myModal = new bootstrap.Modal(modalElement, {\n  backdrop: 'static',\n  keyboard: false\n});\n\n// Show modal programmatically (e.g. after async fetch)\nmyModal.show();\n\n// Hide modal\nsetTimeout(() => {\n  myModal.hide();\n}, 3000);\n```"
+        },
+        {
+            "id": "bs_comp2_15",
+            "type": "content",
+            "title": "Bootstrap JavaScript Events",
+            "content": "# Component Lifecycle Events 📡\n\nAll Bootstrap components emit custom events during their lifecycle that you can hook into:\n\n```javascript_not\nconst myModalEl = document.getElementById('myModal');\n\n// Fired immediately when show() is called:\nmyModalEl.addEventListener('show.bs.modal', event => {\n  console.log('Modal is starting to show!');\n});\n\n// Fired when modal has finished transition and is fully visible:\nmyModalEl.addEventListener('shown.bs.modal', event => {\n  document.getElementById('inputEmail').focus();\n});\n\n// Fired when modal is hidden:\nmyModalEl.addEventListener('hidden.bs.modal', event => {\n  console.log('Modal closed');\n});\n```"
+        },
+        {
+            "id": "bs_comp2_16",
+            "type": "content",
+            "title": "Collapse Plugin Standalone",
+            "content": "# Standalone Collapse Plugin 📂\n\nToggle visibility of arbitrary content blocks (e.g. \"Read More\" toggles) with `.collapse`:\n\n```html_not\n<p>\n  <a class=\"btn btn-primary\" data-bs-toggle=\"collapse\" href=\"#collapseExample\" role=\"button\" aria-expanded=\"false\">\n    Toggle Details\n  </a>\n</p>\n<div class=\"collapse\" id=\"collapseExample\">\n  <div class=\"card card-body shadow-sm\">\n    Here is additional technical specification details revealed smoothly.\n  </div>\n</div>\n```"
+        },
+        {
+            "id": "bs_comp2_17",
+            "type": "content",
+            "title": "Real-World Component: Interactive SaaS Navigation Header",
+            "content": "# Real-World Example: Production App Bar with Offcanvas 🧭\n\n```html_not\n<nav class=\"navbar bg-white border-bottom shadow-sm px-3 sticky-top\">\n  <div class=\"container-fluid\">\n    <button class=\"btn btn-light d-lg-none me-2\" type=\"button\" data-bs-toggle=\"offcanvas\" data-bs-target=\"#appSidebar\">\n      ☰\n    </button>\n    \n    <a class=\"navbar-brand fw-bold text-primary\" href=\"#\">MetricFlow</a>\n    \n    <div class=\"d-none d-lg-flex me-auto\">\n      <a class=\"nav-link px-3 active\" href=\"#\">Overview</a>\n      <a class=\"nav-link px-3 text-muted\" href=\"#\">Integrations</a>\n    </div>\n    \n    <div class=\"dropdown\">\n      <button class=\"btn btn-light rounded-circle p-2\" type=\"button\" data-bs-toggle=\"dropdown\">\n        <img src=\"/img/avatar.png\" class=\"rounded-circle\" width=\"28\" height=\"28\">\n      </button>\n      <ul class=\"dropdown-menu dropdown-menu-end shadow\">\n        <li><a class=\"dropdown-item\" href=\"#\">Settings</a></li>\n        <li><hr class=\"dropdown-divider\"></li>\n        <li><a class=\"dropdown-item text-danger\" href=\"#\">Logout</a></li>\n      </ul>\n    </div>\n  </div>\n</nav>\n```"
+        },
+        {
+            "id": "bs_comp2_quiz_3",
+            "type": "quiz",
+            "title": "Tooltip Initialization Quiz",
+            "content": "Test your knowledge of Bootstrap tooltips!",
+            "quizQuestion": "Why must tooltips be initialized with JavaScript in Bootstrap 5?",
+            "quizOptions": [
+                "They require a payment license",
+                "For performance reasons, tooltips are opt-in and not auto-initialized by default",
+                "They are deprecated in favor of native HTML title attributes",
+                "Browsers block tooltips without user permission"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "bs_comp2_19",
+            "type": "content",
+            "title": "JavaScript Best Practices in Bootstrap 5",
+            "content": "# JavaScript Best Practices in Bootstrap 5 💡\n\n1. **Include `bootstrap.bundle.min.js`**: Always use the bundle because it includes Popper.js (required for dropdowns, tooltips, and popovers).\n2. **Use `bootstrap.Modal.getInstance()`**: Check if an instance exists before calling `new bootstrap.Modal()` to prevent multiple overlapping instances.\n3. **Clean up listeners**: Dispose of instances with `.dispose()` in Single Page Applications (React/Vue) when unmounting components."
+        },
+        {
+            "id": "bs_comp2_20",
+            "type": "content",
+            "title": "Summary: Interactive Components",
+            "content": "# Interactive Components: Summary 📋\n\n## Key Takeaways\n- **Navbar**: Collapsible responsive navigation bar (`.navbar-expand-lg`).\n- **Modals**: Accessible dialog boxes controlled via `data-bs-toggle=\"modal\"` or JS API.\n- **Carousels**: Slide presentations with autoplay intervals and indicators.\n- **Accordions**: Mutual exclusion panels configured via `data-bs-parent`.\n- **Offcanvas**: Mobile drawer navigation sliding from start/end.\n- **Popper Components**: Dropdowns, Tooltips, and Popovers require Popper.\n\nNext: Master Bootstrap utilities: Spacing, Colors, Flex, Display, and Position! 🛠️"
+        },
+        {
+            "id": "bs_comp2_21",
+            "type": "content",
+            "title": "Next Steps: Utilities & Helpers",
+            "content": "# Ahead: Utilities & Helpers 🛠️\n\nYou are now ready to master Bootstrap's utility classes to customize spacing, colors, flexbox layouts, and visibility without writing custom CSS.\n\n## Topics Ahead:\n- **Spacing Scale**: Margin & padding (`m-*`, `p-*`, `mx-auto`)\n- **Color & Background Utilities**: Text, subtle backgrounds, and border colors\n- **Display & Flexbox Utilities**: `d-flex`, `justify-content-*`, `d-none`\n- **Position Utilities**: Stacking, fixed-top, and sticky-top\n- **The Bootstrap Utility API** in Sass\n\nLet's conquer Bootstrap utilities! 🚀"
+        }
+    ]
+}

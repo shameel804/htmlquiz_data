@@ -1,0 +1,159 @@
+{
+    "id": "learn_tw_layout",
+    "topicId": "tw_layout",
+    "topicTitle": "Layout & Spacing",
+    "description": "Learn Tailwind CSS layout tools including Flexbox, CSS Grid, container, box-sizing, display, dimensions, positioning, and z-index.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "tw_layout_1",
+            "type": "content",
+            "title": "Introduction to Tailwind Layout",
+            "content": "# Layout & Spacing in Tailwind CSS 📐\n\nPositioning elements and structuring pages is where Tailwind truly shines. It provides high-level utilities for:\n\n- **Container** — Centered max-width boundaries\n- **Display & Box Sizing** — `block`, `inline-flex`, `box-border`\n- **Flexbox** — Modern 1D layouts with direction and alignment\n- **CSS Grid** — Multi-column 2D responsive grids\n- **Spacing Scale** — Proportional padding and margin scales\n- **Dimensions** — Fixed, percentage, and fluid width/height\n- **Positioning & Z-Index** — `relative`, `absolute`, `sticky`, and stacking order"
+        },
+        {
+            "id": "tw_layout_2",
+            "type": "content",
+            "title": "The Container Component",
+            "content": "# The Container Utility 📦\n\nThe `container` class fixes an element's `max-width` to match the current breakpoint's min-width.\n\n## Breakpoint Max-Widths\n\n| Breakpoint | Container Max-Width |\n|---|---|\n| `< 640px` | `100%` |\n| `sm` (`640px`) | `640px` |\n| `md` (`768px`) | `768px` |\n| `lg` (`1024px`) | `1024px` |\n| `xl` (`1280px`) | `1280px` |\n| `2xl` (`1536px`) | `1536px` |\n\n## Centering and Padding\nBy default, `container` does NOT auto-center or add horizontal padding. Use `mx-auto` and `px-*`:\n\n```html_not\n<div class=\"container mx-auto px-4 md:px-8\">\n  <h1 class=\"text-3xl font-bold\">Page Header</h1>\n  <p>Centered content container with responsive gutters.</p>\n</div>\n```"
+        },
+        {
+            "id": "tw_layout_3",
+            "type": "content",
+            "title": "Display & Box Sizing",
+            "content": "# Display & Box Sizing Utilities 🔲\n\nTailwind provides direct utility classes for all standard CSS `display` and `box-sizing` values.\n\n## Display Classes\n\n| Class | CSS Equivalent | Typical Usage |\n|---|---|---|\n| `block` | `display: block;` | Full width elements |\n| `inline-block` | `display: inline-block;` | Badges, tags with margins |\n| `inline` | `display: inline;` | Text spans, formatted inline phrases |\n| `flex` | `display: flex;` | Flexbox container |\n| `inline-flex` | `display: inline-flex;` | Inline icon + text buttons |\n| `grid` | `display: grid;` | CSS Grid container |\n| `hidden` | `display: none;` | Hiding elements (toggle with `md:block`) |\n\n## Box Sizing\n- `box-border` (`box-sizing: border-box;`) — Preflight default for all elements.\n- `box-content` (`box-sizing: content-box;`) — Excludes padding and border from dimensions."
+        },
+        {
+            "id": "tw_layout_4",
+            "type": "content",
+            "title": "Flexbox: Direction & Wrapping",
+            "content": "# Flexbox: Direction & Wrapping 🔄\n\nTurn any container into a flex container using `flex` or `inline-flex`.\n\n## Flex Direction\n\n- `flex-row` — Left to right (default)\n- `flex-row-reverse` — Right to left\n- `flex-col` — Top to bottom (stacked column)\n- `flex-col-reverse` — Bottom to top\n\n## Flex Wrapping\n\n- `flex-wrap` — Allow items to wrap onto multiple lines\n- `flex-nowrap` — Force items onto a single line\n- `flex-wrap-reverse` — Wrap items upwards\n\n```html_not\n<!-- Stack vertically on mobile, horizontal row on desktop -->\n<div class=\"flex flex-col md:flex-row gap-4\">\n  <div class=\"flex-1 bg-blue-100 p-4\">Column 1</div>\n  <div class=\"flex-1 bg-blue-200 p-4\">Column 2</div>\n</div>\n```"
+        },
+        {
+            "id": "tw_layout_quiz_1",
+            "type": "quiz",
+            "title": "Flexbox Direction Check",
+            "content": "Test your knowledge of Tailwind flexbox directions!",
+            "quizQuestion": "Which class changes a flex container to layout its items vertically from top to bottom?",
+            "quizOptions": [
+                "flex-vertical",
+                "flex-col",
+                "flex-y",
+                "flex-stack"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "tw_layout_6",
+            "type": "content",
+            "title": "Flexbox: Alignment & Justification",
+            "content": "# Flex Alignment & Justification 🎯\n\nPositioning items along the main axis and cross axis is handled with `justify-*` and `items-*`.\n\n## Main Axis: `justify-*`\n\n| Class | CSS Value | Visual Result |\n|---|---|---|\n| `justify-start` | `flex-start` | Packed at the start |\n| `justify-end` | `flex-end` | Packed at the end |\n| `justify-center` | `center` | Centered along main axis |\n| `justify-between` | `space-between` | Equal space between items |\n| `justify-around` | `space-around` | Space around each item |\n| `justify-evenly` | `space-evenly` | Equal spacing including ends |\n\n## Cross Axis: `items-*`\n\n- `items-center` — Center items across the perpendicular axis (`align-items: center`)\n- `items-start` — Align to top / start\n- `items-end` — Align to bottom / end\n- `items-stretch` — Stretch items to fill height (default)"
+        },
+        {
+            "id": "tw_layout_7",
+            "type": "content",
+            "title": "Flexbox: Sizing & Shrinking",
+            "content": "# Flex Item Sizing: Grow, Shrink & Basis 📏\n\nControl how individual flex children expand and contract to fill available space.\n\n## Flex Utilities for Children\n\n| Class | CSS | Description |\n|---|---|---|\n| `flex-1` | `flex: 1 1 0%;` | Grow and shrink proportionally ignoring initial size |\n| `flex-auto` | `flex: 1 1 auto;` | Grow and shrink taking initial item size into account |\n| `flex-initial` | `flex: 0 1 auto;` | Allow shrink but prevent growing past content size |\n| `flex-none` | `flex: none;` | Fixed size; cannot grow or shrink |\n| `grow` | `flex-grow: 1;` | Allow element to fill available space |\n| `shrink-0` | `flex-shrink: 0;` | Prevent element (e.g. icon/avatar) from squishing |\n\n```html_not\n<div class=\"flex items-center gap-3\">\n  <img src=\"avatar.jpg\" class=\"w-10 h-10 rounded-full shrink-0\" />\n  <p class=\"flex-1 truncate\">Long message text that truncates cleanly...</p>\n  <button class=\"flex-none bg-blue-500 text-white px-3 py-1 rounded\">Reply</button>\n</div>\n```"
+        },
+        {
+            "id": "tw_layout_8",
+            "type": "content",
+            "title": "CSS Grid: Columns & Rows",
+            "content": "# CSS Grid in Tailwind 🗂️\n\nTailwind's Grid utilities provide declarative, powerful 2D layouts using `grid`, `grid-cols-*`, and `grid-rows-*`.\n\n## Defining Columns with `grid-cols-{n}`\n\n```html_not\n<!-- 1 col on mobile, 2 on tablet, 3 on desktop -->\n<div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6\">\n  <div class=\"bg-white p-6 rounded shadow\">Item 1</div>\n  <div class=\"bg-white p-6 rounded shadow\">Item 2</div>\n  <div class=\"bg-white p-6 rounded shadow\">Item 3</div>\n  <div class=\"bg-white p-6 rounded shadow\">Item 4</div>\n  <div class=\"bg-white p-6 rounded shadow\">Item 5</div>\n  <div class=\"bg-white p-6 rounded shadow\">Item 6</div>\n</div>\n```\n\n## Spanning Columns with `col-span-{n}`\n\n```html_not\n<div class=\"grid grid-cols-3 gap-4\">\n  <div class=\"col-span-2 bg-indigo-500 text-white p-4\">Spans 2 columns</div>\n  <div class=\"col-span-1 bg-gray-200 p-4\">Spans 1 column</div>\n</div>\n```"
+        },
+        {
+            "id": "tw_layout_9",
+            "type": "content",
+            "title": "Grid Gutters & Spacing with Gap",
+            "content": "# Gap: Gutters for Grid & Flexbox 📐\n\nThe `gap` utilities set gutters between rows and columns without affecting exterior edges.\n\n## Gap Utilities\n\n- `gap-{size}` — Sets both horizontal and vertical gutters (e.g., `gap-4` = `1rem`)\n- `gap-x-{size}` — Sets column gutter only (`column-gap`)\n- `gap-y-{size}` — Sets row gutter only (`row-gap`)\n\n```html_not\n<div class=\"grid grid-cols-2 gap-x-8 gap-y-4\">\n  <div>Wide horizontal gap</div>\n  <div>between these two columns</div>\n  <div>And smaller vertical</div>\n  <div>gap between these rows</div>\n</div>\n```\n\n> 💡 **Modern Tip:** `gap` works identically in both Flexbox (`flex`) and CSS Grid (`grid`) containers!"
+        },
+        {
+            "id": "tw_layout_quiz_2",
+            "type": "quiz",
+            "title": "Grid Spanning Quiz",
+            "content": "Test your understanding of Tailwind CSS Grid column spans!",
+            "quizQuestion": "How do you make a grid item occupy 3 columns inside a grid container?",
+            "quizOptions": [
+                "col-3",
+                "col-span-3",
+                "grid-span-3",
+                "columns-3"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "tw_layout_11",
+            "type": "content",
+            "title": "The Spacing Scale: Padding & Margin",
+            "content": "# The Tailwind Spacing Scale 📏\n\nTailwind's spacing scale is proportional where `1 unit = 0.25rem (4px)`.\n\n## Spacing Reference Table\n\n| Class Scale | CSS Value | Pixels (default 16px root) |\n|---|---|---|\n| `p-1`, `m-1` | `0.25rem` | 4px |\n| `p-2`, `m-2` | `0.5rem` | 8px |\n| `p-4`, `m-4` | `1rem` | 16px |\n| `p-6`, `m-6` | `1.5rem` | 24px |\n| `p-8`, `m-8` | `2rem` | 32px |\n| `p-12`, `m-12` | `3rem` | 48px |\n| `p-16`, `m-16` | `4rem` | 64px |\n\n## Directional Prefixes\n- `t` (top), `b` (bottom), `l` (left), `r` (right)\n- `x` (left & right), `y` (top & bottom)\n- Examples: `pt-4` (padding-top: 16px), `mx-auto` (horizontal margin: auto), `-mt-2` (negative margin-top: -8px)"
+        },
+        {
+            "id": "tw_layout_12",
+            "type": "content",
+            "title": "Dimensions: Width & Height",
+            "content": "# Width & Height Utilities 📐\n\nTailwind provides fixed scale dimensions, percentage widths, and viewport sizes.\n\n## Width Utilities\n\n| Class | CSS Equivalent | Description |\n|---|---|---|\n| `w-16` | `4rem` (64px) | Fixed width from spacing scale |\n| `w-1/2` | `50%` | Half of parent container |\n| `w-full` | `100%` | 100% of parent width |\n| `w-screen` | `100vw` | 100% of viewport width |\n| `w-auto` | `auto` | Natural content width |\n| `max-w-md` | `28rem` | Maximum width constraint |\n| `min-w-0` | `min-width: 0;` | Prevents flex items from overflowing |\n\n## Height Utilities\n- `h-64` (16rem), `h-full` (100%), `h-screen` (100vh), `h-dvh` (100 dynamic viewport height, great for mobile browsers!)"
+        },
+        {
+            "id": "tw_layout_13",
+            "type": "content",
+            "title": "Positioning: Relative, Absolute & Fixed",
+            "content": "# Positioning Elements 📍\n\nControl document flow and coordinate positioning using Tailwind's position utilities.\n\n## Position Classes\n\n- `static` — Standard document flow (`position: static`)\n- `relative` — Establishes positioning context for children\n- `absolute` — Positioned relative to nearest positioned ancestor\n- `fixed` — Fixed relative to the browser viewport\n- `sticky` — Sticks when reaching a scroll threshold\n\n## Placement Utilities: Inset & Offsets\n\n- `top-0`, `bottom-0`, `left-0`, `right-0`\n- `inset-0` (`top: 0; right: 0; bottom: 0; left: 0;`)\n- `inset-x-0` (left: 0; right: 0;), `inset-y-0` (top: 0; bottom: 0;)\n\n```html_not\n<div class=\"relative w-32 h-32 bg-gray-100 rounded-lg\">\n  <!-- Notification pill badge in top-right corner -->\n  <span class=\"absolute top-2 right-2 w-3 h-3 bg-red-500 rounded-full animate-ping\"></span>\n  <span class=\"absolute top-2 right-2 w-3 h-3 bg-red-500 rounded-full\"></span>\n</div>\n```"
+        },
+        {
+            "id": "tw_layout_14",
+            "type": "content",
+            "title": "Sticky Headers & Navigation",
+            "content": "# Sticky Positioning in Action 📌\n\nA sticky element acts like `relative` until the viewport reaches its offset, then locks in place like `fixed`.\n\n```html_not\n<header class=\"sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 px-6 py-4\">\n  <div class=\"flex items-center justify-between max-w-7xl mx-auto\">\n    <a href=\"#\" class=\"font-black text-xl text-indigo-600\">DevApp</a>\n    <nav class=\"flex gap-6 text-sm font-medium text-gray-700\">\n      <a href=\"#features\" class=\"hover:text-indigo-600\">Features</a>\n      <a href=\"#pricing\" class=\"hover:text-indigo-600\">Pricing</a>\n      <a href=\"#contact\" class=\"hover:text-indigo-600\">Contact</a>\n    </nav>\n  </div>\n</header>\n```\n\n> ⚠️ **Gotcha with `sticky`:** If any ancestor element has `overflow: hidden`, `sticky` will fail to lock!"
+        },
+        {
+            "id": "tw_layout_15",
+            "type": "content",
+            "title": "Z-Index & Stacking Context",
+            "content": "# Stacking Order with Z-Index 📚\n\nThe `z-*` utilities control the 3D stacking order of elements on the page.\n\n## Default Z-Index Scale\n\n| Class | CSS Value | Typical Component Target |\n|---|---|---|\n| `z-0` | `0` | Base content level |\n| `z-10` | `10` | Elevated cards, sticky table headers |\n| `z-20` | `20` | Dropdowns, tooltips |\n| `z-30` | `30` | Floating action buttons (FAB) |\n| `z-40` | `40` | Backdrop overlays, drawers |\n| `z-50` | `50` | Navigation bars, modals, dialogs |\n| `z-auto` | `auto` | Browser default stack |\n\n> 💡 **Remember:** `z-index` only takes effect on elements with an explicit position (`relative`, `absolute`, `fixed`, `sticky`)."
+        },
+        {
+            "id": "tw_layout_16",
+            "type": "content",
+            "title": "Overflow & Visibility",
+            "content": "# Handling Overflow & Clipping 🌊\n\nControl what happens when content exceeds its container's boundaries.\n\n## Overflow Classes\n\n- `overflow-auto` — Shows scrollbars only when content exceeds dimensions\n- `overflow-hidden` — Clips overflowing content\n- `overflow-scroll` — Always forces scrollbars\n- `overflow-x-auto` — Horizontal scrolling table or carousel\n- `overflow-y-auto` — Scrollable sidebar or chat thread\n\n## Visibility vs Display\n\n- `invisible` (`visibility: hidden;`) — Element is hidden but retains its dimensions in layout.\n- `hidden` (`display: none;`) — Element is completely removed from document layout."
+        },
+        {
+            "id": "tw_layout_17",
+            "type": "content",
+            "title": "Real-World Component: Responsive Navbar",
+            "content": "# Building a Real-World Responsive Navbar 🧭\n\nLet's combine Flexbox, alignment, spacing, and responsive visibility:\n\n```html_not\n<nav class=\"bg-slate-900 text-white px-6 py-3\">\n  <div class=\"flex items-center justify-between max-w-6xl mx-auto\">\n    <!-- Brand -->\n    <div class=\"text-xl font-bold tracking-tight text-indigo-400\">CloudMatrix</div>\n    \n    <!-- Desktop Navigation Links -->\n    <div class=\"hidden md:flex items-center space-x-6 text-sm font-medium\">\n      <a href=\"#\" class=\"text-slate-300 hover:text-white transition-colors\">Dashboard</a>\n      <a href=\"#\" class=\"text-slate-300 hover:text-white transition-colors\">Analytics</a>\n      <a href=\"#\" class=\"text-slate-300 hover:text-white transition-colors\">Settings</a>\n    </div>\n    \n    <!-- Action Button -->\n    <button class=\"hidden md:block bg-indigo-600 hover:bg-indigo-500 px-4 py-2 rounded-lg text-sm font-semibold\">\n      Sign In\n    </button>\n    \n    <!-- Mobile Menu Button -->\n    <button class=\"md:hidden p-2 text-slate-400 hover:text-white\">\n      <svg class=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n        <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 6h16M4 12h16M4 18h16\"/>\n      </svg>\n    </button>\n  </div>\n</nav>\n```"
+        },
+        {
+            "id": "tw_layout_quiz_3",
+            "type": "quiz",
+            "title": "Layout Essentials Quiz",
+            "content": "Test your understanding of Tailwind layout mechanics!",
+            "quizQuestion": "What is the difference between `hidden` and `invisible` in Tailwind CSS?",
+            "quizOptions": [
+                "There is no difference; they are aliases for each other",
+                "`hidden` sets display: none removing the space, while `invisible` hides the element but preserves its space",
+                "`invisible` removes the element from DOM completely, while `hidden` only reduces opacity to 0",
+                "`hidden` applies to desktop only, while `invisible` applies to mobile only"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "tw_layout_19",
+            "type": "content",
+            "title": "Common Layout Gotchas & Fixes",
+            "content": "# Top Layout Gotchas & Solutions 🛠️\n\n## 1. Flex Child Text Overflowing\nA long string inside a flex item blows out the container width.\n\n**Fix:** Add `min-w-0` to the flex child and `truncate` to the text:\n```html_not\n<div class=\"flex\">\n  <div class=\"min-w-0 flex-1\">\n    <p class=\"truncate\">Super long email string here that won't break layout...</p>\n  </div>\n</div>\n```\n\n## 2. Margin Collapsing\nStandard CSS vertical margins collapse into one another.\n\n**Fix:** Use Flexbox/Grid with `gap-*` instead of vertical margins (`my-*`)."
+        },
+        {
+            "id": "tw_layout_20",
+            "type": "content",
+            "title": "Summary of Layout & Spacing",
+            "content": "# Summary: Layout & Spacing 📋\n\n## Key Takeaways\n- **Containers** give structured max-width boundaries; pair with `mx-auto px-4`.\n- **Flexbox** handles 1D directional alignment with `flex`, `flex-col`, `justify-*`, and `items-*`.\n- **Grid** delivers 2D responsive arrangements with `grid-cols-*`, `col-span-*`, and `gap-*`.\n- **Spacing Scale** provides mathematical rhythm where `1 = 0.25rem` (4px).\n- **Positioning** provides layers with `relative`, `absolute`, and `z-*`.\n\nNext: Dive deep into typography, font pairing, and curated color palettes! 🎨"
+        },
+        {
+            "id": "tw_layout_21",
+            "type": "content",
+            "title": "Next Steps: Typography & Colors",
+            "content": "# Ahead: Typography & Design Systems ✍️\n\nWith layout fundamentals mastered, let's explore styling written content and choosing harmonious color palettes.\n\n## Topics Ahead:\n- **Font Families** (`sans`, `serif`, `mono`)\n- **Type Hierarchy** (`text-sm` through `text-9xl`)\n- **Line Height & Letter Spacing** (`leading`, `tracking`)\n- **The 50–950 Color Palette** and Color Opacity Modifiers\n- **Tailwind Typography Plugin** (`prose` class)\n\nLet's make text visually compelling! 🚀"
+        }
+    ]
+}

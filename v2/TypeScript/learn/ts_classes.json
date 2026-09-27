@@ -1,0 +1,159 @@
+{
+    "id": "learn_ts_classes",
+    "topicId": "ts_classes",
+    "topicTitle": "TS Classes & OOP",
+    "description": "Master class properties, access modifiers, parameter properties, abstract classes, and implements.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "ts_cls_1",
+            "type": "content",
+            "title": "Welcome to Classes & OOP",
+            "content": "# TypeScript Classes & OOP 🏛️\n\nTypeScript adds rich Object-Oriented Programming (OOP) features to ECMAScript classes, including access modifiers (`public`, `private`, `protected`), parameter properties shorthand, abstract classes, and interface implementation.\n\n## What you'll master:\n- 🏗️ **Class Properties & Methods** - Typed constructors and members\n- 🔒 **Access Modifiers** - `public`, `private`, and `protected`\n- ⚡ **Parameter Properties** - Constructor parameter shorthand\n- 🏛️ **Abstract Classes** - Base blueprints with abstract methods\n- 🤝 **The `implements` Keyword** - Enforcing interface contracts\n- 🎛️ **Getters & Setters** - Controlled property access and validation"
+        },
+        {
+            "id": "ts_cls_2",
+            "type": "content",
+            "title": "Class Properties & Constructors",
+            "content": "# Class Properties and Constructors 🏗️\n\nIn TypeScript, class fields must be declared with types:\n\n```typescript\nclass Account {\n  id: string;\n  balance: number;\n\n  constructor(id: string, initialBalance: number = 0) {\n    this.id = id;\n    this.balance = initialBalance;\n  }\n\n  deposit(amount: number): number {\n    this.balance += amount;\n    return this.balance;\n  }\n}\n\nconst myAccount = new Account(\"ACC-101\", 500);\nmyAccount.deposit(250);\nconsole.log(`Account ${myAccount.id} Balance: $${myAccount.balance}`);\n```\n\n<!-- FULL_CODE_START\nclass Account {\n  id: string;\n  balance: number;\n\n  constructor(id: string, initialBalance: number = 0) {\n    this.id = id;\n    this.balance = initialBalance;\n  }\n\n  deposit(amount: number): number {\n    this.balance += amount;\n    return this.balance;\n  }\n}\n\nconst myAccount = new Account(\"ACC-101\", 500);\nmyAccount.deposit(250);\nconsole.log(`Account ${myAccount.id} Balance: $${myAccount.balance}`);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_cls_3",
+            "type": "content",
+            "title": "Access Modifiers: public, private, protected",
+            "content": "# Access Modifiers 🔒\n\nTypeScript provides 3 access modifiers to control visibility:\n\n| Modifier | Accessible Inside Class | Accessible in Subclasses | Accessible from Outside |\n| :--- | :---: | :---: | :---: |\n| `public` (Default) | ✅ Yes | ✅ Yes | ✅ Yes |\n| `protected` | ✅ Yes | ✅ Yes | ❌ No |\n| `private` | ✅ Yes | ❌ No | ❌ No |\n\n```typescript\nclass BankAccount {\n  public owner: string;\n  protected accountType: string;\n  private balance: number;\n\n  constructor(owner: string, balance: number) {\n    this.owner = owner;\n    this.accountType = \"Standard Checking\";\n    this.balance = balance;\n  }\n}\n```"
+        },
+        {
+            "id": "ts_cls_4",
+            "type": "content",
+            "title": "Demonstrating Protected vs Private",
+            "content": "# Protected vs Private in Inheritance 🧬\n\n```typescript\nclass Parent {\n  private secret: string = \"Private to Parent\";\n  protected sharedSecret: string = \"Accessible in Child\";\n}\n\nclass Child extends Parent {\n  reveal() {\n    // console.log(this.secret); // Compile Error: Property 'secret' is private!\n    console.log(\"Child accessed:\", this.sharedSecret); // Valid!\n  }\n}\n\nconst child = new Child();\nchild.reveal();\n// console.log(child.sharedSecret); // Compile Error: Only accessible within class hierarchy!\n```\n\n<!-- FULL_CODE_START\nclass Parent {\n  private secret: string = \"Private to Parent\";\n  protected sharedSecret: string = \"Accessible in Child\";\n}\n\nclass Child extends Parent {\n  reveal() {\n    console.log(\"Child accessed protected property:\", this.sharedSecret);\n  }\n}\n\nconst child = new Child();\nchild.reveal();\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_cls_quiz_1",
+            "type": "quiz",
+            "title": "Access Modifiers Quiz",
+            "content": "Test your access modifier knowledge.",
+            "quizQuestion": "Which access modifier allows a property to be accessed inside the class and its subclasses, but blocks access from external code?",
+            "quizOptions": [
+                "public",
+                "protected",
+                "private",
+                "readonly"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_cls_5",
+            "type": "content",
+            "title": "Parameter Properties Shorthand",
+            "content": "# Parameter Properties: The Super Shorthand ⚡\n\nTired of declaring a property, accepting it in the constructor, and writing `this.x = x`?\n\nAdd an access modifier directly to the constructor parameters! TypeScript **automatically declares and assigns the property** for you:\n\n```typescript\n// All in one line!\nclass Developer {\n  constructor(\n    public name: string,\n    public role: string,\n    private salary: number\n  ) {}\n\n  printInfo() {\n    console.log(`${this.name} works as a ${this.role}`);\n  }\n}\n\nconst dev = new Developer(\"Elena\", \"Full Stack Engineer\", 120000);\ndev.printInfo();\n```\n\n<!-- FULL_CODE_START\nclass Developer {\n  constructor(\n    public name: string,\n    public role: string,\n    private salary: number\n  ) {}\n\n  printInfo() {\n    console.log(`${this.name} works as a ${this.role}`);\n  }\n}\n\nconst dev = new Developer(\"Elena\", \"Full Stack Engineer\", 120000);\ndev.printInfo();\nconsole.log(\"Public property name:\", dev.name);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_cls_6",
+            "type": "content",
+            "title": "Readonly Properties in Classes",
+            "content": "# Readonly Class Properties 🔒\n\nMark properties as `readonly` to prevent mutation after constructor initialization:\n\n```typescript\nclass ServerConfig {\n  readonly ipAddress: string;\n  readonly port: number;\n\n  constructor(ip: string, port: number) {\n    this.ipAddress = ip;\n    this.port = port;\n  }\n}\n\nconst server = new ServerConfig(\"192.168.1.1\", 8080);\n// server.port = 9000; // Error: Cannot assign to 'port' because it is a read-only property!\nconsole.log(`Server running at ${server.ipAddress}:${server.port}`);\n```\n\n<!-- FULL_CODE_START\nclass ServerConfig {\n  readonly ipAddress: string;\n  readonly port: number;\n\n  constructor(ip: string, port: number) {\n    this.ipAddress = ip;\n    this.port = port;\n  }\n}\n\nconst server = new ServerConfig(\"192.168.1.1\", 8080);\nconsole.log(`Server running at ${server.ipAddress}:${server.port}`);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_cls_7",
+            "type": "content",
+            "title": "Abstract Classes",
+            "content": "# Abstract Classes (`abstract`) 🏛️\n\nAn **abstract class** is a base class that **cannot be instantiated directly** using `new`. It serves as a blueprint for derived child classes.\n\n```typescript\nabstract class PaymentProcessor {\n  constructor(public amount: number) {}\n\n  // Concrete method (shared implementation)\n  printReceipt() {\n    console.log(`Receipt for: $${this.amount}`);\n  }\n\n  // Abstract method (must be implemented by subclasses!)\n  abstract processPayment(): boolean;\n}\n```\n\nAny class extending `PaymentProcessor` is forced to implement `processPayment()`!"
+        },
+        {
+            "id": "ts_cls_8",
+            "type": "content",
+            "title": "Extending Abstract Classes",
+            "content": "# Implementing Abstract Subclasses 💳\n\n```typescript\nclass CreditCardProcessor extends PaymentProcessor {\n  constructor(amount: number, private cardNumber: string) {\n    super(amount);\n  }\n\n  // Required implementation!\n  processPayment(): boolean {\n    console.log(`Charging $${this.amount} to card ending in ${this.cardNumber.slice(-4)}`);\n    return true;\n  }\n}\n\nconst payment = new CreditCardProcessor(75, \"4111222233334444\");\npayment.processPayment();\npayment.printReceipt();\n```\n\n<!-- FULL_CODE_START\nabstract class PaymentProcessor {\n  constructor(public amount: number) {}\n  printReceipt() {\n    console.log(`Receipt for: $${this.amount}`);\n  }\n  abstract processPayment(): boolean;\n}\n\nclass CreditCardProcessor extends PaymentProcessor {\n  constructor(amount: number, private cardNumber: string) {\n    super(amount);\n  }\n\n  processPayment(): boolean {\n    console.log(`Charging $${this.amount} to card ending in ${this.cardNumber.slice(-4)}`);\n    return true;\n  }\n}\n\nconst payment = new CreditCardProcessor(75, \"4111222233334444\");\npayment.processPayment();\npayment.printReceipt();\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_cls_quiz_2",
+            "type": "quiz",
+            "title": "Abstract Classes Quiz",
+            "content": "Test your abstract class knowledge.",
+            "quizQuestion": "Can you instantiate an abstract class directly using the 'new' keyword?",
+            "quizOptions": [
+                "Yes, always",
+                "No, abstract classes cannot be instantiated directly and must be subclassed",
+                "Yes, if all methods have default implementations",
+                "Only in non-strict mode"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_cls_9",
+            "type": "content",
+            "title": "Implementing Interfaces with 'implements'",
+            "content": "# The `implements` Keyword 🤝\n\nClasses can implement one or more interfaces to guarantee compliance with API contracts:\n\n```typescript\ninterface Logger {\n  log(message: string): void;\n}\n\ninterface Clearable {\n  clear(): void;\n}\n\nclass ConsoleLogger implements Logger, Clearable {\n  log(msg: string): void {\n    console.log(`[LOG]: ${msg}`);\n  }\n\n  clear(): void {\n    console.log(\"Log buffer cleared.\");\n  }\n}\n\nconst logger = new ConsoleLogger();\nlogger.log(\"System operational\");\nlogger.clear();\n```\n\n<!-- FULL_CODE_START\ninterface Logger {\n  log(message: string): void;\n}\n\ninterface Clearable {\n  clear(): void;\n}\n\nclass ConsoleLogger implements Logger, Clearable {\n  log(msg: string): void {\n    console.log(`[LOG]: ${msg}`);\n  }\n\n  clear(): void {\n    console.log(\"Log buffer cleared.\");\n  }\n}\n\nconst logger = new ConsoleLogger();\nlogger.log(\"System operational\");\nlogger.clear();\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_cls_10",
+            "type": "content",
+            "title": "Getters and Setters",
+            "content": "# Getters and Setters (`get` / `set`) 🎛️\n\nControl and validate property modifications:\n\n```typescript\nclass UserProfile {\n  private _age: number = 0;\n\n  get age(): number {\n    return this._age;\n  }\n\n  set age(value: number) {\n    if (value < 0 || value > 120) {\n      throw new RangeError(\"Age must be between 0 and 120!\");\n    }\n    this._age = value;\n  }\n}\n\nconst profile = new UserProfile();\nprofile.age = 25; // Invokes setter!\nconsole.log(\"Profile Age:\", profile.age); // Invokes getter!\n```\n\n<!-- FULL_CODE_START\nclass UserProfile {\n  private _age: number = 0;\n\n  get age(): number {\n    return this._age;\n  }\n\n  set age(value: number) {\n    if (value < 0 || value > 120) {\n      throw new RangeError(\"Age must be between 0 and 120!\");\n    }\n    this._age = value;\n  }\n}\n\nconst profile = new UserProfile();\nprofile.age = 25;\nconsole.log(\"Profile Age:\", profile.age);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_cls_11",
+            "type": "content",
+            "title": "Static Properties and Methods",
+            "content": "# Static Members (`static`) ⚡\n\nStatic members are attached to the class constructor itself, not created on each instance:\n\n```typescript\nclass DatabaseConnection {\n  static defaultPort: number = 5432;\n\n  static createConnectionString(host: string, db: string): string {\n    return `postgres://${host}:${DatabaseConnection.defaultPort}/${db}`;\n  }\n}\n\nconsole.log(\"Default Port:\", DatabaseConnection.defaultPort);\nconsole.log(DatabaseConnection.createConnectionString(\"db.internal\", \"app_prod\"));\n```\n\n<!-- FULL_CODE_START\nclass DatabaseConnection {\n  static defaultPort: number = 5432;\n\n  static createConnectionString(host: string, db: string): string {\n    return `postgres://${host}:${DatabaseConnection.defaultPort}/${db}`;\n  }\n}\n\nconsole.log(\"Default Port:\", DatabaseConnection.defaultPort);\nconsole.log(DatabaseConnection.createConnectionString(\"db.internal\", \"app_prod\"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_cls_12",
+            "type": "content",
+            "title": "TypeScript private vs JS #private",
+            "content": "# TypeScript `private` vs JavaScript `#private` ⚖️\n\n- **TypeScript `private`:** Enforced **only at compile time**. At runtime after compilation to JavaScript, the property becomes public!\n- **ECMAScript `#private`:** Enforced by the **JavaScript engine itself at runtime**. It is truly inaccessible even via `Object.keys()` or reflection!\n\n```typescript\nclass SecretKeeper {\n  private tsPrivate = \"Compile-time only\";\n  #jsPrivate = \"True hard runtime privacy\";\n\n  reveal() {\n    console.log(this.#jsPrivate);\n  }\n}\n\nconst keeper = new SecretKeeper();\nkeeper.reveal();\n```\n\n<!-- FULL_CODE_START\nclass SecretKeeper {\n  private tsPrivate = \"Compile-time only\";\n  #jsPrivate = \"True hard runtime privacy\";\n\n  reveal() {\n    console.log(this.#jsPrivate);\n  }\n}\n\nconst keeper = new SecretKeeper();\nkeeper.reveal();\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_cls_quiz_3",
+            "type": "quiz",
+            "title": "Parameter Properties Quiz",
+            "content": "Test your constructor shorthand knowledge.",
+            "quizQuestion": "What happens when you declare 'constructor(public name: string)' in TypeScript?",
+            "quizOptions": [
+                "A syntax error occurs",
+                "TypeScript automatically declares 'name' as a property and assigns it from the argument",
+                "The property becomes private",
+                "The class becomes abstract"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_cls_13",
+            "type": "content",
+            "title": "Generic Classes",
+            "content": "# Generic Classes 🧬\n\nClasses can accept type parameters to manage arbitrary data:\n\n```typescript\nclass Queue<T> {\n  private data: T[] = [];\n\n  enqueue(item: T): void {\n    this.data.push(item);\n  }\n\n  dequeue(): T | undefined {\n    return this.data.shift();\n  }\n\n  peek(): T | undefined {\n    return this.data[0];\n  }\n}\n\nconst stringQueue = new Queue<string>();\nstringQueue.enqueue(\"First\");\nstringQueue.enqueue(\"Second\");\nconsole.log(\"Dequeued:\", stringQueue.dequeue()); // \"First\"\n```\n\n<!-- FULL_CODE_START\nclass Queue<T> {\n  private data: T[] = [];\n\n  enqueue(item: T): void {\n    this.data.push(item);\n  }\n\n  dequeue(): T | undefined {\n    return this.data.shift();\n  }\n\n  peek(): T | undefined {\n    return this.data[0];\n  }\n}\n\nconst stringQueue = new Queue<string>();\nstringQueue.enqueue(\"First\");\nstringQueue.enqueue(\"Second\");\nconsole.log(\"Dequeued item:\", stringQueue.dequeue());\nconsole.log(\"Next in queue:\", stringQueue.peek());\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_cls_14",
+            "type": "content",
+            "title": "Method Overriding and Polymorphism",
+            "content": "# Method Overriding and Polymorphism 🎭\n\nSubclasses can override methods defined in parent classes using `super` to call original logic:\n\n```typescript\nclass Shape {\n  area(): number {\n    return 0;\n  }\n}\n\nclass Circle extends Shape {\n  constructor(public radius: number) {\n    super();\n  }\n\n  override area(): number {\n    return Math.PI * this.radius ** 2;\n  }\n}\n\nconst circle = new Circle(5);\nconsole.log(\"Circle area:\", circle.area().toFixed(2));\n```\n\n<!-- FULL_CODE_START\nclass Shape {\n  area(): number {\n    return 0;\n  }\n}\n\nclass Circle extends Shape {\n  constructor(public radius: number) {\n    super();\n  }\n\n  override area(): number {\n    return Math.PI * this.radius ** 2;\n  }\n}\n\nconst circle = new Circle(5);\nconsole.log(\"Circle area:\", circle.area().toFixed(2));\nFULL_CODE_END -->\n\n> 💡 **The `override` Keyword:** TypeScript supports the `override` keyword to prevent accidentally misspelling an overridden method name!"
+        },
+        {
+            "id": "ts_cls_15",
+            "type": "content",
+            "title": "Singleton Design Pattern in TypeScript",
+            "content": "# Design Patterns: The Singleton Pattern 🛡️\n\nEnsure a class has only one single instance across your entire application using a `private constructor`:\n\n```typescript\nclass AppConfig {\n  private static instance: AppConfig;\n  public theme: string = \"dark\";\n\n  // Private constructor prevents calling 'new AppConfig()' externally!\n  private constructor() {}\n\n  static getInstance(): AppConfig {\n    if (!AppConfig.instance) {\n      AppConfig.instance = new AppConfig();\n    }\n    return AppConfig.instance;\n  }\n}\n\nconst c1 = AppConfig.getInstance();\nconst c2 = AppConfig.getInstance();\nconsole.log(\"Are both instances identical?\", c1 === c2); // true!\n```\n\n<!-- FULL_CODE_START\nclass AppConfig {\n  private static instance: AppConfig;\n  public theme: string = \"dark\";\n\n  private constructor() {}\n\n  static getInstance(): AppConfig {\n    if (!AppConfig.instance) {\n      AppConfig.instance = new AppConfig();\n    }\n    return AppConfig.instance;\n  }\n}\n\nconst c1 = AppConfig.getInstance();\nconst c2 = AppConfig.getInstance();\nconsole.log(\"Are both instances identical?\", c1 === c2);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_cls_16",
+            "type": "content",
+            "title": "OOP Best Practices in TypeScript",
+            "content": "# OOP Best Practices in TypeScript 🧼\n\n1. **Favor Composition Over Inheritance:** Deep inheritance trees (5+ levels) become fragile. Prefer composing smaller classes and interfaces together.\n2. **Use Parameter Properties:** Keeps constructors clean and avoids boilerplate.\n3. **Always use access modifiers explicitly:** Don't rely on implicit `public`; be intentional about `private` and `protected`.\n4. **Use `implements` to decouple classes from concrete implementations.**"
+        },
+        {
+            "id": "ts_cls_17",
+            "type": "content",
+            "title": "Real-World Architecture: Repository Pattern",
+            "content": "# Real-World: Repository Pattern 🗄️\n\n```typescript\ninterface Entity {\n  id: string;\n}\n\ninterface Repository<T extends Entity> {\n  findById(id: string): T | undefined;\n  save(item: T): void;\n}\n\nclass InMemoryUserRepository implements Repository<{ id: string; name: string }> {\n  private store = new Map<string, { id: string; name: string }>();\n\n  findById(id: string) {\n    return this.store.get(id);\n  }\n\n  save(user: { id: string; name: string }) {\n    this.store.set(user.id, user);\n  }\n}\n\nconst userRepo = new InMemoryUserRepository();\nuserRepo.save({ id: \"U1\", name: \"David\" });\nconsole.log(\"Found User:\", userRepo.findById(\"U1\"));\n```\n\n<!-- FULL_CODE_START\ninterface Entity {\n  id: string;\n}\n\ninterface Repository<T extends Entity> {\n  findById(id: string): T | undefined;\n  save(item: T): void;\n}\n\nclass InMemoryUserRepository implements Repository<{ id: string; name: string }> {\n  private store = new Map<string, { id: string; name: string }>();\n\n  findById(id: string) {\n    return this.store.get(id);\n  }\n\n  save(user: { id: string; name: string }) {\n    this.store.set(user.id, user);\n  }\n}\n\nconst userRepo = new InMemoryUserRepository();\nuserRepo.save({ id: \"U1\", name: \"David\" });\nconsole.log(\"Found User:\", userRepo.findById(\"U1\"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_cls_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Classes & OOP Mastered! 🌟\n\nYou now command professional Object-Oriented Architecture in TypeScript!\n\n## Key Takeaways:\n- ✅ **Modifiers:** `public` (open), `protected` (hierarchy), `private` (class-only).\n- ✅ **Parameter Properties:** Declare properties directly in constructor arguments.\n- ✅ **Abstract Classes:** Act as un-instantiable blueprints with abstract methods.\n- ✅ **`implements`:** Guarantees classes adhere strictly to interface contracts.\n- ✅ **Getters/Setters:** Provide validation and encapsulation for internal properties.\n\n## Up Next:\nIn the next module, explore built-in type transformations: **TypeScript Utility Types & Enums (Partial, Required, Pick, Omit, Record)**! 🚀"
+        }
+    ]
+}

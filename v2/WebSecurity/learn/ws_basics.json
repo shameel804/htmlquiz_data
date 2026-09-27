@@ -1,0 +1,159 @@
+{
+    "id": "learn_ws_basics",
+    "topicId": "ws_basics",
+    "topicTitle": "Security Fundamentals",
+    "description": "Learn web security fundamentals: CIA triad, Authentication vs Authorization, HTTPS/TLS, Same-Origin Policy (SOP), CORS, and Principle of Least Privilege.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "ws_b_1",
+            "type": "content",
+            "title": "Introduction to Web Security",
+            "content": "# Welcome to Web Application Security 🛡️\n\nWeb application security is the discipline of protecting websites, web APIs, and online services from malicious threats, unauthorized access, and data breaches.\n\n## Why Web Security Matters\n- 💰 **Financial Impact**: The average cost of a data breach exceeds **$4.45 million** globally.\n- ⚖️ **Legal & Regulatory Penalties**: Non-compliance with GDPR, HIPAA, or CCPA leads to catastrophic fines.\n- 🏢 **Reputation & Trust**: 60% of small businesses close within 6 months of a major cyberattack.\n- 🌐 **Pervasive Attack Surface**: Every line of frontend or backend code exposed to the internet is a potential target.\n\n> 💡 **Core Mindset:** Security is not a feature you add at the end of development — it is an architectural mindset integrated into every stage of the software lifecycle."
+        },
+        {
+            "id": "ws_b_2",
+            "type": "content",
+            "title": "The CIA Triad",
+            "content": "# The Cornerstone: The CIA Triad 🏛️\n\nThe **CIA Triad** is the foundational model guiding all information security policies.\n\n## 1. Confidentiality (Privacy & Secrecy)\nEnsures information is accessible only to those authorized to have access.\n\n- *Controls*: Encryption (TLS/AES), strong access controls, masking sensitive data (credit cards).\n- *Violation Example*: An attacker sniffing network packets to read passwords in plain text.\n\n## 2. Integrity (Accuracy & Trustworthiness)\nGuarantees that data has not been altered or tampered with by unauthorized parties.\n\n- *Controls*: Digital signatures, cryptographic hashes (HMAC, SHA-256), database constraints.\n- *Violation Example*: An attacker tampering with an HTTP POST request to change an item price from $500 to $1.\n\n## 3. Availability (Uptime & Accessibility)\nEnsures systems and services remain operational and accessible when needed by legitimate users.\n\n- *Controls*: DDoS mitigation, auto-scaling, redundant backups, failovers.\n- *Violation Example*: A Distributed Denial of Service (DDoS) attack flooding web servers."
+        },
+        {
+            "id": "ws_b_3",
+            "type": "content",
+            "title": "Authentication vs Authorization",
+            "content": "# Authentication vs Authorization 🔑\n\nThese two security concepts are frequently confused, but serve completely different purposes.\n\n## Comparison Matrix\n\n| Aspect | Authentication (AuthN) | Authorization (AuthZ) |\n|---|---|---|\n| **Question Answered** | *\"Who are you?\"* | *\"What are you allowed to do?\"* |\n| **Verification** | Identity verification | Permissions & access rights |\n| **Timing** | First step (at login) | Every subsequent request |\n| **Examples** | Password, Biometrics, 2FA/MFA, SMS OTP | Role-Based Access Control (RBAC), Admin rights |\n| **HTTP Status Code** | `401 Unauthorized` (actually means unauthenticated!) | `403 Forbidden` |\n\n```http_not\n// 401: We don't know who you are. Please log in!\nHTTP/1.1 401 Unauthorized\n\n// 403: We know who you are, but you are not allowed in this area!\nHTTP/1.1 403 Forbidden\n```"
+        },
+        {
+            "id": "ws_b_4",
+            "type": "content",
+            "title": "HTTPS and TLS Encryption",
+            "content": "# HTTPS & Transport Layer Security (TLS) 🔒\n\n**HTTPS** (Hypertext Transfer Protocol Secure) encrypts communication between the client's browser and the web server using **TLS**.\n\n## How Plain HTTP Exposes You\n\nUnder plain `http://`, all headers, cookies, passwords, and form data are transmitted in **plaintext** over public Wi-Fi and ISP routing nodes, allowing Man-in-the-Middle (MitM) packet sniffing.\n\n## The TLS Handshake (Simplified)\n\n1. **Client Hello**: Browser sends supported TLS versions and cryptographic cipher suites.\n2. **Server Hello & Certificate**: Server presents its SSL/TLS certificate signed by a trusted Certificate Authority (CA).\n3. **Asymmetric Key Exchange**: Browser verifies certificate authenticity and uses asymmetric encryption (RSA / Elliptic Curve) to negotiate a shared secret key.\n4. **Symmetric Encryption**: Both parties switch to fast symmetric encryption (AES-GCM or ChaCha20) for all session data."
+        },
+        {
+            "id": "ws_b_quiz_1",
+            "type": "quiz",
+            "title": "CIA & Auth Check",
+            "content": "Test your knowledge of security fundamentals!",
+            "quizQuestion": "Which HTTP status code signifies that a user is successfully authenticated, but lacks sufficient permissions to access the requested resource?",
+            "quizOptions": [
+                "400 Bad Request",
+                "401 Unauthorized",
+                "403 Forbidden",
+                "404 Not Found"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "ws_b_6",
+            "type": "content",
+            "title": "The Same-Origin Policy (SOP)",
+            "content": "# The Same-Origin Policy (SOP) 🌐\n\nThe **Same-Origin Policy** is the most crucial security mechanism in web browsers. It restricts how a document or script loaded by one origin can interact with a resource from another origin.\n\n## What Defines an Origin?\n\nAn origin is defined by the exact combination of three components:\n\n$$\\text{Origin} = \\text{Scheme (Protocol)} + \\text{Host (Domain)} + \\text{Port}$$\n\n## Comparing Against `https://example.com:443`\n\n| Target URL | Same Origin? | Reason |\n|---|---|---|\n| `https://example.com/api/user` | ✅ YES | Same scheme, host, and port |\n| `https://example.com:8080` | ❌ NO | Different port (`8080` vs `443`) |\n| `http://example.com` | ❌ NO | Different scheme (`http` vs `https`) |\n| `https://api.example.com` | ❌ NO | Different host (subdomain) |\n| `https://v2.example.com` | ❌ NO | Different host |"
+        },
+        {
+            "id": "ws_b_7",
+            "type": "content",
+            "title": "Why SOP is Essential for Protection",
+            "content": "# Why the Web Would Collapse Without SOP 🛡️\n\nImagine you are logged into your online bank (`mybank.com`), and an active authentication cookie is stored in your browser.\n\nNow you visit an evil website: `malicious-site.com`.\n\n## Without the Same-Origin Policy:\n- A script running on `malicious-site.com` could execute:\n  ```javascript_not\n  // WITHOUT SOP: Evil script could read your bank account data!\n  fetch('https://mybank.com/api/account-balance')\n    .then(res => res.json())\n    .then(data => sendToAttacker(data));\n  ```\n- The browser would attach your `mybank.com` cookie, and the attacker would read your financial records!\n\n## With the Same-Origin Policy:\nThe browser intercepts the response and blocks `malicious-site.com` from reading any data returned by `mybank.com`!"
+        },
+        {
+            "id": "ws_b_8",
+            "type": "content",
+            "title": "Cross-Origin Resource Sharing (CORS)",
+            "content": "# Cross-Origin Resource Sharing (CORS) 🤝\n\nWhile SOP protects users, modern applications legitimately need cross-origin requests (e.g. `frontend.app` calling `api.backend.com`).\n\n**CORS** is an HTTP-header-based mechanism that allows a server to explicitly whitelist which origins can access its data.\n\n## Server Response Headers for CORS\n\n```http_not\nHTTP/1.1 200 OK\nAccess-Control-Allow-Origin: https://frontend.app\nAccess-Control-Allow-Methods: GET, POST, PUT, DELETE\nAccess-Control-Allow-Headers: Content-Type, Authorization\nAccess-Control-Allow-Credentials: true\n```\n\n> ⚠️ **Critical Misconception:** CORS is **NOT a security barrier for attackers**. Attackers can use cURL or Python scripts to bypass CORS entirely. CORS is a browser-enforced relaxation of the Same-Origin Policy!"
+        },
+        {
+            "id": "ws_b_quiz_2",
+            "type": "quiz",
+            "title": "Same-Origin Policy Quiz",
+            "content": "Test your understanding of the Same-Origin Policy!",
+            "quizQuestion": "Under the Same-Origin Policy, which of the following URLs is considered the SAME origin as `https://my-store.com/cart`?",
+            "quizOptions": [
+                "`http://my-store.com/cart`",
+                "`https://api.my-store.com/cart`",
+                "`https://my-store.com:443/checkout`",
+                "`https://my-store.com:8443/cart`"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "ws_b_10",
+            "type": "content",
+            "title": "Preflight Requests: OPTIONS",
+            "content": "# CORS Preflight Requests (`OPTIONS`) ✈️\n\nFor requests that could alter server state (like `PUT`, `DELETE`, or requests with custom headers like `Authorization`), the browser sends a **Preflight `OPTIONS` request** first.\n\n```http_not\n// 1. Browser asks permission before sending the real PUT request:\nOPTIONS /api/user/101 HTTP/1.1\nHost: api.backend.com\nOrigin: https://frontend.app\nAccess-Control-Request-Method: PUT\nAccess-Control-Request-Headers: Authorization\n\n// 2. Server gives approval:\nHTTP/1.1 204 No Content\nAccess-Control-Allow-Origin: https://frontend.app\nAccess-Control-Allow-Methods: PUT\nAccess-Control-Allow-Headers: Authorization\nAccess-Control-Max-Age: 86400\n```\n\nOnly after the preflight is approved does the browser transmit the actual `PUT` request!"
+        },
+        {
+            "id": "ws_b_11",
+            "type": "content",
+            "title": "Principle of Least Privilege",
+            "content": "# Principle of Least Privilege (PoLP) 🛡️\n\nThe **Principle of Least Privilege** dictates that every user, program, and process must be granted only the minimum access rights necessary to perform its legitimate function.\n\n## Real-World Engineering Applications\n\n1. **Database Connections**: A public web app should connect to PostgreSQL using a role with `SELECT, INSERT, UPDATE` on specific tables. It should **never** connect as the `postgres` superuser!\n2. **API Keys**: Create separate read-only API keys for analytics reporting services instead of sharing administrative master tokens.\n3. **Microservices & Containers**: Docker containers should run as non-root users (`USER node` instead of `root`).\n4. **File Permissions**: Web upload folders should never have executable permissions (`chmod 777` is a critical vulnerability)."
+        },
+        {
+            "id": "ws_b_12",
+            "type": "content",
+            "title": "Defense in Depth",
+            "content": "# Defense in Depth (Layered Security) 🧅\n\n**Defense in Depth** is the strategy of implementing multiple redundant layers of security defense throughout an application stack.\n\nIf an attacker breaches one defensive layer, subsequent layers prevent catastrophic exploitation.\n\n```\nLayer 1: Network & CDN        ➔ Cloudflare (DDoS mitigation, WAF, Bot detection)\nLayer 2: Transport Layer      ➔ HTTPS / HSTS (Encryption in transit)\nLayer 3: Browser Headers      ➔ Content Security Policy (CSP), X-Frame-Options\nLayer 4: Application Logic   ➔ Input validation, Rate limiting, CSRF tokens\nLayer 5: Authentication       ➔ Multi-Factor Authentication (MFA), Argon2 hashing\nLayer 6: Data Persistence     ➔ Parameterized queries, AES-256 database encryption\n```\n\n> 💡 **Key Insight:** Never rely on frontend validation alone. Never assume the network is private."
+        },
+        {
+            "id": "ws_b_13",
+            "type": "content",
+            "title": "The OWASP Top 10",
+            "content": "# The OWASP Top 10 Standard 🏆\n\nThe **Open Web Application Security Project (OWASP)** is a non-profit foundation providing unbiased industry consensus on critical web security risks.\n\n## Current OWASP Top 10 Categories\n\n1. **A01: Broken Access Control** (Failures allowing users to access unauthorized data)\n2. **A02: Cryptographic Failures** (Weak ciphers, sensitive data in plaintext)\n3. **A03: Injection** (SQLi, Command Injection, XSS)\n4. **A04: Insecure Design** (Architectural flaws and missing threat modeling)\n5. **A05: Security Misconfiguration** (Default credentials, debug mode in production)\n6. **A06: Vulnerable and Outdated Components** (Unpatched npm/pip packages)\n7. **A07: Identification and Authentication Failures** (Credential stuffing, weak sessions)\n8. **A08: Software and Data Integrity Failures** (Untrusted CI/CD pipelines)\n9. **A09: Security Logging and Monitoring Failures** (Silent breaches)\n10. **A10: Server-Side Request Forgery (SSRF)**"
+        },
+        {
+            "id": "ws_b_14",
+            "type": "content",
+            "title": "Threat Modeling Basics",
+            "content": "# Threat Modeling & Risk Assessment 🎯\n\nThreat modeling is the systematic process of identifying potential security threats before code is written.\n\n## The STRIDE Model\n\nDeveloped by Microsoft, STRIDE categorizes six common threat vectors:\n\n- **S**poofing: Impersonating another user or system.\n- **T**ampering: Modifying data or code in transit or at rest.\n- **R**epudiation: Inability to prove an action was taken (lack of audit logs).\n- **I**nformation Disclosure: Exposing confidential data to unauthorized parties.\n- **D**enial of Service: Exhausting system memory or CPU to make services unavailable.\n- **E**levation of Privilege: Gaining unauthorized administrative permissions."
+        },
+        {
+            "id": "ws_b_15",
+            "type": "content",
+            "title": "Secure Software Development Lifecycle (SSDLC)",
+            "content": "# The Secure Software Development Lifecycle 🔄\n\nModern engineering practices \"shift security left\" by testing security in every phase of development:\n\n1. **Requirements**: Define compliance goals (GDPR, PCI-DSS) and threat models.\n2. **Design**: Establish architecture patterns (OAuth 2.0, zero-trust network boundaries).\n3. **Coding**: Enforce static code analysis (SAST) and pre-commit security linters.\n4. **Testing**: Dynamic application testing (DAST), automated penetration testing, dependency scanning (`npm audit`, Snyk).\n5. **Deployment & Operations**: Continuous monitoring, log aggregation, bug bounty programs."
+        },
+        {
+            "id": "ws_b_16",
+            "type": "content",
+            "title": "Zero-Trust Architecture",
+            "content": "# The Zero-Trust Security Paradigm 🔒\n\nTraditional security relied on the \"perimeter model\" (like a medieval castle with a moat): anything inside the corporate VPN was trusted.\n\n**Zero-Trust** operates on the principle:\n\n> *\"Never Trust, Always Verify.\"*\n\n## The 3 Tenets of Zero Trust\n\n1. **Verify Explicitly**: Always authenticate and authorize based on all available data points (user identity, location, device health, service).\n2. **Use Least Privilege Access**: Limit user access with Just-In-Time (JIT) and Just-Enough-Access (JEA).\n3. **Assume Breach**: Minimize blast radius by segmenting networks, encrypting all internal communications, and actively hunting for threats."
+        },
+        {
+            "id": "ws_b_17",
+            "type": "content",
+            "title": "Real-World Architecture: Multi-Layer Perimeter",
+            "content": "# Real-World Example: Architecture of a Secure Web Service 🏛️\n\n```http_not\nClient Browser\n     │  (1) TLS 1.3 Encryption / HTTPS Only (HSTS)\n     ▼\nEdge CDN / Cloudflare\n     │  (2) DDoS Mitigation, WAF, Bot Blocking, Strict CORS\n     ▼\nReverse Proxy / Nginx\n     │  (3) Rate Limiting, Security Headers (CSP, X-Frame-Options)\n     ▼\nAPI Service (Node.js / Express)\n     │  (4) JWT Signature Validation, Input Validation, Principle of Least Privilege\n     ▼\nPostgreSQL Database\n        (5) Parameterized SQL, Encrypted at Rest (AES-256), Dedicated Non-Superuser Role\n```"
+        },
+        {
+            "id": "ws_b_quiz_3",
+            "type": "quiz",
+            "title": "CORS & Threat Model Quiz",
+            "content": "Test your knowledge of security architectures!",
+            "quizQuestion": "What is the core premise of the Zero-Trust security paradigm?",
+            "quizOptions": [
+                "Firewalls should be completely disabled",
+                "Internal networks should be inherently trusted over public networks",
+                "Never trust, always verify every request regardless of origin",
+                "Passwords should never be required"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "ws_b_19",
+            "type": "content",
+            "title": "Common Fundamental Security Mistakes",
+            "content": "# Top Security Misconceptions & Mistakes ⚠️\n\n1. **\"CORS protects my API from hackers\"**: False! CORS only instructs compliant browsers not to share responses. Attackers can call your API directly using Python or cURL.\n2. **\"Security through Obscurity\"**: Renaming `/admin` to `/secret-door-123` is useless against automated scanners.\n3. **Trusting Client-Side Validation**: Never rely on HTML5 `required` or JavaScript regex alone. Attackers can bypass browser code effortlessly.\n4. **Hardcoding Secrets**: Storing API keys or database passwords in Git repositories is the #1 cause of cloud breaches."
+        },
+        {
+            "id": "ws_b_20",
+            "type": "content",
+            "title": "Summary: Security Fundamentals",
+            "content": "# Security Fundamentals: Summary 📋\n\n## Key Takeaways\n- **CIA Triad**: Confidentiality, Integrity, and Availability form the pillars of security.\n- **AuthN vs AuthZ**: Authentication verifies identity; Authorization verifies permissions.\n- **HTTPS/TLS**: Encrypts traffic in transit; protects against eavesdropping and tampering.\n- **Same-Origin Policy (SOP)**: Isolates web origins based on protocol, domain, and port.\n- **CORS**: A browser-side relaxation of SOP; not an API security shield.\n- **Least Privilege**: Grant minimal necessary permissions to users, services, and databases.\n\nNext: Master Cross-Site Scripting (XSS) attacks and defense! ⚔️"
+        },
+        {
+            "id": "ws_b_21",
+            "type": "content",
+            "title": "Next Steps: Cross-Site Scripting (XSS)",
+            "content": "# Ahead: Cross-Site Scripting (XSS) ⚔️🛡️\n\nNow let's examine one of the most destructive and common web vulnerabilities.\n\n## Topics Ahead:\n- **Stored XSS (Persistent)**: Attacks saved directly into databases\n- **Reflected XSS (Non-Persistent)**: Attacks reflected in query parameters\n- **DOM-based XSS**: Client-side execution vulnerabilities\n- **Defenses**: Context-aware output encoding, DOMPurify sanitization, and input validation\n\nLet's master XSS defense! 🚀"
+        }
+    ]
+}

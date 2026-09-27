@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Class Properties and Methods",
+    "ques": "Create a TypeScript class named **`BankAccount`** with fields for `accountNumber` (string) and `balance` (number). Implement methods for `deposit(amount: number)` and `getBalance(): number`.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "class BankAccount {\n  accountNumber: string;\n  balance: number;\n\n  constructor(accountNumber: string, initialBalance: number = 0) {\n    this.accountNumber = accountNumber;\n    this.balance = initialBalance;\n  }\n\n  deposit(amount: number): void {\n    if (amount <= 0) {\n      throw new Error(\"Deposit amount must be positive\");\n    }\n    this.balance += amount;\n  }\n\n  getBalance(): number {\n    return this.balance;\n  }\n}\n\nconst myAccount = new BankAccount(\"ACC-12345\", 500);\nmyAccount.deposit(250);\nconsole.log(`Balance: $${myAccount.getBalance()}`); // Balance: $750"
+    },
+    "explanation": "TypeScript classes provide full object-oriented syntax with strict property type annotations and constructor parameter validation."
+  },
+  {
+    "title": "Access Modifiers: Public, Private, and Protected",
+    "ques": "Contrast the **`public`**, **`private`**, and **`protected`** access modifiers in TypeScript. Write a class hierarchy demonstrating the visibility of each modifier in child classes and outside code.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "class Employee {\n  public name: string;          // Accessible everywhere\n  protected salary: number;     // Accessible within this class AND derived subclasses\n  private ssn: string;          // Accessible ONLY within this Employee class\n\n  constructor(name: string, salary: number, ssn: string) {\n    this.name = name;\n    this.salary = salary;\n    this.ssn = ssn;\n  }\n}\n\nclass Manager extends Employee {\n  public getBonus(): number {\n    // Allowed: 'salary' is protected, so subclasses can access it\n    return this.salary * 0.2;\n    \n    // NOT allowed: 'ssn' is private to Employee\n    // return this.ssn; // Compile error!\n  }\n}\n\nconst mgr = new Manager(\"Diana\", 80000, \"123-45-6789\");\nconsole.log(mgr.name); // Allowed: public\n// mgr.salary; // Error: Property 'salary' is protected\n// mgr.ssn;    // Error: Property 'ssn' is private"
+    },
+    "explanation": "Access modifiers enforce encapsulation. `public` is accessible universally, `protected` is limited to the defining class and subclasses, and `private` is locked strictly to the defining class."
+  },
+  {
+    "title": "Readonly Class Properties",
+    "ques": "Demonstrate the use of **`readonly`** properties in TypeScript classes alongside parameter properties in the constructor.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "class DatabaseConnection {\n  // Parameter property with readonly: automatically declares and assigns immutable field\n  constructor(public readonly connectionString: string, public readonly port: number) {}\n\n  connect(): void {\n    console.log(`Connecting to ${this.connectionString} on port ${this.port}`);\n  }\n}\n\nconst db = new DatabaseConnection(\"postgres://localhost/mydb\", 5432);\ndb.connect();\n\n// INVALID: Compile-time error\n// db.port = 3306;\n// Error: Cannot assign to 'port' because it is a read-only property."
+    },
+    "explanation": "Declaring access modifiers and `readonly` directly in constructor parameter lists is syntactic sugar that automatically initializes immutable class member variables."
+  },
+  {
+    "title": "Abstract Classes and Template Methods",
+    "ques": "Explain the role of **Abstract Classes** in TypeScript. Create an abstract class `PaymentProcessor` with an abstract method `processPayment(amount: number): boolean` and a concrete child class `StripeProcessor`.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "abstract class PaymentProcessor {\n  // Concrete method shared across all processors\n  public logTransaction(amount: number): void {\n    console.log(`[AUDIT] Initiating transaction of $${amount}`);\n  }\n\n  // Abstract method: MUST be implemented by any concrete subclass\n  abstract processPayment(amount: number): boolean;\n}\n\nclass StripeProcessor extends PaymentProcessor {\n  processPayment(amount: number): boolean {\n    this.logTransaction(amount);\n    console.log(`Charging $${amount} via Stripe API`);\n    return true;\n  }\n}\n\n// const invalid = new PaymentProcessor(); // Error: Cannot create an instance of an abstract class.\nconst stripe = new StripeProcessor();\nstripe.processPayment(150);"
+    },
+    "explanation": "Abstract classes serve as base classes that cannot be instantiated directly. They define common shared behavior while mandating that child classes implement abstract contract methods."
+  },
+  {
+    "title": "Implementing Interfaces via Implements",
+    "ques": "Demonstrate how a TypeScript class implements an interface contract using the **`implements`** keyword. Create a `Printable` interface and a `Document` class.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "interface Printable {\n  print(): void;\n  pageSize: string;\n}\n\nclass ReportDocument implements Printable {\n  public title: string;\n  public pageSize: string;\n\n  constructor(title: string, pageSize: string = \"A4\") {\n    this.title = title;\n    this.pageSize = pageSize;\n  }\n\n  print(): void {\n    console.log(`Printing report '${this.title}' on ${this.pageSize} paper.`);\n  }\n}\n\nconst annualReport = new ReportDocument(\"Q4 Financials\");\nannualReport.print();"
+    },
+    "explanation": "The `implements` keyword guarantees at compile time that a class adheres to the structural interface contract, implementing all required fields and method signatures."
+  },
+  {
+    "title": "Encapsulating Logic with Getters and Setters",
+    "ques": "Write a TypeScript class demonstrating **`get`** and **`set`** accessors for a `temperatureCelsius` property that validates data and provides a calculated Fahrenheit conversion.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "class TemperatureSensor {\n  private _celsius: number = 0;\n\n  // Getter for Celsius\n  get celsius(): number {\n    return this._celsius;\n  }\n\n  // Setter with business logic validation\n  set celsius(value: number) {\n    if (value < -273.15) {\n      throw new Error(\"Temperature cannot drop below Absolute Zero!\");\n    }\n    this._celsius = value;\n  }\n\n  // Computed property getter\n  get fahrenheit(): number {\n    return (this._celsius * 9 / 5) + 32;\n  }\n}\n\nconst sensor = new TemperatureSensor();\nsensor.celsius = 25;\nconsole.log(`Celsius: ${sensor.celsius}°C, Fahrenheit: ${sensor.fahrenheit}°F`);"
+    },
+    "explanation": "Getters and setters intercept property reads and writes, allowing encapsulation, validation, and computed properties while maintaining clean property-access syntax."
+  }
+]

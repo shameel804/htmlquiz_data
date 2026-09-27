@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Structuring HTML Tables",
+    "ques": "Explain the semantic components of an HTML table: `<table>`, `<thead>`, `<tbody>`, `<tfoot>`, `<tr>`, and `<td>`.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<table border=\"1\" cellpadding=\"8\">\n  <thead>\n    <tr>\n      <th>Product Item</th>\n      <th>Unit Price</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Wireless Mouse</td>\n      <td>$25.00</td>\n    </tr>\n    <tr>\n      <td>Mechanical Keyboard</td>\n      <td>$75.00</td>\n    </tr>\n  </tbody>\n  <tfoot>\n    <tr>\n      <td>Total Balance</td>\n      <td>$100.00</td>\n    </tr>\n  </tfoot>\n</table>"
+    },
+    "explanation": "Separating tables into `<thead>`, `<tbody>`, and `<tfoot>` provides logical structure, allowing screen readers and print styles to repeat table headers across pages."
+  },
+  {
+    "title": "Accessible Table Headers with Scope",
+    "ques": "Explain why **`<th>`** elements should use the **`scope`** attribute (`col` or `row`) for screen reader accessibility.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<table border=\"1\" cellpadding=\"6\">\n  <thead>\n    <tr>\n      <th scope=\"col\">Student Name</th>\n      <th scope=\"col\">Exam Score</th>\n      <th scope=\"col\">Grade</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th scope=\"row\">Alice Johnson</th>\n      <td>95</td>\n      <td>A</td>\n    </tr>\n    <tr>\n      <th scope=\"row\">Bob Martinez</th>\n      <td>82</td>\n      <td>B</td>\n    </tr>\n  </tbody>\n</table>"
+    },
+    "explanation": "The `scope` attribute explicitly establishes whether a header cell applies to a column (`col`) or a row (`row`), providing crucial context to screen reader users as they navigate individual data cells."
+  },
+  {
+    "title": "Adding Descriptive Table Captions",
+    "ques": "Explain the purpose of the **`<caption>`** element and demonstrate its correct placement within an HTML table.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<table border=\"1\" cellpadding=\"6\">\n  <!-- The caption tag MUST be placed directly after the opening <table> tag -->\n  <caption>Monthly Employee Attendance and Overtime Hours (Q3 2026)</caption>\n  <thead>\n    <tr>\n      <th>Employee ID</th>\n      <th>Department</th>\n      <th>Overtime Hours</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>EMP-401</td>\n      <td>Engineering</td>\n      <td>14</td>\n    </tr>\n  </tbody>\n</table>"
+    },
+    "explanation": "`<caption>` provides an accessible title or description summarizing the table's contents and purpose. It must be the immediate first child of the `<table>` element."
+  },
+  {
+    "title": "Spanning Cells with Colspan and Rowspan",
+    "ques": "Demonstrate how to merge table cells across columns using **`colspan`** and across rows using **`rowspan`** in a class schedule table.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<table border=\"1\" cellpadding=\"8\">\n  <caption>Weekly Lecture Timetable</caption>\n  <thead>\n    <tr>\n      <th>Time Slot</th>\n      <th>Monday</th>\n      <th>Tuesday</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>09:00 - 11:00</td>\n      <!-- rowspan spans across 2 rows vertically -->\n      <td rowspan=\"2\">Computer Science Lab</td>\n      <td>Mathematics</td>\n    </tr>\n    <tr>\n      <td>11:00 - 12:00</td>\n      <td>Physics</td>\n    </tr>\n    <tr>\n      <td>12:00 - 13:00</td>\n      <!-- colspan spans across 2 columns horizontally -->\n      <td colspan=\"2\" align=\"center\">Lunch Break (Campus Cafeteria)</td>\n    </tr>\n  </tbody>\n</table>"
+    },
+    "explanation": "`colspan=\"N\"` merges a cell horizontally across N columns. `rowspan=\"N\"` merges a cell vertically down across N rows."
+  }
+]

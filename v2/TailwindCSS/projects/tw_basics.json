@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Understanding the Utility-First Concept",
+    "ques": "Explain the core philosophy of **Utility-First CSS** in Tailwind CSS compared to traditional semantic CSS. Provide an HTML snippet for a stylized alert banner using Tailwind utility classes.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Utility-First Alert Banner -->\n<div class=\"flex items-center p-4 mb-4 text-blue-800 border border-blue-300 rounded-lg bg-blue-50\">\n  <svg class=\"w-5 h-5 mr-3 text-blue-600 flex-shrink-0\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n    <path fill-rule=\"evenodd\" d=\"M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z\" clip-rule=\"evenodd\"></path>\n  </svg>\n  <div class=\"text-sm font-medium\">\n    A new software update is available! Check your system preferences.\n  </div>\n</div>"
+    },
+    "explanation": "Utility-first CSS prioritizes composing interfaces directly in HTML using atomic single-purpose utility classes. This eliminates naming overhead, prevents CSS file bloat, and provides visual consistency."
+  },
+  {
+    "title": "Mobile-First Responsive Design",
+    "ques": "Explain Tailwind's **mobile-first** responsive breakpoint system (`sm`, `md`, `lg`, `xl`). Write an HTML component whose card layout is a single column on mobile, two columns on medium screens, and three columns on large screens.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Grid responsive layout: 1 col on mobile, 2 cols on md, 3 cols on lg -->\n<div class=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6\">\n  <div class=\"p-6 bg-white rounded-xl shadow-md border border-gray-100\">\n    <h3 class=\"text-lg font-bold text-gray-900\">Basic Plan</h3>\n    <p class=\"mt-2 text-gray-600\">$9/month for individuals.</p>\n  </div>\n  <div class=\"p-6 bg-white rounded-xl shadow-md border border-gray-100\">\n    <h3 class=\"text-lg font-bold text-gray-900\">Pro Plan</h3>\n    <p class=\"mt-2 text-gray-600\">$29/month for small teams.</p>\n  </div>\n  <div class=\"p-6 bg-white rounded-xl shadow-md border border-gray-100\">\n    <h3 class=\"text-lg font-bold text-gray-900\">Enterprise Plan</h3>\n    <p class=\"mt-2 text-gray-600\">$99/month with dedicated support.</p>\n  </div>\n</div>"
+    },
+    "explanation": "Unprefixed utility classes apply to all screen widths starting at 0px. Breakpoint prefixes like `md:` and `lg:` use `min-width` media queries, applying styles progressively as screen sizes expand."
+  },
+  {
+    "title": "Pseudo-Class Modifiers: Hover, Focus, and Active",
+    "ques": "Demonstrate the use of state modifiers (`hover:`, `focus:`, and `active:`) in Tailwind by writing an interactive primary call-to-action button.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<button class=\"px-5 py-2.5 text-white font-semibold bg-indigo-600 rounded-lg shadow-md transition-all duration-200 hover:bg-indigo-700 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-indigo-300 active:scale-95\">\n  Get Started\n</button>"
+    },
+    "explanation": "State modifiers in Tailwind prepend state names before utility classes, allowing seamless inline styling for interactive pseudoclasses like hover, focus rings, and active button depressions."
+  },
+  {
+    "title": "Dark Mode Configuration and Styling",
+    "ques": "Explain the two dark mode strategies in Tailwind (`media` vs `class`). Write a card component using `dark:` variant utilities that automatically adapts to dark themes.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Card supporting both light and dark modes via 'dark:' variants -->\n<div class=\"max-w-md p-6 bg-white rounded-2xl shadow-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 transition-colors duration-300\">\n  <h2 class=\"text-xl font-bold text-gray-900 dark:text-white\">\n    Dark Mode Support\n  </h2>\n  <p class=\"mt-2 text-gray-600 dark:text-gray-300 text-sm leading-relaxed\">\n    Using the dark class strategy, Tailwind checks the presence of a 'dark' class on the root html element to seamlessly invert theme colors.\n  </p>\n</div>"
+    },
+    "explanation": "Using the `class` dark mode strategy allows toggling a `.dark` class on the `<html>` root via JavaScript, triggering all `dark:` utility variants across the entire page."
+  },
+  {
+    "title": "Understanding Tailwind Preflight",
+    "ques": "What is Tailwind's **Preflight**, and what role does it play in normalizing browser default styles? Mention three specific CSS resets it applies.",
+    "answer": {
+      "type": "text",
+      "content": "### What Preflight Is:\n**Preflight** is Tailwind's built-in CSS reset stylesheet, built on top of modern-normalize. It is injected via `@tailwind base` to eliminate cross-browser inconsistencies and create a clean slate for utility styling.\n\n### Three Specific Changes Preflight Applies:\n1. **Margins Stripped:** All default margins are removed from elements like `<h1>-<h6>`, `<p>`, `<blockquote>`, and `<figure>` (`margin: 0;`).\n2. **Headings Unstyled:** Heading tags (`<h1>`, `<h2>`, etc.) inherit their font-size and font-weight from parent text instead of displaying giant browser default bold sizes.\n3. **Lists Unstyled:** `<ul>` and `<ol>` elements have list styling removed (`list-style: none;`) along with default padding (`padding: 0;`), requiring explicit utilities like `list-disc pl-5` when bullet points are needed.\n4. **Box-Sizing:** Sets `box-sizing: border-box` globally on all elements and pseudo-elements."
+    },
+    "explanation": "Preflight ensures that elements look identical across Safari, Chrome, and Firefox, preventing unstyled browser defaults from clashing with utility classes."
+  }
+]

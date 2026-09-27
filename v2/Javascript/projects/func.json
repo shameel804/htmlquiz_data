@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Function Declarations vs Expressions",
+    "ques": "Explain the difference between a **Function Declaration** and a **Function Expression**, focusing on how hoisting affects their invocation.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// 1. Function Declaration: Entire function is hoisted to top of scope\nconsole.log(declaredGreet(\"Alice\")); // Works! (Outputs: Hello, Alice)\n\nfunction declaredGreet(name) {\n  return `Hello, ${name}`;\n}\n\n// 2. Function Expression: Assigned to a variable; variable declaration is hoisted, but NOT the function assignment\n// console.log(expressedGreet(\"Bob\")); // ReferenceError: Cannot access before initialization!\n\nconst expressedGreet = function(name) {\n  return `Greetings, ${name}`;\n};\n\nconsole.log(expressedGreet(\"Bob\")); // Works here after definition"
+    },
+    "explanation": "Function declarations are hoisted entirely with their definition, allowing calls before their location in source code. Function expressions stored in `const` or `let` variables cannot be invoked before assignment."
+  },
+  {
+    "title": "Modern ES6 Arrow Functions",
+    "ques": "Explain the syntax and lexical `this` behavior of **Arrow Functions (`=>`)**. Contrast how standard functions and arrow functions handle the `this` binding inside an object method callback.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const timer = {\n  seconds: 0,\n  start() {\n    // Standard callback function re-binds 'this' to the global/window object\n    // Arrow function captures 'this' lexically from surrounding 'start' method!\n    setInterval(() => {\n      this.seconds++;\n      console.log(`Elapsed: ${this.seconds}s`);\n    }, 1000);\n  }\n};\n\n// Concise arrow function expressions:\nconst square = x => x * x;\nconst add = (a, b) => a + b;\n\nconsole.log(square(6)); // 36"
+    },
+    "explanation": "Arrow functions provide concise syntax and do not have their own `this`, `arguments`, `super`, or `new.target`. Instead, they inherit `this` lexically from their enclosing execution scope."
+  },
+  {
+    "title": "Understanding JavaScript Scopes",
+    "ques": "Explain the three levels of scope in JavaScript: **Global Scope**, **Function Scope**, and **Block Scope**. Write a code sample showing variable visibility across scopes.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const globalVar = \"I am global\";\n\nfunction outerFunction() {\n  const functionScopedVar = \"I am inside function\";\n  \n  if (true) {\n    const blockScopedVar = \"I am inside if-block\";\n    console.log(globalVar);          // Accessible\n    console.log(functionScopedVar);  // Accessible\n    console.log(blockScopedVar);     // Accessible\n  }\n  \n  // console.log(blockScopedVar); // ReferenceError: Not accessible outside the block\n}\n\nouterFunction();\n// console.log(functionScopedVar); // ReferenceError: Not accessible outside function"
+    },
+    "explanation": "Global variables are visible everywhere. Function scope confines variables inside functions. Block scope (`let`/`const`) confines variables within curly braces `{}` of loops and conditionals."
+  },
+  {
+    "title": "Closures and Data Encapsulation",
+    "ques": "What is a **Closure** in JavaScript? Write a `createCounter` function that uses a closure to maintain a private internal counter variable with `increment()` and `getValue()` methods.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function createCounter(initialValue = 0) {\n  // Private internal state variable\n  let count = initialValue;\n\n  // Returned object retains reference to the lexical environment of createCounter\n  return {\n    increment() {\n      count++;\n      return count;\n    },\n    decrement() {\n      count--;\n      return count;\n    },\n    getValue() {\n      return count;\n    }\n  };\n}\n\nconst counterA = createCounter(10);\nconsole.log(counterA.increment()); // 11\nconsole.log(counterA.increment()); // 12\nconsole.log(counterA.getValue());  // 12\n// 'count' cannot be directly accessed or corrupted from the outside!"
+    },
+    "explanation": "A closure is the combination of a function bundled together with references to its surrounding lexical environment. Closures enable private variables and state encapsulation."
+  }
+]

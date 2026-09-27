@@ -1,0 +1,60 @@
+[
+  {
+    "title": "Modern Password Hashing with Bcrypt and Argon2",
+    "ques": "Why are standard cryptographic hash functions like MD5, SHA-1, and even SHA-256 unsuitable for storing user passwords? Write a Node.js implementation using `bcrypt` showing how to hash a password with a high work factor and safely verify it.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const bcrypt = require('bcrypt');\n\n// Cost factor (salt rounds): 12 represents 2^12 hashing iterations\nconst SALT_ROUNDS = 12;\n\nasync function hashPassword(plainPassword) {\n  // Bcrypt automatically generates a cryptographically secure unique salt\n  const hashedPassword = await bcrypt.hash(plainPassword, SALT_ROUNDS);\n  return hashedPassword;\n}\n\nasync function verifyPassword(plainPassword, storedHash) {\n  // Safe constant-time comparison prevents timing attacks\n  const isMatch = await bcrypt.compare(plainPassword, storedHash);\n  return isMatch;\n}\n\n// Argon2 is the winner of the Password Hashing Competition (PHC) because it is\n// specifically designed to resist both GPU and ASIC brute-forcing via memory-hardness."
+    },
+    "explanation": "General-purpose hash algorithms (MD5, SHA-256) are optimized for speed, allowing modern GPUs to calculate billions of guesses per second. Specialized password hashing functions like **Bcrypt** and **Argon2id** are intentionally slow, salted, and memory-hard."
+  },
+  {
+    "title": "Session Hijacking and Fixation Defenses",
+    "ques": "Explain the difference between **Session Hijacking** and **Session Fixation**. Write an Express session configuration demonstrating how to regenerate the session ID upon successful user login to thwart session fixation attacks.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const express = require('express');\nconst session = require('express-session');\nconst app = express();\n\napp.use(express.json());\napp.use(session({\n  secret: 'enterprise-super-secret',\n  resave: false,\n  saveUninitialized: false,\n  cookie: { secure: true, httpOnly: true, sameSite: 'strict', maxAge: 3600000 }\n}));\n\napp.post('/api/login', async (req, res) => {\n  const { username, password } = req.body;\n  \n  if (validateCredentials(username, password)) {\n    // DEFENSE AGAINST SESSION FIXATION:\n    // Immediately regenerate session identifier upon authentication privilege change!\n    req.session.regenerate((err) => {\n      if (err) return res.status(500).json({ error: 'Session error' });\n      \n      req.session.userId = username;\n      req.session.authenticated = true;\n      \n      res.json({ message: 'Login successful with fresh session ID' });\n    });\n  } else {\n    res.status(401).json({ error: 'Invalid credentials' });\n  }\n});"
+    },
+    "explanation": "**Session Fixation** occurs when an attacker forces a victim to use a known session identifier before authenticating. **Session Hijacking** involves stealing an already authenticated active session token (via XSS or network sniffing). Regenerating the session ID on login breaks fixation chains."
+  },
+  {
+    "title": "Hardening Cookies: Secure, HttpOnly, and SameSite",
+    "ques": "Detail the security implications of the three core cookie flags: **`Secure`**, **`HttpOnly`**, and **`SameSite`**. Write an Express response snippet that configures all three flags on an authentication session cookie.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "app.post('/api/auth/token', (req, res) => {\n  const authToken = generateSecureToken();\n\n  res.cookie('auth_session', authToken, {\n    httpOnly: true, // Prevents client-side JS (document.cookie) from accessing the cookie; blocks XSS theft\n    secure: true,   // Ensures cookie is strictly transmitted over encrypted HTTPS connections; prevents cleartext sniffing\n    sameSite: 'strict', // Blocks cross-site transmission during external navigation; mitigates CSRF\n    maxAge: 24 * 60 * 60 * 1000, // 24 hours expiration\n    path: '/'       // Restrict path scope\n  });\n\n  res.json({ message: 'Authenticated successfully' });\n});"
+    },
+    "explanation": "Combining `HttpOnly`, `Secure`, and `SameSite=Strict` provides comprehensive cookie defense: `HttpOnly` defends against credential theft through XSS, `Secure` defends against transport MITM eavesdropping, and `SameSite` stops cross-origin request forgery."
+  },
+  {
+    "title": "JWT Architecture and Critical Vulnerabilities",
+    "ques": "Describe the three components of a **JSON Web Token (JWT)** (Header, Payload, Signature). Discuss the infamous **`'alg': 'none'`** and **algorithm confusion (HMAC vs RSA)** vulnerabilities, and how to safeguard backend verification logic.",
+    "answer": {
+      "type": "text",
+      "content": "### JWT Components\nA JWT consists of three Base64URL-encoded strings joined by periods (`header.payload.signature`):\n1. **Header:** Identifies the token type and signing algorithm (e.g., `{\"alg\": \"RS256\", \"typ\": \"JWT\"}`).\n2. **Payload:** Claims containing user claims and expiration (`{\"sub\": \"1234\", \"role\": \"admin\", \"exp\": 1700000000}`).\n3. **Signature:** Cryptographic verification hash: `HMACSHA256(base64UrlEncode(header) + \".\" + base64UrlEncode(payload), secret)`.\n\n### Critical Vulnerabilities:\n* **The `alg: 'none'` Exploit:** Vulnerable libraries accepted tokens where the attacker set `\"alg\": \"none\"` and stripped the signature, treating unverified payloads as valid admin tokens.\n* **Algorithm Confusion (Key Confusion):** A server designed for asymmetric RSA verification receives a token signed with symmetric `HS256` where the attacker signed the payload using the server's public key (which is publicly known) as the HMAC shared secret.\n\n### Backend Mitigation:\n```javascript\n// Explicitly enforce allowable algorithms; NEVER trust the algorithm declared in the incoming token header!\njwt.verify(token, publicKey, { algorithms: ['RS256'] });\n```"
+    },
+    "explanation": "Never trust header declarations from client-supplied tokens. Always whitelist the allowable signature algorithm on the backend verification call."
+  },
+  {
+    "title": "OAuth 2.0 and OIDC Essentials",
+    "ques": "Explain the relationship between **OAuth 2.0** and **OpenID Connect (OIDC)**. Describe the **Authorization Code Flow with PKCE** (Proof Key for Code Exchange) and explain why PKCE is mandatory for single-page applications and mobile clients.",
+    "answer": {
+      "type": "text",
+      "content": "### OAuth 2.0 vs OpenID Connect (OIDC)\n* **OAuth 2.0:** A delegation framework for **Authorization** (granting an application access to resources via an `access_token` without sharing user passwords).\n* **OpenID Connect (OIDC):** An identity layer built directly on top of OAuth 2.0 for **Authentication** (issuing a standardized `id_token` in JWT format containing user profile identity data).\n\n### Authorization Code Flow with PKCE (Proof Key for Code Exchange):\n1. **Code Verifier & Challenge:** The client creates a high-entropy secret string (`code_verifier`) and derives a hashed version (`code_challenge = SHA256(code_verifier)`).\n2. **Authorization Request:** The client redirects the user to the Identity Provider (IdP) passing `code_challenge`.\n3. **Auth Code Returned:** Upon user consent, the IdP sends back a short-lived `authorization_code`.\n4. **Token Exchange:** The client exchanges the `authorization_code` along with the original unhashed `code_verifier`.\n5. **Verification:** The IdP verifies that `SHA256(code_verifier) == code_challenge` before returning tokens.\n\n### Why PKCE is Mandatory for Public Clients:\nSingle-page applications (SPAs) and mobile apps cannot safely hide a `client_secret`. Without PKCE, any intercepted `authorization_code` (via custom URI scheme hijacking or browser history) could be exchanged by an attacker for valid session tokens."
+    },
+    "explanation": "PKCE dynamically binds the authorization code request to the token redemption request, ensuring only the client instance that initiated the flow can exchange the code for access tokens."
+  },
+  {
+    "title": "Multi-Factor Authentication (MFA) Implementation",
+    "ques": "Explain how **Time-based One-Time Password (TOTP)** algorithms work under RFC 6238. Write a Node.js snippet using standard cryptographic utilities showing how a shared secret key and a Unix timestamp generate a 6-digit rolling code.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const crypto = require('crypto');\n\nfunction generateTOTP(secretBase32, timeStepSeconds = 30) {\n  // 1. Calculate time counter step T = floor(current_unix_time / timeStepSeconds)\n  const epoch = Math.floor(Date.now() / 1000);\n  const counter = Math.floor(epoch / timeStepSeconds);\n  \n  // Convert counter integer to 8-byte buffer\n  const counterBuffer = Buffer.alloc(8);\n  counterBuffer.writeBigInt64BE(BigInt(counter));\n  \n  // 2. Compute HMAC-SHA1 of counter with shared secret\n  const hmac = crypto.createHmac('sha1', Buffer.from(secretBase32, 'utf-8'));\n  hmac.update(counterBuffer);\n  const hash = hmac.digest();\n  \n  // 3. Dynamic Truncation: extract 4 bytes from offset determined by last nibble\n  const offset = hash[hash.length - 1] & 0x0f;\n  const binary = ((hash[offset] & 0x7f) << 24) |\n                 ((hash[offset + 1] & 0xff) << 16) |\n                 ((hash[offset + 2] & 0xff) << 8) |\n                 (hash[offset + 3] & 0xff);\n  \n  // 4. Generate 6-digit code via modulo 1,000,000\n  const code = (binary % 1000000).toString().padStart(6, '0');\n  return code;\n}\n\n// Example secret agreed upon during QR code enrollment\nconst sharedSecret = 'MYSECUREAPPLICATIONKEY2026';\nconsole.log('Current TOTP code:', generateTOTP(sharedSecret));"
+    },
+    "explanation": "TOTP combines a static secret shared during initial QR enrollment with a dynamic 30-second time counter, ensuring that captured codes expire quickly and cannot be replayed by attackers."
+  }
+]

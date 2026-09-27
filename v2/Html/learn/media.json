@@ -1,0 +1,159 @@
+{
+    "id": "learn_html_media",
+    "topicId": "media",
+    "topicTitle": "HTML Media",
+    "description": "Embed responsive images, audio, video, tracks, and secure iframes.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "html_media_1",
+            "type": "content",
+            "title": "Welcome to HTML Media Elements",
+            "content": "# HTML Media Elements 🎬\n\nRich media—images, vector illustrations, audio, video, and interactive frames—bring web pages to life.\n\n## What you'll master:\n- 🖼️ **The `<img>` Element** - Essential attributes, dimensions, and layout shift prevention\n- 📱 **Responsive Images** - `srcset`, `sizes`, and the `<picture>` element\n- ⚡ **Next-Gen Formats & Lazy Loading** - WebP, AVIF, and `loading=\"lazy\"`\n- 🎵 **Native Audio & Video** - Multi-source embeds, controls, and accessibility tracks\n- 🪟 **iFrames & Security** - Embedding external content safely with `sandbox`"
+        },
+        {
+            "id": "html_media_2",
+            "type": "content",
+            "title": "The <img> Element Fundamentals",
+            "content": "# The `<img>` Element Fundamentals 🖼️\n\nThe `<img>` element embeds an image into an HTML page. It is a void (self-closing) element.\n\n```html_not\n<img src=\"images/sunset.jpg\" alt=\"Vibrant orange sunset over ocean waves\" width=\"800\" height=\"450\">\n```\n\n## Mandatory Attributes:\n1. **`src`** (Source): Path or URL to the image file.\n2. **`alt`** (Alternative Text): Text description displayed if image fails to load, and read aloud by screen readers.\n3. **`width` & `height`**: Defining aspect ratio prevents Cumulative Layout Shift (CLS)!"
+        },
+        {
+            "id": "html_media_3",
+            "type": "content",
+            "title": "The Power of the alt Attribute",
+            "content": "# Writing Perfect `alt` Text ♿\n\nThe `alt` attribute is the single most important accessibility feature for web images.\n\n## Rules for Writing Alt Text:\n- ✅ **Be descriptive & concise:** Describe the contents and context of the image.\n- ❌ **Don't say \"Image of...\" or \"Picture of...\":** Screen readers already announce that it's an image.\n- 🎯 **Decorative Images:** If an image is purely decorative (like a background flourish or divider), use an empty `alt=\"\"` so screen readers ignore it!\n\n```html_not\n<!-- Decorative icon -->\n<img src=\"bullet-icon.svg\" alt=\"\" aria-hidden=\"true\">\n\n<!-- Informative image -->\n<img src=\"chart.png\" alt=\"Bar chart showing a 25% increase in user retention in 2025\">\n```"
+        },
+        {
+            "id": "html_media_4",
+            "type": "content",
+            "title": "Preventing Layout Shift (CLS)",
+            "content": "# Preventing Cumulative Layout Shift (CLS) ⚡\n\nBefore HTML loads an image, it doesn't know its dimensions, causing the page layout to jerk and jump as images finish downloading.\n\n## The Modern Solution:\nAlways provide explicit `width` and `height` attributes on `<img>`:\n\n```html_not\n<img src=\"banner.jpg\" alt=\"Welcome banner\" width=\"1200\" height=\"600\" class=\"responsive-img\">\n```\n\n```css_not\n.responsive-img {\n  width: 100%;\n  height: auto; /* Preserves aspect ratio automatically! */\n}\n```\n\nModern browsers calculate the aspect ratio from the attributes before the image downloads, reserving exact placeholder space on screen!"
+        },
+        {
+            "id": "html_media_quiz_1",
+            "type": "quiz",
+            "title": "Image Basics Quiz",
+            "content": "Test your knowledge of image attributes.",
+            "quizQuestion": "What should you set the alt attribute to for purely decorative images?",
+            "quizOptions": [
+                "alt='decorative'",
+                "Omit the alt attribute completely",
+                "alt=''",
+                "alt='none'"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "html_media_5",
+            "type": "content",
+            "title": "Responsive Images with srcset",
+            "content": "# Responsive Images with `srcset` 📱\n\nServing a 4K desktop image to a small mobile smartphone wastes user data and slows down loading times. `srcset` solves this!\n\n```html_not\n<img src=\"photo-800.jpg\"\n     srcset=\"photo-400.jpg 400w,\n             photo-800.jpg 800w,\n             photo-1600.jpg 1600w\"\n     sizes=\"(max-width: 600px) 100vw,\n            (max-width: 1200px) 50vw,\n            800px\"\n     alt=\"Scenic mountain valley\">\n```\n\n## How It Works:\n- `srcset`: Lists available image files along with their natural pixel width in `w` units.\n- `sizes`: Informs the browser how wide the image will be displayed at different viewport media queries.\n- The browser automatically chooses the optimal image size to download!"
+        },
+        {
+            "id": "html_media_6",
+            "type": "content",
+            "title": "The <picture> Element & Art Direction",
+            "content": "# The `<picture>` Element & Art Direction 🎨\n\nWhen you want to serve completely different images based on screen size (Art Direction), or modern file formats, use `<picture>`.\n\n```html_not\n<picture>\n  <!-- Cropped square version for mobile phones -->\n  <source media=\"(max-width: 600px)\" srcset=\"avatar-square.jpg\">\n  \n  <!-- Wide panoramic version for desktop monitors -->\n  <source media=\"(min-width: 601px)\" srcset=\"avatar-panoramic.jpg\">\n  \n  <!-- Fallback img element (required!) -->\n  <img src=\"avatar-panoramic.jpg\" alt=\"Profile avatar\">\n</picture>\n```"
+        },
+        {
+            "id": "html_media_7",
+            "type": "content",
+            "title": "Serving Modern Image Formats (WebP & AVIF)",
+            "content": "# Modern Formats: WebP & AVIF 🚀\n\nNext-generation formats like **WebP** and **AVIF** achieve 30% to 50% smaller file sizes than legacy JPEGs/PNGs at identical visual quality.\n\n```html_not\n<picture>\n  <!-- 1. Super compressed AVIF for modern browsers -->\n  <source srcset=\"hero.avif\" type=\"image/avif\">\n  \n  <!-- 2. Highly efficient WebP for slightly older browsers -->\n  <source srcset=\"hero.webp\" type=\"image/webp\">\n  \n  <!-- 3. Standard JPEG fallback -->\n  <img src=\"hero.jpg\" alt=\"Product Showcase\" width=\"800\" height=\"500\">\n</picture>\n```\n\nBrowsers evaluate `<source>` tags from top to bottom, picking the first supported format!"
+        },
+        {
+            "id": "html_media_8",
+            "type": "content",
+            "title": "Native Lazy Loading",
+            "content": "# Native Lazy Loading with `loading='lazy'` ⚡\n\nNative lazy loading delays loading offscreen images and iframes until the user scrolls near them, speeding up initial page render dramatically!\n\n```html_not\n<!-- Lazy load offscreen image -->\n<img src=\"footer-graphic.jpg\" alt=\"Partner logos\" loading=\"lazy\">\n\n<!-- Eager load critical above-the-fold hero image -->\n<img src=\"hero.jpg\" alt=\"Hero Banner\" loading=\"eager\">\n```\n\n> ⚠️ **Hero Image Warning:** Never put `loading=\"lazy\"` on your top hero image! That hurts your Largest Contentful Paint (LCP) performance score."
+        },
+        {
+            "id": "html_media_quiz_2",
+            "type": "quiz",
+            "title": "Responsive Media Quiz",
+            "content": "Test your knowledge of responsive images.",
+            "quizQuestion": "Which HTML element enables format fallbacks (AVIF -> WebP -> JPEG) and art direction?",
+            "quizOptions": [
+                "<canvas>",
+                "<picture>",
+                "<figure>",
+                "<media>"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_media_9",
+            "type": "content",
+            "title": "Native Video Embedding (<video>)",
+            "content": "# Native Video Embedding (`<video>`) 🎬\n\nHTML5 `<video>` embeds video files without plugins:\n\n```html_not\n<video controls width=\"640\" height=\"360\" poster=\"thumb.jpg\" preload=\"metadata\">\n  <source src=\"intro.mp4\" type=\"video/mp4\">\n  <source src=\"intro.webm\" type=\"video/webm\">\n  Your browser does not support the video tag.\n</video>\n```\n\n## Attribute Breakdown:\n- `controls`: Displays default browser playback controls.\n- `poster`: Image shown before play is pressed.\n- `autoplay`: Starts automatically (must usually be combined with `muted` to work).\n- `loop`: Restarts playback upon finishing.\n- `playsinline`: Prevents automatic full-screen expansion on iOS Safari."
+        },
+        {
+            "id": "html_media_10",
+            "type": "content",
+            "title": "Background Video Autoplay",
+            "content": "# Creating Autoplay Background Videos 🎥\n\nFor hero section background video loops:\n\n```html_not\n<video autoplay loop muted playsinline class=\"bg-video\">\n  <source src=\"bg-loop.mp4\" type=\"video/mp4\">\n</video>\n```\n\n```css_not\n.bg-video {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  object-fit: cover; /* Crops and scales video to fill container without distortion */\n  z-index: -1;\n}\n```\n\n> 💡 **Autoplay Policy:** Browsers strictly block autoplaying videos that have audio. You **must** include the `muted` attribute for autoplay to succeed!"
+        },
+        {
+            "id": "html_media_11",
+            "type": "content",
+            "title": "Timed Text & Subtitles with <track>",
+            "content": "# Timed Text & Subtitles with `<track>` 💬\n\nThe `<track>` tag adds subtitles, captions, or descriptions using WebVTT (`.vtt`) format:\n\n```html_not\n<video controls width=\"640\" height=\"360\">\n  <source src=\"presentation.mp4\" type=\"video/mp4\">\n  \n  <track src=\"subs_en.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\" default>\n  <track src=\"subs_es.vtt\" kind=\"subtitles\" srclang=\"es\" label=\"Spanish\">\n</video>\n```\n\n## Kinds of Tracks:\n- `subtitles`: Translations for dialogue.\n- `captions`: Dialogue plus sound effects (e.g. `[Thunder rumbles]`) for hearing impaired users.\n- `descriptions`: Text description of visual video events for screen readers."
+        },
+        {
+            "id": "html_media_12",
+            "type": "content",
+            "title": "Native Audio Embedding (<audio>)",
+            "content": "# Native Audio Embedding (`<audio>`) 🎵\n\nEmbed podcasts, voice recordings, or sound effects:\n\n```html_not\n<audio controls>\n  <source src=\"sound.mp3\" type=\"audio/mpeg\">\n  <source src=\"sound.ogg\" type=\"audio/ogg\">\n  Your browser does not support audio playback.\n</audio>\n```\n\nSupported formats: MP3 (universal), AAC, WAV, OGG."
+        },
+        {
+            "id": "html_media_13",
+            "type": "content",
+            "title": "Embedding External Content with <iframe>",
+            "content": "# Embedding Content with `<iframe>` 🪟\n\nAn Inline Frame (`<iframe>`) embeds an external webpage, YouTube video, or Google Map directly into your page:\n\n```html_not\n<iframe src=\"https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ\"\n        title=\"YouTube video player\"\n        width=\"560\"\n        height=\"315\"\n        style=\"border:0;\"\n        allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"\n        allowfullscreen>\n</iframe>\n```\n\n> ♿ **Accessibility Requirement:** Every `<iframe>` **must** have a descriptive `title` attribute so screen reader users understand what the frame contains!"
+        },
+        {
+            "id": "html_media_14",
+            "type": "content",
+            "title": "iFrame Security with sandbox",
+            "content": "# iFrame Security: The `sandbox` Attribute 🔒\n\nEmbedding untrusted third-party content creates security vulnerabilities. The `sandbox` attribute restricts the embedded page's permissions!\n\n```html_not\n<!-- Maximum security: blocks scripts, forms, popups, and same-origin cookies -->\n<iframe src=\"untrusted.html\" sandbox title=\"User submission preview\"></iframe>\n\n<!-- Selective permissions -->\n<iframe src=\"widget.html\"\n        sandbox=\"allow-scripts allow-same-origin allow-forms\"\n        title=\"Third-party widget\">\n</iframe>\n```\n\nWithout permissions, a sandboxed iframe cannot execute JavaScript or submit forms!"
+        },
+        {
+            "id": "html_media_quiz_3",
+            "type": "quiz",
+            "title": "iFrame Security Quiz",
+            "content": "Test your knowledge of iframe safety.",
+            "quizQuestion": "Which attribute on an <iframe> restricts scripts, forms, and popups from executing?",
+            "quizOptions": [
+                "security='high'",
+                "sandbox",
+                "restricted",
+                "csp"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_media_15",
+            "type": "content",
+            "title": "Semantic Media Grouping with <figure>",
+            "content": "# Semantic Media with `<figure>` & `<figcaption>` 🖼️\n\nAlways wrap self-contained media with `<figure>` and `<figcaption>`:\n\n```html_not\n<figure>\n  <img src=\"diagram.svg\" alt=\"Detailed flowchart of data flow in our application\" width=\"600\">\n  <figcaption>\n    Figure 2.4 — Data flow lifecycle from client request to database query.\n  </figcaption>\n</figure>\n```\n\nCan also encapsulate code blocks, audio clips, and statistical charts."
+        },
+        {
+            "id": "html_media_16",
+            "type": "content",
+            "title": "The <embed> and <object> Elements",
+            "content": "# `<embed>` and `<object>` Elements 📄\n\nFor non-HTML external resources like interactive PDF documents, use `<object>`:\n\n```html_not\n<object data=\"contract.pdf\" type=\"application/pdf\" width=\"600\" height=\"400\">\n  <p>Your browser does not support PDF viewing. \n     <a href=\"contract.pdf\">Download PDF</a> instead.</p>\n</object>\n```\n\n`<object>` provides built-in fallback content if the browser cannot render the plugin!"
+        },
+        {
+            "id": "html_media_17",
+            "type": "content",
+            "title": "Performance Optimization for Media",
+            "content": "# Media Performance Optimization Checklist ⚡\n\nFollow this production checklist for blazing fast media:\n1. **Compress all images:** Run through tools like Squoosh or ImageOptim before deployment.\n2. **Serve AVIF/WebP:** Deliver modern formats with `<picture>`.\n3. **Always specify dimensions:** Set `width` and `height` to prevent layout shift.\n4. **Enable `loading=\"lazy\"`:** On all offscreen images.\n5. **Use responsive `srcset`:** Match device resolution (1x, 2x Retina).\n6. **Mute background videos:** Ensure autoplay succeeds with `muted playsinline`."
+        },
+        {
+            "id": "html_media_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Media Elements Mastered! 🌟\n\nYou are now an expert in embedding high-performance, accessible media on the web!\n\n## Key Takeaways:\n- ✅ **Images:** Use `src`, descriptive `alt`, and `width`/`height` to eliminate layout shift.\n- ✅ **Responsive Images:** Use `srcset` and `sizes` for resolution switching.\n- ✅ **Art Direction:** Use `<picture>` for cropping and modern format fallbacks (AVIF/WebP).\n- ✅ **Native Video & Audio:** `<video>` and `<audio>` with `<source>` and `<track>`.\n- ✅ **iFrame Security:** Always add a `title` and lock down with `sandbox`.\n\n## Congratulations!\nYou have completed the entire **HTML Learning Curriculum**! Ready to master styling with **CSS**? Let's go! 🚀"
+        }
+    ]
+}

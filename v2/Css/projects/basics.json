@@ -1,0 +1,41 @@
+[
+  {
+    "title": "CSS Syntax and Rule Sets",
+    "ques": "Explain the fundamental syntax of a **CSS Rule Set**. Identify the **selector**, **declaration block**, **properties**, and **values** in a code example.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* Selector: identifies which HTML elements to style */\nh1 {\n  /* Declaration: property : value; */\n  color: #2563eb;          /* Property: color, Value: #2563eb */\n  font-size: 2.25rem;      /* Property: font-size, Value: 2.25rem */\n  text-align: center;      /* Property: text-align, Value: center */\n}"
+    },
+    "explanation": "A CSS rule set consists of a selector followed by a declaration block enclosed in curly braces. Each declaration consists of a property name, a colon, the property value, and a terminating semicolon."
+  },
+  {
+    "title": "Core CSS Selectors",
+    "ques": "Demonstrate the core types of CSS selectors: **Element (Type)**, **Class (`.`)**, **ID (`#`)**, and the **Universal selector (`*`)**.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* 1. Universal Selector: targets every element */\n* {\n  box-sizing: border-box;\n}\n\n/* 2. Element/Type Selector: targets all <p> tags */\np {\n  line-height: 1.6;\n  margin-bottom: 1rem;\n}\n\n/* 3. Class Selector: targets elements with class=\"featured-card\" */\n.featured-card {\n  background-color: #f8fafc;\n  border: 1px solid #e2e8f0;\n  padding: 1.5rem;\n}\n\n/* 4. ID Selector: targets single unique element with id=\"main-navigation\" */\n#main-navigation {\n  background-color: #0f172a;\n  color: #ffffff;\n}"
+    },
+    "explanation": "Selectors target DOM nodes. Universal selectors target all elements, element selectors target HTML tags, class selectors target reusable classes (`.`), and ID selectors target unique IDs (`#`)."
+  },
+  {
+    "title": "CSS Properties and Measurement Units",
+    "ques": "Explain the difference between **Absolute units (`px`)** and **Relative units (`rem`, `em`, `%`, `vh`, `vw`)**. Write a CSS snippet illustrating when to use each.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".container {\n  /* Percentage: relative to parent width */\n  width: 90%;\n  \n  /* rem: relative to root (html) font size (typically 16px) */\n  max-width: 75rem; /* 75 * 16px = 1200px */\n  margin: 0 auto;\n  padding: 2rem;\n}\n\n.hero-banner {\n  /* vh: percentage of viewport height */\n  min-height: 70vh;\n  \n  /* px: fixed absolute measurement for hair-thin border lines */\n  border-bottom: 1px solid #d1d5db;\n}\n\n.card-button {\n  /* em: relative to the element's own font-size */\n  font-size: 1rem;\n  padding: 0.5em 1em; /* scales proportionally if font-size changes */\n}"
+    },
+    "explanation": "`px` is absolute and fixed. `rem` scales consistently with user root font settings for accessibility. `em` scales with local element typography, and `%`/`vh`/`vw` scale with viewport dimensions."
+  },
+  {
+    "title": "Understanding the Cascade and Specificity",
+    "ques": "Explain how the **Cascade** and **Specificity** resolve conflicting CSS rules. Order the specificity of: Inline styles, ID selectors, Class selectors, and Element selectors.",
+    "answer": {
+      "type": "text",
+      "content": "### Specificity Hierarchy (Highest to Lowest Priority):\n1. **`!important` Rule:** Overrides all normal declarations regardless of origin.\n2. **Inline Styles (`style=\"...\"`):** Specificity weight `(1, 0, 0, 0)`.\n3. **ID Selectors (`#header`):** Specificity weight `(0, 1, 0, 0)`.\n4. **Classes, Attributes, and Pseudo-classes (`.btn`, `[type=\"text\"]`, `:hover`):** Specificity weight `(0, 0, 1, 0)`.\n5. **Elements and Pseudo-elements (`p`, `div`, `::before`):** Specificity weight `(0, 0, 0, 1)`.\n6. **Universal Selector (`*`):** Specificity weight `(0, 0, 0, 0)`.\n\n### The Cascade Resolution:\nWhen two rules with identical specificity target the exact same element, the rule declared **latest in the stylesheet** wins."
+    },
+    "explanation": "Specificity is a 4-part weight system `(inline, ID, class, element)` used by browsers to determine which style declaration takes precedence when multiple rules target an element."
+  }
+]

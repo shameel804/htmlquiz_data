@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Mastering Anchor Tags (<a>)",
+    "ques": "Explain the essential attributes of the **`<a>`** element: `href` protocols (`https://`, `mailto:`, `tel:`, `#id`), `target=\"_blank\"`, and `download`.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Standard external hyperlink -->\n<p><a href=\"https://www.w3.org\" target=\"_blank\" rel=\"noopener\">Visit W3C Standards</a></p>\n\n<!-- Email client link -->\n<p><a href=\"mailto:support@example.com?subject=Help\">Contact Support Email</a></p>\n\n<!-- Telephone dialing link for mobile devices -->\n<p><a href=\"tel:+18005550199\">Call Customer Service</a></p>\n\n<!-- Internal page anchor jumping to section with id=\"contact-section\" -->\n<p><a href=\"#contact-section\">Jump to Contact Section</a></p>\n\n<!-- Direct file download link -->\n<p><a href=\"/assets/annual-report.pdf\" download=\"CompanyReport2026.pdf\">Download Annual Report</a></p>"
+    },
+    "explanation": "Anchor tags create hyperlinks. The `href` attribute accepts web URLs, email links (`mailto:`), telephone links (`tel:`), page fragments (`#hash`), and file downloads (`download`)."
+  },
+  {
+    "title": "Accessible Navigation Menus (<nav>)",
+    "ques": "Build a semantic, accessible **Navigation Menu** using the `<nav>`, `<ul>`, and `<li>` elements, incorporating `aria-current=\"page\"` for the active view.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<header>\n  <nav aria-label=\"Main Site Menu\">\n    <ul>\n      <li>\n        <a href=\"/\" aria-current=\"page\">Home</a>\n      </li>\n      <li>\n        <a href=\"/courses\">Courses</a>\n      </li>\n      <li>\n        <a href=\"/about\">About Us</a>\n      </li>\n      <li>\n        <a href=\"/contact\">Contact</a>\n      </li>\n    </ul>\n  </nav>\n</header>"
+    },
+    "explanation": "Enclosing links inside `<nav>` and structured lists helps assistive technologies identify primary site navigation landmarks. `aria-current=\"page\"` signals the current active view."
+  }
+]

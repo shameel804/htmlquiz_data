@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Declaring Variables with let, const, and var",
+    "ques": "Explain the differences between **`var`**, **`let`**, and **`const`** in modern JavaScript regarding re-assignment, block scope, and hoisting.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// 1. 'const' declares an immutable identifier that cannot be reassigned\nconst applicationName = \"CodePulse\";\n// applicationName = \"NewApp\"; // TypeError: Assignment to constant variable.\n\n// 2. 'let' declares block-scoped reassignable variables\nlet currentScore = 10;\ncurrentScore += 5; // Valid reassignment\n\n// 3. Block scoping: variables declared with let/const exist only inside their block {}\nif (true) {\n  let blockScopedVar = \"visible only inside if-block\";\n  var functionScopedVar = \"leaks outside block!\";\n}\n\n// console.log(blockScopedVar); // ReferenceError: blockScopedVar is not defined\nconsole.log(functionScopedVar); // Outputs successfully due to legacy function-scoping"
+    },
+    "explanation": "`const` is preferred by default for values that never reassign. `let` is used for accumulators and loops. `var` is avoided in modern JS due to lack of block scoping and hoisting bugs."
+  },
+  {
+    "title": "JavaScript Primitive and Reference Data Types",
+    "ques": "List the seven primitive data types in JavaScript along with reference types. Write a snippet demonstrating the `typeof` operator on each.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// Primitives (stored by value)\nconst aString = \"Hello\";              // string\nconst aNumber = 42;                   // number\nconst aBigInt = 9007199254740991n;    // bigint\nconst aBoolean = true;                // boolean\nconst anUndefined = undefined;        // undefined\nconst aSymbol = Symbol(\"id\");         // symbol\nconst aNull = null;                   // null (typeof evaluates to 'object' due to historical JS bug)\n\n// Reference Types (stored by memory reference pointer)\nconst anObject = { name: \"Alice\" };   // object\nconst anArray = [1, 2, 3];            // object (Array.isArray(anArray) is true)\nconst aFunction = function() {};      // function\n\nconsole.log(typeof aString);    // 'string'\nconsole.log(typeof aNumber);    // 'number'\nconsole.log(typeof aNull);      // 'object' (legacy quirk)\nconsole.log(typeof aFunction);  // 'function'"
+    },
+    "explanation": "JavaScript has 7 primitives: `string`, `number`, `bigint`, `boolean`, `undefined`, `symbol`, and `null`. Objects, arrays, and functions are reference types."
+  },
+  {
+    "title": "Working with Operators in JavaScript",
+    "ques": "Contrast strict equality (`===`) with loose equality (`==`), and demonstrate arithmetic, logical, and ternary operators.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// 1. Strict (===) vs Loose (==) Equality\nconsole.log(5 == \"5\");   // true (performs implicit type coercion)\nconsole.log(5 === \"5\");  // false (strict: compares both value AND type)\n\n// 2. Arithmetic & Modulo\nconst remainder = 17 % 5; // 2\n\n// 3. Logical Operators (Short-circuiting)\nconst userRole = null;\nconst effectiveRole = userRole || \"guest\"; // fallback to 'guest'\n\n// 4. Ternary Operator\nconst age = 20;\nconst accessLevel = (age >= 18) ? \"Adult\" : \"Minor\";\nconsole.log(`Access: ${accessLevel}`); // Adult"
+    },
+    "explanation": "Always prefer `===` and `!==` to prevent unintended implicit type coercion. Logical operators (`||`, `&&`, `??`) allow concise fallback evaluations."
+  },
+  {
+    "title": "JavaScript Syntax Fundamentals and Statements",
+    "ques": "Explain the rules of JavaScript syntax regarding case sensitivity, semicolons, comments, and identifiers. Write a properly formatted script calculating circle properties.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "/**\n * Calculates circumference and area of a circle.\n * JavaScript identifiers are strictly case-sensitive: 'radius' != 'Radius'.\n */\nconst radius = 5;\nconst PI_APPROX = 3.14159;\n\n// Formula: 2 * pi * r\nconst circumference = 2 * PI_APPROX * radius;\n\n// Formula: pi * r^2\nconst area = PI_APPROX * (radius ** 2);\n\nconsole.log(`Radius: ${radius}`);\nconsole.log(`Circumference: ${circumference.toFixed(2)}`);\nconsole.log(`Area: ${area.toFixed(2)}`);"
+    },
+    "explanation": "JavaScript identifiers use camelCase conventions and are case-sensitive. Exponentiation is written using `**`, and comments use `//` or `/* */`."
+  }
+]

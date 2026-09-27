@@ -1,0 +1,61 @@
+[
+  {
+    "title": "Defining Basic Interfaces",
+    "ques": "Define a TypeScript interface named **`User`** with fields `id` (number), `username` (string), and `isActive` (boolean). Create an object adhering to this interface.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "interface User {\n  id: number;\n  username: string;\n  isActive: boolean;\n}\n\nconst primaryUser: User = {\n  id: 101,\n  username: \"alex_dev\",\n  isActive: true\n};\n\nconsole.log(`User: ${primaryUser.username}, Active: ${primaryUser.isActive}`);"
+    },
+    "explanation": "Interfaces act as structural blueprints, defining the exact properties and types that implementing objects must provide."
+  },
+  {
+    "title": "Using Optional Properties in Interfaces",
+    "ques": "Create an interface **`Product`** where `title` and `price` are mandatory, but `description` and `discountPercentage` are **optional**. Show two valid instances.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "interface Product {\n  title: string;\n  price: number;\n  description?: string;\n  discountPercentage?: number;\n}\n\n// Instance with only required fields\nconst item1: Product = {\n  title: \"Wireless Mouse\",\n  price: 29.99\n};\n\n// Instance with optional fields supplied\nconst item2: Product = {\n  title: \"Mechanical Keyboard\",\n  price: 89.99,\n  description: \"RGB Backlit Red Switches\",\n  discountPercentage: 15\n};"
+    },
+    "explanation": "The `?` modifier indicates optional properties, allowing flexible object shapes while maintaining type safety for properties that are present."
+  },
+  {
+    "title": "Immutable Data with Readonly Properties",
+    "ques": "Demonstrate the use of the **`readonly`** modifier in an interface **`Config`** to prevent mutations after initialization.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "interface Config {\n  readonly apiKey: string;\n  readonly maxRetries: number;\n  environment: string;\n}\n\nconst serverConfig: Config = {\n  apiKey: \"secret_abc_123\",\n  maxRetries: 3,\n  environment: \"production\"\n};\n\n// Reassigning regular property is allowed\nserverConfig.environment = \"staging\";\n\n// INVALID: TypeScript produces a compile-time error:\n// serverConfig.apiKey = \"new_key\";\n// Error: Cannot assign to 'apiKey' because it is a read-only property."
+    },
+    "explanation": "Properties marked `readonly` can only be set during initialization and cannot be reassigned later, enforcing immutability in data structures."
+  },
+  {
+    "title": "Extending Interfaces",
+    "ques": "Demonstrate interface inheritance by creating a base interface **`Vehicle`** and extending it into **`ElectricCar`** using the **`extends`** keyword.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "interface Vehicle {\n  make: string;\n  model: string;\n  year: number;\n}\n\n// ElectricCar inherits all properties from Vehicle and adds batteryCapacity\ninterface ElectricCar extends Vehicle {\n  batteryCapacityKwh: number;\n  autopilotEnabled: boolean;\n}\n\nconst mySedan: ElectricCar = {\n  make: \"Tesla\",\n  model: \"Model 3\",\n  year: 2024,\n  batteryCapacityKwh: 75,\n  autopilotEnabled: true\n};\n\nconsole.log(`${mySedan.year} ${mySedan.make} ${mySedan.model}`);"
+    },
+    "explanation": "The `extends` keyword allows interfaces to inherit properties from one or more parent interfaces, promoting DRY design and reusable contracts."
+  },
+  {
+    "title": "Type Aliases vs Interfaces",
+    "ques": "Compare **Type Aliases (`type`)** and **Interfaces (`interface`)** in TypeScript. Explain declaration merging and when to prefer one over the other.",
+    "answer": {
+      "type": "text",
+      "content": "### Key Differences Between `type` and `interface`:\n\n1. **Declaration Merging:**\n   * **`interface`:** Merges automatically when defined multiple times under the same name (essential for extending library types).\n   * **`type`:** Cannot be merged; defining the same type alias twice results in a duplicate identifier compile error.\n\n2. **Unions and Primitives:**\n   * **`type`:** Can represent primitive types, unions (`type Status = 'open' | 'closed'`), intersections, and tuples directly.\n   * **`interface`:** Can only describe object and class shapes.\n\n### Code Demonstration of Merging:\n```typescript\ninterface WindowSettings {\n  width: number;\n}\ninterface WindowSettings {\n  height: number; // Automatically merged into { width: number; height: number; }\n}\n```\n\n### Best Practice Recommendation:\nUse **`interface`** for public APIs and object models to allow consumer extension, and **`type`** for complex unions, mapped types, or utility transformations."
+    },
+    "explanation": "Interfaces support declaration merging and are optimized for OOP object modeling. Type aliases offer greater flexibility for union types and advanced type-level metaprogramming."
+  },
+  {
+    "title": "Defining Dynamic Index Signatures",
+    "ques": "Write a TypeScript interface **`Dictionary`** that uses an **Index Signature** to represent a key-value store mapping arbitrary string keys to numbers.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "interface InventoryCounts {\n  // Index signature: any string key maps to a number value\n  [itemName: string]: number;\n  \n  // Known required property adhering to the signature type\n  totalItems: number;\n}\n\nconst warehouse: InventoryCounts = {\n  totalItems: 450,\n  laptops: 120,\n  monitors: 85,\n  cables: 245\n};\n\nconsole.log(`Laptops in stock: ${warehouse[\"laptops\"]}`);"
+    },
+    "explanation": "Index signatures (`[key: KeyType]: ValueType`) allow typing objects with dynamic or unknown keys, while guaranteeing that all properties conform to the designated value type."
+  }
+]

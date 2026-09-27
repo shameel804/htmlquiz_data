@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Structuring the Form Element",
+    "ques": "Explain the role of the **`<form>`** element, its `action` and `method` attributes, and write an HTML form structure configured to submit data via HTTP `POST`.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Form configured to send serialized data to /api/register via POST -->\n<form action=\"/api/register\" method=\"POST\" autocomplete=\"on\">\n  <fieldset>\n    <legend>Account Registration</legend>\n    <p>Complete the fields below to create your account.</p>\n  </fieldset>\n</form>"
+    },
+    "explanation": "The `<form>` element acts as an interactive container. `action` specifies the destination URL handler, and `method` specifies the HTTP transfer verb (`GET` or `POST`)."
+  },
+  {
+    "title": "Diverse Input Types and Attributes",
+    "ques": "Demonstrate the use of HTML5 input types: `text`, `email`, `password`, `number`, and `checkbox` paired with accessible `<label>` elements.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"form-group\">\n  <label for=\"fullName\">Full Name:</label>\n  <input type=\"text\" id=\"fullName\" name=\"fullName\" placeholder=\"Alice Smith\" required />\n</div>\n\n<div class=\"form-group\">\n  <label for=\"userEmail\">Email Address:</label>\n  <input type=\"email\" id=\"userEmail\" name=\"userEmail\" required />\n</div>\n\n<div class=\"form-group\">\n  <label for=\"userPass\">Password:</label>\n  <input type=\"password\" id=\"userPass\" name=\"userPass\" required />\n</div>\n\n<div class=\"form-group\">\n  <label for=\"userAge\">Age:</label>\n  <input type=\"number\" id=\"userAge\" name=\"userAge\" min=\"13\" max=\"120\" />\n</div>\n\n<div class=\"form-group\">\n  <input type=\"checkbox\" id=\"termsAccept\" name=\"termsAccept\" required />\n  <label for=\"termsAccept\">I agree to the Terms of Service</label>\n</div>"
+    },
+    "explanation": "HTML5 input types automatically activate tailored virtual keyboards on mobile devices and provide built-in type validation before submission."
+  },
+  {
+    "title": "Button Types: Submit, Reset, and Button",
+    "ques": "Explain the three values of the button `type` attribute: `submit`, `reset`, and `button`. Provide code samples for each.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"button-row\">\n  <!-- Submits the parent form data to server -->\n  <button type=\"submit\">Create Account</button>\n  \n  <!-- Resets all form fields back to initial default values -->\n  <button type=\"reset\">Clear Form</button>\n  \n  <!-- Generic button: does nothing unless hooked up to JavaScript -->\n  <button type=\"button\" onclick=\"handleCancel()\">Cancel</button>\n</div>"
+    },
+    "explanation": "The default button type in forms is `submit`. Setting `type=\"button\"` prevents unintentional form submissions when triggering JavaScript client functions."
+  },
+  {
+    "title": "Native HTML5 Form Validation",
+    "ques": "Demonstrate native HTML5 constraint validation using attributes: `required`, `pattern` (regular expression), `minlength`, `maxlength`, and custom error hints.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<form action=\"/submit\" method=\"POST\">\n  <label for=\"zipCode\">US Zip Code (5 digits):</label>\n  <input \n    type=\"text\" \n    id=\"zipCode\" \n    name=\"zipCode\" \n    required \n    pattern=\"[0-9]{5}\" \n    title=\"Please enter exactly 5 numerical digits (e.g. 90210)\" \n    minlength=\"5\" \n    maxlength=\"5\" \n  />\n  <button type=\"submit\">Verify Postal Code</button>\n</form>"
+    },
+    "explanation": "HTML5 constraint validation checks inputs before submitting, showing localized browser tooltips based on `pattern`, `minlength`, `maxlength`, and `title` without needing custom JavaScript."
+  }
+]

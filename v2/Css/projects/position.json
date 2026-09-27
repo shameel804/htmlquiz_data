@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Static and Relative Positioning",
+    "ques": "Explain the difference between **`position: static`** and **`position: relative`**. Write a CSS snippet showing how `relative` nudges an element without disturbing neighboring layout flow.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* 1. Static: default flow; top, right, bottom, left properties have NO effect */\n.default-element {\n  position: static;\n}\n\n/* 2. Relative: element is positioned relative to its normal position */\n.nudged-element {\n  position: relative;\n  top: -10px;\n  left: 15px;\n  /* The original space occupied by this element in the document flow remains reserved! */\n  background-color: #fef08a;\n}"
+    },
+    "explanation": "`static` is the browser default where elements flow naturally. `relative` allows shifting an element using offset coordinates without removing its footprint from normal document flow."
+  },
+  {
+    "title": "Absolute Positioning and Containing Blocks",
+    "ques": "Explain how **`position: absolute`** interacts with the nearest positioned ancestor (`position: relative`). Write an example positioning a close button in the top-right corner of a card.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* Parent container must be positioned (relative) to establish the containing block */\n.notification-card {\n  position: relative;\n  width: 350px;\n  padding: 1.5rem;\n  background-color: #ffffff;\n  border: 1px solid #e2e8f0;\n  border-radius: 8px;\n}\n\n/* Absolute child: pinned relative to the edges of .notification-card */\n.close-button {\n  position: absolute;\n  top: 12px;\n  right: 12px;\n  width: 24px;\n  height: 24px;\n  cursor: pointer;\n  background: none;\n  border: none;\n}"
+    },
+    "explanation": "An absolutely positioned element is removed from normal flow and positioned relative to its closest non-static ancestor. If no positioned ancestor exists, it positions relative to the viewport (initial containing block)."
+  },
+  {
+    "title": "Fixed Positioning for Persistent UI",
+    "ques": "Demonstrate the use of **`position: fixed`** to build a floating 'Back to Top' button that stays pinned to the bottom-right of the viewport regardless of scrolling.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".back-to-top-btn {\n  position: fixed;\n  bottom: 24px;\n  right: 24px;\n  z-index: 1000;\n  \n  padding: 12px 18px;\n  background-color: #2563eb;\n  color: #ffffff;\n  border: none;\n  border-radius: 50px;\n  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);\n  cursor: pointer;\n}"
+    },
+    "explanation": "`position: fixed` removes the element from normal flow and anchors it relative to the browser viewport. It stays locked in position as the user scrolls."
+  },
+  {
+    "title": "Sticky Positioning for Section Headers",
+    "ques": "Explain how **`position: sticky`** toggles between relative and fixed behaviors based on scroll offset. Write a CSS rule creating a sticky table header.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".sticky-table-header {\n  /* Acts as relative until the user scrolls past its threshold, then sticks like fixed */\n  position: sticky;\n  top: 0;\n  z-index: 10;\n  \n  background-color: #0f172a;\n  color: #ffffff;\n  padding: 12px 16px;\n}\n\n/* Note: Sticky positioning requires at least one threshold (top, bottom, left, right) \n   and fails if any parent element has overflow: hidden */"
+    },
+    "explanation": "`position: sticky` behaves like `relative` until its containing element crosses a scroll threshold (e.g. `top: 0`), at which point it sticks in place until its parent container scrolls out of view."
+  }
+]

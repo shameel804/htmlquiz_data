@@ -1,0 +1,159 @@
+{
+    "id": "learn_bs_basics",
+    "topicId": "bs_basics",
+    "topicTitle": "Layout & Grid System",
+    "description": "Master the Bootstrap 5 layout and grid system: containers, 12-column grid, breakpoints (sm to xxl), gutters, row-cols, and nesting.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "bs_b_1",
+            "type": "content",
+            "title": "Introduction to Bootstrap 5",
+            "content": "# Welcome to Bootstrap 5 🅱️\n\n**Bootstrap** is the world's most popular open-source front-end toolkit for developing responsive, mobile-first websites. Created at Twitter in 2011, Bootstrap 5 represents a complete modern overhaul.\n\n## What's New in Bootstrap 5?\n- **Zero jQuery**: Completely rewritten in vanilla JavaScript for maximum speed and compatibility.\n- **CSS Custom Properties**: Native CSS variables support for dynamic theme switching.\n- **Enhanced 12-Column Grid**: New XXL breakpoint (`>= 1400px`) and standalone gutter utilities (`g-*`, `gx-*`, `gy-*`).\n- **Modern Utility API**: Built on Sass maps to add, remove, or modify utility classes effortlessly.\n- **Offcanvas Component**: Native drawer navigation for mobile interfaces."
+        },
+        {
+            "id": "bs_b_2",
+            "type": "content",
+            "title": "Containers: Fixed vs Fluid",
+            "content": "# Bootstrap Containers 📦\n\nContainers are the most fundamental layout element in Bootstrap. They wrap, pad, and align your content within a given device or viewport.\n\n## Container Types\n\n| Class | Behavior | Max Width |\n|---|---|---|\n| `.container` | Responsive fixed-width container | Snaps to max-width at each breakpoint (540px, 720px, 960px, 1140px, 1320px) |\n| `.container-fluid` | Full width container | `width: 100%` across all viewport sizes |\n| `.container-{breakpoint}` | 100% wide until specified breakpoint | E.g. `.container-md` is 100% wide until `768px`, then becomes fixed |\n\n```html_not\n<!-- Centered content with responsive max-width -->\n<div class=\"container\">\n  <h1>Welcome to Bootstrap 5</h1>\n  <p>Centered with automatic horizontal padding (15px gutters on each side).</p>\n</div>\n```"
+        },
+        {
+            "id": "bs_b_3",
+            "type": "content",
+            "title": "The 6 Grid Breakpoints",
+            "content": "# The 6 Responsive Breakpoints 📱💻\n\nBootstrap uses a mobile-first responsive system powered by 6 tiered media query breakpoints.\n\n## Breakpoint Reference Table\n\n| Breakpoint | Infix | Dimensions | Target Devices |\n|---|---|---|---|\n| Extra small | *(none)* | `< 576px` | Portrait smartphones |\n| Small | `sm` | `>= 576px` | Landscape phones, small tablets |\n| Medium | `md` | `>= 768px` | Tablets, iPads |\n| Large | `lg` | `>= 992px` | Laptops, desktop monitors |\n| Extra large | `xl` | `>= 1200px` | Large desktop displays |\n| Extra extra large | `xxl` | `>= 1400px` | High-res & ultrawide screens |\n\n> 💡 **Mobile-First Principle:** Classes without an infix (like `.col-6`) apply from `0px` upward until overridden by a larger infix (like `.col-md-4`)."
+        },
+        {
+            "id": "bs_b_4",
+            "type": "content",
+            "title": "The 12-Column Grid Anatomy",
+            "content": "# Anatomy of the 12-Column Grid 📐\n\nThe Bootstrap grid builds on Flexbox. A grid consists of **three nested levels**:\n\n```\n.container (or .container-fluid)\n   └── .row (wraps columns & applies negative margin gutters)\n          └── .col-* (the immediate children holding content)\n```\n\n## Basic Grid Example\n\n```html_not\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-8 bg-primary text-white p-3\">Spans 8 of 12 columns</div>\n    <div class=\"col-4 bg-secondary text-white p-3\">Spans 4 of 12 columns</div>\n  </div>\n</div>\n```\n\n> ⚠️ **Strict Rule:** Only `.col-*` should be immediate children of `.row`, and all content belongs inside columns!"
+        },
+        {
+            "id": "bs_b_quiz_1",
+            "type": "quiz",
+            "title": "Container & Grid Check",
+            "content": "Test your knowledge of Bootstrap 5 grid fundamentals!",
+            "quizQuestion": "What is the correct hierarchical nesting order in Bootstrap's grid system?",
+            "quizOptions": [
+                "`.row` contains `.container`, which contains `.col`",
+                "`.container` contains `.row`, which contains `.col`",
+                "`.col` contains `.container`, which contains `.row`",
+                "`.container` contains `.col`, which contains `.row`"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "bs_b_6",
+            "type": "content",
+            "title": "Auto-Layout & Equal-Width Columns",
+            "content": "# Auto-Layout Columns with `.col` ⚖️\n\nIf you don't specify explicit column numbers, Bootstrap divides available row space equally.\n\n```html_not\n<div class=\"container\">\n  <!-- 3 equal-width columns (33.33% each) -->\n  <div class=\"row\">\n    <div class=\"col\">Column 1 of 3</div>\n    <div class=\"col\">Column 2 of 3</div>\n    <div class=\"col\">Column 3 of 3</div>\n  </div>\n  \n  <!-- Auto-width column sizing to content -->\n  <div class=\"row mt-3\">\n    <div class=\"col\">1 of 3</div>\n    <div class=\"col-auto bg-warning\">Variable width content</div>\n    <div class=\"col\">3 of 3</div>\n  </div>\n</div>\n```\n\n`.col-auto` sizes itself precisely to the width of its content, while sibling `.col` elements share the remaining space."
+        },
+        {
+            "id": "bs_b_7",
+            "type": "content",
+            "title": "Responsive Column Stacking",
+            "content": "# Responsive Column Stacking 📱💻\n\nCombine breakpoint infixes to change layout across devices.\n\n```html_not\n<div class=\"container\">\n  <div class=\"row\">\n    <!-- Stack vertically (100%) on mobile, 50% on tablet, 25% on desktop -->\n    <div class=\"col-12 col-md-6 col-lg-3 mb-3\">\n      <div class=\"p-3 border bg-light\">Card 1</div>\n    </div>\n    <div class=\"col-12 col-md-6 col-lg-3 mb-3\">\n      <div class=\"p-3 border bg-light\">Card 2</div>\n    </div>\n    <div class=\"col-12 col-md-6 col-lg-3 mb-3\">\n      <div class=\"p-3 border bg-light\">Card 3</div>\n    </div>\n    <div class=\"col-12 col-md-6 col-lg-3 mb-3\">\n      <div class=\"p-3 border bg-light\">Card 4</div>\n    </div>\n  </div>\n</div>\n```"
+        },
+        {
+            "id": "bs_b_8",
+            "type": "content",
+            "title": "Gutters: Spacing Between Columns",
+            "content": "# Gutters: `g-*`, `gx-*`, and `gy-*` 📐\n\nGutters are the padding between columns, created by horizontal padding on `.col` elements and negative margins on `.row`.\n\n## Gutter Utilities (Scale 0 to 5)\n\n- `g-0`: Remove all gutters completely (no gaps)\n- `g-3`: Default Bootstrap gutter (`1.5rem` / `24px`)\n- `gx-4`: Sets horizontal column gutters only\n- `gy-4`: Sets vertical gutters between wrapping rows\n- Responsive: `g-2 g-md-4 g-lg-5`\n\n```html_not\n<div class=\"container\">\n  <div class=\"row gx-5 gy-3\">\n    <div class=\"col-6\"><div class=\"p-3 bg-info text-white\">Wide horizontal gap</div></div>\n    <div class=\"col-6\"><div class=\"p-3 bg-info text-white\">Wide horizontal gap</div></div>\n  </div>\n</div>\n```"
+        },
+        {
+            "id": "bs_b_quiz_2",
+            "type": "quiz",
+            "title": "Gutters & Columns Check",
+            "content": "Test your knowledge on Bootstrap gutters!",
+            "quizQuestion": "Which class removes all horizontal and vertical gaps between grid columns in a row?",
+            "quizOptions": [
+                "no-gutters",
+                "g-0",
+                "gutter-none",
+                "gap-0"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "bs_b_10",
+            "type": "content",
+            "title": "Nesting Columns",
+            "content": "# Nesting Grid Columns 🪆\n\nTo nest content inside an existing column, insert a new `.row` directly inside a `.col-*`.\n\n```html_not\n<div class=\"container\">\n  <div class=\"row\">\n    <!-- Outer column (spans 9 of 12) -->\n    <div class=\"col-sm-9 bg-light p-4\">\n      <h4>Main Article (Level 1)</h4>\n      \n      <!-- Nested row inside column -->\n      <div class=\"row mt-3\">\n        <div class=\"col-8 col-sm-6 bg-info text-white p-2\">\n          Nested col-6\n        </div>\n        <div class=\"col-4 col-sm-6 bg-primary text-white p-2\">\n          Nested col-6\n        </div>\n      </div>\n    </div>\n    \n    <div class=\"col-sm-3 bg-secondary text-white p-4\">\n      Sidebar (Spans 3 of 12)\n    </div>\n  </div>\n</div>\n```"
+        },
+        {
+            "id": "bs_b_11",
+            "type": "content",
+            "title": "Row Columns: Auto-Grid Rows",
+            "content": "# Row Columns: `row-cols-*` 🗂️\n\nInstead of adding `.col-md-4` to every single item, specify the column count directly on the parent `.row`!\n\n```html_not\n<!-- 1 col on mobile, 2 on tablet, 4 on desktop -->\n<div class=\"container\">\n  <div class=\"row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4\">\n    <div class=\"col\"><div class=\"card p-3 shadow-sm\">Card 1</div></div>\n    <div class=\"col\"><div class=\"card p-3 shadow-sm\">Card 2</div></div>\n    <div class=\"col\"><div class=\"card p-3 shadow-sm\">Card 3</div></div>\n    <div class=\"col\"><div class=\"card p-3 shadow-sm\">Card 4</div></div>\n  </div>\n</div>\n```\n\n> ⚡ **Massive Time Saver:** When rendering lists or database items, apply `row-cols-*` to the container and give each card a simple `class=\"col\"`!"
+        },
+        {
+            "id": "bs_b_12",
+            "type": "content",
+            "title": "Column Offset & Alignment",
+            "content": "# Offsets & Column Alignment 🎯\n\n## 1. Column Offsetting (`offset-*`)\n\nMove columns to the right by specifying offset increments:\n\n```html_not\n<div class=\"row\">\n  <!-- Spans 6 columns, centered by offsetting 3 columns from left -->\n  <div class=\"col-md-6 offset-md-3\">\n    <form class=\"card p-4 shadow\">Centered Form</form>\n  </div>\n</div>\n```\n\n## 2. Vertical Alignment (`align-items-*`)\n\nAlign columns vertically inside the row: `align-items-start`, `align-items-center`, `align-items-end`.\n\n## 3. Horizontal Justification (`justify-content-*`)\n\n`justify-content-center`, `justify-content-between`, `justify-content-end`."
+        },
+        {
+            "id": "bs_b_13",
+            "type": "content",
+            "title": "Column Reordering with order-*",
+            "content": "# Column Reordering: `order-*` 🔀\n\nControl visual presentation order independently of source HTML order using Flexbox `order` utilities.\n\n```html_not\n<div class=\"row\">\n  <!-- In markup: first, but visual: displayed second on mobile, first on desktop -->\n  <div class=\"col-md-8 order-2 order-md-1\">\n    <h2>Main Article Content</h2>\n  </div>\n  \n  <!-- In markup: second, but visual: displayed FIRST on mobile -->\n  <div class=\"col-md-4 order-1 order-md-2 bg-light p-3\">\n    <div class=\"alert alert-warning\">Breaking News Banner</div>\n  </div>\n</div>\n```\n\nBootstrap supports `.order-1` through `.order-5`, plus `.order-first` and `.order-last`."
+        },
+        {
+            "id": "bs_b_14",
+            "type": "content",
+            "title": "Stand-Alone CSS Grid System in BS5",
+            "content": "# Stand-Alone CSS Grid in Bootstrap 5 🔲\n\nIn addition to the standard Flexbox grid, Bootstrap 5 includes an optional native CSS Grid system enabled via `$enable-cssgrid: true`.\n\n```html_not\n<!-- Native CSS Grid Container -->\n<div class=\"grid text-center\">\n  <div class=\"g-col-6 g-col-md-4 p-3 bg-light border\">Item 1</div>\n  <div class=\"g-col-6 g-col-md-4 p-3 bg-light border\">Item 2</div>\n  <div class=\"g-col-12 g-col-md-4 p-3 bg-light border\">Item 3</div>\n</div>\n```\n\nUses `.grid` instead of `.row`, and `.g-col-*` instead of `.col-*` without negative row margins."
+        },
+        {
+            "id": "bs_b_15",
+            "type": "content",
+            "title": "Clearfix & Column Breaks",
+            "content": "# Column Wrapping & `<div class=\"w-100\">` ✂️\n\nWhen column numbers sum to more than 12 in a single `.row`, excess columns automatically wrap onto a new line.\n\n## Forcing a Line Break\n\nInsert `<div class=\"w-100\"></div>` to force subsequent columns to wrap onto a new row:\n\n```html_not\n<div class=\"row\">\n  <div class=\"col-6 col-sm-4\">col-4</div>\n  <div class=\"col-6 col-sm-4\">col-4</div>\n  \n  <!-- Force wrap on mobile only, but row remains inline on tablet -->\n  <div class=\"w-100 d-none d-md-block\"></div>\n  \n  <div class=\"col-6 col-sm-4\">col-4</div>\n  <div class=\"col-6 col-sm-4\">col-4</div>\n</div>\n```"
+        },
+        {
+            "id": "bs_b_16",
+            "type": "content",
+            "title": "Common Layout Gotchas in Bootstrap",
+            "content": "# Common Grid Gotchas & Solutions ⚠️\n\n## 1. Margin Collapsing or Overflowing Rows\nPlacing a `.row` outside of a `.container` causes horizontal scrollbars because `.row` has negative horizontal margins (`-12px`).\n\n**Fix:** Always wrap `.row` inside `.container` or `.container-fluid`.\n\n## 2. Content Directly Inside `.row`\nWriting `<div class=\"row\"><h3>Title</h3></div>` breaks Flexbox alignment.\n\n**Fix:** Wrap the title in `<div class=\"col-12\"><h3>Title</h3></div>`."
+        },
+        {
+            "id": "bs_b_17",
+            "type": "content",
+            "title": "Real-World Layout: Dashboard Grid Shell",
+            "content": "# Real-World Example: Responsive App Layout 🖥️\n\nHere is how a real dashboard layout is structured with Bootstrap 5:\n\n```html_not\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <!-- Left Sidebar (fixed on desktop, stacked on mobile) -->\n    <nav class=\"col-md-3 col-lg-2 d-md-block bg-dark text-white p-3 min-vh-100\">\n      <h5>DevPortal</h5>\n      <ul class=\"nav flex-column\">\n        <li class=\"nav-item\"><a class=\"nav-link text-white active\" href=\"#\">Overview</a></li>\n        <li class=\"nav-item\"><a class=\"nav-link text-muted\" href=\"#\">Reports</a></li>\n      </ul>\n    </nav>\n\n    <!-- Main Content Area -->\n    <main class=\"col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4\">\n      <div class=\"d-flex justify-content-between align-items-center mb-4\">\n        <h2>Dashboard Overview</h2>\n        <button class=\"btn btn-primary\">Export Data</button>\n      </div>\n      \n      <!-- Metrics Row -->\n      <div class=\"row g-3 row-cols-1 row-cols-sm-2 row-cols-xl-4\">\n        <div class=\"col\"><div class=\"card p-3 shadow-sm border-0\">Total Sales</div></div>\n        <div class=\"col\"><div class=\"card p-3 shadow-sm border-0\">New Users</div></div>\n        <div class=\"col\"><div class=\"card p-3 shadow-sm border-0\">Bounce Rate</div></div>\n        <div class=\"col\"><div class=\"card p-3 shadow-sm border-0\">Revenue</div></div>\n      </div>\n    </main>\n  </div>\n</div>\n```"
+        },
+        {
+            "id": "bs_b_quiz_3",
+            "type": "quiz",
+            "title": "Breakpoint Infix Quiz",
+            "content": "Test your knowledge of Bootstrap 5 breakpoints!",
+            "quizQuestion": "Which breakpoint infix targets screens starting at 992px and wider?",
+            "quizOptions": [
+                "md",
+                "lg",
+                "xl",
+                "desktop"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "bs_b_19",
+            "type": "content",
+            "title": "Grid Best Practices Checklist",
+            "content": "# Grid Best Practices Checklist 📋\n\n- [x] **Always wrap rows in containers**: `.container` prevents horizontal overflow.\n- [x] **Columns add up to 12**: Ensure `.col-*` increments per row sum to 12 unless intentional wrapping is desired.\n- [x] **Use `row-cols-*` for lists**: Cleaner markup than repeating `.col-md-4` on 20 elements.\n- [x] **Leverage mobile-first classes**: Write `.col-12 .col-md-6` instead of desktop-down overrides.\n- [x] **Tune gutters with `g-*`**: Don't use manual margins inside grid columns."
+        },
+        {
+            "id": "bs_b_20",
+            "type": "content",
+            "title": "Summary: Layout & Grid System",
+            "content": "# Layout & Grid System: Summary 📋\n\n## Key Takeaways\n- **Containers**: Fixed `.container` vs full-bleed `.container-fluid`.\n- **Breakpoints**: 6 tiers (`xs`, `sm`, `md`, `lg`, `xl`, `xxl`).\n- **Grid Columns**: 12-column flexbox grid with auto-layout (`.col`).\n- **Gutters**: Configured with `g-*`, `gx-*`, and `gy-*` on the row.\n- **Flexbox Alignment**: `justify-content-*` and `align-items-*`.\n\nNext: Master Bootstrap typography, reboot resets, tables, and images! 📄"
+        },
+        {
+            "id": "bs_b_21",
+            "type": "content",
+            "title": "Next Steps: Content & Typography",
+            "content": "# Ahead: Content & Typography 📄\n\nWith layout mastery complete, let's explore styling textual content, data tables, and media.\n\n## Topics Ahead:\n- **Bootstrap Reboot**: The foundational CSS reset\n- **Headings & Display Headings**: `.display-1` through `.display-6`\n- **Lead Text, Blockquotes, and Small Text**\n- **Responsive Data Tables**: `.table-striped`, `.table-hover`, `.table-bordered`\n- **Fluid Responsive Images**: `.img-fluid` and `.img-thumbnail`\n\nLet's make written content shine! 🚀"
+        }
+    ]
+}

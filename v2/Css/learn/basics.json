@@ -1,0 +1,159 @@
+{
+    "id": "learn_css_basics",
+    "topicId": "basics",
+    "topicTitle": "CSS Basics",
+    "description": "Learn CSS selectors, properties, values, units, cascade, and specificity.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "css_basics_1",
+            "type": "content",
+            "title": "Welcome to CSS Basics",
+            "content": "# CSS Basics: Styling the Web 🎨\n\n**CSS** stands for **C**ascading **S**tyle **S**heets. If HTML provides the raw bones and structure of a webpage, CSS provides the visual design, colors, typography, and responsive presentation.\n\n## What you'll master:\n- 📝 **CSS Syntax Anatomy** - Selectors, declaration blocks, properties, and values\n- 🎯 **Core Selectors** - Type, class (`.`), ID (`#`), and universal (`*`) selectors\n- 🔗 **Combinators** - Descendant, child (`>`), adjacent sibling (`+`), and general sibling (`~`)\n- 📏 **Units & Values** - Absolute units (`px`) vs relative units (`rem`, `em`, `%`, `vw`, `vh`)\n- 🌊 **The Cascade & Specificity** - How browsers resolve conflicting styles"
+        },
+        {
+            "id": "css_basics_2",
+            "type": "content",
+            "title": "CSS Rule Anatomy",
+            "content": "# Anatomy of a CSS Rule 📐\n\nA CSS stylesheet consists of a set of rules. Each rule has a **selector** and a **declaration block**.\n\n```css_not\nselector {\n  property: value;\n  property: value;\n}\n```\n\n```css_not\nh1 {\n  color: #3b82f6;\n  font-size: 2.5rem;\n  text-align: center;\n}\n```\n\n## Breakdown:\n1. **Selector (`h1`)**: Tells the browser which HTML elements to style.\n2. **Declaration Block (`{ ... }`)**: Encloses one or more style declarations in curly braces.\n3. **Property (`color`, `font-size`)**: The visual feature you want to change.\n4. **Value (`#3b82f6`, `2.5rem`)**: The setting applied to that property.\n5. **Semicolon (`;`)**: Terminates each declaration."
+        },
+        {
+            "id": "css_basics_3",
+            "type": "content",
+            "title": "Three Ways to Apply CSS",
+            "content": "# 3 Ways to Apply CSS to HTML 📄\n\nThere are three ways to apply CSS styles to an HTML document:\n\n## 1. External Stylesheet (Best Practice):\n```html_not\n<!-- Linked in the <head> -->\n<link rel=\"stylesheet\" href=\"styles.css\">\n```\n\n## 2. Internal Stylesheet:\n```html_not\n<!-- Defined in the <head> using <style> -->\n<style>\n  body { background-color: #f8fafc; }\n</style>\n```\n\n## 3. Inline Styles (Avoid when possible):\n```html_not\n<p style=\"color: red; font-weight: bold;\">Alert text</p>\n```\n\n> 🎯 **Best Practice:** Always use external stylesheets! They keep markup clean, allow style reusability across thousands of pages, and get cached by web browsers for instant loading."
+        },
+        {
+            "id": "css_basics_4",
+            "type": "content",
+            "title": "Element, Class, and ID Selectors",
+            "content": "# Element, Class, and ID Selectors 🎯\n\nThe three most common selectors in web development:\n\n## 1. Element Selector (Type):\nTargets all elements of that HTML tag:\n```css_not\np { line-height: 1.6; }\n```\n\n## 2. Class Selector (`.`):\nTargets elements with a matching `class` attribute. Reusable across multiple elements:\n```css_not\n.button-primary {\n  background-color: #2563eb;\n  color: #ffffff;\n}\n```\n\n## 3. ID Selector (`#`):\nTargets a single element with a matching `id`. Must be strictly unique on the page:\n```css_not\n#main-header {\n  box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n}\n```"
+        },
+        {
+            "id": "css_basics_quiz_1",
+            "type": "quiz",
+            "title": "Selector Basics Quiz",
+            "content": "Check your knowledge of basic selectors.",
+            "quizQuestion": "Which symbol is prefixed to a selector to target an HTML class?",
+            "quizOptions": [
+                "#",
+                ".",
+                "$",
+                "@"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_basics_5",
+            "type": "content",
+            "title": "The Universal & Grouping Selectors",
+            "content": "# Universal & Grouping Selectors 🌐\n\n## 1. The Universal Selector (`*`):\nTargets every single element in the document. Commonly used in CSS resets:\n```css_not\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n```\n\n## 2. Grouping Selectors (`,`):\nShare identical styles across multiple selectors using a comma-separated list:\n```css_not\nh1, h2, h3, h4, h5, h6 {\n  font-family: 'Poppins', sans-serif;\n  color: #1e293b;\n  margin-bottom: 0.75rem;\n}\n```"
+        },
+        {
+            "id": "css_basics_6",
+            "type": "content",
+            "title": "CSS Combinators Explained",
+            "content": "# CSS Combinators 🔗\n\nCombinators explain the relationship between two selectors.\n\n| Combinator | Name | Syntax | Targets |\n| :--- | :--- | :--- | :--- |\n| *(space)* | Descendant | `article p` | Any `<p>` inside `<article>` (at any nesting level) |\n| `>` | Child | `nav > ul` | Only direct children `<ul>` of `<nav>` |\n| `+` | Adjacent Sibling | `h2 + p` | The very first `<p>` placed immediately after `<h2>` |\n| `~` | General Sibling | `h2 ~ p` | Any `<p>` placed anywhere after `<h2>` sharing the same parent |\n\n```css_not\n/* Only selects <p> tags directly inside .card */\n.card > p {\n  color: #475569;\n}\n```"
+        },
+        {
+            "id": "css_basics_7",
+            "type": "content",
+            "title": "CSS Units: Absolute vs Relative",
+            "content": "# CSS Units: Absolute vs Relative 📏\n\nUnits in CSS tell the browser how large to render dimensions, margins, and typography.\n\n## Absolute Units:\nFixed in physical size regardless of screen size.\n- `px` (Pixels): 1px = 1/96th of an inch on standard screens. Great for borders and shadows.\n\n## Relative Units (Essential for Responsive Design):\n- `rem`: Relative to root `<html>` font-size (usually 16px). **Best for typography & spacing!**\n- `em`: Relative to the font-size of the element itself (or parent).\n- `%`: Relative to parent container's dimension.\n- `vw` / `vh`: 1% of viewport width / height."
+        },
+        {
+            "id": "css_basics_8",
+            "type": "content",
+            "title": "Why rem is Superior to px",
+            "content": "# Why `rem` is Superior for Web Design 🏆\n\nBy default in web browsers, `1rem = 16px`.\n\n```css_not\nhtml {\n  font-size: 16px; /* Browser default */\n}\n\nh1 {\n  font-size: 2rem; /* 2 * 16px = 32px */\n}\n\np {\n  font-size: 1rem; /* 16px */\n  margin-bottom: 1.5rem; /* 24px */\n}\n```\n\n## Accessibility Advantage:\nIf a visually impaired user increases their browser default font size to 24px:\n- `px` units remain locked at small sizes, making text unreadable.\n- `rem` units scale proportionally across the entire website automatically!"
+        },
+        {
+            "id": "css_basics_quiz_2",
+            "type": "quiz",
+            "title": "Units Quiz",
+            "content": "Test your understanding of CSS units.",
+            "quizQuestion": "What is 1.5rem equal to if the root <html> font-size is 16px?",
+            "quizOptions": [
+                "16px",
+                "20px",
+                "24px",
+                "32px"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "css_basics_9",
+            "type": "content",
+            "title": "The Cascade: How CSS Resolves Styles",
+            "content": "# The Cascade: How Styles Are Decided 🌊\n\n\"CSS\" starts with **Cascading** for a reason! When multiple CSS rules target the same element and property, the browser resolves the conflict using three rules:\n\n1. **Importance:** Declarations with `!important` take top priority.\n2. **Specificity:** The more specific selector wins.\n3. **Source Order:** If specificity is tied, the rule written **last** in the stylesheet wins!\n\n```css_not\np { color: red; }\np { color: blue; } /* Wins because it appears last in the stylesheet */\n```"
+        },
+        {
+            "id": "css_basics_10",
+            "type": "content",
+            "title": "Understanding Specificity Hierarchy",
+            "content": "# Specificity Calculation Hierarchy 🎯\n\nSpecificity is represented as a 4-part weight: `(Inline, ID, Class, Element)`.\n\n```\nInline Style:      1, 0, 0, 0   (style=\"color:red\")\nID Selector:       0, 1, 0, 0   (#main-nav)\nClass / Attribute: 0, 0, 1, 0   (.btn, [type=\"text\"])\nElement:           0, 0, 0, 1   (div, p, h1)\nUniversal (*):     0, 0, 0, 0   (*)\n```\n\n```css_not\n/* Specificity: 0, 0, 0, 1 */\np { color: black; }\n\n/* Specificity: 0, 0, 1, 0 -> WINS over p */\n.highlight { color: orange; }\n\n/* Specificity: 0, 1, 0, 0 -> WINS over .highlight */\n#alert-banner { color: red; }\n```"
+        },
+        {
+            "id": "css_basics_11",
+            "type": "content",
+            "title": "The !important Declaration",
+            "content": "# The `!important` Rule ⚠️\n\nAppending `!important` overrides normal specificity:\n\n```css_not\np {\n  color: green !important;\n}\n\n#my-unique-id {\n  color: red; /* Loses to the !important rule above! */\n}\n```\n\n## When to Avoid `!important`:\n- Overusing `!important` breaks the natural cascade, making future overrides painful.\n- Use it sparingly (e.g. utility override classes like `.hidden { display: none !important; }`)."
+        },
+        {
+            "id": "css_basics_12",
+            "type": "content",
+            "title": "CSS Inheritance",
+            "content": "# CSS Inheritance 🧬\n\nSome CSS properties are inherited by child elements from their parents automatically, while others are not.\n\n## Inherited Properties:\n- Typography: `color`, `font-family`, `font-size`, `line-height`, `letter-spacing`, `text-align`\n\n## Non-Inherited Properties:\n- Box Model: `margin`, `padding`, `border`, `background`, `width`, `height`, `position`\n\n```css_not\nbody {\n  font-family: 'Inter', sans-serif;\n  color: #333;\n  /* All nested <p>, <span>, and <h1> elements inherit this font and color! */\n}\n```"
+        },
+        {
+            "id": "css_basics_13",
+            "type": "content",
+            "title": "The inherit, initial, and unset Keywords",
+            "content": "# Control Keywords: inherit, initial & unset 🔄\n\nEvery CSS property accepts these global keywords:\n\n- `inherit`: Forces an element to inherit the property value from its parent.\n- `initial`: Resets the property to the official CSS specification default.\n- `unset`: Resets the property to `inherit` if it naturally inherits, or `initial` if not.\n\n```css_not\n/* Forces link to inherit body text color instead of default blue */\na {\n  color: inherit;\n  text-decoration: none;\n}\n```"
+        },
+        {
+            "id": "css_basics_quiz_3",
+            "type": "quiz",
+            "title": "Specificity Quiz",
+            "content": "Test your specificity calculation skills.",
+            "quizQuestion": "Which selector has the highest specificity?",
+            "quizOptions": [
+                "div.container",
+                "#navbar",
+                "ul > li.active",
+                "body header nav"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_basics_14",
+            "type": "content",
+            "title": "CSS Custom Properties (Variables)",
+            "content": "# CSS Custom Properties (Variables) 🎨\n\nModern CSS supports native variables using `--variable-name` syntax:\n\n```css_not\n:root {\n  --primary-color: #3b82f6;\n  --secondary-color: #10b981;\n  --border-radius: 8px;\n  --spacing-base: 1rem;\n}\n\n.button {\n  background-color: var(--primary-color);\n  border-radius: var(--border-radius);\n  padding: var(--spacing-base);\n}\n\n/* Fallback value if variable is missing */\n.card {\n  color: var(--card-text-color, #1e293b);\n}\n```"
+        },
+        {
+            "id": "css_basics_15",
+            "type": "content",
+            "title": "CSS Reset vs Normalize",
+            "content": "# CSS Resets vs Normalize.css 🧹\n\nDifferent browsers (Chrome, Safari, Firefox) have slightly different default margins, padding, and line heights.\n\n## The Modern CSS Reset:\n```css_not\n/* 1. Use a more-intuitive box-sizing model */\n*, *::before, *::after {\n  box-sizing: border-box;\n}\n\n/* 2. Remove default margins */\n* {\n  margin: 0;\n  padding: 0;\n}\n\n/* 3. Improve media defaults */\nimg, picture, video, canvas, svg {\n  display: block;\n  max-width: 100%;\n}\n\n/* 4. Inherit fonts for form controls */\ninput, button, textarea, select {\n  font: inherit;\n}\n```"
+        },
+        {
+            "id": "css_basics_16",
+            "type": "content",
+            "title": "Writing Clean, Maintainable CSS",
+            "content": "# Writing Maintainable CSS 🧼\n\nFollow these industry best practices:\n1. **Prefer classes over IDs for styling:** Keep specificity low and uniform.\n2. **Avoid deep nesting:** Avoid selectors like `div ul li div a span`.\n3. **Use consistent naming conventions:** Such as BEM (`.block__element--modifier`).\n4. **Group related rules together:** Layout properties first, followed by typography, then colors and effects."
+        },
+        {
+            "id": "css_basics_17",
+            "type": "content",
+            "title": "Real-World Project: Profile Card",
+            "content": "# Putting It Together: Styled Profile Card 📇\n\n```html_not\n<article class=\"card\">\n  <h2 class=\"card__title\">Sarah Connor</h2>\n  <p class=\"card__role\">Senior Cloud Engineer</p>\n  <button class=\"card__btn\">Connect</button>\n</article>\n```\n\n```css_not\n:root {\n  --brand-blue: #2563eb;\n  --text-dark: #0f172a;\n}\n\n.card {\n  max-width: 320px;\n  background-color: #ffffff;\n  border-radius: 12px;\n  padding: 24px;\n  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);\n  text-align: center;\n}\n\n.card__title {\n  color: var(--text-dark);\n  font-size: 1.5rem;\n  margin-bottom: 4px;\n}\n\n.card__role {\n  color: #64748b;\n  margin-bottom: 20px;\n}\n\n.card__btn {\n  background-color: var(--brand-blue);\n  color: #fff;\n  border: none;\n  padding: 10px 24px;\n  border-radius: 6px;\n  font-weight: 600;\n  cursor: pointer;\n}\n```"
+        },
+        {
+            "id": "css_basics_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# CSS Basics Mastered! 🌟\n\nYou now possess the foundational grammar, selectors, and cascade mechanics of CSS!\n\n## Key Takeaways:\n- ✅ **Rule Syntax:** `selector { property: value; }`.\n- ✅ **Selectors:** Elements, classes (`.`), IDs (`#`), and combinators (` `, `>`, `+`, `~`).\n- ✅ **Units:** Prefer `rem` over `px` for accessible, scalable interfaces.\n- ✅ **Cascade & Specificity:** Inline > ID > Class > Element.\n- ✅ **Variables:** Declare design tokens with `:root { --color: #hex; }`.\n\n## Up Next:\nIn the next module, master the core layout principle of the web: **The CSS Box Model (Margin, Border, Padding, and Content)**! 🚀"
+        }
+    ]
+}

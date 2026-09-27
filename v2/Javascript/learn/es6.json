@@ -1,0 +1,159 @@
+{
+    "id": "learn_js_es6",
+    "topicId": "es6",
+    "topicTitle": "ES6+ Features",
+    "description": "Master let/const, template literals, spread/rest, classes, modules, and optional chaining.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "js_es6_1",
+            "type": "content",
+            "title": "Welcome to ES6+ Features",
+            "content": "# Modern ES6+ JavaScript Features 🚀\n\n**ECMAScript 2015 (ES6)** was the biggest upgrade in JavaScript history, transforming it from a simple scripting language into a world-class enterprise programming language.\n\n## What you'll master:\n- 📦 **`let` and `const` vs `var`** - Block scoping and temporal dead zone\n- 💬 **Template Literals** - Multi-line strings and interpolation\n- 🌟 **Spread & Rest Operators (`...`)** - Merging arrays, cloning objects, and rest parameters\n- 🏛️ **ES6 Classes & OOP** - Constructors, inheritance, getters/setters, and static methods\n- 📦 **ES Modules** - `export`, `import`, and module bundling\n- ⚡ **Modern Utilities** - Optional chaining (`?.`) and nullish coalescing (`??`)"
+        },
+        {
+            "id": "js_es6_2",
+            "type": "content",
+            "title": "The Spread Operator with Arrays",
+            "content": "# Spread Operator (`...`) with Arrays 🌟\n\nThe spread operator unpacks elements of an iterable into individual elements:\n\n```javascript\nconst frontend = [\"HTML\", \"CSS\"];\nconst backend = [\"Node.js\", \"Python\"];\n\n// Merge arrays without .concat()\nconst fullStack = [...frontend, ...backend, \"Docker\"];\nconsole.log(\"Full Stack Stack:\", fullStack);\n\n// Fast array cloning\nconst copy = [...frontend];\ncopy.push(\"JS\");\nconsole.log(\"Original:\", frontend); // [\"HTML\", \"CSS\"] (Unaffected!)\n```\n\n<!-- FULL_CODE_START\nconst frontend = [\"HTML\", \"CSS\"];\nconst backend = [\"Node.js\", \"Python\"];\n\nconst fullStack = [...frontend, ...backend, \"Docker\"];\nconsole.log(\"Merged Stack:\", fullStack);\n\n// Passing array elements as individual arguments to Math.max\nconst numbers = [14, 82, 35, 99, 4];\nconsole.log(\"Highest number:\", Math.max(...numbers));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_3",
+            "type": "content",
+            "title": "The Spread Operator with Objects",
+            "content": "# Spread Operator (`...`) with Objects 🪄\n\nMerge and override object properties effortlessly:\n\n```javascript\nconst defaultTheme = {\n  mode: \"light\",\n  fontSize: 14,\n  fontFamily: \"sans-serif\"\n};\n\nconst userCustomization = {\n  mode: \"dark\",      // Overrides defaultTheme.mode!\n  fontSize: 16\n};\n\n// Merge: rightmost properties overwrite earlier properties!\nconst finalTheme = { ...defaultTheme, ...userCustomization };\nconsole.log(finalTheme);\n```\n\n<!-- FULL_CODE_START\nconst defaultTheme = {\n  mode: \"light\",\n  fontSize: 14,\n  fontFamily: \"sans-serif\"\n};\n\nconst userCustomization = {\n  mode: \"dark\",\n  fontSize: 16\n};\n\nconst finalTheme = { ...defaultTheme, ...userCustomization };\nconsole.log(\"Computed Final Theme:\", finalTheme);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_4",
+            "type": "content",
+            "title": "Enhanced Object Literals",
+            "content": "# Enhanced Object Literals 💎\n\nES6 introduced convenient shorthands when defining objects:\n\n```javascript\nconst username = \"Sophia\";\nconst role = \"DevOps\";\n\nconst user = {\n  // 1. Property shorthand (no need to write username: username)\n  username,\n  role,\n\n  // 2. Method shorthand (omit ': function')\n  greet() {\n    console.log(`Hi, I'm ${this.username}`);\n  },\n\n  // 3. Computed property name\n  [\"status_\" + Date.now()]: \"active\"\n};\n\nuser.greet();\nconsole.log(user);\n```\n\n<!-- FULL_CODE_START\nconst username = \"Sophia\";\nconst role = \"DevOps\";\n\nconst user = {\n  username,\n  role,\n  greet() {\n    console.log(`Hi, I'm ${this.username} (${this.role})`);\n  }\n};\n\nuser.greet();\nconsole.log(\"User object with shorthand properties:\", user);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_quiz_1",
+            "type": "quiz",
+            "title": "Spread Operator Quiz",
+            "content": "Test your knowledge of the spread operator.",
+            "quizQuestion": "What happens when merging two objects with identical keys using the spread operator ({...objA, ...objB})?",
+            "quizOptions": [
+                "A runtime error occurs",
+                "The property from objB overwrites the property from objA",
+                "The property from objA is preserved",
+                "Both values are converted into an array"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_es6_5",
+            "type": "content",
+            "title": "ES6 Classes: Constructors & Methods",
+            "content": "# ES6 Classes & Constructors 🏛️\n\nES6 classes provide a clean, syntax-sugar layer over JavaScript's prototypical inheritance:\n\n```javascript\nclass User {\n  constructor(name, email) {\n    this.name = name;\n    this.email = email;\n  }\n\n  // Instance method\n  login() {\n    console.log(`${this.name} has logged in.`);\n  }\n}\n\nconst alice = new User(\"Alice\", \"alice@example.com\");\nalice.login();\n```\n\n<!-- FULL_CODE_START\nclass User {\n  constructor(name, email) {\n    this.name = name;\n    this.email = email;\n  }\n\n  login() {\n    console.log(`${this.name} (${this.email}) has logged in.`);\n  }\n}\n\nconst alice = new User(\"Alice\", \"alice@example.com\");\nalice.login();\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_6",
+            "type": "content",
+            "title": "Class Inheritance & super()",
+            "content": "# Class Inheritance (`extends` and `super`) 🧬\n\nCreate child classes that inherit from parent classes:\n\n```javascript\nclass User {\n  constructor(name) {\n    this.name = name;\n  }\n}\n\nclass Admin extends User {\n  constructor(name, permissions) {\n    super(name); // Calls parent constructor (MANDATORY!)\n    this.permissions = permissions;\n  }\n\n  deleteUser(targetUser) {\n    console.log(`${this.name} deleted ${targetUser.name}`);\n  }\n}\n\nconst admin = new Admin(\"Sarah\", [\"read\", \"write\", \"delete\"]);\nadmin.deleteUser({ name: \"Bob\" });\n```\n\n<!-- FULL_CODE_START\nclass User {\n  constructor(name) {\n    this.name = name;\n  }\n}\n\nclass Admin extends User {\n  constructor(name, permissions) {\n    super(name);\n    this.permissions = permissions;\n  }\n\n  deleteUser(targetUser) {\n    console.log(`${this.name} deleted user ${targetUser.name}`);\n  }\n}\n\nconst admin = new Admin(\"Sarah\", [\"read\", \"write\", \"delete\"]);\nadmin.deleteUser({ name: \"Bob\" });\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_7",
+            "type": "content",
+            "title": "Getters and Setters in Classes",
+            "content": "# Getters and Setters 🛡️\n\nEncapsulate and validate property access:\n\n```javascript\nclass Temperature {\n  constructor(celsius) {\n    this._celsius = celsius;\n  }\n\n  // Getter\n  get fahrenheit() {\n    return this._celsius * 1.8 + 32;\n  }\n\n  // Setter\n  set celsius(value) {\n    if (value < -273.15) {\n      throw new Error(\"Below absolute zero is physically impossible!\");\n    }\n    this._celsius = value;\n  }\n}\n\nconst temp = new Temperature(25);\nconsole.log(\"Fahrenheit:\", temp.fahrenheit); // 77\n```\n\n<!-- FULL_CODE_START\nclass Temperature {\n  constructor(celsius) {\n    this._celsius = celsius;\n  }\n\n  get fahrenheit() {\n    return this._celsius * 1.8 + 32;\n  }\n\n  set celsius(value) {\n    if (value < -273.15) {\n      throw new Error(\"Invalid temperature!\");\n    }\n    this._celsius = value;\n  }\n}\n\nconst temp = new Temperature(25);\nconsole.log(\"25C in Fahrenheit:\", temp.fahrenheit);\ntemp.celsius = 0;\nconsole.log(\"0C in Fahrenheit:\", temp.fahrenheit);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_8",
+            "type": "content",
+            "title": "Static Methods and Properties",
+            "content": "# Static Methods (`static`) ⚡\n\nStatic methods belong directly to the Class itself, not to instances of the class:\n\n```javascript\nclass MathUtils {\n  static square(n) {\n    return n * n;\n  }\n\n  static cube(n) {\n    return n * n * n;\n  }\n}\n\n// Call directly without writing 'new MathUtils()'!\nconsole.log(MathUtils.square(5)); // 25\nconsole.log(MathUtils.cube(3));   // 27\n```\n\n<!-- FULL_CODE_START\nclass MathUtils {\n  static square(n) {\n    return n * n;\n  }\n  static cube(n) {\n    return n * n * n;\n  }\n}\n\nconsole.log(\"Static square 5:\", MathUtils.square(5));\nconsole.log(\"Static cube 3:\", MathUtils.cube(3));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_quiz_2",
+            "type": "quiz",
+            "title": "Classes Quiz",
+            "content": "Test your knowledge of ES6 classes.",
+            "quizQuestion": "What keyword must be called inside a derived child constructor before accessing 'this'?",
+            "quizOptions": [
+                "parent()",
+                "super()",
+                "base()",
+                "inherit()"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_es6_9",
+            "type": "content",
+            "title": "ES Modules: export and import",
+            "content": "# ES Modules (`export` and `import`) 📦\n\nModularize code across separate files:\n\n```javascript\n// math.js\nexport const PI = 3.14159;\n\nexport function add(a, b) {\n  return a + b;\n}\n\n// Default export (only one per file)\nexport default function multiply(a, b) {\n  return a * b;\n}\n```\n\n```javascript\n// app.js\nimport multiply, { PI, add } from './math.js';\n\nconsole.log(\"PI:\", PI);\nconsole.log(\"Sum:\", add(2, 3));\nconsole.log(\"Product:\", multiply(4, 5));\n```\n\n<!-- FULL_CODE_START\n// Demonstrating simulated module namespace\nconst MathModule = {\n  PI: 3.14159,\n  add: (a, b) => a + b,\n  multiply: (a, b) => a * b\n};\n\nconst { PI, add, multiply } = MathModule;\nconsole.log(\"Exported PI:\", PI);\nconsole.log(\"Exported Add:\", add(10, 25));\nconsole.log(\"Exported Multiply:\", multiply(5, 5));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_10",
+            "type": "content",
+            "title": "Optional Chaining (?.)",
+            "content": "# Optional Chaining (`?.`) 🔗\n\nSafely navigate deep nested objects without throwing `TypeError: Cannot read properties of undefined`!\n\n```javascript\nconst response = {\n  data: {\n    user: {\n      profile: {\n        avatar: \"https://example.com/avatar.jpg\"\n      }\n    }\n  }\n};\n\n// Safe deep access\nconst avatarUrl = response?.data?.user?.profile?.avatar;\nconsole.log(\"Avatar:\", avatarUrl);\n\n// If missing, returns undefined safely without crashing!\nconst twitterHandle = response?.data?.user?.social?.twitter;\nconsole.log(\"Twitter:\", twitterHandle); // undefined\n```\n\n<!-- FULL_CODE_START\nconst response = {\n  data: {\n    user: {\n      profile: {\n        avatar: \"https://example.com/avatar.jpg\"\n      }\n    }\n  }\n};\n\nconsole.log(\"Valid chain:\", response?.data?.user?.profile?.avatar);\nconsole.log(\"Missing nested chain:\", response?.data?.guest?.profile?.avatar);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_11",
+            "type": "content",
+            "title": "Sets: Unique Value Collections",
+            "content": "# Sets: Unique Value Collections 💎\n\nA `Set` is a collection of **strictly unique values**. Any duplicate values are automatically rejected!\n\n```javascript\nconst tagSet = new Set([\"coding\", \"javascript\", \"coding\", \"web\"]);\nconsole.log(\"Set size:\", tagSet.size); // 3 (duplicate \"coding\" was dropped!)\n\n// One-liner to remove duplicates from an array:\nconst duplicateList = [1, 2, 2, 3, 4, 4, 5];\nconst uniqueList = [...new Set(duplicateList)];\n\nconsole.log(\"Unique array:\", uniqueList); // [1, 2, 3, 4, 5]\n```\n\n<!-- FULL_CODE_START\nconst duplicateList = [1, 2, 2, 3, 4, 4, 5];\nconst uniqueList = [...new Set(duplicateList)];\nconsole.log(\"Deduplicated array:\", uniqueList);\n\nconst idSet = new Set();\nidSet.add(101);\nidSet.add(102);\nidSet.add(101); // Ignored!\nconsole.log(\"Set size after adding duplicate:\", idSet.size);\nconsole.log(\"Set has 102?\", idSet.has(102));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_12",
+            "type": "content",
+            "title": "Maps: Key-Value Pairs with Any Key",
+            "content": "# Maps: Key-Value Collections with Any Key 🗺️\n\nUnlike plain objects (which only allow string/symbol keys), a `Map` allows **any data type as a key** (including functions, objects, and numbers):\n\n```javascript\nconst userRoles = new Map();\n\nconst userA = { id: 1 };\nconst userB = { id: 2 };\n\nuserRoles.set(userA, \"SuperAdmin\");\nuserRoles.set(userB, \"Viewer\");\n\nconsole.log(userRoles.get(userA)); // \"SuperAdmin\"\nconsole.log(\"Total entries in Map:\", userRoles.size);\n```\n\n<!-- FULL_CODE_START\nconst userRoles = new Map();\n\nconst userA = { id: 1 };\nconst userB = { id: 2 };\n\nuserRoles.set(userA, \"SuperAdmin\");\nuserRoles.set(userB, \"Viewer\");\n\nconsole.log(\"User A role:\", userRoles.get(userA));\nconsole.log(\"Map size:\", userRoles.size);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_quiz_3",
+            "type": "quiz",
+            "title": "Modern Syntax Quiz",
+            "content": "Test your knowledge of modern operators.",
+            "quizQuestion": "What does optional chaining (user?.profile?.name) evaluate to if profile is undefined?",
+            "quizOptions": [
+                "Throws a TypeError",
+                "undefined",
+                "null",
+                "false"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_es6_13",
+            "type": "content",
+            "title": "Private Class Fields (#field)",
+            "content": "# Private Class Fields (`#field`) 🔒\n\nModern ECMAScript provides truly private class fields prefixed with `#`:\n\n```javascript\nclass Wallet {\n  #balance = 0; // Private field!\n\n  constructor(startingAmount) {\n    this.#balance = startingAmount;\n  }\n\n  getBalance() {\n    return this.#balance;\n  }\n}\n\nconst myWallet = new Wallet(500);\nconsole.log(\"Balance:\", myWallet.getBalance()); // 500\n// console.log(myWallet.#balance); // SyntaxError: Private field '#balance' must be declared in an enclosing class!\n```\n\n<!-- FULL_CODE_START\nclass Wallet {\n  #balance = 0;\n\n  constructor(startingAmount) {\n    this.#balance = startingAmount;\n  }\n\n  getBalance() {\n    return this.#balance;\n  }\n}\n\nconst myWallet = new Wallet(500);\nconsole.log(\"Secure wallet balance:\", myWallet.getBalance());\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_14",
+            "type": "content",
+            "title": "String Methods: startsWith, endsWith, includes",
+            "content": "# Modern String Methods 🔤\n\nConvenient string validation methods:\n\n```javascript\nconst filename = \"invoice_2026.pdf\";\n\nconsole.log(filename.startsWith(\"invoice\")); // true\nconsole.log(filename.endsWith(\".pdf\"));      // true\nconsole.log(filename.includes(\"2026\"));      // true\n\nconst paddedNumber = \"7\".padStart(4, \"0\");  // \"0007\"\nconsole.log(\"Padded number:\", paddedNumber);\n```\n\n<!-- FULL_CODE_START\nconst filename = \"invoice_2026.pdf\";\nconsole.log(\"startsWith('invoice'):\", filename.startsWith(\"invoice\"));\nconsole.log(\"endsWith('.pdf'):\", filename.endsWith(\".pdf\"));\nconsole.log(\"padStart(4, '0'):\", \"7\".padStart(4, \"0\"));\nconsole.log(\"repeat(3):\", \"JS \".repeat(3));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_15",
+            "type": "content",
+            "title": "Array.from and Array.isArray",
+            "content": "# Array Utilities: Array.from and Array.isArray 📐\n\nConvert array-like objects (like `NodeList` or `arguments`) into real arrays:\n\n```javascript\n// Convert Set or String to array\nconst letters = Array.from(\"HELLO\");\nconsole.log(letters); // [\"H\", \"E\", \"L\", \"L\", \"O\"]\n\n// Safe array check\nconsole.log(Array.isArray([1, 2, 3])); // true\nconsole.log(Array.isArray({ length: 3 })); // false\n```\n\n<!-- FULL_CODE_START\nconst letters = Array.from(\"HELLO\");\nconsole.log(\"Array.from string:\", letters);\nconsole.log(\"Array.isArray([]):\", Array.isArray([]));\nconsole.log(\"Array.isArray({}):\", Array.isArray({}));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_16",
+            "type": "content",
+            "title": "Object.fromEntries",
+            "content": "# Object.fromEntries: Inverse of Object.entries 🔄\n\nConverts an iterable of key-value pairs back into a plain object:\n\n```javascript\nconst entries = [[\"name\", \"Diana\"], [\"level\", 42]];\nconst obj = Object.fromEntries(entries);\n\nconsole.log(obj); // { name: \"Diana\", level: 42 }\n\n// Transform object properties with map and fromEntries:\nconst prices = { apple: 1.5, orange: 2.0 };\nconst doubledPrices = Object.fromEntries(\n  Object.entries(prices).map(([k, v]) => [k, v * 2])\n);\nconsole.log(doubledPrices); // { apple: 3.0, orange: 4.0 }\n```\n\n<!-- FULL_CODE_START\nconst entries = [[\"name\", \"Diana\"], [\"level\", 42]];\nconst obj = Object.fromEntries(entries);\nconsole.log(\"Object from entries:\", obj);\n\nconst prices = { apple: 1.5, orange: 2.0 };\nconst doubled = Object.fromEntries(\n  Object.entries(prices).map(([k, v]) => [k, v * 2])\n);\nconsole.log(\"Doubled prices object:\", doubled);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_17",
+            "type": "content",
+            "title": "Real-World Architecture with ES6",
+            "content": "# Real-World: Clean Architecture with ES6 🏗️\n\n```javascript\nclass APIService {\n  #baseUrl;\n\n  constructor(baseUrl) {\n    this.#baseUrl = baseUrl;\n  }\n\n  async fetchEndpoint(path, options = {}) {\n    const url = `${this.#baseUrl}/${path}`;\n    const config = {\n      headers: { \"Content-Type\": \"application/json\", ...options.headers },\n      ...options\n    };\n    return { url, config };\n  }\n}\n\nconst api = new APIService(\"https://api.example.com\");\nconsole.log(api);\n```\n\n<!-- FULL_CODE_START\nclass APIService {\n  #baseUrl;\n\n  constructor(baseUrl) {\n    this.#baseUrl = baseUrl;\n  }\n\n  formatEndpoint(path, options = {}) {\n    const url = `${this.#baseUrl}/${path}`;\n    const config = {\n      headers: { \"Content-Type\": \"application/json\", ...options.headers },\n      ...options\n    };\n    return { url, config };\n  }\n}\n\nconst api = new APIService(\"https://api.example.com/v1\");\nconsole.log(\"Configured API call:\", api.formatEndpoint(\"users\", { method: \"POST\" }));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_es6_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# ES6+ Mastery Complete! 🌟\n\nYou now possess the expressive toolset used by senior JavaScript engineers daily!\n\n## Key Takeaways:\n- ✅ **Spread & Rest:** `...` spreads iterables and collects rest arguments.\n- ✅ **Classes:** Clean OOP with `constructor`, `extends`, `super()`, and `#privateFields`.\n- ✅ **Modules:** Modular architecture with `export` and `import`.\n- ✅ **Safety:** Optional chaining `?.` prevents undefined reference crashes.\n- ✅ **Collections:** `Set` guarantees uniqueness; `Map` supports any key type.\n\n## Up Next:\nIn the next module, master non-blocking programming: **Asynchronous JavaScript (Callbacks, Promises, and Async/Await)**! 🚀"
+        }
+    ]
+}

@@ -1,0 +1,159 @@
+{
+    "id": "learn_tw_borders",
+    "topicId": "tw_borders",
+    "topicTitle": "Borders & Effects",
+    "description": "Learn how to use borders, border radius, divide utilities, ring outlines, box shadows, and visual effects in Tailwind CSS.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "tw_borders_1",
+            "type": "content",
+            "title": "Borders & Effects Overview",
+            "content": "# Borders, Rings & Effects in Tailwind 🛡️✨\n\nBorders, shadows, and outlines give interfaces structure, elevation, and depth. Tailwind provides comprehensive utilities for:\n\n- **Border Radius** (`rounded-*`): From soft corners to pills and circles\n- **Border Width & Styles** (`border-*`, `border-dashed`)\n- **Divide Utilities** (`divide-y`, `divide-x`): Borders between child elements\n- **Ring Utilities** (`ring-*`, `ring-offset-*`): Box-shadow outlines without layout shift\n- **Box Shadows** (`shadow-*`): Multi-tier elevation scale\n- **Opacity & Blend Modes**: Controlling transparency"
+        },
+        {
+            "id": "tw_borders_2",
+            "type": "content",
+            "title": "Border Radius Utilities",
+            "content": "# Border Radius: Softening Corners 🔲\n\nRound individual corners or all edges at once using `rounded-*`.\n\n## Radius Scale Reference\n\n| Class | CSS Value | Best Use Case |\n|---|---|---|\n| `rounded-none` | `0px` | Crisp tables, sharp cards |\n| `rounded-sm` | `0.125rem` (2px) | Subtle buttons, badges |\n| `rounded` | `0.25rem` (4px) | Form inputs, standard buttons |\n| `rounded-md` | `0.375rem` (6px) | Cards, modals |\n| `rounded-lg` | `0.5rem` (8px) | Modern dashboard widgets |\n| `rounded-xl` | `0.75rem` (12px) | Feature cards |\n| `rounded-2xl`| `1rem` (16px) | Floating dialogs |\n| `rounded-3xl`| `1.5rem` (24px) | Mobile app containers |\n| `rounded-full`| `9999px` | Circular avatars, pill badges |\n\n## Directional Corners\n- `rounded-t-lg` (top only), `rounded-b-lg` (bottom only)\n- `rounded-l-full` (left only), `rounded-tr-xl` (top-right only)"
+        },
+        {
+            "id": "tw_borders_3",
+            "type": "content",
+            "title": "Border Width & Style",
+            "content": "# Border Width & Styles 📏\n\nSet border thickness and line styles with intuitive classes.\n\n## Border Widths\n\n- `border` — `1px` border all sides\n- `border-0` — Remove border\n- `border-2`, `border-4`, `border-8` — `2px`, `4px`, `8px` borders\n- Directional: `border-t-2` (top), `border-b` (bottom), `border-l-4` (callout accent left border)\n\n## Border Line Styles\n\n- `border-solid` (default)\n- `border-dashed` (great for dropzones and upload areas)\n- `border-dotted` (subtle tooltips and abbreviations)\n- `border-double`\n\n```html_not\n<div class=\"border-2 border-dashed border-gray-300 hover:border-indigo-500 p-8 rounded-xl text-center cursor-pointer transition-colors\">\n  <p class=\"text-sm text-gray-500\">Click or drag files here to upload</p>\n</div>\n```"
+        },
+        {
+            "id": "tw_borders_quiz_1",
+            "type": "quiz",
+            "title": "Border Width Check",
+            "content": "Test your knowledge of border utilities!",
+            "quizQuestion": "Which class adds a 1px border to the top of an element only?",
+            "quizOptions": [
+                "border-t-1",
+                "border-t",
+                "border-top-1px",
+                "top-border"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "tw_borders_5",
+            "type": "content",
+            "title": "Border Colors & Transparency",
+            "content": "# Border Colors & Opacity 🎨\n\nBorder colors integrate with Tailwind's complete color scale and support opacity modifiers.\n\n```html_not\n<!-- Card with subtle border in light mode and glowing border in dark mode -->\n<div class=\"bg-white dark:bg-slate-900 border border-slate-200 dark:border-indigo-500/30 p-6 rounded-2xl shadow-sm\">\n  <h3 class=\"text-lg font-bold text-slate-800 dark:text-white\">Theme Adaptive Border</h3>\n  <p class=\"text-slate-600 dark:text-slate-400 mt-2\">Crisp contrast across themes.</p>\n</div>\n```\n\n## Directional Border Colors\nYou can even color individual sides independently: `border-t-indigo-500 border-b-gray-200`."
+        },
+        {
+            "id": "tw_borders_6",
+            "type": "content",
+            "title": "Divide Utilities: Borders Between Children",
+            "content": "# Divide Utilities: Effortless Separation ➗\n\nInstead of manually adding `border-b` to every child except the `:last-child`, use `divide-y` or `divide-x` on the parent!\n\n## How Divide Works\n\nTailwind uses the sibling selector (`> :not([hidden]) ~ :not([hidden])`) behind the scenes.\n\n```html_not\n<ul class=\"divide-y divide-gray-200 bg-white rounded-xl border border-gray-200 shadow-sm\">\n  <li class=\"p-4 hover:bg-gray-50\">Item 1: Inbox</li>\n  <li class=\"p-4 hover:bg-gray-50\">Item 2: Sent Messages</li>\n  <li class=\"p-4 hover:bg-gray-50\">Item 3: Drafts</li>\n  <li class=\"p-4 hover:bg-gray-50\">Item 4: Trash</li>\n</ul>\n```\n\n## Dividing Horizontal Columns\nFor horizontal rows: `<div class=\"flex divide-x divide-gray-300\">...</div>`."
+        },
+        {
+            "id": "tw_borders_7",
+            "type": "content",
+            "title": "Ring Utilities: Superior Outlines",
+            "content": "# Ring Utilities: Clean Outlines Without Layout Shift 💍\n\nStandard CSS `border` increases an element's physical box size, which can cause layout shifts when toggled. `ring` uses CSS `box-shadow` to create crisp outlines that **never cause layout shift**.\n\n## Ring Classes\n\n- `ring` — `3px` outline\n- `ring-1`, `ring-2`, `ring-4`, `ring-8` — Explicit pixel widths\n- `ring-offset-{width}` — Adds white space between element and ring\n- `ring-{color}` — Sets ring outline color\n\n```html_not\n<button class=\"bg-indigo-600 text-white px-5 py-2.5 rounded-lg\n               focus:outline-none focus:ring-4 focus:ring-indigo-500/50 focus:ring-offset-2\">\n  Accessible Focus Ring\n</button>\n```"
+        },
+        {
+            "id": "tw_borders_8",
+            "type": "content",
+            "title": "Avatar Stacks with Ring Offsets",
+            "content": "# Visual Trick: Avatar Stacks with Rings 👥\n\nA popular UI pattern is overlapping avatars with clean cutouts using `ring`:\n\n```html_not\n<div class=\"flex -space-x-3 overflow-hidden p-2\">\n  <img class=\"inline-block h-10 w-10 rounded-full ring-2 ring-white dark:ring-slate-900\" src=\"user1.jpg\" alt=\"User 1\">\n  <img class=\"inline-block h-10 w-10 rounded-full ring-2 ring-white dark:ring-slate-900\" src=\"user2.jpg\" alt=\"User 2\">\n  <img class=\"inline-block h-10 w-10 rounded-full ring-2 ring-white dark:ring-slate-900\" src=\"user3.jpg\" alt=\"User 3\">\n  <div class=\"flex items-center justify-center h-10 w-10 rounded-full bg-slate-200 text-xs font-bold text-slate-700 ring-2 ring-white dark:ring-slate-900\">\n    +5\n  </div>\n</div>\n```\n\n> 💡 **Why It Works:** `ring-white` creates the visual illusion of a border cutout matching the parent background without distorting image size."
+        },
+        {
+            "id": "tw_borders_quiz_2",
+            "type": "quiz",
+            "title": "Ring Utilities Check",
+            "content": "Test your knowledge of Tailwind ring outlines!",
+            "quizQuestion": "Why are `ring` utilities preferred over `border` for focus states?",
+            "quizOptions": [
+                "`ring` utilities run faster in JavaScript",
+                "`ring` utilities use box-shadow and do not alter element dimensions or cause layout shift",
+                "`border` is deprecated in modern CSS",
+                "`ring` automatically generates ARIA labels for screen readers"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "tw_borders_10",
+            "type": "content",
+            "title": "Box Shadows & Elevation Scale",
+            "content": "# Box Shadows & Elevation 🏔️\n\nTailwind's shadow utilities create natural elevation layers using multi-layer box shadows.\n\n## Elevation Scale Reference\n\n| Class | Elevation Level | Typical Component |\n|---|---|---|\n| `shadow-sm` | Low / Subtle | Form inputs, pills |\n| `shadow` | Level 1 (Default) | Standard cards, action buttons |\n| `shadow-md` | Level 2 | Interactive cards on hover |\n| `shadow-lg` | Level 3 | Dropdown menus, sticky headers |\n| `shadow-xl` | Level 4 | Modal dialogs, notifications |\n| `shadow-2xl`| Level 5 | Lightboxes, floating popups |\n| `shadow-inner` | Inset shadow | Depressed inputs, wells |\n| `shadow-none` | Remove shadow | Flat elements |\n\n```html_not\n<div class=\"bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300\">\n  Smooth elevation lift on hover!\n</div>\n```"
+        },
+        {
+            "id": "tw_borders_11",
+            "type": "content",
+            "title": "Colored Box Shadows",
+            "content": "# Colored Glow & Shadow Tinting 🌟\n\nModern UI uses colored shadows to make buttons and cards feel luminous.\n\n## Shadow Color Classes (`shadow-{color}`)\n\n```html_not\n<!-- Neon Indigo Glowing Button -->\n<button class=\"bg-indigo-600 text-white font-semibold px-6 py-3 rounded-xl\n               shadow-lg shadow-indigo-500/50 hover:shadow-indigo-500/80\n               hover:scale-105 active:scale-95 transition-all duration-200\">\n  Launch Project 🚀\n</button>\n\n<!-- Emerald Success Card with tinted shadow -->\n<div class=\"bg-white p-6 rounded-2xl border border-emerald-100 shadow-xl shadow-emerald-500/10\">\n  Payment Verified Successfully\n</div>\n```\n\n> ⚡ **Pro Tip:** Combining `shadow-lg` with `shadow-indigo-500/50` produces an Apple/Stripe-grade ambient glow."
+        },
+        {
+            "id": "tw_borders_12",
+            "type": "content",
+            "title": "Opacity Utilities",
+            "content": "# Controlling Opacity 🌫️\n\nThe `opacity-*` utilities set the `opacity` property of an entire element (including all its children).\n\n## Opacity Scale\n\n- `opacity-0` (0% - fully transparent)\n- `opacity-25` (25%)\n- `opacity-50` (50%)\n- `opacity-75` (75%)\n- `opacity-100` (100% - fully opaque)\n\n```html_not\n<button disabled class=\"bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-50 disabled:cursor-not-allowed\">\n  Processing Transaction...\n</button>\n```\n\n> ⚠️ **Important Distinction:** `opacity-50` makes the *whole element and its text* semi-transparent. If you only want a semi-transparent background, use `bg-blue-600/50` instead!"
+        },
+        {
+            "id": "tw_borders_13",
+            "type": "content",
+            "title": "Backdrop Filters & Glassmorphism",
+            "content": "# Glassmorphism with Backdrop Filters 🪟\n\nTailwind includes modern backdrop filter utilities for blurred frosted-glass aesthetics.\n\n## Frosted Glass Card Recipe\n\n```html_not\n<div class=\"relative bg-gradient-to-tr from-purple-700 to-indigo-900 p-12 rounded-3xl\">\n  <!-- Glass Card -->\n  <div class=\"bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl text-white shadow-2xl\">\n    <h4 class=\"text-2xl font-bold\">Glassmorphic UI</h4>\n    <p class=\"text-white/80 mt-2\">\n      Combines semi-transparent background, border-white/20, and backdrop-blur-md.\n    </p>\n  </div>\n</div>\n```\n\n## Key Backdrop Utilities:\n- `backdrop-blur-sm`, `backdrop-blur-md`, `backdrop-blur-xl`\n- `backdrop-brightness-90`, `backdrop-contrast-125`"
+        },
+        {
+            "id": "tw_borders_14",
+            "type": "content",
+            "title": "Outline Utilities",
+            "content": "# Outline Utilities for Keyboard Accessibility ⌨️\n\nNative CSS `outline` provides high-contrast focus rings for accessibility without modifying layout.\n\n## Outline Classes\n\n- `outline-none` — Removes default browser focus ring (ensure you replace with `ring-*` or `focus:outline-*`!)\n- `outline` — Applies 2px solid outline\n- `outline-dashed`, `outline-dotted`\n- `outline-offset-2`, `outline-offset-4` — Space between element edge and outline\n- `outline-indigo-500`\n\n```html_not\n<a href=\"#main\" class=\"sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 bg-black text-white px-4 py-2 rounded outline outline-2 outline-offset-2 outline-white\">\n  Skip to content\n</a>\n```"
+        },
+        {
+            "id": "tw_borders_15",
+            "type": "content",
+            "title": "Transitions & Smooth State Changes",
+            "content": "# Smooth Transitions with `transition-*` ⏱️\n\nAnimate changes to colors, shadows, borders, and transforms seamlessly.\n\n## Transition Utilities\n\n| Class | CSS `transition-property` |\n|---|---|\n| `transition` | `color, background-color, border-color, shadow, transform, opacity` |\n| `transition-colors` | Color properties only (best performance for hover highlights) |\n| `transition-opacity` | `opacity` only |\n| `transition-transform` | `transform` (scale, translate, rotate) |\n| `transition-all` | Every animatable property |\n\n## Duration & Easing\n- `duration-150`, `duration-200`, `duration-300`, `duration-500`\n- `ease-in`, `ease-out`, `ease-in-out`"
+        },
+        {
+            "id": "tw_borders_16",
+            "type": "content",
+            "title": "Transforms: Scale, Rotate & Translate",
+            "content": "# Transform Utilities 🔄\n\nIn Tailwind v3+, transforms are GPU-accelerated and can be applied directly.\n\n## Core Transform Classes\n\n- **Scale**: `scale-95` (button press), `hover:scale-105` (card hover zoom)\n- **Rotate**: `rotate-45`, `rotate-90`, `-rotate-12`\n- **Translate**: `translate-x-2` (nudge right), `-translate-y-1` (card lift)\n- **Skew**: `skew-x-6`\n\n```html_not\n<div class=\"bg-white p-6 rounded-2xl shadow hover:-translate-y-2 hover:shadow-xl transition-all duration-300\">\n  <div class=\"w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform\">\n    ⚡\n  </div>\n  <h4 class=\"mt-4 font-bold text-gray-900\">Hover Elevation Card</h4>\n</div>\n```"
+        },
+        {
+            "id": "tw_borders_17",
+            "type": "content",
+            "title": "Real-World Component: Interactive Pricing Card",
+            "content": "# Real-World Component: Tiered Pricing Card 💳\n\nLet's combine borders, rings, glowing shadows, and elevation:\n\n```html_not\n<div class=\"relative p-8 bg-white dark:bg-slate-900 rounded-3xl\n            border-2 border-indigo-500 dark:border-indigo-400\n            shadow-2xl shadow-indigo-500/10 transition-all hover:scale-[1.02]\">\n  <!-- Popular Pill Badge -->\n  <span class=\"absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-md\">\n    Most Popular\n  </span>\n  \n  <h3 class=\"text-xl font-bold text-slate-900 dark:text-white\">Professional</h3>\n  <p class=\"text-sm text-slate-500 mt-1\">For scaling startups & dev teams</p>\n  \n  <div class=\"mt-4 flex items-baseline\">\n    <span class=\"text-4xl font-extrabold text-slate-900 dark:text-white\">$49</span>\n    <span class=\"text-slate-500 ml-1\">/ month</span>\n  </div>\n  \n  <ul class=\"mt-6 space-y-3 divide-y divide-slate-100 dark:divide-slate-800 text-sm text-slate-600 dark:text-slate-300\">\n    <li class=\"pt-3 flex items-center gap-2\">✓ Unlimited projects</li>\n    <li class=\"pt-3 flex items-center gap-2\">✓ 24/7 dedicated support</li>\n    <li class=\"pt-3 flex items-center gap-2\">✓ Custom domain SSL</li>\n  </ul>\n  \n  <button class=\"mt-8 w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-lg shadow-indigo-600/30 transition-all\">\n    Get Started Now\n  </button>\n</div>\n```"
+        },
+        {
+            "id": "tw_borders_quiz_3",
+            "type": "quiz",
+            "title": "Divide Utilities Quiz",
+            "content": "Test your knowledge of the divide utilities!",
+            "quizQuestion": "How do you automatically add light horizontal border separators between items in a list?",
+            "quizOptions": [
+                "border-between on every child item",
+                "divide-y divide-gray-200 on the parent container",
+                "separator-horizontal on each list element",
+                "hr-between on the parent list"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "tw_borders_19",
+            "type": "content",
+            "title": "Best Practices for Visual Depth",
+            "content": "# Best Practices for Visual Depth & Hierarchy 🎯\n\n1. **Never use pure black shadows** — Instead of `rgba(0,0,0,0.5)`, use tinted shadows like `shadow-slate-900/10` or `shadow-indigo-500/20`.\n2. **Pair borders with subtle shadows** — A light border (`border-slate-100`) combined with `shadow-sm` makes cards crisp on low-contrast screens.\n3. **Respect user motion preferences** — Wrap transforms with `motion-reduce:transition-none` for users sensitive to motion:\n   ```html_not\n   <button class=\"transition hover:scale-105 motion-reduce:hover:scale-100\">\n     Accessible Button\n   </button>\n   ```\n4. **Always provide accessible focus rings** — Pair `focus:outline-none` with `focus:ring-2`."
+        },
+        {
+            "id": "tw_borders_20",
+            "type": "content",
+            "title": "Summary: Borders & Effects",
+            "content": "# Borders & Effects: Summary 📋\n\n## Key Takeaways\n- **Radius**: Control curves with `rounded-sm` up to `rounded-full`.\n- **Borders**: Set thickness with `border-{n}` and style with `border-dashed`.\n- **Divide**: Add effortless borders between children with `divide-y` and `divide-x`.\n- **Rings**: Leverage `ring-*` for zero-layout-shift focus rings and avatar borders.\n- **Shadows**: Create depth with `shadow-*` and atmospheric glow with `shadow-{color}`.\n- **Transforms**: Nudge and elevate with `hover:-translate-y-1` and `hover:scale-105`.\n\nNext: Master theme customization, arbitrary values, and plugins! 🛠️"
+        },
+        {
+            "id": "tw_borders_21",
+            "type": "content",
+            "title": "Next Steps: Customization & Plugins",
+            "content": "# Ahead: Advanced Customization & Plugins ⚙️\n\nYou are now ready to take full control over the Tailwind compiler and write production-grade configurations.\n\n## Coming Up in Customization:\n- **tailwind.config.js Deep Dive** — Extending vs Overriding themes\n- **Arbitrary Values** — `w-[327px]`, `top-[calc(100%-2rem)]`\n- **Arbitrary Properties** — `[mask-type:alpha]`\n- **Official Plugins** — `@tailwindcss/forms`, `@tailwindcss/aspect-ratio`\n- **Authoring Custom Plugins** with `plugin()` API\n\nLet's conquer Tailwind customization! 🚀"
+        }
+    ]
+}

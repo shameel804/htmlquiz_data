@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Primitive Types in TypeScript",
+    "ques": "Declare three variables in TypeScript explicitly typed as **`string`**, **`number`**, and **`boolean`**. Assign appropriate values and write a console output displaying each variable.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "const languageName: string = \"TypeScript\";\nconst releaseYear: number = 2012;\nconst isStaticallyTyped: boolean = true;\n\nconsole.log(`Language: ${languageName}`);\nconsole.log(`Year: ${releaseYear}`);\nconsole.log(`Static Typing: ${isStaticallyTyped}`);"
+    },
+    "explanation": "TypeScript provides static type annotations for JavaScript's primary primitives: `string` for text, `number` for all numeric values (integers and floating-point), and `boolean` for `true`/`false` flags."
+  },
+  {
+    "title": "Type Inference Mechanics",
+    "ques": "Explain how TypeScript's **Type Inference** works. Write a code example demonstrating how TypeScript automatically infers variable types without explicit annotations, and what happens when an invalid type is reassigned.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "// TypeScript infers 'count' as type number based on initial assignment\nlet count = 42;\n\n// Valid reassignment with the same inferred type\ncount = 100;\n\n// INVALID: TypeScript produces a compile-time type error:\n// Error: Type 'string' is not assignable to type 'number'.\n// count = \"one hundred\";"
+    },
+    "explanation": "TypeScript's compiler analyzes initial values to automatically infer types at declaration time, providing robust type safety without requiring manual annotations on every single variable."
+  },
+  {
+    "title": "Differentiating Any and Unknown",
+    "ques": "What is the critical safety difference between the **`any`** and **`unknown`** types in TypeScript? Write a code sample showing how `unknown` enforces type checking before method invocation.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "// 'any' turns off TypeScript type checking entirely (dangerous!)\nlet looseValue: any = \"hello\";\nlooseValue.nonExistentMethod(); // Compiles without error, but crashes at runtime!\n\n// 'unknown' is the type-safe counterpart of any\nlet strictValue: unknown = \"hello world\";\n\n// strictValue.toUpperCase(); // Error: Object is of type 'unknown'.\n\n// Must narrow type via type check before usage:\nif (typeof strictValue === \"string\") {\n  console.log(strictValue.toUpperCase()); // Safe and allowed!\n}"
+    },
+    "explanation": "`any` bypasses all static type checks, exposing applications to runtime exceptions. `unknown` represents an arbitrary value but forces developers to perform type narrowing or assertions before executing operations on it."
+  },
+  {
+    "title": "Arrays and Fixed-Length Tuples",
+    "ques": "Write a TypeScript code snippet defining:\n1. An array of numbers using generic array syntax.\n2. A fixed-length **Tuple** representing an HTTP status response containing a status code (`number`) and a message (`string`).",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "// 1. Number array\nconst scores: Array<number> = [95, 88, 76, 100];\n// Alternatively: const scores: number[] = [95, 88, 76, 100];\n\n// 2. Fixed-length Tuple: [number, string]\nlet httpResponse: [number, string] = [200, \"OK\"];\n\n// Updating tuple with correct types in fixed positions\nhttpResponse = [404, \"Not Found\"];\n\nconsole.log(`Status: ${httpResponse[0]}, Message: ${httpResponse[1]}`);"
+    },
+    "explanation": "An array holds an arbitrary number of elements of a particular type, whereas a **tuple** expresses an array with a fixed number of elements whose individual types and indices are predefined."
+  },
+  {
+    "title": "Handling Null and Undefined with Strict Checks",
+    "ques": "Explain the significance of the compiler option **`strictNullChecks`**. Write a function that accepts a parameter typed as `string | null` and safely handles both cases.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "function formatUsername(name: string | null): string {\n  // When strictNullChecks is true, null cannot be treated as a string\n  if (name === null) {\n    return \"Anonymous User\";\n  }\n  \n  // Inside this block, TypeScript automatically narrows 'name' to string\n  return name.trim().toUpperCase();\n}\n\nconsole.log(formatUsername(\"alice\")); // ALICE\nconsole.log(formatUsername(null));    // Anonymous User"
+    },
+    "explanation": "With `strictNullChecks` enabled, `null` and `undefined` are not assignable to other types unless explicitly included via union types, preventing the classic 'Cannot read properties of null/undefined' runtime crash."
+  },
+  {
+    "title": "Applying Type Assertions",
+    "ques": "Demonstrate the use of TypeScript **Type Assertions** using the `as` syntax when interacting with Document Object Model elements. When should type assertions be avoided?",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "// document.getElementById returns HTMLElement | null\n// We assert the specific subtype HTMLInputElement using 'as'\nconst inputElement = document.getElementById(\"user-email\") as HTMLInputElement;\n\n// Now we can safely access HTMLInputElement properties like .value\nif (inputElement) {\n  inputElement.value = \"student@example.com\";\n  console.log(\"Input value:\", inputElement.value);\n}\n\n// CAUTION: Type assertions tell the compiler 'trust me, I know the type'.\n// Avoid assertions when type narrowing (e.g. instanceof) can guarantee safety instead."
+    },
+    "explanation": "Type assertions (`expr as Type`) do not perform runtime checks or data conversion; they purely guide the static analysis compiler. Overusing them suppresses genuine typing errors."
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Selecting DOM Elements",
+    "ques": "Compare legacy selector methods (`getElementById`, `getElementsByClassName`) with modern query selectors (`querySelector`, `querySelectorAll`). Write examples selecting single and multiple elements.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// 1. Modern single element selection using CSS selector syntax\nconst mainHeader = document.querySelector(\"#main-title\");\nconst submitBtn = document.querySelector(\"button.btn-primary\");\n\n// 2. Selecting all matching elements (returns a static NodeList)\nconst navLinks = document.querySelectorAll(\"nav.site-nav a\");\n\n// Iterate over NodeList using forEach\nnavLinks.forEach((link, index) => {\n  console.log(`Link #${index + 1}: ${link.textContent} (${link.href})`);\n});\n\n// 3. Fast direct ID lookup\nconst appRoot = document.getElementById(\"app\");"
+    },
+    "explanation": "`querySelector` returns the first element matching any CSS selector query, while `querySelectorAll` returns all matching elements as a NodeList."
+  },
+  {
+    "title": "Handling User Events in the DOM",
+    "ques": "Explain how to attach event listeners using **`addEventListener`**. Write a code snippet listening to button click and form input change events.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const actionBtn = document.getElementById(\"toggle-btn\");\nconst textInput = document.getElementById(\"search-field\");\n\n// 1. Click event listener with event object parameter\nactionBtn.addEventListener(\"click\", (event) => {\n  console.log(\"Button clicked at coordinates:\", event.clientX, event.clientY);\n});\n\n// 2. Real-time input listener for search typing\ntextInput.addEventListener(\"input\", (event) => {\n  const currentQuery = event.target.value;\n  console.log(\"User typed:\", currentQuery);\n});"
+    },
+    "explanation": "`addEventListener` binds event handlers to DOM nodes. The `event` parameter provides rich context such as target element, mouse coordinates, and key presses."
+  },
+  {
+    "title": "Modifying HTML Content and CSS Styles",
+    "ques": "Demonstrate how to update element text with `textContent`, modify HTML with `innerHTML`, toggle CSS classes with `classList`, and update inline CSS styles.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const notificationBanner = document.querySelector(\"#status-banner\");\n\n// 1. Update text safely without HTML injection risks\nnotificationBanner.textContent = \"Backup completed successfully!\";\n\n// 2. Manipulate classes using classList (add, remove, toggle, contains)\nnotificationBanner.classList.remove(\"alert-warning\");\nnotificationBanner.classList.add(\"alert-success\", \"shadow-lg\");\nnotificationBanner.classList.toggle(\"visible\");\n\n// 3. Update dynamic inline CSS style properties (camelCase)\nnotificationBanner.style.backgroundColor = \"#dcfce7\";\nnotificationBanner.style.borderColor = \"#22c55e\";\nnotificationBanner.style.display = \"block\";"
+    },
+    "explanation": "`textContent` is safe against XSS attacks. `classList` provides clean methods (`add`, `remove`, `toggle`) to manage CSS styling without clobbering existing classes."
+  }
+]

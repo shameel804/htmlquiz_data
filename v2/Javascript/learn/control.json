@@ -1,0 +1,159 @@
+{
+    "id": "learn_js_control",
+    "topicId": "control",
+    "topicTitle": "JavaScript Control Structures",
+    "description": "Master if-else, switch-case, for, while, do-while, and for-of loops.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "js_ctrl_1",
+            "type": "content",
+            "title": "Welcome to Control Structures",
+            "content": "# Control Structures in JavaScript 🔀\n\nControl structures govern the execution flow of your program, allowing code to make decisions, execute branches conditionally, and repeat tasks efficiently.\n\n## What you'll master:\n- 🌲 **Conditional Branching** - `if`, `else if`, and `else`\n- 🎯 **Multi-Condition Switching** - The `switch...case` statement and break fallthrough\n- 🔄 **Standard Loops** - `for`, `while`, and `do...while`\n- 🛑 **Loop Control** - `break` and `continue`\n- 📦 **Modern Iterators** - `for...of` (iterables) and `for...in` (object keys)"
+        },
+        {
+            "id": "js_ctrl_2",
+            "type": "content",
+            "title": "The if...else Statement",
+            "content": "# Conditional Logic: `if...else` 🌲\n\nExecute code blocks conditionally based on whether an expression evaluates to truthy or falsy:\n\n```javascript\nlet score = 85;\n\nif (score >= 90) {\n  console.log(\"Grade: A\");\n} else if (score >= 80) {\n  console.log(\"Grade: B\");\n} else if (score >= 70) {\n  console.log(\"Grade: C\");\n} else {\n  console.log(\"Grade: Needs Improvement\");\n}\n```\n\n<!-- FULL_CODE_START\nlet score = 85;\n\nif (score >= 90) {\n  console.log(\"Grade: A\");\n} else if (score >= 80) {\n  console.log(\"Grade: B\");\n} else if (score >= 70) {\n  console.log(\"Grade: C\");\n} else {\n  console.log(\"Grade: Needs Improvement\");\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_ctrl_3",
+            "type": "content",
+            "title": "Nested Conditionals",
+            "content": "# Nested Conditionals & Guard Clauses 🛡️\n\nYou can nest `if` statements inside other `if` blocks:\n\n```javascript\nlet isLoggedIn = true;\nlet isVipMember = true;\n\nif (isLoggedIn) {\n  if (isVipMember) {\n    console.log(\"Welcome to exclusive VIP content!\");\n  } else {\n    console.log(\"Welcome standard member!\");\n  }\n} else {\n  console.log(\"Please log in.\");\n}\n```\n\n<!-- FULL_CODE_START\nlet isLoggedIn = true;\nlet isVipMember = true;\n\nif (isLoggedIn) {\n  if (isVipMember) {\n    console.log(\"Welcome to exclusive VIP content!\");\n  } else {\n    console.log(\"Welcome standard member!\");\n  }\n} else {\n  console.log(\"Please log in.\");\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_ctrl_4",
+            "type": "content",
+            "title": "The switch...case Statement",
+            "content": "# The `switch...case` Statement 🎯\n\nWhen checking a single variable against many possible exact values, `switch` is often cleaner than a dozen `else if` statements:\n\n```javascript\nlet dayNumber = 3;\nlet dayName;\n\nswitch (dayNumber) {\n  case 1:\n    dayName = \"Monday\";\n    break;\n  case 2:\n    dayName = \"Tuesday\";\n    break;\n  case 3:\n    dayName = \"Wednesday\";\n    break;\n  default:\n    dayName = \"Other day\";\n    break;\n}\n\nconsole.log(\"Day is:\", dayName);\n```\n\n<!-- FULL_CODE_START\nlet dayNumber = 3;\nlet dayName;\n\nswitch (dayNumber) {\n  case 1:\n    dayName = \"Monday\";\n    break;\n  case 2:\n    dayName = \"Tuesday\";\n    break;\n  case 3:\n    dayName = \"Wednesday\";\n    break;\n  default:\n    dayName = \"Other day\";\n    break;\n}\n\nconsole.log(\"Day is:\", dayName);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_ctrl_quiz_1",
+            "type": "quiz",
+            "title": "Conditionals Quiz",
+            "content": "Test your knowledge of conditionals.",
+            "quizQuestion": "What happens in a switch statement if you omit the 'break' statement after a matched case?",
+            "quizOptions": [
+                "A syntax error is thrown",
+                "Execution 'falls through' to execute the next case",
+                "The script stops running",
+                "The default case executes immediately"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_ctrl_5",
+            "type": "content",
+            "title": "Intentional Switch Fallthrough",
+            "content": "# Intentional Switch Fallthrough 🪜\n\nOmitting `break` intentionally allows multiple cases to share the exact same logic:\n\n```javascript\nlet role = \"admin\";\nlet accessLevel;\n\nswitch (role) {\n  case \"admin\":\n  case \"superadmin\":\n  case \"owner\":\n    accessLevel = \"Full Root Access\";\n    break;\n  case \"editor\":\n  case \"author\":\n    accessLevel = \"Content Editing Access\";\n    break;\n  default:\n    accessLevel = \"Read Only\";\n    break;\n}\n\nconsole.log(\"Access Level:\", accessLevel);\n```\n\n<!-- FULL_CODE_START\nlet role = \"admin\";\nlet accessLevel;\n\nswitch (role) {\n  case \"admin\":\n  case \"superadmin\":\n  case \"owner\":\n    accessLevel = \"Full Root Access\";\n    break;\n  case \"editor\":\n  case \"author\":\n    accessLevel = \"Content Editing Access\";\n    break;\n  default:\n    accessLevel = \"Read Only\";\n    break;\n}\n\nconsole.log(\"Access Level:\", accessLevel);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_ctrl_6",
+            "type": "content",
+            "title": "The Standard for Loop",
+            "content": "# The Classic `for` Loop 🔁\n\nThe `for` loop executes a block of code a predetermined number of times:\n\n```javascript\n// for (initialization; condition; increment/decrement)\nfor (let i = 0; i < 5; i++) {\n  console.log(`Iteration: ${i}`);\n}\n```\n\n<!-- FULL_CODE_START\nfor (let i = 0; i < 5; i++) {\n  console.log(`Iteration: ${i}`);\n}\n\n// Counting down\nfor (let count = 3; count > 0; count--) {\n  console.log(`Countdown: ${count}`);\n}\nconsole.log(\"Blast off!\");\nFULL_CODE_END -->\n\n## 3 Expressions:\n1. `let i = 0`: Executed once before loop starts.\n2. `i < 5`: Condition evaluated before each iteration.\n3. `i++`: Executed at the end of each iteration."
+        },
+        {
+            "id": "js_ctrl_7",
+            "type": "content",
+            "title": "Iterating Over Arrays with for",
+            "content": "# Iterating Over Arrays with `for` 📊\n\nTraverse an array using index notation and `.length`:\n\n```javascript\nconst fruits = [\"Apple\", \"Banana\", \"Cherry\", \"Mango\"];\n\nfor (let i = 0; i < fruits.length; i++) {\n  console.log(`Index ${i}: ${fruits[i]}`);\n}\n```\n\n<!-- FULL_CODE_START\nconst fruits = [\"Apple\", \"Banana\", \"Cherry\", \"Mango\"];\n\nfor (let i = 0; i < fruits.length; i++) {\n  console.log(`Index ${i}: ${fruits[i]}`);\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_ctrl_8",
+            "type": "content",
+            "title": "The while Loop",
+            "content": "# The `while` Loop 🔄\n\nThe `while` loop repeats code as long as a specified condition evaluates to `true`:\n\n```javascript\nlet energy = 100;\n\nwhile (energy > 20) {\n  console.log(`Current energy: ${energy}% - Running...`);\n  energy -= 30; // Must update condition variable to prevent infinite loop!\n}\n\nconsole.log(`Exited loop. Final energy: ${energy}%`);\n```\n\n<!-- FULL_CODE_START\nlet energy = 100;\n\nwhile (energy > 20) {\n  console.log(`Current energy: ${energy}% - Running...`);\n  energy -= 30;\n}\n\nconsole.log(`Exited loop. Final energy: ${energy}%`);\nFULL_CODE_END -->\n\n> ⚠️ **Warning:** If the condition never becomes false, you create an **infinite loop** that crashes the browser tab or server!"
+        },
+        {
+            "id": "js_ctrl_9",
+            "type": "content",
+            "title": "The do...while Loop",
+            "content": "# The `do...while` Loop 🔁\n\nUnlike a `while` loop, a `do...while` loop **always executes its code block at least once**, because the condition is evaluated at the end!\n\n```javascript\nlet attempts = 0;\n\ndo {\n  attempts++;\n  console.log(`Attempt #${attempts}`);\n} while (attempts < 3);\n```\n\n<!-- FULL_CODE_START\nlet attempts = 0;\n\ndo {\n  attempts++;\n  console.log(`Attempt #${attempts}`);\n} while (attempts < 3);\n\n// Executes once even when condition is false initially!\nlet x = 10;\ndo {\n  console.log(\"Ran once despite x > 20 being false!\");\n} while (x > 20);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_ctrl_quiz_2",
+            "type": "quiz",
+            "title": "Loops Quiz",
+            "content": "Test your loop mechanics knowledge.",
+            "quizQuestion": "Which loop is guaranteed to execute its code block at least once, even if the condition is false?",
+            "quizOptions": [
+                "for loop",
+                "while loop",
+                "do...while loop",
+                "for...in loop"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "js_ctrl_10",
+            "type": "content",
+            "title": "Loop Control: break and continue",
+            "content": "# Loop Control: `break` and `continue` 🛑\n\nModify the natural execution of any loop:\n\n- **`break`**: Immediately terminates the entire loop and exits.\n- **`continue`**: Skips the current iteration and jumps straight to the next one!\n\n```javascript\nconsole.log(\"Demonstrating continue (skips 3):\");\nfor (let i = 1; i <= 5; i++) {\n  if (i === 3) continue; // Skip number 3\n  console.log(i);\n}\n\nconsole.log(\"Demonstrating break (stops at 3):\");\nfor (let i = 1; i <= 5; i++) {\n  if (i === 3) break; // Exit loop completely\n  console.log(i);\n}\n```\n\n<!-- FULL_CODE_START\nconsole.log(\"Demonstrating continue (skips 3):\");\nfor (let i = 1; i <= 5; i++) {\n  if (i === 3) continue;\n  console.log(i);\n}\n\nconsole.log(\"Demonstrating break (stops at 3):\");\nfor (let i = 1; i <= 5; i++) {\n  if (i === 3) break;\n  console.log(i);\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_ctrl_11",
+            "type": "content",
+            "title": "Modern Iteration: for...of",
+            "content": "# Modern Iteration: `for...of` 🚀\n\nIntroduced in ES6, `for...of` is the cleanest, most readable way to iterate over **values** in arrays, strings, sets, and maps:\n\n```javascript\nconst frameworkList = [\"React\", \"Vue\", \"Angular\", \"Svelte\"];\n\nfor (const framework of frameworkList) {\n  console.log(`Framework: ${framework}`);\n}\n```\n\n<!-- FULL_CODE_START\nconst frameworkList = [\"React\", \"Vue\", \"Angular\", \"Svelte\"];\n\nfor (const framework of frameworkList) {\n  console.log(`Framework: ${framework}`);\n}\n\n// Iterating over a string:\nfor (const char of \"HTML\") {\n  console.log(`Character: ${char}`);\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_ctrl_12",
+            "type": "content",
+            "title": "Object Iteration: for...in",
+            "content": "# Object Key Iteration: `for...in` 🔑\n\n`for...in` iterates over the **enumerable property keys** of an object:\n\n```javascript\nconst userProfile = {\n  name: \"Sarah\",\n  role: \"Lead Architect\",\n  experienceYears: 8\n};\n\nfor (const key in userProfile) {\n  console.log(`${key}: ${userProfile[key]}`);\n}\n```\n\n<!-- FULL_CODE_START\nconst userProfile = {\n  name: \"Sarah\",\n  role: \"Lead Architect\",\n  experienceYears: 8\n};\n\nfor (const key in userProfile) {\n  console.log(`${key}: ${userProfile[key]}`);\n}\nFULL_CODE_END -->\n\n> ⚠️ **Rule of Thumb:** Use `for...of` for **arrays and collections** (values). Use `for...in` for **plain objects** (keys)."
+        },
+        {
+            "id": "js_ctrl_13",
+            "type": "content",
+            "title": "Nested Loops",
+            "content": "# Nested Loops & Multi-Dimensional Data 📐\n\nLoops can be nested inside other loops to process matrices, tables, and 2D coordinate grids:\n\n```javascript\nfor (let row = 1; row <= 3; row++) {\n  for (let col = 1; col <= 3; col++) {\n    console.log(`Cell [${row}, ${col}]`);\n  }\n}\n```\n\n<!-- FULL_CODE_START\nfor (let row = 1; row <= 3; row++) {\n  let line = \"\";\n  for (let col = 1; col <= 3; col++) {\n    line += `[${row},${col}] `;\n  }\n  console.log(line);\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_ctrl_quiz_3",
+            "type": "quiz",
+            "title": "Iterator Quiz",
+            "content": "Test your iteration statement knowledge.",
+            "quizQuestion": "Which loop structure is designed specifically to iterate over the values of arrays and iterables?",
+            "quizOptions": [
+                "for...in",
+                "for...of",
+                "switch...case",
+                "do...while"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_ctrl_14",
+            "type": "content",
+            "title": "Labeled Statements with break",
+            "content": "# Labeled Statements with `break` 🏷️\n\nWhen working with nested loops, a standard `break` only terminates the innermost loop. You can label the outer loop to break out of multiple levels at once:\n\n```javascript\nouterLoop: for (let r = 0; r < 5; r++) {\n  for (let c = 0; c < 5; c++) {\n    if (r === 2 && c === 2) {\n      console.log(\"Target found! Breaking outer loop.\");\n      break outerLoop; // Exits BOTH loops immediately!\n    }\n  }\n}\n```\n\n<!-- FULL_CODE_START\nouterLoop: for (let r = 0; r < 5; r++) {\n  for (let c = 0; c < 5; c++) {\n    if (r === 2 && c === 2) {\n      console.log(`Target found at [${r}, ${c}]! Exiting outer loop.`);\n      break outerLoop;\n    }\n  }\n}\nconsole.log(\"Successfully escaped nested loops.\");\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_ctrl_15",
+            "type": "content",
+            "title": "Guard Clauses: Eliminating Nested Ifs",
+            "content": "# Clean Code: The Guard Clause Pattern 🛡️\n\nDeeply nested `if` statements create \"Pyramid of Doom\" code that is hard to read. Use early returns (Guard Clauses) to exit early:\n\n```javascript\nfunction processPayment(user, amount) {\n  // Guard 1: Verify login\n  if (!user.isLoggedIn) {\n    return \"Error: User must be logged in.\";\n  }\n  // Guard 2: Verify funds\n  if (user.balance < amount) {\n    return \"Error: Insufficient funds.\";\n  }\n\n  // Happy path code stays un-nested and clean!\n  user.balance -= amount;\n  return `Payment of $${amount} successful!`;\n}\n\nconsole.log(processPayment({ isLoggedIn: true, balance: 100 }, 40));\n```\n\n<!-- FULL_CODE_START\nfunction processPayment(user, amount) {\n  if (!user.isLoggedIn) {\n    return \"Error: User must be logged in.\";\n  }\n  if (user.balance < amount) {\n    return \"Error: Insufficient funds.\";\n  }\n\n  user.balance -= amount;\n  return `Payment of $${amount} successful! New balance: $${user.balance}`;\n}\n\nconsole.log(processPayment({ isLoggedIn: false, balance: 100 }, 40));\nconsole.log(processPayment({ isLoggedIn: true, balance: 30 }, 40));\nconsole.log(processPayment({ isLoggedIn: true, balance: 100 }, 40));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_ctrl_16",
+            "type": "content",
+            "title": "Algorithm Example: Prime Number Finder",
+            "content": "# Algorithm in Action: Prime Number Check 🔢\n\n```javascript\nfunction isPrime(num) {\n  if (num <= 1) return false;\n  if (num === 2) return true;\n  if (num % 2 === 0) return false;\n\n  for (let i = 3; i <= Math.sqrt(num); i += 2) {\n    if (num % i === 0) return false;\n  }\n  return true;\n}\n\nconsole.log(\"Is 17 prime?\", isPrime(17));\nconsole.log(\"Is 24 prime?\", isPrime(24));\n```\n\n<!-- FULL_CODE_START\nfunction isPrime(num) {\n  if (num <= 1) return false;\n  if (num === 2) return true;\n  if (num % 2 === 0) return false;\n\n  for (let i = 3; i <= Math.sqrt(num); i += 2) {\n    if (num % i === 0) return false;\n  }\n  return true;\n}\n\nconsole.log(\"Is 17 prime?\", isPrime(17));\nconsole.log(\"Is 24 prime?\", isPrime(24));\nconsole.log(\"Is 29 prime?\", isPrime(29));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_ctrl_17",
+            "type": "content",
+            "title": "Performance Tips for Loops",
+            "content": "# Loop Performance Best Practices ⚡\n\n1. **Cache Array Length in Classic For Loops:**\n   ```javascript\n   // Evaluates .length once instead of on every iteration\n   for (let i = 0, len = items.length; i < len; i++) { ... }\n   ```\n2. **Avoid Heavy Operations Inside Loops:** Never query the DOM (`document.querySelector`) inside a loop!\n3. **Prefer `for...of` for Readability:** Modern JS engines optimize `for...of` to perform as fast as indexed loops."
+        },
+        {
+            "id": "js_ctrl_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Control Structures Mastered! 🌟\n\nYou now command complete mastery over decisions, branches, and iteration loops!\n\n## Key Takeaways:\n- ✅ **Conditionals:** `if...else if...else` for logical branching.\n- ✅ **Switch:** `switch...case` with mandatory `break` statements.\n- ✅ **Loop Types:** `for` (counted), `while` (conditional), `do...while` (runs at least once).\n- ✅ **Loop Flow:** `break` exits immediately; `continue` skips to next cycle.\n- ✅ **Modern Iteration:** `for...of` for array values; `for...in` for object keys.\n\n## Up Next:\nIn the next module, explore modular code reuse: **Functions, Arrow Functions, Scope, and Closures**! 🚀"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Embedding Responsive Images with <img> and <picture>",
+    "ques": "Explain the essential attributes of the **`<img>`** tag (`src`, `alt`, `loading=\"lazy\"`, `width`, `height`). Demonstrate responsive art direction using the **`<picture>`** element.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Basic accessible image with lazy-loading and explicit aspect-ratio dimensions -->\n<img \n  src=\"nature.jpg\" \n  alt=\"A scenic sunset over mountain ranges with pine trees in foreground\" \n  width=\"800\" \n  height=\"450\" \n  loading=\"lazy\" \n/>\n\n<!-- Responsive art direction with <picture> -->\n<picture>\n  <!-- Serve WebP format if supported on large viewports -->\n  <source media=\"(min-width: 1024px)\" srcset=\"hero-large.webp\" type=\"image/webp\">\n  <!-- Serve compact mobile crop for small viewports -->\n  <source media=\"(max-width: 600px)\" srcset=\"hero-mobile-square.jpg\">\n  <!-- Default fallback image -->\n  <img src=\"hero-default.jpg\" alt=\"Developer writing code at modern workstation\" loading=\"lazy\">\n</picture>"
+    },
+    "explanation": "Descriptive `alt` text is critical for accessibility and SEO. Setting `width` and `height` prevents Cumulative Layout Shift (CLS). `<picture>` allows art direction and modern image format delivery (`webp`, `avif`)."
+  },
+  {
+    "title": "Embedding Audio with the <audio> Tag",
+    "ques": "Write an HTML snippet embedding an audio track with standard playback controls, multiple audio source codecs (MP3, OGG), and a fallback notice for older browsers.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<figure>\n  <figcaption>Listen to the episode preview:</figcaption>\n  <audio controls preload=\"metadata\">\n    <source src=\"podcast-interview.mp3\" type=\"audio/mpeg\">\n    <source src=\"podcast-interview.ogg\" type=\"audio/ogg\">\n    <p>\n      Your browser does not support HTML5 audio.\n      <a href=\"podcast-interview.mp3\">Download the MP3 directly</a> instead.\n    </p>\n  </audio>\n</figure>"
+    },
+    "explanation": "The `<audio controls>` element provides standard play/pause and volume controls natively. `preload=\"metadata\"` fetches file duration without buffering the entire audio payload up front."
+  },
+  {
+    "title": "Embedding Video and Third-Party Media",
+    "ques": "Compare embedding native HTML5 video with embedding third-party players (like YouTube) via **`<iframe>`**. Write code samples for both.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- 1. Native HTML5 Video Player -->\n<video controls width=\"720\" height=\"405\" poster=\"poster.jpg\" preload=\"metadata\">\n  <source src=\"tutorial.mp4\" type=\"video/mp4\">\n  <source src=\"tutorial.webm\" type=\"video/webm\">\n  <p>HTML5 video not supported.</p>\n</video>\n\n<!-- 2. Third-Party Media Player Embedded via <iframe> -->\n<iframe \n  width=\"560\" \n  height=\"315\" \n  src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" \n  title=\"YouTube Video Player\" \n  frameborder=\"0\" \n  allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" \n  allowfullscreen\n></iframe>"
+    },
+    "explanation": "Native `<video>` is ideal for self-hosted video assets with complete UI control. `<iframe>` embeds hosted streams from platforms like YouTube or Vimeo with offloaded streaming bandwidth and built-in transcoding."
+  }
+]

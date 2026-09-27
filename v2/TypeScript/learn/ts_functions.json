@@ -1,0 +1,159 @@
+{
+    "id": "learn_ts_functions",
+    "topicId": "ts_functions",
+    "topicTitle": "TS Functions & Objects",
+    "description": "Master typing function parameters, return values, optional args, void, and never.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "ts_fn_1",
+            "type": "content",
+            "title": "Welcome to Functions & Object Types",
+            "content": "# TypeScript Functions & Object Types ⚡\n\nFunctions are the central execution engine of any program. TypeScript allows you to type function parameters, return values, optional arguments, object shapes, and specialized return types like `void` and `never`.\n\n## What you'll master:\n- ✍️ **Typing Parameters & Return Values** - Enforcing input and output contracts\n- ⚙️ **Optional & Default Parameters** - Using `?` and default assignments\n- 🧺 **Rest Parameters** - Typing variable-length argument lists\n- 📦 **Object Types** - Inline object annotations and property modifiers\n- 🚫 **The `void` and `never` Types** - Functions returning nothing vs functions that never return\n- 🔀 **Function Overloading** - Multiple type signatures for a single function"
+        },
+        {
+            "id": "ts_fn_2",
+            "type": "content",
+            "title": "Typing Function Parameters & Returns",
+            "content": "# Function Parameter & Return Annotations ✍️\n\nEvery parameter in TypeScript can be given an explicit type annotation, followed by a return type annotation:\n\n```typescript\n// (parameter: type): returnType\nfunction add(x: number, y: number): number {\n  return x + y;\n}\n\nconst greeting = (name: string): string => `Hello, ${name}!`;\n\nconsole.log(\"Sum:\", add(10, 25));\nconsole.log(greeting(\"Marcus\"));\n```\n\n<!-- FULL_CODE_START\nfunction add(x: number, y: number): number {\n  return x + y;\n}\n\nconst greeting = (name: string): string => `Hello, ${name}!`;\n\nconsole.log(\"Sum:\", add(10, 25));\nconsole.log(\"Greeting:\", greeting(\"Marcus\"));\nFULL_CODE_END -->\n\nIf a function body attempts to return the wrong type, TypeScript immediately flags a compile-time error!"
+        },
+        {
+            "id": "ts_fn_3",
+            "type": "content",
+            "title": "Optional Parameters with ?",
+            "content": "# Optional Parameters (`param?: type`) ❓\n\nUse a question mark `?` to mark a parameter as optional. Optional parameters must always appear **after** all required parameters:\n\n```typescript\nfunction buildAddress(street: string, city: string, aptNumber?: string): string {\n  if (aptNumber) {\n    return `${street}, Apt ${aptNumber}, ${city}`;\n  }\n  return `${street}, ${city}`;\n}\n\nconsole.log(buildAddress(\"123 Main St\", \"Springfield\"));\nconsole.log(buildAddress(\"456 Elm St\", \"Gotham\", \"4B\"));\n```\n\n<!-- FULL_CODE_START\nfunction buildAddress(street: string, city: string, aptNumber?: string): string {\n  if (aptNumber) {\n    return `${street}, Apt ${aptNumber}, ${city}`;\n  }\n  return `${street}, ${city}`;\n}\n\nconsole.log(buildAddress(\"123 Main St\", \"Springfield\"));\nconsole.log(buildAddress(\"456 Elm St\", \"Gotham\", \"4B\"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_fn_4",
+            "type": "content",
+            "title": "Default Parameters in TypeScript",
+            "content": "# Default Parameters ⚙️\n\nParameters with default values automatically infer their type and are implicitly optional:\n\n```typescript\nfunction calculateDiscount(price: number, discountPercent: number = 10): number {\n  return price - (price * (discountPercent / 100));\n}\n\nconsole.log(\"Default 10% off $100:\", calculateDiscount(100)); // 90\nconsole.log(\"Custom 25% off $100:\", calculateDiscount(100, 25)); // 75\n```\n\n<!-- FULL_CODE_START\nfunction calculateDiscount(price: number, discountPercent: number = 10): number {\n  return price - (price * (discountPercent / 100));\n}\n\nconsole.log(\"Default 10% off $100:\", calculateDiscount(100));\nconsole.log(\"Custom 25% off $100:\", calculateDiscount(100, 25));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_fn_quiz_1",
+            "type": "quiz",
+            "title": "Function Parameters Quiz",
+            "content": "Test your parameter knowledge.",
+            "quizQuestion": "Where must optional parameters (param?: type) be positioned in a function signature?",
+            "quizOptions": [
+                "At the very beginning before all required parameters",
+                "After all required parameters",
+                "Anywhere in any order",
+                "Inside the return type block"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_fn_5",
+            "type": "content",
+            "title": "Rest Parameters in TypeScript",
+            "content": "# Rest Parameters (`...args: type[]`) 🧺\n\nType variable-length arguments using rest syntax with an array type:\n\n```typescript\nfunction computeAverage(category: string, ...scores: number[]): string {\n  const total = scores.reduce((sum, s) => sum + s, 0);\n  const avg = scores.length > 0 ? (total / scores.length).toFixed(1) : \"0\";\n  return `${category} Average: ${avg}`;\n}\n\nconsole.log(computeAverage(\"Math\", 90, 85, 95));\nconsole.log(computeAverage(\"Physics\", 78, 82, 88, 92));\n```\n\n<!-- FULL_CODE_START\nfunction computeAverage(category: string, ...scores: number[]): string {\n  const total = scores.reduce((sum, s) => sum + s, 0);\n  const avg = scores.length > 0 ? (total / scores.length).toFixed(1) : \"0\";\n  return `${category} Average: ${avg}`;\n}\n\nconsole.log(computeAverage(\"Math\", 90, 85, 95));\nconsole.log(computeAverage(\"Physics\", 78, 82, 88, 92));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_fn_6",
+            "type": "content",
+            "title": "Typing Object Parameters Inline",
+            "content": "# Typing Object Parameters Inline 📦\n\nYou can annotate object parameters directly in the function signature:\n\n```typescript\nfunction printCoordinates(pt: { x: number; y: number; label?: string }): void {\n  console.log(`Point ${pt.label ?? \"\"}: [x=${pt.x}, y=${pt.y}]`);\n}\n\nprintCoordinates({ x: 10, y: 20 });\nprintCoordinates({ x: 5, y: 15, label: \"A\" });\n```\n\n<!-- FULL_CODE_START\nfunction printCoordinates(pt: { x: number; y: number; label?: string }): void {\n  console.log(`Point ${pt.label ?? \"\"}: [x=${pt.x}, y=${pt.y}]`);\n}\n\nprintCoordinates({ x: 10, y: 20 });\nprintCoordinates({ x: 5, y: 15, label: \"Origin\" });\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_fn_7",
+            "type": "content",
+            "title": "The void Return Type",
+            "content": "# The `void` Return Type 🚫\n\n`void` indicates that a function does **not return a value** (or returns `undefined`):\n\n```typescript\nfunction logSystemStatus(status: string): void {\n  console.log(`[STATUS]: ${status}`);\n  // No return statement!\n}\n\nlogSystemStatus(\"Database connected\");\n```\n\n<!-- FULL_CODE_START\nfunction logSystemStatus(status: string): void {\n  console.log(`[STATUS LOG]: ${status}`);\n}\n\nlogSystemStatus(\"Service online and healthy\");\nFULL_CODE_END -->\n\n> 💡 **`void` vs `undefined`:** In TypeScript, a function with return type `void` does not have to explicitly write `return undefined;`. It simply finishes without returning anything."
+        },
+        {
+            "id": "ts_fn_8",
+            "type": "content",
+            "title": "The never Return Type",
+            "content": "# The `never` Return Type ⛔\n\nThe `never` type represents a function that **never returns anything at all**!\n\nThis happens in two scenarios:\n1. The function throws an error/exception every single time.\n2. The function contains an infinite execution loop.\n\n```typescript\nfunction failProcess(errorMessage: string): never {\n  throw new Error(`Fatal system failure: ${errorMessage}`);\n}\n\nfunction runInfiniteLoop(): never {\n  while (true) {\n    // Never exits!\n  }\n}\n```\n\n<!-- FULL_CODE_START\nfunction failProcess(errorMessage: string): never {\n  throw new Error(`Fatal system failure: ${errorMessage}`);\n}\n\ntry {\n  failProcess(\"Connection reset by peer\");\n} catch (e: any) {\n  console.log(\"Handled never-returning function:\", e.message);\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_fn_quiz_2",
+            "type": "quiz",
+            "title": "Void vs Never Quiz",
+            "content": "Test your knowledge of void and never.",
+            "quizQuestion": "When should a function have a return type of 'never'?",
+            "quizOptions": [
+                "When it returns undefined",
+                "When it always throws an error or runs an infinite loop without returning",
+                "When it returns a Promise",
+                "When it accepts zero arguments"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_fn_9",
+            "type": "content",
+            "title": "Function Type Signatures (Type Aliases)",
+            "content": "# Function Type Signatures 📋\n\nDefine reusable function signatures using type aliases:\n\n```typescript\n// Define the type contract for a math operation function\ntype MathOperation = (a: number, b: number) => number;\n\nconst add: MathOperation = (x, y) => x + y;\nconst multiply: MathOperation = (x, y) => x * y;\n\nconsole.log(\"Add 10+5:\", add(10, 5));\nconsole.log(\"Multiply 10*5:\", multiply(10, 5));\n```\n\n<!-- FULL_CODE_START\ntype MathOperation = (a: number, b: number) => number;\n\nconst add: MathOperation = (x, y) => x + y;\nconst multiply: MathOperation = (x, y) => x * y;\n\nconsole.log(\"Add 10+5:\", add(10, 5));\nconsole.log(\"Multiply 10*5:\", multiply(10, 5));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_fn_10",
+            "type": "content",
+            "title": "Callback Function Types",
+            "content": "# Typing Callback Functions 📞\n\nFunctions that receive callbacks can enforce strict types on the callback arguments and return value:\n\n```typescript\nfunction executeWithRetry(\n  task: () => boolean,\n  onFailure: (attempt: number) => void\n): boolean {\n  for (let i = 1; i <= 3; i++) {\n    if (task()) return true;\n    onFailure(i);\n  }\n  return false;\n}\n\nexecuteWithRetry(\n  () => false,\n  (attempt) => console.log(`Attempt ${attempt} failed, retrying...`)\n);\n```\n\n<!-- FULL_CODE_START\nfunction executeWithRetry(\n  task: () => boolean,\n  onFailure: (attempt: number) => void\n): boolean {\n  for (let i = 1; i <= 3; i++) {\n    if (task()) return true;\n    onFailure(i);\n  }\n  return false;\n}\n\nexecuteWithRetry(\n  () => false,\n  (attempt) => console.log(`Attempt ${attempt} failed...`)\n);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_fn_11",
+            "type": "content",
+            "title": "Object Types: readonly Properties",
+            "content": "# Object Types: `readonly` Properties 🔒\n\nMark properties as `readonly` to prevent reassignment after object initialization:\n\n```typescript\ntype DatabaseConfig = {\n  readonly host: string;\n  readonly port: number;\n  database: string; // Mutable\n};\n\nconst config: DatabaseConfig = {\n  host: \"localhost\",\n  port: 5432,\n  database: \"prod_db\"\n};\n\n// config.port = 8080; // Error: Cannot assign to 'port' because it is a read-only property!\nconfig.database = \"staging_db\"; // Valid!\n\nconsole.log(\"Config:\", config);\n```\n\n<!-- FULL_CODE_START\ntype DatabaseConfig = {\n  readonly host: string;\n  readonly port: number;\n  database: string;\n};\n\nconst config: DatabaseConfig = {\n  host: \"localhost\",\n  port: 5432,\n  database: \"prod_db\"\n};\n\nconfig.database = \"staging_db\";\nconsole.log(\"Database config:\", config);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_fn_12",
+            "type": "content",
+            "title": "Function Overloading",
+            "content": "# Function Overloading 🔀\n\nWhen a function can be called with different parameter counts or types that return different results, use **function overloads**:\n\n```typescript\n// Overload signatures (contract declarations)\nfunction combine(a: number, b: number): number;\nfunction combine(a: string, b: string): string;\n\n// Implementation signature (handles all cases)\nfunction combine(a: any, b: any): any {\n  return a + b;\n}\n\nconst numResult = combine(10, 20);     // Type is inferred as 'number'\nconst strResult = combine(\"A\", \"B\");   // Type is inferred as 'string'\n\nconsole.log(\"Combined numbers:\", numResult);\nconsole.log(\"Combined strings:\", strResult);\n```\n\n<!-- FULL_CODE_START\nfunction combine(a: number, b: number): number;\nfunction combine(a: string, b: string): string;\nfunction combine(a: any, b: any): any {\n  return a + b;\n}\n\nconst numResult = combine(10, 20);\nconst strResult = combine(\"Hello \", \"World\");\n\nconsole.log(\"Combined numbers:\", numResult);\nconsole.log(\"Combined strings:\", strResult);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_fn_quiz_3",
+            "type": "quiz",
+            "title": "Overloads Quiz",
+            "content": "Test your knowledge of function overloads.",
+            "quizQuestion": "In TypeScript function overloading, which signature actually contains the executable function body?",
+            "quizOptions": [
+                "The first overload signature",
+                "The implementation signature at the bottom",
+                "Every overload signature has its own body",
+                "No signatures have bodies"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_fn_13",
+            "type": "content",
+            "title": "Exhaustive Checks with never",
+            "content": "# Exhaustive Checks with `never` 🛡️\n\nUse `never` to ensure that every case in a `switch` statement is handled:\n\n```typescript\ntype Shape = \"Circle\" | \"Square\" | \"Triangle\";\n\nfunction getPerimeterFormula(shape: Shape): string {\n  switch (shape) {\n    case \"Circle\":\n      return \"2 * PI * r\";\n    case \"Square\":\n      return \"4 * s\";\n    case \"Triangle\":\n      return \"a + b + c\";\n    default:\n      // If someone adds a new shape to the union and forgets to handle it,\n      // TypeScript throws a compile error here!\n      const _exhaustiveCheck: never = shape;\n      return _exhaustiveCheck;\n  }\n}\n\nconsole.log(\"Circle formula:\", getPerimeterFormula(\"Circle\"));\n```\n\n<!-- FULL_CODE_START\ntype Shape = \"Circle\" | \"Square\" | \"Triangle\";\n\nfunction getPerimeterFormula(shape: Shape): string {\n  switch (shape) {\n    case \"Circle\":\n      return \"2 * PI * r\";\n    case \"Square\":\n      return \"4 * s\";\n    case \"Triangle\":\n      return \"a + b + c\";\n    default:\n      const _exhaustiveCheck: never = shape;\n      return _exhaustiveCheck;\n  }\n}\n\nconsole.log(\"Circle formula:\", getPerimeterFormula(\"Circle\"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_fn_14",
+            "type": "content",
+            "title": "Typing 'this' in Functions",
+            "content": "# Typing `this` in Functions 🧭\n\nYou can explicitly declare what `this` must point to by declaring a fake `this` parameter as the **first parameter**:\n\n```typescript\ninterface Card {\n  suit: string;\n  rank: number;\n}\n\ninterface Deck {\n  cards: Card[];\n  createCardPicker(this: Deck): () => Card;\n}\n\nconst deck: Deck = {\n  cards: [{ suit: \"Hearts\", rank: 10 }],\n  createCardPicker(this: Deck) {\n    return () => this.cards[0];\n  }\n};\n\nconst picker = deck.createCardPicker();\nconsole.log(\"Picked Card:\", picker());\n```\n\n<!-- FULL_CODE_START\ninterface Card {\n  suit: string;\n  rank: number;\n}\n\ninterface Deck {\n  cards: Card[];\n  createCardPicker(this: Deck): () => Card;\n}\n\nconst deck: Deck = {\n  cards: [{ suit: \"Hearts\", rank: 10 }],\n  createCardPicker(this: Deck) {\n    return () => this.cards[0];\n  }\n};\n\nconst picker = deck.createCardPicker();\nconsole.log(\"Picked card from deck:\", picker());\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_fn_15",
+            "type": "content",
+            "title": "Destructuring Typed Objects",
+            "content": "# Destructuring Typed Objects in Function Signatures 📐\n\nClean syntax for typed parameter destructuring:\n\n```typescript\ntype UserOptions = {\n  username: string;\n  age?: number;\n  role?: string;\n};\n\nfunction registerUser({ username, age = 18, role = \"Member\" }: UserOptions): string {\n  return `Registered ${username}, Age ${age}, Role ${role}`;\n}\n\nconsole.log(registerUser({ username: \"David\" }));\nconsole.log(registerUser({ username: \"Elena\", age: 30, role: \"Admin\" }));\n```\n\n<!-- FULL_CODE_START\ntype UserOptions = {\n  username: string;\n  age?: number;\n  role?: string;\n};\n\nfunction registerUser({ username, age = 18, role = \"Member\" }: UserOptions): string {\n  return `Registered ${username}, Age ${age}, Role ${role}`;\n}\n\nconsole.log(registerUser({ username: \"David\" }));\nconsole.log(registerUser({ username: \"Elena\", age: 30, role: \"Admin\" }));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_fn_16",
+            "type": "content",
+            "title": "Generic Function Preview",
+            "content": "# Introduction to Generic Functions 🧬\n\nGenerics allow functions to work across a variety of types while retaining full type safety:\n\n```typescript\n// Type variable <T> captures the input type!\nfunction identity<T>(arg: T): T {\n  return arg;\n}\n\nconst output1 = identity<string>(\"myString\"); // Type is string\nconst output2 = identity<number>(100);          // Type is number\n\nconsole.log(\"Output 1:\", output1);\nconsole.log(\"Output 2:\", output2);\n```\n\n<!-- FULL_CODE_START\nfunction identity<T>(arg: T): T {\n  return arg;\n}\n\nconst output1 = identity<string>(\"TypeScript Generic\");\nconst output2 = identity<number>(42);\n\nconsole.log(\"Generic string output:\", output1);\nconsole.log(\"Generic number output:\", output2);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_fn_17",
+            "type": "content",
+            "title": "Real-World Architecture: API Handler",
+            "content": "# Real-World: Type-Safe API Request Handler 🌐\n\n```typescript\ntype ApiResponse<T> = {\n  status: \"success\" | \"error\";\n  data?: T;\n  errorMessage?: string;\n};\n\nfunction handleApiResponse<T>(response: ApiResponse<T>): void {\n  if (response.status === \"success\" && response.data) {\n    console.log(\"Data loaded successfully:\", response.data);\n  } else {\n    console.error(\"API error:\", response.errorMessage ?? \"Unknown error\");\n  }\n}\n\nhandleApiResponse<string>({ status: \"success\", data: \"JWT_TOKEN_ABC123\" });\nhandleApiResponse<number[]>({ status: \"success\", data: [10, 20, 30] });\n```\n\n<!-- FULL_CODE_START\ntype ApiResponse<T> = {\n  status: \"success\" | \"error\";\n  data?: T;\n  errorMessage?: string;\n};\n\nfunction handleApiResponse<T>(response: ApiResponse<T>): void {\n  if (response.status === \"success\" && response.data) {\n    console.log(\"Data loaded successfully:\", response.data);\n  } else {\n    console.error(\"API error:\", response.errorMessage ?? \"Unknown error\");\n  }\n}\n\nhandleApiResponse<string>({ status: \"success\", data: \"JWT_TOKEN_ABC123\" });\nhandleApiResponse<number[]>({ status: \"success\", data: [10, 20, 30] });\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_fn_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Functions & Objects Mastered! 🌟\n\nYou now command complete mastery over function signatures, parameter modifiers, and object structures in TypeScript!\n\n## Key Takeaways:\n- ✅ **Signatures:** Annotate parameters and return types explicitly (`(x: number): string`).\n- ✅ **Optional Modifiers:** Use `param?: type` for optional parameters and `readonly` for immutable properties.\n- ✅ **Special Returns:** `void` for functions returning nothing; `never` for functions that throw or never exit.\n- ✅ **Overloading:** Provide multiple overload contracts with a single implementation.\n- ✅ **Exhaustiveness:** Use `never` in default switch cases to guarantee all union variants are handled.\n\n## Up Next:\nIn the next module, define reusable structural contracts: **TypeScript Interfaces & Type Aliases**! 🚀"
+        }
+    ]
+}

@@ -1,0 +1,159 @@
+{
+    "id": "learn_js_obj",
+    "topicId": "obj",
+    "topicTitle": "Objects & Arrays",
+    "description": "Master objects, array transformation methods (map, filter, reduce), and destructuring.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "js_obj_1",
+            "type": "content",
+            "title": "Welcome to Objects and Arrays",
+            "content": "# Objects and Arrays in JavaScript 📦\n\nObjects and Arrays are the core data structures of JavaScript, holding complex data models, collections, dictionaries, and API responses.\n\n## What you'll master:\n- 🏗️ **Object Literals** - Properties, bracket vs dot notation, and methods\n- 📚 **Array Fundamentals** - Indexing, modification, and stack/queue methods\n- ⚡ **Transformation Methods** - `map`, `filter`, and `reduce`\n- 🔍 **Searching & Verification** - `find`, `includes`, `some`, and `every`\n- 🪄 **Destructuring Syntax** - Unpacking objects and arrays into variables"
+        },
+        {
+            "id": "js_obj_2",
+            "type": "content",
+            "title": "Creating and Accessing Objects",
+            "content": "# Creating and Accessing Objects 🗂️\n\nObjects store collections of key-value pairs (properties):\n\n```javascript\nconst user = {\n  name: \"Marcus\",\n  age: 28,\n  role: \"Software Architect\",\n  \"favorite language\": \"JavaScript\"\n};\n\n// 1. Dot notation (Preferred)\nconsole.log(user.name); // \"Marcus\"\n\n// 2. Bracket notation (Required for dynamic keys or keys with spaces)\nconsole.log(user[\"favorite language\"]); // \"JavaScript\"\n\nconst keyToLookup = \"role\";\nconsole.log(user[keyToLookup]); // \"Software Architect\"\n```\n\n<!-- FULL_CODE_START\nconst user = {\n  name: \"Marcus\",\n  age: 28,\n  role: \"Software Architect\",\n  \"favorite language\": \"JavaScript\"\n};\n\nconsole.log(\"Dot notation:\", user.name);\nconsole.log(\"Bracket notation:\", user[\"favorite language\"]);\n\nconst dynamicKey = \"role\";\nconsole.log(\"Dynamic lookup:\", user[dynamicKey]);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_obj_3",
+            "type": "content",
+            "title": "Modifying and Deleting Object Properties",
+            "content": "# Modifying & Deleting Properties ✏️\n\nObjects in JavaScript are mutable even when declared with `const`:\n\n```javascript\nconst project = { title: \"Quiz Platform\", status: \"draft\" };\n\n// Add or update property\nproject.status = \"published\";\nproject.stars = 42;\n\n// Delete a property\ndelete project.title;\n\nconsole.log(project);\n```\n\n<!-- FULL_CODE_START\nconst project = { title: \"Quiz Platform\", status: \"draft\" };\n\nproject.status = \"published\";\nproject.stars = 42;\ndelete project.title;\n\nconsole.log(\"Modified project object:\", project);\nconsole.log(\"Has stars property?\", \"stars\" in project);\nFULL_CODE_END -->\n\n> 💡 **`const` vs Mutability:** Declaring an object with `const` prevents reassigning the variable to a *new* object, but its internal properties can still be modified!"
+        },
+        {
+            "id": "js_obj_4",
+            "type": "content",
+            "title": "Object Methods & 'this'",
+            "content": "# Object Methods & `this` ⚙️\n\nFunctions stored as properties inside an object are called **methods**:\n\n```javascript\nconst car = {\n  brand: \"Tesla\",\n  model: \"Model 3\",\n  batteryLevel: 85,\n  drive(miles) {\n    this.batteryLevel -= Math.round(miles * 0.3);\n    console.log(`${this.brand} ${this.model} drove ${miles} miles. Battery: ${this.batteryLevel}%`);\n  }\n};\n\ncar.drive(50);\n```\n\n<!-- FULL_CODE_START\nconst car = {\n  brand: \"Tesla\",\n  model: \"Model 3\",\n  batteryLevel: 85,\n  drive(miles) {\n    this.batteryLevel -= Math.round(miles * 0.3);\n    console.log(`${this.brand} ${this.model} drove ${miles} miles. Battery: ${this.batteryLevel}%`);\n  }\n};\n\ncar.drive(50);\ncar.drive(30);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_obj_quiz_1",
+            "type": "quiz",
+            "title": "Object Basics Quiz",
+            "content": "Test your knowledge of object notation.",
+            "quizQuestion": "When must you use bracket notation (obj[key]) instead of dot notation (obj.key)?",
+            "quizOptions": [
+                "When accessing numbers",
+                "When the key contains spaces or is stored in a dynamic variable",
+                "When the object is declared with const",
+                "When calling a method"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_obj_5",
+            "type": "content",
+            "title": "Array Fundamentals & Methods",
+            "content": "# JavaScript Arrays 📚\n\nAn array is an ordered list of values indexed by integers starting at `0`:\n\n```javascript\nconst colors = [\"red\", \"green\", \"blue\"];\n\nconsole.log(\"First color:\", colors[0]);\nconsole.log(\"Length:\", colors.length);\n\n// Mutating methods\ncolors.push(\"purple\"); // Adds to end\ncolors.pop();          // Removes from end\ncolors.unshift(\"cyan\");// Adds to beginning\ncolors.shift();        // Removes from beginning\n\nconsole.log(\"Final colors:\", colors);\n```\n\n<!-- FULL_CODE_START\nconst colors = [\"red\", \"green\", \"blue\"];\n\ncolors.push(\"purple\");\nconsole.log(\"After push:\", colors);\n\nconst removedEnd = colors.pop();\nconsole.log(\"Popped:\", removedEnd);\n\ncolors.unshift(\"cyan\");\nconsole.log(\"After unshift:\", colors);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_obj_6",
+            "type": "content",
+            "title": "Array Transformation: map()",
+            "content": "# The `.map()` Method 🗺️\n\n`.map()` creates a **new array** populated with the results of calling a function on every element without mutating the original array!\n\n```javascript\nconst numbers = [1, 2, 3, 4, 5];\nconst doubled = numbers.map(num => num * 2);\n\nconsole.log(\"Original:\", numbers);\nconsole.log(\"Doubled:\", doubled);\n\n// Extract property from object array\nconst users = [{ name: \"Alice\" }, { name: \"Bob\" }];\nconst names = users.map(u => u.name);\nconsole.log(\"Names:\", names);\n```\n\n<!-- FULL_CODE_START\nconst numbers = [1, 2, 3, 4, 5];\nconst doubled = numbers.map(num => num * 2);\n\nconsole.log(\"Original numbers:\", numbers);\nconsole.log(\"Doubled numbers:\", doubled);\n\nconst users = [{ name: \"Alice\", age: 25 }, { name: \"Bob\", age: 30 }];\nconst names = users.map(u => u.name);\nconsole.log(\"Extracted names:\", names);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_obj_7",
+            "type": "content",
+            "title": "Array Filtering: filter()",
+            "content": "# The `.filter()` Method 🔍\n\n`.filter()` creates a new array containing only elements that pass a test condition:\n\n```javascript\nconst scores = [45, 88, 92, 63, 74, 98];\n\n// Filter passing scores (>= 70)\nconst passingScores = scores.filter(score => score >= 70);\n\nconsole.log(\"All scores:\", scores);\nconsole.log(\"Passing scores:\", passingScores);\n```\n\n<!-- FULL_CODE_START\nconst scores = [45, 88, 92, 63, 74, 98];\nconst passingScores = scores.filter(score => score >= 70);\n\nconsole.log(\"Passing scores:\", passingScores);\n\nconst products = [\n  { name: \"Laptop\", inStock: true },\n  { name: \"Monitor\", inStock: false },\n  { name: \"Keyboard\", inStock: true }\n];\n\nconst available = products.filter(p => p.inStock);\nconsole.log(\"Available products:\", available.map(p => p.name));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_obj_8",
+            "type": "content",
+            "title": "Array Accumulation: reduce()",
+            "content": "# The Power of `.reduce()` 🧺\n\n`.reduce()` executes a reducer callback over the array to compute a **single cumulative value** (sum, average, group, or object):\n\n```javascript\nconst prices = [10, 25, 40, 15];\n\n// reduce((accumulator, currentValue) => ..., initialValue)\nconst totalPrice = prices.reduce((sum, price) => sum + price, 0);\n\nconsole.log(\"Total Price: $\" + totalPrice);\n```\n\n<!-- FULL_CODE_START\nconst prices = [10, 25, 40, 15];\nconst totalPrice = prices.reduce((sum, price) => sum + price, 0);\nconsole.log(\"Total Price: $\" + totalPrice);\n\n// Counting word frequency with reduce\nconst fruits = [\"apple\", \"banana\", \"apple\", \"orange\", \"banana\", \"apple\"];\nconst counts = fruits.reduce((acc, fruit) => {\n  acc[fruit] = (acc[fruit] || 0) + 1;\n  return acc;\n}, {});\nconsole.log(\"Fruit tally:\", counts);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_obj_quiz_2",
+            "type": "quiz",
+            "title": "Array Methods Quiz",
+            "content": "Test your knowledge of functional array methods.",
+            "quizQuestion": "Which method returns a new array with elements transformed by a function, without mutating the original?",
+            "quizOptions": [
+                "forEach()",
+                "map()",
+                "splice()",
+                "push()"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_obj_9",
+            "type": "content",
+            "title": "Searching Arrays: find, includes, some",
+            "content": "# Searching Arrays 🔎\n\nModern search methods:\n\n```javascript\nconst users = [\n  { id: 1, name: \"Sarah\", role: \"admin\" },\n  { id: 2, name: \"David\", role: \"user\" }\n];\n\n// 1. find(): Returns first matching element (or undefined)\nconst admin = users.find(u => u.role === \"admin\");\nconsole.log(\"Found Admin:\", admin.name);\n\n// 2. includes(): Boolean check for primitive value\nconst tags = [\"tech\", \"coding\", \"web\"];\nconsole.log(\"Has coding tag?\", tags.includes(\"coding\"));\n\n// 3. some() & every()\nconsole.log(\"Any user is admin?\", users.some(u => u.role === \"admin\")); // true\nconsole.log(\"All users are admin?\", users.every(u => u.role === \"admin\")); // false\n```\n\n<!-- FULL_CODE_START\nconst users = [\n  { id: 1, name: \"Sarah\", role: \"admin\" },\n  { id: 2, name: \"David\", role: \"user\" }\n];\n\nconst admin = users.find(u => u.role === \"admin\");\nconsole.log(\"Found admin:\", admin.name);\n\nconst tags = [\"tech\", \"coding\", \"web\"];\nconsole.log(\"Has 'coding'?\", tags.includes(\"coding\"));\nconsole.log(\"Some admin?\", users.some(u => u.role === \"admin\"));\nconsole.log(\"All admin?\", users.every(u => u.role === \"admin\"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_obj_10",
+            "type": "content",
+            "title": "Array Destructuring",
+            "content": "# Array Destructuring 🪄\n\nUnpack values from arrays into distinct variables in a single statement:\n\n```javascript\nconst coordinates = [37.7749, -122.4194];\n\n// Destructuring assignment\nconst [latitude, longitude] = coordinates;\nconsole.log(`Latitude: ${latitude}, Longitude: ${longitude}`);\n\n// Default values & skipping elements\nconst [first, , third = \"Default\"] = [\"A\", \"B\"];\nconsole.log(first, third); // \"A\", \"Default\"\n\n// Variable swap without temporary variable!\nlet x = 10, y = 20;\n[x, y] = [y, x];\nconsole.log(`Swapped: x=${x}, y=${y}`);\n```\n\n<!-- FULL_CODE_START\nconst coordinates = [37.7749, -122.4194];\nconst [latitude, longitude] = coordinates;\nconsole.log(`Latitude: ${latitude}, Longitude: ${longitude}`);\n\nlet a = 1, b = 2;\n[a, b] = [b, a];\nconsole.log(`Swapped: a=${a}, b=${b}`);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_obj_11",
+            "type": "content",
+            "title": "Object Destructuring",
+            "content": "# Object Destructuring 📦\n\nExtract properties directly from objects into named variables:\n\n```javascript\nconst settings = {\n  theme: \"dark\",\n  fontSize: 16,\n  notifications: true\n};\n\nconst { theme, fontSize } = settings;\nconsole.log(`Theme: ${theme}, Size: ${fontSize}px`);\n\n// Renaming variables and setting defaults\nconst { theme: activeTheme, language = \"en\" } = settings;\nconsole.log(`Active Theme: ${activeTheme}, Lang: ${language}`);\n```\n\n<!-- FULL_CODE_START\nconst settings = {\n  theme: \"dark\",\n  fontSize: 16,\n  notifications: true\n};\n\nconst { theme, fontSize } = settings;\nconsole.log(`Theme: ${theme}, Size: ${fontSize}px`);\n\nconst { theme: customName, language = \"en\" } = settings;\nconsole.log(`Renamed theme: ${customName}, Default lang: ${language}`);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_obj_12",
+            "type": "content",
+            "title": "Destructuring Function Parameters",
+            "content": "# Destructuring in Function Parameters 🎛️\n\nDestructuring directly in function parameters creates self-documenting APIs:\n\n```javascript\n// Clean function signature\nfunction renderUserProfile({ name, role = \"User\", isOnline = false }) {\n  console.log(`User: ${name} (${role}) - Status: ${isOnline ? \"🟢 Online\" : \"⚪ Offline\"}`);\n}\n\nrenderUserProfile({ name: \"Elena\", role: \"Manager\", isOnline: true });\nrenderUserProfile({ name: \"Alex\" });\n```\n\n<!-- FULL_CODE_START\nfunction renderUserProfile({ name, role = \"User\", isOnline = false }) {\n  console.log(`User: ${name} (${role}) - Status: ${isOnline ? \"🟢 Online\" : \"⚪ Offline\"}`);\n}\n\nrenderUserProfile({ name: \"Elena\", role: \"Manager\", isOnline: true });\nrenderUserProfile({ name: \"Alex\" });\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_obj_quiz_3",
+            "type": "quiz",
+            "title": "Destructuring Quiz",
+            "content": "Test your destructuring knowledge.",
+            "quizQuestion": "How do you assign the property 'theme' to a newly named variable 'appTheme' during destructuring?",
+            "quizOptions": [
+                "const { theme = appTheme } = obj;",
+                "const { theme: appTheme } = obj;",
+                "const { appTheme(theme) } = obj;",
+                "const { theme as appTheme } = obj;"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_obj_13",
+            "type": "content",
+            "title": "Object.keys, Object.values, Object.entries",
+            "content": "# Object Utility Methods 🛠️\n\nExtract keys, values, or key-value entries from plain objects:\n\n```javascript\nconst hero = { name: \"Batman\", city: \"Gotham\", allies: 3 };\n\nconsole.log(Object.keys(hero));   // [\"name\", \"city\", \"allies\"]\nconsole.log(Object.values(hero)); // [\"Batman\", \"Gotham\", 3]\nconsole.log(Object.entries(hero));// [[\"name\", \"Batman\"], [\"city\", \"Gotham\"], ...]\n\n// Clean iteration with Object.entries:\nfor (const [key, val] of Object.entries(hero)) {\n  console.log(`${key} -> ${val}`);\n}\n```\n\n<!-- FULL_CODE_START\nconst hero = { name: \"Batman\", city: \"Gotham\", allies: 3 };\n\nconsole.log(\"Keys:\", Object.keys(hero));\nconsole.log(\"Values:\", Object.values(hero));\nfor (const [key, val] of Object.entries(hero)) {\n  console.log(`${key} -> ${val}`);\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_obj_14",
+            "type": "content",
+            "title": "Object.assign and Shallow Copying",
+            "content": "# Cloning Objects: Shallow vs Deep 🧬\n\n## 1. Shallow Copy with Spread or `Object.assign`:\n```javascript\nconst original = { a: 1, b: 2 };\nconst clone = { ...original };\nclone.a = 99;\n\nconsole.log(\"Original a:\", original.a); // 1 (Unaffected!)\nconsole.log(\"Clone a:\", clone.a);       // 99\n```\n\n> ⚠️ **Shallow Copy Warning:** Nested objects are copied by reference! Modifying a nested object inside `clone` will mutate the original unless you make a deep copy with `structuredClone(obj)`."
+        },
+        {
+            "id": "js_obj_15",
+            "type": "content",
+            "title": "Modern Deep Cloning with structuredClone",
+            "content": "# Deep Cloning with `structuredClone()` 🚀\n\nModern JavaScript includes native deep cloning:\n\n```javascript\nconst user = {\n  name: \"Leo\",\n  address: { city: \"Berlin\", zip: 10115 }\n};\n\n// True deep copy!\nconst deepCopiedUser = structuredClone(user);\ndeepCopiedUser.address.city = \"Munich\";\n\nconsole.log(\"Original City:\", user.address.city);       // \"Berlin\" (Safe!)\nconsole.log(\"Clone City:\", deepCopiedUser.address.city); // \"Munich\"\n```\n\n<!-- FULL_CODE_START\nconst user = {\n  name: \"Leo\",\n  address: { city: \"Berlin\", zip: 10115 }\n};\n\nconst deepCopiedUser = structuredClone(user);\ndeepCopiedUser.address.city = \"Munich\";\n\nconsole.log(\"Original City:\", user.address.city);\nconsole.log(\"Deep Copy City:\", deepCopiedUser.address.city);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_obj_16",
+            "type": "content",
+            "title": "Slicing and Splicing Arrays",
+            "content": "# Slicing vs Splicing Arrays ✂️\n\n- **`.slice(start, end)` (Immutable):** Returns a shallow copy slice without modifying original.\n- **`.splice(start, count, ...items)` (Mutable):** Modifies the array in place!\n\n```javascript\nconst letters = [\"A\", \"B\", \"C\", \"D\", \"E\"];\n\n// Slice creates copy from index 1 up to index 3 (exclusive)\nconst sub = letters.slice(1, 3);\nconsole.log(\"Sub slice:\", sub); // [\"B\", \"C\"]\nconsole.log(\"Original untouched:\", letters);\n\n// Splice removes 2 elements starting at index 2 and replaces them\nletters.splice(2, 2, \"X\", \"Y\");\nconsole.log(\"After splice mutation:\", letters); // [\"A\", \"B\", \"X\", \"Y\", \"E\"]\n```\n\n<!-- FULL_CODE_START\nconst letters = [\"A\", \"B\", \"C\", \"D\", \"E\"];\nconst sub = letters.slice(1, 3);\nconsole.log(\"Slice:\", sub);\n\nletters.splice(2, 2, \"X\", \"Y\");\nconsole.log(\"After splice:\", letters);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_obj_17",
+            "type": "content",
+            "title": "Performance with Arrays & Objects",
+            "content": "# Data Structure Performance Rules ⚡\n\n1. **Object property lookup is O(1) instantaneous:** Use objects/Maps for fast key-based lookups instead of looping through arrays with `.find()`.\n2. **`push()` and `pop()` are O(1) fast:** Operating on the end of an array is lightning fast.\n3. **`unshift()` and `shift()` are O(n) slow:** Adding or removing from the beginning of large arrays forces every subsequent element to re-index!"
+        },
+        {
+            "id": "js_obj_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Objects & Arrays Mastered! 🌟\n\nYou now possess complete fluency with JavaScript's foundational data structures!\n\n## Key Takeaways:\n- ✅ **Objects:** Store key-value pairs; access with dot or bracket notation.\n- ✅ **Functional Methods:** `.map()` transforms, `.filter()` selects, `.reduce()` accumulates.\n- ✅ **Destructuring:** Unpack properties and array elements cleanly with `{ a, b }` and `[x, y]`.\n- ✅ **Utilities:** `Object.keys()`, `Object.values()`, and `Object.entries()`.\n- ✅ **Deep Copy:** Use native `structuredClone()` to clone nested objects safely.\n\n## Up Next:\nIn the next module, explore modern language features: **ES6+ Features (Let/Const, Spread/Rest, Classes, and Modules)**! 🚀"
+        }
+    ]
+}

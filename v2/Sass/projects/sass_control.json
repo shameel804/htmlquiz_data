@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Conditional Branching with @if and @else",
+    "ques": "Write a Sass mixin `theme-variant` that uses **`@if`**, **`@else if`**, and **`@else`** to apply distinct text and background colors based on a `$mode` argument ('light', 'dark', or 'high-contrast').",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "@mixin theme-variant($mode) {\n  @if $mode == 'light' {\n    background-color: #ffffff;\n    color: #111827;\n  } @else if $mode == 'dark' {\n    background-color: #1f2937;\n    color: #f9fafb;\n  } @else if $mode == 'high-contrast' {\n    background-color: #000000;\n    color: #ffff00;\n    border: 2px solid #ffffff;\n  } @else {\n    background-color: #f3f4f6;\n    color: #374151;\n  }\n}\n\n.app-panel {\n  @include theme-variant('dark');\n}"
+    },
+    "explanation": "Control directives `@if`, `@else if`, and `@else` permit conditional logic in stylesheets, adjusting styles based on parameters or theme configurations."
+  },
+  {
+    "title": "Iterating Over Maps with @each",
+    "ques": "Demonstrate the use of the **`@each`** loop to iterate over a map of brand colors (`$social-colors`) and dynamically output custom button modifier classes.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "$social-colors: (\n  'twitter': #1da1f2,\n  'github': #24292e,\n  'linkedin': #0a66c2,\n  'youtube': #ff0000\n);\n\n@each $platform, $color in $social-colors {\n  .btn-social--#{$platform} {\n    background-color: $color;\n    color: #ffffff;\n\n    &:hover {\n      background-color: darken($color, 10%);\n    }\n  }\n}"
+    },
+    "explanation": "The `@each` loop iterates over lists or key-value maps, generating structured repetitive class suites automatically."
+  },
+  {
+    "title": "Generating Sequences with @for Loops",
+    "ques": "Explain the difference between `@for $i from 1 through 3` and `@for $i from 1 to 3`. Write an SCSS snippet generating column width classes from 1 through 4.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "// 'through' includes the end number (1, 2, 3, 4)\n// 'to' excludes the end number (1, 2, 3)\n\n$total-columns: 4;\n\n@for $i from 1 through $total-columns {\n  .col-#{$i} {\n    width: ($i / $total-columns) * 100%;\n    display: inline-block;\n  }\n}"
+    },
+    "explanation": "`through` is inclusive of the upper boundary, whereas `to` is exclusive. `@for` loops are standard for generating numbered utility scales (grids, z-index, spacing)."
+  },
+  {
+    "title": "Dynamic State Evaluation with @while",
+    "ques": "Write a demonstration of the **`@while`** loop in Sass that halves an initial pixel size until a minimum threshold is reached, generating typographic heading scale steps.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "$font-size: 64px;\n$step: 1;\n\n@while $font-size >= 16px {\n  .heading-scale-#{$step} {\n    font-size: $font-size;\n  }\n  \n  // Decrement font size and increment step counter\n  $font-size: $font-size / 2;\n  $step: $step + 1;\n}"
+    },
+    "explanation": "`@while` repeatedly executes a code block until its conditional statement evaluates to `false`. Ensure state variables mutate inside the loop to avoid infinite compilation loops."
+  },
+  {
+    "title": "Compiler Diagnostics: @error, @warn, and @debug",
+    "ques": "Explain the differences between **`@debug`**, **`@warn`**, and **`@error`**. Write a mixin `set-grid-gap` that throws an `@error` if an invalid unit is provided.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "@use 'sass:math';\n\n@mixin set-grid-gap($gap-size) {\n  // 1. @debug: Prints diagnostic information to terminal console for troubleshooting\n  @debug \"Evaluating grid gap parameter: #{$gap-size}\";\n\n  // 2. @warn: Alerts developer of deprecations or sub-optimal practices without halting build\n  @if $gap-size > 64px {\n    @warn \"Gap size #{$gap-size} is unusually large and may break responsive layouts.\";\n  }\n\n  // 3. @error: Throws a fatal compiler error and stops compilation immediately\n  @if math.is-unitless($gap-size) {\n    @error \"Invalid argument: $gap-size must have a unit (e.g., px, rem). Received: #{$gap-size}\";\n  }\n\n  gap: $gap-size;\n}"
+    },
+    "explanation": "`@debug` prints inspection values, `@warn` logs non-fatal advisories, and `@error` immediately halts compilation when critical constraints are violated."
+  }
+]

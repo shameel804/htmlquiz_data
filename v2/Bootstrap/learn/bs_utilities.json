@@ -1,0 +1,159 @@
+{
+    "id": "learn_bs_utilities",
+    "topicId": "bs_utilities",
+    "topicTitle": "Utilities",
+    "description": "Learn Bootstrap 5 utilities: spacing scale, colors, subtle tints, display, flexbox utilities, positioning (fixed/sticky), and borders.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "bs_u_1",
+            "type": "content",
+            "title": "Bootstrap Utilities Overview",
+            "content": "# Bootstrap 5 Utilities & Helpers 🛠️\n\nBootstrap 5 features a comprehensive utility system that allows you to style layouts, spacing, typography, and borders rapidly directly inside HTML without writing custom CSS rules.\n\n## What You'll Learn in this Module:\n- **Spacing Utilities**: Margin and padding scales (`m-*`, `p-*`, `gap-*`)\n- **Color & Contrast Utilities**: Text colors, subtle background tints, and borders\n- **Display & Visibility**: `d-block`, `d-flex`, `d-none`, responsive visibility\n- **Flexbox Utilities**: Alignment, justification, order, and grow/shrink\n- **Position & Stacking**: `fixed-top`, `sticky-top`, positioning offsets\n- **The Bootstrap 5 Utility API**: Customizing utilities in Sass"
+        },
+        {
+            "id": "bs_u_2",
+            "type": "content",
+            "title": "Spacing Scale: Margins & Padding",
+            "content": "# Spacing Utilities: Margins & Padding 📏\n\nBootstrap uses a 0 to 5 spacing scale based on the `$spacer` Sass variable (`1rem` / 16px default).\n\n## The Spacing Scale\n\n| Class Scale | CSS Value | Pixels (base 16px) |\n|---|---|---|\n| `0` | `0` | 0px |\n| `1` | `$spacer * 0.25` | 4px |\n| `2` | `$spacer * 0.5` | 8px |\n| `3` | `$spacer * 1` (default) | 16px |\n| `4` | `$spacer * 1.5` | 24px |\n| `5` | `$spacer * 3` | 48px |\n| `auto` | `margin: auto` | Auto centering |\n\n## Property & Direction Notation\n\n- Property: `m` (margin), `p` (padding)\n- Direction: `t` (top), `b` (bottom), `s` (start/left), `e` (end/right), `x` (horizontal), `y` (vertical)\n- Examples: `pt-4`, `mb-3`, `px-5`, `mx-auto`"
+        },
+        {
+            "id": "bs_u_3",
+            "type": "content",
+            "title": "RTL-Friendly Directional Utilities (s & e)",
+            "content": "# Modern Logical Properties: Start (`s`) & End (`e`) 🌐\n\nIn older Bootstrap versions, classes used `l` (left) and `r` (right). Bootstrap 5 uses **logical properties** for automatic Right-To-Left (RTL) language support!\n\n## Replacement Mapping\n\n- `ps-*` (Padding Start) — Replaces `pl-*` (left in LTR, right in RTL)\n- `pe-*` (Padding End) — Replaces `pr-*`\n- `ms-*` (Margin Start) — Replaces `ml-*`\n- `me-*` (Margin End) — Replaces `mr-*`\n\n```html_not\n<div class=\"d-flex align-items-center\">\n  <img src=\"avatar.png\" class=\"me-3 rounded-circle\" width=\"40\">\n  <div>Avatar has margin-end (right in English, left in Arabic!)</div>\n</div>\n```"
+        },
+        {
+            "id": "bs_u_4",
+            "type": "content",
+            "title": "Color & Background Utilities",
+            "content": "# Colors, Backgrounds & Subtle Tints 🎨\n\nApply brand colors to text and backgrounds with high contrast.\n\n## Text Colors\n\n- `.text-primary`, `.text-secondary`, `.text-success`, `.text-danger`\n- `.text-warning`, `.text-info`, `.text-light`, `.text-dark`, `.text-muted`\n\n## Backgrounds & Subtle Tints (Bootstrap 5.3+)\n\nModern Bootstrap includes subtle background tints for accessible alert and card styling:\n\n```html_not\n<!-- Solid Background -->\n<div class=\"p-3 bg-primary text-white rounded mb-2\">Solid Primary</div>\n\n<!-- Modern Subtle Tinted Background -->\n<div class=\"p-3 bg-primary-subtle text-primary-emphasis border border-primary-subtle rounded\">\n  Subtle primary card with accessible dark text!\n</div>\n```"
+        },
+        {
+            "id": "bs_u_quiz_1",
+            "type": "quiz",
+            "title": "RTL Spacing Check",
+            "content": "Test your knowledge of Bootstrap 5 spacing classes!",
+            "quizQuestion": "Which class applies margin to the right side of an element in standard left-to-right (LTR) direction?",
+            "quizOptions": [
+                "mr-3",
+                "me-3",
+                "m-right-3",
+                "margin-r-3"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "bs_u_6",
+            "type": "content",
+            "title": "Display Utilities: Block, Flex & None",
+            "content": "# Display Property Utilities: `d-*` 🔲\n\nToggle element display types and show/hide elements responsively.\n\n## Common Display Classes\n\n- `.d-none`: `display: none;` (hides element)\n- `.d-inline`: `display: inline;`\n- `.d-inline-block`: `display: inline-block;`\n- `.d-block`: `display: block;`\n- `.d-grid`: `display: grid;`\n- `.d-flex`: `display: flex;`\n- `.d-inline-flex`: `display: inline-flex;`\n\n## Responsive Display Example\n\n```html_not\n<!-- Hidden on mobile (< 768px), visible as flex on tablets and up -->\n<div class=\"d-none d-md-flex align-items-center gap-3\">\n  <span>Desktop Navigation Toolbar</span>\n</div>\n```"
+        },
+        {
+            "id": "bs_u_7",
+            "type": "content",
+            "title": "Flexbox Utilities: Direction & Justify",
+            "content": "# Flexbox Utilities: Direction & Alignment 🔄\n\nTurn any container into a flex container using `.d-flex` or `.d-inline-flex`.\n\n## Flex Direction\n\n- `.flex-row` (default), `.flex-row-reverse`\n- `.flex-column` (stacked vertical), `.flex-column-reverse`\n- Responsive: `.flex-column .flex-md-row` (stack on phone, row on tablet)\n\n## Justify Content (Main Axis)\n\n- `.justify-content-start`\n- `.justify-content-end`\n- `.justify-content-center`\n- `.justify-content-between`\n- `.justify-content-around`\n- `.justify-content-evenly`"
+        },
+        {
+            "id": "bs_u_8",
+            "type": "content",
+            "title": "Flexbox Utilities: Align Items & Grow",
+            "content": "# Flexbox Cross-Axis & Child Utilities 🎯\n\n## Align Items (Cross Axis)\n\n- `.align-items-start`\n- `.align-items-center` (vertical centering!)\n- `.align-items-end`\n- `.align-items-baseline`\n- `.align-items-stretch`\n\n## Flex Item Grow & Shrink\n\n- `.flex-grow-1`: Element expands to fill remaining space\n- `.flex-shrink-0`: Prevents element from squishing\n- `.flex-fill`: Forces siblings to have equal widths"
+        },
+        {
+            "id": "bs_u_quiz_2",
+            "type": "quiz",
+            "title": "Flexbox Alignment Quiz",
+            "content": "Test your knowledge of Bootstrap flexbox utilities!",
+            "quizQuestion": "Which pair of classes centers content both horizontally and vertically inside a flex container?",
+            "quizOptions": [
+                "`.center-both`",
+                "`.justify-content-center .align-items-center`",
+                "`.flex-center`",
+                "`.d-center .items-middle`"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "bs_u_10",
+            "type": "content",
+            "title": "Position Utilities: Fixed & Sticky",
+            "content": "# Position Utilities: Fixed, Sticky & Absolute 📍\n\nPosition elements within standard document flow or lock them during scrolling.\n\n## Common Position Classes\n\n- `.position-static`\n- `.position-relative` (sets positioning boundary for absolute children)\n- `.position-absolute`\n- `.position-fixed` (locks relative to browser window)\n- `.position-sticky` (locks when reaching scroll threshold)\n\n## Navigation Helpers\n\n- `.fixed-top`: Locks navbar to top edge of browser window\n- `.fixed-bottom`: Locks bar to bottom edge\n- `.sticky-top`: Sticks to top when scrolled into view\n- `.sticky-bottom`"
+        },
+        {
+            "id": "bs_u_11",
+            "type": "content",
+            "title": "Coordinate Helpers: Top, Start, Bottom, End",
+            "content": "# Coordinate Positioning Helpers 🎯\n\nPlace absolute items precisely with percentage coordinates:\n\n| Class | CSS Value |\n|---|---|\n| `.top-0` | `top: 0;` |\n| `.top-50` | `top: 50%;` |\n| `.top-100` | `top: 100%;` |\n| `.bottom-0`, `.bottom-50`, `.bottom-100` | Bottom offsets |\n| `.start-0`, `.start-50`, `.start-100` | Left / Start offsets |\n| `.end-0`, `.end-50`, `.end-100` | Right / End offsets |\n\n## Centering with `.translate-middle`\n\nCombines with `top-50 start-50` to center elements (`transform: translate(-50%, -50%)`)."
+        },
+        {
+            "id": "bs_u_12",
+            "type": "content",
+            "title": "Border Utilities: Radius & Width",
+            "content": "# Border Utilities 🔲\n\n## Border Widths\n\n- `.border`: 1px solid border on all sides\n- `.border-0`: Remove border\n- `.border-top`, `.border-bottom`, `.border-start`, `.border-end`\n- `.border-2`, `.border-3`, `.border-4`, `.border-5`: Pixel thicknesses\n\n## Border Radius\n\n- `.rounded`: Soft 0.375rem corners\n- `.rounded-0`: Remove corners\n- `.rounded-1`, `.rounded-2`, `.rounded-3`, `.rounded-4`, `.rounded-5`\n- `.rounded-circle`: Circular avatar (50%)\n- `.rounded-pill`: Pill badge"
+        },
+        {
+            "id": "bs_u_13",
+            "type": "content",
+            "title": "Shadows & Elevation",
+            "content": "# Shadows & Elevation Utilities 🏔️\n\nAdd depth and elevation to cards and floating elements:\n\n- `.shadow-none`: Removes any box shadow\n- `.shadow-sm`: Subtle elevation (ideal for form inputs and cards)\n- `.shadow`: Standard elevation\n- `.shadow-lg`: Deep shadow for floating modals and dropdowns\n\n```html_not\n<div class=\"card shadow-lg border-0 p-4 rounded-4\">\n  Floating elevated card with rounded corners and no border!\n</div>\n```"
+        },
+        {
+            "id": "bs_u_14",
+            "type": "content",
+            "title": "Visibility vs Display None",
+            "content": "# Visibility Utilities 👁️\n\nControl visual presentation while retaining accessibility and layout space.\n\n## `.visible` vs `.invisible`\n\n- `.visible`: `visibility: visible;`\n- `.invisible`: `visibility: hidden;` — Hides element visually, but it **still takes up its physical space** in the document layout!\n\n## `.visually-hidden` (Screen Readers Only)\n\nHides an element visually from the screen while leaving it completely readable to screen readers and assistive devices:\n\n```html_not\n<button class=\"btn btn-primary\">\n  <i class=\"bi bi-trash\"></i>\n  <span class=\"visually-hidden\">Delete User Account</span>\n</button>\n```"
+        },
+        {
+            "id": "bs_u_15",
+            "type": "content",
+            "title": "Ratio Utilities (Aspect Ratios)",
+            "content": "# Ratio Utilities for Videos & Iframes 📐\n\nReplace legacy `embed-responsive` with the modern `.ratio` component:\n\n```html_not\n<!-- 16:9 Widescreen Video Embed -->\n<div class=\"ratio ratio-16x9 rounded-4 overflow-hidden shadow\">\n  <iframe src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" title=\"YouTube video\" allowfullscreen></iframe>\n</div>\n```\n\nSupported aspect ratios: `.ratio-1x1`, `.ratio-4x3`, `.ratio-16x9`, `.ratio-21x9`."
+        },
+        {
+            "id": "bs_u_16",
+            "type": "content",
+            "title": "The Bootstrap 5 Utility API (Sass)",
+            "content": "# The Bootstrap Utility API in Sass ⚙️\n\nBootstrap 5's utilities are generated from a Sass map in `_utilities.scss`. You can add, modify, or delete utilities by modifying `$utilities`:\n\n```scss_not\n@import 'bootstrap/scss/bootstrap';\n\n// Add a custom opacity utility\n$utilities: map-merge(\n  $utilities, (\n    'custom-opacity': (\n      property: opacity,\n      values: (\n        0: 0,\n        25: 0.25,\n        50: 0.5,\n        75: 0.75,\n        100: 1,\n      )\n    )\n  )\n);\n```\n\nGenerates `.opacity-0`, `.opacity-50`, etc. automatically with responsive variants!"
+        },
+        {
+            "id": "bs_u_17",
+            "type": "content",
+            "title": "Real-World Component: Interactive Notification Toast",
+            "content": "# Real-World Example: Floating Notification Toast 🍞\n\nCombining position, shadows, borders, flexbox, and spacing utilities:\n\n```html_not\n<div class=\"position-fixed bottom-0 end-0 p-3\" style=\"z-index: 1080;\">\n  <div class=\"toast show shadow-lg border-0 rounded-4 overflow-hidden\" role=\"alert\">\n    <div class=\"toast-header bg-success text-white\">\n      <strong class=\"me-auto\">System Notification</strong>\n      <small class=\"text-white-50\">Just now</small>\n      <button type=\"button\" class=\"btn-close btn-close-white\" data-bs-dismiss=\"toast\"></button>\n    </div>\n    <div class=\"toast-body bg-white p-3\">\n      Your backup completed successfully! 2.4 GB archived.\n    </div>\n  </div>\n</div>\n```"
+        },
+        {
+            "id": "bs_u_quiz_3",
+            "type": "quiz",
+            "title": "Visually Hidden Quiz",
+            "content": "Test your knowledge of accessibility utilities!",
+            "quizQuestion": "Which class hides text visually from screen displays while keeping it accessible to screen readers?",
+            "quizOptions": [
+                ".d-none",
+                ".invisible",
+                ".visually-hidden",
+                ".screen-reader-only"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "bs_u_19",
+            "type": "content",
+            "title": "Utility Best Practices",
+            "content": "# Utility Best Practices 💡\n\n1. **Combine utilities with component classes**: Use `.btn` for button structure, and add utilities like `.px-4 .py-2 .shadow-sm` for tuning.\n2. **Prefer logical properties**: Use `ms-*` and `pe-*` instead of manual left/right styles.\n3. **Use `.gap-*` for flex spacing**: Instead of adding margins to every child item, apply `gap-3` to the parent `.d-flex` container."
+        },
+        {
+            "id": "bs_u_20",
+            "type": "content",
+            "title": "Summary of the Bootstrap 5 Course",
+            "content": "# Bootstrap 5: Complete Course Summary 🎓\n\nCongratulations! You have mastered Bootstrap 5 from layout foundations to advanced components.\n\n## What You Have Learned:\n- **Layout & Grid**: 12-column responsive grid, containers, breakpoints (sm to xxl), gutters (`g-*`).\n- **Content & Typography**: Reboot resets, headings, lead paragraphs, responsive tables, and fluid images.\n- **Core Components**: Buttons, badges, cards, alerts, list groups, spinners, and progress bars.\n- **Interactive Components**: Navbars, modals, carousels, accordions, offcanvas drawers, and the JS API.\n- **Utilities**: Spacing (`m-*`, `p-*`), colors, display (`d-flex`), positioning, and shadows.\n\nYou are now equipped to build rapid, beautiful, mobile-friendly applications with Bootstrap 5! 🚀"
+        },
+        {
+            "id": "bs_u_21",
+            "type": "content",
+            "title": "Next Course: Web Security",
+            "content": "# Next Up: Web Security Fundamentals 🛡️🔒\n\nNow that you understand modern web design and front-end engineering, you must protect your applications against real-world vulnerabilities.\n\n## Topics in Web Security:\n- **Security Fundamentals**: CIA Triad, HTTPS/TLS, Same-Origin Policy (SOP)\n- **Cross-Site Scripting (XSS)**: Stored, Reflected, DOM-based & Sanitization\n- **CSRF & Clickjacking**: Anti-CSRF tokens, SameSite cookies\n- **HTTP Security Headers**: CSP, HSTS, X-Frame-Options\n- **Authentication & Sessions**: Password hashing (Argon2), JWT security, MFA\n- **Injection Attacks**: SQL Injection, Command Injection, Parameterized queries\n\nLet's master Web Security! 🛡️"
+        }
+    ]
+}

@@ -1,0 +1,159 @@
+{
+    "id": "learn_ws_auth",
+    "topicId": "ws_auth",
+    "topicTitle": "Auth & Session Management",
+    "description": "Master authentication and session management: password hashing with Argon2/Bcrypt, session hijacking/fixation, cookie flags, JWT security, and MFA.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "ws_a_1",
+            "type": "content",
+            "title": "Authentication & Sessions Overview",
+            "content": "# Authentication & Session Management 🔑\n\nAuthentication is the digital gatekeeper of your application. When authentication fails, an attacker gains full access to user accounts and data.\n\n## What You'll Learn in this Module:\n- **Password Hashing**: Why fast hashes fail and how **Argon2** & **Bcrypt** protect user credentials\n- **Session Hijacking & Session Fixation**: How sessions get compromised and how to defend them\n- **Cookie Hardening Flags**: `Secure`, `HttpOnly`, `SameSite`\n- **JSON Web Tokens (JWT)**: Architecture, signature algorithms, and the dreaded `alg: none` exploit\n- **OAuth 2.0 & OpenID Connect (OIDC)**: Delegated authorization\n- **Multi-Factor Authentication (MFA)**: TOTP time-based algorithms"
+        },
+        {
+            "id": "ws_a_2",
+            "type": "content",
+            "title": "Why Fast Hashes (MD5, SHA-256) Fail for Passwords",
+            "content": "# Why Fast Hashes Fail for Passwords ⚠️\n\nCryptographic hash functions like **MD5**, **SHA-1**, and **SHA-256** were designed to verify file integrity *as quickly as possible* (computing billions of hashes per second).\n\n## The Threat: GPU Brute-Force & Rainbow Tables\n\n- A modern consumer GPU (e.g. RTX 4090) can compute over **20 billion SHA-256 hashes per second**!\n- If your database is leaked, an attacker can crack an 8-character password in minutes using rainbow tables and brute force.\n\n## The Rule:\n\n> ❌ **NEVER** use MD5, SHA-1, SHA-256, or SHA-512 for password storage!\n> ✅ **ALWAYS** use slow, memory-hard adaptive hashing algorithms (Argon2id or Bcrypt)."
+        },
+        {
+            "id": "ws_a_3",
+            "type": "content",
+            "title": "Salting and Key Stretching",
+            "content": "# Salting & Key Stretching 🧂\n\n## 1. Cryptographic Salt\nA **salt** is a cryptographically unique, random sequence of bytes generated per user and prepended to the password before hashing.\n\n$$\\text{Hash} = \\text{HashFunction}(\\text{Password} + \\text{UniqueSalt})$$\n\n- **Why Salting is Vital**: If two users have the password `Password123!`, their stored hashes are completely different. This completely neutralizes precomputed rainbow table attacks!\n\n## 2. Key Stretching (Work Factor / Cost)\nAdaptive algorithms deliberately introduce computational delays (e.g. running 20,000 internal rounds), making brute force computationally prohibitive for attackers."
+        },
+        {
+            "id": "ws_a_4",
+            "type": "content",
+            "title": "Modern Standards: Argon2 & Bcrypt",
+            "content": "# The Gold Standards: Argon2id & Bcrypt 🏆\n\n## 1. Argon2id (Winner of the Password Hashing Competition)\n\n**Argon2id** is the official state-of-the-art recommendation by OWASP. It is **memory-hard**, requiring substantial RAM to calculate, rendering GPU and ASIC hardware brute-force attacks useless.\n\n## 2. Bcrypt\n\nA battle-tested adaptive hashing algorithm based on the Blowfish cipher. Supported by every major programming language.\n\n```javascript_not\nconst bcrypt = require('bcrypt');\n\n// Hash password with cost factor 12\nconst saltRounds = 12;\nconst hashedPassword = await bcrypt.hash(rawPassword, saltRounds);\n\n// Verify password on login\nconst isMatch = await bcrypt.compare(candidatePassword, hashedPassword);\n```"
+        },
+        {
+            "id": "ws_a_quiz_1",
+            "type": "quiz",
+            "title": "Password Hashing Check",
+            "content": "Test your knowledge of password cryptography!",
+            "quizQuestion": "Why is SHA-256 considered unsuitable for storing user passwords?",
+            "quizOptions": [
+                "SHA-256 has been mathematically broken and produces collisions",
+                "SHA-256 is designed to be extremely fast, enabling attackers to test billions of guesses per second with GPUs",
+                "SHA-256 requires too much RAM to compute",
+                "SHA-256 can only hash numeric strings"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ws_a_6",
+            "type": "content",
+            "title": "Session Hijacking Attacks",
+            "content": "# Session Hijacking 🏴‍☠️\n\n**Session Hijacking** occurs when an attacker obtains a victim's active session token (session ID) and impersonates them.\n\n## Attack Vectors for Session Theft:\n\n1. **Packet Sniffing**: Transmitting session cookies over unencrypted HTTP on public Wi-Fi.\n2. **Cross-Site Scripting (XSS)**: Reading session cookies via `document.cookie`.\n3. **URL Session Leaks**: Transmitting session IDs in query parameters (`site.com?sessionId=xyz123`) which appear in server logs and referrer headers.\n4. **Malware & Physical Access**: Reading session storage directly from the user's computer."
+        },
+        {
+            "id": "ws_a_7",
+            "type": "content",
+            "title": "Session Fixation Attacks",
+            "content": "# Session Fixation 🪤\n\nIn a **Session Fixation** attack, the attacker sets a predetermined session ID in the victim's browser *before* the victim logs in.\n\n## The Attack Flow\n\n1. Attacker obtains an anonymous session ID (`SID_999`) from `bank.com`.\n2. Attacker sends a phishing link to victim: `https://bank.com/?sessionId=SID_999`.\n3. The victim clicks the link and logs into their account.\n4. **The Vulnerability**: If the server fails to regenerate the session ID upon login, the victim's authenticated state is now bound to `SID_999`!\n5. The attacker opens their browser with `SID_999` and enjoys full access to the victim's account!\n\n## The Defense:\n\n> ⚡ **Golden Rule:** ALWAYS regenerate the session ID immediately upon successful login!"
+        },
+        {
+            "id": "ws_a_8",
+            "type": "content",
+            "title": "Hardening Session Cookies",
+            "content": "# The Three Cookie Security Flags 🍪🛡️\n\nAlways configure authentication cookies with the holy trinity of security flags:\n\n```http_not\nSet-Cookie: sessionId=a7c8d9e0f1; Path=/; Secure; HttpOnly; SameSite=Strict\n```\n\n## 1. `Secure` Flag\n\nInstructs the browser that the cookie must **ONLY be transmitted over encrypted HTTPS**. It will never be sent over unencrypted HTTP.\n\n## 2. `HttpOnly` Flag\n\nForbids client-side JavaScript from reading `document.cookie`. Protects session cookies from being stolen during an XSS attack!\n\n## 3. `SameSite=Strict` (or `Lax`)\n\nPrevents the cookie from being sent in cross-site requests, neutralizing CSRF attacks."
+        },
+        {
+            "id": "ws_a_quiz_2",
+            "type": "quiz",
+            "title": "Session Fixation Defense Quiz",
+            "content": "Test your knowledge of session vulnerabilities!",
+            "quizQuestion": "What is the primary architectural defense against Session Fixation attacks?",
+            "quizOptions": [
+                "Encrypting the user's password with AES-256",
+                "Regenerating the session ID immediately upon successful user login",
+                "Increasing the session timeout to 30 days",
+                "Using local storage instead of cookies"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ws_a_10",
+            "type": "content",
+            "title": "JSON Web Tokens (JWT) Architecture",
+            "content": "# JSON Web Tokens (JWT) Architecture 🎫\n\nA **JWT** is a compact, URL-safe means of representing claims to be transferred between two parties.\n\nA JWT consists of three base64url-encoded parts separated by dots (`.`):\n\n```\neyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTYiLCJuYW1lIjoiQWxpY2UiLCJyb2xlIjoiYWRtaW4ifQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\n└────────────────┬────────────────┘.└─────────────────────────┬────────────────────────┘.└─────────────────────┬──────────────────┘\n             Header                                         Payload                                        Signature\n```\n\n1. **Header**: Contains metadata (algorithm `alg: HS256`, token type `typ: JWT`).\n2. **Payload**: Contains claims (user ID, expiration `exp`, roles).\n3. **Signature**: Cryptographic signature validating that the token hasn't been altered."
+        },
+        {
+            "id": "ws_a_11",
+            "type": "content",
+            "title": "JWT Security Pitfall: The alg: none Exploit",
+            "content": "# Critical JWT Vulnerability: The `alg: none` Flaw 💥\n\nThe JWT specification includes an algorithm option called `none` (intended for unauthenticated debug use).\n\n## How Attackers Exploit It:\n\n1. Attacker receives a regular user token: `role: \"user\"`.\n2. Attacker decodes the token and changes the payload to `role: \"admin\"`.\n3. Attacker modifies the header to `\"alg\": \"none\"` and strips the signature part.\n4. If the server library naively checks the token using the algorithm specified in the header without enforcing strict server expectations, it accepts the forged token as valid admin credentials!\n\n## Defense:\n\n> ⚠️ Explicitly configure your JWT verifier to **reject the `none` algorithm** and enforce expected algorithms (e.g. `algorithms: ['HS256']`)."
+        },
+        {
+            "id": "ws_a_12",
+            "type": "content",
+            "title": "Where to Store JWTs: Cookies vs LocalStorage",
+            "content": "# Where Should You Store JWTs? ⚖️\n\n## LocalStorage (Danger Zone!) ❌\n\n- Accessible by ANY JavaScript running on the page via `localStorage.getItem('token')`.\n- A single minor XSS vulnerability allows complete account takeover!\n\n## HttpOnly, Secure Cookie (Recommended) ✅\n\n- Completely invisible to JavaScript.\n- Immune to XSS cookie theft.\n- When paired with `SameSite=Strict` and custom headers, immune to CSRF as well.\n\n> 💡 **Conclusion:** For browser clients, always store authentication tokens in `HttpOnly; Secure; SameSite=Strict` cookies!"
+        },
+        {
+            "id": "ws_a_13",
+            "type": "content",
+            "title": "OAuth 2.0 & OpenID Connect (OIDC)",
+            "content": "# OAuth 2.0 & OpenID Connect (OIDC) 🌐\n\n## 1. OAuth 2.0 (Delegated Authorization)\n\nOAuth 2.0 lets users grant third-party applications limited access to their resources without sharing passwords.\n\n- *Example*: \"Log in with Google\" or allowing Canva to access your Google Drive photos.\n- *Key Artifact*: **Access Token**\n\n## 2. OpenID Connect (OIDC - Identity Layer)\n\nOAuth 2.0 is an authorization protocol, not an authentication protocol. **OIDC** builds on top of OAuth 2.0 to provide standardized identity verification.\n\n- *Key Artifact*: **ID Token** (a signed JWT containing verified user profile data)."
+        },
+        {
+            "id": "ws_a_14",
+            "type": "content",
+            "title": "OAuth 2.0 Authorization Code Flow with PKCE",
+            "content": "# The Gold Standard: Auth Code Flow with PKCE 🛡️\n\nFor Single Page Apps and mobile clients that cannot securely hold a secret key, **PKCE** (Proof Key for Code Exchange) is mandatory.\n\n## Step-by-Step Flow:\n\n1. Client creates a random `code_verifier` and computes its cryptographic hash (`code_challenge`).\n2. Client redirects user to identity provider passing `code_challenge`.\n3. User authenticates and grants consent.\n4. Identity provider redirects back to client with an `authorization_code`.\n5. Client exchanges `authorization_code` + original plain `code_verifier` for tokens.\n6. Identity provider verifies the hash matches, preventing interception attacks!"
+        },
+        {
+            "id": "ws_a_15",
+            "type": "content",
+            "title": "Multi-Factor Authentication (MFA) & TOTP",
+            "content": "# Multi-Factor Authentication (MFA) 📱\n\nMFA requires two or more independent factors of authentication:\n\n1. **Something you know** (Password, PIN)\n2. **Something you have** (Smartphone authenticator, YubiKey FIDO hardware token)\n3. **Something you are** (Fingerprint, FaceID biometrics)\n\n## Time-Based One-Time Password (TOTP)\n\nUsed by Google Authenticator and 1Password (RFC 6238):\n\n$$\\text{OTP} = \\text{Truncate}(\\text{HMAC-SHA1}(\\text{SharedSecret}, \\lfloor \\text{CurrentUnixTime} / 30 \\rfloor))$$\n\nEvery 30 seconds, a fresh 6-digit code is calculated based on current time."
+        },
+        {
+            "id": "ws_a_16",
+            "type": "content",
+            "title": "Account Lockout & Rate Limiting",
+            "content": "# Thwarting Brute-Force & Credential Stuffing 🛑\n\nAttackers use automated bots to test millions of breached username/password combinations (**credential stuffing**).\n\n## Defensive Controls:\n\n1. **IP Rate Limiting**: Allow maximum 5 failed attempts per minute per IP.\n2. **Progressive Delays**: Exponentially delay responses after repeated failures (1s, 2s, 4s, 8s).\n3. **Account Lockout**: Temporarily freeze an account for 15 minutes after 5 failed attempts.\n4. **Generic Error Messages**: Always display *\"Invalid email or password\"* (never reveal whether the email exists!)."
+        },
+        {
+            "id": "ws_a_17",
+            "type": "content",
+            "title": "Real-World Architecture: Modern Auth Microservice",
+            "content": "# Real-World Example: Scalable Auth Architecture 🏛️\n\n```http_not\nClient Login Request (HTTPS POST /api/login)\n     │\n     ▼\nAuth Service\n     │  (1) Rate Limit Check (Redis)\n     │  (2) Fetch User Record & Argon2id Hash\n     │  (3) Verify Password: argon2.verify(hash, password)\n     │  (4) Verify TOTP 2FA Token (if enabled)\n     ▼\nSession Generator\n     │  (5) Invalidate old session ID / Issue new session ID\n     │  (6) Set Secure Cookie:\n     ▼\nSet-Cookie: session_token=...; Path=/; Secure; HttpOnly; SameSite=Strict; Max-Age=86400\n```"
+        },
+        {
+            "id": "ws_a_quiz_3",
+            "type": "quiz",
+            "title": "MFA & Token Quiz",
+            "content": "Test your knowledge of authentication protocols!",
+            "quizQuestion": "What mathematical component changes every 30 seconds in the TOTP (Time-based One-Time Password) algorithm?",
+            "quizOptions": [
+                "The server's master encryption key",
+                "The current Unix timestamp divided by 30",
+                "The user's account password hash",
+                "The user's smartphone IMEI number"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ws_a_19",
+            "type": "content",
+            "title": "Authentication Checklist",
+            "content": "# Authentication Security Checklist 📋\n\n- [x] **Hash with Argon2id or Bcrypt**: Use high cost factor (saltRounds >= 12).\n- [x] **Regenerate session ID on login**: Eliminates session fixation.\n- [x] **Use `HttpOnly; Secure; SameSite` cookies**: Keep tokens away from `localStorage`.\n- [x] **Enforce rate limiting on auth endpoints**: Block automated credential stuffing.\n- [x] **Support Multi-Factor Authentication**: Offer TOTP or WebAuthn/Passkeys."
+        },
+        {
+            "id": "ws_a_20",
+            "type": "content",
+            "title": "Summary: Auth & Session Management",
+            "content": "# Auth & Session Management: Summary 📋\n\n## Key Takeaways\n- **Argon2id & Bcrypt**: Essential memory-hard, salted password hashing.\n- **Session Regeneration**: Fixation occurs when session IDs persist across auth boundaries.\n- **Cookie Hardening**: `HttpOnly` blocks XSS; `Secure` enforces HTTPS; `SameSite` stops CSRF.\n- **JWT Security**: Store in cookies, enforce explicit algorithms, reject `alg: none`.\n- **OAuth & OIDC**: Standardized delegated authorization and identity layers.\n- **MFA**: Adds mandatory secondary verification layer.\n\nNext: Master Injection Attacks (SQLi, Command Injection, and Parameterized Queries)! 💉"
+        },
+        {
+            "id": "ws_a_21",
+            "type": "content",
+            "title": "Next Steps: Injection Attacks",
+            "content": "# Ahead: Injection Attacks 💉🛡️\n\nIn our final Web Security module, we examine the most catastrophic class of server vulnerabilities: **Injection**.\n\n## Topics Ahead:\n- **SQL Injection (SQLi)**: In-band, Blind, and Out-of-band\n- **OS Command Injection**: Remote code execution\n- **NoSQL & LDAP Injection**\n- **Primary Defense**: Prepared statements & Parameterized queries\n\nLet's conquer injection defenses! 🚀"
+        }
+    ]
+}

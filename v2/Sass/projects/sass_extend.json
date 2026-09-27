@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Using the @extend Directive",
+    "ques": "Explain the mechanics of the **`@extend`** directive in Sass. Write an example showing an error button sharing base button styles via `@extend`.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": ".button-base {\n  padding: 0.5rem 1rem;\n  font-weight: 600;\n  border-radius: 4px;\n  cursor: pointer;\n  border: none;\n}\n\n.button-danger {\n  @extend .button-base;\n  background-color: #ef4444;\n  color: #ffffff;\n}"
+    },
+    "explanation": "`@extend` tells Sass that one selector should inherit the styles of another. In the compiled CSS, Sass groups selectors (`.button-base, .button-danger { ... }`) to avoid repeating property declarations."
+  },
+  {
+    "title": "Placeholder Selectors (%)",
+    "ques": "Explain why **Placeholder Selectors (`%`)** are preferable to concrete class selectors when extending styles. Write an example using `%card-layout`.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "// Placeholder selector: NOT emitted into final compiled CSS on its own!\n%card-layout {\n  background-color: #ffffff;\n  border-radius: 8px;\n  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);\n  padding: 1.5rem;\n}\n\n.profile-widget {\n  @extend %card-layout;\n}\n\n.analytics-widget {\n  @extend %card-layout;\n}"
+    },
+    "explanation": "Placeholder selectors (`%`) only compile to CSS when extended. Unused placeholders produce zero CSS output, preventing dead code bloat."
+  },
+  {
+    "title": "Chaining Multiple Extends",
+    "ques": "Demonstrate how a single selector can inherit styles from **multiple extended placeholders** simultaneously.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "%bordered-box {\n  border: 1px solid #e2e8f0;\n}\n\n%rounded-pill {\n  border-radius: 9999px;\n}\n\n%flex-row {\n  display: flex;\n  align-items: center;\n}\n\n.interactive-tag {\n  @extend %bordered-box;\n  @extend %rounded-pill;\n  @extend %flex-row;\n  \n  padding: 0.25rem 0.75rem;\n  background-color: #f8fafc;\n}"
+    },
+    "explanation": "A selector can extend multiple placeholders or classes, composing different visual aspects (borders, shapes, layout) cleanly."
+  },
+  {
+    "title": "When to Use Extend vs Mixin",
+    "ques": "Provide architectural guidelines for deciding between **`@extend`** and **`@mixin`**.",
+    "answer": {
+      "type": "text",
+      "content": "### Decision Matrix:\n* **Use `@mixin` when:**\n  * Styles require dynamic arguments (e.g., custom colors, font sizes, calculations).\n  * Styles are used within distinct `@media` queries.\n  * You are writing reusable libraries where relationships between selectors should not be tightly coupled.\n* **Use `@extend` (specifically with `%placeholders`) when:**\n  * A static group of properties is shared across many classes without varying parameters.\n  * You want to group selectors in the compiled CSS (`.btn-a, .btn-b { ... }`) to minimize raw uncompressed CSS file size."
+    },
+    "explanation": "Mixins duplicate CSS declarations wherever included, but offer parametric flexibility. Extends group selectors without parameters, which can cause bloat if misused across media queries."
+  },
+  {
+    "title": "Limitations and Pitfalls of @extend",
+    "ques": "Describe the major limitations of `@extend`, specifically its inability to cross `@media` query boundaries.",
+    "answer": {
+      "type": "code",
+      "lang": "scss",
+      "content": "%pill-style {\n  border-radius: 50px;\n}\n\n// INVALID / FORBIDDEN IN SASS:\n@media (min-width: 768px) {\n  .desktop-button {\n    // Compile Error: You may not @extend an outer selector from within @media!\n    // @extend %pill-style;\n  }\n}\n\n// Workaround: Use a mixin instead when media query boundaries are involved\n@mixin pill-mixin {\n  border-radius: 50px;\n}\n\n@media (min-width: 768px) {\n  .desktop-button {\n    @include pill-mixin; // Works reliably!\n  }\n}"
+    },
+    "explanation": "Sass forbids extending selectors defined outside a `@media` block from within it, because CSS semantics do not support expressing this relationship without generating invalid selector lists."
+  }
+]

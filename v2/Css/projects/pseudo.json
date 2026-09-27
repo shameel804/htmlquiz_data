@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Interactive Hover and State Pseudo-Classes",
+    "ques": "Explain the role of user-action pseudo-classes: **`:hover`**, **`:focus-visible`**, and **`:active`**. Write an accessible button with interactive states.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".action-button {\n  padding: 10px 20px;\n  background-color: #2563eb;\n  color: #ffffff;\n  border: none;\n  border-radius: 6px;\n  cursor: pointer;\n  transition: background-color 0.2s ease, transform 0.1s ease;\n}\n\n/* Triggered when cursor enters button bounds */\n.action-button:hover {\n  background-color: #1d4ed8;\n}\n\n/* Accessible keyboard-navigation focus ring */\n.action-button:focus-visible {\n  outline: 3px solid #93c5fd;\n  outline-offset: 2px;\n}\n\n/* Triggered during physical click/depression */\n.action-button:active {\n  transform: scale(0.98);\n}"
+    },
+    "explanation": "Pseudo-classes (`:`) style elements based on dynamic user interaction or state without requiring JavaScript class toggles."
+  },
+  {
+    "title": "Structural Pseudo-Classes: :first-child and :nth-child",
+    "ques": "Compare **`:first-child`**, **`:last-child`**, and formulaic **`:nth-child(even)`** in table row zebra-striping.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* First table row gets prominent top border */\ntbody tr:first-child {\n  border-top: 3px solid #0f172a;\n}\n\n/* Last table row strips bottom border */\ntbody tr:last-child {\n  border-bottom: none;\n}\n\n/* Zebra striping alternating even rows */\ntbody tr:nth-child(even) {\n  background-color: #f8fafc;\n}\n\n/* Highlights every 3rd list item */\nul li:nth-child(3n) {\n  font-weight: 700;\n  color: #4f46e5;\n}"
+    },
+    "explanation": "Structural pseudo-classes select elements based on their position within sibling elements in the DOM tree."
+  },
+  {
+    "title": "Generating Content with ::before and ::after",
+    "ques": "Explain the difference between a **Pseudo-Class (`:`)** and a **Pseudo-Element (`::`)**. Demonstrate how **`::before`** and **`::after`** add decorative icons and badges using the `content` property.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* \n * Difference:\n * - Pseudo-class (:hover) targets an entire element in a specific state.\n * - Pseudo-element (::before) creates an abstract virtual element inside the target.\n */\n\n.external-link {\n  position: relative;\n  color: #2563eb;\n  text-decoration: none;\n}\n\n/* Appends an external link indicator arrow after the link text */\n.external-link::after {\n  content: \" \";\n  font-size: 0.85em;\n  color: #64748b;\n}\n\n/* Inserts an animated status indicator dot before a username */\n.user-online::before {\n  content: \"\";\n  display: inline-block;\n  width: 8px;\n  height: 8px;\n  margin-right: 8px;\n  background-color: #10b981;\n  border-radius: 50%;\n}"
+    },
+    "explanation": "`::before` and `::after` insert cosmetic content before or after an element's children. They require the `content` property to render and avoid cluttering HTML with purely decorative tags."
+  },
+  {
+    "title": "Advanced Hover Tooltip via ::after Pseudo-Element",
+    "ques": "Build a CSS-only tooltip component using the **`attr()`** function and the **`::after`** pseudo-element on hover.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* Tooltip container */\n.has-tooltip {\n  position: relative;\n  display: inline-block;\n  cursor: help;\n}\n\n/* Hidden by default */\n.has-tooltip::after {\n  /* Reads text directly from custom data-tooltip HTML attribute */\n  content: attr(data-tooltip);\n  position: absolute;\n  bottom: 125%;\n  left: 50%;\n  transform: translateX(-50%);\n  \n  padding: 6px 12px;\n  background-color: #0f172a;\n  color: #ffffff;\n  font-size: 0.75rem;\n  white-space: nowrap;\n  border-radius: 4px;\n  pointer-events: none;\n  \n  opacity: 0;\n  transition: opacity 0.2s ease, transform 0.2s ease;\n}\n\n/* Revealed smoothly on hover */\n.has-tooltip:hover::after {\n  opacity: 1;\n  transform: translateX(-50%) translateY(-4px);\n}"
+    },
+    "explanation": "Combining `attr(data-tooltip)` with `::after` and `:hover` creates pure-CSS tooltips that pull copy straight from data attributes without any JavaScript."
+  }
+]

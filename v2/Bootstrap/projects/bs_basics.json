@@ -1,0 +1,61 @@
+[
+  {
+    "title": "Containers: Fixed vs Fluid",
+    "ques": "Explain the difference between **`.container`** and **`.container-fluid`** in Bootstrap 5. Provide an HTML code sample demonstrating both.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- 1. Fixed responsive container: Snaps to max-widths at defined breakpoints -->\n<div class=\"container bg-light p-4 mb-4 border rounded\">\n  <h2>Fixed Responsive Container</h2>\n  <p>Constrains content width progressively as the browser window resizes.</p>\n</div>\n\n<!-- 2. Fluid container: Spans 100% of viewport width across all device sizes -->\n<div class=\"container-fluid bg-primary text-white p-4\">\n  <h2>Full-Width Fluid Container</h2>\n  <p>Always spans the entire horizontal width of the viewport from edge to edge.</p>\n</div>"
+    },
+    "explanation": "`.container` centers content with responsive max-widths based on breakpoints (`sm`, `md`, etc.), whereas `.container-fluid` spans 100% of the viewport width across all devices."
+  },
+  {
+    "title": "Grid Fundamentals: Rows and Columns",
+    "ques": "Explain how the 12-column grid system works with **`.row`** and **`.col`**. Write an HTML layout with three equal-width columns and one layout with unequal columns totaling 12 units.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"container\">\n  <!-- Three equal columns (auto-layout) -->\n  <div class=\"row mb-4\">\n    <div class=\"col p-3 bg-secondary text-white border\">Column 1</div>\n    <div class=\"col p-3 bg-secondary text-white border\">Column 2</div>\n    <div class=\"col p-3 bg-secondary text-white border\">Column 3</div>\n  </div>\n\n  <!-- Explicit 12-column split: 8 units and 4 units -->\n  <div class=\"row\">\n    <div class=\"col-8 p-3 bg-info text-dark border\">Main Content (8 cols)</div>\n    <div class=\"col-4 p-3 bg-warning text-dark border\">Sidebar (4 cols)</div>\n  </div>\n</div>"
+    },
+    "explanation": "Bootstrap grids are built around a 12-column flexbox structure. `.row` provides negative margins to counteract column padding, and child `.col-*` classes specify width out of 12."
+  },
+  {
+    "title": "Breakpoint Architecture",
+    "ques": "List Bootstrap 5's **six responsive breakpoints** (`xs`, `sm`, `md`, `lg`, `xl`, `xxl`) and their pixel boundaries.",
+    "answer": {
+      "type": "text",
+      "content": "### Bootstrap 5 Breakpoint Reference:\n1. **`xs` (Extra Small):** `< 576px` (Default breakpoint, no infix required, e.g., `.col-12`)\n2. **`sm` (Small):** `>= 576px` (e.g., `.col-sm-6`)\n3. **`md` (Medium):** `>= 768px` (Tablets; e.g., `.col-md-4`)\n4. **`lg` (Large):** `>= 992px` (Desktops; e.g., `.col-lg-3`)\n5. **`xl` (Extra Large):** `>= 1200px` (High-res screens; e.g., `.col-xl-2`)\n6. **`xxl` (Extra Extra Large):** `>= 1400px` (Ultra-wide monitors; e.g., `.col-xxl-2`)"
+    },
+    "explanation": "Bootstrap breakpoints use `min-width` media queries, ensuring styles apply progressively from smaller screens to larger displays."
+  },
+  {
+    "title": "Responsive Grid Column Stacking",
+    "ques": "Write an HTML layout where four cards stack vertically (`12` cols) on mobile, split into two columns (`6` cols) on tablets, and display as four columns (`3` cols) on desktops.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"container my-4\">\n  <div class=\"row\">\n    <div class=\"col-12 col-md-6 col-lg-3 mb-3\">\n      <div class=\"card p-3 shadow-sm\">Card 1</div>\n    </div>\n    <div class=\"col-12 col-md-6 col-lg-3 mb-3\">\n      <div class=\"card p-3 shadow-sm\">Card 2</div>\n    </div>\n    <div class=\"col-12 col-md-6 col-lg-3 mb-3\">\n      <div class=\"card p-3 shadow-sm\">Card 3</div>\n    </div>\n    <div class=\"col-12 col-md-6 col-lg-3 mb-3\">\n      <div class=\"card p-3 shadow-sm\">Card 4</div>\n    </div>\n  </div>\n</div>"
+    },
+    "explanation": "Combining breakpoint infixes (`col-12 col-md-6 col-lg-3`) creates fluid layouts that adapt dynamically to varying screen resolutions."
+  },
+  {
+    "title": "Controlling Spacing with Gutters (gx, gy, g)",
+    "ques": "Explain how **Gutters** control spacing between grid columns and rows. Write an example demonstrating horizontal (`gx-4`) and vertical (`gy-3`) gutters.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"container\">\n  <!-- gx-4 controls horizontal spacing; gy-3 controls vertical row spacing -->\n  <div class=\"row gx-4 gy-3\">\n    <div class=\"col-6\">\n      <div class=\"p-3 border bg-light\">Item A</div>\n    </div>\n    <div class=\"col-6\">\n      <div class=\"p-3 border bg-light\">Item B</div>\n    </div>\n    <div class=\"col-6\">\n      <div class=\"p-3 border bg-light\">Item C</div>\n    </div>\n    <div class=\"col-6\">\n      <div class=\"p-3 border bg-light\">Item D</div>\n    </div>\n  </div>\n</div>"
+    },
+    "explanation": "Gutters use padding on columns and negative margins on rows to distribute space without distorting column width calculations."
+  },
+  {
+    "title": "Nesting Columns Inside Grid Systems",
+    "ques": "Demonstrate **column nesting** in Bootstrap by creating a parent row with an 8-column content area that contains an internal 2-column child row.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"container\">\n  <div class=\"row\">\n    <!-- Primary column (8 units wide) -->\n    <div class=\"col-md-8 border p-3\">\n      <h3>Primary Article Section</h3>\n      <p>This column contains nested grid columns below:</p>\n      \n      <!-- Nested Row: Creates a fresh 12-unit context within the parent 8 cols -->\n      <div class=\"row\">\n        <div class=\"col-sm-6 p-2 bg-info-subtle border\">Nested Column 1</div>\n        <div class=\"col-sm-6 p-2 bg-info-subtle border\">Nested Column 2</div>\n      </div>\n    </div>\n    \n    <!-- Sidebar column (4 units wide) -->\n    <div class=\"col-md-4 border p-3 bg-light\">\n      <h4>Sidebar Widget</h4>\n    </div>\n  </div>\n</div>"
+    },
+    "explanation": "Nesting a `.row` inside an existing `.col-*` establishes a new 12-column coordinate system relative to that parent column's width."
+  }
+]

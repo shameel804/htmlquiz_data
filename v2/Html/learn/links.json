@@ -1,0 +1,159 @@
+{
+    "id": "learn_html_links",
+    "topicId": "links",
+    "topicTitle": "HTML Links & Nav",
+    "description": "Learn anchor tags, target security, fragment jumps, and navigation menus.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "html_links_1",
+            "type": "content",
+            "title": "Welcome to HTML Links & Navigation",
+            "content": "# Links & Navigation 🔗\n\nHyperlinks are the core defining feature of the World Wide Web, allowing documents to connect across servers, domains, and pages.\n\n## What you'll master:\n- ⚓ **The Anchor Tag (`<a>`)** - Anatomy and the `href` attribute\n- 🌐 **Absolute vs Relative URLs** - Root-relative, folder paths, and external destinations\n- 🎯 **Link Targets & Security** - `target=\"_blank\"` with `rel=\"noopener noreferrer\"`\n- 📍 **Fragment Identifiers** - Internal page jump links (`#id`)\n- ✉️ **Protocol Links** - `mailto:`, `tel:`, and file downloads\n- 🧭 **Accessible Navigation Menus** - Building responsive navbars and breadcrumbs"
+        },
+        {
+            "id": "html_links_2",
+            "type": "content",
+            "title": "The Anchor Element (<a>)",
+            "content": "# The Anchor Element (`<a>`) ⚓\n\nThe `<a>` tag creates a hyperlink to another web page, file, email address, or internal section.\n\n```html_not\n<a href=\"https://example.com\">Visit Example Website</a>\n```\n\n## How It Works:\n- `href` (**H**ypertext **Ref**erence): Specifies the target destination URL.\n- The clickable anchor text goes between opening and closing tags.\n- Without an `href` attribute, the `<a>` tag acts merely as a placeholder for a link."
+        },
+        {
+            "id": "html_links_3",
+            "type": "content",
+            "title": "Absolute vs Relative URLs",
+            "content": "# Absolute vs Relative URLs 🌐\n\nUnderstanding URLs is vital for correct site linking:\n\n## 1. Absolute URLs:\nFull address including protocol and domain name. Required when linking to external websites:\n```html_not\n<a href=\"https://github.com/shameel804\">Visit GitHub Profile</a>\n```\n\n## 2. Relative URLs:\nPath relative to the current file location on the same website:\n```html_not\n<!-- Same directory -->\n<a href=\"about.html\">About Us</a>\n\n<!-- Subdirectory -->\n<a href=\"blog/article-1.html\">Read Article</a>\n\n<!-- Up one level to parent folder -->\n<a href=\"../index.html\">Back to Home</a>\n\n<!-- Root-relative (starts from site domain root) -->\n<a href=\"/pricing\">Pricing Plans</a>\n```"
+        },
+        {
+            "id": "html_links_4",
+            "type": "content",
+            "title": "Link Targets: Opening in New Tabs",
+            "content": "# The `target` Attribute & Security 🎯\n\nThe `target` attribute specifies where to open the linked document:\n\n| Target Value | Behavior |\n| :--- | :--- |\n| `_self` | Default. Opens link in the same browser window/tab |\n| `_blank` | Opens link in a brand new tab or window |\n| `_parent` | Opens link in the parent frame |\n| `_top` | Opens link in the full body of the current window |\n\n```html_not\n<a href=\"https://google.com\" target=\"_blank\" rel=\"noopener noreferrer\">\n  Search on Google (Opens New Tab)\n</a>\n```\n\n> 🔒 **Critical Security Rule:** Whenever you use `target=\"_blank\"`, you **must** add `rel=\"noopener noreferrer\"` to prevent the new page from accessing `window.opener` and hijacking your site!"
+        },
+        {
+            "id": "html_links_quiz_1",
+            "type": "quiz",
+            "title": "Link Security Quiz",
+            "content": "Test your knowledge of link targets.",
+            "quizQuestion": "Which rel attribute values must be added to target='_blank' links for security?",
+            "quizOptions": [
+                "rel='nofollow'",
+                "rel='noopener noreferrer'",
+                "rel='external'",
+                "rel='secure'"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_links_5",
+            "type": "content",
+            "title": "Internal Page Jumps (Fragment Identifiers)",
+            "content": "# Internal Page Jumps (`#id`) 📍\n\nHyperlinks can navigate directly to a specific section on the same page using **fragment identifiers**.\n\n```html_not\n<!-- 1. The Navigation Link -->\n<a href=\"#faq-section\">Jump to FAQ</a>\n\n<!-- Many paragraphs of content in between... -->\n\n<!-- 2. The Target Element with matching id -->\n<section id=\"faq-section\">\n  <h2>Frequently Asked Questions</h2>\n  <p>Here are the answers...</p>\n</section>\n```\n\nWhen clicked, the browser automatically scrolls smoothly to the element with `id=\"faq-section\"`."
+        },
+        {
+            "id": "html_links_6",
+            "type": "content",
+            "title": "Smooth Scrolling with CSS",
+            "content": "# Smooth Scrolling with CSS 📜\n\nBy default, fragment jump links snap instantly to the target element. You can enable smooth scrolling with one line of CSS:\n\n```css_not\nhtml {\n  scroll-behavior: smooth;\n}\n\n/* Offset for fixed sticky headers so content isn't hidden under navbar */\nsection {\n  scroll-margin-top: 80px;\n}\n```\n\n```html_not\n<a href=\"#top\">Back to Top</a>\n```"
+        },
+        {
+            "id": "html_links_7",
+            "type": "content",
+            "title": "Special Protocol Links: Email & Phone",
+            "content": "# Email & Telephone Links ✉️📞\n\nHTML links can launch the user's default email client or phone dialer.\n\n## 1. Email Links (`mailto:`):\n```html_not\n<a href=\"mailto:support@example.com?subject=Help%20Request\">\n  Contact Support\n</a>\n```\n\n## 2. Phone Call Links (`tel:`):\nOn mobile devices, clicking a `tel:` link opens the phone dialer:\n```html_not\n<a href=\"tel:+15551234567\">Call Us: (555) 123-4567</a>\n```\n\n## 3. SMS Links (`sms:`):\n```html_not\n<a href=\"sms:+15551234567?body=Hello\">Send SMS</a>\n```"
+        },
+        {
+            "id": "html_links_8",
+            "type": "content",
+            "title": "Download Links",
+            "content": "# The `download` Attribute 💾\n\nThe `download` attribute instructs the browser to download the linked file instead of navigating to it.\n\n```html_not\n<!-- Downloads file with original name -->\n<a href=\"files/cheat-sheet.pdf\" download>\n  Download PDF Cheat Sheet\n</a>\n\n<!-- Downloads file and renames it to 'MyRoadmap.pdf' -->\n<a href=\"files/temp_7294.pdf\" download=\"MyRoadmap.pdf\">\n  Download Roadmap\n</a>\n```\n\n> 💡 **Browser Rule:** The `download` attribute only works for same-origin URLs or files served with appropriate CORS headers."
+        },
+        {
+            "id": "html_links_quiz_2",
+            "type": "quiz",
+            "title": "Protocol Links Quiz",
+            "content": "Test your knowledge of protocol links.",
+            "quizQuestion": "Which prefix in the href attribute allows launching the user's telephone dialer on mobile devices?",
+            "quizOptions": [
+                "phone:",
+                "call:",
+                "tel:",
+                "dial:"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "html_links_9",
+            "type": "content",
+            "title": "Link States & Styling",
+            "content": "# Link Pseudo-Classes & States 🎨\n\nCSS provides 5 interactive states for styling hyperlinks:\n\n```css_not\n/* Unvisited link */\na:link {\n  color: #2563eb;\n  text-decoration: underline;\n}\n\n/* Previously visited link */\na:visited {\n  color: #7c3aed;\n}\n\n/* Mouse hover state */\na:hover {\n  color: #1d4ed8;\n  text-decoration: none;\n}\n\n/* Clicked active state (mouse down) */\na:active {\n  color: #b91c1c;\n}\n\n/* Keyboard focus state (crucial for accessibility!) */\na:focus-visible {\n  outline: 2px solid #2563eb;\n  outline-offset: 4px;\n}\n```\n\n> 🎯 **Mnemonic Rule:** Remember **LVHA** (LoVe HAte): `:link`, `:visited`, `:hover`, `:active` must be declared in this exact order in CSS!"
+        },
+        {
+            "id": "html_links_10",
+            "type": "content",
+            "title": "Building Navigation Menus with <nav>",
+            "content": "# Navigation Menus with `<nav>` 🧭\n\nThe `<nav>` element defines major blocks of navigation links.\n\n```html_not\n<header>\n  <nav aria-label=\"Main Navigation\">\n    <ul class=\"nav-list\">\n      <li><a href=\"/\" aria-current=\"page\">Home</a></li>\n      <li><a href=\"/courses\">Courses</a></li>\n      <li><a href=\"/quizzes\">Quizzes</a></li>\n      <li><a href=\"/pricing\">Pricing</a></li>\n    </ul>\n  </nav>\n</header>\n```\n\n- `aria-label=\"Main Navigation\"`: Distinguishes this menu from footer or sidebar navigation for screen readers.\n- `aria-current=\"page\"`: Indicates the currently active page."
+        },
+        {
+            "id": "html_links_11",
+            "type": "content",
+            "title": "Breadcrumb Navigation",
+            "content": "# Breadcrumb Navigation 🍞\n\nBreadcrumbs display the current page's location within the site hierarchy:\n\n```html_not\n<nav aria-label=\"Breadcrumbs\">\n  <ol class=\"breadcrumbs\">\n    <li><a href=\"/\">Home</a></li>\n    <li><a href=\"/courses\">Courses</a></li>\n    <li><a href=\"/courses/html\">HTML</a></li>\n    <li aria-current=\"page\">Links & Navigation</li>\n  </ol>\n</nav>\n```\n\n```css_not\n.breadcrumbs {\n  display: flex;\n  list-style: none;\n  gap: 8px;\n}\n\n.breadcrumbs li:not(:last-child)::after {\n  content: \" /\";\n  color: #94a3b8;\n}\n```"
+        },
+        {
+            "id": "html_links_12",
+            "type": "content",
+            "title": "Accessible Link Text Best Practices",
+            "content": "# Accessible Link Text Best Practices ♿\n\nScreen reader users frequently navigate pages by listening to a generated list of all links on the page.\n\n## Bad Link Text ❌:\n- *\"Click here\"*\n- *\"Read more\"*\n- *\"https://example.com/item/4019284\"*\n\n## Good Link Text ✅:\n- *\"Download the 2026 Web Development Roadmap (PDF)\"*\n- *\"Read our complete guide to CSS Flexbox\"*\n- *\"View Sarah Connor's GitHub profile\"*\n\n> 💡 **Self-Contained Rule:** Link text should always make sense completely out of context!"
+        },
+        {
+            "id": "html_links_13",
+            "type": "content",
+            "title": "Skip to Content Links",
+            "content": "# \"Skip to Main Content\" Links ⏭️\n\nA skip link is a hidden link placed at the very top of the page that allows keyboard users to bypass repetitive navigation menus and jump straight to the content:\n\n```html_not\n<a href=\"#main-content\" class=\"skip-link\">Skip to main content</a>\n\n<nav>\n  <!-- 50 navigation links -->\n</nav>\n\n<main id=\"main-content\">\n  <h1>Welcome to the Page</h1>\n</main>\n```\n\n```css_not\n.skip-link {\n  position: absolute;\n  top: -100px;\n  left: 10px;\n  background: #000;\n  color: #fff;\n  padding: 8px 16px;\n  z-index: 1000;\n}\n.skip-link:focus {\n  top: 10px; /* Slides into view when focused with Tab key */\n}\n```"
+        },
+        {
+            "id": "html_links_quiz_3",
+            "type": "quiz",
+            "title": "Link Accessibility Quiz",
+            "content": "Test your accessibility knowledge.",
+            "quizQuestion": "What is the primary purpose of a 'Skip to Main Content' link?",
+            "quizOptions": [
+                "Accelerate search engine crawler indexing",
+                "Allow keyboard users to bypass long header navigation",
+                "Force mobile devices to render in desktop mode",
+                "Clear browser cache before loading content"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_links_14",
+            "type": "content",
+            "title": "Keyboard Navigation and Tabindex",
+            "content": "# Keyboard Navigation & `tabindex` ⌨️\n\nBy default, all `<a>` tags with an `href` attribute are in the natural keyboard tab order (press Tab to navigate, Enter to activate).\n\n## The `tabindex` Attribute:\n- `tabindex=\"0\"`: Inserts a non-interactive element (like a `<div>`) into the natural tab order.\n- `tabindex=\"-1\"`: Removes the element from the tab order, but allows programmatic focus with `.focus()`.\n- `tabindex=\"1+\"`: ❌ Avoid positive numbers! They distort the natural tab order and confuse users."
+        },
+        {
+            "id": "html_links_15",
+            "type": "content",
+            "title": "Image Links and Buttons vs Links",
+            "content": "# Image Links & Links vs Buttons 🖼️\n\nWrapping an image inside an anchor tag creates a clickable image link:\n\n```html_not\n<a href=\"https://example.com\">\n  <img src=\"logo.png\" alt=\"Example Home Page\">\n</a>\n```\n\n## The Golden Rule: Links vs Buttons\n- **Use `<a>`:** When navigating to a URL, new page, or anchor point.\n- **Use `<button>`:** When triggering an action, opening a modal, submitting a form, or changing page state.\n- ❌ Never write `<a href=\"javascript:void(0)\" onclick=\"...\">`! Use `<button>` instead."
+        },
+        {
+            "id": "html_links_16",
+            "type": "content",
+            "title": "Link Relationships with rel",
+            "content": "# Advanced Link Relationships (`rel`) 🔗\n\nThe `rel` attribute defines the relationship between the current document and the linked resource:\n\n- `rel=\"author\"`: Links to author information.\n- `rel=\"license\"`: Links to copyright licensing terms.\n- `rel=\"nofollow\"`: Instructs search engines not to endorse or pass PageRank to the linked URL.\n- `rel=\"prev\"` / `rel=\"next\"`: Indicates sequential pagination.\n- `rel=\"canonical\"`: Used in `<link>` tags in the head to prevent duplicate content penalties."
+        },
+        {
+            "id": "html_links_17",
+            "type": "content",
+            "title": "Interactive Dropdown Menus",
+            "content": "# Accessible Dropdown Navigation Menus 📋\n\nBuilding accessible dropdown menus requires semantic markup and ARIA attributes:\n\n```html_not\n<nav>\n  <ul class=\"nav\">\n    <li class=\"has-dropdown\">\n      <button aria-expanded=\"false\" aria-controls=\"courses-menu\">Courses ▾</button>\n      <ul id=\"courses-menu\" class=\"dropdown\">\n        <li><a href=\"/courses/html\">HTML</a></li>\n        <li><a href=\"/courses/css\">CSS</a></li>\n        <li><a href=\"/courses/js\">JavaScript</a></li>\n      </ul>\n    </li>\n  </ul>\n</nav>\n```"
+        },
+        {
+            "id": "html_links_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Links & Navigation Complete! 🌟\n\nYou now command complete mastery over web hyperlinks and accessible navigation architecture!\n\n## Key Takeaways:\n- ✅ **The Anchor Tag:** `<a>` with `href` links documents together.\n- ✅ **Security:** Always pair `target=\"_blank\"` with `rel=\"noopener noreferrer\"`.\n- ✅ **Page Jumps:** Use fragment identifiers `#section-id` for smooth scrolling.\n- ✅ **Special Protocols:** `mailto:` for email, `tel:` for calls, and `download` for saving files.\n- ✅ **Accessibility:** Provide descriptive text and 'Skip to content' links.\n\n## Up Next:\nIn the next module, explore **HTML Media Elements: Embedding videos, audio, and responsive images**! 🚀"
+        }
+    ]
+}

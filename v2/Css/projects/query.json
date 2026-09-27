@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Responsive Design Principles and Viewports",
+    "ques": "Explain the core philosophy of **Responsive Web Design (RWD)**. Discuss fluid grids, flexible images, and the mandatory HTML viewport meta tag.",
+    "answer": {
+      "type": "text",
+      "content": "### The Three Pillars of Responsive Web Design:\n1. **Fluid Grids:** Using proportional units (percentages `%`, `fr`, `vw`) rather than rigid pixel dimensions so containers stretch or shrink with the browser window.\n2. **Flexible Media:** Constraining images and videos with `max-width: 100%; height: auto;` so they never overflow their parent boundaries.\n3. **CSS Media Queries:** Applying conditional stylesheets depending on viewport width, device orientation, or resolution.\n\n### The Mandatory Viewport Meta Tag:\n```html\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n```\n* Without this tag, mobile browsers assume a legacy 980px desktop site, rendering microscopic, zoomed-out pages."
+    },
+    "explanation": "Responsive design ensures content gracefully adapts across smartphones, tablets, laptops, and 4K displays while providing consistent accessibility."
+  },
+  {
+    "title": "Media Query Syntax and Breakpoints",
+    "ques": "Explain mobile-first breakpoint architecture using **`@media (min-width: ...)`**. Write a CSS ruleset that transforms a stacked navigation bar into a horizontal layout above `768px`.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* Base styles: Mobile-First (< 768px) */\n.nav-menu {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  padding: 16px;\n  background-color: #1e293b;\n}\n\n.nav-menu a {\n  color: #f8fafc;\n  text-decoration: none;\n  padding: 8px 12px;\n}\n\n/* Breakpoint Media Query: Applied at 768px (Tablets/Desktops) and wider */\n@media (min-width: 768px) {\n  .nav-menu {\n    flex-direction: row;\n    justify-content: flex-end;\n    align-items: center;\n    gap: 24px;\n  }\n}"
+    },
+    "explanation": "Mobile-first CSS writes baseline styles for mobile screens and uses `min-width` queries to progressively enhance layout complexity as viewport width expands."
+  }
+]

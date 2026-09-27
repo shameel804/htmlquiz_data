@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Mastering Spacing Utilities",
+    "ques": "Explain Bootstrap's **spacing utility notation** (`m`, `p`, `t`, `b`, `s`, `e`, `x`, `y`) and scale (`0` - `5`). Write a card demonstrating diverse margin and padding combinations.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Spacing: p-4 = 1.5rem padding, mb-3 = 1rem margin-bottom, px-3 = horizontal padding -->\n<div class=\"card p-4 mx-auto my-5 shadow-sm border-0\" style=\"max-width: 400px;\">\n  <h3 class=\"mb-3 mt-1 fs-5 fw-bold text-dark\">Spacing Demonstration</h3>\n  <p class=\"mb-4 text-muted small\">\n    In Bootstrap 5, 's' (start) replaces 'l' (left) and 'e' (end) replaces 'r' (right) to support bidirectional RTL layouts.\n  </p>\n  <button class=\"btn btn-primary py-2 px-4 me-2\">Save</button>\n</div>"
+    },
+    "explanation": "Bootstrap spacing uses the formula `{property}{sides}-{size}` where sizes 0-5 map from `0` to `$spacer * 3` (3rem), using `s` (start) and `e` (end) for RTL compatibility."
+  },
+  {
+    "title": "Applying Theme Colors Across Properties",
+    "ques": "Show how Bootstrap theme color names (`primary`, `success`, `danger`, `warning`, `info`, `dark`) apply to **text (`text-*`)**, **background (`bg-*`)**, and **border (`border-*`)** properties.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"p-4 d-flex gap-3 flex-wrap\">\n  <!-- Success box -->\n  <div class=\"p-3 bg-success-subtle text-success-emphasis border border-success rounded\">\n    Success Notification\n  </div>\n  <!-- Danger box -->\n  <div class=\"p-3 bg-danger-subtle text-danger-emphasis border border-danger rounded\">\n    Critical Error\n  </div>\n  <!-- Warning box -->\n  <div class=\"p-3 bg-warning-subtle text-warning-emphasis border border-warning rounded\">\n    Action Pending\n  </div>\n</div>"
+    },
+    "explanation": "Bootstrap 5 provides nuanced color systems including subtle backgrounds (`bg-*-subtle`) and high-contrast text (`text-*-emphasis`) for accessibility."
+  },
+  {
+    "title": "Flexbox Utilities in Action",
+    "ques": "Create a responsive header toolbar using Bootstrap **Flexbox utilities**: `d-flex`, `justify-content-between`, `align-items-center`, and `flex-wrap`.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"d-flex justify-content-between align-items-center flex-wrap p-3 bg-light border-bottom gap-2\">\n  <div class=\"d-flex align-items-center gap-2\">\n    <span class=\"badge bg-primary fs-6\">Dashboard</span>\n    <span class=\"text-muted small\">Updated 5 mins ago</span>\n  </div>\n  <div class=\"d-flex gap-2\">\n    <button class=\"btn btn-sm btn-outline-secondary\">Refresh</button>\n    <button class=\"btn btn-sm btn-primary\">New Report</button>\n  </div>\n</div>"
+    },
+    "explanation": "Flexbox utilities enable layout control without writing custom CSS rules, handling distribution, alignment, and wrapping natively."
+  },
+  {
+    "title": "Responsive Display Utilities",
+    "ques": "Demonstrate the use of **Display utilities** to hide an element on mobile screens and reveal it on desktop (`d-none d-md-block`).",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"p-4 bg-light rounded shadow-sm\">\n  <h3>Responsive Visibility Demo</h3>\n  <!-- Visible ONLY on tablet and desktop (>= 768px) -->\n  <div class=\"d-none d-md-block p-3 bg-white border rounded my-2 text-success\">\n    Desktop / Tablet Full Sidebar Panel Visible\n  </div>\n  <!-- Visible ONLY on mobile (< 768px) -->\n  <div class=\"d-block d-md-none p-3 bg-white border rounded my-2 text-primary\">\n    Mobile Compact Drawer Version\n  </div>\n</div>"
+    },
+    "explanation": "Display utilities allow responsive rendering with breakpoint infixes (`d-{breakpoint}-{value}`), toggling elements between `none`, `block`, `inline`, or `flex`."
+  },
+  {
+    "title": "Positioning Utilities: Fixed, Absolute, and Sticky",
+    "ques": "Demonstrate Bootstrap's positioning utilities: `position-relative`, `position-absolute`, `position-fixed`, and `position-sticky`.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Sticky Top Navigation Bar -->\n<nav class=\"navbar navbar-light bg-white border-bottom sticky-top px-3\">\n  <span class=\"navbar-brand\">Sticky Navbar</span>\n</nav>\n\n<div class=\"p-4\">\n  <!-- Relative container anchor -->\n  <div class=\"position-relative p-5 bg-light border rounded\" style=\"height: 180px;\">\n    <span>Relative Container</span>\n    <!-- Pinned to bottom-right corner -->\n    <div class=\"position-absolute bottom-0 end-0 m-3 p-2 bg-dark text-white rounded small\">\n      Bottom-End Pinned\n    </div>\n  </div>\n</div>"
+    },
+    "explanation": "Positioning utilities configure element layout contexts (`relative`, `absolute`, `fixed`, `sticky`) alongside coordinate helpers like `top-0`, `bottom-0`, `start-0`, and `end-0`."
+  },
+  {
+    "title": "Text Alignment and Wrapping",
+    "ques": "Demonstrate text utilities for alignment (`text-start`, `text-center`, `text-end`), capitalization (`text-uppercase`), and text truncation (`text-truncate`).",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"p-4 space-y-3\">\n  <p class=\"text-center text-uppercase fw-bold text-primary\">Centered Headline</p>\n  <!-- Truncates text with an ellipsis when overflowing fixed width -->\n  <div class=\"text-truncate p-2 bg-light border rounded\" style=\"max-width: 250px;\">\n    This is an exceptionally long paragraph that will automatically truncate with an ellipsis.\n  </div>\n  <p class=\"text-end text-muted small mt-2\">Right-aligned timestamp</p>\n</div>"
+    },
+    "explanation": "`text-start`, `text-center`, and `text-end` provide directional alignment, while `.text-truncate` forces single-line ellipsis clipping on overflow."
+  },
+  {
+    "title": "Toggling Visibility Utilities",
+    "ques": "Contrast **`.invisible`** with **`.d-none`** in Bootstrap. When is `.invisible` preferred?",
+    "answer": {
+      "type": "text",
+      "content": "### Key Difference Between `.d-none` and `.invisible`:\n* **`.d-none` (`display: none;`):**\n  * Removes the element completely from document layout flow.\n  * The element occupies **zero width and zero height**, causing adjacent elements to shift into its vacant space.\n* **`.invisible` (`visibility: hidden;`):**\n  * Hides the element visually from view.\n  * However, the element **still occupies its full layout dimensions** in the DOM flow, preventing adjacent content from shifting.\n\n### Best Use Case for `.invisible`:\nUse `.invisible` when toggling components dynamically (such as validation feedback icons or loading indicators) where sudden layout shifts would cause jarring page jitter."
+    },
+    "explanation": "`.d-none` alters page geometry by taking elements out of normal flow, whereas `.invisible` preserves document layout spacing while hiding content."
+  }
+]

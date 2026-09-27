@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Font Stacks and Fallbacks",
+    "ques": "Explain the concept of a **Font Family Stack** in CSS. Write a rule declaring a primary web font with appropriate system fallbacks and a generic family.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "body {\n  /* \n   * Font stack: Browser tries each font in order left-to-right.\n   * 1. 'Inter' (custom web font)\n   * 2. -apple-system, BlinkMacSystemFont (modern macOS/iOS system fonts)\n   * 3. 'Segoe UI' (Windows system font)\n   * 4. Roboto (Android system font)\n   * 5. sans-serif (guaranteed browser default fallback)\n   */\n  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n  font-weight: 400;\n}"
+    },
+    "explanation": "Font stacks define a prioritized list of fonts. If a custom web font fails to load or glyphs are missing, the browser falls back gracefully to system alternatives."
+  },
+  {
+    "title": "Text Alignment Modes",
+    "ques": "Demonstrate the four primary values of **`text-align`**: `left`, `center`, `right`, and `justify`. Discuss when `justify` should be avoided for accessibility.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".align-left    { text-align: left; }    /* Standard LTR reading flow */\n.align-center  { text-align: center; }  /* Hero headings and banners */\n.align-right   { text-align: right; }   /* Numeric columns and metadata */\n.align-justify { text-align: justify; } /* Newspaper-style block edges */\n\n/* \n * Accessibility note: 'text-align: justify' can create uneven 'rivers of white space' \n * between words, causing reading difficulties for individuals with dyslexia.\n */"
+    },
+    "explanation": "`text-align` aligns inline content within block containers. Left alignment is standard for English body text, while justified text should be used with caution."
+  },
+  {
+    "title": "Line Height and Vertical Readability",
+    "ques": "Explain why **unitless line-height** values (e.g., `1.5`) are preferred over fixed pixel values (`24px`). Write an editorial typography CSS snippet.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".editorial-body {\n  font-size: 1.125rem; /* 18px */\n  \n  /* \n   * Unitless line-height: 1.6 acts as a proportional multiplier (1.6 * current font-size).\n   * If a child heading increases font-size to 32px, its line-height scales proportionally\n   * to 51.2px instead of remaining locked to a cramped 24px pixel value!\n   */\n  line-height: 1.6;\n  color: #334155;\n}"
+    },
+    "explanation": "Unitless line-height values act as relative multipliers that scale proportionally with inherited font sizes, avoiding clipping and overlap issues."
+  },
+  {
+    "title": "Letter Spacing for Typographic Hierarchy",
+    "ques": "Demonstrate how to calibrate **`letter-spacing`** for uppercase subheadings and condensed display titles.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* Uppercase tracking: wide spacing enhances legibility of all-caps copy */\n.meta-badge {\n  text-transform: uppercase;\n  font-size: 0.75rem;\n  font-weight: 700;\n  letter-spacing: 0.12em;\n  color: #64748b;\n}\n\n/* Large display headline: slight negative tracking creates punchy visual presence */\n.hero-title {\n  font-size: 3rem;\n  font-weight: 800;\n  letter-spacing: -0.03em;\n  line-height: 1.15;\n}"
+    },
+    "explanation": "`letter-spacing` adjusts tracking. Positive letter spacing (`0.1em`) makes all-caps text readable, while subtle negative tracking (`-0.02em`) tightens large headlines."
+  }
+]

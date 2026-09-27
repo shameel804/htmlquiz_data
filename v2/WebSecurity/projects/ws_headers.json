@@ -1,0 +1,61 @@
+[
+  {
+    "title": "Configuring Content Security Policy (CSP)",
+    "ques": "Explain the role of **Content Security Policy (CSP)** in mitigating XSS and data exfiltration. Provide an HTTP response header example with a robust production policy that disables `unsafe-inline`, restricts script sources to self and a specific trusted CDN, and restricts form submissions.",
+    "answer": {
+      "type": "code",
+      "lang": "http",
+      "content": "Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://api.myservice.com; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none';"
+    },
+    "explanation": "A strict **Content Security Policy (CSP)** establishes an allowlist of origins from which the browser is permitted to load dynamic resources. Setting `object-src 'none'` blocks plugins (Flash, Java), while `default-src 'self'` ensures fallback isolation for all unspecified resource categories."
+  },
+  {
+    "title": "Preventing Clickjacking with X-Frame-Options",
+    "ques": "Describe how a **Clickjacking** attack works using transparent iframes. Show how to configure the **`X-Frame-Options`** and the modern CSP **`frame-ancestors`** headers to completely forbid framing of sensitive pages.",
+    "answer": {
+      "type": "code",
+      "lang": "http",
+      "content": "# Legacy header (supported across all legacy browsers):\nX-Frame-Options: DENY\n\n# Modern equivalent via Content Security Policy (takes precedence in modern browsers):\nContent-Security-Policy: frame-ancestors 'none';\n\n# Alternatively, to allow framing ONLY from the same origin:\n# X-Frame-Options: SAMEORIGIN\n# Content-Security-Policy: frame-ancestors 'self';"
+    },
+    "explanation": "Clickjacking tricks a victim into clicking an invisible iframe overlaid atop an enticing decoy button (e.g., 'Play Game'). The `X-Frame-Options: DENY` header instructs the browser to refuse rendering the document within any `<iframe>`, `<frame>`, or `<object>`."
+  },
+  {
+    "title": "Enforcing HTTPS with HSTS",
+    "ques": "Explain the function of **HTTP Strict Transport Security (HSTS)** and how it mitigates SSL-stripping Man-In-The-Middle (MITM) attacks. Write the complete `Strict-Transport-Security` header required for HSTS preloading eligibility.",
+    "answer": {
+      "type": "code",
+      "lang": "http",
+      "content": "# Production HSTS header eligible for browser preload list submission:\nStrict-Transport-Security: max-age=63072000; includeSubDomains; preload\n\n# Explanation of directives:\n# - max-age=63072000: Enforces HTTPS strictly for 2 years (in seconds).\n# - includeSubDomains: Applies this rule to all existing and future subdomains (e.g., api.site.com, admin.site.com).\n# - preload: Grants permission to include this domain in the hardcoded browser preload list."
+    },
+    "explanation": "When HSTS is active, the browser automatically converts all unencrypted `http://` links to `https://` internally before issuing network requests. This eliminates the vulnerable plain-HTTP redirect window where SSL-stripping tools (like sslstrip) operate."
+  },
+  {
+    "title": "MIME Sniffing Prevention via X-Content-Type-Options",
+    "ques": "What is **MIME type sniffing**, and how can an attacker abuse it to bypass file upload protections? Show how to configure the **`X-Content-Type-Options`** header to neutralize this behavior.",
+    "answer": {
+      "type": "code",
+      "lang": "http",
+      "content": "# HTTP Response Header:\nX-Content-Type-Options: nosniff\n\n# Scenario prevented:\n# An attacker uploads a file named 'avatar.jpg' containing malicious JavaScript:\n#   <script>alert(document.domain)</script>\n# Without 'nosniff', Internet Explorer or older browsers would sniff the body,\n# disregard the 'Content-Type: image/jpeg' header, determine it is HTML/JS,\n# and execute the script.\n# With 'nosniff', the browser strictly honors the declared Content-Type."
+    },
+    "explanation": "`X-Content-Type-Options: nosniff` forces browsers to adhere strictly to the MIME type specified in the `Content-Type` header, preventing content inspection and rogue script execution."
+  },
+  {
+    "title": "Controlling Information Leakage with Referrer-Policy",
+    "ques": "How does the **`Referrer-Policy`** header prevent sensitive tokens or user identifiers stored in URL query strings from leaking to third-party domains? Compare `no-referrer`, `same-origin`, and `strict-origin-when-cross-origin`.",
+    "answer": {
+      "type": "text",
+      "content": "### Header Values Comparison\n* **`no-referrer`:** Never sends the `Referer` header under any circumstance (neither path nor origin is sent).\n* **`same-origin`:** Sends full referrer (origin + path + query parameters) for same-origin requests, but strips the header completely on cross-origin requests.\n* **`strict-origin-when-cross-origin` (Modern Standard Default):**\n  * **Same-origin:** Sends full URL (origin, path, query).\n  * **Cross-origin (HTTPS -> HTTPS):** Sends only the origin (`https://example.com/`), stripping sensitive paths and query strings (`?reset_token=xyz`).\n  * **Downgrade (HTTPS -> HTTP):** Sends no referrer header at all.\n\n### Recommended Production Header:\n```http\nReferrer-Policy: strict-origin-when-cross-origin\n```"
+    },
+    "explanation": "If a password reset link or confidential session token appears in a URL path or query string, external analytics, CDNs, or third-party links can capture the full URL via the HTTP `Referer` header unless restricted by `Referrer-Policy`."
+  },
+  {
+    "title": "Restricting Browser Features via Permissions-Policy",
+    "ques": "Explain the purpose of the **`Permissions-Policy`** (formerly Feature-Policy) header. Provide a concrete HTTP header example that completely disables access to the **camera**, **microphone**, and **geolocation** APIs for all origins including third-party iframes.",
+    "answer": {
+      "type": "code",
+      "lang": "http",
+      "content": "# Permissions-Policy header denying sensitive hardware and tracking APIs:\nPermissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()\n\n# To allow geolocation ONLY for your own origin but deny it to embedded iframes:\n# Permissions-Policy: geolocation=(self), camera=(), microphone=()"
+    },
+    "explanation": "The **`Permissions-Policy`** header enables site operators to selectively enable or disable powerful browser hardware APIs (webcam, microphone, sensors, fullscreen, payment). This guarantees that even if a malicious third-party script or ad-iframe is injected, it cannot spy on the user."
+  }
+]

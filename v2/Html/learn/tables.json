@@ -1,0 +1,159 @@
+{
+    "id": "learn_html_tables",
+    "topicId": "tables",
+    "topicTitle": "HTML Tables",
+    "description": "Master table structure, headers, captions, colspan, and rowspan.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "html_tables_1",
+            "type": "content",
+            "title": "Welcome to HTML Tables",
+            "content": "# HTML Tables: Structuring Data 📊\n\nTables represent two-dimensional tabular data arranged in rows and columns.\n\n## What you'll master:\n- 🧱 **Table Building Blocks** - `<table>`, `<tr>`, `<td>`, and `<th>`\n- 🧠 **Semantic Sectioning** - `<thead>`, `<tbody>`, and `<tfoot>`\n- 📑 **Table Metadata** - `<caption>` and accessibility headers with `scope`\n- 🔀 **Merging Cells** - `colspan` (columns) and `rowspan` (rows)\n- 🎨 **Table Styling & Responsive Patterns** - Zebra striping, borders, and overflow wrapping"
+        },
+        {
+            "id": "html_tables_2",
+            "type": "content",
+            "title": "Core Table Elements",
+            "content": "# Core Table Elements 🧱\n\nAn HTML table is constructed using four fundamental tags:\n\n1. `<table>`: The outer wrapper that defines the table.\n2. `<tr>`: **Table Row** — defines a horizontal row of cells.\n3. `<th>`: **Table Header** — contains bold, centered header titles.\n4. `<td>`: **Table Data** — contains regular data cells.\n\n```html_not\n<table>\n  <tr>\n    <th>Fruit</th>\n    <th>Color</th>\n  </tr>\n  <tr>\n    <td>Apple</td>\n    <td>Red</td>\n  </tr>\n  <tr>\n    <td>Banana</td>\n    <td>Yellow</td>\n  </tr>\n</table>\n```"
+        },
+        {
+            "id": "html_tables_3",
+            "type": "content",
+            "title": "Semantic Grouping: thead, tbody, tfoot",
+            "content": "# Semantic Grouping: thead, tbody, tfoot 🏛️\n\nTo make tables accessible and structured, split content into three distinct semantic sections:\n\n```html_not\n<table>\n  <thead>\n    <tr>\n      <th>Product</th>\n      <th>Qty</th>\n      <th>Price</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Wireless Mouse</td>\n      <td>2</td>\n      <td>$40.00</td>\n    </tr>\n    <tr>\n      <td>Mechanical Keyboard</td>\n      <td>1</td>\n      <td>$90.00</td>\n    </tr>\n  </tbody>\n  <tfoot>\n    <tr>\n      <th>Total</th>\n      <th>3</th>\n      <th>$130.00</th>\n    </tr>\n  </tfoot>\n</table>\n```"
+        },
+        {
+            "id": "html_tables_4",
+            "type": "content",
+            "title": "The <caption> Element",
+            "content": "# Table Captions (`<caption>`) 🏷️\n\nThe `<caption>` element provides a title or description for the entire table.\n\n```html_not\n<table>\n  <caption>Quarterly Sales Performance (2025)</caption>\n  <thead>\n    <tr>\n      <th>Quarter</th>\n      <th>Revenue</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Q1</td>\n      <td>$120,000</td>\n    </tr>\n  </tbody>\n</table>\n```\n\n## Important Rules:\n- The `<caption>` tag **must** be placed immediately following the opening `<table>` tag!\n- It is automatically centered above the table by default."
+        },
+        {
+            "id": "html_tables_quiz_1",
+            "type": "quiz",
+            "title": "Table Basics Quiz",
+            "content": "Test your knowledge of table elements.",
+            "quizQuestion": "Where must the <caption> tag be placed inside a table?",
+            "quizOptions": [
+                "Inside the <thead> tag",
+                "Immediately after the opening <table> tag",
+                "At the very end of <tfoot>",
+                "Before the <table> tag"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_tables_5",
+            "type": "content",
+            "title": "Header Scope Attribute",
+            "content": "# Header Accessibility with `scope` 👓\n\nThe `scope` attribute on `<th>` elements explicitly tells screen readers whether the header applies to a column or a row.\n\n```html_not\n<table>\n  <thead>\n    <tr>\n      <th scope=\"col\">Employee</th>\n      <th scope=\"col\">Department</th>\n      <th scope=\"col\">Salary</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th scope=\"row\">Alice Chen</th>\n      <td>Engineering</td>\n      <td>$110,000</td>\n    </tr>\n    <tr>\n      <th scope=\"row\">Bob Smith</th>\n      <td>Design</td>\n      <td>$95,000</td>\n    </tr>\n  </tbody>\n</table>\n```\n\n## Scope Values:\n- `scope=\"col\"`: Header for a column.\n- `scope=\"row\"`: Header for a row.\n- `scope=\"colgroup\"` / `scope=\"rowgroup\"`: Header for multi-column or multi-row groups."
+        },
+        {
+            "id": "html_tables_6",
+            "type": "content",
+            "title": "Merging Columns with colspan",
+            "content": "# Merging Columns with `colspan` ➡️\n\nThe `colspan` attribute merges two or more adjacent columns into a single cell.\n\n```html_not\n<table>\n  <tr>\n    <th colspan=\"2\">Full Name</th>\n    <th>Role</th>\n  </tr>\n  <tr>\n    <td>John</td>\n    <td>Doe</td>\n    <td>Developer</td>\n  </tr>\n</table>\n```\n\n## Notice:\nBecause the header cell has `colspan=\"2\"`, it spans across two columns, matching the two `<td>` cells (John, Doe) in the row below it!"
+        },
+        {
+            "id": "html_tables_7",
+            "type": "content",
+            "title": "Merging Rows with rowspan",
+            "content": "# Merging Rows with `rowspan` ⬇️\n\nThe `rowspan` attribute merges two or more vertical rows into a single cell.\n\n```html_not\n<table>\n  <tr>\n    <th>Category</th>\n    <th>Item</th>\n    <th>Price</th>\n  </tr>\n  <tr>\n    <td rowspan=\"2\">Electronics</td>\n    <td>Phone</td>\n    <td>$699</td>\n  </tr>\n  <tr>\n    <td>Laptop</td>\n    <td>$1,199</td>\n  </tr>\n</table>\n```\n\n## How It Works:\nThe cell with `rowspan=\"2\"` pushes down into the next row. The second row only needs two `<td>` elements because the first column is already occupied!"
+        },
+        {
+            "id": "html_tables_8",
+            "type": "content",
+            "title": "Complex Layouts: Combining Colspan & Rowspan",
+            "content": "# Combining `colspan` and `rowspan` 🧩\n\nComplex schedules and invoices frequently combine horizontal and vertical spans:\n\n```html_not\n<table>\n  <thead>\n    <tr>\n      <th rowspan=\"2\">Student</th>\n      <th colspan=\"2\">Exams</th>\n      <th rowspan=\"2\">Final Grade</th>\n    </tr>\n    <tr>\n      <th>Midterm</th>\n      <th>Final</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Sarah Connor</td>\n      <td>92</td>\n      <td>95</td>\n      <td>A</td>\n    </tr>\n  </tbody>\n</table>\n```"
+        },
+        {
+            "id": "html_tables_quiz_2",
+            "type": "quiz",
+            "title": "Cell Merging Quiz",
+            "content": "Test your knowledge of table spans.",
+            "quizQuestion": "Which attribute is used to make a table cell span vertically across 3 rows?",
+            "quizOptions": [
+                "colspan='3'",
+                "rowspan='3'",
+                "span='3'",
+                "col-span='3'"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "html_tables_9",
+            "type": "content",
+            "title": "Styling Table Borders",
+            "content": "# Styling Table Borders with CSS 🎨\n\nBy default, HTML tables have separated borders that look clunky. Use CSS `border-collapse` to create sleek borders:\n\n```css_not\ntable {\n  width: 100%;\n  border-collapse: collapse; /* Merges adjacent borders into a single clean border */\n}\n\nth, td {\n  border: 1px solid #e2e8f0;\n  padding: 12px 16px;\n  text-align: left;\n}\n\nth {\n  background-color: #f8fafc;\n  color: #1e293b;\n  font-weight: 600;\n}\n```"
+        },
+        {
+            "id": "html_tables_10",
+            "type": "content",
+            "title": "Zebra Striping and Hover Effects",
+            "content": "# Zebra Striping & Hover States 🦓\n\nZebra striping makes reading wide data rows substantially easier for users:\n\n```css_not\n/* Even rows get a subtle light background */\ntbody tr:nth-child(even) {\n  background-color: #f1f5f9;\n}\n\n/* Highlight row on mouse hover */\ntbody tr:hover {\n  background-color: #e2e8f0;\n  cursor: pointer;\n}\n```\n\n```html_not\n<!-- The CSS above automatically stripes alternating rows without needing custom classes -->\n```"
+        },
+        {
+            "id": "html_tables_11",
+            "type": "content",
+            "title": "Column Groups with <colgroup>",
+            "content": "# Column Groups with `<colgroup>` 📐\n\nThe `<colgroup>` element allows you to format and apply styles to entire columns all at once, without repeating classes on every single cell.\n\n```html_not\n<table>\n  <colgroup>\n    <col style=\"background-color: #fef3c7; width: 150px;\">\n    <col span=\"2\" style=\"background-color: #eff6ff;\">\n  </colgroup>\n  <tr>\n    <th>ID</th>\n    <th>First Name</th>\n    <th>Last Name</th>\n  </tr>\n  <tr>\n    <td>001</td>\n    <td>David</td>\n    <td>Miller</td>\n  </tr>\n</table>\n```\n\nThe `span=\"2\"` attribute specifies that the second `<col>` styling applies to the next 2 columns!"
+        },
+        {
+            "id": "html_tables_12",
+            "type": "content",
+            "title": "Responsive Tables for Mobile",
+            "content": "# Responsive Tables for Mobile Devices 📱\n\nWide tables easily break mobile layouts if not handled properly.\n\n## Method 1: Horizontal Scroll Wrapper (Most Popular):\nWrap the table inside an `overflow-x: auto` container:\n\n```html_not\n<div class=\"table-container\">\n  <table>\n    <!-- wide table data -->\n  </table>\n</div>\n```\n\n```css_not\n.table-container {\n  width: 100%;\n  overflow-x: auto;\n  -webkit-overflow-scrolling: touch;\n}\n```"
+        },
+        {
+            "id": "html_tables_13",
+            "type": "content",
+            "title": "Responsive Card Pattern",
+            "content": "# Responsive Card Pattern (CSS Transform) 🃏\n\nOn very small screens, you can transform table rows into standalone stacked cards using CSS:\n\n```css_not\n@media (max-width: 600px) {\n  table, thead, tbody, th, td, tr {\n    display: block;\n  }\n  thead tr {\n    position: absolute;\n    top: -9999px; /* Hide headers visually */\n  }\n  tr {\n    margin-bottom: 16px;\n    border: 1px solid #ccc;\n    border-radius: 8px;\n    padding: 8px;\n  }\n  td {\n    position: relative;\n    padding-left: 50%;\n  }\n}\n```"
+        },
+        {
+            "id": "html_tables_14",
+            "type": "content",
+            "title": "Table Accessibility (ARIA & Roles)",
+            "content": "# Table Accessibility Best Practices ♿\n\nTo ensure screen reader compatibility:\n- Always use `<th>` for headers, never styled `<td>` elements.\n- Always provide `scope=\"col\"` or `scope=\"row\"` on headers.\n- Include a descriptive `<caption>`.\n- Avoid deeply nested tables for visual layout (use CSS Grid or Flexbox instead!).\n- For data with abbreviations, use `<abbr title=\"Average\">Avg</abbr>`."
+        },
+        {
+            "id": "html_tables_quiz_3",
+            "type": "quiz",
+            "title": "Table Accessibility Quiz",
+            "content": "Test your accessibility knowledge.",
+            "quizQuestion": "Which CSS property merges adjacent cell borders into a single sleek line?",
+            "quizOptions": [
+                "border-spacing: 0",
+                "border-merge: true",
+                "border-collapse: collapse",
+                "table-layout: fixed"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "html_tables_15",
+            "type": "content",
+            "title": "Table Layout: Auto vs Fixed",
+            "content": "# Performance: `table-layout: fixed` ⚡\n\nBy default, browsers use `table-layout: auto`, inspecting the content of every single cell before deciding column widths. For massive datasets, this causes layout thrashing.\n\n```css_not\ntable {\n  width: 100%;\n  table-layout: fixed; /* Super fast rendering! */\n}\n```\n\n## Advantages of `table-layout: fixed`:\n1. **Speed:** Browser only inspects the first row and immediately renders the table.\n2. **Predictable Widths:** Column widths strictly respect set percentages.\n3. **Ellipsis Truncation:** Allows text truncation with `text-overflow: ellipsis` on table cells!"
+        },
+        {
+            "id": "html_tables_16",
+            "type": "content",
+            "title": "Common Table Pitfalls",
+            "content": "# Common Table Pitfalls to Avoid ⚠️\n\n1. ❌ **Using Tables for Page Layout:** Never use tables for general page layout. Tables are strictly for tabular data! Use Flexbox/Grid for layouts.\n2. ❌ **Mismatched Column Counts:** When using `colspan` or `rowspan`, forgetting to remove excess cells in subsequent rows distorts the grid.\n3. ❌ **Missing Caption/Headings:** Leaves screen readers lost with no context.\n4. ❌ **Unstyled Default Borders:** Looks unpolished and amateurish without `border-collapse`."
+        },
+        {
+            "id": "html_tables_17",
+            "type": "content",
+            "title": "Real-World Example: Invoice Table",
+            "content": "# Real-World Example: Invoice Table 🧾\n\n```html_not\n<div class=\"table-container\">\n  <table>\n    <caption>Invoice #INV-2026-001</caption>\n    <thead>\n      <tr>\n        <th scope=\"col\">Item Description</th>\n        <th scope=\"col\">Hours</th>\n        <th scope=\"col\">Rate</th>\n        <th scope=\"col\">Subtotal</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>Frontend Architecture Consulting</td>\n        <td>40</td>\n        <td>$125.00</td>\n        <td>$5,000.00</td>\n      </tr>\n      <tr>\n        <td>Performance & Accessibility Audit</td>\n        <td>15</td>\n        <td>$150.00</td>\n        <td>$2,250.00</td>\n      </tr>\n    </tbody>\n    <tfoot>\n      <tr>\n        <th colspan=\"3\" scope=\"row\" style=\"text-align:right;\">Grand Total:</th>\n        <td><strong>$7,250.00</strong></td>\n      </tr>\n    </tfoot>\n  </table>\n</div>\n```"
+        },
+        {
+            "id": "html_tables_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Table Mastery Complete! 🏆\n\nYou have mastered structuring tabular datasets with modern standards!\n\n## Key Takeaways:\n- ✅ **Anatomy:** `<table>`, `<tr>`, `<th>`, and `<td>`.\n- ✅ **Semantics:** Group with `<thead>`, `<tbody>`, and `<tfoot>`.\n- ✅ **Cell Merging:** `colspan` merges horizontally; `rowspan` merges vertically.\n- ✅ **Accessibility:** Always include `<caption>` and `scope=\"col|row\"`.\n- ✅ **CSS Polish:** Apply `border-collapse: collapse` and zebra striping.\n\n## Up Next:\nIn the next module, explore **HTML Lists: Ordered, Unordered, and Description Lists**! 🚀"
+        }
+    ]
+}

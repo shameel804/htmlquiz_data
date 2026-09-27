@@ -1,0 +1,159 @@
+{
+    "id": "learn_css_font",
+    "topicId": "font",
+    "topicTitle": "CSS Typography",
+    "description": "Learn font families, rem units, fluid clamp, line-height, and text truncation.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "css_font_1",
+            "type": "content",
+            "title": "Welcome to CSS Typography",
+            "content": "# CSS Typography ✍️\n\nTypography is over 90% of the web! Great typography guides reader attention, conveys brand tone, and dramatically elevates user experience.\n\n## What you'll master:\n- 🔤 **Font Families** - Web-safe fonts, generic fallbacks, and Google Fonts\n- 📏 **Font Sizing & Fluid Scaling** - `rem` units and modern `clamp()` fluid type\n- ⚖️ **Font Styling** - `font-weight`, `font-style`, and variable fonts\n- 📐 **Text Flow & Spacing** - `line-height`, `letter-spacing`, and `word-spacing`\n- 🎯 **Alignment & Text Truncation** - `text-align`, `text-transform`, and `text-overflow: ellipsis`"
+        },
+        {
+            "id": "css_font_2",
+            "type": "content",
+            "title": "Font Families and Fallbacks",
+            "content": "# Font Families (`font-family`) 🔠\n\nThe `font-family` property defines a prioritized list of font names:\n\n```css_not\nbody {\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n}\n```\n\n## How the Font Stack Works:\n1. The browser checks if the user has the first font installed.\n2. If not, it moves to the next font in the comma-separated list.\n3. The final item should **always** be a generic font family name!\n\n## Generic Font Families:\n- `sans-serif`: Modern clean fonts without decorative serifs (e.g. Arial, Inter).\n- `serif`: Traditional fonts with decorative serifs (e.g. Times New Roman, Georgia).\n- `monospace`: Equal character widths for code (e.g. Courier, Fira Code).\n- `system-ui`: Native operating system UI font."
+        },
+        {
+            "id": "css_font_3",
+            "type": "content",
+            "title": "Importing Web Fonts with @font-face",
+            "content": "# Custom Web Fonts with `@font-face` 🌐\n\nUse `@font-face` to load custom font files hosted on your server or CDN:\n\n```css_not\n@font-face {\n  font-family: 'Inter';\n  src: url('/fonts/Inter-Variable.woff2') format('woff2');\n  font-weight: 100 900;\n  font-display: swap; /* Immediately shows system font while web font downloads */\n}\n```\n\n## Font Formats:\n- **WOFF2 (Web Open Font Format 2):** Best compression and universal modern support. Always prefer `.woff2`!\n- `font-display: swap`: Prevents \"Flash of Invisible Text\" (FOIT) by displaying a fallback font until the custom font is ready."
+        },
+        {
+            "id": "css_font_4",
+            "type": "content",
+            "title": "Font Sizing (font-size)",
+            "content": "# Font Sizing (`font-size`) 📏\n\nSet typography size with relative units:\n\n```css_not\nhtml {\n  font-size: 16px; /* Base size */\n}\n\nh1 { font-size: 2.5rem; } /* 40px */\nh2 { font-size: 2rem; }   /* 32px */\nh3 { font-size: 1.5rem; } /* 24px */\np  { font-size: 1rem; }   /* 16px */\nsmall { font-size: 0.875rem; } /* 14px */\n```"
+        },
+        {
+            "id": "css_font_quiz_1",
+            "type": "quiz",
+            "title": "Typography Basics Quiz",
+            "content": "Test your font stack knowledge.",
+            "quizQuestion": "What should always be the final font name in a font-family stack?",
+            "quizOptions": [
+                "The web designer's name",
+                "A generic family name (e.g., sans-serif)",
+                "Google Fonts URL",
+                "font-weight: 400"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_font_5",
+            "type": "content",
+            "title": "Fluid Typography with clamp()",
+            "content": "# Modern Fluid Typography with `clamp()` 🌊\n\nInstead of writing five media queries just to resize text for mobile, tablet, and desktop, use `clamp()`:\n\n```css_not\nh1 {\n  /* clamp(MINIMUM, PREFERRED, MAXIMUM) */\n  font-size: clamp(1.75rem, 4vw + 1rem, 3.5rem);\n}\n```\n\n## How It Works:\n- On tiny mobile screens: font size never drops below `1.75rem`.\n- On huge desktop displays: font size never expands past `3.5rem`.\n- In between: scales smoothly and fluidly along with viewport width (`4vw`)!"
+        },
+        {
+            "id": "css_font_6",
+            "type": "content",
+            "title": "Font Weights & Styles",
+            "content": "# Font Weight & Style ⚖️\n\n## `font-weight`:\nControls how thick or thin the letterforms render.\n\n| Numeric Weight | Keyword | Common Use |\n| :--- | :--- | :--- |\n| `300` | Light | Subtle captions |\n| `400` | Normal | Standard body text |\n| `500` | Medium | Navigation links |\n| `600` | Semi-Bold | Subheadings |\n| `700` | Bold | Main headings |\n| `800` / `900` | Extra Bold / Black | Heavy hero titles |\n\n```css_not\n.hero-title {\n  font-weight: 800;\n  font-style: italic;\n}\n```"
+        },
+        {
+            "id": "css_font_7",
+            "type": "content",
+            "title": "Line Height: Perfect Readability",
+            "content": "# Line Height (`line-height`) 📖\n\n`line-height` controls the vertical breathing room between lines of text.\n\n```css_not\n/* Always use UNITLESS numbers for line-height! */\nbody {\n  line-height: 1.6; /* 1.6 times the current font-size */\n}\n\nh1 {\n  line-height: 1.2; /* Tight line height for large headings */\n}\n```\n\n> 🎯 **Typography Golden Rule:** Always use unitless numbers (e.g. `1.6`) instead of pixels or rems. Unitless line heights scale proportionally and inherit accurately when child elements change font size!"
+        },
+        {
+            "id": "css_font_8",
+            "type": "content",
+            "title": "Text Alignment",
+            "content": "# Text Alignment (`text-align`) 🎯\n\nControls horizontal text alignment within block containers:\n\n```css_not\n.left-text   { text-align: left; }\n.center-text { text-align: center; }\n.right-text  { text-align: right; }\n.justify     { text-align: justify; } /* Stretches text to touch both margins */\n```\n\n> ⚠️ **Accessibility Warning:** Avoid `text-align: justify` on the web! It creates uneven word gaps (\"rivers of white space\") that make reading extremely difficult for people with dyslexia."
+        },
+        {
+            "id": "css_font_quiz_2",
+            "type": "quiz",
+            "title": "Line Height Quiz",
+            "content": "Test your knowledge of typography spacing.",
+            "quizQuestion": "Why should you always specify line-height as a unitless number (e.g., 1.5) instead of fixed pixels?",
+            "quizOptions": [
+                "Unitless line-heights compile faster",
+                "Unitless line-heights inherit and scale proportionally with child font sizes",
+                "Browsers crash on pixel line-heights",
+                "Unitless line-heights only apply to bold text"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_font_9",
+            "type": "content",
+            "title": "Letter Spacing and Word Spacing",
+            "content": "# Letter Spacing & Word Spacing 🔠\n\nFine-tune typography rhythm:\n\n```css_not\n/* Letter Spacing (Tracking) */\n.uppercase-badge {\n  text-transform: uppercase;\n  font-size: 0.75rem;\n  letter-spacing: 0.1em; /* Adds elegant breathing room between caps */\n}\n\n.tight-heading {\n  letter-spacing: -0.03em; /* Sleek, modern tight tracking for huge hero titles */\n}\n\n/* Word Spacing */\np {\n  word-spacing: 0.05em;\n}\n```"
+        },
+        {
+            "id": "css_font_10",
+            "type": "content",
+            "title": "Text Transformations & Decorations",
+            "content": "# Text Transformations & Decorations 🎨\n\n## `text-transform`:\nChanges capitalization without altering the HTML source text:\n```css_not\n.uppercase { text-transform: uppercase; }  /* HELLO */\n.lowercase { text-transform: lowercase; }  /* hello */\n.capitalize { text-transform: capitalize; } /* Hello World */\n```\n\n## `text-decoration`:\nUnderlines, strikethroughs, and color accents:\n```css_not\na {\n  text-decoration: underline;\n  text-decoration-color: #3b82f6;\n  text-decoration-thickness: 2px;\n  text-underline-offset: 4px; /* Pulls underline down away from text descenders */\n}\n```"
+        },
+        {
+            "id": "css_font_11",
+            "type": "content",
+            "title": "Text Truncation with Ellipsis",
+            "content": "# Text Truncation with Ellipsis (...) ✂️\n\nTruncating single-line text that overflows its box:\n\n```css_not\n.truncate-single-line {\n  white-space: nowrap;        /* Prevents text from wrapping to a new line */\n  overflow: hidden;           /* Hides overflow */\n  text-overflow: ellipsis;    /* Replaces clipped text with \"...\" */\n  max-width: 200px;\n}\n```\n\n## Multi-Line Clamping with CSS:\n```css_not\n.truncate-multiline {\n  display: -webkit-box;\n  -webkit-line-clamp: 3;      /* Clamps after 3 lines */\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n}\n```"
+        },
+        {
+            "id": "css_font_12",
+            "type": "content",
+            "title": "The font Shorthand Property",
+            "content": "# The `font` Shorthand Property 🖌️\n\nCombine multiple font properties into a single declaration:\n\n```css_not\n/* Syntax: font: [style] [weight] [size]/[line-height] [family] */\np {\n  font: italic bold 1rem/1.6 'Inter', sans-serif;\n}\n```\n\n> ⚠️ **Shorthand Rule:** When using the `font` shorthand, `font-size` and `font-family` are **mandatory**. If either is missing, the entire declaration is invalid!"
+        },
+        {
+            "id": "css_font_13",
+            "type": "content",
+            "title": "Variable Fonts (The Future of Typography)",
+            "content": "# Variable Fonts: Single File, Infinite Styles 🚀\n\nTraditional web fonts require downloading separate files for Regular, Bold, and Italic. A **Variable Font** bundles all weights and styles into a single lightweight file!\n\n```css_not\n@font-face {\n  font-family: 'RobotoFlex';\n  src: url('RobotoFlex-Variable.woff2') format('woff2');\n  font-weight: 100 1000;\n}\n\nh1 {\n  font-family: 'RobotoFlex', sans-serif;\n  font-weight: 642; /* Any exact numeric weight from 100 to 1000! */\n}\n```"
+        },
+        {
+            "id": "css_font_quiz_3",
+            "type": "quiz",
+            "title": "Text Truncation Quiz",
+            "content": "Test your truncation understanding.",
+            "quizQuestion": "Which combination of properties is required to truncate overflowing single-line text with an ellipsis?",
+            "quizOptions": [
+                "white-space: nowrap, overflow: hidden, text-overflow: ellipsis",
+                "display: flex, text-align: center",
+                "line-height: 0, text-clip: ellipsis",
+                "text-transform: truncate, overflow: auto"
+            ],
+            "correctOptionIndex": 0
+        },
+        {
+            "id": "css_font_14",
+            "type": "content",
+            "title": "Accessible Typography Checklist",
+            "content": "# Accessible Typography Checklist ♿\n\nFollow these accessibility standards for text:\n1. **Minimum contrast:** Body text must have at least `4.5:1` contrast ratio against its background.\n2. **Avoid tiny text:** Body text should be at least `1rem` (16px).\n3. **Limit line length:** Ideal line length is 45 to 75 characters (`max-width: 65ch;`).\n4. **Adequate line spacing:** Keep body line-height at least `1.5`.\n5. **Never disable user zoom:** Never use `user-scalable=no` in viewport meta."
+        },
+        {
+            "id": "css_font_15",
+            "type": "content",
+            "title": "The ch Unit for Perfect Paragraph Width",
+            "content": "# The Magic `ch` Unit for Readability 📏\n\nThe `ch` unit represents the width of the `0` (zero) character in the current font.\n\n```css_not\narticle p {\n  max-width: 65ch; /* Perfectly bounds line length for optimal reading rhythm! */\n  margin-left: auto;\n  margin-right: auto;\n}\n```\n\nLines wider than 75-80 characters strain reader eyes when jumping to the next line. `max-width: 65ch` guarantees comfortable readability on any device!"
+        },
+        {
+            "id": "css_font_16",
+            "type": "content",
+            "title": "Text Shadows",
+            "content": "# Typography Depth: `text-shadow` 🌫️\n\nAdd subtle glows or drop shadows to text:\n\n```css_not\n/* Syntax: text-shadow: [offset-x] [offset-y] [blur-radius] [color] */\n.hero-headline {\n  color: #ffffff;\n  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);\n}\n\n/* Neon Glow Effect */\n.neon-sign {\n  color: #00ffcc;\n  text-shadow: 0 0 5px #00ffcc, 0 0 20px #00ffcc;\n}\n```"
+        },
+        {
+            "id": "css_font_17",
+            "type": "content",
+            "title": "Real-World Component: Article Header",
+            "content": "# Real-World Component: Editorial Article Header 📰\n\n```html_not\n<header class=\"article-header\">\n  <span class=\"category-badge\">Web Engineering</span>\n  <h1 class=\"headline\">Building Scalable Modern Typography</h1>\n  <p class=\"subtitle\">A masterclass in responsive font scales, accessibility, and fluid line heights.</p>\n</header>\n```\n\n```css_not\n.article-header {\n  max-width: 70ch;\n  margin: 40px auto 24px;\n}\n\n.category-badge {\n  text-transform: uppercase;\n  font-size: 0.75rem;\n  letter-spacing: 0.1em;\n  font-weight: 700;\n  color: #2563eb;\n}\n\n.headline {\n  font-size: clamp(2rem, 5vw, 3.25rem);\n  font-weight: 800;\n  line-height: 1.15;\n  letter-spacing: -0.02em;\n  color: #0f172a;\n  margin: 8px 0 16px;\n}\n\n.subtitle {\n  font-size: 1.25rem;\n  line-height: 1.6;\n  color: #64748b;\n}\n```"
+        },
+        {
+            "id": "css_font_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Typography Mastered! ✍️\n\nYou now wield full command over typography scales, font stacks, and readability!\n\n## Key Takeaways:\n- ✅ **Font Stacks:** Always end with generic fallbacks (`sans-serif`, `serif`, `monospace`).\n- ✅ **Units:** Use `rem` for accessibility and `clamp()` for fluid responsive sizing.\n- ✅ **Line Height:** Always declare unitless line-height (`1.5` - `1.6` for body text).\n- ✅ **Line Length:** Constrain paragraph widths with `max-width: 65ch`.\n- ✅ **Truncation:** Combine `white-space: nowrap`, `overflow: hidden`, and `text-overflow: ellipsis`.\n\n## Up Next:\nIn the next module, explore **CSS Colors and Backgrounds: Color formats, Linear/Radial Gradients, and Background Sizing**! 🚀"
+        }
+    ]
+}

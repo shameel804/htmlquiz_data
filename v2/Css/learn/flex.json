@@ -1,0 +1,159 @@
+{
+    "id": "learn_css_flex",
+    "topicId": "flex",
+    "topicTitle": "Flexbox & Grid",
+    "description": "Master Flexbox containers, items, alignment, Grid tracks, fr units, and template areas.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "css_flex_1",
+            "type": "content",
+            "title": "Welcome to Flexbox & Grid",
+            "content": "# CSS Flexbox & CSS Grid 📐\n\nFlexbox and CSS Grid are the twin superpowers of modern web layout design. They replace decades of fragile float and table hacks with robust, flexible, two-dimensional layout systems.\n\n## What you'll master:\n- 🔄 **Flexbox Foundations** - Main axis, cross axis, and flex containers\n- 🎯 **Alignment & Distribution** - `justify-content`, `align-items`, and `align-self`\n- 📏 **Flex Items Sizing** - `flex-grow`, `flex-shrink`, and `flex-basis`\n- 🗂️ **CSS Grid Foundations** - Grid containers, track sizing with `fr`, and `gap`\n- 🧩 **Grid Template Areas** - Visual ASCII-style page layouts\n- ⚖️ **Flexbox vs Grid** - Knowing exactly when to choose which"
+        },
+        {
+            "id": "css_flex_2",
+            "type": "content",
+            "title": "Flexbox Concept: One-Dimensional Layout",
+            "content": "# What is Flexbox? 💡\n\nFlexbox (**Flexible Box Layout**) is designed for **one-dimensional** layouts: arranging items along a single axis (either horizontally as a row OR vertically as a column).\n\n```css_not\n.flex-container {\n  display: flex; /* Activates Flexbox context */\n}\n```\n\nWhen `display: flex` is applied to a parent:\n1. The parent becomes a **flex container**.\n2. All direct children immediately become **flex items**.\n3. Children line up horizontally side-by-side in a single row by default!"
+        },
+        {
+            "id": "css_flex_3",
+            "type": "content",
+            "title": "The Main Axis vs Cross Axis",
+            "content": "# The Main Axis vs Cross Axis 🧭\n\nFlexbox operates along two perpendicular axes:\n\n```\n        ┌────────────────────────────────────────────────────────┐\n        │                                                        │\nMAIN    │   [ Item 1 ]   ───>   [ Item 2 ]   ───>   [ Item 3 ]   │\nAXIS    │                                                        │\n        └────────────────────────────────────────────────────────┘\n                                    │\n                               CROSS│AXIS\n                                    ▼\n```\n\n- **Main Axis:** Determined by `flex-direction`. Items flow along this axis.\n- **Cross Axis:** Runs perpendicular to the main axis.\n\n```css_not\n.container {\n  display: flex;\n  flex-direction: row;            /* Main axis is horizontal (default) */\n  /* flex-direction: column; */   /* Main axis flips to vertical! */\n}\n```"
+        },
+        {
+            "id": "css_flex_4",
+            "type": "content",
+            "title": "Justify Content (Main Axis Alignment)",
+            "content": "# Aligning on the Main Axis: `justify-content` 🎯\n\n`justify-content` controls how extra space is distributed along the main axis:\n\n```css_not\n.container {\n  display: flex;\n  justify-content: space-between;\n}\n```\n\n| Value | Behavior |\n| :--- | :--- |\n| `flex-start` | Items pack against the start (default) |\n| `flex-end` | Items pack against the end |\n| `center` | Items centered along the axis |\n| `space-between` | First item at start, last at end, equal space between |\n| `space-around` | Equal space around every item |\n| `space-evenly` | Exactly equal space between all items and borders |"
+        },
+        {
+            "id": "css_flex_quiz_1",
+            "type": "quiz",
+            "title": "Flexbox Axis Quiz",
+            "content": "Test your flexbox alignment knowledge.",
+            "quizQuestion": "Which property distributes free space along the main axis of a flex container?",
+            "quizOptions": [
+                "align-items",
+                "justify-content",
+                "flex-wrap",
+                "align-content"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_flex_5",
+            "type": "content",
+            "title": "Align Items (Cross Axis Alignment)",
+            "content": "# Aligning on the Cross Axis: `align-items` ⚖️\n\n`align-items` dictates how items are positioned along the perpendicular cross axis:\n\n```css_not\n.navbar {\n  display: flex;\n  align-items: center; /* Centers items vertically when direction is row */\n  height: 70px;\n}\n```\n\n- `stretch` *(Default)*: Items stretch to match the height of the tallest item.\n- `center`: Items centered vertically along the cross axis.\n- `flex-start`: Items align to the top/start of the cross axis.\n- `flex-end`: Items align to the bottom/end of the cross axis.\n- `baseline`: Items align according to the text baseline of their content."
+        },
+        {
+            "id": "css_flex_6",
+            "type": "content",
+            "title": "Centering Everything: The Holy Grail",
+            "content": "# The 2-Line Perfect Centering 🎯\n\nCentering an element perfectly in both directions used to be notoriously difficult. With Flexbox, it takes just two lines:\n\n```css_not\n.hero-wrapper {\n  display: flex;\n  justify-content: center; /* Center horizontally */\n  align-items: center;     /* Center vertically */\n  min-height: 100vh;\n}\n```\n\nWhatever is placed inside `.hero-wrapper` will sit in the dead center of the screen!"
+        },
+        {
+            "id": "css_flex_7",
+            "type": "content",
+            "title": "Flex Wrapping & Spacing (gap)",
+            "content": "# Multi-Line Flex: `flex-wrap` & `gap` 🔄\n\nBy default, flex items attempt to squeeze onto a single line. Use `flex-wrap: wrap` to allow items to wrap onto new lines!\n\n```css_not\n.card-grid {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 24px; /* Sets 24px spacing between all items both horizontally and vertically! */\n}\n```\n\n- `gap`: Eliminates the need for hacky child margins!\n- `row-gap` and `column-gap` can set horizontal and vertical spacing independently."
+        },
+        {
+            "id": "css_flex_8",
+            "type": "content",
+            "title": "Flex Items: grow, shrink, and basis",
+            "content": "# Flex Items: `flex-grow`, `flex-shrink`, `flex-basis` 📏\n\nControl how individual child items expand and contract:\n\n1. **`flex-grow`**: Factor determining how much remaining free space the item takes up (default: 0).\n2. **`flex-shrink`**: Factor determining how much the item shrinks when space is constrained (default: 1).\n3. **`flex-basis`**: Initial default size before remaining space is distributed (e.g. `200px` or `auto`).\n\n```css_not\n/* The Shorthand: flex: [grow] [shrink] [basis] */\n.sidebar {\n  flex: 0 0 250px; /* Never grow, never shrink, stay fixed at 250px */\n}\n\n.content {\n  flex: 1 1 auto;  /* Grow and shrink dynamically to fill all remaining space! */\n}\n```"
+        },
+        {
+            "id": "css_flex_9",
+            "type": "content",
+            "title": "Individual Item Alignment: align-self & order",
+            "content": "# Individual Item Control: `align-self` & `order` 🎛️\n\n## 1. `align-self`:\nOverrides `align-items` for a specific single item:\n```css_not\n.special-item {\n  align-self: flex-end; /* Pushes just this single item to the bottom */\n}\n```\n\n## 2. `order`:\nReorders items visually without altering HTML source code:\n```css_not\n.first-on-mobile {\n  order: -1; /* Appears first visually */\n}\n```\n\n> ⚠️ **Accessibility Warning:** `order` changes visual order only; screen readers still read items in original DOM order."
+        },
+        {
+            "id": "css_flex_quiz_2",
+            "type": "quiz",
+            "title": "Flex Item Sizing Quiz",
+            "content": "Test your flex item knowledge.",
+            "quizQuestion": "What does 'flex: 1' shorthand tell a flex item to do?",
+            "quizOptions": [
+                "Lock to 1px width",
+                "Grow to take up available free space proportionally",
+                "Shrink to 0 width",
+                "Display as inline"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_flex_10",
+            "type": "content",
+            "title": "Introduction to CSS Grid",
+            "content": "# CSS Grid: Two-Dimensional Layout 🗂️\n\nWhile Flexbox is one-dimensional (row OR column), **CSS Grid** is **two-dimensional**: it handles rows AND columns simultaneously!\n\n```css_not\n.grid-container {\n  display: grid;\n  grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */\n  gap: 20px;\n}\n```\n\n## Grid Terminology:\n- **Grid Container:** The element with `display: grid`.\n- **Grid Track:** A single column or a single row.\n- **Grid Cell:** The intersection of a row and a column (like an Excel cell).\n- **Grid Area:** A rectangular group of one or more adjacent grid cells."
+        },
+        {
+            "id": "css_flex_11",
+            "type": "content",
+            "title": "The Fractional Unit (fr) & repeat()",
+            "content": "# The Fractional Unit (`fr`) & `repeat()` 🍰\n\nThe `fr` unit represents a fraction of the remaining free space in the grid container:\n\n```css_not\n.layout {\n  display: grid;\n  /* Sidebar takes 1 fraction, main content takes 3 fractions */\n  grid-template-columns: 1fr 3fr;\n}\n```\n\n## The `repeat()` Function:\nAvoid repeating identical column declarations:\n```css_not\n/* Creates 12 equal columns */\ngrid-template-columns: repeat(12, 1fr);\n\n/* 4 columns of 200px */\ngrid-template-columns: repeat(4, 200px);\n```"
+        },
+        {
+            "id": "css_flex_12",
+            "type": "content",
+            "title": "Auto-Fit, Auto-Fill, and minmax()",
+            "content": "# Responsive Grids Without Media Queries 🚀\n\nYou can build fully responsive grids that adapt to any screen size without writing a single media query:\n\n```css_not\n.responsive-gallery {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n  gap: 16px;\n}\n```\n\n## How It Works:\n- `minmax(250px, 1fr)`: Each card must be at least 250px wide, but can stretch up to 1fr.\n- `auto-fit`: The browser calculates how many 250px columns fit on screen. If 3 fit, it creates 3 columns; if 1 fits on a phone, it automatically collapses into 1 column!"
+        },
+        {
+            "id": "css_flex_13",
+            "type": "content",
+            "title": "Positioning by Grid Lines",
+            "content": "# Positioning Items by Grid Lines 📏\n\nGrid tracks are separated by numbered grid lines starting at index `1`.\n\n```css_not\n.featured-article {\n  /* Spans from column line 1 to column line 3 */\n  grid-column: 1 / 3;\n  \n  /* Spans down 2 rows */\n  grid-row: 1 / span 2;\n}\n```\n\n```\nLine 1        Line 2        Line 3        Line 4\n  │             │             │             │\n  ├─── Col 1 ───┼─── Col 2 ───┼─── Col 3 ───┤\n```\n\nYou can also use negative line numbers: `grid-column: 1 / -1;` spans across the entire grid from first to last line!"
+        },
+        {
+            "id": "css_flex_14",
+            "type": "content",
+            "title": "Grid Template Areas",
+            "content": "# Visual Layouts: `grid-template-areas` 🧩\n\nCSS Grid allows you to lay out pages visually using named areas like an ASCII diagram!\n\n```html_not\n<div class=\"site-layout\">\n  <header>Header</header>\n  <nav>Nav</nav>\n  <main>Main Content</main>\n  <footer>Footer</footer>\n</div>\n```\n\n```css_not\n.site-layout {\n  display: grid;\n  grid-template-columns: 200px 1fr;\n  grid-template-rows: auto 1fr auto;\n  grid-template-areas:\n    \"header  header\"\n    \"sidebar content\"\n    \"footer  footer\";\n  min-height: 100vh;\n}\n\nheader { grid-area: header; }\nnav    { grid-area: sidebar; }\nmain   { grid-area: content; }\nfooter { grid-area: footer; }\n```"
+        },
+        {
+            "id": "css_flex_quiz_3",
+            "type": "quiz",
+            "title": "CSS Grid Quiz",
+            "content": "Test your CSS Grid knowledge.",
+            "quizQuestion": "What does 'grid-column: 1 / -1;' instruct a grid item to do?",
+            "quizOptions": [
+                "Hide the item completely",
+                "Span all columns from the first line to the very last line",
+                "Move the item to row index 1",
+                "Shrink the item to 1px"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_flex_15",
+            "type": "content",
+            "title": "Flexbox vs Grid: The Golden Decision",
+            "content": "# Flexbox vs Grid: When to Choose Which ⚖️\n\nBoth engines complement each other and are used together in modern applications!\n\n| Feature | Choose Flexbox When | Choose CSS Grid When |\n| :--- | :--- | :--- |\n| **Dimension** | 1D (Row OR Column) | 2D (Rows AND Columns) |\n| **Philosophy** | Content-first (items push container) | Container-first (tracks define structure) |\n| **Use Cases** | Navbars, button groups, form inputs, toolbars, alignment inside cards | Full-page layouts, photo galleries, dashboards, magazine editorial grids |\n\n> 🎯 **Pro Pattern:** Use **CSS Grid** for the overarching macro page layout, and **Flexbox** inside individual components for micro alignment!"
+        },
+        {
+            "id": "css_flex_16",
+            "type": "content",
+            "title": "Combining Flexbox and Grid",
+            "content": "# Combining Flexbox and Grid in Real Projects 🏗️\n\n```html_not\n<div class=\"dashboard-grid\">\n  <article class=\"metric-card\">\n    <div class=\"card-header\">\n      <h3>Active Users</h3>\n      <span class=\"badge\">+12%</span>\n    </div>\n    <p class=\"value\">24,591</p>\n  </article>\n</div>\n```\n\n```css_not\n/* Macro 2D Layout with Grid */\n.dashboard-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\n  gap: 20px;\n}\n\n/* Micro 1D Alignment with Flexbox inside each Card */\n.card-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n```"
+        },
+        {
+            "id": "css_flex_17",
+            "type": "content",
+            "title": "Common Flexbox & Grid Pitfalls",
+            "content": "# Common Pitfalls to Avoid ⚠️\n\n1. ❌ **Forgetting `min-width: 0` on flex items:** Flex items have `min-width: auto` by default, which prevents text from truncating with ellipsis (`text-overflow: ellipsis`) unless you set `min-width: 0;` on the flex child!\n2. ❌ **Using floats for layouts:** Floats were meant for wrapping text around images in 1996. Never use floats for structural columns!\n3. ❌ **Overcomplicating simple 1D lists with Grid:** If you only need a single row of tags or a navbar, Flexbox is simpler and lighter."
+        },
+        {
+            "id": "css_flex_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Flexbox & Grid Mastered! 🏆\n\nYou have conquered the two most essential layout engines in modern web engineering!\n\n## Key Takeaways:\n- ✅ **Flexbox (1D):** Manages flow along the main axis (`justify-content`) and cross axis (`align-items`).\n- ✅ **Flex Sizing:** `flex: 1` allows items to grow dynamically into free space.\n- ✅ **CSS Grid (2D):** Manages rows and columns simultaneously with `fr` units.\n- ✅ **Responsive Magic:** `repeat(auto-fit, minmax(250px, 1fr))` creates adaptive layouts without media queries.\n- ✅ **ASCII Layouts:** `grid-template-areas` makes entire page templates clean and visual.\n\n## Up Next:\nIn the next module, explore **CSS Typography: Fonts, Web Fonts, Alignment, Line Height, and Letter Spacing**! 🚀"
+        }
+    ]
+}

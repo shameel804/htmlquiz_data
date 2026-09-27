@@ -1,0 +1,159 @@
+{
+    "id": "learn_js_async",
+    "topicId": "async",
+    "topicTitle": "Asynchronous JavaScript",
+    "description": "Master callbacks, promises, async/await, the event loop, and Promise concurrency.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "js_async_1",
+            "type": "content",
+            "title": "Welcome to Asynchronous JavaScript",
+            "content": "# Asynchronous JavaScript ⏳\n\nJavaScript is single-threaded: it has one call stack and executes one command at a time. Yet it handles thousands of network requests, timers, and database queries without freezing!\n\n## What you'll master:\n- 🧵 **The Event Loop** - Call stack, microtask queue, and task queue\n- 🔄 **Callbacks & Callback Hell** - The historical evolution of async code\n- 🤝 **Promises Demystified** - Pending, Fulfilled, and Rejected states\n- ⚡ **Async / Await Syntax** - Writing asynchronous code that reads like synchronous code\n- 🏎️ **Promise Concurrency** - `Promise.all()`, `allSettled()`, and `race()`"
+        },
+        {
+            "id": "js_async_2",
+            "type": "content",
+            "title": "Synchronous vs Asynchronous",
+            "content": "# Synchronous vs Asynchronous Execution ⏳\n\n- **Synchronous (Blocking):** Code runs line by line in order. Each line must finish before the next line can begin. Long operations freeze the browser!\n- **Asynchronous (Non-Blocking):** Long-running operations (API requests, timers) run in the background. When ready, their callback runs, allowing other code to continue uninterrupted!\n\n```javascript\nconsole.log(\"1. Starting task\");\n\nsetTimeout(() => {\n  console.log(\"2. Timer finished (after 100ms)\");\n}, 100);\n\nconsole.log(\"3. Continuing execution without waiting!\");\n```\n\n<!-- FULL_CODE_START\nconsole.log(\"1. Starting task\");\n\nsetTimeout(() => {\n  console.log(\"2. Timer callback fired!\");\n}, 50);\n\nconsole.log(\"3. Ending task immediately!\");\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_async_3",
+            "type": "content",
+            "title": "The Event Loop Demystified",
+            "content": "# The JavaScript Event Loop 🔄\n\nHow does single-threaded JavaScript handle asynchronous tasks?\n\n```\n┌─────────────────┐       ┌─────────────────┐\n│   CALL STACK    │       │    WEB APIs     │\n│  (Executes JS)  │       │  (Timers, HTTP) │\n└────────┬────────┘       └────────┬────────┘\n         │                         │\n         │  ◄── Event Loop ───┐    │ Task completes\n         ▼                    │    ▼\n┌─────────────────┐       ┌─────────────────┐\n│ MICROTASK QUEUE │       │   TASK QUEUE    │\n│ (Promise .then) │       │  (setTimeout)   │\n└─────────────────┘       └─────────────────┘\n```\n\n1. Sync code runs on the **Call Stack**.\n2. Async tasks run in background Web APIs.\n3. When finished, callbacks wait in the **Task Queue** or **Microtask Queue**.\n4. The **Event Loop** checks: when Call Stack is empty, it pushes waiting callbacks onto the stack!"
+        },
+        {
+            "id": "js_async_4",
+            "type": "content",
+            "title": "Callbacks & Callback Hell",
+            "content": "# Callbacks and 'Callback Hell' 🌋\n\nBefore Promises, asynchronous code relied entirely on nested callbacks:\n\n```javascript\n// The infamous \"Pyramid of Doom\"\ngetUser(userId, (user) => {\n  getOrders(user.id, (orders) => {\n    getOrderDetails(orders[0].id, (details) => {\n      calculateTotal(details, (total) => {\n        console.log(\"Total:\", total);\n      });\n    });\n  });\n});\n```\n\nDeep nesting made error handling, readability, and debugging nightmarish!"
+        },
+        {
+            "id": "js_async_quiz_1",
+            "type": "quiz",
+            "title": "Async Basics Quiz",
+            "content": "Test your knowledge of JavaScript async architecture.",
+            "quizQuestion": "What mechanism continually monitors the Call Stack and transfers completed asynchronous callbacks from queues onto the stack?",
+            "quizOptions": [
+                "The Garbage Collector",
+                "The Event Loop",
+                "The JIT Compiler",
+                "The CSS Engine"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_async_5",
+            "type": "content",
+            "title": "Introduction to Promises",
+            "content": "# Introduction to Promises 🤝\n\nA **Promise** is an object representing the eventual completion (or failure) of an asynchronous operation.\n\n## The 3 Promise States:\n1. **Pending:** Initial state, neither fulfilled nor rejected.\n2. **Fulfilled:** Operation completed successfully (`resolve(data)`).\n3. **Rejected:** Operation failed (`reject(error)`).\n\n```javascript\nconst myPromise = new Promise((resolve, reject) => {\n  const success = true;\n  if (success) {\n    resolve(\"Data retrieved successfully!\");\n  } else {\n    reject(new Error(\"Network failure\"));\n  }\n});\n\nmyPromise.then(data => console.log(data));\n```\n\n<!-- FULL_CODE_START\nconst myPromise = new Promise((resolve, reject) => {\n  const success = true;\n  if (success) {\n    resolve(\"Data retrieved successfully!\");\n  } else {\n    reject(new Error(\"Network failure\"));\n  }\n});\n\nmyPromise\n  .then(data => console.log(\"Promise resolved:\", data))\n  .catch(err => console.log(\"Promise rejected:\", err.message));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_async_6",
+            "type": "content",
+            "title": "Consuming Promises: then, catch, finally",
+            "content": "# Consuming Promises: `.then()`, `.catch()`, `.finally()` 🎣\n\n```javascript\nfunction fetchUserData(userId) {\n  return new Promise((resolve, reject) => {\n    if (userId > 0) {\n      resolve({ id: userId, name: \"Marcus\" });\n    } else {\n      reject(new Error(\"Invalid User ID\"));\n    }\n  });\n}\n\nfetchUserData(1)\n  .then(user => {\n    console.log(\"User loaded:\", user.name);\n    return user.id; // Returns value to next .then()!\n  })\n  .then(id => console.log(\"Loaded ID:\", id))\n  .catch(error => console.error(\"Caught error:\", error.message))\n  .finally(() => console.log(\"Cleanup completed (always runs!).\"));\n```\n\n<!-- FULL_CODE_START\nfunction fetchUserData(userId) {\n  return new Promise((resolve, reject) => {\n    if (userId > 0) {\n      resolve({ id: userId, name: \"Marcus\" });\n    } else {\n      reject(new Error(\"Invalid User ID\"));\n    }\n  });\n}\n\nfetchUserData(1)\n  .then(user => {\n    console.log(\"User loaded:\", user.name);\n    return user.id;\n  })\n  .then(id => console.log(\"Chained ID:\", id))\n  .catch(err => console.error(err))\n  .finally(() => console.log(\"Operation finished.\"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_async_7",
+            "type": "content",
+            "title": "Modern Async / Await Syntax",
+            "content": "# Modern `async` and `await` ⚡\n\nIntroduced in ES2017, `async` / `await` allows you to write promise-based asynchronous code that reads like synchronous sequential code!\n\n```javascript\nasync function loadDashboard() {\n  console.log(\"Loading dashboard...\");\n  \n  // 'await' pauses execution until the promise resolves!\n  const user = await fetchUserData(1);\n  console.log(`Welcome back, ${user.name}!`);\n  \n  return \"Dashboard Ready\";\n}\n\nloadDashboard();\n```\n\n<!-- FULL_CODE_START\nfunction simulateFetch(data, delayMs) {\n  return new Promise(resolve => setTimeout(() => resolve(data), delayMs));\n}\n\nasync function loadDashboard() {\n  console.log(\"Step 1: Requesting user...\");\n  const user = await simulateFetch({ name: \"Elena\", role: \"Admin\" }, 50);\n  console.log(\"Step 2: User received:\", user.name);\n  return `Dashboard for ${user.name} loaded.`;\n}\n\nloadDashboard().then(status => console.log(\"Status:\", status));\nFULL_CODE_END -->\n\n> 💡 **Notice:** `await` can only be used inside functions marked with the `async` keyword (or top-level in ES modules)."
+        },
+        {
+            "id": "js_async_8",
+            "type": "content",
+            "title": "Error Handling with async/await (try...catch)",
+            "content": "# Error Handling with `try...catch` 🛡️\n\nHandle errors in `async`/`await` using standard `try...catch` blocks:\n\n```javascript\nasync function executeTask() {\n  try {\n    const result = await riskyNetworkCall();\n    console.log(\"Result:\", result);\n  } catch (error) {\n    console.error(\"Caught network error:\", error.message);\n  } finally {\n    console.log(\"Finished request lifecycle.\");\n  }\n}\n```\n\n<!-- FULL_CODE_START\nfunction failingOperation() {\n  return new Promise((_, reject) => {\n    setTimeout(() => reject(new Error(\"500 Internal Server Error\")), 30);\n  });\n}\n\nasync function executeTask() {\n  try {\n    console.log(\"Attempting operation...\");\n    await failingOperation();\n  } catch (error) {\n    console.log(\"Gracefully handled error:\", error.message);\n  } finally {\n    console.log(\"Cleanup in finally executed.\");\n  }\n}\n\nexecuteTask();\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_async_quiz_2",
+            "type": "quiz",
+            "title": "Async/Await Quiz",
+            "content": "Test your knowledge of async/await.",
+            "quizQuestion": "What does a function marked with the 'async' keyword always return?",
+            "quizOptions": [
+                "A Promise",
+                "A Generator",
+                "undefined",
+                "A Callback Function"
+            ],
+            "correctOptionIndex": 0
+        },
+        {
+            "id": "js_async_9",
+            "type": "content",
+            "title": "Concurrent Execution: Promise.all",
+            "content": "# Parallel Execution: `Promise.all()` 🚀\n\nWhen you have multiple independent promises, running them sequentially with `await` wastes time. `Promise.all()` runs them concurrently in parallel!\n\n```javascript\nconst fetchUsers = Promise.resolve([\"Alice\", \"Bob\"]);\nconst fetchProducts = Promise.resolve([\"Laptop\", \"Mouse\"]);\n\n// Runs concurrently!\nconst [users, products] = await Promise.all([fetchUsers, fetchProducts]);\n\nconsole.log(\"Users:\", users);\nconsole.log(\"Products:\", products);\n```\n\n<!-- FULL_CODE_START\nconst p1 = Promise.resolve(\"Users Data\");\nconst p2 = Promise.resolve(\"Analytics Data\");\nconst p3 = Promise.resolve(\"Notifications Data\");\n\nPromise.all([p1, p2, p3]).then(([users, analytics, notifs]) => {\n  console.log(\"All parallel promises resolved:\");\n  console.log(\"-\", users);\n  console.log(\"-\", analytics);\n  console.log(\"-\", notifs);\n});\nFULL_CODE_END -->\n\n> ⚠️ **Fail-Fast Behavior:** If even **one** promise in `Promise.all()` rejects, the entire `Promise.all()` rejects immediately!"
+        },
+        {
+            "id": "js_async_10",
+            "type": "content",
+            "title": "Resilient Concurrency: Promise.allSettled",
+            "content": "# Resilient Parallelism: `Promise.allSettled()` 🛡️\n\nUnlike `Promise.all()`, `Promise.allSettled()` **never rejects**! It waits for all promises to finish and returns an array showing the outcome of each:\n\n```javascript\nconst p1 = Promise.resolve(\"Success 1\");\nconst p2 = Promise.reject(new Error(\"Failed 2\"));\n\nconst results = await Promise.allSettled([p1, p2]);\nconsole.log(results);\n// [\n//   { status: 'fulfilled', value: 'Success 1' },\n//   { status: 'rejected', reason: Error: Failed 2 }\n// ]\n```\n\n<!-- FULL_CODE_START\nconst p1 = Promise.resolve(\"Success 1\");\nconst p2 = Promise.reject(new Error(\"Failed 2\"));\n\nPromise.allSettled([p1, p2]).then(results => {\n  results.forEach((res, i) => {\n    if (res.status === 'fulfilled') {\n      console.log(`Promise ${i+1}: Fulfilled with value \"${res.value}\"`);\n    } else {\n      console.log(`Promise ${i+1}: Rejected with reason \"${res.reason.message}\"`);\n    }\n  });\n});\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_async_11",
+            "type": "content",
+            "title": "Promise Racing: Promise.race & Promise.any",
+            "content": "# Racing Promises: `Promise.race` & `Promise.any` 🏎️\n\n## 1. `Promise.race()`:\nResolves or rejects as soon as the **very first** promise settles:\n```javascript\n// Perfect for adding network timeouts!\nconst data = await Promise.race([\n  fetchData(),\n  new Promise((_, reject) => setTimeout(() => reject(new Error(\"Timeout!\")), 5000))\n]);\n```\n\n## 2. `Promise.any()`:\nResolves as soon as the **first promise succeeds** (ignores rejections unless all fail!)."
+        },
+        {
+            "id": "js_async_12",
+            "type": "content",
+            "title": "Microtasks vs Macrotasks",
+            "content": "# Microtasks vs Macrotasks Execution Order ⏱️\n\nLook at this classic JavaScript interview question:\n\n```javascript\nconsole.log(\"1. Synchronous\");\n\nsetTimeout(() => {\n  console.log(\"2. Macrotask (setTimeout)\");\n}, 0);\n\nPromise.resolve().then(() => {\n  console.log(\"3. Microtask (Promise)\");\n});\n\nconsole.log(\"4. Synchronous\");\n```\n\n## Output:\n`1. Synchronous` -> `4. Synchronous` -> `3. Microtask` -> `2. Macrotask`!\nMicrotasks (Promises) always run before Macrotasks (`setTimeout`).\n\n<!-- FULL_CODE_START\nconsole.log(\"1. Synchronous start\");\n\nsetTimeout(() => {\n  console.log(\"4. Macrotask (setTimeout 0ms)\");\n}, 0);\n\nPromise.resolve().then(() => {\n  console.log(\"3. Microtask (Promise.then)\");\n});\n\nconsole.log(\"2. Synchronous end\");\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_async_quiz_3",
+            "type": "quiz",
+            "title": "Concurrency Quiz",
+            "content": "Test your knowledge of Promise combinators.",
+            "quizQuestion": "Which Promise combinator method waits for all promises to finish and never rejects, even if some promises fail?",
+            "quizOptions": [
+                "Promise.all()",
+                "Promise.allSettled()",
+                "Promise.race()",
+                "Promise.any()"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_async_13",
+            "type": "content",
+            "title": "Sequential vs Parallel Execution",
+            "content": "# Sequential vs Parallel Await Trap ⚠️\n\nDon't await independent operations sequentially!\n\n```javascript\n// ❌ SLOW (Sequential): Takes 2s + 2s = 4 seconds total!\nconst user = await fetchUser();       // 2 seconds\nconst orders = await fetchOrders();   // 2 seconds\n\n// ✅ FAST (Parallel): Takes only 2 seconds total!\nconst [user, orders] = await Promise.all([\n  fetchUser(),\n  fetchOrders()\n]);\n```"
+        },
+        {
+            "id": "js_async_14",
+            "type": "content",
+            "title": "Converting Callbacks to Promises (Promisification)",
+            "content": "# Converting Callbacks to Promises 🔄\n\nWrap legacy callback APIs inside new Promises:\n\n```javascript\nfunction delay(ms) {\n  return new Promise(resolve => setTimeout(resolve, ms));\n}\n\n// Clean sleep utility!\nasync function run() {\n  console.log(\"Waiting 100ms...\");\n  await delay(100);\n  console.log(\"Done waiting!\");\n}\n\nrun();\n```\n\n<!-- FULL_CODE_START\nfunction delay(ms) {\n  return new Promise(resolve => setTimeout(resolve, ms));\n}\n\nasync function runDemo() {\n  console.log(\"Timer started...\");\n  await delay(50);\n  console.log(\"Timer completed with Promisified delay!\");\n}\n\nrunDemo();\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_async_15",
+            "type": "content",
+            "title": "Top-Level Await",
+            "content": "# Top-Level `await` in Modern ES Modules 🚀\n\nIn modern ES Modules (`type=\"module\"` in package.json or HTML script), you can use `await` at the top level without wrapping it in an `async` function:\n\n```javascript\n// Valid in ES Modules!\nconst config = await fetch(\"/config.json\").then(r => r.json());\nconsole.log(\"Loaded configuration:\", config);\n```"
+        },
+        {
+            "id": "js_async_16",
+            "type": "content",
+            "title": "Async Iteration with for await...of",
+            "content": "# Async Iteration: `for await...of` 🔁\n\nIterate over asynchronous iterables or arrays of promises sequentially:\n\n```javascript\nasync function processBatches(promiseList) {\n  for await (const result of promiseList) {\n    console.log(\"Processed batch item:\", result);\n  }\n}\n\nconst tasks = [\n  Promise.resolve(\"Task 1\"),\n  Promise.resolve(\"Task 2\"),\n  Promise.resolve(\"Task 3\")\n];\n\nprocessBatches(tasks);\n```\n\n<!-- FULL_CODE_START\nasync function processBatches(promiseList) {\n  for await (const result of promiseList) {\n    console.log(\"Processed batch item:\", result);\n  }\n}\n\nconst tasks = [\n  Promise.resolve(\"Task 1\"),\n  Promise.resolve(\"Task 2\"),\n  Promise.resolve(\"Task 3\")\n];\n\nprocessBatches(tasks);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_async_17",
+            "type": "content",
+            "title": "Asynchronous Error Best Practices",
+            "content": "# Async Error Handling Best Practices 🛡️\n\n1. **Always handle rejections:** Unhandled promise rejections can crash Node.js processes.\n2. **Never mix `.then()` with `await` in the same function:** Pick one style and stick to it consistently (prefer `async/await`).\n3. **Use `Promise.allSettled()` for batch user operations:** Don't let one failed email send crash the entire batch of 100 emails!"
+        },
+        {
+            "id": "js_async_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Asynchronous JavaScript Mastered! 🌟\n\nYou now command non-blocking JavaScript, Promise lifecycles, and concurrency patterns!\n\n## Key Takeaways:\n- ✅ **The Event Loop:** Call stack -> Microtasks (Promises) -> Macrotasks (`setTimeout`).\n- ✅ **Promises:** Represent async operations with `pending`, `fulfilled`, or `rejected`.\n- ✅ **`async/await`:** Write asynchronous code with synchronous readability.\n- ✅ **Error Handling:** Always wrap `await` calls in `try...catch` blocks.\n- ✅ **Concurrency:** Use `Promise.all()` for parallel speed and `Promise.allSettled()` for resilience.\n\n## Up Next:\nIn the next module, handle exceptions and build resilient applications: **JavaScript Error Handling & Debugging**! 🚀"
+        }
+    ]
+}

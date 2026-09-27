@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Conditional Branching with If-Else",
+    "ques": "Write a JavaScript function that evaluates student exam numerical grades (0-100) and returns letter grades ('A', 'B', 'C', 'D', 'F') using structured `if`, `else if`, and `else` blocks.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function assignLetterGrade(score) {\n  if (score < 0 || score > 100) {\n    return \"Invalid Score: Must be between 0 and 100\";\n  }\n\n  if (score >= 90) {\n    return \"A\";\n  } else if (score >= 80) {\n    return \"B\";\n  } else if (score >= 70) {\n    return \"C\";\n  } else if (score >= 60) {\n    return \"D\";\n  } else {\n    return \"F\";\n  }\n}\n\nconsole.log(assignLetterGrade(94)); // A\nconsole.log(assignLetterGrade(83)); // B\nconsole.log(assignLetterGrade(52)); // F"
+    },
+    "explanation": "`if-else` chains evaluate conditions sequentially from top to bottom, executing the first branch that evaluates to a truthy value and skipping the remainder."
+  },
+  {
+    "title": "Multi-Way Branching with Switch-Case",
+    "ques": "Explain the mechanics of the **`switch-case`** statement, the importance of the `break` statement, and the `default` fallback. Write a code sample handling user role permissions.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function getAccessDescription(role) {\n  let description = \"\";\n\n  switch (role) {\n    case \"admin\":\n      description = \"Full system read, write, and user deletion access.\";\n      break; // Critical: prevents fallthrough into subsequent cases!\n      \n    case \"editor\":\n      description = \"Content creation and publishing access.\";\n      break;\n      \n    case \"subscriber\":\n    case \"viewer\": // Multi-case grouping\n      description = \"Read-only access to published articles.\";\n      break;\n      \n    default:\n      description = \"Unrecognized role: No permissions granted.\";\n      break;\n  }\n\n  return description;\n}\n\nconsole.log(getAccessDescription(\"editor\"));\nconsole.log(getAccessDescription(\"viewer\"));"
+    },
+    "explanation": "The `switch` statement evaluates an expression against multiple `case` clauses using strict equality (`===`). Omitting `break` causes execution to fall through to the next case regardless of condition."
+  },
+  {
+    "title": "Iteration with For, While, and Do-While Loops",
+    "ques": "Demonstrate and contrast standard **`for`**, **`while`**, and **`do-while`** loops in JavaScript. Explain why `do-while` guarantees at least one execution.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "// 1. Standard 'for' loop (known iteration count)\nconsole.log(\"--- FOR LOOP ---\");\nfor (let i = 1; i <= 3; i++) {\n  console.log(`Counter: ${i}`);\n}\n\n// 2. 'while' loop (checks condition BEFORE entering body)\nconsole.log(\"--- WHILE LOOP ---\");\nlet energy = 3;\nwhile (energy > 0) {\n  console.log(`Remaining energy: ${energy}`);\n  energy--;\n}\n\n// 3. 'do-while' loop (evaluates condition AFTER executing body at least once)\nconsole.log(\"--- DO-WHILE LOOP ---\");\nlet attempts = 0;\ndo {\n  console.log(`Executed attempt #${attempts}`);\n  attempts++;\n} while (attempts < 0); // Condition is false immediately, yet body executed once!"
+    },
+    "explanation": "`for` loops manage initialization, condition, and increment in one statement. `while` loops check conditions before execution, and `do-while` guarantees the body runs at least once before checking the condition."
+  }
+]

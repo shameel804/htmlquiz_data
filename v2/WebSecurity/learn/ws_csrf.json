@@ -1,0 +1,159 @@
+{
+    "id": "learn_ws_csrf",
+    "topicId": "ws_csrf",
+    "topicTitle": "CSRF & Clickjacking",
+    "description": "Learn how Cross-Site Request Forgery (CSRF) and Clickjacking work, and how to defend using Anti-CSRF tokens, SameSite cookies, and X-Frame-Options.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "ws_csrf_1",
+            "type": "content",
+            "title": "Introduction to CSRF",
+            "content": "# Cross-Site Request Forgery (CSRF) 🎭\n\n**Cross-Site Request Forgery (CSRF)** (also known as \"one-click attack\" or \"session riding\") is an attack where a malicious website tricks a victim's web browser into performing unauthorized actions on a trusted site where the user is currently authenticated.\n\n## The Core Vulnerability Principle\n\nWeb browsers automatically include authentication cookies with **every HTTP request** to a domain, regardless of which website originated the request!\n\nIf an application assumes that any request carrying a valid cookie was intentionally submitted by the user, it is vulnerable to CSRF."
+        },
+        {
+            "id": "ws_csrf_2",
+            "type": "content",
+            "title": "How CSRF Works: A Concrete Scenario",
+            "content": "# Step-by-Step CSRF Attack Mechanics ⚙️\n\nImagine Alice is logged into her bank account at `bank.com`.\n\n1. Alice logs in; `bank.com` sets a session cookie in her browser.\n2. Without logging out, Alice visits `evil-site.com` in another browser tab.\n3. `evil-site.com` contains a hidden image or form:\n   ```html_not\n   <!-- Hidden GET request triggered automatically on page load -->\n   <img src=\"https://bank.com/transfer?amount=10000&toAccount=Attacker123\" width=\"0\" height=\"0\">\n   ```\n4. Alice's browser attempts to download the \"image\", making an HTTP GET request to `bank.com`.\n5. The browser **automatically attaches Alice's session cookie**!\n6. `bank.com` verifies the valid cookie and transfers $10,000 to the attacker without Alice ever knowing!"
+        },
+        {
+            "id": "ws_csrf_3",
+            "type": "content",
+            "title": "CSRF via HTTP POST Forms",
+            "content": "# CSRF via Hidden Auto-Submitting POST Forms 📝\n\nEven if bank transfers require an HTTP POST request, attackers can bypass this with automated hidden forms:\n\n```html_not\n<!-- Hosted on https://evil-site.com/prize.html -->\n<html>\n  <body onload=\"document.forms[0].submit()\">\n    <h1>You won a free iPhone! Processing...</h1>\n    <form action=\"https://bank.com/api/transfer\" method=\"POST\">\n      <input type=\"hidden\" name=\"recipient\" value=\"Attacker\" />\n      <input type=\"hidden\" name=\"amount\" value=\"5000\" />\n    </form>\n  </body>\n</html>\n```\n\nThe moment Alice visits the page, JavaScript automatically submits the form across origins, and the browser attaches her credentials!"
+        },
+        {
+            "id": "ws_csrf_4",
+            "type": "content",
+            "title": "Impact of CSRF Attacks",
+            "content": "# The Real-World Impact of CSRF 💥\n\nA successful CSRF attack can execute any state-changing action the victim is authorized to perform:\n\n- 📧 **Email & Password Reset**: Changing the account's registered email address to an attacker-controlled address.\n- 💸 **Financial Fraud**: Initiating wire transfers, making unauthorized purchases, adding fraudulent shipping addresses.\n- 🔓 **Router Hijacking**: Exploiting home routers using default credentials to change DNS servers to malicious servers.\n- 🛡️ **Privilege Escalation**: Forcing an authenticated administrator to create a new admin user."
+        },
+        {
+            "id": "ws_csrf_quiz_1",
+            "type": "quiz",
+            "title": "CSRF Mechanics Check",
+            "content": "Test your understanding of how CSRF attacks work!",
+            "quizQuestion": "Why are CSRF attacks possible by default in standard web browsers?",
+            "quizOptions": [
+                "Browsers execute all foreign JavaScript without sandbox restrictions",
+                "Browsers automatically attach saved authentication cookies to cross-site requests to that target domain",
+                "Web servers do not support HTTPS encryption",
+                "Attackers can read private cookies directly from the user's hard drive"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ws_csrf_6",
+            "type": "content",
+            "title": "Primary Defense: Anti-CSRF Tokens",
+            "content": "# Anti-CSRF Tokens: Synchronizer Token Pattern 🛡️\n\nThe industry gold standard for CSRF prevention is the **Synchronizer Token Pattern**.\n\n## How It Works\n\n1. When the user loads a form, the server generates a cryptographically random, unpredictable token tied to the user's current session.\n2. The server embeds this token in the HTML form as a hidden input:\n   ```html_not\n   <form action=\"/transfer\" method=\"POST\">\n     <input type=\"hidden\" name=\"_csrf\" value=\"9a8f7c6e5b4a3d2e1f0e9d8c7b6a5\">\n     <input type=\"text\" name=\"amount\">\n     <button type=\"submit\">Transfer</button>\n   </form>\n   ```\n3. When submitted, the server compares the submitted token against the session token. If they do not match or the token is missing, the request is rejected with `403 Forbidden`."
+        },
+        {
+            "id": "ws_csrf_7",
+            "type": "content",
+            "title": "Why Anti-CSRF Tokens Stop Attackers",
+            "content": "# Why Attackers Cannot Forge Anti-CSRF Tokens 🚫\n\nRemember the **Same-Origin Policy (SOP)**?\n\n- An attacker hosting a form on `evil-site.com` can forge the POST request.\n- However, because of SOP, `evil-site.com` **CANNOT read the HTML of `bank.com`**!\n- Because the attacker cannot read the page, they cannot steal the secret `_csrf` token.\n- Without the token, the server immediately denies the forged request."
+        },
+        {
+            "id": "ws_csrf_8",
+            "type": "content",
+            "title": "Anti-CSRF Tokens in Single Page Applications (SPAs)",
+            "content": "# Anti-CSRF Tokens in REST APIs & SPAs 🚀\n\nSingle Page Apps (React/Vue) don't use server-rendered HTML forms. How do they handle CSRF?\n\n## Custom Request Header (`X-CSRF-Token`)\n\n1. Server sets a readable cookie or returns the token via a bootstrap API.\n2. Client JavaScript reads the token and attaches it to a custom HTTP request header:\n   ```javascript_not\n   fetch('/api/transfer', {\n     method: 'POST',\n     headers: {\n       'Content-Type': 'application/json',\n       'X-CSRF-Token': csrfToken,\n     },\n     body: JSON.stringify({ amount: 100 }),\n   });\n   ```\n\n> ⚡ **Why This Works:** A simple cross-origin HTML form or image tag **cannot set custom HTTP headers** without triggering a CORS preflight which the server rejects!"
+        },
+        {
+            "id": "ws_csrf_quiz_2",
+            "type": "quiz",
+            "title": "Anti-CSRF Token Quiz",
+            "content": "Test your knowledge of the Synchronizer Token Pattern!",
+            "quizQuestion": "Why is an attacker on `evil.com` unable to include the victim's valid CSRF token in a forged request?",
+            "quizOptions": [
+                "CSRF tokens are encrypted using the user's password",
+                "The Same-Origin Policy prevents `evil.com` from reading the CSRF token from the legitimate site's HTML",
+                "Browsers block all POST requests that originate from external websites",
+                "Tokens only work when sent over Bluetooth"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ws_csrf_10",
+            "type": "content",
+            "title": "Modern Browser Defense: SameSite Cookie Attribute",
+            "content": "# The Game Changer: `SameSite` Cookie Attribute 🍪\n\nThe `SameSite` cookie attribute allows web developers to control whether cookies are attached to cross-site requests.\n\n## Three Values of SameSite\n\n| Value | Cross-Site Navigations (`<a href>`) | Cross-Site POST Forms | Cross-Site Images/Frames |\n|---|---|---|---|\n| `SameSite=Strict` | ❌ Blocked | ❌ Blocked | ❌ Blocked |\n| `SameSite=Lax` (Default) | ✅ Sent (Top-level GET only) | ❌ Blocked | ❌ Blocked |\n| `SameSite=None` | ✅ Sent (Requires `Secure`) | ✅ Sent | ✅ Sent |\n\n```http_not\nSet-Cookie: sessionId=xyz123; Secure; HttpOnly; SameSite=Lax\n```"
+        },
+        {
+            "id": "ws_csrf_11",
+            "type": "content",
+            "title": "SameSite=Strict vs SameSite=Lax",
+            "content": "# Strict vs Lax in Practice ⚖️\n\n## `SameSite=Strict`\n\nThe cookie is **never** sent in any cross-site context. If a user clicks a link to `bank.com` from an external email or Google search, they will initially appear logged out until they click a link within `bank.com` itself.\n\n- *Best for*: High-security dashboards, banking apps, administrative consoles.\n\n## `SameSite=Lax` (Modern Browser Default)\n\nPermits cookies on top-level incoming navigations (like clicking a link from Google search), but **blocks cookies on cross-site POST forms, iframes, and AJAX requests**.\n\n- *Best for*: General consumer web applications."
+        },
+        {
+            "id": "ws_csrf_12",
+            "type": "content",
+            "title": "Double Submit Cookie Pattern",
+            "content": "# The Double Submit Cookie Pattern 👯\n\nWhat if your API servers are stateless and cannot store session tokens in a database or Redis cache?\n\n## How Double Submit Works\n\n1. When a user authenticates, the server generates a random token and sets it as a non-HttpOnly cookie: `Set-Cookie: csrf-token=random123`.\n2. When submitting a request, frontend JavaScript reads `csrf-token` from the cookie and sends it as a custom header: `X-CSRF-Token: random123`.\n3. The server compares the cookie value against the header value. If both match, the request is authentic.\n\n> ⚠️ **Security Warning:** The Double Submit Cookie pattern must use HMAC cryptographic signing to prevent attackers from overwriting cookies via subdomain poisoning!"
+        },
+        {
+            "id": "ws_csrf_13",
+            "type": "content",
+            "title": "Verifying Origin and Referer Headers",
+            "content": "# Verifying Origin & Referer Headers 🧭\n\nModern browsers automatically send the `Origin` header with state-changing requests (`POST`, `PUT`, `DELETE`).\n\n```http_not\nPOST /api/transfer HTTP/1.1\nHost: mybank.com\nOrigin: https://mybank.com\nReferer: https://mybank.com/transfer-funds\n```\n\n## Server Verification Rule\n\nThe backend should verify that the `Origin` or `Referer` header matches the expected host:\n\n```javascript_not\nconst origin = req.headers['origin'];\nif (!origin || origin !== 'https://mybank.com') {\n  return res.status(403).json({ error: 'Untrusted origin' });\n}\n```"
+        },
+        {
+            "id": "ws_csrf_14",
+            "type": "content",
+            "title": "Clickjacking: The UI Redressing Attack",
+            "content": "# Clickjacking (UI Redressing) 🖱️\n\n**Clickjacking** is a deceptive attack where an attacker embeds a legitimate website inside a transparent `<iframe>` and overlays it on top of an alluring button (e.g. \"Click here to win a car!\").\n\nWhen the user clicks the visible decoy button, they are actually clicking an invisible button inside the iframe (e.g. \"Delete Account\", \"Authorize OAuth App\").\n\n```html_not\n<!-- Attacker HTML -->\n<div style=\"position: relative;\">\n  <button style=\"position: absolute; z-index: 1;\">Click to Claim Free Prize!</button>\n  <!-- Target site rendered completely transparent directly over button -->\n  <iframe src=\"https://victim.com/delete-account\" style=\"opacity: 0; position: absolute; z-index: 2;\"></iframe>\n</div>\n```"
+        },
+        {
+            "id": "ws_csrf_15",
+            "type": "content",
+            "title": "Defense: X-Frame-Options Header",
+            "content": "# Defending Against Clickjacking: `X-Frame-Options` 🛡️\n\nThe `X-Frame-Options` HTTP response header tells the browser whether a page is allowed to be rendered within a `<frame>`, `<iframe>`, or `<object>`.\n\n## Three Directives\n\n1. **`DENY`**: Completely forbids any domain (including the site itself) from framing the page:\n   ```http_not\n   X-Frame-Options: DENY\n   ```\n2. **`SAMEORIGIN`**: Permits framing only if the parent frame is on the exact same origin:\n   ```http_not\n   X-Frame-Options: SAMEORIGIN\n   ```\n3. **`ALLOW-FROM uri`** *(Deprecated)*: Replaced by modern CSP."
+        },
+        {
+            "id": "ws_csrf_16",
+            "type": "content",
+            "title": "Modern Frame Defense: CSP frame-ancestors",
+            "content": "# The Modern Standard: CSP `frame-ancestors` 📜\n\nIn modern web security, Content Security Policy's `frame-ancestors` directive supersedes `X-Frame-Options` with superior granularity.\n\n```http_not\n// 1. Equivalent to DENY (No one can frame this page)\nContent-Security-Policy: frame-ancestors 'none';\n\n// 2. Equivalent to SAMEORIGIN\nContent-Security-Policy: frame-ancestors 'self';\n\n// 3. Whitelist specific trusted partner domains:\nContent-Security-Policy: frame-ancestors 'self' https://trusted-partner.com https://checkout.store.com;\n```\n\n> ⚡ **Recommendation:** Send both `X-Frame-Options: SAMEORIGIN` and `Content-Security-Policy: frame-ancestors 'self'` to protect legacy and modern browsers alike."
+        },
+        {
+            "id": "ws_csrf_17",
+            "type": "content",
+            "title": "Legacy Defense: Frame Busting Scripts",
+            "content": "# Legacy Frame Busting Scripts 🪓\n\nBefore `X-Frame-Options` existed, developers wrote client-side JavaScript to detect and break out of iframes:\n\n```javascript_not\n// Classic Frame Buster\nif (top.location !== self.location) {\n  top.location = self.location; // Break out to top window\n}\n```\n\n## Why Frame Busting Scripts Fail\n\nAttackers can neutralize frame-busting scripts using the HTML5 `sandbox` attribute on the iframe (`<iframe sandbox=\"allow-forms allow-scripts\">`), which prevents the child iframe from redirecting the top window.\n\n**Conclusion:** Always rely on HTTP headers (`X-Frame-Options` & CSP), never on JavaScript frame busters!"
+        },
+        {
+            "id": "ws_csrf_quiz_3",
+            "type": "quiz",
+            "title": "SameSite & Clickjacking Quiz",
+            "content": "Test your knowledge of modern CSRF and frame protection!",
+            "quizQuestion": "Which Content Security Policy directive replaces and enhances the legacy `X-Frame-Options` header?",
+            "quizOptions": [
+                "`script-ancestors`",
+                "`frame-ancestors`",
+                "`block-iframes`",
+                "`no-embed`"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ws_csrf_19",
+            "type": "content",
+            "title": "CSRF Defense in Modern Web Frameworks",
+            "content": "# CSRF Protection in Modern Frameworks ⚙️\n\nMost mature backend frameworks provide automated CSRF protection out of the box:\n\n- **Django**: Auto-enables `CsrfViewMiddleware` and `{% csrf_token %}` tag.\n- **Ruby on Rails**: `protect_from_forgery with: :exception`.\n- **Express.js**: The `csurf` or `@dr.pogodin/csurf` middleware.\n- **ASP.NET Core**: Automatic anti-forgery tokens on all HTML tag helpers.\n\n> ⚠️ **Gotcha:** Do NOT disable CSRF middleware just to make testing with Postman easier!"
+        },
+        {
+            "id": "ws_csrf_20",
+            "type": "content",
+            "title": "Summary: CSRF & Clickjacking",
+            "content": "# CSRF & Clickjacking: Summary 📋\n\n## Key Takeaways\n- **CSRF**: Forces a user's browser to submit authenticated requests to a foreign server.\n- **Anti-CSRF Tokens**: Unpredictable, unique tokens validated per session.\n- **SameSite Cookies**: Set `SameSite=Lax` or `Strict` to prevent ambient cookie attachment on cross-site requests.\n- **Verify Origin**: Inspect `Origin` and `Referer` headers on state-changing requests.\n- **Clickjacking**: Tricking users into clicking invisible iframes.\n- **Frame Defense**: Use `X-Frame-Options: SAMEORIGIN` and `CSP frame-ancestors 'self'`.\n\nNext: Master HTTP Security Headers (CSP, HSTS, and X-Content-Type-Options)! 🛡️"
+        },
+        {
+            "id": "ws_csrf_21",
+            "type": "content",
+            "title": "Next Steps: Security Headers",
+            "content": "# Ahead: HTTP Security Headers 🛡️📜\n\nIn the next module, you will configure critical security headers that turn browser sandboxes into impenetrable fortresses.\n\n## Topics Ahead:\n- **Content Security Policy (CSP)** deep dive: Directives, nonces, and hashes\n- **HTTP Strict Transport Security (HSTS)** and preload lists\n- **MIME Sniffing Prevention**: `X-Content-Type-Options: nosniff`\n- **Referrer-Policy & Permissions-Policy**\n\nLet's harden HTTP headers! 🚀"
+        }
+    ]
+}

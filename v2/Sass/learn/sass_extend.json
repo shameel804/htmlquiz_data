@@ -1,0 +1,159 @@
+{
+    "id": "learn_sass_extend",
+    "topicId": "sass_extend",
+    "topicTitle": "Extend/Inheritance",
+    "description": "Learn Sass inheritance and operators: @extend directive, % placeholder selectors, multiple extends, math operators, and logical operators.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "sass_e_1",
+            "type": "content",
+            "title": "Extend & Inheritance Overview",
+            "content": "# Extend, Inheritance & Operators in Sass 🧬\n\nCSS is notoriously repetitive when multiple elements share 80% of the same styles. Sass provides the **`@extend`** directive and **Placeholder Selectors (`%`)** to achieve true DRY inheritance.\n\n## What You'll Learn in this Module:\n- **The `@extend` Directive**: Inheriting styles between selectors\n- **Placeholder Selectors (`%`)**: Ghost classes that never compile directly\n- **Grouping Output**: How `@extend` minimizes compiled CSS size\n- **Extend vs Mixin**: When to use each for optimal bundle performance\n- **Limitations of `@extend`**: Cross-media-query boundaries and cascade order\n- **Sass Operators**: Arithmetic (`+`, `-`, `*`), equality, and logical operators"
+        },
+        {
+            "id": "sass_e_2",
+            "type": "content",
+            "title": "The @extend Directive",
+            "content": "# The `@extend` Directive 🔗\n\nThe `@extend` directive tells Sass that one selector should inherit the styles of another selector.\n\n```scss_not\n// Base alert message\n.message {\n  padding: 12px 16px;\n  border-radius: 6px;\n  font-size: 14px;\n  border: 1px solid #cbd5e1;\n}\n\n// Specific error alert extending .message\n.message-error {\n@extend .message;\n  background-color: #fef2f2;\n  border-color: #f87171;\n  color: #b91c1c;\n}\n```\n\n## How Sass Compiles `@extend`\n\nInstead of copying properties, Sass groups the selectors together in the compiled CSS:\n\n```css_not\n.message, .message-error {\n  padding: 12px 16px;\n  border-radius: 6px;\n  font-size: 14px;\n  border: 1px solid #cbd5e1;\n}\n\n.message-error {\n  background-color: #fef2f2;\n  border-color: #f87171;\n  color: #b91c1c;\n}\n```"
+        },
+        {
+            "id": "sass_e_3",
+            "type": "content",
+            "title": "Placeholder Selectors (%)",
+            "content": "# Placeholder Selectors: `%` 👻\n\nIn the previous example, `.message` was compiled into the CSS even if no HTML element used the generic class. **Placeholder Selectors (`%`)** solve this!\n\n## What is a Placeholder?\n\nA placeholder begins with `%` instead of `.` or `#`. It is completely invisible to compiled CSS **unless extended**:\n\n```scss_not\n// Ghost placeholder: Won't appear in CSS output on its own!\n%flex-center {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.badge {\n  @extend %flex-center;\n  padding: 4px 8px;\n}\n\n.modal-header {\n  @extend %flex-center;\n  padding: 16px;\n}\n```\n\n## Compiles To:\n```css_not\n.badge, .modal-header {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.badge { padding: 4px 8px; }\n.modal-header { padding: 16px; }\n```"
+        },
+        {
+            "id": "sass_e_quiz_1",
+            "type": "quiz",
+            "title": "Placeholder Selector Check",
+            "content": "Test your knowledge of Sass placeholder selectors!",
+            "quizQuestion": "What makes a placeholder selector `%name` different from a standard class `.name`?",
+            "quizOptions": [
+                "Placeholders compile into CSS ID selectors (`#`)",
+                "Placeholders are only included in the compiled CSS if they are extended by another selector",
+                "Placeholders can only be used inside `@media` queries",
+                "Placeholders run inside the browser JavaScript runtime"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "sass_e_5",
+            "type": "content",
+            "title": "Multiple Extends & Chaining",
+            "content": "# Multiple Extends & Inheritance Chaining ⛓️\n\nA selector can extend multiple placeholders or classes, forming powerful inheritance chains.\n\n```scss_not\n%reset-btn {\n  border: none;\n  background: none;\n  cursor: pointer;\n  font: inherit;\n}\n\n%pill-shape {\n  border-radius: 9999px;\n  padding: 8px 24px;\n}\n\n.pill-button {\n  @extend %reset-btn;\n  @extend %pill-shape;\n  background-color: #6366f1;\n  color: white;\n}\n\n// Chained extension:\n.pill-button-danger {\n  @extend .pill-button; // Inherits %reset-btn, %pill-shape, AND .pill-button styles!\n  background-color: #ef4444;\n}\n```"
+        },
+        {
+            "id": "sass_e_6",
+            "type": "content",
+            "title": "Extend vs Mixin: Deep Comparison",
+            "content": "# Extend vs Mixin: The Architectural Showdown ⚖️\n\nChoosing between `@extend` and `@mixin` directly impacts your CSS bundle size and structure.\n\n## Comparison Matrix\n\n| Factor | `@extend %placeholder` | `@mixin` |\n|---|---|---|\n| **Compilation Strategy** | Combines selectors with commas (`.a, .b { ... }`) | Copies properties inside each selector |\n| **Accepts Arguments?** | ❌ No | ✅ Yes (parameters, defaults, keywords) |\n| **Works Inside Media Queries?** | ❌ Only if target is in *same* query | ✅ Yes, anytime anywhere |\n| **Gzipped CSS Performance** | Gzip handles repetitive mixin code very well | Can create huge messy grouped selectors |\n\n## Rule of Thumb:\n- Use **Mixins** when you need arguments or responsive flexibility.\n- Use **Extend / Placeholders** when elements represent inherently related variants of the same component (e.g. `.btn-primary` and `.btn-danger`)."
+        },
+        {
+            "id": "sass_e_7",
+            "type": "content",
+            "title": "The Critical Limitation: Media Queries & @extend",
+            "content": "# The Great `@extend` Media Query Limitation 🛑\n\nSass does **NOT** allow a selector inside an `@media` query to extend a selector defined outside that query!\n\n## The Breaking Scenario ❌\n\n```scss_not\n%pill-badge {\n  border-radius: 9999px;\n  padding: 4px 8px;\n}\n\n@media (min-width: 768px) {\n  .badge {\n    // COMPILATION ERROR!\n    // You may not @extend an outer selector from within @media.\n    @extend %pill-badge;\n  }\n}\n```\n\n## The Solution ✅\n\nUse a `@mixin` instead! Mixins can be freely included inside media queries without restrictions."
+        },
+        {
+            "id": "sass_e_8",
+            "type": "content",
+            "title": "The Optional Flag: !optional",
+            "content": "# Preventing Crashes with `!optional` 🛡️\n\nBy default, if you `@extend` a selector that doesn't exist in your stylesheet, Sass throws a compilation error.\n\n```scss_not\n// If .custom-theme is missing or commented out, this crashes the build!\n.widget {\n  @extend .custom-theme;\n}\n```\n\n## Using `!optional`\n\nAdd `!optional` to tell the compiler: *\"Extend if available, but don't fail if the selector is not found.\"*\n\n```scss_not\n.widget {\n  @extend .custom-theme !optional;\n}\n```"
+        },
+        {
+            "id": "sass_e_quiz_2",
+            "type": "quiz",
+            "title": "@extend Media Query Quiz",
+            "content": "Test your knowledge of Sass extend constraints!",
+            "quizQuestion": "What happens if you try to `@extend` a selector defined outside an `@media` block from inside that media query?",
+            "quizOptions": [
+                "It works seamlessly and auto-wraps the CSS",
+                "Sass throws a compilation error because cross-media extends are forbidden",
+                "It converts the selector into an inline style attribute",
+                "It removes the media query entirely"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "sass_e_10",
+            "type": "content",
+            "title": "Math Operators in Sass: Addition & Subtraction",
+            "content": "# Arithmetic Operators: `+` and `-` ➕➖\n\nSass supports math operations directly on numeric values with compatible units.\n\n## Compatible Units\n\nSass automatically converts between compatible units (like `px`, `cm`, `mm`, `in`, `pt`):\n\n```scss_not\n.box {\n  width: 100px + 50px;   // 150px\n  height: 2in - 1in;     // 1in (96px)\n  margin: 10px + 2pt;    // 12.66667px (pt converted to px!)\n}\n```\n\n## Incompatible Units\n\nYou **cannot** add incompatible units (e.g. `100% + 20px` or `2rem + 15px`) because Sass doesn't know the browser DOM context. Use native CSS `calc()` for those:\n\n```scss_not\n.fluid-sidebar {\n  width: calc(100% - 240px); // Evaluated by browser\n}\n```"
+        },
+        {
+            "id": "sass_e_11",
+            "type": "content",
+            "title": "Math Operators: Multiplication & Division",
+            "content": "# Arithmetic Operators: `*` and `math.div()` ✖️➗\n\n## Multiplication (`*`)\n\nWhen multiplying, only **one** operand can have a unit (multiplying two units creates squared units like `px*px` which is invalid CSS):\n\n```scss_not\n$spacing: 8px;\n.container {\n  padding: $spacing * 3; // 24px (CORRECT)\n  // padding: 8px * 3px; // ERROR: 24px*px is invalid in CSS!\n}\n```\n\n## Modern Division (`math.div`)\n\n```scss_not\n@use 'sass:math';\n\n$grid-cols: 12;\n.col-4 {\n  width: math.div(4, $grid-cols) * 100%; // 33.3333333333%\n}\n```"
+        },
+        {
+            "id": "sass_e_12",
+            "type": "content",
+            "title": "Modulo Operator: %",
+            "content": "# The Modulo (Remainder) Operator: `%` ➗\n\nThe `%` operator computes the integer remainder after division.\n\n```scss_not\n@use 'sass:math';\n\n$remainder: 14 % 4; // 2 (since 14 = 3 * 4 + 2)\n\n// Alternating pattern check\n@for $i from 1 through 6 {\n  .item-#{$i} {\n    @if $i % 2 == 0 {\n      background-color: #f8fafc;\n    } @else {\n      background-color: #ffffff;\n    }\n  }\n}\n```"
+        },
+        {
+            "id": "sass_e_13",
+            "type": "content",
+            "title": "Comparison & Equality Operators",
+            "content": "# Comparison & Equality Operators 🔍\n\nSass supports all standard comparison operators for numbers, strings, and colors.\n\n## Equality Operators\n\n- `==` (Equal to): `5 == 5` (true), `'sans-serif' == sans-serif` (true — string quotes are ignored in comparison!)\n- `!=` (Not equal to): `red != blue` (true)\n\n## Relational Operators (Numbers)\n\n- `<` (Less than), `<=` (Less than or equal)\n- `>` (Greater than), `>=` (Greater than or equal)\n\n```scss_not\n$font-size: 18px;\n\nh2 {\n  @if $font-size >= 18px {\n    line-height: 1.4;\n  } @else {\n    line-height: 1.2;\n  }\n}\n```"
+        },
+        {
+            "id": "sass_e_14",
+            "type": "content",
+            "title": "Logical Operators: and, or, not",
+            "content": "# Logical Operators: `and`, `or`, `not` 🔀\n\nCombine boolean conditions using human-readable words instead of `&&`, `||`, and `!`.\n\n```scss_not\n$theme: 'dark';\n$high-contrast: true;\n\n.btn {\n  // Logical 'and'\n  @if $theme == 'dark' and $high-contrast {\n    border: 2px solid white;\n    background: black;\n  }\n\n  // Logical 'or'\n  @if $theme == 'dark' or $theme == 'cyberpunk' {\n    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);\n  }\n\n  // Logical 'not'\n  @if not $high-contrast {\n    opacity: 0.9;\n  }\n}\n```"
+        },
+        {
+            "id": "sass_e_15",
+            "type": "content",
+            "title": "String Operators: Concatenation",
+            "content": "# String Operators & String Joining 🔤\n\nCombine strings using the plus `+` operator.\n\n```scss_not\n$font-name: 'Inter';\n$fallback: ', sans-serif';\n$font-stack: $font-name + $fallback; // 'Inter, sans-serif'\n\n// Quoted + Unquoted strings:\n// The result takes the quotation status of the LEFT operand!\n$test1: 'Hello ' + World; // 'Hello World' (Quoted)\n$test2: Hello + ' World'; // Hello World   (Unquoted)\n\n.element {\n  content: 'Path: ' + '/images/avatar.png';\n}\n```"
+        },
+        {
+            "id": "sass_e_16",
+            "type": "content",
+            "title": "The @at-root Directive",
+            "content": "# Escaping Selectors with `@at-root` 🌳\n\nThe `@at-root` directive causes rules nested inside a block to be emitted at the root of the document instead of nested under the parent.\n\n```scss_not\n.parent-card {\n  background: white;\n  padding: 16px;\n\n  // Render modal-overlay at root level without .parent-card prefix\n  @at-root .modal-overlay {\n    position: fixed;\n    inset: 0;\n    background: rgba(0, 0, 0, 0.6);\n  }\n}\n```\n\n## Compiles To:\n```css_not\n.parent-card { background: white; padding: 16px; }\n.modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); }\n```"
+        },
+        {
+            "id": "sass_e_17",
+            "type": "content",
+            "title": "Real-World Component: Multi-Level Alert System",
+            "content": "# Production Pattern: The Polymorphic Alert Suite 🚨\n\nCombining `%` placeholders, `@extend`, and math operators:\n\n```scss_not\n%base-alert {\n  display: flex;\n  align-items: center;\n  padding: 1rem 1.25rem;\n  margin-bottom: 1rem;\n  border-radius: 0.5rem;\n  border: 1px solid transparent;\n  font-size: 0.875rem;\n  line-height: 1.5;\n}\n\n.alert-info {\n  @extend %base-alert;\n  background-color: #eff6ff;\n  border-color: #bfdbfe;\n  color: #1e40af;\n}\n\n.alert-success {\n  @extend %base-alert;\n  background-color: #f0fdf4;\n  border-color: #bbf7d0;\n  color: #166534;\n}\n\n.alert-warning {\n  @extend %base-alert;\n  background-color: #fffbeb;\n  border-color: #fde68a;\n  color: #92400e;\n}\n```"
+        },
+        {
+            "id": "sass_e_quiz_3",
+            "type": "quiz",
+            "title": "Logical Operators Quiz",
+            "content": "Test your knowledge of Sass logical operators!",
+            "quizQuestion": "Which keywords represent logical AND and logical OR in Sass conditional statements?",
+            "quizOptions": [
+                "`&&` and `||`",
+                "`and` and `or`",
+                "`&` and `|`",
+                "`CONCURRENT` and `EITHER`"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "sass_e_19",
+            "type": "content",
+            "title": "Common Pitfall: Selector Explosion",
+            "content": "# The Selector Explosion Antipattern 💥\n\nIf you use `@extend` indiscriminately on deeply nested classes, Sass creates a combinatorial explosion of selectors:\n\n```scss_not\n// If .a is extended by .b, and .c .d extends .e...\n// Sass compiles every permutation:\n.a, .b, .c .d, .c .a, .b .d { ... }\n```\n\n## How to Avoid It:\nOnly `@extend` standalone placeholder selectors (`%name`). Never `@extend` complex descendant selectors like `.card .body p`!"
+        },
+        {
+            "id": "sass_e_20",
+            "type": "content",
+            "title": "Summary: Extend & Operators",
+            "content": "# Extend & Operators: Summary 📋\n\n## Key Takeaways\n- **`@extend`**: Shares CSS rules by grouping selectors together with commas.\n- **`%placeholders`**: Ghost selectors that never compile to CSS unless extended.\n- **Media Query Constraint**: You cannot `@extend` outer classes from inside an `@media` query.\n- **Math Operators**: `+`, `-`, `*`, and `math.div()` perform calculations on compatible units.\n- **Logical Operators**: Use `and`, `or`, and `not` for conditional checks.\n\nNext: Master control directives (`@if`, `@each`, `@for`, and `@while`)! 🔁"
+        },
+        {
+            "id": "sass_e_21",
+            "type": "content",
+            "title": "Next Steps: Control Directives",
+            "content": "# Ahead: Sass Control Directives 🔁\n\nYou are ready to write programmatic logic that generates dozens of utility classes in seconds.\n\n## Topics Ahead:\n- **Conditionals**: `@if`, `@else if`, and `@else`\n- **Collection Loops**: Iterating lists & maps with `@each`\n- **Numeric Counter Loops**: `@for $i from 1 through 12`\n- **While Loops**: `@while` loops for exponential scales\n- **Compiler Diagnostics**: `@warn`, `@error`, and `@debug`\n\nLet's automate your stylesheets! 🚀"
+        }
+    ]
+}

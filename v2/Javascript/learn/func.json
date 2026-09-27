@@ -1,0 +1,159 @@
+{
+    "id": "learn_js_func",
+    "topicId": "func",
+    "topicTitle": "JavaScript Functions",
+    "description": "Master function declarations, expressions, arrow functions, lexical this, and closures.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "js_func_1",
+            "type": "content",
+            "title": "Welcome to JavaScript Functions",
+            "content": "# JavaScript Functions: Reusable Logic ⚡\n\nFunctions are the primary building blocks of JavaScript applications. They package executable code into modular, reusable, and testable units.\n\n## What you'll master:\n- 📢 **Function Declarations** - Syntax, hoisting, and invocation\n- 📦 **Function Expressions** - Anonymous functions and first-class citizens\n- 🏹 **Arrow Functions (`=>`)** - Modern syntax and lexical `this` binding\n- 🎛️ **Parameters & Defaults** - Default parameters and rest operators (`...args`)\n- 🔒 **Scopes & Closures** - Lexical scoping, private variables, and memory retention"
+        },
+        {
+            "id": "js_func_2",
+            "type": "content",
+            "title": "Function Declarations & Hoisting",
+            "content": "# Function Declarations & Hoisting 📢\n\nA function declaration defines a named function using the `function` keyword:\n\n```javascript\n// Invoking before declaration works because of hoisting!\ngreet(\"Alice\");\n\nfunction greet(name) {\n  console.log(`Hello, ${name}!`);\n}\n```\n\n<!-- FULL_CODE_START\ngreet(\"Alice\");\n\nfunction greet(name) {\n  console.log(`Hello, ${name}!`);\n}\nFULL_CODE_END -->\n\n## Hoisting Explained:\nDuring the compilation phase before code runs, JavaScript moves function declarations to the top of their containing scope. You can safely call them before their line of definition!"
+        },
+        {
+            "id": "js_func_3",
+            "type": "content",
+            "title": "Function Expressions",
+            "content": "# Function Expressions 📦\n\nA function expression assigns an anonymous (or named) function to a variable:\n\n```javascript\n// Function expressions are NOT hoisted!\nconst calculateTax = function(price, rate = 0.08) {\n  return price * rate;\n};\n\nconst tax = calculateTax(100);\nconsole.log(\"Calculated tax:\", tax);\n```\n\n<!-- FULL_CODE_START\nconst calculateTax = function(price, rate = 0.08) {\n  return price * rate;\n};\n\nconst tax = calculateTax(100);\nconsole.log(\"Calculated tax:\", tax);\nFULL_CODE_END -->\n\n## First-Class Citizens:\nIn JavaScript, functions are first-class citizens. They can be stored in variables, passed as arguments to other functions, and returned from functions!"
+        },
+        {
+            "id": "js_func_4",
+            "type": "content",
+            "title": "Return Values and Early Exit",
+            "content": "# Return Values & Early Exit ↩️\n\nFunctions return a value using the `return` statement. If no `return` is provided, the function implicitly returns `undefined`:\n\n```javascript\nfunction divide(a, b) {\n  if (b === 0) {\n    return \"Error: Division by zero!\"; // Early exit\n  }\n  return a / b;\n}\n\nconsole.log(divide(10, 2));\nconsole.log(divide(10, 0));\n```\n\n<!-- FULL_CODE_START\nfunction divide(a, b) {\n  if (b === 0) {\n    return \"Error: Division by zero!\";\n  }\n  return a / b;\n}\n\nconsole.log(\"10 / 2 =\", divide(10, 2));\nconsole.log(\"10 / 0 =\", divide(10, 0));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_func_quiz_1",
+            "type": "quiz",
+            "title": "Function Basics Quiz",
+            "content": "Test your understanding of function declarations.",
+            "quizQuestion": "What does a JavaScript function return if no explicit 'return' statement is executed?",
+            "quizOptions": [
+                "null",
+                "0",
+                "false",
+                "undefined"
+            ],
+            "correctOptionIndex": 3
+        },
+        {
+            "id": "js_func_5",
+            "type": "content",
+            "title": "Modern Arrow Functions (=>)",
+            "content": "# Modern Arrow Functions (`=>`) 🏹\n\nIntroduced in ES6, arrow functions provide a concise syntax:\n\n```javascript\n// Standard syntax\nconst add = (a, b) => {\n  return a + b;\n};\n\n// Concise syntax with implicit return (omit curly braces & return keyword!)\nconst multiply = (a, b) => a * b;\n\n// Single parameter (parentheses are optional)\nconst square = n => n * n;\n\nconsole.log(\"Add:\", add(5, 3));\nconsole.log(\"Multiply:\", multiply(5, 3));\nconsole.log(\"Square:\", square(4));\n```\n\n<!-- FULL_CODE_START\nconst add = (a, b) => {\n  return a + b;\n};\nconst multiply = (a, b) => a * b;\nconst square = n => n * n;\n\nconsole.log(\"Add:\", add(5, 3));\nconsole.log(\"Multiply:\", multiply(5, 3));\nconsole.log(\"Square:\", square(4));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_func_6",
+            "type": "content",
+            "title": "Arrow Functions: Returning Objects",
+            "content": "# Returning Objects from Arrow Functions 📦\n\nWhen using implicit return with an object literal, wrap the object in parentheses `({ ... })` so the parser doesn't mistake curly braces for a function block:\n\n```javascript\n// ❌ WRONG: Syntax error or returns undefined\n// const makeUser = (id, name) => { id: id, name: name };\n\n// ✅ CORRECT: Wrap object in parentheses\nconst makeUser = (id, name) => ({ id: id, name: name });\n\nconsole.log(makeUser(1, \"David\"));\n```\n\n<!-- FULL_CODE_START\nconst makeUser = (id, name) => ({ id: id, name: name });\n\nconsole.log(\"Created user:\", makeUser(1, \"David\"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_func_7",
+            "type": "content",
+            "title": "The 'this' Keyword Difference",
+            "content": "# Lexical `this` in Arrow Functions 🧭\n\nThe most important architectural difference between regular functions and arrow functions:\n\n- **Regular Functions:** Define their own `this` dynamically depending on how they are called.\n- **Arrow Functions:** Do **not** have their own `this`! They lexically inherit `this` from the enclosing parent scope.\n\n```javascript\nconst user = {\n  name: \"Jessica\",\n  hobbies: [\"Coding\", \"Hiking\"],\n  printHobbies() {\n    // Arrow function preserves outer 'this' pointing to user!\n    this.hobbies.forEach(hobby => {\n      console.log(`${this.name} loves ${hobby}`);\n    });\n  }\n};\n\nuser.printHobbies();\n```\n\n<!-- FULL_CODE_START\nconst user = {\n  name: \"Jessica\",\n  hobbies: [\"Coding\", \"Hiking\"],\n  printHobbies() {\n    this.hobbies.forEach(hobby => {\n      console.log(`${this.name} loves ${hobby}`);\n    });\n  }\n};\n\nuser.printHobbies();\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_func_8",
+            "type": "content",
+            "title": "Default Parameters",
+            "content": "# Default Function Parameters ⚙️\n\nSet default values for parameters if they are omitted or `undefined`:\n\n```javascript\nfunction sendNotification(message, priority = \"Normal\", sound = true) {\n  console.log(`Notification [${priority}]: \"${message}\" (Sound: ${sound})`);\n}\n\nsendNotification(\"Server update available\");\nsendNotification(\"System Error!\", \"URGENT\", false);\n```\n\n<!-- FULL_CODE_START\nfunction sendNotification(message, priority = \"Normal\", sound = true) {\n  console.log(`Notification [${priority}]: \"${message}\" (Sound: ${sound})`);\n}\n\nsendNotification(\"Server update available\");\nsendNotification(\"System Error!\", \"URGENT\", false);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_func_quiz_2",
+            "type": "quiz",
+            "title": "Arrow Functions Quiz",
+            "content": "Test your knowledge of arrow functions.",
+            "quizQuestion": "How do arrow functions handle the 'this' keyword?",
+            "quizOptions": [
+                "They bind 'this' to the global window object",
+                "They inherit 'this' lexically from their enclosing scope",
+                "They generate a brand new 'this' object on invocation",
+                "They reject the use of 'this' with a syntax error"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_func_9",
+            "type": "content",
+            "title": "Rest Parameters (...args)",
+            "content": "# Rest Parameters (`...args`) 🧺\n\nThe rest parameter syntax gathers an indefinite number of arguments into a real JavaScript array:\n\n```javascript\nfunction calculateSum(...numbers) {\n  // 'numbers' is a true array!\n  return numbers.reduce((total, num) => total + num, 0);\n}\n\nconsole.log(\"Sum 1:\", calculateSum(10, 20));\nconsole.log(\"Sum 2:\", calculateSum(1, 2, 3, 4, 5));\n```\n\n<!-- FULL_CODE_START\nfunction calculateSum(...numbers) {\n  return numbers.reduce((total, num) => total + num, 0);\n}\n\nconsole.log(\"Sum 1:\", calculateSum(10, 20));\nconsole.log(\"Sum 2:\", calculateSum(1, 2, 3, 4, 5));\n\nfunction logOrder(customerName, ...items) {\n  console.log(`Customer: ${customerName}, Items count: ${items.length}`);\n}\nlogOrder(\"Alice\", \"Coffee\", \"Bagel\", \"Cookie\");\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_func_10",
+            "type": "content",
+            "title": "Understanding Scope Hierarchy",
+            "content": "# Scope Hierarchy in JavaScript 🌐\n\nScope determines the visibility and accessibility of variables:\n\n1. **Global Scope:** Variables declared outside any function or block. Accessible everywhere.\n2. **Function/Local Scope:** Variables declared inside a function.\n3. **Block Scope:** Variables declared with `let` or `const` inside `{ ... }`.\n\n```javascript\nlet globalVar = \"I am global\";\n\nfunction testScope() {\n  let localVar = \"I am local to testScope\";\n  console.log(globalVar); // Accessible!\n  console.log(localVar);  // Accessible!\n}\n\ntestScope();\n// console.log(localVar); // ReferenceError!\n```\n\n<!-- FULL_CODE_START\nlet globalVar = \"I am global\";\n\nfunction testScope() {\n  let localVar = \"I am local to testScope\";\n  console.log(\"Inside:\", globalVar);\n  console.log(\"Inside:\", localVar);\n}\n\ntestScope();\nconsole.log(\"Outside:\", globalVar);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_func_11",
+            "type": "content",
+            "title": "Lexical Scoping & Scope Chain",
+            "content": "# Lexical Scoping & The Scope Chain ⛓️\n\nJavaScript uses **Lexical Scoping**: an inner function has access to variables declared in its outer parent functions, all the way up to the global scope!\n\n```javascript\nconst company = \"CodeCerebrum\";\n\nfunction outer() {\n  const department = \"Engineering\";\n\n  function inner() {\n    const team = \"Frontend\";\n    // Can access all 3 levels:\n    console.log(`${company} -> ${department} -> ${team}`);\n  }\n\n  inner();\n}\n\nouter();\n```\n\n<!-- FULL_CODE_START\nconst company = \"CodeCerebrum\";\n\nfunction outer() {\n  const department = \"Engineering\";\n\n  function inner() {\n    const team = \"Frontend\";\n    console.log(`${company} -> ${department} -> ${team}`);\n  }\n\n  inner();\n}\n\nouter();\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_func_12",
+            "type": "content",
+            "title": "Mastering Closures",
+            "content": "# The Magic of Closures 🔒\n\nA **closure** is a function bundled together with references to its surrounding lexical state.\n\nEven after the outer function finishes executing and returns, the inner function **remembers and retains access** to variables in the outer function's scope!\n\n```javascript\nfunction createCounter() {\n  let count = 0; // Private variable!\n\n  return function() {\n    count++;\n    return count;\n  };\n}\n\nconst counterA = createCounter();\nconsole.log(counterA()); // 1\nconsole.log(counterA()); // 2\nconsole.log(counterA()); // 3\n```\n\n<!-- FULL_CODE_START\nfunction createCounter() {\n  let count = 0;\n\n  return function() {\n    count++;\n    return count;\n  };\n}\n\nconst counterA = createCounter();\nconsole.log(\"Counter A:\", counterA());\nconsole.log(\"Counter A:\", counterA());\nconsole.log(\"Counter A:\", counterA());\n\nconst counterB = createCounter();\nconsole.log(\"Counter B (independent state):\", counterB());\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_func_13",
+            "type": "content",
+            "title": "Practical Closures: Private Variables",
+            "content": "# Practical Closures: Data Privacy (Encapsulation) 🛡️\n\nUse closures to create private state that cannot be modified from the outside:\n\n```javascript\nfunction createBankAccount(initialBalance) {\n  let balance = initialBalance; // Completely private!\n\n  return {\n    deposit(amount) {\n      if (amount > 0) balance += amount;\n      return balance;\n    },\n    withdraw(amount) {\n      if (amount <= balance) balance -= amount;\n      return balance;\n    },\n    getBalance() {\n      return balance;\n    }\n  };\n}\n\nconst account = createBankAccount(100);\naccount.deposit(50);\nconsole.log(\"Balance:\", account.getBalance()); // 150\n// account.balance is undefined! Cannot be hacked externally!\n```\n\n<!-- FULL_CODE_START\nfunction createBankAccount(initialBalance) {\n  let balance = initialBalance;\n\n  return {\n    deposit(amount) {\n      if (amount > 0) balance += amount;\n      return balance;\n    },\n    withdraw(amount) {\n      if (amount <= balance) balance -= amount;\n      return balance;\n    },\n    getBalance() {\n      return balance;\n    }\n  };\n}\n\nconst account = createBankAccount(100);\naccount.deposit(50);\naccount.withdraw(30);\nconsole.log(\"Account balance:\", account.getBalance());\nconsole.log(\"Direct balance access:\", account.balance); // undefined\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_func_quiz_3",
+            "type": "quiz",
+            "title": "Closures Quiz",
+            "content": "Test your knowledge of closures.",
+            "quizQuestion": "What enables a returned inner function to remember variables from its parent function after execution?",
+            "quizOptions": [
+                "Variable Hoisting",
+                "JavaScript Closures",
+                "The DOM Event Loop",
+                "Strict Mode"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_func_14",
+            "type": "content",
+            "title": "Higher-Order Functions",
+            "content": "# Higher-Order Functions 🏎️\n\nA **Higher-Order Function** is a function that does at least one of the following:\n1. Takes one or more functions as arguments (callbacks).\n2. Returns a new function as its result.\n\n```javascript\n// Function that takes another function as an argument\nfunction repeatAction(n, action) {\n  for (let i = 0; i < n; i++) {\n    action(i);\n  }\n}\n\nrepeatAction(3, (idx) => console.log(`Step ${idx + 1}`));\n```\n\n<!-- FULL_CODE_START\nfunction repeatAction(n, action) {\n  for (let i = 0; i < n; i++) {\n    action(i);\n  }\n}\n\nrepeatAction(3, (idx) => console.log(`Step ${idx + 1}`));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_func_15",
+            "type": "content",
+            "title": "Function Currying",
+            "content": "# Function Currying 🍛\n\nCurrying transforms a function with multiple arguments into a sequence of functions, each taking a single argument:\n\n```javascript\n// Standard function\nconst multiplyStandard = (a, b) => a * b;\n\n// Curried function\nconst multiplyCurried = a => b => a * b;\n\nconst double = multiplyCurried(2);\nconst triple = multiplyCurried(3);\n\nconsole.log(\"Double 10:\", double(10)); // 20\nconsole.log(\"Triple 10:\", triple(10)); // 30\n```\n\n<!-- FULL_CODE_START\nconst multiplyCurried = a => b => a * b;\n\nconst double = multiplyCurried(2);\nconst triple = multiplyCurried(3);\n\nconsole.log(\"Double 10:\", double(10));\nconsole.log(\"Triple 10:\", triple(10));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_func_16",
+            "type": "content",
+            "title": "Pure Functions & Side Effects",
+            "content": "# Pure Functions & Side Effects 🧼\n\nA core tenet of functional programming:\n\n- **Pure Function:**\n  1. Given the same inputs, it **always** returns the exact same output.\n  2. Produces **no side effects** (does not mutate external variables, make network requests, or modify global state).\n\n```javascript\n// Pure Function (Predictable & Easy to Test)\nfunction addTax(price, taxRate) {\n  return price + (price * taxRate);\n}\n\nconsole.log(addTax(100, 0.1)); // Always 110\n```\n\n<!-- FULL_CODE_START\nfunction addTax(price, taxRate) {\n  return price + (price * taxRate);\n}\n\nconsole.log(\"Pure function result 1:\", addTax(100, 0.1));\nconsole.log(\"Pure function result 2:\", addTax(100, 0.1));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_func_17",
+            "type": "content",
+            "title": "Immediately Invoked Function Expressions (IIFE)",
+            "content": "# Immediately Invoked Function Expressions (IIFE) ⚡\n\nAn IIFE is a function that runs immediately as soon as it is defined:\n\n```javascript\n(function() {\n  const secretApiKey = \"abc-123-super-secret\";\n  console.log(\"IIFE executed! Key is locked in private scope.\");\n})();\n```\n\n<!-- FULL_CODE_START\n(function() {\n  const secretApiKey = \"abc-123-super-secret\";\n  console.log(\"IIFE executed! Key is safely encapsulated:\", secretApiKey.slice(0, 7) + \"...\");\n})();\nFULL_CODE_END -->\n\nHistorically used to prevent polluting the global window object before ES modules arrived."
+        },
+        {
+            "id": "js_func_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Functions Mastered! 🌟\n\nYou now command the full expressive power of JavaScript functions, scopes, and closures!\n\n## Key Takeaways:\n- ✅ **Declarations vs Expressions:** Declarations are hoisted; expressions are not.\n- ✅ **Arrow Functions (`=>`):** Concise syntax with implicit returns and lexical `this`.\n- ✅ **Parameters:** Support default parameters and rest arrays (`...args`).\n- ✅ **Closures:** Inner functions retain access to outer scope variables even after return.\n- ✅ **Pure Functions:** Produce predictable outputs without mutating external state.\n\n## Up Next:\nIn the next module, manipulate webpage elements in real time: **DOM Manipulation (Selecting, Events, and Modifying HTML/CSS)**! 🚀"
+        }
+    ]
+}

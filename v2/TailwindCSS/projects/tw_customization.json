@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Tailwind Configuration Setup",
+    "ques": "Explain the role of **`tailwind.config.js`** in configuring template file scanning paths (`content`) and extending core design tokens.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  // Specify template paths for dead-code elimination (tree-shaking)\n  content: [\n    \"./src/**/*.{html,js,ts,jsx,tsx}\",\n    \"./public/index.html\"\n  ],\n  darkMode: 'class',\n  theme: {\n    extend: {\n      // Custom design tokens injected into theme\n    },\n  },\n  plugins: [],\n};"
+    },
+    "explanation": "The `content` array defines which source files Tailwind's JIT (Just-In-Time) compiler scans to generate only the exact CSS classes used in the project, keeping production bundle sizes tiny."
+  },
+  {
+    "title": "Theme Extension: Custom Colors and Fonts",
+    "ques": "Write a `tailwind.config.js` theme block that extends the design system with a custom brand color palette (`brand: { 500: '#6366f1', 600: '#4f46e5' }`) and a custom Google Font (`'Inter'`).",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "module.exports = {\n  content: [\"./src/**/*.{html,js}\"],\n  theme: {\n    extend: {\n      colors: {\n        brand: {\n          50: '#eef2ff',\n          500: '#6366f1',\n          600: '#4f46e5',\n          900: '#312e81',\n        },\n      },\n      fontFamily: {\n        sans: ['Inter', 'sans-serif'],\n        display: ['Lexend', 'sans-serif'],\n      },\n    },\n  },\n  plugins: [],\n};"
+    },
+    "explanation": "Adding custom values under `theme.extend` preserves all default Tailwind colors and fonts while adding new tokens like `bg-brand-500` or `font-display`."
+  },
+  {
+    "title": "Using Arbitrary Values with Square Brackets",
+    "ques": "Demonstrate the use of **Arbitrary Values** in Tailwind for one-off pixel values, CSS variables, and dynamic grid layouts without editing config files.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Using arbitrary values in square brackets [value] -->\n<div class=\"top-[117px] w-[342px] bg-[#1a1b26] p-[18px] text-[color:var(--brand-primary)] rounded-[14px] shadow-[0_10px_30px_rgba(0,0,0,0.35)]\">\n  <h4 class=\"text-[19px] font-bold text-white\">Custom Metric Widget</h4>\n  <p class=\"mt-2 text-sm text-gray-300\">\n    Arbitrary values allow precise one-off overrides while retaining the convenience of inline utility composition.\n  </p>\n</div>"
+    },
+    "explanation": "Square bracket notation (`w-[350px]`, `bg-[#ff3366]`) enables Tailwind's JIT compiler to generate custom on-the-fly CSS classes without needing custom config definitions."
+  },
+  {
+    "title": "CSS Directives: @tailwind, @apply, and @layer",
+    "ques": "Explain the role of the `@tailwind`, `@layer`, and `@apply` directives in your main CSS file. Provide an example creating a reusable button component.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* Main application stylesheet */\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n/* Inject custom component classes into the components layer */\n@layer components {\n  .btn-primary {\n    @apply px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg shadow-sm transition-colors hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 active:scale-95;\n  }\n}"
+    },
+    "explanation": "`@layer components` groups custom component classes so utility classes can still override them. `@apply` inlines existing utility styles into a single reusable CSS class."
+  },
+  {
+    "title": "Extending Functionality with Tailwind Plugins",
+    "ques": "Explain how official plugins like `@tailwindcss/forms` and `@tailwindcss/typography` improve developer productivity. Show how to register them in `tailwind.config.js`.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "module.exports = {\n  content: [\"./src/**/*.{html,js}\"],\n  theme: {\n    extend: {},\n  },\n  plugins: [\n    // Normalizes form inputs across browsers with easy utility restyling\n    require('@tailwindcss/forms'),\n    // Adds the 'prose' class for styling raw HTML/Markdown blog posts\n    require('@tailwindcss/typography'),\n    // Adds aspect-ratio utilities for videos and images\n    require('@tailwindcss/aspect-ratio'),\n  ],\n};"
+    },
+    "explanation": "Tailwind plugins inject predefined component suites and utility sets. For instance, the typography plugin provides the `.prose` class to format CMS markdown content automatically."
+  }
+]

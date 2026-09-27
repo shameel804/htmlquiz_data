@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Generics Fundamentals",
+    "ques": "Explain the motivation behind **Generics** in TypeScript. Write a generic identity function `getFirstElement<T>` that accepts an array of type `T` and returns the first element of type `T | undefined`.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "/**\n * Generic function preserving exact element type T across calls\n */\nfunction getFirstElement<T>(items: T[]): T | undefined {\n  return items.length > 0 ? items[0] : undefined;\n}\n\n// TypeScript preserves specific types instead of falling back to any\nconst firstNumber = getFirstElement([10, 20, 30]); // Inferred as number | undefined\nconst firstWord = getFirstElement([\"apple\", \"banana\"]); // Inferred as string | undefined\n\nconsole.log(firstNumber); // 10\nconsole.log(firstWord);   // apple"
+    },
+    "explanation": "Generics provide reusable, flexible components that work across multiple data types while preserving exact type relationships and compile-time safety, avoiding the pitfalls of `any`."
+  },
+  {
+    "title": "Applying Generic Constraints",
+    "ques": "Explain how to constrain generic type variables using the **`extends`** keyword. Write a function `logLength<T extends { length: number }>` that only accepts arguments containing a `.length` property.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "interface HasLength {\n  length: number;\n}\n\nfunction logLength<T extends HasLength>(item: T): number {\n  console.log(`Length: ${item.length}`);\n  return item.length;\n}\n\n// Valid invocations (strings and arrays possess a length property)\nlogLength(\"Hello TypeScript\"); // Length: 16\nlogLength([1, 2, 3, 4, 5]);     // Length: 5\n\n// INVALID: Numbers do not have a length property\n// logLength(12345); \n// Error: Argument of type 'number' is not assignable to parameter of type 'HasLength'."
+    },
+    "explanation": "Generic constraints (`T extends Type`) restrict allowed types to only those that satisfy a specific contract, allowing the function body to safely access expected properties."
+  },
+  {
+    "title": "Working with Union and Intersection Types",
+    "ques": "Contrast **Union types (`|`)** and **Intersection types (`&`)**. Write a TypeScript code sample declaring both a union type for loading states and an intersection type combining two interfaces.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "// 1. Union Type: Value can be one of multiple distinct types\ntype Status = \"idle\" | \"loading\" | \"success\" | \"error\";\nlet currentStatus: Status = \"loading\";\n\n// 2. Intersection Type: Combines multiple shapes into a single required contract\ninterface Identifiable {\n  id: string;\n}\n\ninterface Timestamped {\n  createdAt: Date;\n  updatedAt: Date;\n}\n\ntype DatabaseRecord = Identifiable & Timestamped;\n\nconst record: DatabaseRecord = {\n  id: \"rec_98234\",\n  createdAt: new Date(),\n  updatedAt: new Date()\n};\n\nconsole.log(`Record ID: ${record.id}`);"
+    },
+    "explanation": "Union types (`A | B`) require a value to match at least one of the constituent types. Intersection types (`A & B`) require the resulting object to contain all properties from every intersected type."
+  },
+  {
+    "title": "String and Numeric Literal Types",
+    "ques": "Demonstrate the use of **Literal Types** combined with unions to implement a type-safe direction controller.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "type Direction = \"NORTH\" | \"SOUTH\" | \"EAST\" | \"WEST\";\n\nfunction movePlayer(dir: Direction, steps: number): void {\n  console.log(`Moving ${steps} steps towards ${dir}`);\n}\n\nmovePlayer(\"NORTH\", 5); // Valid\n\n// INVALID: Typing error caught at compile-time!\n// movePlayer(\"UP\", 5);\n// Error: Argument of type '\"UP\"' is not assignable to parameter of type 'Direction'."
+    },
+    "explanation": "Literal types allow variables to accept only specific exact strings, numbers, or booleans rather than any arbitrary primitive value."
+  },
+  {
+    "title": "Type Narrowing via typeof and instanceof",
+    "ques": "Explain the concept of **Type Narrowing**. Write a function `processInput` that demonstrates narrowing using both the **`typeof`** operator and the **`instanceof`** operator.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "function processInput(input: string | number | Date): string {\n  // 1. Narrowing using typeof\n  if (typeof input === \"string\") {\n    return `String length: ${input.length}`;\n  }\n  \n  if (typeof input === \"number\") {\n    return `Fixed number: ${input.toFixed(2)}`;\n  }\n  \n  // 2. Narrowing using instanceof\n  if (input instanceof Date) {\n    return `Formatted date: ${input.toISOString()}`;\n  }\n  \n  return \"Unknown input\";\n}\n\nconsole.log(processInput(\"Hello\")); // String length: 5\nconsole.log(processInput(42.678));  // Fixed number: 42.68\nconsole.log(processInput(new Date())); // Formatted date: ..."
+    },
+    "explanation": "Type narrowing uses runtime control flow guards (`typeof`, `instanceof`, `in`) to refine broad types into specific narrow types within conditional branches."
+  },
+  {
+    "title": "Implementing Discriminated Unions",
+    "ques": "Explain what a **Discriminated Union** (tagged union) is. Write an exhaustive shape-calculating function `calculateArea` that handles `Circle`, `Square`, and `Rectangle` using a switch on their common literal discriminant `kind`.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "interface Circle {\n  kind: \"circle\";\n  radius: number;\n}\n\ninterface Square {\n  kind: \"square\";\n  sideLength: number;\n}\n\ninterface Rectangle {\n  kind: \"rectangle\";\n  width: number;\n  height: number;\n}\n\ntype Shape = Circle | Square | Rectangle;\n\nfunction calculateArea(shape: Shape): number {\n  switch (shape.kind) {\n    case \"circle\":\n      // Math formula approx: 3.14159 * r * r\n      return 3.14159 * shape.radius * shape.radius;\n    case \"square\":\n      return shape.sideLength * shape.sideLength;\n    case \"rectangle\":\n      return shape.width * shape.height;\n  }\n}\n\nconsole.log(calculateArea({ kind: \"circle\", radius: 5 }));\nconsole.log(calculateArea({ kind: \"square\", sideLength: 4 }));"
+    },
+    "explanation": "A discriminated union consists of multiple object types sharing a common literal property (the discriminator). The compiler checks this tag to narrow down to the exact subtype with 100% type safety."
+  }
+]

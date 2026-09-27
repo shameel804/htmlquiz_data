@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Flex Containers and Direction",
+    "ques": "Explain how setting **`display: flex`** initializes a Flex Container. Demonstrate how `flex-direction` (`row`, `column`, `row-reverse`, `column-reverse`) controls the main axis.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".flex-container {\n  display: flex;\n  /* Sets main axis to horizontal (left-to-right) */\n  flex-direction: row;\n}\n\n.flex-container-stacked {\n  display: flex;\n  /* Sets main axis to vertical (top-to-bottom) */\n  flex-direction: column;\n  gap: 16px;\n}"
+    },
+    "explanation": "`display: flex` establishes a flex formatting context for direct children. `flex-direction` determines the primary layout axis along which items are placed."
+  },
+  {
+    "title": "Flex Items: Grow, Shrink, and Basis",
+    "ques": "Explain the three sub-properties of the **`flex`** shorthand on flex items: **`flex-grow`**, **`flex-shrink`**, and **`flex-basis`**. Write a rule for a responsive sidebar layout.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".layout-wrapper {\n  display: flex;\n}\n\n.sidebar {\n  /* flex: grow shrink basis */\n  /* Does not grow (0), shrinks if needed (1), base width 260px */\n  flex: 0 1 260px;\n  background-color: #f1f5f9;\n}\n\n.main-content {\n  /* Grows to consume all remaining space (1), can shrink (1), base width 0 */\n  flex: 1 1 0%;\n  padding: 24px;\n}"
+    },
+    "explanation": "`flex-grow` allocates free space, `flex-shrink` dictates how items compress under tight space, and `flex-basis` establishes initial size before distribution."
+  },
+  {
+    "title": "Flexbox Alignment: Justify-Content and Align-Items",
+    "ques": "Explain how to align flex items along both the main axis (**`justify-content`**) and cross axis (**`align-items`**). Write a snippet perfectly centering a hero dialog.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".hero-viewport {\n  display: flex;\n  /* Centers items along the main horizontal axis */\n  justify-content: center;\n  /* Centers items along the cross vertical axis */\n  align-items: center;\n  \n  min-height: 100vh;\n  background-color: #0f172a;\n}\n\n.hero-card {\n  width: 90%;\n  max-width: 480px;\n  background-color: #ffffff;\n  padding: 32px;\n  border-radius: 12px;\n}"
+    },
+    "explanation": "`justify-content` distributes items along the main axis (`flex-start`, `center`, `space-between`), while `align-items` aligns along the cross axis (`stretch`, `center`, `baseline`)."
+  },
+  {
+    "title": "CSS Grid Containers and Tracks",
+    "ques": "Explain how to create a 2D layout with **`display: grid`**, **`grid-template-columns`**, and the fractional unit **`fr`**.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".photo-gallery {\n  display: grid;\n  /* Creates 3 columns: first takes 250px, remaining space split into 2 equal fractions */\n  grid-template-columns: 250px 1fr 1fr;\n  /* Defines 20px gap between both rows and columns */\n  gap: 20px;\n}\n\n/* Responsive auto-fit track pattern */\n.product-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));\n  gap: 24px;\n}"
+    },
+    "explanation": "CSS Grid manages two-dimensional layouts simultaneously. The `fr` unit represents a fraction of available space, and `repeat(auto-fit, minmax())` delivers responsive column wrapping without media queries."
+  },
+  {
+    "title": "Named Grid Template Areas",
+    "ques": "Demonstrate the use of **`grid-template-areas`** and **`grid-area`** to assemble a full page layout with header, sidebar, main content, and footer.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": ".app-layout {\n  display: grid;\n  grid-template-columns: 240px 1fr;\n  grid-template-rows: 60px 1fr 50px;\n  grid-template-areas:\n    \"header  header\"\n    \"sidebar content\"\n    \"footer  footer\";\n  min-height: 100vh;\n}\n\n.site-header  { grid-area: header; background: #1e293b; color: white; }\n.site-sidebar { grid-area: sidebar; background: #f8fafc; }\n.site-content { grid-area: content; padding: 24px; }\n.site-footer  { grid-area: footer; background: #e2e8f0; }"
+    },
+    "explanation": "`grid-template-areas` allows mapping named grid areas visually in CSS, making page layout composition readable and maintainable."
+  }
+]

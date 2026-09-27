@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Defining CSS Keyframe Animations",
+    "ques": "Explain the role of the **`@keyframes`** at-rule. Write an animation named `pulse-glow` that scales an element and animates its box-shadow.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* Define animation steps using percentages */\n@keyframes pulse-glow {\n  0% {\n    transform: scale(1);\n    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);\n  }\n  50% {\n    transform: scale(1.05);\n    box-shadow: 0 0 0 14px rgba(59, 130, 246, 0);\n  }\n  100% {\n    transform: scale(1);\n    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);\n  }\n}\n\n.live-status-dot {\n  width: 20px;\n  height: 20px;\n  background-color: #3b82f6;\n  border-radius: 50%;\n  /* Apply animation: name duration timing-function iteration-count */\n  animation: pulse-glow 2s infinite ease-in-out;\n}"
+    },
+    "explanation": "`@keyframes` controls the intermediate steps in a CSS animation sequence using percentage milestones from `0%` (`from`) to `100%` (`to`)."
+  },
+  {
+    "title": "Mastering Easing Functions",
+    "ques": "Compare CSS animation timing functions: **`linear`**, **`ease-in`**, **`ease-out`**, **`ease-in-out`**, and custom **`cubic-bezier()`**. Write an example demonstrating a springy cubic-bezier button hover.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "/* Easing determines acceleration and deceleration curves over time */\n.btn-spring {\n  display: inline-block;\n  padding: 12px 24px;\n  background-color: #6366f1;\n  color: #ffffff;\n  border-radius: 8px;\n  \n  /* \n   * cubic-bezier(x1, y1, x2, y2): \n   * y-values exceeding 1 create an elastic spring/bounce effect on hover!\n   */\n  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);\n}\n\n.btn-spring:hover {\n  transform: translateY(-6px) scale(1.04);\n}"
+    },
+    "explanation": "Timing functions control animation velocity. Built-in keywords (`ease`, `ease-out`) use standard Bezier curves, while custom `cubic-bezier()` curves can produce realistic physical elasticity."
+  },
+  {
+    "title": "Staggering Effects with Animation Delays",
+    "ques": "Demonstrate the use of **`animation-delay`** to create a staggered card entrance animation where three cards fade in sequentially.",
+    "answer": {
+      "type": "code",
+      "lang": "css",
+      "content": "@keyframes slideFadeUp {\n  from {\n    opacity: 0;\n    transform: translateY(20px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n\n.card {\n  opacity: 0; /* Initial state before animation triggers */\n  animation: slideFadeUp 0.6s ease-out forwards; /* 'forwards' keeps final state */\n}\n\n/* Staggered execution via animation-delay */\n.card:nth-child(1) {\n  animation-delay: 0.1s;\n}\n\n.card:nth-child(2) {\n  animation-delay: 0.25s;\n}\n\n.card:nth-child(3) {\n  animation-delay: 0.4s;\n}"
+    },
+    "explanation": "`animation-delay` pauses the start of an animation. Pairing delays with `animation-fill-mode: forwards` creates coordinated, staggered entrance choreography."
+  }
+]

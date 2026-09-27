@@ -1,0 +1,159 @@
+{
+    "id": "learn_css_pseudo",
+    "topicId": "pseudo",
+    "topicTitle": "CSS Pseudo-Classes & Elements",
+    "description": "Master hover, focus, nth-child, ::before, ::after, :not(), and the :has() parent selector.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "css_pseudo_1",
+            "type": "content",
+            "title": "Welcome to Pseudo-Classes & Elements",
+            "content": "# Pseudo-Classes & Pseudo-Elements 🎭\n\nPseudo-classes and pseudo-elements give you superpower hooks into elements based on their state, position in the DOM, or allow you to insert decorative elements without writing extra HTML markup.\n\n## What you'll master:\n- 🖱️ **User Action Pseudo-Classes** - `:hover`, `:active`, `:focus`, and `:focus-visible`\n- 🌳 **Structural Pseudo-Classes** - `:first-child`, `:last-child`, and `:nth-child()`\n- 🎛️ **State & Form Pseudo-Classes** - `:checked`, `:disabled`, `:valid`, `:invalid`\n- 🪄 **Pseudo-Elements** - `::before`, `::after`, `::placeholder`, and `::marker`\n- 🧩 **Modern Relational Selectors** - `:not()`, `:is()`, `:where()`, and `:has()`"
+        },
+        {
+            "id": "css_pseudo_2",
+            "type": "content",
+            "title": "Pseudo-Classes vs Pseudo-Elements",
+            "content": "# The Single Colon `:` vs Double Colon `::` ⚖️\n\nWhat is the technical difference between pseudo-classes and pseudo-elements?\n\n## 1. Pseudo-Class (Single colon `:`):\nTargets an **existing element** when it enters a specific state:\n```css_not\nbutton:hover { background-color: blue; }\nli:first-child { font-weight: bold; }\n```\n\n## 2. Pseudo-Element (Double colon `::`):\nCreates a **virtual, phantom element** that does not exist in the HTML DOM:\n```css_not\np::first-letter { font-size: 2rem; }\n.card::before { content: \"★ \"; }\n```\n*(Browsers support single colons on legacy pseudo-elements like `:before`, but CSS3 standardizes `::` for pseudo-elements).*"
+        },
+        {
+            "id": "css_pseudo_3",
+            "type": "content",
+            "title": "User Action Pseudo-Classes",
+            "content": "# User Action States: hover, active, focus 🖱️\n\n```css_not\n/* 1. Mouse hover */\n.btn:hover {\n  background-color: #1d4ed8;\n}\n\n/* 2. Mouse click down (Active) */\n.btn:active {\n  transform: scale(0.98);\n}\n\n/* 3. Focus state (Keyboard navigation or click) */\n.btn:focus-visible {\n  outline: 3px solid #60a5fa;\n  outline-offset: 2px;\n}\n```\n\n> ♿ **Accessibility Tip:** Never remove `:focus` outlines with `outline: none` unless you immediately provide a high-contrast `:focus-visible` replacement! Keyboard users rely on focus rings to navigate."
+        },
+        {
+            "id": "css_pseudo_4",
+            "type": "content",
+            "title": "Parent Focus with :focus-within",
+            "content": "# Parent Focus: `:focus-within` 🎯\n\n`:focus-within` styles a parent container if **any** child inside it currently holds focus:\n\n```html_not\n<div class=\"search-bar\">\n  <span class=\"icon\">🔍</span>\n  <input type=\"text\" placeholder=\"Search courses...\">\n</div>\n```\n\n```css_not\n/* Highlights the entire search container border when user types in the input! */\n.search-bar:focus-within {\n  border-color: #3b82f6;\n  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);\n}\n```"
+        },
+        {
+            "id": "css_pseudo_quiz_1",
+            "type": "quiz",
+            "title": "Pseudo Syntax Quiz",
+            "content": "Test your knowledge of pseudo prefixes.",
+            "quizQuestion": "Which prefix notation is the modern W3C standard for pseudo-elements (like before and after)?",
+            "quizOptions": [
+                ":",
+                "::",
+                "$",
+                "@"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_pseudo_5",
+            "type": "content",
+            "title": "Structural Selectors: first-child & last-child",
+            "content": "# Structural Selectors: `:first-child` & `:last-child` 🌳\n\nTarget items based on their position among siblings:\n\n```css_not\n/* First list item */\nul li:first-child {\n  border-top-left-radius: 8px;\n  border-top-right-radius: 8px;\n}\n\n/* Last list item */\nul li:last-child {\n  border-bottom: none; /* Removes divider under last item */\n}\n\n/* Only child (applies only if there is exactly 1 sibling) */\n.modal-btn:only-child {\n  width: 100%;\n}\n```"
+        },
+        {
+            "id": "css_pseudo_6",
+            "type": "content",
+            "title": "Mastering :nth-child() Formulas",
+            "content": "# The Power of `:nth-child(an + b)` 🔢\n\n`:nth-child()` accepts keywords, numbers, or algebraic formulas:\n\n```css_not\n/* Specific index */\nli:nth-child(3) { color: red; } /* Targets exactly the 3rd item */\n\n/* Keywords */\ntr:nth-child(even) { background-color: #f8fafc; }\ntr:nth-child(odd)  { background-color: #ffffff; }\n\n/* Formulas (2n, 3n, 4n+1) */\nli:nth-child(3n) { border-bottom: 2px solid blue; } /* Every 3rd item (3, 6, 9...) */\nli:nth-child(n + 4) { opacity: 0.5; } /* Items starting from 4th onward */\n```"
+        },
+        {
+            "id": "css_pseudo_7",
+            "type": "content",
+            "title": ":nth-child vs :nth-of-type",
+            "content": "# `:nth-child` vs `:nth-of-type` ⚖️\n\nThis distinction confuses many developers:\n\n```html_not\n<div>\n  <h1>Title</h1>\n  <p>First paragraph</p>  <!-- 2nd child in parent, but 1st paragraph! -->\n  <p>Second paragraph</p>\n</div>\n```\n\n- `p:nth-child(1)`: Looks for the 1st child of the parent. Since the 1st child is `<h1>`, it **matches nothing**!\n- `p:nth-of-type(1)`: Looks for the 1st `<p>` tag among siblings. Matches `\"First paragraph\"` perfectly!"
+        },
+        {
+            "id": "css_pseudo_8",
+            "type": "content",
+            "title": "Form State Pseudo-Classes",
+            "content": "# Form States: `:checked`, `:disabled`, `:valid` 📋\n\nStyle form elements dynamically as users interact:\n\n```css_not\n/* Checked checkbox or radio */\ninput[type=\"checkbox\"]:checked + label {\n  text-decoration: line-through;\n  color: #94a3b8;\n}\n\n/* Disabled input */\ninput:disabled {\n  background-color: #f1f5f9;\n  cursor: not-allowed;\n}\n\n/* Live validation states */\ninput:valid {\n  border-color: #10b981;\n}\n\ninput:invalid:not(:placeholder-shown) {\n  border-color: #ef4444; /* Only show red if user has typed something invalid */\n}\n```"
+        },
+        {
+            "id": "css_pseudo_quiz_2",
+            "type": "quiz",
+            "title": "Structural Quiz",
+            "content": "Test your nth-child knowledge.",
+            "quizQuestion": "In ':nth-child(even)', what rows are targeted in zebra striping?",
+            "quizOptions": [
+                "Rows 1, 3, 5...",
+                "Rows 2, 4, 6...",
+                "Only the very last row",
+                "All odd-numbered rows"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_pseudo_9",
+            "type": "content",
+            "title": "Introduction to ::before and ::after",
+            "content": "# Pseudo-Elements: `::before` & `::after` 🪄\n\n`::before` and `::after` insert cosmetic content into an element **without** touching the HTML markup!\n\n```css_not\n.quote::before {\n  content: \"“\";\n  font-size: 2rem;\n  color: #3b82f6;\n}\n\n.quote::after {\n  content: \"”\";\n  font-size: 2rem;\n  color: #3b82f6;\n}\n```\n\n> ⚠️ **The Golden Rule:** A pseudo-element **will not render** unless the `content` property is defined! Even if you only want an empty colored box, write `content: \"\";`!"
+        },
+        {
+            "id": "css_pseudo_10",
+            "type": "content",
+            "title": "Creative Uses of ::before and ::after",
+            "content": "# Creative UI: Badges and Underline Effects 🎨\n\nCreate animated hover underlines with `::after`:\n\n```html_not\n<a href=\"#\" class=\"animated-link\">Explore Courses</a>\n```\n\n```css_not\n.animated-link {\n  position: relative;\n  text-decoration: none;\n  color: #0f172a;\n}\n\n.animated-link::after {\n  content: \"\";\n  position: absolute;\n  bottom: -2px;\n  left: 0;\n  width: 0; /* Starts at 0 width */\n  height: 2px;\n  background-color: #2563eb;\n  transition: width 0.3s ease;\n}\n\n.animated-link:hover::after {\n  width: 100%; /* Expands across on hover! */\n}\n```"
+        },
+        {
+            "id": "css_pseudo_11",
+            "type": "content",
+            "title": "Typographic Pseudo-Elements",
+            "content": "# Typographic Elements: `::first-letter` & `::selection` 📰\n\n## 1. Magazine Drop Caps (`::first-letter`):\n```css_not\np.article-intro::first-letter {\n  font-size: 3.5rem;\n  float: left;\n  line-height: 1;\n  margin-right: 8px;\n  color: #1e293b;\n  font-family: serif;\n}\n```\n\n## 2. Custom Text Highlight Color (`::selection`):\n```css_not\n::selection {\n  background-color: #fef08a; /* Yellow highlight */\n  color: #0f172a;\n}\n```"
+        },
+        {
+            "id": "css_pseudo_12",
+            "type": "content",
+            "title": "Modern Negation: :not()",
+            "content": "# The Negation Pseudo-Class: `:not()` 🚫\n\nSelects elements that do **not** match a selector:\n\n```css_not\n/* Adds bottom border to all list items EXCEPT the last one! */\nli:not(:last-child) {\n  border-bottom: 1px solid #e2e8f0;\n}\n\n/* Style all buttons except disabled ones */\nbutton:not(:disabled):hover {\n  cursor: pointer;\n  background-color: #2563eb;\n}\n```"
+        },
+        {
+            "id": "css_pseudo_13",
+            "type": "content",
+            "title": "Grouping Selectors: :is() and :where()",
+            "content": "# Modern Grouping: `:is()` and `:where()` 🧩\n\nSimplifies repetitive nested selectors:\n\n```css_not\n/* Old Repetitive Way */\nheader h1, header h2, header h3,\nnav h1, nav h2, nav h3 {\n  color: #1e293b;\n}\n\n/* Modern :is() Way */\n:is(header, nav) :is(h1, h2, h3) {\n  color: #1e293b;\n}\n```\n\n## `:is()` vs `:where()`:\n- `:is()` takes the specificity of its most specific argument.\n- `:where()` **always has 0 specificity**! Great for design system resets that are effortless to override."
+        },
+        {
+            "id": "css_pseudo_quiz_3",
+            "type": "quiz",
+            "title": "Pseudo-Elements Quiz",
+            "content": "Test your knowledge of pseudo-elements.",
+            "quizQuestion": "What property is strictly mandatory for ::before and ::after to render on screen?",
+            "quizOptions": [
+                "display: block",
+                "content",
+                "position: absolute",
+                "background-color"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_pseudo_14",
+            "type": "content",
+            "title": "The Parent Selector: :has()",
+            "content": "# The Holy Grail: The `:has()` Parent Selector 🏆\n\nFor 25 years, developers begged for a CSS \"parent selector\". In modern CSS, `:has()` makes it possible!\n\n```css_not\n/* Style a card if it contains a featured badge inside it! */\n.card:has(.featured-badge) {\n  border: 2px solid #f59e0b;\n  background-color: #fffbeb;\n}\n\n/* Style form label when its input is invalid */\nlabel:has(+ input:invalid) {\n  color: red;\n}\n```\n\n`:has()` checks if a parent contains elements matching a selector!"
+        },
+        {
+            "id": "css_pseudo_15",
+            "type": "content",
+            "title": "Marker and Placeholder Styling",
+            "content": "# Customizing `::marker` and `::placeholder` 🎯\n\n```css_not\n/* Custom input placeholder text styling */\ninput::placeholder {\n  color: #94a3b8;\n  font-style: italic;\n}\n\n/* Custom list item marker */\nli::marker {\n  color: #3b82f6;\n  font-size: 1.2em;\n}\n```"
+        },
+        {
+            "id": "css_pseudo_16",
+            "type": "content",
+            "title": "Combining Multiple Pseudo-Classes",
+            "content": "# Chaining Multiple Pseudo-Classes ⛓️\n\nYou can chain multiple pseudo-classes together for pinpoint targeting:\n\n```css_not\n/* An input that is required, currently invalid, and has user focus */\ninput:required:invalid:focus {\n  border-color: #ef4444;\n  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);\n}\n\n/* The first button that is not disabled */\nbutton:not(:disabled):first-of-type {\n  font-weight: 700;\n}\n```"
+        },
+        {
+            "id": "css_pseudo_17",
+            "type": "content",
+            "title": "Real-World Component: Notification Card",
+            "content": "# Real-World: Notification Banner with ::before 🔔\n\n```html_not\n<div class=\"alert alert-info\">\n  <p>Your subscription renewal is scheduled for next Monday.</p>\n</div>\n```\n\n```css_not\n.alert {\n  position: relative;\n  padding: 16px 20px 16px 48px;\n  border-radius: 8px;\n  background-color: #eff6ff;\n  color: #1e3a8a;\n  border: 1px solid #bfdbfe;\n}\n\n.alert-info::before {\n  content: \"ℹ️\";\n  position: absolute;\n  top: 16px;\n  left: 16px;\n  font-size: 1.25rem;\n}\n```"
+        },
+        {
+            "id": "css_pseudo_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Pseudo-Classes & Elements Mastered! 🌟\n\nYou now command the full suite of state management, structural queries, and virtual elements in CSS!\n\n## Key Takeaways:\n- ✅ **Classes vs Elements:** Single colon `:` for states (`:hover`, `:focus`); double colon `::` for phantom DOM nodes (`::before`, `::after`).\n- ✅ **`content` Rule:** Always declare `content: \"\"` for `::before` and `::after`.\n- ✅ **Structural Selectors:** `:first-child`, `:last-child`, and mathematical `:nth-child(2n)`.\n- ✅ **Modern Relational:** `:not()` for exclusions, `:is()`/`:where()` for groupings.\n- ✅ **The `:has()` Selector:** The revolutionary parent selector.\n\n## Congratulations!\nYou have completed the entire **CSS Learning Curriculum**! Ready to master dynamic programming logic with **JavaScript**? Let's dive in! 🚀"
+        }
+    ]
+}

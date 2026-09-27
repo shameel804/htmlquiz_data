@@ -1,0 +1,159 @@
+{
+    "id": "learn_tw_customization",
+    "topicId": "tw_customization",
+    "topicTitle": "Customization",
+    "description": "Learn advanced Tailwind CSS customization: tailwind.config.js setup, theme extension, arbitrary values, directives, and custom plugins.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "tw_customization_1",
+            "type": "content",
+            "title": "Tailwind Customization Overview",
+            "content": "# Advanced Customization in Tailwind CSS ⚙️\n\nWhile Tailwind includes an outstanding default design system, real-world apps require custom brand palettes, typography, bespoke plugins, and unique pixel values.\n\n## What You'll Master in this Module:\n- **tailwind.config.js Anatomy** — Core structure and options\n- **Extending vs Overriding Themes** — Safely augmenting the defaults\n- **Arbitrary Values & Modifiers** — `w-[350px]`, `bg-[#1da1f2]`\n- **Arbitrary Properties & Variants** — `[mask-type:alpha]`\n- **CSS Directives** — `@tailwind`, `@apply`, `@layer`\n- **Official & Custom Plugins** — Extending compiler capabilities"
+        },
+        {
+            "id": "tw_customization_2",
+            "type": "content",
+            "title": "The tailwind.config.js Architecture",
+            "content": "# Architecture of tailwind.config.js 🏗️\n\nEvery Tailwind project centers around `tailwind.config.js` (or `.ts` / `.mjs`).\n\n```javascript_not\n/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  content: [\n    './index.html',\n    './src/**/*.{js,ts,jsx,tsx,vue,svelte}',\n  ],\n  darkMode: 'class', // 'media' | 'class' | 'selector'\n  theme: {\n    extend: {\n      // Your custom extensions live here!\n    },\n  },\n  plugins: [],\n};\n```\n\n## Core Properties\n- `content`: Filepaths Tailwind scans for class names.\n- `darkMode`: Configures how dark variants are triggered.\n- `theme`: Customizes design tokens.\n- `plugins`: Registers official and custom PostCSS plugins."
+        },
+        {
+            "id": "tw_customization_3",
+            "type": "content",
+            "title": "Extending vs Overriding the Theme",
+            "content": "# Extending vs Overriding the Theme ⚖️\n\nThe placement of your customizations determines whether you preserve or replace Tailwind's default design tokens.\n\n## 1. Extending the Theme (`theme.extend`)\nPreserves all defaults and **adds** your custom values:\n\n```javascript_not\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        brand: '#6366f1', // Keeps slate, blue, red, etc. and adds 'brand'!\n      },\n    },\n  },\n};\n```\n\n## 2. Overriding the Theme (`theme` directly)\nCompletely **wipes out** all default values for that key:\n\n```javascript_not\nmodule.exports = {\n  theme: {\n    colors: {\n      brand: '#6366f1', // ONLY 'brand' exists! 'blue', 'gray', 'red' are GONE!\n    },\n  },\n};\n```\n\n> ⚠️ **Best Practice:** In 95% of projects, always customize inside `theme.extend`!"
+        },
+        {
+            "id": "tw_customization_quiz_1",
+            "type": "quiz",
+            "title": "Theme Extend Check",
+            "content": "Test your knowledge of theme customization!",
+            "quizQuestion": "What happens if you define `colors: { primary: '#123456' }` directly under `theme` instead of `theme.extend`?",
+            "quizOptions": [
+                "It throws a build syntax error",
+                "It extends the default colors with primary",
+                "It wipes out all default Tailwind colors, leaving only 'primary'",
+                "It only applies the color in development mode"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "tw_customization_5",
+            "type": "content",
+            "title": "Adding Custom Colors & CSS Variables",
+            "content": "# Custom Colors & CSS Variables 🎨\n\nYou can define static hex codes or integrate dynamic CSS custom properties.\n\n## Defining Color Objects\n\n```javascript_not\n// tailwind.config.js\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        primary: {\n          50: '#eef2ff',\n          500: '#6366f1',\n          900: '#312e81',\n        },\n        surface: 'var(--color-surface)',\n      },\n    },\n  },\n};\n```\n\n## Preserving Opacity with CSS Variables\nIf using CSS variables with Tailwind's `/opacity` syntax, format variables as space-separated RGB/HSL values:\n\n```css_not\n:root {\n  --color-primary-rgb: 99 102 241;\n}\n```\n```javascript_not\ncolors: {\n  primary: 'rgb(var(--color-primary-rgb) / <alpha-value>)',\n}\n```"
+        },
+        {
+            "id": "tw_customization_6",
+            "type": "content",
+            "title": "Custom Typography & Spacing Scales",
+            "content": "# Custom Fonts & Custom Spacing 📏\n\nAugment typography and spacing to match Figma design specifications.\n\n## Custom Font Stacks\n\n```javascript_not\n// tailwind.config.js\nmodule.exports = {\n  theme: {\n    extend: {\n      fontFamily: {\n        display: ['Cabinet Grotesk', 'sans-serif'],\n        body: ['Inter', 'system-ui', 'sans-serif'],\n      },\n      spacing: {\n        '128': '32rem',   // w-128 = 512px\n        '144': '36rem',   // h-144 = 576px\n      },\n    },\n  },\n};\n```\n\nUse them immediately: `font-display text-4xl w-128`."
+        },
+        {
+            "id": "tw_customization_7",
+            "type": "content",
+            "title": "Arbitrary Values: Just-In-Time Precision",
+            "content": "# Arbitrary Values: Square Bracket Syntax `[...]` 🎯\n\nWhen you need a one-off value that doesn't belong in your design system, use square bracket syntax.\n\n## Examples of Arbitrary Values\n\n| Utility | Arbitrary Example | Generated CSS |\n|---|---|---|\n| Dimensions | `w-[327px]` | `width: 327px;` |\n| Colors | `bg-[#24292e]` | `background-color: #24292e;` |\n| Grid Layout | `grid-cols-[200px_1fr_100px]` | `grid-template-columns: 200px 1fr 100px;` |\n| Calc Expression | `top-[calc(100%-1.5rem)]` | `top: calc(100% - 1.5rem);` |\n| Z-Index | `z-[9999]` | `z-index: 9999;` |\n\n> ⚠️ **Syntax Note:** In arbitrary values, replace spaces with underscores `_`! E.g., `grid-cols-[1fr_2fr]` (never put raw spaces inside the brackets)."
+        },
+        {
+            "id": "tw_customization_8",
+            "type": "content",
+            "title": "Arbitrary Properties & Data Attributes",
+            "content": "# Arbitrary Properties & Data Attributes 🏷️\n\nTailwind lets you write ANY valid CSS property directly in your class list using `[property:value]`.\n\n## Arbitrary CSS Properties\n\n```html_not\n<div class=\"[mask-type:luminance] [clip-path:polygon(0_0,100%_0,100%_75%,0_100%)]\">\n  Angled banner cutout with arbitrary clip-path\n</div>\n```\n\n## Data Attribute Variants (`data-[...]`)\n\nStyle elements based on HTML5 `data-*` attributes:\n\n```html_not\n<!-- Styled when data-state=\"active\" -->\n<div data-state=\"active\" class=\"data-[state=active]:bg-indigo-600 data-[state=active]:text-white p-4 rounded\">\n  Active Tab Content\n</div>\n```"
+        },
+        {
+            "id": "tw_customization_quiz_2",
+            "type": "quiz",
+            "title": "Arbitrary Values Quiz",
+            "content": "Test your knowledge of Tailwind arbitrary values!",
+            "quizQuestion": "How should spaces be represented inside an arbitrary value like `grid-cols-[100px 1fr]`?",
+            "quizOptions": [
+                "With plus signs: `grid-cols-[100px+1fr]`",
+                "With underscores: `grid-cols-[100px_1fr]`",
+                "With commas: `grid-cols-[100px,1fr]`",
+                "With percent encoding: `grid-cols-[100px%201fr]`"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "tw_customization_10",
+            "type": "content",
+            "title": "Directives Deep Dive: @layer",
+            "content": "# The @layer Directive Revisited 🗃️\n\nTailwind categorizes all generated CSS into three distinct layers to manage specificity:\n\n1. **`base`**: Browser resets, typographic defaults, typography tag overrides.\n2. **`components`**: Multi-class UI abstractions (`.card`, `.btn-primary`).\n3. **`utilities`**: Single-purpose utility overrides.\n\n```css_not\n@layer components {\n  .input-field {\n    @apply w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all;\n  }\n}\n```\n\nClasses defined in `@layer components` are automatically purged if unused in your template files!"
+        },
+        {
+            "id": "tw_customization_11",
+            "type": "content",
+            "title": "Writing Custom Plugins with plugin() API",
+            "content": "# Authoring Custom Plugins 🔌\n\nPlugins allow you to register new utilities, components, and variants programmatically with JavaScript.\n\n## Creating a Utility Plugin\n\n```javascript_not\n// tailwind.config.js\nconst plugin = require('tailwindcss/plugin');\n\nmodule.exports = {\n  plugins: [\n    plugin(function({ addUtilities, matchUtilities, theme }) {\n      // Static custom utility\n      addUtilities({\n        '.scrollbar-none': {\n          '-ms-overflow-style': 'none',\n          'scrollbar-width': 'none',\n          '&::-webkit-scrollbar': {\n            display: 'none',\n          },\n        },\n      });\n    }),\n  ],\n};\n```"
+        },
+        {
+            "id": "tw_customization_12",
+            "type": "content",
+            "title": "Adding Dynamic Utilities with matchUtilities",
+            "content": "# Dynamic Utilities with matchUtilities ⚡\n\nUse `matchUtilities` to support theme values AND arbitrary square-bracket values automatically!\n\n```javascript_not\nconst plugin = require('tailwindcss/plugin');\n\nmodule.exports = {\n  plugins: [\n    plugin(function({ matchUtilities, theme }) {\n      matchUtilities(\n        {\n          // Generates 'tab-size-2', 'tab-size-[4]', etc.\n          'tab-size': (value) => ({\n            'tab-size': value,\n          }),\n        },\n        { values: theme('tabSize') }\n      );\n    }),\n  ],\n};\n```"
+        },
+        {
+            "id": "tw_customization_13",
+            "type": "content",
+            "title": "The Official Plugin Ecosystem",
+            "content": "# The Official Tailwind Plugin Ecosystem 🌟\n\nTailwind Labs maintains four essential plugins for common development needs:\n\n## 1. `@tailwindcss/forms`\nApplies a clean, cross-browser reset to form controls that you can style with standard utilities:\n\n```bash_not\nnpm install -D @tailwindcss/forms\n```\n\n## 2. `@tailwindcss/typography`\nProvides the `prose` class for styling raw HTML/Markdown content.\n\n## 3. `@tailwindcss/container-queries`\nEnables styling based on parent container width instead of the viewport: `@container` and `@md:flex`.\n\n## 4. `@tailwindcss/aspect-ratio`\nLegacy aspect-ratio polyfill (modern Tailwind now uses native `aspect-*`)."
+        },
+        {
+            "id": "tw_customization_14",
+            "type": "content",
+            "title": "Container Queries: Beyond Viewport Breakpoints",
+            "content": "# Modern Revolution: Container Queries 📦\n\nWith the `@tailwindcss/container-queries` plugin, components adapt to the width of **their immediate parent container**, not the entire browser window!\n\n```html_not\n<!-- Mark parent container -->\n<div class=\"@container\">\n  <!-- Component adapts based on container width -->\n  <div class=\"flex flex-col @sm:flex-row @lg:grid @lg:grid-cols-3 gap-4\">\n    <div class=\"p-4 bg-white rounded-lg shadow\">Item A</div>\n    <div class=\"p-4 bg-white rounded-lg shadow\">Item B</div>\n    <div class=\"p-4 bg-white rounded-lg shadow\">Item C</div>\n  </div>\n</div>\n```\n\n> 💡 **Why This Is Huge:** Place this component in a narrow sidebar, and it renders as a column; place the exact same component in the main content area, and it renders as a 3-column grid!"
+        },
+        {
+            "id": "tw_customization_15",
+            "type": "content",
+            "title": "Presets: Sharing Configs Across Projects",
+            "content": "# Sharing Configurations with Presets 📦\n\nIn design systems and multi-repo organizations, define your theme once and share it across apps via `presets`.\n\n```javascript_not\n// tailwind.config.js (App Repo)\nmodule.exports = {\n  presets: [\n    require('@company/design-system-tailwind-preset')\n  ],\n  content: ['./src/**/*.{html,js,jsx,ts,tsx}'],\n  // You can still add app-specific overrides here\n};\n```\n\nThe preset can bundle brand colors, fonts, default plugins, and custom breakpoints into a single reusable npm package."
+        },
+        {
+            "id": "tw_customization_16",
+            "type": "content",
+            "title": "Safelist & Blocklist",
+            "content": "# The Safelist & Blocklist Options 🛡️\n\nTailwind's scanner purges any class that doesn't appear explicitly in source code. What if class names come from a database or external CMS?\n\n## The `safelist` Option\n\nForce Tailwind to generate specific classes even if not detected in template files:\n\n```javascript_not\n// tailwind.config.js\nmodule.exports = {\n  safelist: [\n    'bg-red-500',\n    'text-3xl',\n    {\n      pattern: /bg-(red|green|blue)-(100|500|900)/,\n      variants: ['hover', 'focus'],\n    },\n  ],\n};\n```\n\n## The `blocklist` Option\nPrevent specific classes from ever being generated to enforce design system rules (e.g., blocking `blocklist: ['container']`)."
+        },
+        {
+            "id": "tw_customization_17",
+            "type": "content",
+            "title": "Real-World Custom Component: Reusable Design System",
+            "content": "# Architecture of a Real-World Design Token System 🏛️\n\nHere is a complete, production-ready `tailwind.config.js` incorporating modern design system practices:\n\n```javascript_not\nconst colors = require('tailwindcss/colors');\n\n/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  content: ['./src/**/*.{html,js,ts,jsx,tsx}'],\n  darkMode: 'class',\n  theme: {\n    extend: {\n      colors: {\n        primary: colors.indigo,\n        secondary: colors.slate,\n        accent: colors.emerald,\n        surface: {\n          light: '#f8fafc',\n          dark: '#0f172a',\n        },\n      },\n      borderRadius: {\n        '4xl': '2rem',\n      },\n      boxShadow: {\n        glow: '0 0 25px -5px rgba(99, 102, 241, 0.4)',\n      },\n    },\n  },\n  plugins: [\n    require('@tailwindcss/forms'),\n    require('@tailwindcss/typography'),\n  ],\n};\n```"
+        },
+        {
+            "id": "tw_customization_quiz_3",
+            "type": "quiz",
+            "title": "Customization Master Quiz",
+            "content": "Test your mastery of advanced Tailwind CSS customization!",
+            "quizQuestion": "What configuration option forces Tailwind to bundle specific classes even if they are not found in your static source templates?",
+            "quizOptions": [
+                "forceList",
+                "safelist",
+                "includeClasses",
+                "alwaysBundle"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "tw_customization_19",
+            "type": "content",
+            "title": "Debugging Tailwind & JIT Scanner Issues",
+            "content": "# Debugging Tailwind Build Issues 🔍\n\n## 1. Class Not Being Applied?\n- Check `content` array in `tailwind.config.js`: is the file path covered?\n- Make sure the class name is written as an unbroken string (no `${dynamic}` interpolation).\n- Check browser inspector specificity: is a custom CSS rule overriding Tailwind's utility?\n\n## 2. JIT Not Updating on Save?\n- Ensure PostCSS watcher is running (`--watch` flag).\n- Verify file extensions in `content` pattern (`{html,js,ts,jsx,tsx}`).\n\n## 3. Large CSS File in Production?\n- Verify that `NODE_ENV=production` is set so minification and purging occur."
+        },
+        {
+            "id": "tw_customization_20",
+            "type": "content",
+            "title": "Summary of Tailwind CSS Course",
+            "content": "# Tailwind CSS: Complete Course Summary 🎓\n\nCongratulations! You have mastered the complete Tailwind CSS framework.\n\n## What You Have Achieved:\n- **Core Concepts**: Utility-first architecture, Preflight, mobile-first breakpoints, pseudo-classes, and dark mode.\n- **Layout & Spacing**: Mastered Flexbox, CSS Grid, dimension scales, absolute/fixed positioning, and z-index.\n- **Typography & Colors**: Fine-tuned font hierarchies, leading, tracking, curated 50-950 color ladders, and opacity modifiers.\n- **Borders & Elevation**: Constructed radius curves, divide borders, ring outlines without layout shift, and glowing shadows.\n- **Advanced Customization**: Configured `tailwind.config.js`, arbitrary values, `@layer` directives, and custom plugins.\n\nYou are now ready to build production-grade, stunning, responsive web apps with Tailwind CSS! 🚀"
+        },
+        {
+            "id": "tw_customization_21",
+            "type": "content",
+            "title": "Next Course: Sass Preprocessing",
+            "content": "# What's Next: Sass (Syntactically Awesome Style Sheets) 💅\n\nWhile Tailwind is utility-first, **Sass** remains the industry gold-standard CSS preprocessor for component-based CSS architectures.\n\n## Up Next in Sass:\n- **Variables & Nesting** with the `$` syntax and parent selector `&`\n- **Modern Modular Architecture**: `@use`, `@forward`, and namespaces\n- **Mixins & Functions**: Dynamic reusable style generators\n- **Inheritance with `@extend`** and `%` placeholders\n- **Control Directives**: `@if`, `@for`, `@each`, and `@while`\n\nLet's master CSS preprocessing! 🚀"
+        }
+    ]
+}

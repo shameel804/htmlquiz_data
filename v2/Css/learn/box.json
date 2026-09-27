@@ -1,0 +1,159 @@
+{
+    "id": "learn_css_box",
+    "topicId": "box",
+    "topicTitle": "CSS Box Model",
+    "description": "Master margin, border, padding, content, and the border-box sizing model.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "css_box_1",
+            "type": "content",
+            "title": "Welcome to the CSS Box Model",
+            "content": "# The CSS Box Model 📦\n\nIn CSS, **everything is a box**! Every paragraph, heading, button, card, and image is wrapped in a rectangular box that dictates how it interacts with neighboring elements.\n\n## What you'll master:\n- 🧱 **The 4 Box Layers** - Content, Padding, Border, and Margin\n- 🔄 **`box-sizing` Demystified** - `content-box` vs `border-box`\n- 🛑 **Margin Collapsing** - How vertical margins interact and when they collapse\n- 🎯 **Inline vs Block vs Inline-Block** - How display modes reshape boxes\n- 🌊 **Overflow Management** - Handling content that spills outside its container"
+        },
+        {
+            "id": "css_box_2",
+            "type": "content",
+            "title": "The 4 Layers of the Box Model",
+            "content": "# The 4 Concentric Layers 🧅\n\nEvery HTML element's rendered box consists of four concentric areas:\n\n```\n┌────────────────────────────────────────┐\n│                MARGIN                  │\n│  ┌──────────────────────────────────┐  │\n│  │              BORDER              │  │\n│  │  ┌────────────────────────────┐  │  │\n│  │  │          PADDING           │  │  │\n│  │  │  ┌──────────────────────┐  │  │  │\n│  │  │  │       CONTENT        │  │  │  │\n│  │  │  │   (Text, Images)     │  │  │  │\n│  │  │  └──────────────────────┘  │  │  │\n│  │  └────────────────────────────┘  │  │\n│  └──────────────────────────────────┘  │\n└────────────────────────────────────────┘\n```\n\n1. **Content:** Where text, images, or child elements appear.\n2. **Padding:** Clear breathing space around content, inside the border.\n3. **Border:** A border surrounding the padding and content.\n4. **Margin:** Clear space outside the border, separating the element from neighbors."
+        },
+        {
+            "id": "css_box_3",
+            "type": "content",
+            "title": "The Content Area (Width & Height)",
+            "content": "# The Content Area 📏\n\nThe `width` and `height` properties set dimensions for an element's content area.\n\n```css_not\n.box {\n  width: 300px;\n  height: 200px;\n  min-width: 200px;\n  max-width: 100%; /* Prevents horizontal overflow on mobile screens! */\n}\n```\n\n## Min and Max Constraints:\n- `max-width: 100%`: Allows the box to shrink on smaller screens while never exceeding its set max width.\n- `min-height`: Guarantees a minimum height while expanding dynamically if content overflows."
+        },
+        {
+            "id": "css_box_4",
+            "type": "content",
+            "title": "Padding: Internal Breathing Room",
+            "content": "# Padding: Internal Spacing 🧘\n\nPadding adds space between the content and the border. Background colors and images extend into the padding!\n\n## Shorthand Syntax:\n```css_not\n/* 4 values: Top Right Bottom Left (Clockwise!) */\npadding: 10px 20px 15px 5px;\n\n/* 3 values: Top  Horizontal  Bottom */\npadding: 10px 20px 15px;\n\n/* 2 values: Vertical  Horizontal */\npadding: 12px 24px;\n\n/* 1 value: All 4 sides equal */\npadding: 16px;\n```\n\nIndividual properties: `padding-top`, `padding-right`, `padding-bottom`, `padding-left`."
+        },
+        {
+            "id": "css_box_quiz_1",
+            "type": "quiz",
+            "title": "Box Model Basics Quiz",
+            "content": "Test your padding shorthand knowledge.",
+            "quizQuestion": "In 'padding: 10px 20px 30px 40px', which side gets 20px padding?",
+            "quizOptions": [
+                "Top",
+                "Right",
+                "Bottom",
+                "Left"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_box_5",
+            "type": "content",
+            "title": "Border: Framing the Box",
+            "content": "# Borders 🖼️\n\nThe border wraps directly around the padding.\n\n```css_not\n/* Shorthand: border: [width] [style] [color] */\n.card {\n  border: 2px solid #cbd5e1;\n  border-radius: 8px; /* Rounds the corners */\n}\n```\n\n## Border Styles:\n- `solid`, `dashed`, `dotted`, `double`, `none`\n\n## Individual Side Borders:\n```css_not\n.header {\n  border-bottom: 1px solid #e2e8f0; /* Underline divider */\n}\n```"
+        },
+        {
+            "id": "css_box_6",
+            "type": "content",
+            "title": "Margin: External Separation",
+            "content": "# Margin: External Separation 🏃\n\nMargin creates space outside the element, pushing away adjacent elements.\n\n```css_not\n.alert {\n  margin: 16px 0; /* 16px top and bottom, 0 left and right */\n}\n```\n\n## Centering with Auto Margins:\nFor block-level elements with a defined width, `margin: 0 auto` automatically centers the box horizontally!\n\n```css_not\n.container {\n  width: 80%;\n  max-width: 1200px;\n  margin: 0 auto; /* Equal margins left and right centers the container */\n}\n```"
+        },
+        {
+            "id": "css_box_7",
+            "type": "content",
+            "title": "The Classic Flaw: content-box",
+            "content": "# The Classic Problem: `content-box` 💥\n\nBy default in CSS, elements use `box-sizing: content-box`.\n\nIn `content-box`, `width` only sets the content area. Padding and border are **added on top**, making the actual rendered element wider than you intended!\n\n```css_not\n.problem {\n  box-sizing: content-box;\n  width: 300px;\n  padding: 20px;       /* + 20px left + 20px right */\n  border: 5px solid red; /* + 5px left + 5px right */\n}\n```\n\n## Total Rendered Width:\n`300px (content) + 40px (padding) + 10px (border) = 350px!`\nThis breaks grid columns and causes unexpected overflow!"
+        },
+        {
+            "id": "css_box_8",
+            "type": "content",
+            "title": "The Modern Hero: border-box",
+            "content": "# The Modern Hero: `border-box` 🛡️\n\nWhen using `box-sizing: border-box`, `width` sets the **total visible width**, including padding and border!\n\n```css_not\n.solution {\n  box-sizing: border-box;\n  width: 300px;\n  padding: 20px;\n  border: 5px solid blue;\n}\n```\n\n## Total Rendered Width:\n**Exactly 300px!** The browser automatically compresses the inner content area to 250px so the total width remains exactly 300px.\n\n```css_not\n/* The Essential Universal Reset */\n*, *::before, *::after {\n  box-sizing: border-box;\n}\n```"
+        },
+        {
+            "id": "css_box_quiz_2",
+            "type": "quiz",
+            "title": "Box Sizing Quiz",
+            "content": "Test your box-sizing calculations.",
+            "quizQuestion": "If an element with box-sizing: border-box has width: 200px, padding: 20px, and border: 2px, what is its total rendered width?",
+            "quizOptions": [
+                "244px",
+                "222px",
+                "200px",
+                "156px"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "css_box_9",
+            "type": "content",
+            "title": "Margin Collapsing Explained",
+            "content": "# Margin Collapsing 🤝\n\nA unique behavior occurs with vertical margins: when top and bottom margins of adjacent block elements touch, they **collapse** into a single margin instead of adding together!\n\n```html_not\n<div class=\"box-one\">Item 1</div>\n<div class=\"box-two\">Item 2</div>\n```\n\n```css_not\n.box-one { margin-bottom: 30px; }\n.box-two { margin-top: 20px; }\n```\n\n## Resulting Gap:\nInstead of `30px + 20px = 50px`, the browser takes the **maximum** of the two: **30px**!\n\n> 💡 **Notice:** Horizontal margins (left and right) **never** collapse. Flexbox and Grid items also do not collapse margins."
+        },
+        {
+            "id": "css_box_10",
+            "type": "content",
+            "title": "Negative Margins",
+            "content": "# Negative Margins ⬅️\n\nMargins can have negative values (e.g. `-10px`, `-2rem`).\n\n```css_not\n.overlap-image {\n  margin-top: -40px; /* Pulls the image 40px upward over the previous section */\n}\n\n.full-bleed {\n  margin-left: -20px;\n  margin-right: -20px; /* Expands element outside parent padding */\n}\n```\n\nNegative margins pull elements closer or overlap them with adjacent elements."
+        },
+        {
+            "id": "css_box_11",
+            "type": "content",
+            "title": "Display Property: Block Elements",
+            "content": "# Display: `block` 🧱\n\nBlock elements stack vertically on top of each other.\n\n```css_not\n.block-element {\n  display: block;\n}\n```\n\n## Characteristics:\n- Starts on a fresh line.\n- Automatically expands to fill 100% of parent width by default.\n- Respects `width`, `height`, and all four sides of `margin` and `padding`.\n- Default elements: `<div>`, `<p>`, `<h1>`-`<h6>`, `<section>`, `<article>`."
+        },
+        {
+            "id": "css_box_12",
+            "type": "content",
+            "title": "Display Property: Inline Elements",
+            "content": "# Display: `inline` 🔤\n\nInline elements sit next to each other within text flow.\n\n```css_not\n.inline-element {\n  display: inline;\n}\n```\n\n## Crucial Limitations:\n- `width` and `height` are **ignored**!\n- Top and bottom `margin` and `padding` do **not** push away neighboring lines.\n- Left and right padding and margins work normally.\n- Default elements: `<span>`, `<a>`, `<strong>`, `<em>`."
+        },
+        {
+            "id": "css_box_13",
+            "type": "content",
+            "title": "Display Property: Inline-Block",
+            "content": "# Display: `inline-block` 🌟\n\nThe best of both worlds! `inline-block` flows along horizontally like text, while respecting full box model dimensions:\n\n```css_not\n.tag-badge {\n  display: inline-block;\n  width: 120px;\n  height: 36px;\n  padding: 6px 12px;\n  margin: 4px;\n  background-color: #e0e7ff;\n  border-radius: 9999px;\n  text-align: center;\n}\n```\n\n- Flows side-by-side with other inline elements.\n- Fully respects `width`, `height`, vertical `padding`, and vertical `margin`!"
+        },
+        {
+            "id": "css_box_quiz_3",
+            "type": "quiz",
+            "title": "Display Modes Quiz",
+            "content": "Test your display understanding.",
+            "quizQuestion": "Which display value allows elements to sit side-by-side while respecting width and height?",
+            "quizOptions": [
+                "block",
+                "inline",
+                "inline-block",
+                "static"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "css_box_14",
+            "type": "content",
+            "title": "Outline vs Border",
+            "content": "# Outline vs Border ⭕\n\nWhile `border` occupies space in the box model, `outline` is drawn **outside** the border without taking up any space!\n\n```css_not\nbutton:focus-visible {\n  outline: 3px solid #3b82f6;\n  outline-offset: 2px; /* Leaves a gap between border and outline */\n}\n```\n\n## Why Outline is Essential for Accessibility:\nBecause outlines don't affect layout dimensions, adding a focus outline when a user tabs into a button never causes the surrounding layout to shift or jerk!"
+        },
+        {
+            "id": "css_box_15",
+            "type": "content",
+            "title": "Handling Overflow",
+            "content": "# Handling Overflow 🌊\n\nWhen content exceeds the explicit width or height of its box, the `overflow` property controls what happens:\n\n```css_not\n.scroll-box {\n  width: 250px;\n  height: 150px;\n  overflow: auto; /* Adds scrollbars ONLY when content actually overflows */\n}\n```\n\n## Values:\n- `visible`: Default. Content spills outside the box boundaries.\n- `hidden`: Clips overflowing content invisibly.\n- `scroll`: Forces permanent scrollbars (horizontal and vertical).\n- `auto`: Adds scrollbars only when necessary.\n- `overflow-x` / `overflow-y`: Controls horizontal and vertical overflow independently."
+        },
+        {
+            "id": "css_box_16",
+            "type": "content",
+            "title": "Box Shadows & Elevations",
+            "content": "# Box Shadows (`box-shadow`) 🌫️\n\nAdd depth and elevation to boxes using `box-shadow`:\n\n```css_not\n/* Syntax: box-shadow: [offset-x] [offset-y] [blur-radius] [spread] [color] */\n.card-elevated {\n  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),\n              0 4px 6px -4px rgba(0, 0, 0, 0.1);\n}\n\n/* Inner shadow */\n.inset-panel {\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);\n}\n```"
+        },
+        {
+            "id": "css_box_17",
+            "type": "content",
+            "title": "Real-World Component: Pricing Card",
+            "content": "# Real-World Component: Pricing Card 💳\n\n```html_not\n<div class=\"pricing-card\">\n  <h3>Pro Plan</h3>\n  <p class=\"price\">$29<span>/mo</span></p>\n  <button>Choose Plan</button>\n</div>\n```\n\n```css_not\n.pricing-card {\n  box-sizing: border-box;\n  width: 280px;\n  padding: 32px 24px;\n  margin: 16px auto;\n  border: 2px solid #e2e8f0;\n  border-radius: 16px;\n  background-color: #ffffff;\n  box-shadow: 0 4px 6px rgba(0,0,0,0.05);\n  text-align: center;\n}\n\n.price {\n  font-size: 2.5rem;\n  font-weight: 700;\n  margin: 16px 0 24px;\n}\n```"
+        },
+        {
+            "id": "css_box_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Box Model Mastered! 📦\n\nYou now understand the fundamental geometry that governs all web page rendering!\n\n## Key Takeaways:\n- ✅ **The 4 Layers:** Content -> Padding -> Border -> Margin.\n- ✅ **`border-box`:** Always apply `box-sizing: border-box` to prevent unexpected sizing bugs.\n- ✅ **Margin Collapse:** Adjacent vertical margins collapse into the largest single margin.\n- ✅ **Display Types:** `block` (full width), `inline` (flows with text), `inline-block` (side-by-side with dimensions).\n- ✅ **Overflow:** Use `overflow: auto` to contain tall content safely.\n\n## Up Next:\nIn the next module, discover how to place elements anywhere on the screen: **CSS Positioning (Static, Relative, Absolute, Fixed, and Sticky)**! 🚀"
+        }
+    ]
+}

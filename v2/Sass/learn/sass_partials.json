@@ -1,0 +1,159 @@
+{
+    "id": "learn_sass_partials",
+    "topicId": "sass_partials",
+    "topicTitle": "Partials & Modules",
+    "description": "Learn Sass partials and the modern module system: _filename.scss, @use, @forward, namespaces, and built-in modules like sass:math.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "sass_p_1",
+            "type": "content",
+            "title": "Introduction to Modular Sass",
+            "content": "# Modular Sass: Partials & Modules 📂\n\nWriting all your styles in a single monolithic file is a recipe for chaos. Sass solves this through **Partials** and the modern **Module System** (`@use` and `@forward`).\n\n## What You'll Learn:\n- **Partials**: Creating modular snippet files with the `_` underscore convention\n- **The Deprecation of `@import`**: Global namespace pollution and duplicated CSS\n- **The `@use` Rule**: Encapsulated imports with clean namespaces\n- **Aliasing Namespaces**: Using `as *` or `as custom`\n- **File Forwarding with `@forward`**: Creating library entry points\n- **Built-in Sass Modules**: `sass:math`, `sass:color`, `sass:map`, `sass:list`"
+        },
+        {
+            "id": "sass_p_2",
+            "type": "content",
+            "title": "Creating Partials (_filename.scss)",
+            "content": "# The Partials Convention: `_filename.scss` 🗂️\n\nA **Partial** is a Sass file whose name begins with an underscore `_` (e.g., `_variables.scss`, `_buttons.scss`).\n\n## What the Underscore Tells the Compiler\n\nWhen the Sass compiler scans your directories:\n\n- `main.scss` (no underscore) ➔ Compiled into standalone `dist/main.css`.\n- `_buttons.scss` (with underscore) ➔ **NOT** compiled into a standalone CSS file. It is treated as an imported module piece!\n\n## Example Project Structure (The 7-1 Pattern)\n\n```\nscss/\n├── abstracts/\n│   ├── _variables.scss\n│   └── _functions.scss\n├── components/\n│   ├── _buttons.scss\n│   └── _card.scss\n└── main.scss   <-- Only this file compiles to main.css!\n```"
+        },
+        {
+            "id": "sass_p_3",
+            "type": "content",
+            "title": "Why @import is Deprecated",
+            "content": "# Why `@import` Was Deprecated 🛑\n\nFor years, developers imported partials using `@import 'buttons'`. However, `@import` suffers from serious architectural flaws:\n\n1. **Global Namespace Pollution**: Every variable, mixin, and function declared in any file existed in a single global scope. It was impossible to know where a variable originated!\n2. **Name Collisions**: If two imported files declared `$primary-color`, one would silently overwrite the other.\n3. **Code Duplication**: If 5 files each did `@import 'variables'`, mixins or rules were duplicated multiple times in compiled CSS.\n4. **No Encapsulation**: Everything was public; private tokens could not be protected.\n\n> ⚠️ **Official Deprecation:** The Sass core team officially deprecated `@import` in favor of `@use` and `@forward`."
+        },
+        {
+            "id": "sass_p_4",
+            "type": "content",
+            "title": "The Modern @use Rule",
+            "content": "# The Modern `@use` Rule 📦\n\nThe `@use` rule loads mixins, functions, and variables from another Sass file as a **namespaced module**.\n\n```scss_not\n// _colors.scss\n$primary: #4f46e5;\n$secondary: #64748b;\n\n@mixin rounded-box {\n  border-radius: 8px;\n  overflow: hidden;\n}\n```\n\n```scss_not\n// _button.scss\n@use 'colors'; // Loads _colors.scss into the 'colors' namespace!\n\n.btn-primary {\n  background-color: colors.$primary; // Clean namespace access!\n  @include colors.rounded-box;\n}\n```\n\n> ⚡ **Key Benefit:** It is 100% obvious that `$primary` came from the `colors` module!"
+        },
+        {
+            "id": "sass_p_quiz_1",
+            "type": "quiz",
+            "title": "Module System Check",
+            "content": "Test your knowledge on the Sass module system!",
+            "quizQuestion": "Why was the traditional `@import` directive deprecated in modern Sass?",
+            "quizOptions": [
+                "It did not support CSS grid layouts",
+                "It caused global namespace pollution, name collisions, and CSS duplication",
+                "It was slower than JavaScript prepackers",
+                "Modern browsers blocked @import HTTP requests"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "sass_p_6",
+            "type": "content",
+            "title": "Namespaces and Aliasing with as",
+            "content": "# Namespaces and Aliasing with `as` 🏷️\n\nBy default, the namespace matches the file name without extension or underscore. You can customize this namespace using `as`.\n\n## 1. Custom Alias Namespace\n\n```scss_not\n@use 'theme-colors' as theme;\n\n.badge {\n  background: theme.$accent;\n}\n```\n\n## 2. Unprefixed Namespace (`as *`)\n\nIf you load a module with `as *`, all its members become available without any namespace prefix (similar to legacy behavior):\n\n```scss_not\n@use 'theme-colors' as *;\n\n.badge {\n  background: $accent; // Direct access without namespace prefix!\n}\n```\n\n> ⚠️ **Caution:** Use `as *` sparingly, as it reintroduces potential name collisions."
+        },
+        {
+            "id": "sass_p_7",
+            "type": "content",
+            "title": "Private Members with - or _",
+            "content": "# Private Members in Sass Modules 🔒\n\nWith the module system, you can define truly private variables, mixins, or functions that cannot be accessed outside their defining file!\n\n## How to Make a Member Private\n\nPrefix the member name with a hyphen `-` or underscore `_`:\n\n```scss_not\n// _math-utils.scss\n$-golden-ratio: 1.618; // PRIVATE variable (starts with -)\n$base-unit: 8px;       // PUBLIC variable\n\n@function -compute-scale($step) { // PRIVATE function\n  @return $step * $-golden-ratio * $base-unit;\n}\n\n@function get-size($step) { // PUBLIC function\n  @return -compute-scale($step);\n}\n```\n\nIf another file tries to access `math-utils.$-golden-ratio`, the compiler throws an error!"
+        },
+        {
+            "id": "sass_p_8",
+            "type": "content",
+            "title": "Configuring Modules with with",
+            "content": "# Configuring Modules with `with` 🎛️\n\nWhen using `@use`, you can configure variables defined with `!default` directly at import time using the `with` clause.\n\n```scss_not\n// _library.scss\n$button-bg: #3b82f6 !default;\n$button-radius: 4px !default;\n\n.btn {\n  background: $button-bg;\n  border-radius: $button-radius;\n}\n```\n\n```scss_not\n// main.scss\n@use 'library' with (\n  $button-bg: #10b981,\n  $button-radius: 9999px\n);\n```\n\n> ⚡ **Advantage:** No more global variable mutation hacks. Configuration is explicit, clean, and locally scoped!"
+        },
+        {
+            "id": "sass_p_quiz_2",
+            "type": "quiz",
+            "title": "Private Members Check",
+            "content": "Test your knowledge of Sass encapsulation!",
+            "quizQuestion": "How do you declare a variable or function as private so other files cannot import it?",
+            "quizOptions": [
+                "Use the `!private` flag",
+                "Prefix its name with a hyphen `-` or underscore `_`",
+                "Wrap it in an `@encapsulate` directive",
+                "Place it inside an unexported folder"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "sass_p_10",
+            "type": "content",
+            "title": "Forwarding Files with @forward",
+            "content": "# Forwarding Modules with `@forward` ⏩\n\nThe `@forward` rule loads a Sass stylesheet and makes its mixins, functions, and variables available when your stylesheet is loaded via `@use`.\n\n## Creating a Barrel File (`_index.scss`)\n\nInstead of requiring consumers to `@use` 10 separate partials, create an `_index.scss` that forwards them all:\n\n```scss_not\n// scss/components/_index.scss\n@forward 'buttons';\n@forward 'cards';\n@forward 'alerts';\n@forward 'navbar';\n```\n\n```scss_not\n// main.scss\n@use 'components'; // Automatically loads scss/components/_index.scss!\n\n.my-card {\n  @include components.card-style;\n}\n```"
+        },
+        {
+            "id": "sass_p_11",
+            "type": "content",
+            "title": "Forwarding with Prefixes & Visibility",
+            "content": "# Prefixing & Visibility in `@forward` 🏷️\n\nWhen forwarding, you can add prefixes to member names to avoid collisions or selectively hide private items.\n\n## 1. Adding Prefixes (`as prefix-*`)\n\n```scss_not\n// _theme.scss\n@forward 'colors' as color-*;\n@forward 'fonts' as font-*;\n```\n\nConsumers now access `theme.$color-primary` and `theme.$font-heading`.\n\n## 2. Hiding or Showing Members\n\n```scss_not\n// Only forward specific items:\n@forward 'mixins' show flex-center, truncate-text;\n\n// Forward everything EXCEPT internal items:\n@forward 'helpers' hide internal-calculate, debug-border;\n```"
+        },
+        {
+            "id": "sass_p_12",
+            "type": "content",
+            "title": "Built-in Module: sass:math",
+            "content": "# Built-In Module: `sass:math` 🔢\n\nNative slash division (`/`) was deprecated because CSS uses `/` as a separator (e.g. `font: 16px/1.5`). Modern Sass performs math using `sass:math`.\n\n```scss_not\n@use 'sass:math';\n\n.container {\n  // Safe division without ambiguity\n  width: math.div(100%, 3); // 33.3333333333%\n  \n  // Rounding\n  margin: math.round(15.6px); // 16px\n  padding: math.floor(15.9px); // 15px\n\n  // Extremes & Powers\n  max-width: math.max(300px, 500px, 400px); // 500px\n  z-index: math.pow(2, 4); // 16\n  \n  // Geometry\n  line-height: math.sqrt(4); // 2\n}\n```\n\n> ⚡ **Always Use `math.div()`:** Instead of `$width / 2`, write `math.div($width, 2)`."
+        },
+        {
+            "id": "sass_p_13",
+            "type": "content",
+            "title": "Built-in Module: sass:color",
+            "content": "# Built-In Module: `sass:color` 🎨\n\nInspect and manipulate colors dynamically using `sass:color`.\n\n```scss_not\n@use 'sass:color';\n\n$brand: #4f46e5;\n\n.button {\n  background-color: $brand;\n\n  &:hover {\n    // Lighten color by adjusting lightness\n    background-color: color.adjust($brand, $lightness: 10%);\n  }\n\n  &:active {\n    // Darken color by adjusting lightness\n    background-color: color.adjust($brand, $lightness: -10%);\n  }\n\n  // Adjust transparency / alpha channel\n  box-shadow: 0 4px 12px color.change($brand, $alpha: 0.35);\n\n  // Color blending\n  border-color: color.mix($brand, #ffffff, 60%);\n}\n```"
+        },
+        {
+            "id": "sass_p_14",
+            "type": "content",
+            "title": "Built-in Modules: sass:map & sass:list",
+            "content": "# Built-In Modules: `sass:map` & `sass:list` 🗺️\n\nManipulate data collections programmatically.\n\n```scss_not\n@use 'sass:map';\n@use 'sass:list';\n\n$grid-breakpoints: (\n  'sm': 576px,\n  'md': 768px,\n  'lg': 992px\n);\n\n// Map operations\n$has-md: map.has-key($grid-breakpoints, 'md'); // true\n$md-width: map.get($grid-breakpoints, 'md');   // 768px\n$merged: map.merge($grid-breakpoints, ('xl': 1200px));\n\n// List operations\n$pad-scale: (4px, 8px, 16px, 24px);\n$first-pad: list.nth($pad-scale, 1); // 4px\n$appended: list.append($pad-scale, 32px);\n```"
+        },
+        {
+            "id": "sass_p_15",
+            "type": "content",
+            "title": "Built-in Module: sass:string",
+            "content": "# Built-In Module: `sass:string` 🔤\n\nThe `sass:string` module provides utilities for inspecting, slicing, and modifying strings.\n\n```scss_not\n@use 'sass:string';\n\n$quote: 'Hello World';\n$len: string.length($quote); // 11\n$slice: string.slice($quote, 1, 5); // 'Hello'\n$upper: string.to-upper-case($quote); // 'HELLO WORLD'\n$lower: string.to-lower-case($quote); // 'hello world'\n\n// Unquote string for raw CSS keywords\n$font-raw: string.unquote('Inter, sans-serif');\nbody {\n  font-family: $font-raw;\n}\n```"
+        },
+        {
+            "id": "sass_p_16",
+            "type": "content",
+            "title": "Architectural Pattern: The 7-1 Architecture",
+            "content": "# Enterprise Architecture: The 7-1 Pattern 🏛️\n\nThe **7-1 Pattern** is the industry standard directory structure for large Sass projects:\n\n```\nsass/\n├── abstracts/     # Tools, helpers, variables, mixins, functions\n├── base/          # Reset, typography, boilerplate styles\n├── components/    # Reusable widgets: buttons, cards, sliders\n├── layout/        # Major layout sections: header, footer, sidebar\n├── pages/         # Page-specific styling: _home.scss, _contact.scss\n├── themes/        # Multi-theme overrides: _dark.scss, _high-contrast.scss\n├── vendors/       # Third-party CSS/libraries\n└── main.scss      # Master entry point tying everything together\n```\n\nEach folder has an `_index.scss` file with `@forward` rules, making `main.scss` an elegant, one-page table of contents!"
+        },
+        {
+            "id": "sass_p_17",
+            "type": "content",
+            "title": "Real-World Example: Master main.scss Entry Point",
+            "content": "# Production main.scss Master Manifest 📜\n\nHere is how a clean `main.scss` appears in a professional enterprise app:\n\n```scss_not\n// 1. Abstract utilities\n@use 'abstracts/variables' as vars;\n@use 'abstracts/mixins' as mix;\n@use 'abstracts/functions' as func;\n\n// 2. Base resets\n@use 'base/reset';\n@use 'base/typography';\n\n// 3. Layout structural blocks\n@use 'layout/navbar';\n@use 'layout/grid';\n@use 'layout/footer';\n\n// 4. UI Components\n@use 'components/buttons';\n@use 'components/cards';\n@use 'components/modals';\n\n// 5. Vendor integrations\n@use 'vendors/prism-theme';\n```"
+        },
+        {
+            "id": "sass_p_quiz_3",
+            "type": "quiz",
+            "title": "Partials & Math Quiz",
+            "content": "Test your knowledge of Sass modules!",
+            "quizQuestion": "How should division be performed in modern Sass to avoid deprecation warnings?",
+            "quizOptions": [
+                "Using the double slash operator `//`",
+                "Using `math.div($val1, $val2)` from the `sass:math` module",
+                "Using the percentage operator `%`",
+                "Wrapping with `calc($val1 / $val2)` exclusively"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "sass_p_19",
+            "type": "content",
+            "title": "Common Pitfalls with @use & Partials",
+            "content": "# Common Module System Pitfalls ⚠️\n\n## 1. Multiple `@use` Declarations Must Come First\nAll `@use` and `@forward` rules **must** appear at the very top of your stylesheet before any CSS rules:\n\n```scss_not\n// WRONG: Rule before @use!\nbody { margin: 0; }\n@use 'colors'; // ERROR!\n```\n\n## 2. Circular Dependencies\nFile A cannot `@use 'file-b'` if File B also `@use 'file-a'`. Keep dependencies flowing in a single direction (e.g. components depend on abstracts, never vice-versa)."
+        },
+        {
+            "id": "sass_p_20",
+            "type": "content",
+            "title": "Summary: Partials & Modules",
+            "content": "# Partials & Modules: Summary 📋\n\n## Key Takeaways\n- **Partials**: Named `_name.scss`; compiled only when loaded by a master file.\n- **`@use`**: Replaces deprecated `@import`; provides strict file namespaces (`module.$var`).\n- **`@forward`**: Packages and re-exports partials through `_index.scss` barrel files.\n- **Private Members**: Prefix with `-` or `_` to keep tokens internal.\n- **Built-in Modules**: Use `sass:math` (`math.div`), `sass:color` (`color.adjust`), `sass:map`, and `sass:string`.\n- **7-1 Pattern**: Organizes enterprise code into clean functional folders.\n\nNext: Master `@mixin` and `@function` for reusable code generation! ⚙️"
+        },
+        {
+            "id": "sass_p_21",
+            "type": "content",
+            "title": "Next Steps: Mixins & Functions",
+            "content": "# Ahead: Reusable Mixins & Custom Functions ⚙️\n\nWith modular architecture under your belt, let's explore writing parameterized style generators.\n\n## Topics Ahead:\n- **Defining & Including Mixins**: `@mixin` and `@include`\n- **Parameterized Mixins**: Default and keyword arguments\n- **The `@content` Block**: Passing entire CSS blocks into mixins\n- **Custom Functions with `@function` and `@return`**\n- **Responsive Media Query Mixins**\n\nLet's dive into dynamic Sass automation! 🚀"
+        }
+    ]
+}

@@ -1,0 +1,159 @@
+{
+    "id": "learn_bs_content",
+    "topicId": "bs_content",
+    "topicTitle": "Content & Typography",
+    "description": "Learn Bootstrap 5 content and typography: Reboot resets, headings, display classes, lead text, tables (striped/hover/responsive), and fluid images.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "bs_c_1",
+            "type": "content",
+            "title": "Content & Typography Overview",
+            "content": "# Bootstrap 5 Content & Typography 📄\n\nBefore building buttons and interactive cards, your web applications need clean, legible content defaults. Bootstrap provides:\n\n- **Reboot**: A modernized, cross-browser normalization stylesheet\n- **Typography**: Standard headings, giant display headings, and lead paragraphs\n- **Inline Text Elements**: Badges, marked text, and abbreviations\n- **Blockquotes**: Styled quotes with author attributions\n- **Responsive Tables**: Striped, bordered, dark, and scrollable tables\n- **Responsive Images & Figures**: Thumbnail frames and responsive scaling"
+        },
+        {
+            "id": "bs_c_2",
+            "type": "content",
+            "title": "Bootstrap Reboot: The Base Reset",
+            "content": "# Bootstrap Reboot 🔄\n\n**Reboot** is Bootstrap's collection of element-specific CSS changes built on top of Normalize.css.\n\n## Key Reboot Behaviors\n\n1. **`box-sizing: border-box`** is applied globally to every element.\n2. **Margins are unidirectional**: Elements only use `margin-bottom` (preventing margin-collapse surprises).\n3. **Native System Fonts**: Uses high-performance native system font stacks (`system-ui, -apple-system, Segoe UI, Roboto...`).\n4. **Root Font Sizing**: Body defaults to `1rem` (16px) with a line-height of `1.5`.\n5. **Links**: Underlined on `:hover`, colored with `$link-color`."
+        },
+        {
+            "id": "bs_c_3",
+            "type": "content",
+            "title": "Headings & Display Headings",
+            "content": "# Headings & Display Headings 🔤\n\nBootstrap styles standard `<h1>` through `<h6>` tags and provides `.h1` through `.h6` classes for matching font sizes on non-heading tags.\n\n## Standard Headings\n\n```html_not\n<h1>h1. Bootstrap heading (2.5rem / 40px)</h1>\n<h2>h2. Bootstrap heading (2rem / 32px)</h2>\n<h3>h3. Bootstrap heading (1.75rem / 28px)</h3>\n```\n\n## Display Headings (`.display-1` to `.display-6`)\n\nWhen you need massive hero titles that stand out from normal page headings:\n\n```html_not\n<h1 class=\"display-1 fw-bold\">Display 1 (5rem)</h1>\n<h1 class=\"display-4\">Display 4 (3.5rem)</h1>\n<h1 class=\"display-6\">Display 6 (2.5rem)</h1>\n```"
+        },
+        {
+            "id": "bs_c_4",
+            "type": "content",
+            "title": "Lead Paragraphs & Inline Text",
+            "content": "# Lead Text & Inline Elements ✍️\n\n## Lead Paragraphs (`.lead`)\n\nMake introductory summary paragraphs stand out with `.lead` (larger `1.25rem` font size and lighter weight):\n\n```html_not\n<p class=\"lead text-muted\">\n  This is a lead paragraph designed to summarize the article's core thesis.\n</p>\n```\n\n## Inline Text Formatting\n\n```html_not\n<p>You can use the <mark>mark tag</mark> to highlight text.</p>\n<p><del>This line is treated as deleted text.</del></p>\n<p><u>This line renders with a standard underline.</u></p>\n<p><small class=\"text-muted\">Fine print disclaimer text.</small></p>\n```"
+        },
+        {
+            "id": "bs_c_quiz_1",
+            "type": "quiz",
+            "title": "Typography Sizing Check",
+            "content": "Test your knowledge of Bootstrap typography!",
+            "quizQuestion": "Which class renders a paragraph in a noticeably larger font size to introduce an article?",
+            "quizOptions": [
+                ".headline",
+                ".lead",
+                ".intro",
+                ".display-p"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "bs_c_6",
+            "type": "content",
+            "title": "Blockquotes & Citations",
+            "content": "# Blockquotes & Figures 💬\n\nQuote content from another source with named citations:\n\n```html_not\n<figure class=\"text-center p-4 bg-light rounded-3\">\n  <blockquote class=\"blockquote\">\n    <p class=\"mb-3\">\"Simplicity is prerequisite for reliability.\"</p>\n  </blockquote>\n  <figcaption class=\"blockquote-footer\">\n    Edsger W. Dijkstra in <cite title=\"Source Title\">Selected Writings on Computing</cite>\n  </figcaption>\n</figure>\n```\n\nAlign quotes using `.text-start`, `.text-center`, or `.text-end`."
+        },
+        {
+            "id": "bs_c_7",
+            "type": "content",
+            "title": "Data Tables: Basic & Color Variants",
+            "content": "# Bootstrap Tables: Core Styling 📊\n\nAdd `.table` to any `<table>` tag for clean borders and row padding.\n\n```html_not\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th scope=\"col\">#</th>\n      <th scope=\"col\">First</th>\n      <th scope=\"col\">Last</th>\n      <th scope=\"col\">Role</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th scope=\"row\">1</th>\n      <td>Mark</td>\n      <td>Otto</td>\n      <td>@mdo</td>\n    </tr>\n  </tbody>\n</table>\n```\n\n## Table Color Themes\n\nInvert table colors with `.table-dark`, or color individual rows with `.table-primary`, `.table-success`, `.table-danger`, `.table-warning`."
+        },
+        {
+            "id": "bs_c_8",
+            "type": "content",
+            "title": "Table Modifiers: Striped, Hover, Bordered",
+            "content": "# Table Modifiers: Striped, Hover & Borders 📋\n\nEnhance data legibility with modifier classes on the parent `<table>`:\n\n## Popular Table Modifiers\n\n- `.table-striped`: Alternating zebra striping on odd rows (`tbody > tr:nth-of-type(odd)`)\n- `.table-hover`: Highlights rows on hover for interactive tables\n- `.table-bordered`: Adds crisp borders on all sides of cells\n- `.table-borderless`: Strips all cell borders\n- `.table-sm`: Compact cell padding for dense data\n\n```html_not\n<table class=\"table table-striped table-hover table-bordered align-middle\">\n  <thead class=\"table-dark\">\n    <tr><th>ID</th><th>User</th><th>Status</th></tr>\n  </thead>\n  <tbody>\n    <tr><td>101</td><td>Alice</td><td><span class=\"badge bg-success\">Active</span></td></tr>\n    <tr><td>102</td><td>Bob</td><td><span class=\"badge bg-warning\">Pending</span></td></tr>\n  </tbody>\n</table>\n```"
+        },
+        {
+            "id": "bs_c_quiz_2",
+            "type": "quiz",
+            "title": "Table Modifiers Quiz",
+            "content": "Test your knowledge of Bootstrap table classes!",
+            "quizQuestion": "Which class adds light alternating zebra stripes to table rows in Bootstrap?",
+            "quizOptions": [
+                ".table-zebra",
+                ".table-striped",
+                ".table-alternate",
+                ".table-rows"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "bs_c_10",
+            "type": "content",
+            "title": "Responsive Tables: Horizontal Scrolling",
+            "content": "# Responsive Tables with `.table-responsive` 📱\n\nTables with many columns can easily break mobile layouts. Wrap your table in `.table-responsive` to make it horizontally scrollable:\n\n```html_not\n<div class=\"table-responsive\">\n  <table class=\"table table-hover text-nowrap\">\n    <!-- Table with 10+ columns will scroll smoothly on smartphones -->\n  </table>\n</div>\n```\n\n## Breakpoint-Specific Responsive Tables\n\n- `.table-responsive-sm`: Scrollable below `576px`\n- `.table-responsive-md`: Scrollable below `768px`\n- `.table-responsive-lg`: Scrollable below `992px`"
+        },
+        {
+            "id": "bs_c_11",
+            "type": "content",
+            "title": "Images: Fluid & Responsive",
+            "content": "# Responsive Images: `.img-fluid` 🖼️\n\nBy default, images in HTML can overflow their containers. Bootstrap makes them fluid with `.img-fluid`.\n\n## How `.img-fluid` Works\n\nApplies `max-width: 100%; height: auto;` to scale smoothly with parent column width:\n\n```html_not\n<div class=\"col-md-6\">\n  <img src=\"/img/nature.jpg\" class=\"img-fluid rounded-4 shadow\" alt=\"Scenic mountain\">\n</div>\n```\n\n## Image Thumbnails (`.img-thumbnail`)\n\nGives images a 1px border, 0.25rem rounded border radius, and subtle padding for photo galleries:\n\n```html_not\n<img src=\"/img/avatar.png\" class=\"img-thumbnail rounded-circle\" alt=\"User Profile\">\n```"
+        },
+        {
+            "id": "bs_c_12",
+            "type": "content",
+            "title": "Figures & Captions",
+            "content": "# Figures & Captions with `<figure>` 📸\n\nPair images with descriptive captions using HTML5 `<figure>` elements:\n\n```html_not\n<figure class=\"figure\">\n  <img src=\"/img/architecture.jpg\" class=\"figure-img img-fluid rounded\" alt=\"City skyline\">\n  <figcaption class=\"figure-caption text-end\">\n    Downtown financial district photographed at sunset.\n  </figcaption>\n</figure>\n```\n\n`.figure-caption` dims caption text and sets proportional font size."
+        },
+        {
+            "id": "bs_c_13",
+            "type": "content",
+            "title": "Text Alignment & Text Wrapping",
+            "content": "# Text Alignment & Wrapping Utilities 🔠\n\nControl text placement and line-breaking behavior:\n\n## Alignment Classes\n\n- `.text-start` (left in LTR)\n- `.text-center`\n- `.text-end` (right in LTR)\n- Responsive: `.text-center .text-md-start`\n\n## Text Truncation (`.text-truncate`)\n\nTruncate long text with an ellipsis on a single line:\n\n```html_not\n<!-- Requires display: inline-block or block with fixed max-width -->\n<div class=\"text-truncate\" style=\"max-width: 250px;\">\n  This super long product description cuts off cleanly with ellipsis...\n</div>\n```"
+        },
+        {
+            "id": "bs_c_14",
+            "type": "content",
+            "title": "Font Weight & Italics",
+            "content": "# Font Weights & Italic Styles 🏋️\n\nQuickly adjust typography emphasis without writing custom CSS rules.\n\n## Font Weights\n\n- `.fw-bold`: `font-weight: 700;`\n- `.fw-bolder`: Heavier than parent\n- `.fw-semibold`: `font-weight: 600;`\n- `.fw-normal`: `font-weight: 400;`\n- `.fw-light`: `font-weight: 300;`\n- `.fw-lighter`: Lighter than parent\n\n## Font Styles\n\n- `.fst-italic`: `font-style: italic;`\n- `.fst-normal`: `font-style: normal;`"
+        },
+        {
+            "id": "bs_c_15",
+            "type": "content",
+            "title": "Line Height Utilities",
+            "content": "# Line Height (Leading) Utilities 📏\n\nControl line spacing with `.lh-*`:\n\n- `.lh-1`: `line-height: 1;` (great for compact headline badges)\n- `.lh-sm`: `line-height: 1.25;`\n- `.lh-base`: `line-height: 1.5;` (body default)\n- `.lh-lg`: `line-height: 2;` (generous line spacing for long reading)\n\n```html_not\n<p class=\"lh-lg fs-5 text-secondary\">\n  Generously spaced editorial paragraph designed for readability.\n</p>\n```"
+        },
+        {
+            "id": "bs_c_16",
+            "type": "content",
+            "title": "Text Transform & Decoration",
+            "content": "# Text Transform & Decoration 🔠\n\n## Text Transform Classes\n\n- `.text-lowercase`: all lowercase\n- `.text-uppercase`: ALL CAPS\n- `.text-capitalize`: Capitalize Each Word\n\n## Text Decoration\n\n- `.text-decoration-underline`: Adds underline\n- `.text-decoration-line-through`: Strikethrough for discounted prices\n- `.text-decoration-none`: Strips underlines from links (`<a>`)"
+        },
+        {
+            "id": "bs_c_17",
+            "type": "content",
+            "title": "Real-World Component: Product Review Section",
+            "content": "# Real-World Example: Product Review Table & Quote 🌟\n\n```html_not\n<div class=\"container my-5\">\n  <div class=\"row g-4 align-items-center\">\n    <div class=\"col-lg-5\">\n      <h2 class=\"display-6 fw-bold mb-3\">Customer Experience</h2>\n      <p class=\"lead text-muted\">Real data from over 10,000 verified buyers.</p>\n      \n      <figure class=\"border-start border-primary border-4 ps-3 my-4\">\n        <blockquote class=\"blockquote fs-6 fst-italic\">\n          \"The fastest checkout experience on the modern web.\"\n        </blockquote>\n        <figcaption class=\"blockquote-footer\">Wired Magazine</figcaption>\n      </figure>\n    </div>\n    \n    <div class=\"col-lg-7\">\n      <div class=\"table-responsive shadow-sm rounded-3 border\">\n        <table class=\"table table-hover align-middle mb-0\">\n          <thead class=\"table-light\">\n            <tr><th>Customer</th><th>Product</th><th>Rating</th><th>Status</th></tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td class=\"fw-bold\">Sarah T.</td>\n              <td>Cloud Pro Plan</td>\n              <td class=\"text-warning\">★★★★★</td>\n              <td><span class=\"badge bg-success\">Verified</span></td>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n    </div>\n  </div>\n</div>\n```"
+        },
+        {
+            "id": "bs_c_quiz_3",
+            "type": "quiz",
+            "title": "Image Utilities Quiz",
+            "content": "Test your knowledge of Bootstrap image utilities!",
+            "quizQuestion": "Which class ensures an image never exceeds its parent width while maintaining aspect ratio?",
+            "quizOptions": [
+                ".img-responsive",
+                ".img-fluid",
+                ".img-fill",
+                ".img-scale"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "bs_c_19",
+            "type": "content",
+            "title": "Accessibility Best Practices for Content",
+            "content": "# Accessibility (a11y) Best Practices ♿\n\n1. **Always include `alt` attributes**: `<img class=\"img-fluid\" alt=\"Description\">`.\n2. **Use `<th scope=\"col\">` and `<th scope=\"row\">`**: Screen readers need `scope` to associate data cells with headers.\n3. **Don't rely solely on color**: Pair colored badges (`.bg-danger`) with descriptive text (e.g. \"Error: Payment Failed\").\n4. **Visual hidden utilities**: Use `.visually-hidden` for screen-reader-only labels."
+        },
+        {
+            "id": "bs_c_20",
+            "type": "content",
+            "title": "Summary: Content & Typography",
+            "content": "# Content & Typography: Summary 📋\n\n## Key Takeaways\n- **Reboot**: Normalizes margins, sets system fonts, and ensures `border-box` sizing.\n- **Headings**: Standard `h1`-`h6` plus `.display-1` through `.display-6` for hero text.\n- **Lead Text**: `.lead` emphasizes intro paragraphs.\n- **Tables**: Combine `.table`, `.table-striped`, `.table-hover`, and `.table-responsive`.\n- **Images**: Use `.img-fluid` for responsive scaling and `.img-thumbnail` for gallery cards.\n\nNext: Build core UI widgets: Buttons, Cards, Badges, Alerts, and Spinners! 🔘"
+        },
+        {
+            "id": "bs_c_21",
+            "type": "content",
+            "title": "Next Steps: Basic Components",
+            "content": "# Ahead: Basic UI Components 🔘🃏\n\nWith layout and content fundamentals mastered, let's explore Bootstrap's iconic component library.\n\n## Topics Ahead:\n- **Buttons & Button Groups**: Variants, outlines, sizes, and states\n- **Badges & Pills**: Status indicators and count notifications\n- **Cards**: Flexible containers with headers, body, footers, and media\n- **Dismissible Alerts**: Contextual notifications\n- **List Groups, Spinners, and Progress Bars**\n\nLet's build interactive UI elements! 🚀"
+        }
+    ]
+}

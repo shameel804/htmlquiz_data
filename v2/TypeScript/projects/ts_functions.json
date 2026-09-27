@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Typing Function Parameters",
+    "ques": "Write a TypeScript function named `calculateTotal` that takes two parameters: `price` (number) and `taxRate` (number). Ensure parameter types are strictly annotated and compute the total price.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "function calculateTotal(price: number, taxRate: number) {\n  const taxAmount = price * taxRate;\n  return price + taxAmount;\n}\n\nconst total = calculateTotal(100, 0.08);\nconsole.log(`Total: $${total}`); // Output: Total: $108"
+    },
+    "explanation": "Annotating function parameters ensures callers provide arguments matching exact specified types, eliminating unexpected runtime type errors."
+  },
+  {
+    "title": "Explicit Function Return Types",
+    "ques": "Why should developers explicitly declare **return types** on functions rather than relying completely on inference? Write a function `isAdult` with an explicit boolean return type.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "function isAdult(age: number): boolean {\n  if (age < 0) {\n    throw new Error(\"Age cannot be negative\");\n  }\n  return age >= 18;\n}\n\nconst allowed: boolean = isAdult(21);\nconsole.log(`Access permitted: ${allowed}`);"
+    },
+    "explanation": "Explicit return types guarantee that a function adheres to its promised contract, catching unintended return values during refactoring and speeding up compilation times."
+  },
+  {
+    "title": "Optional and Default Parameters",
+    "ques": "Write a TypeScript function `greetUser` that demonstrates both an **optional parameter** using the `?` operator and a **default parameter** with a fallback value.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "function greetUser(name: string, greeting: string = \"Hello\", title?: string): string {\n  if (title) {\n    return `${greeting}, ${title} ${name}!`;\n  }\n  return `${greeting}, ${name}!`;\n}\n\nconsole.log(greetUser(\"Alice\")); // Hello, Alice!\nconsole.log(greetUser(\"Bob\", \"Welcome\")); // Welcome, Bob!\nconsole.log(greetUser(\"Smith\", \"Good morning\", \"Dr.\")); // Good morning, Dr. Smith!"
+    },
+    "explanation": "Default parameters automatically provide values when an argument is `undefined`, while optional parameters (`param?: type`) permit omitting the argument altogether."
+  },
+  {
+    "title": "Rest Parameters with Type Annotations",
+    "ques": "Write a function `sumAll` that accepts a variable number of numeric arguments using **rest parameters (`...rest`)**, strictly typed as an array of numbers, and returns the accumulated sum.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "function sumAll(...numbers: number[]): number {\n  return numbers.reduce((accumulator, current) => accumulator + current, 0);\n}\n\nconsole.log(sumAll(10, 20, 30)); // 60\nconsole.log(sumAll(5, 15, 25, 35, 45)); // 125\nconsole.log(sumAll()); // 0"
+    },
+    "explanation": "Rest parameters collect an unbounded list of arguments into an array. Typing them as `Type[]` allows type-checking every single incoming argument."
+  },
+  {
+    "title": "Function Signatures with Object Parameter Types",
+    "ques": "Write a function `registerStudent` that accepts a structured **inline object parameter** containing `name` (string), `grade` (number), and an optional `email` (string).",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "function registerStudent(student: { name: string; grade: number; email?: string }): string {\n  const contactInfo = student.email ? ` (Email: ${student.email})` : \"\";\n  return `Registered ${student.name} in Grade ${student.grade}${contactInfo}`;\n}\n\nconst studentA = { name: \"Sophia\", grade: 10 };\nconst studentB = { name: \"Liam\", grade: 12, email: \"liam@school.edu\" };\n\nconsole.log(registerStudent(studentA));\nconsole.log(registerStudent(studentB));"
+    },
+    "explanation": "TypeScript allows defining structured object parameter shapes directly in function signatures, ensuring callers supply required object keys."
+  },
+  {
+    "title": "Understanding Void and Never Return Types",
+    "ques": "Compare the **`void`** and **`never`** return types in TypeScript. Provide code examples illustrating when each type is applied.",
+    "answer": {
+      "type": "code",
+      "lang": "typescript",
+      "content": "// 'void' indicates a function returns nothing (or returns undefined)\nfunction logSystemMessage(message: string): void {\n  console.log(`[LOG]: ${message}`);\n  // Implicitly returns undefined\n}\n\n// 'never' indicates a function NEVER completes or returns an endpoint\n// (e.g. throws an exception or runs an infinite event loop)\nfunction throwFatalError(errorMessage: string): never {\n  throw new Error(`Fatal system crash: ${errorMessage}`);\n}\n\nfunction infiniteMonitorLoop(): never {\n  while (true) {\n    // Background service daemon loop that never terminates\n  }\n}"
+    },
+    "explanation": "`void` is used when a function completes execution normally without returning a value. `never` indicates unreachable control flow where execution never reaches a normal return statement."
+  }
+]

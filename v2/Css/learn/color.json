@@ -1,0 +1,159 @@
+{
+    "id": "learn_css_color",
+    "topicId": "color",
+    "topicTitle": "CSS Colors & Backgrounds",
+    "description": "Master Hex, RGB, HSL, OKLCH, linear/radial gradients, and background sizing.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "css_color_1",
+            "type": "content",
+            "title": "Welcome to CSS Colors & Backgrounds",
+            "content": "# Colors & Backgrounds 🎨\n\nColor sets visual mood, communicates state, and establishes branding. CSS gives you immense power to blend colors, create gradients, and manipulate backgrounds.\n\n## What you'll master:\n- 🌈 **Color Formats** - Hex, RGB, RGBA, HSL, and modern OKLCH\n- 🪄 **Linear & Radial Gradients** - Multi-stop gradients and angle controls\n- 🖼️ **Background Properties** - Images, positioning, repeating, and attachment\n- 📏 **Background Sizing** - `cover`, `contain`, and responsive backgrounds\n- 🎭 **Multiple Backgrounds & Blending** - Layering textures and gradients"
+        },
+        {
+            "id": "css_color_2",
+            "type": "content",
+            "title": "Color Formats: Hex and RGB",
+            "content": "# Color Formats: Hex & RGB 🔴🟢🔵\n\nCSS supports multiple color notations:\n\n## 1. Hexadecimal (`#RRGGBB`):\nUses base-16 (0-9, A-F) representing Red, Green, and Blue channels:\n```css_not\n.box {\n  background-color: #3b82f6; /* Blue */\n  color: #ffffff;            /* White */\n}\n```\nWith alpha transparency: `#3b82f680` (80 in hex = ~50% opacity).\n\n## 2. RGB & RGBA:\n```css_not\n/* rgb(red, green, blue) - values from 0 to 255 */\n.box {\n  background-color: rgb(59, 130, 246);\n  \n  /* Modern CSS Syntax with alpha slash: */\n  background-color: rgb(59 130 246 / 0.5); /* 50% opacity */\n}\n```"
+        },
+        {
+            "id": "css_color_3",
+            "type": "content",
+            "title": "HSL: The Human-Friendly Color Format",
+            "content": "# HSL: Designed for Humans 💡\n\n**HSL** stands for **H**ue, **S**aturation, and **L**ightness. It is far more intuitive to modify programmatically than Hex or RGB:\n\n```css_not\n/* hsl(hue [0-360], saturation [0-100%], lightness [0-100%]) */\n.brand {\n  background-color: hsl(217, 91%, 60%);\n}\n```\n\n- **Hue (0-360°):** Position on the color wheel (0° Red, 120° Green, 240° Blue).\n- **Saturation (0-100%):** 0% is pure gray, 100% is vibrant full color.\n- **Lightness (0-100%):** 0% is pitch black, 50% is normal, 100% is pure white.\n\n> 🎯 **Pro Tip:** Need a hover effect? Just change lightness from 60% to 50%!"
+        },
+        {
+            "id": "css_color_4",
+            "type": "content",
+            "title": "Modern Color Space: OKLCH",
+            "content": "# Modern Color Space: OKLCH 🚀\n\nModern browsers support `oklch()`. Unlike RGB and HSL, OKLCH is **perceptually uniform**: two colors with the same lightness value look equally bright to the human eye across all hues!\n\n```css_not\n/* oklch(Lightness [0-1], Chroma [0-0.4], Hue [0-360]) */\n.badge-blue {\n  background-color: oklch(0.65 0.20 250);\n}\n\n.badge-yellow {\n  /* Exactly the same perceived brightness as the blue badge above! */\n  background-color: oklch(0.65 0.20 95);\n}\n```"
+        },
+        {
+            "id": "css_color_quiz_1",
+            "type": "quiz",
+            "title": "Color Formats Quiz",
+            "content": "Test your color notation knowledge.",
+            "quizQuestion": "In HSL color notation, what does a Lightness value of 0% always produce?",
+            "quizOptions": [
+                "Pure white",
+                "Pure black",
+                "Medium gray",
+                "Bright red"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_color_5",
+            "type": "content",
+            "title": "The currentColor Keyword",
+            "content": "# The `currentColor` Keyword 🪄\n\n`currentColor` is a built-in variable that matches the computed value of the element's `color` property!\n\n```css_not\n.button {\n  color: #2563eb;\n  border: 2px solid currentColor; /* Automatically uses #2563eb! */\n}\n\n.button svg {\n  fill: currentColor; /* SVG icon automatically matches text color! */\n}\n\n/* On hover, changing color changes the border and SVG icon simultaneously! */\n.button:hover {\n  color: #1d4ed8;\n}\n```"
+        },
+        {
+            "id": "css_color_6",
+            "type": "content",
+            "title": "Linear Gradients",
+            "content": "# Linear Gradients (`linear-gradient`) 🌈\n\nLinear gradients create smooth transitions between two or more colors along a straight line:\n\n```css_not\n/* Syntax: linear-gradient([direction/angle], color1, color2, ...) */\n.gradient-card {\n  background: linear-gradient(135deg, #3b82f6, #8b5cf6);\n}\n\n/* Direction keywords */\n.to-right {\n  background: linear-gradient(to right, #ec4899, #f43f5e);\n}\n```\n\n## Directions:\n- Degrees: `0deg` (up), `90deg` (right), `180deg` (down), `270deg` (left).\n- Keywords: `to top`, `to right`, `to bottom`, `to top right`."
+        },
+        {
+            "id": "css_color_7",
+            "type": "content",
+            "title": "Multi-Stop & Hard-Stop Gradients",
+            "content": "# Multi-Stop & Hard-Stop Gradients 🎨\n\nGradients can transition across multiple colors and custom stop positions:\n\n```css_not\n/* Multi-color rainbow gradient */\n.rainbow {\n  background: linear-gradient(to right, #f43f5e, #f59e0b, #10b981, #3b82f6);\n}\n\n/* Hard color stop (creates sharp dual-colored split bar!) */\n.split-banner {\n  background: linear-gradient(to right, #3b82f6 50%, #10b981 50%);\n}\n```"
+        },
+        {
+            "id": "css_color_8",
+            "type": "content",
+            "title": "Radial Gradients",
+            "content": "# Radial Gradients (`radial-gradient`) ☀️\n\nRadial gradients radiate outward from an origin point:\n\n```css_not\n/* Syntax: radial-gradient([shape] at [position], color1, color2) */\n.glowing-orb {\n  background: radial-gradient(circle at center, #60a5fa, #1e3a8a);\n}\n\n/* Off-center spotlight effect */\n.spotlight {\n  background: radial-gradient(ellipse at top right, rgba(255,255,255,0.3), #0f172a);\n}\n```"
+        },
+        {
+            "id": "css_color_quiz_2",
+            "type": "quiz",
+            "title": "Gradients Quiz",
+            "content": "Test your knowledge of gradients.",
+            "quizQuestion": "Which CSS function creates a gradient transitioning outward in circular or elliptical rings?",
+            "quizOptions": [
+                "linear-gradient()",
+                "radial-gradient()",
+                "conic-gradient()",
+                "repeating-linear()"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_color_9",
+            "type": "content",
+            "title": "Background Images Fundamentals",
+            "content": "# Background Images (`background-image`) 🖼️\n\nAttach an image to the background of an element:\n\n```css_not\n.hero-section {\n  background-image: url('images/hero-bg.jpg');\n  background-repeat: no-repeat;\n  background-position: center center;\n  background-size: cover;\n}\n```\n\n## Core Properties:\n- `background-repeat`: `no-repeat`, `repeat`, `repeat-x`, `repeat-y`.\n- `background-position`: `center`, `top left`, `50% 50%`, `10px 20px`."
+        },
+        {
+            "id": "css_color_10",
+            "type": "content",
+            "title": "Background Sizing: cover vs contain",
+            "content": "# Background Sizing: `cover` vs `contain` 📐\n\nThe `background-size` property determines how an image scales to fill its container:\n\n```css_not\n.hero {\n  background-size: cover;\n}\n```\n\n## `cover`:\nScales image so both width and height completely cover the container. Clips overflowing edges to prevent distortion. **Standard for hero headers!**\n\n## `contain`:\nScales image so the entire image is visible inside the container without any cropping. May leave letterboxed empty space."
+        },
+        {
+            "id": "css_color_11",
+            "type": "content",
+            "title": "Background Attachment (Parallax)",
+            "content": "# Background Attachment (`background-attachment`) 🧲\n\nControls how background images react to page scrolling:\n\n```css_not\n.parallax-banner {\n  background-image: url('mountains.jpg');\n  background-size: cover;\n  background-position: center;\n  background-attachment: fixed; /* Fixed relative to viewport! */\n}\n```\n\n- `scroll` *(Default)*: Background scrolls along with the page content.\n- `fixed`: Background stays fixed in the viewport while the content scrolls over it (simple parallax effect!)."
+        },
+        {
+            "id": "css_color_12",
+            "type": "content",
+            "title": "Layering Multiple Backgrounds",
+            "content": "# Layering Multiple Backgrounds 🥞\n\nCSS allows you to apply multiple comma-separated backgrounds to a single element. The first background listed is rendered on top!\n\n```css_not\n/* Layer a semi-transparent gradient on top of a photographic image */\n.hero {\n  background: \n    linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)),\n    url('hero-photo.jpg') center/cover no-repeat;\n  color: #ffffff;\n}\n```\n\nThis guarantees text readability over bright background photographs!"
+        },
+        {
+            "id": "css_color_13",
+            "type": "content",
+            "title": "Background Clip: Text Masking",
+            "content": "# Gradient Text with `background-clip: text` ✨\n\nYou can clip a gradient background directly into letterforms:\n\n```css_not\n.gradient-headline {\n  background: linear-gradient(135deg, #3b82f6, #ec4899);\n  -webkit-background-clip: text;\n  background-clip: text;\n  color: transparent; /* Makes text fill transparent so gradient shines through! */\n  font-size: 3rem;\n  font-weight: 800;\n}\n```"
+        },
+        {
+            "id": "css_color_quiz_3",
+            "type": "quiz",
+            "title": "Background Sizing Quiz",
+            "content": "Test your background sizing skills.",
+            "quizQuestion": "Which background-size value scales an image to completely fill the box while cropping any overflow?",
+            "quizOptions": [
+                "contain",
+                "cover",
+                "100% 100%",
+                "auto"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_color_14",
+            "type": "content",
+            "title": "Glassmorphism with backdrop-filter",
+            "content": "# Modern UI: Glassmorphism with `backdrop-filter` 🪟\n\nCreate sleek frosted-glass effects:\n\n```css_not\n.glass-navbar {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent */\n  backdrop-filter: blur(12px);                /* Blurs content behind the navbar! */\n  -webkit-backdrop-filter: blur(12px);\n  border-bottom: 1px solid rgba(255, 255, 255, 0.3);\n}\n```"
+        },
+        {
+            "id": "css_color_15",
+            "type": "content",
+            "title": "The background Shorthand Property",
+            "content": "# The `background` Shorthand Property 🖌️\n\nCombine all background properties into a single rule:\n\n```css_not\n/* Syntax: background: [color] [image] [position]/[size] [repeat] [attachment] */\n.hero {\n  background: #0f172a url('stars.png') center/cover no-repeat fixed;\n}\n```\n\n> ⚠️ **Shorthand Note:** The `size` MUST follow `position` separated by a forward slash `/` (e.g. `center/cover`)."
+        },
+        {
+            "id": "css_color_16",
+            "type": "content",
+            "title": "Color Contrast & Accessibility (WCAG)",
+            "content": "# Color Contrast & Accessibility (WCAG) ♿\n\nThe Web Content Accessibility Guidelines (WCAG) mandate minimum contrast ratios between foreground text and its background:\n\n- **Level AA (Normal Text):** Minimum contrast ratio of **4.5:1**.\n- **Level AA (Large Text > 24px):** Minimum contrast ratio of **3:1**.\n- **Never convey information solely through color:** Always pair color indicators with an icon or descriptive text label!"
+        },
+        {
+            "id": "css_color_17",
+            "type": "content",
+            "title": "Real-World Component: Hero Gradient Card",
+            "content": "# Real-World Component: Hero Card 🌟\n\n```html_not\n<div class=\"hero-card\">\n  <span class=\"badge\">New Release</span>\n  <h2>Build Without Boundaries</h2>\n  <p>Ship modern software with full-stack speed and elegance.</p>\n</div>\n```\n\n```css_not\n.hero-card {\n  padding: 48px;\n  border-radius: 24px;\n  background: \n    radial-gradient(circle at 100% 0%, rgba(236, 72, 153, 0.2), transparent 40%),\n    linear-gradient(135deg, #0f172a, #1e293b);\n  color: #f8fafc;\n  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);\n  border: 1px solid rgba(255, 255, 255, 0.1);\n}\n```"
+        },
+        {
+            "id": "css_color_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Colors & Backgrounds Mastered! 🎨\n\nYou now have the skills to create modern color palettes and layered background compositions!\n\n## Key Takeaways:\n- ✅ **Formats:** Use HSL for intuitive adjustments, Hex for tokens, and OKLCH for uniform lightness.\n- ✅ **`currentColor`:** Dynamically links borders and SVG icons to text color.\n- ✅ **Gradients:** `linear-gradient()` and `radial-gradient()` with angle controls and color stops.\n- ✅ **Background Sizing:** Use `background-size: cover` for hero headers.\n- ✅ **Layering:** Combine gradients and images together in a single `background` rule.\n\n## Up Next:\nIn the next module, bring your pages to life with **CSS Transitions & Animations (Keyframes, Easing, and Performance)**! 🚀"
+        }
+    ]
+}

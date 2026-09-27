@@ -1,0 +1,32 @@
+[
+  {
+    "title": "HTML5 Semantic Structural Tags",
+    "ques": "Explain the advantages of HTML5 semantic elements (`<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>`, `<footer>`) over generic `<div>` wrappers for accessibility and SEO.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n<body>\n  <header>\n    <h1>Tech Insights Blog</h1>\n    <nav aria-label=\"Primary Site Navigation\">\n      <a href=\"#\">Home</a> | <a href=\"#\">Archive</a>\n    </nav>\n  </header>\n\n  <main>\n    <article>\n      <h2>The Evolution of Modern Browsers</h2>\n      <p>Modern web browsers render content at remarkable speeds.</p>\n      <section>\n        <h3>Hardware Acceleration</h3>\n        <p>GPUs handle rasterization and composite layers effortlessly.</p>\n      </section>\n    </article>\n  </main>\n\n  <aside>\n    <h3>Related Links</h3>\n    <ul><li><a href=\"#\">WebAssembly Overview</a></li></ul>\n  </aside>\n\n  <footer>\n    <p>&copy; 2026 Tech Insights</p>\n  </footer>\n</body>\n</html>"
+    },
+    "explanation": "Semantic tags clearly describe their meaning to both browser and developer. Screen readers use landmarks like `<main>` and `<nav>` to navigate pages efficiently, improving accessibility and SEO."
+  },
+  {
+    "title": "Embedding Multimedia: Audio and Video",
+    "ques": "Demonstrate the use of HTML5 **`<video>`** and **`<audio>`** elements with fallback `<source>` formats and subtitles/captions via `<track>`.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<!-- Embedded HTML5 Video with multiple source formats and captions -->\n<video controls width=\"640\" height=\"360\" poster=\"video-thumbnail.jpg\" preload=\"metadata\">\n  <source src=\"intro-clip.mp4\" type=\"video/mp4\">\n  <source src=\"intro-clip.webm\" type=\"video/webm\">\n  <track src=\"subtitles-en.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English Captions\" default>\n  <p>Your browser does not support HTML5 video. Please download the file directly.</p>\n</video>\n\n<!-- Embedded HTML5 Audio -->\n<audio controls preload=\"none\">\n  <source src=\"podcast-episode.mp3\" type=\"audio/mpeg\">\n  <source src=\"podcast-episode.ogg\" type=\"audio/ogg\">\n  <p>Your browser does not support HTML5 audio playback.</p>\n</audio>"
+    },
+    "explanation": "The `<video>` and `<audio>` tags natively render media controls without third-party plugins. Multiple `<source>` tags allow browsers to select their best supported codec."
+  },
+  {
+    "title": "Drawing Dynamic Graphics with the Canvas API",
+    "ques": "Explain the role of the HTML5 **`<canvas>`** element. Write an HTML and JavaScript snippet that gets the 2D rendering context and draws a filled rectangle and circle.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<canvas id=\"gameCanvas\" width=\"400\" height=\"200\" style=\"border: 1px solid #ccc;\">\n  Canvas not supported by this browser.\n</canvas>\n\n<script>\n  const canvas = document.getElementById('gameCanvas');\n  const ctx = canvas.getContext('2d');\n\n  // 1. Draw a blue filled rectangle\n  ctx.fillStyle = '#2563eb';\n  ctx.fillRect(20, 20, 100, 60);\n\n  // 2. Draw a green stroked circle\n  ctx.beginPath();\n  ctx.arc(220, 50, 40, 0, 2 * Math.PI);\n  ctx.fillStyle = '#10b981';\n  ctx.fill();\n  ctx.lineWidth = 3;\n  ctx.strokeStyle = '#047857';\n  ctx.stroke();\n</script>"
+    },
+    "explanation": "The `<canvas>` element provides a resolution-dependent bitmap canvas for rendering dynamic 2D shapes, charts, animations, and game graphics via JavaScript."
+  }
+]

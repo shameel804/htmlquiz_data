@@ -1,0 +1,159 @@
+{
+    "id": "learn_ts_interfaces",
+    "topicId": "ts_interfaces",
+    "topicTitle": "TS Interfaces & Aliases",
+    "description": "Master interfaces, optional/readonly properties, inheritance, type vs interface, and index signatures.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "ts_int_1",
+            "type": "content",
+            "title": "Welcome to Interfaces & Aliases",
+            "content": "# TypeScript Interfaces & Aliases 🏛️\n\nInterfaces and Type Aliases define the core structural contracts for data shapes in TypeScript. They act as blueprints that guarantee objects adhere to expected properties and methods.\n\n## What you'll master:\n- 📋 **Defining Interfaces** - Declaring object shapes and contracts\n- ❓ **Optional & Readonly Properties** - Property modifiers (`?` and `readonly`)\n- 🧬 **Extending Interfaces** - Single and multiple interface inheritance\n- ⚖️ **Interfaces vs Type Aliases** - Clear decision matrix for when to use which\n- 🔑 **Index Signatures** - Handling dynamic dictionary keys"
+        },
+        {
+            "id": "ts_int_2",
+            "type": "content",
+            "title": "Defining an Interface",
+            "content": "# Defining an Interface 📋\n\nAn `interface` describes the shape of an object:\n\n```typescript\ninterface UserProfile {\n  id: number;\n  username: string;\n  email: string;\n  isActive: boolean;\n}\n\nconst user: UserProfile = {\n  id: 101,\n  username: \"marcus_dev\",\n  email: \"marcus@example.com\",\n  isActive: true\n};\n\nconsole.log(`User ${user.username} loaded with ID ${user.id}`);\n```\n\n<!-- FULL_CODE_START\ninterface UserProfile {\n  id: number;\n  username: string;\n  email: string;\n  isActive: boolean;\n}\n\nconst user: UserProfile = {\n  id: 101,\n  username: \"marcus_dev\",\n  email: \"marcus@example.com\",\n  isActive: true\n};\n\nconsole.log(`User ${user.username} loaded with ID ${user.id}`);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_int_3",
+            "type": "content",
+            "title": "Optional and Readonly Properties",
+            "content": "# Optional & Readonly Properties 🔒\n\nCombine `?` for optional fields and `readonly` for immutable fields:\n\n```typescript\ninterface Device {\n  readonly serialNumber: string; // Cannot be altered once set\n  model: string;\n  warrantyYears?: number;        // Optional\n}\n\nconst phone: Device = {\n  serialNumber: \"SN-9821-X\",\n  model: \"iPhone 15 Pro\"\n};\n\nphone.model = \"iPhone 16 Pro\"; // Allowed\n// phone.serialNumber = \"NEW-SN\"; // Compile Error: Cannot assign to 'serialNumber'\n\nconsole.log(phone);\n```\n\n<!-- FULL_CODE_START\ninterface Device {\n  readonly serialNumber: string;\n  model: string;\n  warrantyYears?: number;\n}\n\nconst phone: Device = {\n  serialNumber: \"SN-9821-X\",\n  model: \"iPhone 15 Pro\"\n};\n\nphone.model = \"iPhone 16 Pro\";\nconsole.log(\"Device model:\", phone.model);\nconsole.log(\"Readonly serial:\", phone.serialNumber);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_int_4",
+            "type": "content",
+            "title": "Extending Interfaces (Inheritance)",
+            "content": "# Extending Interfaces (`extends`) 🧬\n\nInterfaces can inherit properties from other interfaces:\n\n```typescript\ninterface Person {\n  name: string;\n  age: number;\n}\n\ninterface Employee extends Person {\n  employeeId: string;\n  department: string;\n}\n\nconst staff: Employee = {\n  name: \"Sarah\",\n  age: 32,\n  employeeId: \"EMP-404\",\n  department: \"Security\"\n};\n\nconsole.log(staff);\n```\n\n<!-- FULL_CODE_START\ninterface Person {\n  name: string;\n  age: number;\n}\n\ninterface Employee extends Person {\n  employeeId: string;\n  department: string;\n}\n\nconst staff: Employee = {\n  name: \"Sarah\",\n  age: 32,\n  employeeId: \"EMP-404\",\n  department: \"Security\"\n};\n\nconsole.log(`Employee: ${staff.name} (${staff.department})`);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_int_quiz_1",
+            "type": "quiz",
+            "title": "Interface Inheritance Quiz",
+            "content": "Test your knowledge of interface inheritance.",
+            "quizQuestion": "Which keyword is used to make an interface inherit properties from another interface?",
+            "quizOptions": [
+                "implements",
+                "inherits",
+                "extends",
+                "super"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "ts_int_5",
+            "type": "content",
+            "title": "Multiple Interface Inheritance",
+            "content": "# Multiple Interface Inheritance 🌳\n\nAn interface can inherit from **multiple** parent interfaces simultaneously:\n\n```typescript\ninterface HasId {\n  id: string;\n}\n\ninterface HasTimestamps {\n  createdAt: Date;\n  updatedAt: Date;\n}\n\ninterface ProductRecord extends HasId, HasTimestamps {\n  title: string;\n  price: number;\n}\n\nconst item: ProductRecord = {\n  id: \"PROD-101\",\n  createdAt: new Date(),\n  updatedAt: new Date(),\n  title: \"Mechanical Keyboard\",\n  price: 120\n};\n\nconsole.log(\"Product:\", item.title, \"Price: $\" + item.price);\n```\n\n<!-- FULL_CODE_START\ninterface HasId {\n  id: string;\n}\n\ninterface HasTimestamps {\n  createdAt: Date;\n  updatedAt: Date;\n}\n\ninterface ProductRecord extends HasId, HasTimestamps {\n  title: string;\n  price: number;\n}\n\nconst item: ProductRecord = {\n  id: \"PROD-101\",\n  createdAt: new Date(),\n  updatedAt: new Date(),\n  title: \"Mechanical Keyboard\",\n  price: 120\n};\n\nconsole.log(\"Product:\", item.title, \"Price: $\" + item.price);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_int_6",
+            "type": "content",
+            "title": "Declaration Merging",
+            "content": "# Declaration Merging 🧩\n\nIf you declare an interface with the **same name multiple times**, TypeScript automatically merges all declarations together!\n\n```typescript\n// First declaration\ninterface WindowCustom {\n  title: string;\n}\n\n// Second declaration with the exact same name\ninterface WindowCustom {\n  width: number;\n  height: number;\n}\n\n// Automatically merged! Must have all 3 properties:\nconst myWin: WindowCustom = {\n  title: \"Dashboard\",\n  width: 1024,\n  height: 768\n};\n\nconsole.log(\"Merged Window:\", myWin);\n```\n\n<!-- FULL_CODE_START\ninterface WindowCustom {\n  title: string;\n}\ninterface WindowCustom {\n  width: number;\n  height: number;\n}\n\nconst myWin: WindowCustom = {\n  title: \"Dashboard\",\n  width: 1024,\n  height: 768\n};\n\nconsole.log(\"Merged Window:\", myWin);\nFULL_CODE_END -->\n\n> 💡 **Extending Third-Party Libraries:** Declaration merging is how npm packages allow you to augment external global types (like `Express.Request` or `Window`) with custom properties!"
+        },
+        {
+            "id": "ts_int_7",
+            "type": "content",
+            "title": "Type Aliases (type)",
+            "content": "# Type Aliases (`type`) 🏷️\n\nA Type Alias creates a new named reference for any type (primitives, unions, tuples, objects):\n\n```typescript\n// 1. Primitive alias\ntype ID = string | number;\n\n// 2. Union of literals\ntype Theme = \"light\" | \"dark\" | \"system\";\n\n// 3. Object type\ntype Coordinates = {\n  x: number;\n  y: number;\n};\n\nconst point: Coordinates = { x: 50, y: 100 };\nconsole.log(\"Coordinates:\", point);\n```\n\n<!-- FULL_CODE_START\ntype ID = string | number;\ntype Theme = \"light\" | \"dark\" | \"system\";\ntype Coordinates = { x: number; y: number; };\n\nconst point: Coordinates = { x: 50, y: 100 };\nconsole.log(\"Point x:\", point.x, \"y:\", point.y);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_int_8",
+            "type": "content",
+            "title": "Type Aliases vs Interfaces",
+            "content": "# Type Aliases vs Interfaces: The Golden Rules ⚖️\n\nBoth can describe object shapes, but have key differences:\n\n| Feature | `interface` | `type` Alias |\n| :--- | :--- | :--- |\n| **Object Shapes** | ✅ Yes | ✅ Yes |\n| **Extending / Inheritance** | `extends` syntax | Intersection (`&`) syntax |\n| **Declaration Merging** | ✅ Yes (auto-merges) | ❌ No (duplicate name error) |\n| **Unions & Primitives** | ❌ No | ✅ Yes (`type ID = string | number`) |\n| **Tuples** | Complex | Simple (`type Pair = [A, B]`) |\n\n> 🎯 **Rule of Thumb:**\n> - Use **`interface`** for object models, public APIs, and object inheritance.\n> - Use **`type`** for unions (`A | B`), intersections, primitives, and tuples!"
+        },
+        {
+            "id": "ts_int_quiz_2",
+            "type": "quiz",
+            "title": "Interface vs Type Quiz",
+            "content": "Test your understanding of interfaces vs types.",
+            "quizQuestion": "Can you declare a union type (e.g. string | number) directly using an interface?",
+            "quizOptions": [
+                "Yes, using the union keyword",
+                "No, interfaces can only describe object shapes, not standalone primitive unions",
+                "Yes, in strict mode only",
+                "Yes, using extends Union"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_int_9",
+            "type": "content",
+            "title": "Index Signatures for Dynamic Dictionaries",
+            "content": "# Index Signatures 🔑\n\nWhen you don't know the exact property names in advance, use an **Index Signature**:\n\n```typescript\ninterface ErrorDictionary {\n  // Allows any string key with a string value\n  [fieldName: string]: string;\n}\n\nconst formErrors: ErrorDictionary = {\n  email: \"Invalid email address format\",\n  password: \"Must be at least 8 characters\",\n  zipCode: \"Must be 5 digits\"\n};\n\nconsole.log(\"Password Error:\", formErrors[\"password\"]);\n```\n\n<!-- FULL_CODE_START\ninterface ErrorDictionary {\n  [fieldName: string]: string;\n}\n\nconst formErrors: ErrorDictionary = {\n  email: \"Invalid email format\",\n  password: \"Too short\",\n  zipCode: \"Must be numbers\"\n};\n\nconsole.log(\"Email error:\", formErrors.email);\nconsole.log(\"Password error:\", formErrors[\"password\"]);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_int_10",
+            "type": "content",
+            "title": "Function Types Inside Interfaces",
+            "content": "# Methods and Callable Interfaces 📞\n\nDeclare methods and callable function signatures:\n\n```typescript\ninterface MathCalculator {\n  version: string;\n  calculate(a: number, b: number): number;\n}\n\nconst adder: MathCalculator = {\n  version: \"1.0.0\",\n  calculate(x, y) {\n    return x + y;\n  }\n};\n\nconsole.log(\"Result:\", adder.calculate(15, 25));\n```\n\n<!-- FULL_CODE_START\ninterface MathCalculator {\n  version: string;\n  calculate(a: number, b: number): number;\n}\n\nconst adder: MathCalculator = {\n  version: \"1.0.0\",\n  calculate: (x, y) => x + y\n};\n\nconsole.log(\"Calculator version:\", adder.version);\nconsole.log(\"15 + 25 =\", adder.calculate(15, 25));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_int_11",
+            "type": "content",
+            "title": "Intersection Types with &",
+            "content": "# Combining Types: Intersections (`&`) 🔀\n\nCombine multiple types into a unified type that satisfies **all** properties:\n\n```typescript\ntype HasName = { name: string };\ntype HasAge = { age: number };\ntype HasPermissions = { role: \"admin\" | \"user\" };\n\n// Intersection of all three types\ntype SystemAdmin = HasName & HasAge & HasPermissions;\n\nconst adminUser: SystemAdmin = {\n  name: \"Marcus\",\n  age: 34,\n  role: \"admin\"\n};\n\nconsole.log(\"Admin User:\", adminUser);\n```\n\n<!-- FULL_CODE_START\ntype HasName = { name: string };\ntype HasAge = { age: number };\ntype HasPermissions = { role: \"admin\" | \"user\" };\n\ntype SystemAdmin = HasName & HasAge & HasPermissions;\n\nconst adminUser: SystemAdmin = {\n  name: \"Marcus\",\n  age: 34,\n  role: \"admin\"\n};\n\nconsole.log(\"Admin User:\", adminUser);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_int_12",
+            "type": "content",
+            "title": "Excess Property Checks",
+            "content": "# Excess Property Checking 🔍\n\nWhen assigning an object literal directly to an interface, TypeScript strictly rejects unknown extra properties:\n\n```typescript\ninterface SimpleUser {\n  name: string;\n}\n\n// ❌ Error: 'extraField' does not exist in type 'SimpleUser'\n// const u: SimpleUser = { name: \"Alice\", extraField: 123 };\n\n// Workaround: Passing a pre-existing variable bypasses literal check\nconst rawObj = { name: \"Alice\", extraField: 123 };\nconst validUser: SimpleUser = rawObj; // Valid!\nconsole.log(\"User:\", validUser.name);\n```\n\n<!-- FULL_CODE_START\ninterface SimpleUser {\n  name: string;\n}\n\nconst rawObj = { name: \"Alice\", extraField: 123 };\nconst validUser: SimpleUser = rawObj;\nconsole.log(\"User successfully assigned:\", validUser.name);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_int_quiz_3",
+            "type": "quiz",
+            "title": "Index Signatures Quiz",
+            "content": "Test your knowledge of index signatures.",
+            "quizQuestion": "How do you declare an index signature where all string keys map to boolean flags?",
+            "quizOptions": [
+                "{ string: boolean }",
+                "[key: string]: boolean;",
+                "type: Map<string, boolean>",
+                "keys string = boolean"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_int_13",
+            "type": "content",
+            "title": "Generic Interfaces",
+            "content": "# Generic Interfaces 🧬\n\nInterfaces can take type parameters to handle flexible payloads:\n\n```typescript\ninterface PaginatedResponse<T> {\n  page: number;\n  pageSize: number;\n  totalItems: number;\n  items: T[]; // Array of type T!\n}\n\ninterface Article {\n  id: number;\n  title: string;\n}\n\nconst blogResponse: PaginatedResponse<Article> = {\n  page: 1,\n  pageSize: 10,\n  totalItems: 42,\n  items: [\n    { id: 1, title: \"TypeScript Mastery\" },\n    { id: 2, title: \"CSS Grid Architecture\" }\n  ]\n};\n\nconsole.log(\"First Article:\", blogResponse.items[0].title);\n```\n\n<!-- FULL_CODE_START\ninterface PaginatedResponse<T> {\n  page: number;\n  pageSize: number;\n  totalItems: number;\n  items: T[];\n}\n\ninterface Article {\n  id: number;\n  title: string;\n}\n\nconst blogResponse: PaginatedResponse<Article> = {\n  page: 1,\n  pageSize: 10,\n  totalItems: 42,\n  items: [\n    { id: 1, title: \"TypeScript Mastery\" },\n    { id: 2, title: \"CSS Grid Architecture\" }\n  ]\n};\n\nconsole.log(\"Page:\", blogResponse.page, \"Articles count:\", blogResponse.items.length);\nconsole.log(\"Top Article:\", blogResponse.items[0].title);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_int_14",
+            "type": "content",
+            "title": "Hybrid Types in Interfaces",
+            "content": "# Hybrid Types (Callable & Object Properties) 🔀\n\nIn JavaScript, functions can also have properties attached to them:\n\n```typescript\ninterface CounterFunction {\n  (): number;      // Callable function signature\n  reset(): void;   // Method on the function\n  count: number;   // Property on the function\n}\n\nfunction getCounter(): CounterFunction {\n  const fn = function() {\n    return ++fn.count;\n  } as CounterFunction;\n\n  fn.count = 0;\n  fn.reset = function() { fn.count = 0; };\n  return fn;\n}\n\nconst counter = getCounter();\nconsole.log(counter()); // 1\nconsole.log(counter()); // 2\ncounter.reset();\nconsole.log(\"After reset:\", counter()); // 1\n```\n\n<!-- FULL_CODE_START\ninterface CounterFunction {\n  (): number;\n  reset(): void;\n  count: number;\n}\n\nfunction getCounter(): CounterFunction {\n  const fn = function() {\n    return ++fn.count;\n  } as CounterFunction;\n\n  fn.count = 0;\n  fn.reset = function() { fn.count = 0; };\n  return fn;\n}\n\nconst counter = getCounter();\nconsole.log(\"Call 1:\", counter());\nconsole.log(\"Call 2:\", counter());\ncounter.reset();\nconsole.log(\"After reset:\", counter());\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_int_15",
+            "type": "content",
+            "title": "Implementing Interfaces with Classes",
+            "content": "# Implementing Interfaces with Classes 🏛️\n\nClasses can enforce that they adhere to an interface using `implements`:\n\n```typescript\ninterface Authenticable {\n  authenticate(token: string): boolean;\n}\n\nclass UserSession implements Authenticable {\n  constructor(private validToken: string) {}\n\n  authenticate(token: string): boolean {\n    return token === this.validToken;\n  }\n}\n\nconst session = new UserSession(\"SECRET_123\");\nconsole.log(\"Auth check:\", session.authenticate(\"SECRET_123\"));\n```\n\n<!-- FULL_CODE_START\ninterface Authenticable {\n  authenticate(token: string): boolean;\n}\n\nclass UserSession implements Authenticable {\n  constructor(private validToken: string) {}\n\n  authenticate(token: string): boolean {\n    return token === this.validToken;\n  }\n}\n\nconst session = new UserSession(\"SECRET_123\");\nconsole.log(\"Is Authenticated?\", session.authenticate(\"SECRET_123\"));\nconsole.log(\"Bad token check:\", session.authenticate(\"WRONG_TOKEN\"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_int_16",
+            "type": "content",
+            "title": "Best Practices: Naming Conventions",
+            "content": "# Naming Conventions Best Practices 🧼\n\n1. **PascalCase for Interfaces and Types:** `interface UserAccount { ... }`, `type ThemeMode = ...`.\n2. **Avoid Hungarian 'I' Prefixes:** Do **not** name interfaces `IUser` or `IDatabase`. TypeScript's official design guidelines recommend `User` instead of `IUser`.\n3. **Prefer Interfaces for Data Contracts:** Use interfaces for models representing database entities or API payloads."
+        },
+        {
+            "id": "ts_int_17",
+            "type": "content",
+            "title": "Real-World Architecture: E-Commerce Catalog",
+            "content": "# Real-World: E-Commerce Catalog Model 🛒\n\n```typescript\ninterface BaseEntity {\n  readonly id: string;\n  createdAt: Date;\n}\n\ninterface Product extends BaseEntity {\n  name: string;\n  price: number;\n  category: \"electronics\" | \"apparel\" | \"books\";\n  tags?: string[];\n}\n\ninterface CartItem {\n  product: Product;\n  quantity: number;\n}\n\nconst cart: CartItem[] = [\n  {\n    product: {\n      id: \"P101\",\n      createdAt: new Date(),\n      name: \"USB-C Hub\",\n      price: 39.99,\n      category: \"electronics\"\n    },\n    quantity: 2\n  }\n];\n\nconst subtotal = cart.reduce((sum, item) => sum + item.product.price * item.quantity, 0);\nconsole.log(\"Cart Subtotal: $\" + subtotal.toFixed(2));\n```\n\n<!-- FULL_CODE_START\ninterface BaseEntity {\n  readonly id: string;\n  createdAt: Date;\n}\n\ninterface Product extends BaseEntity {\n  name: string;\n  price: number;\n  category: \"electronics\" | \"apparel\" | \"books\";\n  tags?: string[];\n}\n\ninterface CartItem {\n  product: Product;\n  quantity: number;\n}\n\nconst cart: CartItem[] = [\n  {\n    product: {\n      id: \"P101\",\n      createdAt: new Date(),\n      name: \"USB-C Hub\",\n      price: 39.99,\n      category: \"electronics\"\n    },\n    quantity: 2\n  }\n];\n\nconst subtotal = cart.reduce((sum, item) => sum + item.product.price * item.quantity, 0);\nconsole.log(\"Cart Subtotal: $\" + subtotal.toFixed(2));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_int_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Interfaces & Aliases Mastered! 🌟\n\nYou now command the complete structural typing foundation of TypeScript!\n\n## Key Takeaways:\n- ✅ **Interfaces:** Define object contracts; support `extends` and declaration merging.\n- ✅ **Type Aliases:** Define unions (`|`), intersections (`&`), primitives, and tuples.\n- ✅ **Modifiers:** Use `?` for optional properties, `readonly` for immutable fields.\n- ✅ **Index Signatures:** `[key: string]: valueType` for dynamic dictionaries.\n- ✅ **Intersections:** Combine multiple types into a unified whole with `&`.\n\n## Up Next:\nIn the next module, dive into advanced type transformations: **TypeScript Advanced Types (Generics, Type Narrowing, and Discriminated Unions)**! 🚀"
+        }
+    ]
+}

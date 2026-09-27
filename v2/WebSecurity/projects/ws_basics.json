@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Understanding the CIA Triad",
+    "ques": "In modern information security, the **CIA Triad** forms the foundational bedrock of system defense.\n\nDefine the three core pillars of the **CIA Triad** (**Confidentiality**, **Integrity**, and **Availability**) and provide **one concrete web application example** demonstrating how a failure in each pillar impacts a user.",
+    "answer": {
+      "type": "text",
+      "content": "* **Confidentiality:**\n    * **Definition:** Ensuring that sensitive information is accessible only to authorized individuals, entities, or processes.\n    * **Failure Example:** An unauthenticated attacker accesses an exposed `/api/users/export` endpoint and downloads private user email addresses and phone numbers.\n* **Integrity:**\n    * **Definition:** Maintaining the accuracy, completeness, and trustworthiness of data by ensuring it cannot be modified or tampered with by unauthorized parties.\n    * **Failure Example:** A malicious user alters the `price` parameter in an unvalidated checkout request from `$500` to `$5`, successfully purchasing an item at an unauthorized discount.\n* **Availability:**\n    * **Definition:** Ensuring authorized users have timely, reliable, and uninterrupted access to information assets and critical services.\n    * **Failure Example:** A distributed denial-of-service (DDoS) attack overwhelms the web server's connection pool, causing the site to display `503 Service Unavailable` errors to legitimate customers."
+    },
+    "explanation": "The **CIA Triad** represents the core objectives of computer security. System architects must balance all three pillars because over-optimizing one (such as extreme confidentiality restrictions) can severely degrade another (such as availability)."
+  },
+  {
+    "title": "Authentication vs Authorization",
+    "ques": "Explain the fundamental difference between **Authentication (AuthN)** and **Authorization (AuthZ)** in a web application. Then, write a standard Express.js middleware sequence illustrating how these two concepts are separated in code.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const express = require('express');\nconst app = express();\n\n// Step 1: Authentication (Who are you?)\nfunction authenticateUser(req, res, next) {\n  const token = req.headers['authorization'];\n  if (!token) {\n    return res.status(401).json({ error: 'Authentication required: missing token' });\n  }\n  \n  // Verify token and attach user identity\n  const user = verifyToken(token);\n  if (!user) {\n    return res.status(401).json({ error: 'Invalid or expired token' });\n  }\n  \n  req.currentUser = user;\n  next();\n}\n\n// Step 2: Authorization (What are you allowed to do?)\nfunction authorizeRole(requiredRole) {\n  return (req, res, next) => {\n    if (!req.currentUser || req.currentUser.role !== requiredRole) {\n      return res.status(403).json({ error: 'Forbidden: insufficient permissions' });\n    }\n    next();\n  };\n}\n\n// Applying both in order: Authenticate first, then Authorize\napp.delete('/api/admin/users/:id', authenticateUser, authorizeRole('admin'), (req, res) => {\n  res.json({ message: 'User deleted successfully' });\n});"
+    },
+    "explanation": "**Authentication (401 Unauthorized)** verifies the user's identity ('Who are you?'), whereas **Authorization (403 Forbidden)** checks what privileges or resources that confirmed identity is permitted to access ('What permissions do you possess?'). Authentication must always precede authorization."
+  },
+  {
+    "title": "HTTPS and TLS Encryption Handshake",
+    "ques": "Describe how **HTTPS** protects web traffic over the public internet. Outline the high-level steps of the **TLS 1.3 handshake** and explain why symmetric encryption is used for data transmission instead of asymmetric encryption.",
+    "answer": {
+      "type": "text",
+      "content": "* **How HTTPS Protects Traffic:** HTTPS wraps standard HTTP within a Transport Layer Security (TLS) tunnel, providing **encryption** (prevents eavesdropping), **integrity** (prevents tampering via message authentication codes), and **authentication** (verifies server identity via digital certificates signed by Certificate Authorities).\n* **TLS 1.3 Handshake Steps:**\n    1. **Client Hello:** The browser sends supported cipher suites and key exchange parameters (`KeyShare`).\n    2. **Server Hello & Certificate:** The server selects the cipher suite, provides its own key share, sends its digital certificate, and creates a shared master secret.\n    3. **Finished:** The client verifies the certificate chain, derives symmetric session keys, and both parties switch to encrypted communication.\n* **Why Symmetric Encryption is Used for Application Data:**\n    * **Asymmetric encryption** (RSA, ECC) requires heavy mathematical computation and is computationally slow for large payloads.\n    * **Symmetric encryption** (AES-GCM, ChaCha20) is extremely fast and hardware-accelerated. Therefore, asymmetric cryptography is used solely to securely agree upon a shared secret key, which then powers symmetric encryption for all ongoing payload traffic."
+    },
+    "explanation": "Hybrid encryption combines the key-exchange strengths of asymmetric cryptography with the high-speed data throughput of symmetric block ciphers like **AES-256-GCM**."
+  },
+  {
+    "title": "Same-Origin Policy (SOP) Mechanics",
+    "ques": "The **Same-Origin Policy (SOP)** is a critical browser security boundary.\n\n1. Define what constitutes an **Origin**.\n2. Given the target origin `https://api.example.com:443/data`, determine whether the following URLs share the same origin (Yes/No with explanation):\n   - `https://api.example.com/login`\n   - `http://api.example.com:443/data`\n   - `https://v2.api.example.com/data`\n   - `https://api.example.com:8443/data`",
+    "answer": {
+      "type": "text",
+      "content": "### 1. Definition of an Origin\nAn origin is defined strictly by the tuple: `(Protocol/Scheme, Host/Domain, Port)`.\nTwo resources share the same origin if and only if all three components match exactly.\n\n### 2. Evaluation Against Target: `https://api.example.com:443/data`\n* **`https://api.example.com/login` -> YES:**\n  * Protocol is `https`, Host is `api.example.com`, and default port for HTTPS is `443`. Path differences do not affect the origin.\n* **`http://api.example.com:443/data` -> NO:**\n  * Protocol mismatch (`http` != `https`). Even with matching port numbers, differing schemes constitute distinct origins.\n* **`https://v2.api.example.com/data` -> NO:**\n  * Host mismatch (`v2.api.example.com` != `api.example.com`). Subdomains are treated as separate origins by the browser.\n* **`https://api.example.com:8443/data` -> NO:**\n  * Port mismatch (`8443` != `443`). Explicitly defined different ports isolate origins."
+    },
+    "explanation": "The **Same-Origin Policy (SOP)** prevents malicious scripts running on one origin from accessing or reading Document Object Model (DOM) properties or XMLHttpRequest/Fetch data from an unrelated origin."
+  },
+  {
+    "title": "Principle of Least Privilege (PoLP)",
+    "ques": "Explain the **Principle of Least Privilege (PoLP)** in the context of database access for a web application. Provide an SQL snippet showing how to configure a restricted database user for a public-facing blog application instead of using the `root` or `admin` account.",
+    "answer": {
+      "type": "code",
+      "lang": "sql",
+      "content": "-- Avoid running web backend connections as 'root' or 'postgres' superuser!\n-- Create a dedicated low-privilege application user\nCREATE USER 'blog_app_user'@'localhost' IDENTIFIED BY 'StrongP@ssw0rd!2026';\n\n-- Grant ONLY read access to published posts and comments\nGRANT SELECT ON blog_db.posts TO 'blog_app_user'@'localhost';\nGRANT SELECT, INSERT ON blog_db.comments TO 'blog_app_user'@'localhost';\n\n-- Explicitly DO NOT grant DROP, ALTER, GRANT OPTION, or access to sensitive tables like billing\nFLUSH PRIVILEGES;"
+    },
+    "explanation": "The **Principle of Least Privilege (PoLP)** dictates that any module, service, or user should possess only the bare minimum set of permissions necessary to execute its intended function. If an attacker discovers an SQL injection flaw, restricted user permissions prevent table dropping or database dumping."
+  },
+  {
+    "title": "Implementing Defense in Depth",
+    "ques": "Define **Defense in Depth** and explain how a web engineering team should apply multi-layered defenses to secure user avatar image uploads against Remote Code Execution (RCE) and Cross-Site Scripting (XSS).",
+    "answer": {
+      "type": "text",
+      "content": "### Definition\n**Defense in Depth** is an information security strategy where multiple redundant, layered defense mechanisms are placed throughout an IT system. If one defensive barrier is compromised or bypassed, subsequent layers prevent catastrophic exploitation.\n\n### Multi-Layer Defense for File Uploads:\n1. **Layer 1 (Client-Side Validation):** Restrict input file types in the HTML file picker (`accept='image/png,image/jpeg'`) and check file sizes before upload for instant user feedback.\n2. **Layer 2 (Network/WAF):** Enforce maximum payload limits (e.g., <= 5MB) at the reverse proxy (Nginx or Cloudflare) to block buffer overflow or denial-of-service attempts.\n3. **Layer 3 (Server File Inspection):** Do NOT rely on user-supplied file extensions or MIME headers. Validate the binary **magic numbers** (first few bytes of file) and re-encode/strip EXIF metadata using an image processing library (e.g., Sharp).\n4. **Layer 4 (Storage Isolation):** Generate a randomized UUID for the filename on disk (never use the original filename) and store files outside the web root (e.g., an AWS S3 bucket with public execution disabled).\n5. **Layer 5 (Response Headers):** Serve uploaded files with `Content-Type: image/png`, `X-Content-Type-Options: nosniff`, and `Content-Disposition: inline` to prevent browsers from executing polyglot HTML/JS scripts."
+    },
+    "explanation": "No single security control is infallible. Combining input inspection, storage isolation, metadata stripping, and HTTP defense headers guarantees that even if a malicious file bypasses validation, it cannot execute on the host."
+  }
+]

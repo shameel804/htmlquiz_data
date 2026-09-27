@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Standard Headings and Display Headings",
+    "ques": "Compare standard semantic headings (`<h1>` - `<h6>`) with Bootstrap's **Display Headings** (`.display-1` - `.display-6`). Provide an HTML example of both.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"p-4\">\n  <!-- Standard Semantic Heading -->\n  <h2>Standard Section Heading</h2>\n  <p class=\"text-muted\">Used for standard editorial text hierarchies.</p>\n  \n  <hr class=\"my-4\">\n  \n  <!-- Display Headings: Larger, lighter, more impactful for hero sections -->\n  <h1 class=\"display-1 fw-bold text-primary\">Display 1</h1>\n  <h2 class=\"display-4 text-secondary\">Display 4 Sub-Hero</h2>\n</div>"
+    },
+    "explanation": "Standard headings (`<h1>-<h6>`) provide structured semantic hierarchy, whereas display headings (`.display-1` to `.display-6`) produce large, expressive hero typography with lighter font weights."
+  },
+  {
+    "title": "Emphasizing Copy with Lead Text",
+    "ques": "Demonstrate the use of the **`.lead`** class to emphasize an introductory paragraph in an article.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<article class=\"p-4\">\n  <h1 class=\"mb-3\">Next-Generation Cloud Solutions</h1>\n  <!-- .lead class increases font-size and lightens weight for standout introductions -->\n  <p class=\"lead text-secondary\">\n    Discover how modern distributed architecture patterns empower global teams to ship resilient applications with zero downtime.\n  </p>\n  <p>\n    Standard paragraph body copy follows here, providing detailed technical exposition and operational breakdowns.\n  </p>\n</article>"
+    },
+    "explanation": "The `.lead` class scales paragraph text up slightly (to `1.25rem`) with lighter font weight, ideal for introductory hero paragraphs."
+  },
+  {
+    "title": "Styling Inline Text Elements",
+    "ques": "Demonstrate Bootstrap classes for inline text elements: `.mark`, `.small`, `.text-decoration-underline`, and `.text-muted`.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"p-4\">\n  <p>You can use the <mark>highlighted mark class</mark> to bring instant attention to keywords.</p>\n  <p><span class=\"small text-muted\">Fine print: Terms and conditions apply as of October 2026.</span></p>\n  <p>View the <span class=\"text-decoration-underline fw-semibold\">mandatory documentation</span> before proceeding.</p>\n</div>"
+    },
+    "explanation": "Bootstrap styles native HTML inline formatting elements (`<mark>`, `<small>`, `<u>`) and provides equivalent utility classes for targeted microcopy styling."
+  },
+  {
+    "title": "Styling Editorial Blockquotes",
+    "ques": "Construct a styled **blockquote** with a quote source citation using `.blockquote` and `.blockquote-footer`.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<figure class=\"p-4 border-start border-4 border-primary bg-light rounded\">\n  <blockquote class=\"blockquote\">\n    <p class=\"mb-0\">\"Simplicity is prerequisite for reliability.\"</p>\n  </blockquote>\n  <figcaption class=\"blockquote-footer mt-2\">\n    Edsger W. Dijkstra in <cite title=\"Source Title\">EWD498</cite>\n  </figcaption>\n</figure>"
+    },
+    "explanation": "Bootstrap's `.blockquote` provides clean margin and font formatting for quotes, while `.blockquote-footer` styles the author attribution and citation source."
+  },
+  {
+    "title": "Configuring Responsive Styled Tables",
+    "ques": "Create an HTML table with Bootstrap styling classes: **`.table`**, **`.table-striped`**, **`.table-hover`**, and **`.table-bordered`**.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"table-responsive p-4\">\n  <table class=\"table table-striped table-hover table-bordered border-primary align-middle\">\n    <thead class=\"table-dark\">\n      <tr>\n        <th scope=\"col\">#</th>\n        <th scope=\"col\">Username</th>\n        <th scope=\"col\">Role</th>\n        <th scope=\"col\">Status</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <th scope=\"row\">1</th>\n        <td>Sarah Jenkins</td>\n        <td>Administrator</td>\n        <td><span class=\"badge bg-success\">Active</span></td>\n      </tr>\n      <tr>\n        <th scope=\"row\">2</th>\n        <td>Marcus Vance</td>\n        <td>Developer</td>\n        <td><span class=\"badge bg-warning text-dark\">Pending</span></td>\n      </tr>\n    </tbody>\n  </table>\n</div>"
+    },
+    "explanation": "`.table` resets basic table padding and layout. Modifiers like `.table-striped` alternate row backgrounds, `.table-hover` highlights hovered rows, and `.table-bordered` adds borders."
+  },
+  {
+    "title": "Responsive Images and Thumbnails",
+    "ques": "Explain the role of **`.img-fluid`** and **`.img-thumbnail`**. Provide an HTML snippet for a responsive product image.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"text-center p-4\">\n  <!-- .img-fluid applies max-width: 100% and height: auto to prevent container overflow -->\n  <!-- .img-thumbnail adds a subtle border, padding, and rounded corner frame -->\n  <img \n    src=\"https://via.placeholder.com/600x400\" \n    class=\"img-fluid img-thumbnail rounded shadow-sm\" \n    alt=\"Product Preview Display\"\n  />\n</div>"
+    },
+    "explanation": "`.img-fluid` ensures images scale responsively to fit their parent container without overflowing. `.img-thumbnail` gives images a styled 1px border and rounded frame."
+  },
+  {
+    "title": "Semantic Figures with Figcaptions",
+    "ques": "Demonstrate the use of Bootstrap's **`.figure`**, **`.figure-img`**, and **`.figure-caption`** components to build a captioned diagram.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<figure class=\"figure p-3 border rounded shadow-sm bg-white\">\n  <img \n    src=\"https://via.placeholder.com/400x250\" \n    class=\"figure-img img-fluid rounded mb-2\" \n    alt=\"Architecture Diagram\"\n  />\n  <figcaption class=\"figure-caption text-end\">\n    Figure 1.1: High-level cloud deployment and edge distribution overview.\n  </figcaption>\n</figure>"
+    },
+    "explanation": "The `.figure` component structures images with captions using semantic HTML5 elements, pairing with `.figure-caption` for consistent text styling and alignment."
+  }
+]

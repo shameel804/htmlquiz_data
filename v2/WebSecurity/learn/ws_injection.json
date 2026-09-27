@@ -1,0 +1,159 @@
+{
+    "id": "learn_ws_injection",
+    "topicId": "ws_injection",
+    "topicTitle": "Injection Attacks",
+    "description": "Master injection attacks and prevention: SQL injection, command injection, NoSQL injection, prepared statements (parameterized queries), and input sanitization.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "ws_inj_1",
+            "type": "content",
+            "title": "Introduction to Injection Attacks",
+            "content": "# Injection Attacks 💉\n\n**Injection** occurs when untrusted user input is passed directly to an interpreter as part of a command or query without proper validation, escaping, or parameterization.\n\nThe interpreter is tricked into executing unintended commands or accessing unauthorized data.\n\n## Types of Injection Attacks:\n- **SQL Injection (SQLi)**: Manipulating relational database queries\n- **OS Command Injection**: Executing arbitrary shell commands on the server\n- **NoSQL Injection**: Bypassing MongoDB and document databases\n- **LDAP Injection**: Manipulating corporate directory services\n\n> ⚠️ **Severity:** Injection consistently ranks at the top of the OWASP Top 10 because a single injection flaw can compromise an entire corporate database or server infrastructure!"
+        },
+        {
+            "id": "ws_inj_2",
+            "type": "content",
+            "title": "How SQL Injection Works",
+            "content": "# Anatomy of SQL Injection (SQLi) 🔬\n\nSQL Injection occurs when user input is concatenated directly into a raw SQL query string.\n\n## Vulnerable Code Example ❌\n\n```sql_not\n-- Server concatenates raw user input into query:\nSELECT * FROM users WHERE username = 'USER_INPUT' AND password = 'USER_INPUT';\n```\n\n## The Classic Payload: `' OR '1'='1`\n\nAn attacker types `' OR '1'='1` into the username field and anything in the password field.\n\nThe resulting query executed by the database becomes:\n\n```sql_not\nSELECT * FROM users WHERE username = '' OR '1'='1' AND password = 'xyz';\n```\n\nBecause `'1'='1'` is always true, the database returns the first user in the table (typically the **admin**), granting the attacker instant administrative login without a password!"
+        },
+        {
+            "id": "ws_inj_3",
+            "type": "content",
+            "title": "The Three Types of SQLi",
+            "content": "# The Three Categories of SQL Injection 📐\n\nSQL injection is classified by the method used to extract data from the database:\n\n## 1. In-Band SQLi (Classic)\nThe attacker uses the same communication channel to launch the attack and gather results (e.g. data printed directly on screen or via `UNION SELECT`).\n\n## 2. Inferential SQLi (Blind)\nNo data is directly visible on screen. The attacker reconstructs the database character by character by asking true/false questions:\n\n- **Boolean-based**: Observing differences in page responses (e.g. \"User Found\" vs \"User Not Found\").\n- **Time-based**: Forcing the database to sleep (`pg_sleep(5)`) to infer characters from response latency.\n\n## 3. Out-of-Band SQLi\nThe attacker triggers server connections over DNS or HTTP to external servers under their control."
+        },
+        {
+            "id": "ws_inj_4",
+            "type": "content",
+            "title": "UNION-Based In-Band SQLi",
+            "content": "# UNION-Based SQL Injection 📊\n\nThe `UNION` SQL operator combines the results of multiple `SELECT` statements into a single table result.\n\n```sql_not\n-- Legitimate search query:\nSELECT id, name, price FROM products WHERE category = 'electronics';\n\n-- Attacker payload: ' UNION SELECT null, username, password FROM users --\nSELECT id, name, price FROM products WHERE category = '' \nUNION \nSELECT id, username, password_hash FROM users --';\n```\n\nThe product catalog page now outputs the entire company user credentials database directly inside the product listing table on screen!"
+        },
+        {
+            "id": "ws_inj_quiz_1",
+            "type": "quiz",
+            "title": "SQLi Categories Check",
+            "content": "Test your knowledge of SQL injection classifications!",
+            "quizQuestion": "Which type of SQL injection relies on forcing database sleep delays (`WAITFOR DELAY` or `pg_sleep()`) to extract data?",
+            "quizOptions": [
+                "UNION-based SQLi",
+                "Time-based Blind SQLi",
+                "Stored XSS",
+                "Out-of-band LDAP injection"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ws_inj_6",
+            "type": "content",
+            "title": "Primary Defense: Prepared Statements (Parameterized Queries)",
+            "content": "# The Ultimate Defense: Prepared Statements 🛡️\n\n**Prepared Statements** (also known as **Parameterized Queries**) completely eliminate SQL Injection.\n\n## Why Prepared Statements Work\n\nInstead of concatenating text into an executable query string, prepared statements compile the SQL query structure **first**, using placeholders (`?` or `$1`).\n\nUser input is transmitted separately as **pure data parameters**:\n\n```javascript_not\n// Node.js PostgreSQL Example (SAFE!)\nconst text = 'SELECT * FROM users WHERE username = $1 AND password_hash = $2';\nconst values = [userInputUsername, hashedInputPassword];\n\n// Database driver guarantees parameters are never executed as SQL commands:\nconst res = await pool.query(text, values);\n```\n\nEven if the attacker inputs `' OR '1'='1`, the database looks for a literal username string with quotes and equal signs!"
+        },
+        {
+            "id": "ws_inj_7",
+            "type": "content",
+            "title": "Prepared Statements Across Languages",
+            "content": "# Parameterized Queries Across Tech Stacks 💻\n\n## 1. Python (psycopg2 / sqlite3)\n\n```python_not\n# SAFE: Tuple parameterization\ncursor.execute(\"SELECT * FROM accounts WHERE id = %s\", (account_id,))\n```\n\n## 2. PHP (PDO)\n\n```php_not\n// SAFE: Prepared statement\n$stmt = $pdo->prepare('SELECT * FROM users WHERE email = :email');\n$stmt->execute(['email' => $userEmail]);\n```\n\n## 3. Java (PreparedStatement)\n\n```java_not\nPreparedStatement ps = conn.prepareStatement(\"SELECT * FROM users WHERE id = ?\");\nps.setInt(1, userId);\nResultSet rs = ps.executeQuery();\n```"
+        },
+        {
+            "id": "ws_inj_8",
+            "type": "content",
+            "title": "ORMs and the False Sense of Security",
+            "content": "# ORMs & The False Sense of Security ⚠️\n\nModern Object-Relational Mappers (Prisma, TypeORM, SQLAlchemy, Hibernate) use parameterized queries by default for standard queries.\n\n```javascript_not\n// SAFE: Standard Prisma query automatically parameterized\nconst user = await prisma.user.findUnique({ where: { email: userEmail } });\n```\n\n## The Trap: Raw SQL Escape Hatches ❌\n\nWhenever developers write raw queries inside ORMs, vulnerabilities re-emerge:\n\n```javascript_not\n// DANGEROUS: Concatenating input inside raw query!\nawait prisma.$queryRawUnsafe(`SELECT * FROM products WHERE name = '${userInput}'`);\n```\n\n> ⚠️ **Lesson:** Never use string template literals inside raw ORM queries!"
+        },
+        {
+            "id": "ws_inj_quiz_2",
+            "type": "quiz",
+            "title": "Prepared Statements Quiz",
+            "content": "Test your understanding of SQL injection prevention!",
+            "quizQuestion": "Why do prepared statements successfully prevent SQL injection?",
+            "quizOptions": [
+                "They encrypt the entire database on disk",
+                "They separate the SQL code structure from the user data parameters, preventing input from altering query logic",
+                "They automatically delete any input containing quote characters",
+                "They run exclusively in browser web workers"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ws_inj_10",
+            "type": "content",
+            "title": "Stored Procedures: Benefits & Limitations",
+            "content": "# Stored Procedures 🏛️\n\nA **Stored Procedure** is a prepared collection of SQL statements stored directly in the database engine.\n\n## Parameterized Stored Procedures (Safe) ✅\n\n```sql_not\nCREATE PROCEDURE GetUserAccount(IN userId INT)\nBEGIN\n  SELECT username, balance FROM accounts WHERE id = userId;\nEND;\n```\n\n## Vulnerable Stored Procedures (Avoid!) ❌\n\nIf a stored procedure concatenates strings internally using `EXECUTE IMMEDIATE`, it is still vulnerable to SQL injection!\n\n**Rule:** Parameterization is what prevents SQLi, not stored procedures alone."
+        },
+        {
+            "id": "ws_inj_11",
+            "type": "content",
+            "title": "OS Command Injection",
+            "content": "# OS Command Injection 💻⚡\n\n**Command Injection** occurs when an application executes host operating system commands using untrusted user input.\n\n## Vulnerable Code Example ❌\n\nImagine a network diagnostic tool that pings a server:\n\n```javascript_not\nconst { exec } = require('child_process');\n\n// Vulnerable: Shell concatenation\napp.get('/ping', (req, res) => {\n  const ip = req.query.ip;\n  exec(`ping -c 4 ${ip}`, (error, stdout) => {\n    res.send(stdout);\n  });\n});\n```\n\n## The Attack Payload:\n\nThe attacker supplies: `8.8.8.8; cat /etc/passwd`\n\nThe shell executes `ping -c 4 8.8.8.8`, followed by the second command: `cat /etc/passwd`, dumping system user accounts!"
+        },
+        {
+            "id": "ws_inj_12",
+            "type": "content",
+            "title": "Defending Against Command Injection",
+            "content": "# Defending Against Command Injection 🛡️\n\n## 1. Avoid Invoking System Shells Entirely (Best Practice)\n\nUse native language libraries instead of shelling out to OS commands (e.g. use Node's `net.isIP()` or Python's `socket` library instead of `ping`).\n\n## 2. Use Argument Arrays (`execFile` / `spawn`)\n\nIf OS binaries are unavoidable, bypass the shell and pass arguments as an isolated array:\n\n```javascript_not\nconst { execFile } = require('child_process');\n\n// SAFE: execFile bypasses /bin/sh shell interpretation!\nexecFile('ping', ['-c', '4', ip], (err, stdout) => {\n  res.send(stdout);\n});\n```\n\nEven if `ip` contains `; rm -rf /`, `ping` treats the entire string as a literal hostname argument."
+        },
+        {
+            "id": "ws_inj_13",
+            "type": "content",
+            "title": "NoSQL Injection (MongoDB)",
+            "content": "# NoSQL Injection (MongoDB) 🍃\n\nNoSQL databases (like MongoDB) are NOT immune to injection! Attackers exploit JSON query operator parsing.\n\n## Vulnerable Express/Mongoose Code ❌\n\n```javascript_not\n// Expecting { username: \"alice\", password: \"secret\" }\ndb.users.findOne({\n  username: req.body.username,\n  password: req.body.password,\n});\n```\n\n## The Payload: JSON Object Injection\n\nThe attacker posts raw JSON containing the `$gt` (greater than) operator:\n\n```json\n{\n  \"username\": \"admin\",\n  \"password\": { \"$gt\": \"\" }\n}\n```\n\nThe query searches for any user where `password > \"\"` (which is true for all non-empty passwords), granting administrative login without credentials!"
+        },
+        {
+            "id": "ws_inj_14",
+            "type": "content",
+            "title": "Defending Against NoSQL Injection",
+            "content": "# Defending Against NoSQL Injection 🛡️\n\n## 1. Schema Validation & Type Checking\n\nEnsure input fields are strictly strings, never objects:\n\n```javascript_not\nif (typeof req.body.password !== 'string') {\n  return res.status(400).send('Invalid password format');\n}\n```\n\n## 2. Sanitize MongoDB Operators with `express-mongo-sanitize`\n\n```javascript_not\nconst mongoSanitize = require('express-mongo-sanitize');\n\n// Strips any key starting with '$' or containing '.'\napp.use(mongoSanitize());\n```"
+        },
+        {
+            "id": "ws_inj_15",
+            "type": "content",
+            "title": "LDAP & Path Traversal Injection",
+            "content": "# LDAP & Directory Traversal Injection 📁\n\n## Directory (Path) Traversal: `../`\n\nOccurs when user input specifies a file path on the filesystem:\n\n```javascript_not\n// VULNERABLE: Attacker inputs '../../../../etc/passwd'\nconst file = req.query.filename;\nfs.readFile(`/var/www/uploads/${file}`);\n```\n\n## Path Traversal Defense:\n\n1. Strip path separators with `path.basename()`.\n2. Ensure resolved path starts within the intended root directory:\n   ```javascript_not\n   const safePath = path.resolve(UPLOAD_DIR, path.basename(file));\n   ```"
+        },
+        {
+            "id": "ws_inj_16",
+            "type": "content",
+            "title": "Least Privilege at the Database Level",
+            "content": "# Database Hardening: Principle of Least Privilege 🔒\n\nEven with parameterized queries, enforce defense in depth at the database user layer:\n\n1. **Never connect as `root` or `sa`**: Create dedicated application users.\n2. **Grant only necessary permissions**: A standard web app only needs `SELECT, INSERT, UPDATE, DELETE`.\n3. **Revoke administrative procedures**: Block access to `xp_cmdshell` (SQL Server), `LOAD_FILE()` (MySQL), or `COPY FROM PROGRAM` (Postgres).\n4. **Isolate sensitive tables**: Restrict credit card or PII tables to dedicated microservice database users."
+        },
+        {
+            "id": "ws_inj_17",
+            "type": "content",
+            "title": "Real-World Case Study: TalkTalk Data Breach",
+            "content": "# Case Study: The 2015 TalkTalk SQLi Breach 📉\n\nIn October 2015, British telecommunications giant **TalkTalk** suffered a devastating cyberattack orchestrated by teenagers using basic automated SQL injection tools (sqlmap).\n\n## What Happened:\n\n- A legacy database server acquired through an acquisition contained an unparameterized SQL query.\n- Attackers extracted personal details of **156,959 customers**, including names, addresses, and bank account numbers.\n\n## The Consequences:\n\n- Fined **£400,000** by the Information Commissioner's Office (ICO).\n- Lost over **100,000 customers**.\n- Total financial damage exceeded **£77 million** ($100M+ USD).\n\n> ⚠️ **Lesson:** A single forgotten, unparameterized legacy query can destroy corporate reputation and cost millions."
+        },
+        {
+            "id": "ws_inj_quiz_3",
+            "type": "quiz",
+            "title": "Injection Master Quiz",
+            "content": "Test your mastery of injection attack prevention!",
+            "quizQuestion": "How do you prevent NoSQL injection attacks where attackers submit `{ \"$gt\": \"\" }` in JSON payloads?",
+            "quizOptions": [
+                "Enable HTTPS on the server",
+                "Validate that input fields are strictly primitive strings and sanitize keys starting with '$'",
+                "Use a MySQL database instead",
+                "Encrypt the user's password with Base64"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ws_inj_19",
+            "type": "content",
+            "title": "Injection Defense Checklist",
+            "content": "# Comprehensive Injection Defense Checklist 📋\n\n- [x] **100% Parameterized Queries**: Use prepared statements for all database interactions.\n- [x] **Never string-interpolate into raw ORM queries**: Treat `$queryRaw` with extreme caution.\n- [x] **Avoid OS command execution**: Use native language APIs; if necessary, use argument arrays (`execFile`).\n- [x] **Sanitize NoSQL input**: Strip `$` operators from request bodies.\n- [x] **Apply Database Least Privilege**: Grant minimal necessary table permissions to database roles.\n- [x] **Sanitize file paths**: Prevent `../` directory traversal with `path.basename()`."
+        },
+        {
+            "id": "ws_inj_20",
+            "type": "content",
+            "title": "Summary: Injection Attacks",
+            "content": "# Injection Attacks: Summary 📋\n\n## Key Takeaways\n- **Injection Mechanics**: Untrusted input alters interpreter query logic.\n- **SQLi**: In-band, Blind (Boolean/Time), and Out-of-band.\n- **Prepared Statements**: Compile query structure first, transmitting inputs as isolated data parameters.\n- **Command Injection**: Bypass shells with `execFile(['arg1', 'arg2'])`.\n- **NoSQL Injection**: Guard against JSON operator injection (`$gt`, `$ne`).\n- **Least Privilege**: Restrict database user permissions to limit blast radius.\n\nYou have completed the Web Security Course! 🛡️"
+        },
+        {
+            "id": "ws_inj_21",
+            "type": "content",
+            "title": "Course Completion: The Secure Developer",
+            "content": "# Congratulations: You are a Secure Developer! 🎓🛡️\n\nYou have mastered the principles of modern web security and defensive software architecture.\n\n## What You Have Accomplished:\n- **Security Foundations**: CIA Triad, HTTPS/TLS, Same-Origin Policy, and Least Privilege.\n- **Cross-Site Scripting (XSS)**: Neutralized Stored, Reflected, and DOM XSS with output encoding, DOMPurify, and HttpOnly cookies.\n- **CSRF & Clickjacking**: Deployed Anti-CSRF tokens, SameSite cookies, and `frame-ancestors`.\n- **Security Headers**: Hardened browsers using CSP, HSTS, and `nosniff`.\n- **Authentication**: Secured credentials with Argon2id, defended against session fixation, and hardened JWTs.\n- **Injection Attacks**: Eliminated SQLi, Command Injection, and NoSQL flaws with prepared statements.\n\nGo forth and build secure, resilient, world-class web applications! 🚀🔒"
+        }
+    ]
+}

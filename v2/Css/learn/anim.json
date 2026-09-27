@@ -1,0 +1,159 @@
+{
+    "id": "learn_css_anim",
+    "topicId": "anim",
+    "topicTitle": "CSS Transitions & Animations",
+    "description": "Master CSS transitions, easing curves, hardware transforms, keyframes, and 60fps performance.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "css_anim_1",
+            "type": "content",
+            "title": "Welcome to Transitions & Animations",
+            "content": "# CSS Transitions & Animations 🎬\n\nMotion transforms static websites into interactive, polished experiences. Smooth micro-interactions provide intuitive feedback and delight users.\n\n## What you'll master:\n- 🔄 **CSS Transitions** - Property interpolation, duration, and delays\n- 📉 **Easing Timing Functions** - `ease`, `linear`, `cubic-bezier()`, and natural physics\n- 📐 **Hardware-Accelerated 2D/3D Transforms** - `translate`, `scale`, `rotate`\n- 🎞️ **Keyframe Animations (`@keyframes`)** - Multi-stage animation sequences\n- ⚡ **Animation Performance** - GPU acceleration and `prefers-reduced-motion`"
+        },
+        {
+            "id": "css_anim_2",
+            "type": "content",
+            "title": "Transitions: Animating State Changes",
+            "content": "# CSS Transitions: The Fundamentals 🔄\n\nA transition smoothly animates the change of a CSS property between two states (e.g. normal state and `:hover` state).\n\n```css_not\n.button {\n  background-color: #2563eb;\n  /* transition: [property] [duration] [timing-function] [delay] */\n  transition: background-color 0.3s ease;\n}\n\n.button:hover {\n  background-color: #1d4ed8;\n}\n```\n\nWithout the `transition` declaration, the background color would snap instantly. With `transition`, it interpolates smoothly over 300 milliseconds!"
+        },
+        {
+            "id": "css_anim_3",
+            "type": "content",
+            "title": "Transition Individual Properties",
+            "content": "# Transition Properties Breakdown ⚙️\n\nYou can configure each aspect of a transition individually:\n\n- `transition-property`: Which properties to animate (e.g. `transform`, `opacity`, `background-color`).\n- `transition-duration`: How long the animation takes (e.g. `0.2s`, `350ms`).\n- `transition-timing-function`: Speed curve (e.g. `ease`, `linear`, `ease-in-out`).\n- `transition-delay`: Wait time before the animation starts (e.g. `0.1s`).\n\n```css_not\n.card {\n  transition-property: transform, box-shadow;\n  transition-duration: 0.3s, 0.3s;\n  transition-timing-function: ease-out;\n}\n```"
+        },
+        {
+            "id": "css_anim_4",
+            "type": "content",
+            "title": "Transition Timing Functions (Easing)",
+            "content": "# Timing Functions & Easing Curves 📉\n\nEasing controls the acceleration and deceleration rate of an animation:\n\n```\nSpeed\n  ▲\n  │     /─────\\         ease-in-out (Slow start, fast middle, slow end)\n  │    /         │   /           └───┴──────────┴───► Time\n```\n\n- `ease` *(Default)*: Slow start, fast middle, slow end.\n- `linear`: Constant speed from start to finish.\n- `ease-in`: Starts slow, accelerates to a sudden stop.\n- `ease-out`: Starts fast, decelerates to a gentle stop (best for UI clicks/hovers!).\n- `cubic-bezier(p1, p2, p3, p4)`: Custom mathematical Bézier curve."
+        },
+        {
+            "id": "css_anim_quiz_1",
+            "type": "quiz",
+            "title": "Transitions Quiz",
+            "content": "Test your transitions knowledge.",
+            "quizQuestion": "Which timing function starts fast and decelerates to a gentle stop, ideal for hover states?",
+            "quizOptions": [
+                "linear",
+                "ease-in",
+                "ease-out",
+                "step-start"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "css_anim_5",
+            "type": "content",
+            "title": "2D Transforms: Translate, Scale, Rotate",
+            "content": "# CSS Transforms (`transform`) 📐\n\nTransforms modify the visual coordinate space of an element without disrupting neighboring layouts:\n\n```css_not\n.box-translated {\n  transform: translate(20px, -10px); /* X and Y offsets */\n}\n\n.box-scaled {\n  transform: scale(1.1); /* Scales up to 110% of size */\n}\n\n.box-rotated {\n  transform: rotate(45deg); /* Rotates 45 degrees clockwise */\n}\n\n/* Combine multiple transforms! */\n.card:hover {\n  transform: translateY(-8px) scale(1.02);\n}\n```"
+        },
+        {
+            "id": "css_anim_6",
+            "type": "content",
+            "title": "Why Transforms Beat Margins for Animation",
+            "content": "# Performance: Transforms vs Top/Margin ⚡\n\nWhy should you **never** animate `margin-top` or `top` for button hovers?\n\n- **Animating `top` / `margin`:** Triggers browser **Layout** (Reflow) and **Repaint**, forcing the browser to recalculate the entire page geometry 60 times per second! Causes jank and stutter.\n- **Animating `transform` & `opacity`:** Handled directly on the **GPU** (Compositor thread)! Zero layout reflow, guaranteeing buttery smooth 60fps/120fps motion."
+        },
+        {
+            "id": "css_anim_7",
+            "type": "content",
+            "title": "Keyframe Animations (@keyframes)",
+            "content": "# Multi-Stage Motion with `@keyframes` 🎞️\n\nWhile transitions only animate from state A to state B, `@keyframes` allows multi-stage, autonomous animation sequences that run on loop!\n\n```css_not\n@keyframes pulse {\n  0% {\n    transform: scale(1);\n    opacity: 1;\n  }\n  50% {\n    transform: scale(1.15);\n    opacity: 0.7;\n  }\n  100% {\n    transform: scale(1);\n    opacity: 1;\n  }\n}\n\n.pulsing-badge {\n  animation: pulse 2s infinite ease-in-out;\n}\n```"
+        },
+        {
+            "id": "css_anim_8",
+            "type": "content",
+            "title": "The animation Shorthand",
+            "content": "# The `animation` Properties 🎛️\n\n```css_not\n/* Syntax: animation: [name] [duration] [timing] [delay] [iteration-count] [direction] [fill-mode] */\n.loader {\n  animation: spin 1s linear infinite;\n}\n```\n\n## Key Properties:\n- `animation-iteration-count`: Number of times to play (`1`, `3`, `infinite`).\n- `animation-direction`: `normal`, `reverse`, `alternate` (plays forward then backward!).\n- `animation-play-state`: `running` or `paused` (great for pausing carousels on hover)."
+        },
+        {
+            "id": "css_anim_quiz_2",
+            "type": "quiz",
+            "title": "Keyframes Quiz",
+            "content": "Test your animation syntax knowledge.",
+            "quizQuestion": "Which animation-iteration-count value makes an animation loop continuously forever?",
+            "quizOptions": [
+                "loop",
+                "permanent",
+                "infinite",
+                "continuous"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "css_anim_9",
+            "type": "content",
+            "title": "Animation Fill Mode (forwards vs backwards)",
+            "content": "# The Critical `animation-fill-mode` 🎬\n\nWhen an animation finishes, by default the element snaps right back to its original pre-animation styling. `animation-fill-mode` controls state before and after:\n\n- `none` *(Default)*: Retains no styles from the animation outside its duration.\n- `forwards`: The element **keeps the styles of the final keyframe (100%)** after finishing!\n- `backwards`: Applies the 0% styles during any initial `animation-delay`.\n- `both`: Applies backwards before start, and forwards after finish!\n\n```css_not\n.fade-in-slide {\n  animation: slideUp 0.6s ease-out forwards; /* Stays visible at final position! */\n}\n```"
+        },
+        {
+            "id": "css_anim_10",
+            "type": "content",
+            "title": "Practical Micro-Interaction: Ripple & Hover",
+            "content": "# Practical Micro-Interaction: Elevated Card 🃏\n\n```html_not\n<article class=\"hover-card\">\n  <h3>Interactive Component</h3>\n  <p>Hover to see elevation physics.</p>\n</article>\n```\n\n```css_not\n.hover-card {\n  background: #ffffff;\n  padding: 24px;\n  border-radius: 16px;\n  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);\n  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),\n              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);\n  will-change: transform, box-shadow;\n}\n\n.hover-card:hover {\n  transform: translateY(-6px);\n  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),\n              0 10px 10px -5px rgba(0, 0, 0, 0.04);\n}\n```"
+        },
+        {
+            "id": "css_anim_11",
+            "type": "content",
+            "title": "Infinite Loading Spinner",
+            "content": "# Practical Component: CSS Loading Spinner 🌀\n\nCreate a performant loading spinner with pure CSS:\n\n```html_not\n<div class=\"spinner\"></div>\n```\n\n```css_not\n.spinner {\n  width: 40px;\n  height: 40px;\n  border: 4px solid #e2e8f0;\n  border-top-color: #3b82f6; /* Colored accent indicator */\n  border-radius: 50%;\n  animation: spin 0.8s linear infinite;\n}\n\n@keyframes spin {\n  to {\n    transform: rotate(360deg);\n  }\n}\n```"
+        },
+        {
+            "id": "css_anim_12",
+            "type": "content",
+            "title": "Skeleton Loading Shimmer Effect",
+            "content": "# Modern UI: Skeleton Loading Shimmer 💀\n\nSkeleton placeholders give users immediate visual perception of fast loading:\n\n```css_not\n.skeleton {\n  background: linear-gradient(\n    90deg,\n    #f1f5f9 25%,\n    #e2e8f0 50%,\n    #f1f5f9 75%\n  );\n  background-size: 200% 100%;\n  animation: shimmer 1.5s infinite;\n  border-radius: 4px;\n}\n\n@keyframes shimmer {\n  0%   { background-position: 200% 0; }\n  100% { background-position: -200% 0; }\n}\n```"
+        },
+        {
+            "id": "css_anim_13",
+            "type": "content",
+            "title": "Staggered Animation Delays",
+            "content": "# Staggered Animation Delays 🪜\n\nStaggering the appearance of list items creates a premium native app feel:\n\n```css_not\n.list-item {\n  animation: fadeInUp 0.5s ease-out forwards;\n  opacity: 0;\n}\n\n.list-item:nth-child(1) { animation-delay: 0.1s; }\n.list-item:nth-child(2) { animation-delay: 0.2s; }\n.list-item:nth-child(3) { animation-delay: 0.3s; }\n.list-item:nth-child(4) { animation-delay: 0.4s; }\n\n@keyframes fadeInUp {\n  from {\n    opacity: 0;\n    transform: translateY(20px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n```"
+        },
+        {
+            "id": "css_anim_quiz_3",
+            "type": "quiz",
+            "title": "Fill Mode Quiz",
+            "content": "Test your animation properties.",
+            "quizQuestion": "Which animation-fill-mode keeps the element styled according to the final 100% keyframe after playback ends?",
+            "quizOptions": [
+                "retain",
+                "forwards",
+                "sticky",
+                "freeze"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "css_anim_14",
+            "type": "content",
+            "title": "Respecting prefers-reduced-motion",
+            "content": "# Accessibility: `prefers-reduced-motion` ♿\n\nVestibular disorders and motion sensitivities can trigger vertigo or nausea from excessive animations.\n\nAlways respect user OS preferences:\n\n```css_not\n@media (prefers-reduced-motion: reduce) {\n  *, *::before, *::after {\n    animation-duration: 0.01ms !important;\n    animation-iteration-count: 1 !important;\n    transition-duration: 0.01ms !important;\n    scroll-behavior: auto !important;\n  }\n}\n```\n\nWhen users turn on \"Reduce Motion\" in Windows/macOS/iOS/Android, this snippet disables motion while maintaining instant state functionality!"
+        },
+        {
+            "id": "css_anim_15",
+            "type": "content",
+            "title": "The will-change Property",
+            "content": "# Optimizing with `will-change` 🚀\n\nThe `will-change` property hints to the browser that an element will animate soon, allowing it to prepare GPU layers ahead of time:\n\n```css_not\n.animating-box {\n  will-change: transform, opacity;\n}\n```\n\n> ⚠️ **Warning:** Never put `will-change` on hundreds of elements at once! Creating excessive GPU layers wastes device memory and degrades battery life."
+        },
+        {
+            "id": "css_anim_16",
+            "type": "content",
+            "title": "3D Transforms: Flipping Cards",
+            "content": "# 3D Transforms: Card Flip 🎴\n\n```html_not\n<div class=\"card-container\">\n  <div class=\"flipper\">\n    <div class=\"front\">Front Side</div>\n    <div class=\"back\">Back Side</div>\n  </div>\n</div>\n```\n\n```css_not\n.card-container {\n  perspective: 1000px; /* Establishes 3D perspective distance */\n}\n\n.flipper {\n  transition: transform 0.6s;\n  transform-style: preserve-3d;\n}\n\n.card-container:hover .flipper {\n  transform: rotateY(180deg);\n}\n\n.front, .back {\n  backface-visibility: hidden; /* Hides back when facing away */\n}\n\n.back {\n  transform: rotateY(180deg);\n}\n```"
+        },
+        {
+            "id": "css_anim_17",
+            "type": "content",
+            "title": "Animation Performance Checklist",
+            "content": "# Animation Performance Rules 🏁\n\n1. **Only animate `transform` and `opacity`:** These properties run on the GPU compositor without triggering layout reflows.\n2. **Never animate `width`, `height`, `margin`, `top`, or `left`.**\n3. **Keep durations between 150ms and 350ms:** Faster than 150ms feels abrupt; slower than 400ms feels sluggish to users.\n4. **Always include `prefers-reduced-motion`:** Accessibility is mandatory."
+        },
+        {
+            "id": "css_anim_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Transitions & Animations Mastered! 🌟\n\nYou can now build rich, 60fps hardware-accelerated animations and micro-interactions!\n\n## Key Takeaways:\n- ✅ **Transitions:** Smoothly interpolate property changes (duration, timing, delay).\n- ✅ **Transforms:** Use `translate`, `scale`, and `rotate` for GPU performance.\n- ✅ **Keyframes:** Define complex multi-step sequences with `@keyframes`.\n- ✅ **`animation-fill-mode: forwards`:** Preserves final state when animation completes.\n- ✅ **Accessibility:** Honor `prefers-reduced-motion` for motion-sensitive users.\n\n## Up Next:\nIn the next module, master responsive web layouts across all screens: **CSS Media Queries & Breakpoints**! 🚀"
+        }
+    ]
+}

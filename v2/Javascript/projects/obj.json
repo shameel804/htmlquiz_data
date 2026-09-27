@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Object and Array Creation Patterns",
+    "ques": "Demonstrate modern patterns for creating Objects and Arrays in JavaScript: object literals with computed property names, shorthand notation, and array factory methods.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const roleKey = \"userRole\";\nconst username = \"alexandra\";\n\n// Object literal with shorthand properties and computed property keys\nconst user = {\n  username, // Shorthand for username: username\n  age: 26,\n  [roleKey]: \"administrator\", // Computed dynamic property name\n  greet() {\n    return `Hello from ${this.username}`;\n  }\n};\n\n// Array creation via Array.from and Array.of\nconst consecutiveNumbers = Array.from({ length: 5 }, (_, index) => index + 1);\n\nconsole.log(user[roleKey]);          // 'administrator'\nconsole.log(consecutiveNumbers);     // [1, 2, 3, 4, 5]"
+    },
+    "explanation": "Object literals allow concise property shorthands, computed property keys (`[key]`), and method definitions. Array helper methods create initialized sequences cleanly."
+  },
+  {
+    "title": "Essential Array and Object Methods",
+    "ques": "Demonstrate higher-order array methods (**`map`**, **`filter`**, and **`reduce`**) and static Object utilities (**`Object.keys`**, **`Object.values`**, **`Object.entries`**).",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const products = [\n  { name: \"Laptop\", price: 1200, inStock: true },\n  { name: \"Mouse\", price: 25, inStock: false },\n  { name: \"Keyboard\", price: 80, inStock: true }\n];\n\n// 1. Filter: extract items in stock\nconst available = products.filter(p => p.inStock);\n\n// 2. Map: extract names\nconst productNames = available.map(p => p.name);\n\n// 3. Reduce: calculate total inventory value\nconst totalStockValue = available.reduce((acc, p) => acc + p.price, 0);\n\nconsole.log(\"Available Items:\", productNames); // ['Laptop', 'Keyboard']\nconsole.log(\"Total Value: $\", totalStockValue); // 1280\n\n// 4. Object.entries\nconst settings = { theme: \"dark\", notifications: true };\nfor (const [key, value] of Object.entries(settings)) {\n  console.log(`${key}: ${value}`);\n}"
+    },
+    "explanation": "`filter`, `map`, and `reduce` form the foundation of functional data transformation in JavaScript. `Object.entries` produces `[key, value]` pairs for clean iteration."
+  },
+  {
+    "title": "Destructuring Arrays and Objects",
+    "ques": "Explain the mechanics of **Object and Array Destructuring**. Show default values, property renaming, and rest syntax (`...rest`).",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const config = {\n  apiHost: \"api.mysite.com\",\n  port: 8080,\n  protocol: \"https\",\n  timeout: 5000\n};\n\n// Object destructuring with renaming and default values\nconst { apiHost: serverUrl, port, timeout = 3000, maxRetries = 3 } = config;\nconsole.log(`Target: ${serverUrl}:${port}, Max Retries: ${maxRetries}`);\n\n// Array destructuring with rest parameter\nconst colors = [\"red\", \"green\", \"blue\", \"orange\", \"purple\"];\nconst [primaryColor, secondaryColor, ...otherColors] = colors;\n\nconsole.log(`Primary: ${primaryColor}`);     // 'red'\nconsole.log(`Others:`, otherColors);        // ['blue', 'orange', 'purple']"
+    },
+    "explanation": "Destructuring extracts values from arrays or properties from objects into distinct variables in a single expressive statement, supporting default fallbacks and rest gathering."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Configuring Font Families",
+    "ques": "Demonstrate the three standard Tailwind **font family** utilities: `font-sans`, `font-serif`, and `font-mono` in a typography preview block.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"space-y-4 p-6 bg-white rounded-lg shadow-sm border border-gray-100\">\n  <!-- Sans-serif default -->\n  <p class=\"font-sans text-gray-800\">\n    <strong>Sans-Serif:</strong> Modern user interface text powered by system sans fonts.\n  </p>\n  <!-- Serif editorial -->\n  <p class=\"font-serif text-gray-800 italic text-lg\">\n    <strong>Serif:</strong> Elegant editorial quotes and classical long-form literature.\n  </p>\n  <!-- Monospace code -->\n  <p class=\"font-mono text-sm bg-gray-100 p-3 rounded text-indigo-700\">\n    <strong>Monospace:</strong> const apiKey = \"sk_live_90384209\";\n  </p>\n</div>"
+    },
+    "explanation": "Tailwind provides `font-sans` (optimized system UI stack), `font-serif` (editorial fonts like Georgia), and `font-mono` (developer monospaced fonts like Menlo and Consolas)."
+  },
+  {
+    "title": "Scaling Text Sizing",
+    "ques": "Demonstrate the typographic scale from small fine-print (`text-xs`, `text-sm`) to hero display titles (`text-3xl`, `text-5xl`).",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"p-6 space-y-3\">\n  <span class=\"text-xs font-semibold uppercase tracking-wider text-indigo-600\">Featured Article</span>\n  <h1 class=\"text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight\">\n    Building Resilient Web Architectures\n  </h1>\n  <p class=\"text-base md:text-lg text-gray-600\">\n    A comprehensive guide to developing modern distributed software applications.\n  </p>\n  <p class=\"text-xs text-gray-400\">\n    Published on October 14, 2026 • 8 min read\n  </p>\n</div>"
+    },
+    "explanation": "Tailwind scales font sizes using proportional rem units from `text-xs` (0.75rem) through `text-base` (1rem) up to `text-9xl` (8rem), automatically adjusting default line heights."
+  },
+  {
+    "title": "Color Scales and Opacity Modifiers",
+    "ques": "Show how Tailwind's **text color** scale works across lightness values (`text-slate-100` to `text-slate-900`) and demonstrate slash opacity syntax (`text-blue-600/75`).",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"space-y-2 p-6 bg-slate-900 rounded-xl\">\n  <h3 class=\"text-slate-100 font-bold text-xl\">High Contrast Heading</h3>\n  <p class=\"text-slate-300 text-sm\">Secondary body text with reduced brightness.</p>\n  <p class=\"text-slate-500 text-xs\">Tertiary timestamp or metadata.</p>\n  <!-- Opacity modifier: 80% opacity on blue color -->\n  <a href=\"#\" class=\"text-blue-400 hover:text-blue-400/80 text-sm font-medium underline\">\n    Read Documentation &rarr;\n  </a>\n</div>"
+    },
+    "explanation": "Tailwind colors are calibrated from 50 (lightest) to 950 (darkest). The slash syntax (`/50`, `/75`) dynamically modifies alpha transparency without extra CSS variables."
+  },
+  {
+    "title": "Font Weights from Light to Black",
+    "ques": "Demonstrate the use of **font weight utilities** (`font-light`, `font-normal`, `font-semibold`, `font-extrabold`) to establish visual hierarchy in a testimonial card.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"max-w-md p-6 bg-white rounded-xl shadow-md border border-gray-100\">\n  <p class=\"font-light text-gray-500 text-sm mb-2\">Testimonial</p>\n  <blockquote class=\"font-normal text-gray-800 text-base italic leading-relaxed mb-4\">\n    \"This application revolutionized our engineering workflow from day one.\"\n  </blockquote>\n  <div>\n    <p class=\"font-semibold text-gray-900 text-sm\">Sarah Jenkins</p>\n    <p class=\"font-medium text-indigo-600 text-xs\">VP of Engineering</p>\n  </div>\n</div>"
+    },
+    "explanation": "Font weight classes map directly to standard CSS numeric weights: `font-light` (300), `font-normal` (400), `font-medium` (500), `font-semibold` (600), `font-bold` (700), and `font-black` (900)."
+  },
+  {
+    "title": "Text Alignment Utilities",
+    "ques": "Create a multi-column pricing comparison header showing **text alignment** (`text-left`, `text-center`, and `text-right`).",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"grid grid-cols-3 p-4 bg-gray-50 rounded-lg border border-gray-200 text-sm font-semibold text-gray-700\">\n  <div class=\"text-left\">Feature Name</div>\n  <div class=\"text-center\">Free Tier</div>\n  <div class=\"text-right\">Enterprise Tier</div>\n</div>"
+    },
+    "explanation": "Alignment utilities control text justification within inline or block formatting contexts, facilitating clean column alignment in data tables and hero titles."
+  },
+  {
+    "title": "Line Height (Leading) Calibration",
+    "ques": "Explain the difference between `leading-none`, `leading-snug`, and `leading-relaxed`. Write an article paragraph demonstrating readability optimization with `leading-relaxed`.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<article class=\"max-w-2xl mx-auto p-6\">\n  <!-- Tight leading for huge headings prevents unsightly line gaps -->\n  <h1 class=\"text-3xl font-extrabold text-gray-900 leading-tight mb-4\">\n    Designing for Accessible Human Experiences\n  </h1>\n  <!-- Relaxed leading (line-height: 1.625) provides optimal readability for long paragraphs -->\n  <p class=\"text-gray-700 text-base leading-relaxed mb-4\">\n    Typographic research consistently proves that adequate line spacing significantly reduces cognitive fatigue during reading. By giving each line sufficient breathing room, readers navigate paragraphs effortlessly without losing their place.\n  </p>\n</article>"
+    },
+    "explanation": "`leading-*` classes manage `line-height`. Titles benefit from `leading-tight` (1.25) to avoid huge gaps, while body prose benefits from `leading-relaxed` (1.625) for high legibility."
+  },
+  {
+    "title": "Letter Spacing (Tracking) for Polish",
+    "ques": "Demonstrate the use of **letter spacing (`tracking-tight` vs `tracking-widest`)** to polish small uppercase badges and large headlines.",
+    "answer": {
+      "type": "code",
+      "lang": "html",
+      "content": "<div class=\"p-6 space-y-4\">\n  <!-- Tracking-widest adds spacing for uppercase labels -->\n  <span class=\"px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold uppercase tracking-widest rounded-full\">\n    Beta Preview\n  </span>\n  <!-- Tracking-tight condenses characters for punchy display headers -->\n  <h2 class=\"text-4xl font-extrabold text-gray-900 tracking-tight\">\n    Instant Worldwide Delivery\n  </h2>\n</div>"
+    },
+    "explanation": "Letter spacing (`tracking`) modifies the horizontal gap between glyphs. Uppercase microcopy requires `tracking-widest` for legibility, while large display headings look punchier with `tracking-tight`."
+  }
+]

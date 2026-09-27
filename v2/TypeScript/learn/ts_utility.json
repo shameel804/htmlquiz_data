@@ -1,0 +1,159 @@
+{
+    "id": "learn_ts_utility",
+    "topicId": "ts_utility",
+    "topicTitle": "TS Utility Types & Enums",
+    "description": "Master Enums, Partial, Required, Readonly, Record, Pick, Omit, Exclude, and Extract.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "ts_ut_1",
+            "type": "content",
+            "title": "Welcome to Utility Types & Enums",
+            "content": "# Utility Types & Enums in TypeScript 🛠️\n\nTypeScript provides a rich collection of built-in **Utility Types** that transform existing types without rewriting code, along with **Enums** for defining sets of named constants.\n\n## What you'll master:\n- 🔢 **Numeric & String Enums** - Named constants and reverse mappings\n- ❓ **`Partial<T>` and `Required<T>`** - Toggling optionality across all properties\n- 🔒 **`Readonly<T>`** - Freezing entire object structures\n- 🗺️ **`Record<K, T>`** - Creating typed key-value maps\n- ✂️ **`Pick<T, K>` and `Omit<T, K>`** - Selecting and filtering subsets of properties\n- 🔀 **`Exclude<T, U>` and `Extract<T, U>`** - Filtering union types"
+        },
+        {
+            "id": "ts_ut_2",
+            "type": "content",
+            "title": "Numeric Enums",
+            "content": "# Numeric Enums 🔢\n\nEnums allow you to define a set of named constants. By default, numeric enums auto-increment starting at `0`:\n\n```typescript\nenum Direction {\n  Up,    // 0\n  Down,  // 1\n  Left,  // 2\n  Right  // 3\n}\n\nconsole.log(\"Direction Up:\", Direction.Up);     // 0\nconsole.log(\"Direction Left:\", Direction.Left); // 2\n\n// Custom starting value\nenum HttpStatus {\n  OK = 200,\n  Created = 201,\n  BadRequest = 400,\n  NotFound = 404\n}\nconsole.log(\"Status OK:\", HttpStatus.OK); // 200\n```\n\n<!-- FULL_CODE_START\nenum Direction {\n  Up,\n  Down,\n  Left,\n  Right\n}\n\nenum HttpStatus {\n  OK = 200,\n  Created = 201,\n  BadRequest = 400,\n  NotFound = 404\n}\n\nconsole.log(\"Direction Up:\", Direction.Up);\nconsole.log(\"Direction Right:\", Direction.Right);\nconsole.log(\"Status OK:\", HttpStatus.OK);\nconsole.log(\"Status NotFound:\", HttpStatus.NotFound);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_3",
+            "type": "content",
+            "title": "String Enums",
+            "content": "# String Enums 🔤\n\nIn string enums, each member is explicitly initialized with a string value:\n\n```typescript\nenum UserRole {\n  Admin = \"ADMIN\",\n  Editor = \"EDITOR\",\n  Viewer = \"VIEWER\"\n}\n\nfunction checkAccess(role: UserRole) {\n  if (role === UserRole.Admin) {\n    console.log(\"Granting administrative access...\");\n  } else {\n    console.log(`Access restricted for role: ${role}`);\n  }\n}\n\ncheckAccess(UserRole.Admin);\ncheckAccess(UserRole.Viewer);\n```\n\n<!-- FULL_CODE_START\nenum UserRole {\n  Admin = \"ADMIN\",\n  Editor = \"EDITOR\",\n  Viewer = \"VIEWER\"\n}\n\nfunction checkAccess(role: UserRole) {\n  if (role === UserRole.Admin) {\n    console.log(\"Granting administrative access...\");\n  } else {\n    console.log(`Access restricted for role: ${role}`);\n  }\n}\n\ncheckAccess(UserRole.Admin);\ncheckAccess(UserRole.Viewer);\nFULL_CODE_END -->\n\n## Why String Enums are Superior:\nString enums serialize clearly in logs, network payloads, and debuggers, whereas numeric enums only print opaque numbers like `0` or `1`!"
+        },
+        {
+            "id": "ts_ut_4",
+            "type": "content",
+            "title": "Const Enums",
+            "content": "# Const Enums (Zero Runtime Overhead) ⚡\n\nPrefixing an enum with `const` completely removes the enum object from compiled JavaScript, inlining the raw literal values at compile time!\n\n```typescript\nconst enum LogLevel {\n  Debug = 1,\n  Info = 2,\n  Error = 3\n}\n\nconst currentLevel = LogLevel.Info;\n// Compiles directly to JavaScript: const currentLevel = 2;\nconsole.log(\"Current Log Level:\", currentLevel);\n```\n\n<!-- FULL_CODE_START\nconst enum LogLevel {\n  Debug = 1,\n  Info = 2,\n  Error = 3\n}\n\nconst currentLevel = LogLevel.Info;\nconsole.log(\"Current Log Level:\", currentLevel);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_quiz_1",
+            "type": "quiz",
+            "title": "Enums Quiz",
+            "content": "Test your enum knowledge.",
+            "quizQuestion": "What value does Direction.Up have in 'enum Direction { Up, Down, Left }' by default?",
+            "quizOptions": [
+                "1",
+                "0",
+                "'Up'",
+                "undefined"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_ut_5",
+            "type": "content",
+            "title": "Partial<T>: Making All Properties Optional",
+            "content": "# `Partial<T>`: Making Properties Optional ❓\n\n`Partial<T>` returns a type with all properties of `T` set to **optional**. Essential for update/patch operations:\n\n```typescript\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n  age: number;\n}\n\n// PartialUser is { id?: number; name?: string; email?: string; age?: number }\nfunction updateUser(id: number, fieldsToUpdate: Partial<User>): void {\n  console.log(`Updating user ${id} with:`, fieldsToUpdate);\n}\n\n// Valid! Only updating email:\nupdateUser(101, { email: \"new_email@example.com\" });\n```\n\n<!-- FULL_CODE_START\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n  age: number;\n}\n\nfunction updateUser(id: number, fieldsToUpdate: Partial<User>): void {\n  console.log(`Updating user ${id} with:`, fieldsToUpdate);\n}\n\nupdateUser(101, { email: \"new_email@example.com\" });\nupdateUser(102, { name: \"Bob\", age: 31 });\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_6",
+            "type": "content",
+            "title": "Required<T>: Making All Properties Mandatory",
+            "content": "# `Required<T>`: Making Properties Mandatory ❗\n\nThe opposite of `Partial<T>`. `Required<T>` removes optionality, making **every single property mandatory**:\n\n```typescript\ninterface AppConfig {\n  title?: string;\n  port?: number;\n  ssl?: boolean;\n}\n\n// All properties are strictly required!\nconst finalConfig: Required<AppConfig> = {\n  title: \"Production Gateway\",\n  port: 443,\n  ssl: true\n};\n\nconsole.log(\"Config validated:\", finalConfig);\n```\n\n<!-- FULL_CODE_START\ninterface AppConfig {\n  title?: string;\n  port?: number;\n  ssl?: boolean;\n}\n\nconst finalConfig: Required<AppConfig> = {\n  title: \"Production Gateway\",\n  port: 443,\n  ssl: true\n};\n\nconsole.log(\"Config validated:\", finalConfig);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_7",
+            "type": "content",
+            "title": "Readonly<T>: Freezing All Properties",
+            "content": "# `Readonly<T>`: Immutable Data Structures 🔒\n\n`Readonly<T>` sets all properties of `T` to `readonly`, preventing any reassignment:\n\n```typescript\ninterface Task {\n  title: string;\n  completed: boolean;\n}\n\nconst task: Readonly<Task> = {\n  title: \"Refactor API Controllers\",\n  completed: false\n};\n\n// task.completed = true; // Error: Cannot assign to 'completed' because it is a read-only property!\nconsole.log(\"Readonly task:\", task.title);\n```\n\n<!-- FULL_CODE_START\ninterface Task {\n  title: string;\n  completed: boolean;\n}\n\nconst task: Readonly<Task> = {\n  title: \"Refactor API Controllers\",\n  completed: false\n};\n\nconsole.log(\"Readonly task:\", task.title, \"- Done:\", task.completed);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_8",
+            "type": "content",
+            "title": "Record<K, T>: Key-Value Dictionaries",
+            "content": "# `Record<K, T>`: Structured Key-Value Maps 🗺️\n\n`Record<Keys, Type>` constructs an object type whose property keys are `Keys` and values are `Type`:\n\n```typescript\ntype Role = \"admin\" | \"editor\" | \"guest\";\n\ninterface Permissions {\n  canRead: boolean;\n  canWrite: boolean;\n}\n\n// Guarantees all 3 roles are defined with valid permissions!\nconst rolePermissions: Record<Role, Permissions> = {\n  admin: { canRead: true, canWrite: true },\n  editor: { canRead: true, canWrite: true },\n  guest: { canRead: true, canWrite: false }\n};\n\nconsole.log(\"Guest permissions:\", rolePermissions.guest);\n```\n\n<!-- FULL_CODE_START\ntype Role = \"admin\" | \"editor\" | \"guest\";\n\ninterface Permissions {\n  canRead: boolean;\n  canWrite: boolean;\n}\n\nconst rolePermissions: Record<Role, Permissions> = {\n  admin: { canRead: true, canWrite: true },\n  editor: { canRead: true, canWrite: true },\n  guest: { canRead: true, canWrite: false }\n};\n\nconsole.log(\"Guest permissions:\", rolePermissions.guest);\nconsole.log(\"Admin can write?\", rolePermissions.admin.canWrite);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_quiz_2",
+            "type": "quiz",
+            "title": "Utility Types Quiz",
+            "content": "Test your knowledge of Partial and Required.",
+            "quizQuestion": "What utility type takes an interface and makes every property optional?",
+            "quizOptions": [
+                "Optional<T>",
+                "Partial<T>",
+                "Nullable<T>",
+                "Pick<T>"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_ut_9",
+            "type": "content",
+            "title": "Pick<T, K>: Selecting Subsets",
+            "content": "# `Pick<T, K>`: Extracting Specific Keys ✂️\n\nConstruct a new type by choosing a specific subset of keys `K` from type `T`:\n\n```typescript\ninterface Article {\n  id: number;\n  title: string;\n  body: string;\n  author: string;\n  views: number;\n}\n\n// Only pick 'id' and 'title' for a lightweight summary preview:\ntype ArticlePreview = Pick<Article, \"id\" | \"title\">;\n\nconst preview: ArticlePreview = {\n  id: 42,\n  title: \"Mastering TypeScript Utility Types\"\n};\n\nconsole.log(\"Preview:\", preview);\n```\n\n<!-- FULL_CODE_START\ninterface Article {\n  id: number;\n  title: string;\n  body: string;\n  author: string;\n  views: number;\n}\n\ntype ArticlePreview = Pick<Article, \"id\" | \"title\">;\n\nconst preview: ArticlePreview = {\n  id: 42,\n  title: \"Mastering TypeScript Utility Types\"\n};\n\nconsole.log(\"Preview:\", preview);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_10",
+            "type": "content",
+            "title": "Omit<T, K>: Removing Specific Keys",
+            "content": "# `Omit<T, K>`: Removing Specific Keys 🗑️\n\nThe opposite of `Pick<T, K>`. Construct a type by taking all properties from `T` and **dropping keys `K`**:\n\n```typescript\ninterface UserAccount {\n  id: number;\n  name: string;\n  email: string;\n  passwordHash: string; // Sensitive!\n}\n\n// Omit passwordHash for safe client-facing responses\ntype PublicUser = Omit<UserAccount, \"passwordHash\">;\n\nconst publicProfile: PublicUser = {\n  id: 1,\n  name: \"Marcus\",\n  email: \"marcus@example.com\"\n};\n\nconsole.log(\"Public Profile:\", publicProfile);\n```\n\n<!-- FULL_CODE_START\ninterface UserAccount {\n  id: number;\n  name: string;\n  email: string;\n  passwordHash: string;\n}\n\ntype PublicUser = Omit<UserAccount, \"passwordHash\">;\n\nconst publicProfile: PublicUser = {\n  id: 1,\n  name: \"Marcus\",\n  email: \"marcus@example.com\"\n};\n\nconsole.log(\"Public Profile (no password):\", publicProfile);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_11",
+            "type": "content",
+            "title": "Exclude<T, U>: Filtering Unions",
+            "content": "# `Exclude<T, U>`: Filtering Unions 🚫\n\n`Exclude<Union, ExcludedMembers>` removes specific member types from a union:\n\n```typescript\ntype AllStatus = \"idle\" | \"loading\" | \"success\" | \"error\";\n\n// Exclude 'error' from active running statuses\ntype NonErrorStatus = Exclude<AllStatus, \"error\">;\n// Inferred as \"idle\" | \"loading\" | \"success\"\n\nconst currentStatus: NonErrorStatus = \"loading\";\nconsole.log(\"Status:\", currentStatus);\n```\n\n<!-- FULL_CODE_START\ntype AllStatus = \"idle\" | \"loading\" | \"success\" | \"error\";\ntype NonErrorStatus = Exclude<AllStatus, \"error\">;\n\nconst currentStatus: NonErrorStatus = \"loading\";\nconsole.log(\"Non-error status:\", currentStatus);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_12",
+            "type": "content",
+            "title": "Extract<T, U>: Intersecting Unions",
+            "content": "# `Extract<T, U>`: Intersecting Unions 🎯\n\nThe opposite of `Exclude`. It extracts all union members that are assignable to `U`:\n\n```typescript\ntype TypesA = string | number | (() => void);\ntype TypesB = number | boolean | (() => void);\n\n// Extracts types present in BOTH unions:\ntype Common = Extract<TypesA, TypesB>;\n// Inferred as number | (() => void)\n\nconsole.log(\"Extract demonstrated successfully.\");\n```\n\n<!-- FULL_CODE_START\ntype TypesA = string | number | boolean;\ntype TypesB = number | boolean | object;\n\ntype Common = Extract<TypesA, TypesB>;\n\nconst numVal: Common = 42;\nconst boolVal: Common = true;\nconsole.log(\"Extracted Common values:\", numVal, boolVal);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_quiz_3",
+            "type": "quiz",
+            "title": "Pick and Omit Quiz",
+            "content": "Test your knowledge of Pick and Omit.",
+            "quizQuestion": "Which utility type constructs a type containing all properties of T EXCEPT for keys specified in K?",
+            "quizOptions": [
+                "Exclude<T, K>",
+                "Omit<T, K>",
+                "Drop<T, K>",
+                "Pick<T, K>"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "ts_ut_13",
+            "type": "content",
+            "title": "NonNullable<T>",
+            "content": "# `NonNullable<T>` 🛡️\n\nRemoves `null` and `undefined` from a union type:\n\n```typescript\ntype ComplexValue = string | number | null | undefined;\n\ntype CleanValue = NonNullable<ComplexValue>;\n// Inferred as string | number!\n\nconst valid: CleanValue = \"Guaranteed valid string\";\nconsole.log(valid);\n```\n\n<!-- FULL_CODE_START\ntype ComplexValue = string | number | null | undefined;\ntype CleanValue = NonNullable<ComplexValue>;\n\nconst valid: CleanValue = \"Guaranteed non-null string\";\nconsole.log(\"Clean value:\", valid);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_14",
+            "type": "content",
+            "title": "ReturnType<T> and Parameters<T>",
+            "content": "# Function Inspection: `ReturnType` and `Parameters` 🔬\n\nInspect and extract types from existing functions without re-typing their signatures:\n\n```typescript\nfunction fetchUserById(id: number) {\n  return { id, name: \"Alice\", active: true };\n}\n\n// Extract the return type of the function!\ntype UserReturn = ReturnType<typeof fetchUserById>;\n// Inferred as { id: number; name: string; active: boolean }\n\n// Extract the parameters tuple!\ntype UserParams = Parameters<typeof fetchUserById>;\n// Inferred as [id: number]\n\nconst userSample: UserReturn = { id: 2, name: \"Bob\", active: false };\nconsole.log(\"User Sample:\", userSample);\n```\n\n<!-- FULL_CODE_START\nfunction fetchUserById(id: number) {\n  return { id, name: \"Alice\", active: true };\n}\n\ntype UserReturn = ReturnType<typeof fetchUserById>;\ntype UserParams = Parameters<typeof fetchUserById>;\n\nconst userSample: UserReturn = { id: 2, name: \"Bob\", active: false };\nconsole.log(\"ReturnType extracted:\", userSample.name);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_15",
+            "type": "content",
+            "title": "Awaited<T>: Unwrapping Promises",
+            "content": "# Unwrapping Promises with `Awaited<T>` ⏳\n\nUnwraps the inner resolved value type from nested Promises:\n\n```typescript\nasync function getApiResponse() {\n  return { status: 200, message: \"OK\" };\n}\n\n// Unwraps Promise<{ status: number, message: string }>\ntype UnwrappedData = Awaited<ReturnType<typeof getApiResponse>>;\n\nconst responsePayload: UnwrappedData = { status: 200, message: \"Success\" };\nconsole.log(\"Unwrapped status:\", responsePayload.status);\n```\n\n<!-- FULL_CODE_START\nasync function getApiResponse() {\n  return { status: 200, message: \"OK\" };\n}\n\ntype UnwrappedData = Awaited<ReturnType<typeof getApiResponse>>;\n\nconst responsePayload: UnwrappedData = { status: 200, message: \"Success\" };\nconsole.log(\"Awaited payload:\", responsePayload);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_16",
+            "type": "content",
+            "title": "Combining Utility Types",
+            "content": "# Chaining Multiple Utility Types 🔗\n\nUtility types can be composed together for complex transformations:\n\n```typescript\ninterface DatabaseUser {\n  id: string;\n  name: string;\n  email: string;\n  passwordHash: string;\n  createdDate: Date;\n}\n\n// 1. Remove sensitive passwordHash\n// 2. Make everything else optional for PATCH requests!\ntype UserPatchPayload = Partial<Omit<DatabaseUser, \"passwordHash\" | \"id\">>;\n\nconst updatePayload: UserPatchPayload = {\n  email: \"newemail@example.com\"\n};\n\nconsole.log(\"Combined Utility Payload:\", updatePayload);\n```\n\n<!-- FULL_CODE_START\ninterface DatabaseUser {\n  id: string;\n  name: string;\n  email: string;\n  passwordHash: string;\n  createdDate: Date;\n}\n\ntype UserPatchPayload = Partial<Omit<DatabaseUser, \"passwordHash\" | \"id\">>;\n\nconst updatePayload: UserPatchPayload = {\n  email: \"newemail@example.com\"\n};\n\nconsole.log(\"Update Payload:\", updatePayload);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_17",
+            "type": "content",
+            "title": "Real-World Architecture: CRUD API Types",
+            "content": "# Real-World: Type-Safe CRUD Architecture 🛠️\n\n```typescript\ninterface ProductEntity {\n  id: string;\n  sku: string;\n  title: string;\n  price: number;\n  inStock: boolean;\n  createdAt: Date;\n}\n\n// 1. Create DTO (No ID or createdAt, required fields)\ntype CreateProductDTO = Omit<ProductEntity, \"id\" | \"createdAt\">;\n\n// 2. Update DTO (All fields optional)\ntype UpdateProductDTO = Partial<CreateProductDTO>;\n\n// 3. Catalog View DTO (Lightweight preview)\ntype ProductCardDTO = Pick<ProductEntity, \"id\" | \"title\" | \"price\">;\n\nconst newProduct: CreateProductDTO = {\n  sku: \"SKU-9921\",\n  title: \"Ergonomic Desk\",\n  price: 349.99,\n  inStock: true\n};\n\nconsole.log(\"Create DTO:\", newProduct);\n```\n\n<!-- FULL_CODE_START\ninterface ProductEntity {\n  id: string;\n  sku: string;\n  title: string;\n  price: number;\n  inStock: boolean;\n  createdAt: Date;\n}\n\ntype CreateProductDTO = Omit<ProductEntity, \"id\" | \"createdAt\">;\ntype UpdateProductDTO = Partial<CreateProductDTO>;\ntype ProductCardDTO = Pick<ProductEntity, \"id\" | \"title\" | \"price\">;\n\nconst newProduct: CreateProductDTO = {\n  sku: \"SKU-9921\",\n  title: \"Ergonomic Desk\",\n  price: 349.99,\n  inStock: true\n};\n\nconsole.log(\"Product DTO ready for API:\", newProduct.title);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "ts_ut_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# Utility Types & Enums Mastered! 🌟\n\nYou have completed the full curriculum of TypeScript type transformation and constants!\n\n## Key Takeaways:\n- ✅ **Enums:** Numeric (auto-incrementing) and String enums (`Admin = \"ADMIN\"`).\n- ✅ **Optionality:** `Partial<T>` makes all optional; `Required<T>` makes all mandatory.\n- ✅ **Selection:** `Pick<T, K>` selects keys; `Omit<T, K>` drops keys.\n- ✅ **Dictionaries:** `Record<K, T>` enforces type-safe key-value maps.\n- ✅ **Unions:** `Exclude<T, U>` removes types; `Extract<T, U>` keeps matching types.\n- ✅ **Introspection:** `ReturnType<T>` and `Parameters<T>` extract function signatures.\n\n## Congratulations!\nYou have completed the entire **TypeScript Learning Curriculum**! Ready to master the world's most popular utility-first CSS framework: **TailwindCSS**? Let's go! 🚀"
+        }
+    ]
+}

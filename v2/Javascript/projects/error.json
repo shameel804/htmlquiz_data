@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Exception Handling with Try-Catch-Finally",
+    "ques": "Explain the control flow of **`try`**, **`catch`**, and **`finally`** blocks. Write a function that safely parses potentially malformed JSON strings.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "function safeParseJson(jsonString, fallbackValue = {}) {\n  try {\n    // Code that might throw a SyntaxError\n    const parsedData = JSON.parse(jsonString);\n    return parsedData;\n  } catch (error) {\n    // Catches and handles the runtime exception\n    console.warn(`JSON Parse failed: ${error.message}. Returning fallback.`);\n    return fallbackValue;\n  } finally {\n    // ALWAYS runs regardless of whether an exception occurred or return statement executed\n    console.log(\"Parse operation attempted.\");\n  }\n}\n\nconsole.log(safeParseJson('{\"status\": \"ok\"}')); // { status: 'ok' }\nconsole.log(safeParseJson('bad json text'));     // {}"
+    },
+    "explanation": "`try` wraps code that might fail. `catch` receives the thrown exception and prevents the program from crashing. `finally` executes unconditionally, ideal for cleanup actions."
+  },
+  {
+    "title": "Creating Custom Error Classes",
+    "ques": "Demonstrate how to create a custom error class **`ValidationError`** that extends the built-in `Error` class and attaches an HTTP status code and field name.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "class ValidationError extends Error {\n  constructor(message, fieldName, statusCode = 400) {\n    super(message);\n    this.name = \"ValidationError\";\n    this.fieldName = fieldName;\n    this.statusCode = statusCode;\n    \n    // Captures proper stack trace in V8 engines\n    if (Error.captureStackTrace) {\n      Error.captureStackTrace(this, ValidationError);\n    }\n  }\n}\n\nfunction validateUserAge(age) {\n  if (typeof age !== \"number\" || age < 18) {\n    throw new ValidationError(\"User must be at least 18 years old.\", \"age\", 422);\n  }\n  return true;\n}\n\ntry {\n  validateUserAge(15);\n} catch (err) {\n  if (err instanceof ValidationError) {\n    console.error(`[${err.name}] Status ${err.statusCode} on field '${err.fieldName}': ${err.message}`);\n  } else {\n    console.error(\"Unexpected error:\", err);\n  }\n}"
+    },
+    "explanation": "Extending `Error` allows applications to differentiate business logic violations from system crashes via `instanceof`, carrying metadata like HTTP status codes and offending field names."
+  },
+  {
+    "title": "Modern JavaScript Debugging Techniques",
+    "ques": "Explain effective JavaScript debugging techniques: `console.table()`, conditional breakpoints, and the **`debugger`** statement.",
+    "answer": {
+      "type": "code",
+      "lang": "javascript",
+      "content": "const users = [\n  { id: 1, name: \"Alice\", role: \"Admin\", active: true },\n  { id: 2, name: \"Bob\", role: \"Editor\", active: false },\n  { id: 3, name: \"Charlie\", role: \"Viewer\", active: true }\n];\n\n// 1. console.table formats arrays of objects into structured terminal tables\nconsole.table(users);\n\n// 2. console.time and console.timeEnd measures execution benchmark durations\nconsole.time(\"Filtering Users\");\nconst activeUsers = users.filter(u => u.active);\nconsole.timeEnd(\"Filtering Users\");\n\nfunction inspectProcess(item) {\n  // 3. The 'debugger' statement pauses script execution and triggers DevTools breakpoint\n  if (!item.active) {\n    // debugger; // Uncomment when DevTools is open to inspect local scope variables\n    console.log(\"Paused on inactive user:\", item.name);\n  }\n}\n\nusers.forEach(inspectProcess);"
+    },
+    "explanation": "The `debugger` statement acts as a code-level breakpoint, pausing execution in browser DevTools or Node inspect mode so developers can inspect call stacks and variable scopes."
+  }
+]

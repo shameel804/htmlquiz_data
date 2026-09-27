@@ -1,0 +1,159 @@
+{
+    "id": "learn_js_basic",
+    "topicId": "basic",
+    "topicTitle": "JavaScript Basics",
+    "description": "Master variables (let, const), data types, operators, equality, and syntax.",
+    "baseKP": 100,
+    "slides": [
+        {
+            "id": "js_basic_1",
+            "type": "content",
+            "title": "Welcome to JavaScript Basics",
+            "content": "# JavaScript Basics 🚀\n\nJavaScript is the world's most popular programming language, powering dynamic interactions on 98%+ of all websites across the globe and running high-performance servers with Node.js.\n\n## What you'll master:\n- 📦 **Variables** - `var`, `let`, and `const` declarations and scoping\n- 🏷️ **Data Types** - The 7 primitives and reference objects\n- ➗ **Operators** - Arithmetic, assignment, comparison, and logical operators\n- ⚖️ **Equality & Coercion** - `==` vs `===` and implicit type conversions\n- 📝 **Syntax Fundamentals** - Comments, semicolons, and code structure"
+        },
+        {
+            "id": "js_basic_2",
+            "type": "content",
+            "title": "Variables: let, const, and var",
+            "content": "# Variables: `let`, `const`, and `var` 📦\n\nVariables store data values in computer memory. Modern JavaScript provides three declaration keywords:\n\n```javascript\nlet count = 10;\nconst appName = \"QuizApp\";\nvar legacyScore = 100;\n\ncount = 15; // Valid: let allows reassignment\n// appName = \"NewApp\"; // TypeError: Assignment to constant variable!\nconsole.log(\"Count:\", count);\nconsole.log(\"App:\", appName);\n```\n\n<!-- FULL_CODE_START\nlet count = 10;\nconst appName = \"QuizApp\";\nvar legacyScore = 100;\n\ncount = 15;\nconsole.log(\"Count:\", count);\nconsole.log(\"App Name:\", appName);\nconsole.log(\"Legacy Score:\", legacyScore);\nFULL_CODE_END -->\n\n## The Modern Golden Rule:\n1. Always use **`const` by default** for values that shouldn't be reassigned.\n2. Use **`let`** only when you know the variable needs to be reassigned (like loop counters).\n3. **Never use `var`** in modern code (it lacks block scope and causes hoisting bugs)."
+        },
+        {
+            "id": "js_basic_3",
+            "type": "content",
+            "title": "Block Scope vs Function Scope",
+            "content": "# Block Scope vs Function Scope 🧱\n\n- **`let` and `const` are Block-Scoped:** They exist only within the nearest pair of curly braces `{ ... }` (if statements, loops, functions).\n- **`var` is Function-Scoped:** It bleeds outside `if` blocks and loops!\n\n```javascript\nif (true) {\n  let blockScoped = \"Hidden outside\";\n  var functionScoped = \"Leaked outside!\";\n}\n\nconsole.log(functionScoped); // Logs: \"Leaked outside!\"\n// console.log(blockScoped); // ReferenceError: blockScoped is not defined!\n```\n\n<!-- FULL_CODE_START\nif (true) {\n  let blockScoped = \"Hidden inside block\";\n  var functionScoped = \"Leaked outside block!\";\n}\n\nconsole.log(\"var leaked value:\", functionScoped);\ntry {\n  console.log(blockScoped);\n} catch (e) {\n  console.log(\"let caught error:\", e.message);\n}\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_basic_4",
+            "type": "content",
+            "title": "Primitive Data Types",
+            "content": "# The 7 Primitive Data Types 🏷️\n\nJavaScript has 7 primitive data types stored directly on the stack:\n\n| Primitive | Description | Example |\n| :--- | :--- | :--- |\n| `number` | Integers and floats | `42`, `3.14159` |\n| `string` | Text wrapped in quotes | `\"Hello\"`, `'World'`, `\\`Hi\\`` |\n| `boolean` | Logical true or false | `true`, `false` |\n| `undefined`| Variable declared but unassigned | `let x;` |\n| `null` | Intentional absence of value | `let user = null;` |\n| `symbol` | Unique immutable identifier | `Symbol(\"id\")` |\n| `bigint` | Arbitrary precision integers | `9007199254740991n` |\n\n```javascript\nlet age = 25;\nlet username = \"Alice\";\nlet isActive = true;\nconsole.log(typeof age, typeof username, typeof isActive);\n```\n\n<!-- FULL_CODE_START\nlet age = 25;\nlet username = \"Alice\";\nlet isActive = true;\nlet empty = null;\nlet notSet;\n\nconsole.log(\"typeof age:\", typeof age);\nconsole.log(\"typeof username:\", typeof username);\nconsole.log(\"typeof isActive:\", typeof isActive);\nconsole.log(\"typeof notSet:\", typeof notSet);\nconsole.log(\"typeof empty:\", typeof empty); // Historical quirk: returns 'object'\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_basic_quiz_1",
+            "type": "quiz",
+            "title": "Data Types Quiz",
+            "content": "Test your knowledge of JS primitive types.",
+            "quizQuestion": "Which JavaScript keyword declares a variable that cannot be reassigned and has block scope?",
+            "quizOptions": [
+                "var",
+                "let",
+                "const",
+                "static"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "js_basic_5",
+            "type": "content",
+            "title": "The typeof Operator & Quirks",
+            "content": "# The `typeof` Operator & JS Quirks 🔍\n\nCheck the data type of any variable using `typeof`:\n\n```javascript\nconsole.log(typeof \"Hello\");     // \"string\"\nconsole.log(typeof 42);          // \"number\"\nconsole.log(typeof true);        // \"boolean\"\nconsole.log(typeof undefined);   // \"undefined\"\nconsole.log(typeof null);        // \"object\" (Famous 1995 JS bug!)\nconsole.log(typeof [1, 2, 3]);   // \"object\"\nconsole.log(typeof function(){});// \"function\"\n```\n\n<!-- FULL_CODE_START\nconsole.log(\"string check:\", typeof \"Hello\");\nconsole.log(\"number check:\", typeof 42);\nconsole.log(\"null check quirk:\", typeof null);\nconsole.log(\"array is array:\", Array.isArray([1, 2, 3]));\nconsole.log(\"function check:\", typeof function(){});\nFULL_CODE_END -->\n\n> 💡 **Notice:** `typeof null === 'object'` is a legacy bug from JavaScript's first release in 1995 that cannot be fixed without breaking backwards compatibility on millions of websites!"
+        },
+        {
+            "id": "js_basic_6",
+            "type": "content",
+            "title": "Arithmetic Operators",
+            "content": "# Arithmetic Operators ➕➖✖️➗\n\nJavaScript supports standard mathematical operators:\n\n```javascript\nlet a = 10;\nlet b = 3;\n\nconsole.log(a + b); // 13 (Addition)\nconsole.log(a - b); // 7  (Subtraction)\nconsole.log(a * b); // 30 (Multiplication)\nconsole.log(a / b); // 3.3333... (Division)\nconsole.log(a % b); // 1  (Remainder / Modulo)\nconsole.log(a ** b);// 1000 (Exponentiation: 10^3)\n```\n\n<!-- FULL_CODE_START\nlet a = 10;\nlet b = 3;\n\nconsole.log(\"Addition:\", a + b);\nconsole.log(\"Modulo (remainder):\", a % b);\nconsole.log(\"Exponent (10^3):\", a ** b);\n\nlet counter = 5;\ncounter++;\nconsole.log(\"Incremented:\", counter);\ncounter--;\nconsole.log(\"Decremented:\", counter);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_basic_7",
+            "type": "content",
+            "title": "Assignment Operators",
+            "content": "# Assignment Operators 📝\n\nCombine an operation with assignment:\n\n```javascript\nlet score = 50;\n\nscore += 10; // score = score + 10 (60)\nscore -= 5;  // score = score - 5  (55)\nscore *= 2;  // score = score * 2  (110)\nscore /= 10; // score = score / 10 (11)\nscore %= 4;  // score = score % 4  (3)\n\nconsole.log(\"Final Score:\", score);\n```\n\n<!-- FULL_CODE_START\nlet score = 50;\nscore += 10;\nscore -= 5;\nscore *= 2;\nscore /= 10;\nscore %= 4;\nconsole.log(\"Computed final score:\", score);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_basic_8",
+            "type": "content",
+            "title": "Comparison: Strict vs Loose Equality",
+            "content": "# Comparison: `===` vs `==` ⚖️\n\nThis is one of the most critical concepts in JavaScript!\n\n- **Strict Equality (`===`)**: Compares **both value AND type**. No implicit type coercion occurs. (Always use this!)\n- **Loose Equality (`==`)**: Coerces operands to the same type before comparing. Leads to subtle bugs!\n\n```javascript\nconsole.log(5 === \"5\"); // false (number !== string)\nconsole.log(5 == \"5\");  // true  (string \"5\" coerced to number 5!)\nconsole.log(null === undefined); // false\nconsole.log(null == undefined);  // true\n```\n\n<!-- FULL_CODE_START\nconsole.log(\"Strict comparison 5 === '5':\", 5 === \"5\");\nconsole.log(\"Loose comparison 5 == '5':\", 5 == \"5\");\nconsole.log(\"Strict 0 === false:\", 0 === false);\nconsole.log(\"Loose 0 == false:\", 0 == false);\nconsole.log(\"Strict null === undefined:\", null === undefined);\nconsole.log(\"Loose null == undefined:\", null == undefined);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_basic_quiz_2",
+            "type": "quiz",
+            "title": "Equality Quiz",
+            "content": "Test your equality operator understanding.",
+            "quizQuestion": "What does '5 === \"5\"' evaluate to in JavaScript?",
+            "quizOptions": [
+                "true",
+                "false",
+                "undefined",
+                "NaN"
+            ],
+            "correctOptionIndex": 1
+        },
+        {
+            "id": "js_basic_9",
+            "type": "content",
+            "title": "Logical Operators",
+            "content": "# Logical Operators (AND, OR, NOT) 🧠\n\nCombine boolean conditions:\n\n```javascript\nlet isAdult = true;\nlet hasTicket = false;\n\n// 1. Logical AND (&&): true only if both operands are true\nconsole.log(isAdult && hasTicket); // false\n\n// 2. Logical OR (||): true if at least one operand is true\nconsole.log(isAdult || hasTicket); // true\n\n// 3. Logical NOT (!): inverts the boolean value\nconsole.log(!isAdult); // false\n```\n\n<!-- FULL_CODE_START\nlet isAdult = true;\nlet hasTicket = false;\n\nconsole.log(\"AND (both needed):\", isAdult && hasTicket);\nconsole.log(\"OR (at least one):\", isAdult || hasTicket);\nconsole.log(\"NOT (!isAdult):\", !isAdult);\n\n// Short-circuit evaluation\nlet fallbackName = \"\" || \"Default User\";\nconsole.log(\"Fallback with OR:\", fallbackName);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_basic_10",
+            "type": "content",
+            "title": "Nullish Coalescing (??)",
+            "content": "# Nullish Coalescing (`??`) 🛡️\n\nThe `??` operator returns its right-hand operand only when its left-hand operand is `null` or `undefined`.\n\nUnlike `||`, it does **not** treat `0`, `false`, or `\"\"` as missing!\n\n```javascript\nlet userScore = 0;\n\n// Bug with ||: treats 0 as falsy and replaces it with 10!\nlet resultA = userScore || 10; // 10 (Wrong!)\n\n// Fixed with ??: preserves valid 0!\nlet resultB = userScore ?? 10; // 0 (Correct!)\n```\n\n<!-- FULL_CODE_START\nlet userScore = 0;\nlet userNickname = \"\";\n\nconsole.log(\"Result with ||:\", userScore || 10);\nconsole.log(\"Result with ??:\", userScore ?? 10);\n\nconsole.log(\"Empty string with ||:\", userNickname || \"Anonymous\");\nconsole.log(\"Empty string with ??:\", userNickname ?? \"Anonymous\");\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_basic_11",
+            "type": "content",
+            "title": "The Ternary Operator",
+            "content": "# The Ternary Operator (`? :`) 🔀\n\nThe conditional ternary operator is a compact shorthand for simple `if...else` statements:\n\n```javascript\n// Syntax: condition ? valueIfTrue : valueIfFalse\nlet userAge = 20;\nlet accessStatus = userAge >= 18 ? \"Adult Access Granted\" : \"Minor Restricted\";\n\nconsole.log(accessStatus);\n```\n\n<!-- FULL_CODE_START\nlet userAge = 20;\nlet accessStatus = userAge >= 18 ? \"Adult Access Granted\" : \"Minor Restricted\";\nconsole.log(\"Ternary output:\", accessStatus);\n\nlet isMember = false;\nlet discount = isMember ? 0.20 : 0.05;\nconsole.log(\"Calculated discount:\", discount);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_basic_12",
+            "type": "content",
+            "title": "Type Conversion: Explicit vs Implicit",
+            "content": "# Type Conversion: Explicit vs Implicit 🔄\n\n## 1. Explicit Conversion (Safe & Clear):\n```javascript\n// String to Number\nlet num = Number(\"42\");       // 42\nlet parsed = parseInt(\"42px\");// 42\n\n// Number to String\nlet str = String(100);        // \"100\"\nlet str2 = (100).toString();  // \"100\"\n\n// To Boolean\nlet bool = Boolean(1);        // true\nlet bool2 = Boolean(0);       // false\n```\n\n## 2. Implicit Coercion (Unexpected traps):\n```javascript\nconsole.log(\"5\" + 2); // \"52\" (String concatenation!)\nconsole.log(\"5\" - 2); // 3    (Implicit conversion to number!)\n```\n\n<!-- FULL_CODE_START\nconsole.log(\"String concatenation '5' + 2:\", \"5\" + 2);\nconsole.log(\"Numeric subtraction '5' - 2:\", \"5\" - 2);\nconsole.log(\"Explicit Number('123'):\", Number(\"123\"));\nconsole.log(\"Explicit parseInt('50px'):\", parseInt(\"50px\"));\nconsole.log(\"Explicit Boolean(''):\", Boolean(\"\"));\nconsole.log(\"Explicit Boolean('Hello'):\", Boolean(\"Hello\"));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_basic_13",
+            "type": "content",
+            "title": "Truthy and Falsy Values",
+            "content": "# Truthy & Falsy Values in JavaScript 🎭\n\nIn JavaScript, any value used in a boolean context is evaluated as either **truthy** or **falsy**.\n\n## Exactly 8 Falsy Values in JavaScript:\n1. `false`\n2. `0` and `-0`\n3. `0n` (BigInt zero)\n4. `\"\"` (Empty string)\n5. `null`\n6. `undefined`\n7. `NaN` (Not a Number)\n8. `document.all`\n\n**Every other value in JavaScript is truthy!** Including empty arrays `[]` and empty objects `{}`!\n\n<!-- FULL_CODE_START\nconsole.log(\"Boolean(0):\", Boolean(0));\nconsole.log(\"Boolean(''):\", Boolean(\"\"));\nconsole.log(\"Boolean(null):\", Boolean(null));\nconsole.log(\"Boolean([]):\", Boolean([])); // True! Empty array is truthy\nconsole.log(\"Boolean({}):\", Boolean({})); // True! Empty object is truthy\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_basic_quiz_3",
+            "type": "quiz",
+            "title": "Truthy Falsy Quiz",
+            "content": "Test your understanding of truthy and falsy.",
+            "quizQuestion": "Which of the following values is evaluated as TRUTHY in JavaScript?",
+            "quizOptions": [
+                "0",
+                "\"\"",
+                "[]",
+                "null"
+            ],
+            "correctOptionIndex": 2
+        },
+        {
+            "id": "js_basic_14",
+            "type": "content",
+            "title": "String Concatenation & Template Literals",
+            "content": "# Template Literals (`${...}`) 💬\n\nModern JavaScript uses backticks (`` ` ``) for template literals, allowing string interpolation and multi-line strings:\n\n```javascript\nlet user = \"Alice\";\nlet points = 250;\n\n// Old messy concatenation\nlet msg1 = \"Welcome, \" + user + \"! You have \" + points + \" points.\";\n\n// Modern clean template literal\nlet msg2 = `Welcome, ${user}! You have ${points} points.`;\nconsole.log(msg2);\n```\n\n<!-- FULL_CODE_START\nlet user = \"Alice\";\nlet points = 250;\n\nlet message = `Welcome, ${user}! You have ${points} points.`;\nlet multiLine = `Line 1\nLine 2\nCalculation: 10 + 20 = ${10 + 20}`;\n\nconsole.log(message);\nconsole.log(multiLine);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_basic_15",
+            "type": "content",
+            "title": "The Math Object",
+            "content": "# Built-in Math Object 🧮\n\nPerform mathematical calculations with the standard `Math` library:\n\n```javascript\nconsole.log(Math.PI);             // 3.141592653589793\nconsole.log(Math.round(4.7));     // 5 (Rounds to nearest integer)\nconsole.log(Math.floor(4.9));     // 4 (Rounds down)\nconsole.log(Math.ceil(4.1));      // 5 (Rounds up)\nconsole.log(Math.max(10, 20, 5)); // 20\nconsole.log(Math.min(10, 20, 5)); // 5\nconsole.log(Math.random());       // Random float between 0 and 1\n```\n\n<!-- FULL_CODE_START\nconsole.log(\"Round 4.7:\", Math.round(4.7));\nconsole.log(\"Floor 4.9:\", Math.floor(4.9));\nconsole.log(\"Ceil 4.1:\", Math.ceil(4.1));\nconsole.log(\"Max (10, 20, 5):\", Math.max(10, 20, 5));\n\n// Random integer between 1 and 10\nlet randomInt = Math.floor(Math.random() * 10) + 1;\nconsole.log(\"Random int 1-10:\", randomInt);\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_basic_16",
+            "type": "content",
+            "title": "NaN (Not-a-Number) and isNaN",
+            "content": "# NaN: Not-a-Number ⚠️\n\n`NaN` represents a computational error when a mathematical operation cannot produce a meaningful number:\n\n```javascript\nconsole.log(\"apple\" * 5); // NaN\nconsole.log(typeof NaN);  // \"number\" (Another famous JS quirk!)\n\n// NaN is the ONLY value in JS that does not equal itself!\nconsole.log(NaN === NaN); // false!\n\n// Check for NaN with Number.isNaN:\nconsole.log(Number.isNaN(\"apple\" * 5)); // true\n```\n\n<!-- FULL_CODE_START\nlet invalidCalc = \"apple\" * 5;\nconsole.log(\"Invalid math result:\", invalidCalc);\nconsole.log(\"typeof NaN:\", typeof invalidCalc);\nconsole.log(\"NaN === NaN:\", invalidCalc === invalidCalc);\nconsole.log(\"Number.isNaN(invalidCalc):\", Number.isNaN(invalidCalc));\nFULL_CODE_END -->"
+        },
+        {
+            "id": "js_basic_17",
+            "type": "content",
+            "title": "JavaScript Coding Best Practices",
+            "content": "# Clean JavaScript Best Practices 🧼\n\n1. **Always use strict equality (`===`)**: Never use loose equality (`==`).\n2. **Declare with `const` first**: Switch to `let` only if the value must be reassigned.\n3. **Avoid global variables**: Wrap logic inside modules or functions.\n4. **Use descriptive variable names**: `userAccountBalance` instead of `x` or `bal`.\n5. **Always test for nullish values with `??`**: Avoid false-positive bugs with `0` and empty strings."
+        },
+        {
+            "id": "js_basic_18",
+            "type": "content",
+            "title": "Summary & Next Steps",
+            "content": "# JavaScript Basics Mastered! 🌟\n\nYou now command the syntax, data types, operators, and scoping rules of JavaScript!\n\n## Key Takeaways:\n- ✅ **Variable Scope:** `const` and `let` have block scope; avoid `var`.\n- ✅ **Primitives:** 7 primitives (`number`, `string`, `boolean`, `null`, `undefined`, `symbol`, `bigint`).\n- ✅ **Strict Equality:** Always use `===` to prevent implicit type bugs.\n- ✅ **Nullish Coalescing:** Use `??` to provide fallbacks for `null` and `undefined`.\n- ✅ **Template Literals:** Use backticks `` `Hello ${name}` `` for string interpolation.\n\n## Up Next:\nIn the next module, master decision making and repetition: **Control Structures (If-else, Switch-case, and Loops)**! 🚀"
+        }
+    ]
+}
